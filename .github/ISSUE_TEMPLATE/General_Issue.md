@@ -1,6 +1,6 @@
 ---
-name: Custom issue template
-about: Describe this issue template's purpose here.
+name: General Issue
+about: All issues that aren't new features or bugs
 
 ---
 ## Issue Type (bug, design, new component, etc)
