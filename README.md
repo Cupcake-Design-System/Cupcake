@@ -2,7 +2,7 @@
 
 # Cupcake 2.0 UNDER DEVELOPMENT
 
-Cupcake is the Ipreo design system that brings together UX guidelines, an HTML/CSS framework, and rich ui components. This repository includes everything you need to build, customize, test, and deploy Cupcake.
+This repository includes everything you need to build, customize, test, and deploy Cupcake.
 
 ## Table of Contents
 
