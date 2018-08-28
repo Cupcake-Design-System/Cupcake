@@ -1,4 +1,4 @@
-![Cupcake logo](http://funkyimg.com/i/2KN2G.png)
+<img alt="cupcake-logo" src="http://funkyimg.com/i/2KN2G.png" width="350">
 
 # Cupcake 2.0 UNDER DEVELOPMENT
 
