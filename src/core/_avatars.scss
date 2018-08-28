@@ -1,0 +1,110 @@
+$avatar-prefix: #{$prefix}-avatar !default;
+
+$avatar-sizes: (
+  sm: space(md),
+  lg: space(xl),
+  xl: space(xl) * 2
+) !default;
+
+
+/*  Avatar Base
+* ====================================== */
+
+@mixin avatar-base($size: space(lg)) {
+  font-size: $size / 2;
+  height: $size;
+  width: $size;
+
+  i {
+    font-size: $size / 2;
+    line-height: $size;
+  }
+}
+
+
+// Avatars
+.#{$avatar-prefix} {
+  @include avatar-base();
+
+  background: color(primary);
+  border-radius: radius(round);
+  color: white;
+  display: inline-block;
+  text-align: center;
+  font-weight: font-weight(normal);
+  line-height: line-height(normal);
+  position: relative;
+  vertical-align: middle;
+
+  &-square {
+    border-radius: radius(square);
+  }
+
+  img {
+    position: relative;
+    border-radius: radius(round);
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &[data-status]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: .5em;
+    min-width: .5em;
+    background-clip: padding-box;
+    border-radius: radius(round);
+    box-shadow: 0 0 0 1px white;
+    color: white;
+    z-index: 1;
+  }
+
+  &[data-badge]::after {
+    position: absolute;
+    top: 14.64%;
+    right: 14.64%;
+    transform: translate(50%, -50%);
+    background: color(primary);
+    border-radius: radius(round);
+    z-index: 1;
+    content: attr(data-badge);
+    box-shadow: 0 0 0 1px white;
+    font-size: font-size(body-xs);
+    height: space(md);
+    line-height: 1;
+    min-width: space(md);
+    padding: space(xxs) space(xs);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  &[data-text]::before {
+    color: currentColor;
+    content: attr(data-text);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+}
+
+@each $name, $hex in config($theme-colors) {
+  .#{$avatar-prefix}-#{$name} {
+    background: $hex;
+  }
+
+  .#{$avatar-prefix}[data-status='#{$name}']::after {
+    background-color: $hex;
+  }
+}
+
+@each $name, $size in config($avatar-sizes) {
+  .#{$avatar-prefix}-#{$name} {
+    @include avatar-base($size);
+  }
+}
+

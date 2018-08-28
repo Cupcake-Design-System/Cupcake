@@ -1,0 +1,20 @@
+@import 'space';
+@import 'color';
+@import 'depth';
+@import 'radius';
+
+@if $enable-shadow-classes = true {
+  @include shadow-export();
+}
+
+@if $enable-color-classes = true {
+  @include color-export();
+}
+
+@if $enable-spacer-classes = true {
+  @include spacer-export();
+}
+
+@if $enable-radius-classes = true {
+  @include radius-export();
+}

@@ -1,0 +1,15 @@
+{{#if items}}
+	{{#each items}}
+		<div class="c-col-12" id="{{@key}}">
+			<div class="c-header-md c-m-bottom-md">{{name}}</div>
+      <div class="">{{{material @key @root}}}</div>
+      <hr class="c-hr">
+		</div>
+	{{/each}}
+{{else}}
+	<div class="c-col-12">
+		<h2 class="c-header-md c-m-vertical-md">{{name}}</h2>
+    <div class="">{{{material @key @root}}}</div>
+    <hr class="c-hr">
+	</div>
+{{/if}}

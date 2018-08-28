@@ -1,0 +1,6 @@
+@mixin shadow-export {
+  .#{$prefix}-depth {
+    @include modifiers($shadows, 'box-shadow');
+  }
+}
+

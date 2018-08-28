@@ -1,0 +1,159 @@
+////
+/// @group Global Variables
+////
+
+/// Global prefix
+$prefix: 'c' !default;
+
+/// $enable-reset
+$enable-reset: false !default;
+
+/// $enable-shadows
+$enable-shadow-classes: true !default;
+
+/// $enable-colors
+$enable-color-classes: true !default;
+
+/// $enable-spacers
+$enable-spacer-classes: true !default;
+
+/// $enable-radius
+$enable-radius-classes: true !default;
+
+
+//### TYPOGRAPHY START  ################################//
+
+/// $base-font-family:
+$base-font-family:  -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
+
+/// $base-font-size
+$base-font-size: 16px !default;
+
+/// $font-weight-bold
+$font-weight-bold     : 900 !default;
+
+/// $font-weight-semibold
+$font-weight-semibold : 600 !default;
+
+/// $font-weight-normal
+$font-weight-normal   : 400 !default;
+
+/// $font-weight-light
+$font-weight-light    : 300 !default;
+
+//### TYPOGRAPHY END  ################################//
+
+
+
+//### RADIUS START ################################//
+
+/// radius-sm
+$radius-sm: 2px !default;
+
+/// radius-md
+$radius-md: 4px !default;
+
+/// radius-lg
+$radius-lg: 6px !default;
+
+/// radius-square
+$radius-square: 0 !default;
+
+/// radius-pill
+$radius-pill: 100% !default;
+
+/// radius-round
+$radius-round: 200px !default;
+
+//### RADIUS END  ################################//
+
+
+
+//### SPACING START ################################//
+
+/// $theme-base-point-grid
+$theme-base-point-grid: .5rem !default;
+/// $space-none
+$space-none: 0 !default;
+/// $space-xxs
+$space-xxs: $theme-base-point-grid / 4 !default; // .125rem, 2px
+/// $space-xs
+$space-xs : $theme-base-point-grid / 2 !default; // .25rem, 4px
+/// $space-sm
+$space-sm : $theme-base-point-grid !default;     //;.5rem, 8px
+/// $space-md
+$space-md : $theme-base-point-grid * 2 !default; // 1rem, 16px
+/// $space-lg
+$space-lg : $theme-base-point-grid * 3 !default; // 1.5rem, 24px
+/// $space-xl
+$space-xl : $theme-base-point-grid * 4 !default; // 2rem, 32px
+/// $space-xxl
+$space-xxl: $theme-base-point-grid * 6 !default;// 3rem, 48px
+
+//### SPACING END ################################//
+
+
+
+//### SHADOWS START ################################//
+
+/// $shadow-xl
+$shadow-xl: 0 12px 24px 0 rgba(0, 0, 0, .1) !default;
+
+/// $shadow-lg
+$shadow-lg: 0 8px 16px 0 rgba(0, 0, 0, .1) !default;
+
+/// $shadow-md
+$shadow-md: 0 6px 12px 0 rgba(0, 0, 0, .1) !default;
+
+/// $shadow-sm
+$shadow-sm: 0 4px 8px 0 rgba(0, 0, 0, 0.1) !default;
+
+/// $shadow-xs
+$shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, .1) !default;
+
+/// $shadow-none
+$shadow-none: 0 0 0 0 transparent !default;
+
+//### SHADOWS END ################################//
+
+
+
+//### ANIMATION START ################################//
+
+/// $duration-unit
+$duration-unit: 100ms;
+
+/// $duration-fast
+$duration-fast: $duration-unit !default;
+
+/// $duration-base
+$duration-base: $duration-unit * 2 !default;
+
+/// $duration-slow
+$duration-slow: $duration-unit * 3 !default;
+
+/// $duration-slower
+$duration-slower: $duration-unit * 4 !default;
+
+/// $duration-slowest
+$duration-slowest: $duration-unit * 5 !default;
+
+/// $easing-base
+$easing-base      : cubic-bezier(0.64, 0, 0.35, 1) !default;
+
+/// $easing-in
+$easing-in        : cubic-bezier(0.36, 0, 1, 1) !default;
+
+/// $easing-out
+$easing-out       : cubic-bezier(0, 0, 0.42, 1) !default;
+
+/// $easing-excite
+$easing-excite    : cubic-bezier(0.18, 0.67, 0.6, 1.22) !default;
+
+/// $easing-overshoot
+$easing-overshoot : cubic-bezier(0.07, 0.28, 0.32, 1.22) !default;
+
+/// $easing-anticipate
+$easing-anticipate: cubic-bezier(0.38, -0.4, 0.88, 0.65) !default;
+
+//### ANIMATION END ################################//
