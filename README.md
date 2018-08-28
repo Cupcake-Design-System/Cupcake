@@ -1,3 +1,5 @@
+![Cupcake logo](http://funkyimg.com/i/2KN2G.png)
+
 # Cupcake 2.0 UNDER DEVELOPMENT
 
 Cupcake is the Ipreo design system that brings together UX guidelines, an HTML/CSS framework, and rich ui components. This repository includes everything you need to build, customize, test, and deploy Cupcake.
@@ -16,10 +18,11 @@ This starter also features a number of great software (in the words of their cre
 - [Gulp](http://gulpjs.com/) - a task automation tool.
 - [Browsersync](https://www.browsersync.io/) - time-saving synchronised browser testing, keep multiple browsers & devices in sync when editing files.
 - [Sass](http://sass-lang.com/) - CSS with superpowers.
+- [SassDoc](http://sassdoc.com/) - Automated sass code docs.
 - [PostCSS](https://github.com/postcss/postcss) - a tool for transforming styles with JS plugins.
 - [Autoprefixer](https://github.com/postcss/autoprefixer) - adding vendor prefixes by the rules of [Can I Use](http://caniuse.com/).
 - [csso](https://github.com/css/csso) - a CSS minifier with structural optimizations.
-- [Stylelint](http://stylelint.io/) - a mighty, modern CSS linter (with preconfigured ruleset by [Hugo Giraudel](https://sass-guidelin.es/)).
+- [Stylelint](http://stylelint.io/) - a mighty, modern CSS linter
 
 ### Html
 - [handlebars](https://github.com/wycats/handlebars.js) - a javascript template engine.
@@ -84,6 +87,7 @@ Task name          | Description
 `default`          | will start all tasks required by project in dev mode: initial build, watch files, run server with livereload
 `build`            | builds all content and assets from `src` to `dist`.
 `dev`              | builds your project without optimization.
+`docs`             | builds sassdocs.
 `test`             | runs sass unit tests.
 
 ### Core tasks
