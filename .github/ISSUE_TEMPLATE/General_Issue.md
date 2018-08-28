@@ -3,6 +3,7 @@ name: General Issue
 about: All issues that aren't new features or bugs
 
 ---
+
 ## Issue Type (bug, design, new component, etc)
 <!--- Input issue type here -->
 
@@ -14,4 +15,3 @@ about: All issues that aren't new features or bugs
 URLs:
 
 ## Tasks to complete:
-

@@ -15,4 +15,3 @@ A clear and concise description of what you want to happen.
 ## URLs and/or external references
 <!--- Include any other details or links related to the issue --> 
 URLs:
-
