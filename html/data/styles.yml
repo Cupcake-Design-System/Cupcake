@@ -1,0 +1,12 @@
+classes:
+  api:
+    primary: primary
+    secondary: secondary
+    success: success
+    warning: warning
+    danger: danger
+  api-sizes:
+    x-small: xs
+    small: sm
+    default:
+    large: lg

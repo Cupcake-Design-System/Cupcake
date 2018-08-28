@@ -1,0 +1,6 @@
+@mixin radius-export {
+  .#{$prefix}-radius {
+    @include modifiers($radius, 'border-radius');
+  }
+}
+

@@ -1,0 +1,233 @@
+////
+/// @group API Map Retrieve
+////
+
+/// Returns the spacing value for a given variant.
+///
+/// @param {String} $space - how much space do you need.
+/// @return {Number} The spacing for the variant in px.
+@function space($value: md) {
+  $fetched-value: map-get($space, $value);
+
+  @if type-of($fetched-value) == number {
+    @return $fetched-value;
+  } @else {
+    @error 'Spacing variant `#{$space}` not found.';
+  }
+}
+
+/// Returns the radius value for a given variant.
+///
+/// @param {String} $radius - how much space do you need.
+/// @return {Number} The spacing for the variant in px.
+@function radius($value: md) {
+  $fetched-value: map-get($radius, $value);
+
+  @if type-of($fetched-value) == number {
+    @return $fetched-value;
+  } @else {
+    @error 'Radius variant `#{$radius}` not found.';
+  }
+}
+
+/// Returns the font weight for a given weight definition.
+///
+/// @param {String} $weight - The font weight.
+/// @return {Number} The font-weight for the text-weight.
+@function font-weight($value) {
+  $fetched-font-weight: map-get($font-weight, $value);
+
+  @if type-of($fetched-font-weight) != null {
+    @return $fetched-font-weight;
+  } @else {
+    @error 'Font weight `#{$value}` not found.';
+  }
+}
+
+/// Returns the line height for a given range.
+///
+/// @param {Number} $range - The font style.
+/// @return {Number} The line-height for the text-style.
+@function line-height($value: normal) {
+  $fetched-line-height: map-get($line-height, $value);
+
+  @if type-of($fetched-line-height) != null {
+    @return $fetched-line-height;
+  } @else {
+    @error 'Line height `#{$value}` not found.';
+  }
+}
+
+/// Returns the font size for a given size definition.
+///
+/// @param {String} $value - The font size.
+/// @return {Number} The font-size for the given definition.
+@function font-size($value) {
+  $fetched-font-size: map-get($font-size, $value);
+
+  @if type-of($fetched-font-size) != null {
+    @return $fetched-font-size;
+  } @else {
+    @error 'Font size `#{$variant}` not found.';
+  }
+}
+
+
+/// Returns the font family for a given definition.
+///
+/// @param {String} $value - The font key.
+/// @return {Number} The font-family for the given definition.
+@function font($value: primary) {
+  $fetched-font: map-get($font, $value);
+
+  @if type-of($fetched-font) != null {
+    @return $fetched-font;
+  } @else {
+    @error 'Font family `#{$value}` not found.';
+  }
+}
+
+/// Returns the duration value for a given variant.
+///
+/// @param {String} $variant - The key for the given variant.
+/// @return {Number} The spacing for the variant (in milliseconds).
+@function duration($value: base) {
+  $fetched-value: map-get($duration, $value);
+
+  @if type-of($fetched-value) == number {
+    @return $fetched-value;
+  } @else {
+    @error 'Duration variant `#{$variant}` not found.';
+  }
+}
+
+/// Returns the timing-function value for a given variant.
+///
+/// @param {String} $variant - The key for the given variant.
+/// @return {String} The cubic-bezier function (string) for the variant.
+@function easing($value: base) {
+  $fetched-value: map-get($easing, $value);
+
+  @if type-of($fetched-value) == string {
+    @return $fetched-value;
+  } @else {
+    @error 'Easing variant `#{$variant}` not found. Available variants: #{$easing-data}';
+  }
+}
+
+/// Returns the shadow for the specified depth
+///
+/// @param {String} $value - The shadow's depth.
+/// @return {List} The shadow value.
+@function shadow($value: sm) {
+  $fetched-value: map-get($shadows, $value);
+
+  @if type-of($fetched-value) == list {
+    @return $fetched-value;
+  } @else {
+    @error 'Shadow variant `#{$depth}` not found.';
+  }
+}
+
+/// Returns the z-index of the specified element.
+///
+/// @param {String} $element - The key for the element.
+/// @param {Map} $context - The map in which to search for the element.
+/// @return {Number} The z-index for the element.
+@function z-index($element, $context: $global-elements) {
+  $index: map-get($context, $element);
+
+  @if $index {
+    @return $index;
+  } @else {
+    @error 'z-index `#{$element}` in `#{$context}` not found.';
+  }
+}
+
+
+/// Generic return from an map given in function.
+/// @param {String} $key - The key for the element.
+/// @param {Map} $map - The map in which to search for the element.
+/// @return {Number} The value from the map.
+///
+@function config($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+/// Returns the color value for a given color name and group.
+/// @param {String} $hue - The color's hue.
+/// @param {Number} $range [7] - The darkness/lightness of the color. Defaults to 7. The higher the number, the darker the color.
+/// @return {Color} - The color value.
+///
+/// @example
+/// // Call:
+///
+///  .color {
+///    background: color(primary, 3);
+///   }
+///
+/// @example
+/// // Return:
+///
+///  .color {
+///    background: #74c0fc;
+///   }
+///
+@function color($value: primary, $range: 7) {
+  $fetched-value: config($colors, $value, $range);
+
+  @if type-of($fetched-value) == color {
+    @return $fetched-value;
+  } @else {
+    @error 'Color `#{$hue} - #{$range}` not found.';
+  }
+}
+
+
+/// Returns a foreground color based on a given background-color in accordance with accessibility standards.
+/// @param {Color} $background-color - The background color where the foreground will sit.
+/// @param {Color} $dark-color - The dark color you wish to display if there is enough contrast.
+/// @param {Color} $light-color - The light color you wish to display if there is enough contrast.
+/// @return {Color} The HEX color of the foreground.
+@function color-contrast($background-color, $dark-color: color(neutral, 700), $light-color: color(neutral, 000)) {
+  @if $background-color == null {
+    @return null;
+  } @else {
+    // Based on the algorithm recommended by W3: https://www.w3.org/TR/AERT/#color-contrast
+    $yiq: (red($background-color) * 299 + green($background-color) * 587 + blue($background-color) * 114) / 1000;
+
+    @return if($yiq >= 128, $dark-color, $light-color);
+  }
+}
+
+
+/// Returns the breakpoint size given its named size.
+///
+/// @param {string} $name - the named size of the breakpoint requested (e.g. `small` or `large`) as configured in `$cupcake`.
+/// @return {List} The breakpoint value.
+///
+/// @example
+///
+///   // the following use:
+///     @media all and (min-width: breakpoint('small')) {
+///       display: none;
+///     }
+///
+///   // will produce the following:
+///     @media all and (min-width: 600px) {
+///       display: none;
+///     }
+///
+@function breakpoint($value: sm) {
+  $fetched-value: map-get($breakpoints, $value);
+
+  @if type-of($fetched-value) == number {
+    @return $fetched-value;
+  } @else {
+    @error 'Breakpoint `#{$value}` not found.';
+  }
+}

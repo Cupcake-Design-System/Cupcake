@@ -1,0 +1,62 @@
+.#{$prefix}-header-xxl {
+  @include H1-text-style();
+}
+
+.#{$prefix}-header-xl {
+  @include H2-text-style();
+}
+
+.#{$prefix}-header-lg {
+  @include H3-text-style();
+}
+
+.#{$prefix}-header-md {
+  @include H4-text-style();
+}
+
+.#{$prefix}-header-sm {
+  @include H5-text-style();
+}
+
+.#{$prefix}-header-xs {
+  @include H6-text-style();
+}
+
+
+.subtitle1-text-style {
+  @include subtitle1-text-style();
+}
+
+.subtitle2-text-style {
+  @include subtitle2-text-style();
+}
+
+.body2-text-style {
+  @include body2-text-style();
+}
+
+.body1-text-style {
+  @include body1-text-style();
+}
+
+.#{$prefix}aption-text-style {
+  @include caption-text-style();
+}
+
+.overline-text-style {
+  @include overline-text-style();
+
+  color: color(gray, 6);
+}
+
+.button-text-style {
+  @include button-text-style();
+}
+
+.link-text-style {
+  @include link-text-style();
+}
+
+.#{$prefix}-text {
+  @include modifiers(font-weights, 'font-weight');
+}

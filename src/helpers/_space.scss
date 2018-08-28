@@ -1,0 +1,41 @@
+@mixin spacer-export {
+  .#{$prefix}-p {
+    @include modifiers($space, 'padding');
+
+    &-top {
+      @include modifiers($space, ('padding-top'));
+    }
+
+    &-bottom {
+      @include modifiers($space, ('padding-bottom'));
+    }
+
+    &-horizontal {
+      @include modifiers($space, ('padding-left', 'padding-right'));
+    }
+
+    &-vertical {
+      @include modifiers($space, ('padding-top', 'padding-bottom'));
+    }
+  }
+
+  .#{$prefix}-m {
+    @include modifiers($space, 'margin');
+
+    &-top {
+      @include modifiers($space, ('margin-top'));
+    }
+
+    &-bottom {
+      @include modifiers($space, ('margin-bottom'));
+    }
+
+    &-horizontal {
+      @include modifiers($space, ('margin-left', 'margin-right'));
+    }
+
+    &-vertical {
+      @include modifiers($space, ('margin-top', 'margin-bottom'));
+    }
+  }
+}

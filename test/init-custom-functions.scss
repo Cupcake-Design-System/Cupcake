@@ -1,0 +1,94 @@
+// stylelint-disable
+@import '../node_modules/sass-true/sass/true';
+@import '../src/support/support';
+
+@mixin test-mixin {
+  transition: all easing(overshot) duration(slow);
+  box-shadow: shadow(xl);
+  margin-top: space(xxl);
+  background: color(success);
+  color: color(gray, 9);
+  font-weight: font-weight(bold);
+  line-height: line-height();
+  size: breakpoint(sm);
+  font-family: font(primary);
+}
+
+@include describe('Test functions for retrieving map data') {
+
+
+  @include describe("Testing color [functions]") {
+    @include it('Checks color functions return the right data') {
+      @include assert-equal(color(success, 4), #69db7c);
+      @include assert-equal(color(primary), #1c7cd6);
+    }
+  }
+
+  @include describe("Testing space [function]") {
+    @include it('Checks spacer functions return the right data') {
+      @include assert-equal(space(lg), 1.5rem);
+      @include assert-equal(space(sm), .5rem);
+    }
+  }
+
+  @include describe("Testing shadow [function]") {
+    @include it('Checks shadow functions return the right data') {
+      @include assert-equal(shadow(sm), 0 4px 8px 0 rgba(0, 0, 0, 0.1));
+    }
+  }
+
+  @include describe("Testing animation [functions]") {
+    @include it('Checks animation functions return the right data') {
+      @include assert-equal(all easing(overshot) duration(slow), all cubic-bezier(0.07, 0.28, 0.32, 1.22) 300ms);
+    }
+  }
+
+  @include describe("Testing breakpoint [functions]") {
+    @include it('Checks breakpoint functions return the right data') {
+      @include assert-equal(breakpoint('sm'), 600px);
+    }
+  }
+
+  @include describe("Testing typography [functions]") {
+
+    @include it('Checks font-size function return the right data') {
+      @include assert-equal(font-size(sm), 20px);
+    }
+
+    @include it('Checks font-weight function return the right data') {
+      @include assert-equal(font-weight(bold), 900);
+    }
+
+    // @include it('Checks line-height function return the right data') {
+    //   @include assert-equal(line-height(subtitle2), 1.6);
+    // }
+
+    @include it('Checks font function return the right data') {
+      @include assert-equal(font(primary), (-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto));
+    }
+  }
+
+
+  @include describe("Test with mixin that returns multiple [functions]") {
+    @include it('Checks cupcake functions output the right information') {
+      @include assert {
+        @include output {
+          @include test-mixin;
+        }
+      @include expect {
+        transition: all cubic-bezier(0.07, 0.28, 0.32, 1.22) 300ms;
+        box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.1);
+        margin-top: 3rem;
+        background: #37b24d;
+        color: #212529;
+        font-weight: 900;
+        line-height: normal;
+        size: 600px;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+      }
+    }
+  }
+}
+}
+
+@include report;

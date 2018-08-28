@@ -1,0 +1,16 @@
+@mixin color-export {
+  .#{$prefix}-bg {
+    @include modifiers($colors, 'background-color');
+    @include modifiers($theme-colors, 'background-color');
+  }
+
+  .#{$prefix}-text {
+    @include modifiers($colors, 'color');
+    @include modifiers($theme-colors, 'color');
+  }
+
+  .#{$prefix}-bd {
+    @include modifiers($colors, 'border-color');
+    @include modifiers($theme-colors, 'border-color');
+  }
+}

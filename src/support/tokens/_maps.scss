@@ -1,0 +1,148 @@
+@import 'variables';
+
+////
+/// @group Global Maps
+////
+
+/// Default map settings for $duration.
+/// Retrieve via function.
+$duration:(
+  fast: $duration-fast,
+  base: $duration-base,
+  slow: $duration-slow,
+  slower: $duration-slower,
+  slowest: $duration-slowest,
+) !default;
+
+/// Default map settings for $easing.
+/// Retrieve via function.
+$easing: (
+  base: $easing-base,
+  in: $easing-in,
+  out: $easing-out,
+  excite: $easing-excite,
+  overshot: $easing-overshoot,
+  anticipate: $easing-anticipate,
+) !default;
+
+
+// Default map settings for $breakpoints.
+// Retrieve via function.
+$breakpoints: () !default;
+$breakpoints: map-merge(
+  (
+    sm: 600px,
+    lg: 1200px
+  ),
+  $breakpoints
+);
+
+
+/// Default map settings for $radius.
+/// Retrieve via function.
+$radius: () !default;
+$radius: map-merge(
+  (
+    0: none,
+    square: $radius-square,
+    sm: $radius-sm,
+    md: $radius-md,
+    lg: $radius-lg,
+    round: $radius-round
+  ),
+  $radius
+);
+
+
+/// Default map settings for $shadows.
+/// Retrieve via function.
+$shadows: () !default;
+$shadows: map-merge(
+  (
+    xl: $shadow-xl,
+    lg: $shadow-lg,
+    md: $shadow-md,
+    sm: $shadow-sm,
+    xs: $shadow-xs,
+    none: $shadow-none
+  ),
+  $shadows
+);
+
+
+// Default map settings for $space.
+// Retrieve via function.
+$space: () !default;
+$space: map-merge(
+  (
+    0  : $space-none,
+    xxs: $space-xxs,
+    xs : $space-xs,
+    sm : $space-sm,
+    md : $space-md,
+    lg : $space-lg,
+    xl : $space-xl,
+    xxl: $space-xxl,
+    xxxl: $space-xxl * 2
+  ),
+  $space
+);
+
+
+/// Default map settings for $font-size.
+/// Retrieve via function.
+$font-size: () !default;
+$font-size: map-merge(
+  (
+    xxl: $base-font-size * 4,
+    xl: $base-font-size * 3,
+    lg: $base-font-size * 2.25,
+    md: $base-font-size * 1.5,
+    sm: $base-font-size  * 1.25,
+    xs: $base-font-size * 1.125,
+    subtitle-lg: $base-font-size * 0.875,
+    subtitle-sm: $base-font-size,
+    body-lg: $base-font-size * 0.875,
+    body-sm: $base-font-size,
+    body-xs: .75rem,
+    base: $base-font-size,
+  ),
+  $font-size
+);
+
+/// Default map settings for $line-height.
+/// Retrieve via function.
+$line-height: () !default;
+$line-height: map-merge(
+  (
+    normal: normal,
+    md: 1.6,
+    sm: 1.5
+  ),
+  $line-height
+);
+
+/// Default map settings for $font-weight.
+/// Retrieve via function.
+$font-weight: () !default;
+$font-weight: map-merge(
+  (
+    bold: 900,
+    semibold: 600,
+    normal: 400,
+    light: 300
+  ),
+  $font-weight
+);
+
+
+/// Default map settings for $font.
+/// Retrieve via function.
+$font: () !default;
+$font: map-merge(
+  (
+    primary: ($base-font-family),
+    code: ($base-font-family)
+  ),
+  $font
+);

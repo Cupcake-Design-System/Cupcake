@@ -1,0 +1,77 @@
+{
+  "version": "2.0.0",
+  "name": "cupcake",
+  "description": "Design System framework.",
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --production",
+    "deploy": "gulp build && gulp deploy --production",
+    "stage": "gulp --production",
+    "lint": "gulp lint --fail-on-error",
+    "css-lint-vars": "node lint-vars.js src/",
+    "test": "mocha",
+    "list-selectors-BD": "list-selectors ./dist/bd.css -p -i classes stdout > bd-class.json",
+    "list-selectors": "list-selectors ./dist/cupcake.css -p -i classes stdout > 2.0-classes.json",
+    "beautify": "gulp beautify",
+    "precommit": "lint-staged && npm run lint",
+    "docs": "sassdoc src/ -d docs/"
+  },
+  "dependencies": {
+    "npm": "^6.4.0"
+  },
+  "browserslist": [
+    "> 2%",
+    "IE 10"
+  ],
+  "lint-staged": {
+    "*.scss": "stylelint --syntax=scss"
+  },
+  "devDependencies": {
+    "@ipreo/cupcake-stylelint-config": "1.1.0",
+    "ansi-colors": "^3.0.5",
+    "autoprefixer": "^9.1.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.7",
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-json-editor": "^2.4.2",
+    "gulp-shell": "^0.6.5",
+    "handlebars": "^4.0.11",
+    "through2-map": "^3.0.0",
+    "through2-spy": "^2.0.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-header": "^2.0.5",
+    "gulp-footer": "^2.0.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-stylelint": "^7.0.0",
+    "gulp-style-extract": "^1.0.2",
+    "fabricator-assemble": "^1.2.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "list-selectors": "^2.0.0",
+    "octophant": "^1.0.1",
+    "postcss-reporter": "^6.0.0",
+    "postcss-scss": "^2.0.0",
+    "require-dir": "^1.0.0",
+    "stylelint": "^9.5.0",
+    "mocha": "^5.2.0",
+    "sass-true": "^4.0.0",
+    "sassdoc": "^2.5.0",
+    "sassdoc-theme-flippant": "^0.1.0"
+  }
+}

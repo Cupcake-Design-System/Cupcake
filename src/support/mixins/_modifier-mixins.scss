@@ -1,0 +1,49 @@
+//- Mixin: Modifiers
+///
+/// Generate modifier classes based parent.
+/// Can get any value from the map, generate the classes with the style attribute.
+///
+/// @group Style Mixins
+/// @param {variable} $attribute [ ] - css attribute target
+/// @param {variable} $prefix [-] - How you seperate the parent class and generated modifiers .c-text
+/// @param {variable} $separator [-] - If you follow BEM and wish to use something like "--" to get .color-text--red
+/// @example
+///    //Useage:
+///    .parent {
+///      @include modifiers(shadows, 'box-shadow');
+///     }
+///
+/// @example
+///   //Output:
+/// .parent-xl {
+///   box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.1); }
+///
+/// .parent-lg {
+///   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1); }
+///
+/// .parent-md {
+///   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1); }
+///
+/// .parent-sm {
+///   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); }
+///
+/// .parent-xs {
+///   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
+///
+///
+
+@mixin modifiers($map, $attribute, $prefix: '-', $separator: '-') {
+  @each $key, $value in $map {
+    &#{#{$prefix}#{$key}} {
+      @if type-of($value) == 'map' {
+        @include modifiers($value, $attribute, $prefix, $separator);
+      } @else if type-of($attribute) == 'list' {
+        @each $a in $attribute {
+          #{$a}: $value;
+        }
+      } @else {
+        #{$attribute}: $value;
+      }
+    }
+  }
+}
