@@ -1,5 +1,7 @@
 <img alt="cupcake-logo" src="http://funkyimg.com/i/2KN2G.png" width="350">
 
+[![CodeFactor](https://www.codefactor.io/repository/github/cupcake-design-system/cupcake/badge)](https://www.codefactor.io/repository/github/cupcake-design-system/cupcake)
+
 # Cupcake 2.0 UNDER DEVELOPMENT
 
 This repository includes everything you need to build, customize, test, and deploy Cupcake.

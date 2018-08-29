@@ -1,7 +1,0 @@
-{
-  "extends": "@ipreo/cupcake-stylelint-config",
-  "rules":{
-    "no-eol-whitespace": null,
-    "function-parentheses-space-inside": null
-  }
-}
