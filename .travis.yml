@@ -1,0 +1,13 @@
+dist: trusty
+language: node_js
+git:
+  depth: 3
+node_js:
+  - "8"
+deploy:
+  provider: surge
+  project: ./dist
+  domain: cupcake-design-system.surge.sh
+  skip_cleanup: true
+  on:
+    all_branches: true
