@@ -8,7 +8,7 @@ about: updating cupcake components from 1.x to 2.0
 Cupcake update
 
 ## Description
-As a developer, I would like the COMPONENT for Cupcake 2.0 to have acceptable API-correct code, written tests, API consistency with 1.0, and match the 2.0 Sketch file design.
+As a developer, I would like the **COMPONENT** for Cupcake 2.0 to have acceptable API-correct code, written tests, API consistency with 1.0, and match the 2.0 Sketch file design.
 
 ## URLs and/or external references
 <!--- Include any other details or links related to the issue --> 
