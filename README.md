@@ -1,6 +1,10 @@
 <img alt="cupcake-logo" src="http://funkyimg.com/i/2KN2G.png" width="350">
 
 [![CodeFactor](https://www.codefactor.io/repository/github/cupcake-design-system/cupcake/badge)](https://www.codefactor.io/repository/github/cupcake-design-system/cupcake)
+[![Travis (.org)](https://img.shields.io/travis/Cupcake-Design-System/Cupcake.svg)](https://travis-ci.org/Cupcake-Design-System/Cupcake)
+![David](https://img.shields.io/david/Cupcake-Design-System/Cupcake.svg)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg)](https://github.com/Cupcake-Design-System/Cupcake)
+
 
 # Cupcake 2.0 UNDER DEVELOPMENT
 
