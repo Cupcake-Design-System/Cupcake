@@ -40,13 +40,6 @@ export default {
     tokens: 'dist/tokens'
   },
 
-  color: {
-    source: 'src/color',
-    partials: 'src/color/templates/partials/*',
-    templates: 'src/color/templates/*.hbs',
-    build: 'src/color'
-  },
-
   scripts: {
     source: 'src/scripts',
     build: 'dist/assets/scripts'
@@ -59,10 +52,9 @@ export default {
     layoutIncludes: ["html/views/layouts/includes/**/*", 'src/layout/**/*.html'],
     views: ['html/views/**/*', '!html/views/+(layouts)/**'],
     data: ['html/data/**/*.{json,yml}'],
-    core: 'src/core/**/*.html',
+    core: 'html/elements/*.html',
     build: 'dist'
   },
-
 
   fonts: {
     source: 'src/fonts',

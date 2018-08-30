@@ -1320,6 +1320,10 @@ th {
   flex: 1;
   display: block
 }
+hr {
+  border-bottom: 1px solid #e9ecef;
+  border-top: 0
+}
   /* 🎂 CUPCAKE 🎂 */
   /* END */
   /* ----------------------- */
