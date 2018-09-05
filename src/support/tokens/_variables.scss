@@ -6,7 +6,7 @@
 $prefix: 'c' !default;
 
 /// $enable-reset
-$enable-reset: false !default;
+$enable-reset: true !default;
 
 /// $enable-shadows
 $enable-shadow-classes: true !default;
@@ -19,6 +19,9 @@ $enable-spacer-classes: true !default;
 
 /// $enable-radius
 $enable-radius-classes: true !default;
+
+/// $enable-radius
+$white-label: false !default;
 
 
 //### TYPOGRAPHY START  ################################//

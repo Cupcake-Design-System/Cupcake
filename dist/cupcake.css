@@ -20,7 +20,8 @@ html {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-size: 16px;
   line-height: normal;
-  -webkit-tap-highlight-color: transparent
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility
 }
 body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
@@ -213,22 +214,22 @@ th {
   padding: 0
 }
 .c-avatar {
-  font-size: .75rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  background: #1c7cd6;
-  border-radius: 200px;
+  font-size: 1rem;
+  height: 2rem;
+  width: 2rem;
   color: #fff;
   display: inline-block;
   text-align: center;
-  font-weight: 400;
-  line-height: normal;
   position: relative;
-  vertical-align: middle
+  vertical-align: middle;
+  background: #1c7cd6;
+  border-radius: 200px;
+  font-weight: 400;
+  line-height: normal
 }
 .c-avatar i {
-  font-size: .75rem;
-  line-height: 1.5rem
+  font-size: 1rem;
+  line-height: 2rem
 }
 .c-avatar-square {
   border-radius: 0
@@ -263,7 +264,7 @@ th {
   z-index: 1;
   content: attr(data-badge);
   box-shadow: 0 0 0 1px #fff;
-  font-size: .75rem;
+  font-size: 10px;
   height: 1rem;
   line-height: 1;
   min-width: 1rem;
@@ -311,31 +312,592 @@ th {
   background-color: #f03e3e
 }
 .c-avatar-sm {
-  font-size: .5rem;
-  height: 1rem;
-  width: 1rem
+  font-size: .75rem;
+  height: 1.5rem;
+  width: 1.5rem
 }
 .c-avatar-sm i {
-  font-size: .5rem;
-  line-height: 1rem
+  font-size: .75rem;
+  line-height: 1.5rem
 }
 .c-avatar-lg {
-  font-size: 1rem;
-  height: 2rem;
-  width: 2rem
+  font-size: 1.25rem;
+  height: 2.5rem;
+  width: 2.5rem
 }
 .c-avatar-lg i {
-  font-size: 1rem;
-  line-height: 2rem
+  font-size: 1.25rem;
+  line-height: 2.5rem
 }
 .c-avatar-xl {
-  font-size: 2rem;
-  height: 4rem;
-  width: 4rem
+  font-size: 28px;
+  height: 56px;
+  width: 56px
 }
 .c-avatar-xl i {
-  font-size: 2rem;
-  line-height: 4rem
+  font-size: 28px;
+  line-height: 56px
+}
+.c-checkbox,
+.c-radio {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  line-height: 1
+}
+.c-checkbox input,
+.c-radio input {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer
+}
+.c-checkbox input:checked + i::before,
+.c-radio input:checked + i::before {
+  border-width: 0;
+  background-color: inherit
+}
+.c-checkbox input:checked + span .active,
+.c-radio input:checked + span .active {
+  display: inherit
+}
+.c-checkbox input[type=radio] + i,
+.c-checkbox input[type=radio] + i::before,
+.c-radio input[type=radio] + i,
+.c-radio input[type=radio] + i::before {
+  border-radius: 50%
+}
+.c-checkbox input[type=checkbox]:checked + i::after,
+.c-radio input[type=checkbox]:checked + i::after {
+  transform: rotate(45deg);
+  position: absolute;
+  left: 8px;
+  top: 3px;
+  display: table-cell;
+  width: 8px;
+  height: 16px;
+  border: 3px solid;
+  border-top: 0;
+  border-left: 0;
+  content: ' ';
+  color: #fff
+}
+.c-checkbox input[type=radio]:checked + i::after,
+.c-radio input[type=radio]:checked + i::after {
+  position: absolute;
+  display: table;
+  left: 6px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  content: ' ';
+  color: #fff
+}
+.c-checkbox input[disabled] + i::before,
+.c-radio input[disabled] + i::before,
+fieldset[disabled] .c-checkbox input + i::before,
+fieldset[disabled] .c-radio input + i::before {
+  opacity: .5;
+  background: #dee2e6;
+  cursor: not-allowed
+}
+.c-checkbox input[disabled]:checked + i::before,
+.c-radio input[disabled]:checked + i::before {
+  opacity: .5;
+  cursor: not-allowed;
+  border: 1px solid #adb5bd
+}
+.c-checkbox input[disabled]:checked + i::after,
+.c-radio input[disabled]:checked + i::after {
+  color: #adb5bd
+}
+.c-checkbox > i,
+.c-radio > i {
+  height: 24px;
+  display: inline-block;
+  margin: 0 24px 0 0;
+  position: relative
+}
+.c-checkbox > i::before,
+.c-radio > i::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #dee2e6;
+  border-radius: 2px;
+  transition: all .2s
+}
+.c-checkbox-sm,
+.c-radio-sm {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  line-height: 1;
+  height: 16px
+}
+.c-checkbox-sm input,
+.c-radio-sm input {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer
+}
+.c-checkbox-sm input:checked + i::before,
+.c-radio-sm input:checked + i::before {
+  border-width: 0;
+  background-color: inherit
+}
+.c-checkbox-sm input:checked + span .active,
+.c-radio-sm input:checked + span .active {
+  display: inherit
+}
+.c-checkbox-sm input[type=radio] + i,
+.c-checkbox-sm input[type=radio] + i::before,
+.c-radio-sm input[type=radio] + i,
+.c-radio-sm input[type=radio] + i::before {
+  border-radius: 50%
+}
+.c-checkbox-sm input[type=checkbox]:checked + i::after,
+.c-radio-sm input[type=checkbox]:checked + i::after {
+  transform: rotate(45deg);
+  position: absolute;
+  left: 8px;
+  top: 3px;
+  display: table-cell;
+  width: 8px;
+  height: 16px;
+  border: 3px solid;
+  border-top: 0;
+  border-left: 0;
+  content: ' ';
+  color: #fff
+}
+.c-checkbox-sm input[type=radio]:checked + i::after,
+.c-radio-sm input[type=radio]:checked + i::after {
+  position: absolute;
+  display: table;
+  left: 6px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  content: ' ';
+  color: #fff
+}
+.c-checkbox-sm input[disabled] + i::before,
+.c-radio-sm input[disabled] + i::before,
+fieldset[disabled] .c-checkbox-sm input + i::before,
+fieldset[disabled] .c-radio-sm input + i::before {
+  opacity: .5;
+  background: #dee2e6;
+  cursor: not-allowed
+}
+.c-checkbox-sm input[disabled]:checked + i::before,
+.c-radio-sm input[disabled]:checked + i::before {
+  opacity: .5;
+  cursor: not-allowed;
+  border: 1px solid #adb5bd
+}
+.c-checkbox-sm input[disabled]:checked + i::after,
+.c-radio-sm input[disabled]:checked + i::after {
+  color: #adb5bd
+}
+.c-checkbox-sm > i,
+.c-radio-sm > i {
+  height: 24px;
+  display: inline-block;
+  margin: 0 24px 0 0;
+  position: relative
+}
+.c-checkbox-sm > i::before,
+.c-radio-sm > i::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #dee2e6;
+  border-radius: 2px;
+  transition: all .2s
+}
+.c-checkbox-sm input,
+.c-radio-sm input {
+  width: 16px;
+  height: 16px
+}
+.c-checkbox-sm input[type=checkbox]:checked + i::after,
+.c-radio-sm input[type=checkbox]:checked + i::after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 11px;
+  border: 2px solid;
+  border-top: 0;
+  border-left: 0
+}
+.c-checkbox-sm input[type=radio]:checked + i::after,
+.c-radio-sm input[type=radio]:checked + i::after {
+  left: 4px;
+  top: 4px;
+  width: 8px;
+  height: 8px
+}
+.c-checkbox-sm > i,
+.c-radio-sm > i {
+  height: 16px;
+  margin: 0 16px 0 0
+}
+.c-checkbox-sm > i::before,
+.c-radio-sm > i::before {
+  width: 16px;
+  height: 16px
+}
+.c-checkbox-lg,
+.c-radio-lg {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  line-height: 1;
+  height: 32px
+}
+.c-checkbox-lg input,
+.c-radio-lg input {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer
+}
+.c-checkbox-lg input:checked + i::before,
+.c-radio-lg input:checked + i::before {
+  border-width: 0;
+  background-color: inherit
+}
+.c-checkbox-lg input:checked + span .active,
+.c-radio-lg input:checked + span .active {
+  display: inherit
+}
+.c-checkbox-lg input[type=radio] + i,
+.c-checkbox-lg input[type=radio] + i::before,
+.c-radio-lg input[type=radio] + i,
+.c-radio-lg input[type=radio] + i::before {
+  border-radius: 50%
+}
+.c-checkbox-lg input[type=checkbox]:checked + i::after,
+.c-radio-lg input[type=checkbox]:checked + i::after {
+  transform: rotate(45deg);
+  position: absolute;
+  left: 8px;
+  top: 3px;
+  display: table-cell;
+  width: 8px;
+  height: 16px;
+  border: 3px solid;
+  border-top: 0;
+  border-left: 0;
+  content: ' ';
+  color: #fff
+}
+.c-checkbox-lg input[type=radio]:checked + i::after,
+.c-radio-lg input[type=radio]:checked + i::after {
+  position: absolute;
+  display: table;
+  left: 6px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  content: ' ';
+  color: #fff
+}
+.c-checkbox-lg input[disabled] + i::before,
+.c-radio-lg input[disabled] + i::before,
+fieldset[disabled] .c-checkbox-lg input + i::before,
+fieldset[disabled] .c-radio-lg input + i::before {
+  opacity: .5;
+  background: #dee2e6;
+  cursor: not-allowed
+}
+.c-checkbox-lg input[disabled]:checked + i::before,
+.c-radio-lg input[disabled]:checked + i::before {
+  opacity: .5;
+  cursor: not-allowed;
+  border: 1px solid #adb5bd
+}
+.c-checkbox-lg input[disabled]:checked + i::after,
+.c-radio-lg input[disabled]:checked + i::after {
+  color: #adb5bd
+}
+.c-checkbox-lg > i,
+.c-radio-lg > i {
+  height: 24px;
+  display: inline-block;
+  margin: 0 24px 0 0;
+  position: relative
+}
+.c-checkbox-lg > i::before,
+.c-radio-lg > i::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #dee2e6;
+  border-radius: 2px;
+  transition: all .2s
+}
+.c-checkbox-lg input,
+.c-radio-lg input {
+  width: 32px;
+  height: 32px
+}
+.c-checkbox-lg input[type=checkbox]:checked + i::after,
+.c-radio-lg input[type=checkbox]:checked + i::after {
+  left: 11px;
+  top: 4px;
+  width: 11px;
+  height: 21px;
+  border: 4px solid;
+  border-top: 0;
+  border-left: 0
+}
+.c-checkbox-lg input[type=radio]:checked + i::after,
+.c-radio-lg input[type=radio]:checked + i::after {
+  left: 8px;
+  top: 8px;
+  width: 16px;
+  height: 16px
+}
+.c-checkbox-lg > i,
+.c-radio-lg > i {
+  height: 32px;
+  margin: 0 32px 0 0
+}
+.c-checkbox-lg > i::before,
+.c-radio-lg > i::before {
+  width: 32px;
+  height: 32px
+}
+.c-checkbox-xl,
+.c-radio-xl {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  line-height: 1;
+  height: 40px
+}
+.c-checkbox-xl input,
+.c-radio-xl input {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer
+}
+.c-checkbox-xl input:checked + i::before,
+.c-radio-xl input:checked + i::before {
+  border-width: 0;
+  background-color: inherit
+}
+.c-checkbox-xl input:checked + span .active,
+.c-radio-xl input:checked + span .active {
+  display: inherit
+}
+.c-checkbox-xl input[type=radio] + i,
+.c-checkbox-xl input[type=radio] + i::before,
+.c-radio-xl input[type=radio] + i,
+.c-radio-xl input[type=radio] + i::before {
+  border-radius: 50%
+}
+.c-checkbox-xl input[type=checkbox]:checked + i::after,
+.c-radio-xl input[type=checkbox]:checked + i::after {
+  transform: rotate(45deg);
+  position: absolute;
+  left: 8px;
+  top: 3px;
+  display: table-cell;
+  width: 8px;
+  height: 16px;
+  border: 3px solid;
+  border-top: 0;
+  border-left: 0;
+  content: ' ';
+  color: #fff
+}
+.c-checkbox-xl input[type=radio]:checked + i::after,
+.c-radio-xl input[type=radio]:checked + i::after {
+  position: absolute;
+  display: table;
+  left: 6px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  content: ' ';
+  color: #fff
+}
+.c-checkbox-xl input[disabled] + i::before,
+.c-radio-xl input[disabled] + i::before,
+fieldset[disabled] .c-checkbox-xl input + i::before,
+fieldset[disabled] .c-radio-xl input + i::before {
+  opacity: .5;
+  background: #dee2e6;
+  cursor: not-allowed
+}
+.c-checkbox-xl input[disabled]:checked + i::before,
+.c-radio-xl input[disabled]:checked + i::before {
+  opacity: .5;
+  cursor: not-allowed;
+  border: 1px solid #adb5bd
+}
+.c-checkbox-xl input[disabled]:checked + i::after,
+.c-radio-xl input[disabled]:checked + i::after {
+  color: #adb5bd
+}
+.c-checkbox-xl > i,
+.c-radio-xl > i {
+  height: 24px;
+  display: inline-block;
+  margin: 0 24px 0 0;
+  position: relative
+}
+.c-checkbox-xl > i::before,
+.c-radio-xl > i::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #dee2e6;
+  border-radius: 2px;
+  transition: all .2s
+}
+.c-checkbox-xl input,
+.c-radio-xl input {
+  width: 40px;
+  height: 40px
+}
+.c-checkbox-xl input[type=checkbox]:checked + i::after,
+.c-radio-xl input[type=checkbox]:checked + i::after {
+  left: 13px;
+  top: 4px;
+  width: 13px;
+  height: 27px;
+  border: 4px solid;
+  border-top: 0;
+  border-left: 0
+}
+.c-checkbox-xl input[type=radio]:checked + i::after,
+.c-radio-xl input[type=radio]:checked + i::after {
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px
+}
+.c-checkbox-xl > i,
+.c-radio-xl > i {
+  height: 40px;
+  margin: 0 40px 0 0
+}
+.c-checkbox-xl > i::before,
+.c-radio-xl > i::before {
+  width: 40px;
+  height: 40px
+}
+.c-checkbox-success input:checked + i::before,
+.c-radio-success input:checked + i::before {
+  background-color: #37b24d
+}
+.c-checkbox-warning input:checked + i::before,
+.c-radio-warning input:checked + i::before {
+  background-color: #f76707
+}
+.c-checkbox-danger input:checked + i::before,
+.c-radio-danger input:checked + i::before {
+  background-color: #f03e3e
+}
+.c-control {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  padding: 0 16px 0 32px
+}
+.c-control.c-checkbox > i,
+.c-control.c-radio > i {
+  position: absolute;
+  left: 0
+}
+.c-control-sm {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0 4px 0 20px
+}
+.c-control-sm.c-checkbox-sm > i,
+.c-control-sm.c-radio-sm > i {
+  position: absolute;
+  left: 0
+}
+.c-control-lg {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 1;
+  padding: 0 10.66667px 0 40px
+}
+.c-control-lg.c-checkbox-lg > i,
+.c-control-lg.c-radio-lg > i {
+  position: absolute;
+  left: 0
+}
+.c-control-xl {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 40px;
+  line-height: 1;
+  padding: 0 10px 0 48px
+}
+.c-control-xl.c-checkbox-xl > i,
+.c-control-xl.c-radio-xl > i {
+  position: absolute;
+  left: 0
+}
+i.c-bg-primary {
+  background-color: #1c7cd6
+}
+i.c-bg-success {
+  background-color: #37b24d
+}
+i.c-bg-warning {
+  background-color: #f76707
+}
+i.c-bg-danger {
+  background-color: #f03e3e
+}
+.c-radio input:disabled:checked + i::before {
+  background: #dee2e6
+}
+.c-radio input:disabled:checked + i::after {
+  background: #adb5bd
 }
 .c-header-xxl {
   font-size: 64px;
@@ -385,56 +947,51 @@ th {
   letter-spacing: .15px;
   text-rendering: optimizeLegibility
 }
-.subtitle1-text-style {
-  font-weight: 400;
-  letter-spacing: .15px;
-  text-rendering: optimizeLegibility
-}
-.subtitle2-text-style {
+.c-text-xxl {
+  font-size: 34px;
+  line-height: 1.5;
   font-weight: 600;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   letter-spacing: .1px;
   text-rendering: optimizeLegibility
 }
-.body2-text-style {
+.c-text-xl {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 600;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  letter-spacing: .1px;
+  text-rendering: optimizeLegibility
+}
+.c-text-lg {
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 600;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  letter-spacing: .1px;
+  text-rendering: optimizeLegibility
+}
+.c-text-md {
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 600;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  letter-spacing: .1px;
+  text-rendering: optimizeLegibility
+}
+.c-text-sm {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: .15px;
+  text-rendering: optimizeLegibility
+}
+.c-text-xs {
+  font-size: 10px;
+  line-height: 1;
   font-weight: 400;
   letter-spacing: .7px;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto
-}
-.body1-text-style {
-  font-weight: 400;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  letter-spacing: .7px;
-  text-rendering: optimizeLegibility
-}
-.caption-text-style {
-  font-weight: 400;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  letter-spacing: .4px;
-  text-rendering: optimizeLegibility
-}
-.overline-text-style {
-  font-weight: 400;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-rendering: optimizeLegibility;
-  color: #868e96
-}
-.button-text-style {
-  font-weight: 600;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  text-rendering: optimizeLegibility;
-  letter-spacing: .4px;
-  text-transform: uppercase
-}
-.link-text-style {
-  font-weight: 400;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  text-rendering: optimizeLegibility;
-  text-decoration: none;
-  cursor: pointer;
-  color: #1c7cd6
 }
 .c-depth-xl {
   box-shadow: 0 12px 24px 0 rgba(0,0,0,.1)
@@ -1272,57 +1829,6 @@ th {
 }
 .c-radius-round {
   border-radius: 200px
-}
-.layer-types {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: space-around;
-  align-items: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #f5f7fa;
-  padding: 1rem;
-  margin-bottom: 4rem
-}
-.layer-types div {
-  width: 7.5rem;
-  height: 7.5rem;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background-color: #fff;
-  color: #cdd1d4;
-  margin: 1.375rem .6875rem
-}
-.color-block {
-  background-color: #fff;
-  box-shadow: 0 1px 0 #e9ecef;
-  overflow: hidden;
-  margin: 1rem 0;
-  position: relative;
-  min-width: 150px
-}
-.colors {
-  height: 6rem;
-  width: 100%;
-  display: -ms-flexbox;
-  display: flex
-}
-.colors span {
-  -ms-flex: 1;
-  flex: 1;
-  display: block
-}
-hr {
-  border-bottom: 1px solid #e9ecef;
-  border-top: 0
 }
   /* 🎂 CUPCAKE 🎂 */
   /* END */

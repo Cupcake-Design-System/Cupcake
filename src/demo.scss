@@ -1,0 +1,159 @@
+@import 'support/support';
+
+.docs-container {
+  display: flex;
+  height: 100%; /* 1, 3 */
+  flex-direction: column;
+}
+
+
+.docs-body {
+  display: flex;
+  flex: 1 0 auto; /* 2 */
+  flex-direction: row;
+}
+
+.docs-content {
+  flex: 1;
+  padding: 0 space(lg);
+  margin: 0;
+}
+
+
+.docs-nav {
+  padding: 0 20px;
+  flex: 0 0 240px;
+  background-color: color(gray, 0);
+  box-shadow: inset -1px 0 0 0 color(gray, 2);
+  border-radius: 3px;
+  order: -1;
+  white-space: nowrap;
+  color: color(gray, 9);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.docs-menu-item a .current {
+  background-color: color(gray, 1);
+  padding: 0 space(md);
+  font-weight: bold;
+  display: block;
+  border-radius: 2px;
+  color: color(primary);
+}
+
+.docs-menu-title {
+  height: 14px;
+  width: 200px;
+  color: color(gray, 5);
+  font-family: font(primary);
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.docs-menu-item {
+  width: 220px;
+  color: color(gray, 9);
+  font-family: font(primary);
+  font-size: 14px;
+  line-height: 40px;
+  display: block;
+
+  a {
+    color: color(gray, 9);
+    text-decoration: none;
+    padding: 0 20px;
+  }
+}
+
+.ipreo {
+  color: color(gray, 9);
+  font-family: font(primary);
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.cupcake {
+  color: color(primary);
+  font-family: font(primary);
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.docs-nav-header {
+  height: 160px;
+  width: 220px;
+  padding: 40px 20px;
+  box-shadow: inset 0 -1px 0 0 color(gray, 1);
+}
+
+.docs-version {
+  width: 96px;
+  border: 1px solid color(gray, 1);
+  border-radius: 2px;
+  background-color: white;
+  padding: 0 10px;
+  color: color(gray, 9);
+  font-family: font(primary);
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 24px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+// dummy stuff til we get layout classes
+
+.layer-types {
+  display: flex;
+  align-items: space-around;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: color(gray, 1);
+  padding: space(md);
+
+  div {
+    width: 7.5rem;
+    height: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: space(md);
+  }
+}
+
+
+.color-block {
+  background-color: white;
+  box-shadow: 0 1px 0 #e9ecef;
+  overflow: hidden;
+  margin: 1rem 0;
+  position: relative;
+  min-width: 150px;
+}
+
+.colors {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+
+  span {
+    flex: 1;
+    display: block;
+  }
+}
+

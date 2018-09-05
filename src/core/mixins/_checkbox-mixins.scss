@@ -1,0 +1,152 @@
+
+
+@mixin checkbox($size:$checkbox-size) {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  line-height: 1;
+
+  input {
+    position: absolute;
+    width: $size;
+    height: $size;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+
+    &:checked + i::before {
+      border-width: 0;
+      background-color: inherit;
+    }
+
+    &:checked + span .active {
+      display: inherit;
+    }
+
+    &[type="radio"] + i {
+      &,
+      &::before {
+        border-radius: 50%;
+      }
+    }
+
+    &[type="checkbox"]:checked + i::after {
+      transform: rotate(45deg);
+      position: absolute;
+      left: round($size / 3);
+      top: round($size / 9);
+      display: table-cell;
+      width: round($size / 3);
+      height: round($size / 1.5);
+      border: round($size / 9) solid;
+      border-top: 0;
+      border-left: 0;
+      content: ' ';
+      color: white;
+    }
+
+    &[type="radio"]:checked + i::after {
+      position: absolute;
+      display: table;
+      left: round($size / 4);
+      top: round($size / 4);
+      width: round($size / 2);
+      height: round($size / 2);
+      background: white;
+      border-radius: 50%;
+      content: ' ';
+      color: white;
+    }
+
+    &[disabled],
+    fieldset[disabled] & {
+      & + i::before {
+        opacity: $checkbox-disabled-opacity;
+        background: $checkbox-disabled;
+        cursor: not-allowed;
+      }
+    }
+
+    &[disabled]:checked {
+      & + i::before {
+        opacity: $checkbox-disabled-opacity;
+        cursor: not-allowed;
+        border: 1px solid $color-gray-5;
+      }
+    }
+
+    &[disabled]:checked {
+      & + i::after {
+        color: $color-gray-5;
+      }
+    }
+  }
+
+  > i {
+    height: $size;
+    display: inline-block;
+    margin: 0 $size 0 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: $size;
+      height: $size;
+      border: $checkbox-icon-bd;
+      border-radius: $checkbox-icon-radius;
+      transition: $checkbox-transition;
+    }
+  }
+}
+
+@mixin checkbox-size($size:$checkbox-size) {
+  height: $size;
+
+  input {
+    width: $size;
+    height: $size;
+
+    &[type="checkbox"]:checked + i::after {
+      left: round($size / 3);
+      top: round($size / 9);
+      width: round($size / 3);
+      height: round($size / 1.5);
+      border: round($size / 9) solid;
+      border-top: 0;
+      border-left: 0;
+    }
+
+    &[type="radio"]:checked + i::after {
+      left: round($size / 4);
+      top: round($size / 4);
+      width: round($size / 2);
+      height: round($size / 2);
+    }
+  }
+
+  > i {
+    height: $size;
+    margin: 0 $size 0 0;
+
+    &::before {
+      width: $size;
+      height: $size;
+    }
+  }
+}
+
+@mixin checkbox-color($color: $primary) {
+  input:checked + i::before {
+    background-color: $color;
+  }
+}
+
+@mixin control($font-size: $checkbox-size) {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: $font-size;
+  line-height: 1;
+}

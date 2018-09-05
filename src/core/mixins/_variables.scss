@@ -1,0 +1,17 @@
+$all-control-xs: space(md) !default;
+$all-control-sm: space(lg) !default;
+$all-control-md: space(xl) !default;
+$all-control-lg: space(xl) + space(sm) !default;
+$all-control-xl: 56px !default;
+
+
+$checkbox-size-sm           : 16px !default;
+$checkbox-size              : 24px !default;
+$checkbox-size-lg           : 32px !default;
+$checkbox-size-xl           : 40px !default;
+$checkbox-icon-bd           : 1px solid color(gray, 3) !default;
+$checkbox-icon-radius       : 2px !default;
+$checkbox-transition        : all 0.2s !default;
+$checkbox-disabled          : color(gray, 3) !default;
+$checkbox-disabled-opacity  : 0.5 !default;
+

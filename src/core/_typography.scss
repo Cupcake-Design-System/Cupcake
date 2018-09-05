@@ -22,41 +22,30 @@
   @include H6-text-style();
 }
 
-
-.subtitle1-text-style {
-  @include subtitle1-text-style();
-}
-
-.subtitle2-text-style {
-  @include subtitle2-text-style();
-}
-
-.body2-text-style {
-  @include body2-text-style();
-}
-
-.body1-text-style {
-  @include body1-text-style();
-}
-
-.#{$prefix}aption-text-style {
-  @include caption-text-style();
-}
-
-.overline-text-style {
-  @include overline-text-style();
-
-  color: color(gray, 6);
-}
-
-.button-text-style {
-  @include button-text-style();
-}
-
-.link-text-style {
-  @include link-text-style();
-}
-
 .#{$prefix}-text {
   @include modifiers(font-weights, 'font-weight');
+}
+
+.#{$prefix}-text-xxl {
+  @include body-xxl();
+}
+
+.#{$prefix}-text-xl {
+  @include body-xl();
+}
+
+.#{$prefix}-text-lg {
+  @include body-lg();
+}
+
+.#{$prefix}-text-md {
+  @include body-md();
+}
+
+.#{$prefix}-text-sm {
+  @include body-sm();
+}
+
+.#{$prefix}-text-xs {
+  @include body-xs();
 }

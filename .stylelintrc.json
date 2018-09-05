@@ -9,11 +9,11 @@
               "first-nested"
           ],
           "ignore": ["after-comment"],
-          "ignoreAtRules": ["else"]
+          "ignoreAtRules": ["if", "else", "elseif"]
       }],
       "at-rule-no-vendor-prefix": true,
       "block-closing-brace-newline-after": ["always", {
-          "ignoreAtRules": ["if", "else"]
+          "ignoreAtRules": ["if", "else", "elseif"]
       }],
       "color-hex-length": "long",
       "declaration-block-semicolon-newline-after": "always",

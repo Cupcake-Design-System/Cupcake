@@ -1,15 +1,15 @@
 ---
 title: Overview | All
 ---
-<div style="padding: 5%;">
 
+{{#each materials.tokens.items}}
+
+{{> f-item this}}
+
+{{/each}}
 
 {{#each materials.elements.items}}
 
 {{> f-item this}}
 
 {{/each}}
-
-
-
-</div>
