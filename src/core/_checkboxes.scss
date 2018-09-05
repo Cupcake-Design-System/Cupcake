@@ -1,38 +1,27 @@
-.c-checkbox,
-.c-radio {
+.#{$checkbox-prefix},
+.#{$radio-prefix} {
   @include checkbox;
 }
 
-.c-checkbox,
-.c-radio {
-  &-sm {
-    @include checkbox;
-    @include checkbox-size($checkbox-size-sm);
-  }
-
-  &-lg {
-    @include checkbox;
-    @include checkbox-size($checkbox-size-lg);
-  }
-
-  &-xl {
-    @include checkbox;
-    @include checkbox-size($checkbox-size-xl);
+.#{$checkbox-prefix},
+.#{$radio-prefix} {
+  @each $name, $size in $checkbox-sizes {
+    &-#{$name} {
+      @include checkbox-size($size);
+    }
   }
 }
 
-.c-checkbox,
-.c-radio {
-  &-success {
-    @include checkbox-color(color(success, 7));
-  }
+.#{$checkbox-prefix},
+.#{$radio-prefix} {
+  @each $name, $hex in config($theme-colors) {
+    &-#{$name} {
+      @include checkbox-color($hex);
+    }
 
-  &-warning {
-    @include checkbox-color(color(warning, 7));
-  }
-
-  &-danger {
-    @include checkbox-color(color(danger, 7));
+    i.c-bg-#{$name} {
+      background-color: $hex;
+    }
   }
 }
 
@@ -40,69 +29,15 @@
 .c-control {
   @include control;
 
-  padding: 0 $checkbox-size - 8 0 $checkbox-size + 8;
-
-  &.c-checkbox > i,
-  &.c-radio > i {
-    position: absolute;
-    left: 0;
-  }
-
-  &-sm {
-    @include control($checkbox-size-sm);
-
-    padding: 0 $checkbox-size-sm / 4 0 $checkbox-size-sm + 4;
-
-    &.c-checkbox-sm > i,
-    &.c-radio-sm > i {
-      position: absolute;
-      left: 0;
-    }
-  }
-
-  &-lg {
-    @include control($checkbox-size-lg);
-
-    padding: 0 $checkbox-size-lg / 3 0 $checkbox-size-lg + 8;
-
-    &.c-checkbox-lg > i,
-    &.c-radio-lg > i {
-      position: absolute;
-      left: 0;
-    }
-  }
-
-  &-xl {
-    @include control($checkbox-size-xl);
-
-    padding: 0 $checkbox-size-xl / 4 0 $checkbox-size-xl + 8;
-
-    &.c-checkbox-xl > i,
-    &.c-radio-xl > i {
-      position: absolute;
-      left: 0;
+  @each $name, $size in $checkbox-sizes {
+    &-#{$name} {
+      @include control($size);
     }
   }
 }
 
-i.c-bg-primary {
-  background-color: color(primary);
-}
 
-i.c-bg-success {
-  background-color: color(success);
-}
-
-i.c-bg-warning {
-  background-color: color(warning);
-}
-
-i.c-bg-danger {
-  background-color: color(danger);
-}
-
-
-.c-radio {
+.#{$radio-prefix} {
   input:disabled:checked {
     + i {
       &::before {

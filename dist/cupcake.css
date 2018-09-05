@@ -214,9 +214,9 @@ th {
   padding: 0
 }
 .c-avatar {
-  font-size: 1rem;
-  height: 2rem;
-  width: 2rem;
+  font-size: 16px;
+  height: 32px;
+  width: 32px;
   color: #fff;
   display: inline-block;
   text-align: center;
@@ -228,8 +228,8 @@ th {
   line-height: normal
 }
 .c-avatar i {
-  font-size: 1rem;
-  line-height: 2rem
+  font-size: 16px;
+  line-height: 32px
 }
 .c-avatar-square {
   border-radius: 0
@@ -312,22 +312,22 @@ th {
   background-color: #f03e3e
 }
 .c-avatar-sm {
-  font-size: .75rem;
-  height: 1.5rem;
-  width: 1.5rem
+  font-size: 12px;
+  height: 24px;
+  width: 24px
 }
 .c-avatar-sm i {
-  font-size: .75rem;
-  line-height: 1.5rem
+  font-size: 12px;
+  line-height: 24px
 }
 .c-avatar-lg {
-  font-size: 1.25rem;
-  height: 2.5rem;
-  width: 2.5rem
+  font-size: 20px;
+  height: 40px;
+  width: 40px
 }
 .c-avatar-lg i {
-  font-size: 1.25rem;
-  line-height: 2.5rem
+  font-size: 20px;
+  line-height: 40px
 }
 .c-avatar-xl {
   font-size: 28px;
@@ -435,99 +435,7 @@ fieldset[disabled] .c-radio input + i::before {
 }
 .c-checkbox-sm,
 .c-radio-sm {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  line-height: 1;
   height: 16px
-}
-.c-checkbox-sm input,
-.c-radio-sm input {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  cursor: pointer
-}
-.c-checkbox-sm input:checked + i::before,
-.c-radio-sm input:checked + i::before {
-  border-width: 0;
-  background-color: inherit
-}
-.c-checkbox-sm input:checked + span .active,
-.c-radio-sm input:checked + span .active {
-  display: inherit
-}
-.c-checkbox-sm input[type=radio] + i,
-.c-checkbox-sm input[type=radio] + i::before,
-.c-radio-sm input[type=radio] + i,
-.c-radio-sm input[type=radio] + i::before {
-  border-radius: 50%
-}
-.c-checkbox-sm input[type=checkbox]:checked + i::after,
-.c-radio-sm input[type=checkbox]:checked + i::after {
-  transform: rotate(45deg);
-  position: absolute;
-  left: 8px;
-  top: 3px;
-  display: table-cell;
-  width: 8px;
-  height: 16px;
-  border: 3px solid;
-  border-top: 0;
-  border-left: 0;
-  content: ' ';
-  color: #fff
-}
-.c-checkbox-sm input[type=radio]:checked + i::after,
-.c-radio-sm input[type=radio]:checked + i::after {
-  position: absolute;
-  display: table;
-  left: 6px;
-  top: 6px;
-  width: 12px;
-  height: 12px;
-  background: #fff;
-  border-radius: 50%;
-  content: ' ';
-  color: #fff
-}
-.c-checkbox-sm input[disabled] + i::before,
-.c-radio-sm input[disabled] + i::before,
-fieldset[disabled] .c-checkbox-sm input + i::before,
-fieldset[disabled] .c-radio-sm input + i::before {
-  opacity: .5;
-  background: #dee2e6;
-  cursor: not-allowed
-}
-.c-checkbox-sm input[disabled]:checked + i::before,
-.c-radio-sm input[disabled]:checked + i::before {
-  opacity: .5;
-  cursor: not-allowed;
-  border: 1px solid #adb5bd
-}
-.c-checkbox-sm input[disabled]:checked + i::after,
-.c-radio-sm input[disabled]:checked + i::after {
-  color: #adb5bd
-}
-.c-checkbox-sm > i,
-.c-radio-sm > i {
-  height: 24px;
-  display: inline-block;
-  margin: 0 24px 0 0;
-  position: relative
-}
-.c-checkbox-sm > i::before,
-.c-radio-sm > i::before {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  border: 1px solid #dee2e6;
-  border-radius: 2px;
-  transition: all .2s
 }
 .c-checkbox-sm input,
 .c-radio-sm input {
@@ -563,99 +471,7 @@ fieldset[disabled] .c-radio-sm input + i::before {
 }
 .c-checkbox-lg,
 .c-radio-lg {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  line-height: 1;
   height: 32px
-}
-.c-checkbox-lg input,
-.c-radio-lg input {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  cursor: pointer
-}
-.c-checkbox-lg input:checked + i::before,
-.c-radio-lg input:checked + i::before {
-  border-width: 0;
-  background-color: inherit
-}
-.c-checkbox-lg input:checked + span .active,
-.c-radio-lg input:checked + span .active {
-  display: inherit
-}
-.c-checkbox-lg input[type=radio] + i,
-.c-checkbox-lg input[type=radio] + i::before,
-.c-radio-lg input[type=radio] + i,
-.c-radio-lg input[type=radio] + i::before {
-  border-radius: 50%
-}
-.c-checkbox-lg input[type=checkbox]:checked + i::after,
-.c-radio-lg input[type=checkbox]:checked + i::after {
-  transform: rotate(45deg);
-  position: absolute;
-  left: 8px;
-  top: 3px;
-  display: table-cell;
-  width: 8px;
-  height: 16px;
-  border: 3px solid;
-  border-top: 0;
-  border-left: 0;
-  content: ' ';
-  color: #fff
-}
-.c-checkbox-lg input[type=radio]:checked + i::after,
-.c-radio-lg input[type=radio]:checked + i::after {
-  position: absolute;
-  display: table;
-  left: 6px;
-  top: 6px;
-  width: 12px;
-  height: 12px;
-  background: #fff;
-  border-radius: 50%;
-  content: ' ';
-  color: #fff
-}
-.c-checkbox-lg input[disabled] + i::before,
-.c-radio-lg input[disabled] + i::before,
-fieldset[disabled] .c-checkbox-lg input + i::before,
-fieldset[disabled] .c-radio-lg input + i::before {
-  opacity: .5;
-  background: #dee2e6;
-  cursor: not-allowed
-}
-.c-checkbox-lg input[disabled]:checked + i::before,
-.c-radio-lg input[disabled]:checked + i::before {
-  opacity: .5;
-  cursor: not-allowed;
-  border: 1px solid #adb5bd
-}
-.c-checkbox-lg input[disabled]:checked + i::after,
-.c-radio-lg input[disabled]:checked + i::after {
-  color: #adb5bd
-}
-.c-checkbox-lg > i,
-.c-radio-lg > i {
-  height: 24px;
-  display: inline-block;
-  margin: 0 24px 0 0;
-  position: relative
-}
-.c-checkbox-lg > i::before,
-.c-radio-lg > i::before {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  border: 1px solid #dee2e6;
-  border-radius: 2px;
-  transition: all .2s
 }
 .c-checkbox-lg input,
 .c-radio-lg input {
@@ -691,99 +507,7 @@ fieldset[disabled] .c-radio-lg input + i::before {
 }
 .c-checkbox-xl,
 .c-radio-xl {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  line-height: 1;
   height: 40px
-}
-.c-checkbox-xl input,
-.c-radio-xl input {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  cursor: pointer
-}
-.c-checkbox-xl input:checked + i::before,
-.c-radio-xl input:checked + i::before {
-  border-width: 0;
-  background-color: inherit
-}
-.c-checkbox-xl input:checked + span .active,
-.c-radio-xl input:checked + span .active {
-  display: inherit
-}
-.c-checkbox-xl input[type=radio] + i,
-.c-checkbox-xl input[type=radio] + i::before,
-.c-radio-xl input[type=radio] + i,
-.c-radio-xl input[type=radio] + i::before {
-  border-radius: 50%
-}
-.c-checkbox-xl input[type=checkbox]:checked + i::after,
-.c-radio-xl input[type=checkbox]:checked + i::after {
-  transform: rotate(45deg);
-  position: absolute;
-  left: 8px;
-  top: 3px;
-  display: table-cell;
-  width: 8px;
-  height: 16px;
-  border: 3px solid;
-  border-top: 0;
-  border-left: 0;
-  content: ' ';
-  color: #fff
-}
-.c-checkbox-xl input[type=radio]:checked + i::after,
-.c-radio-xl input[type=radio]:checked + i::after {
-  position: absolute;
-  display: table;
-  left: 6px;
-  top: 6px;
-  width: 12px;
-  height: 12px;
-  background: #fff;
-  border-radius: 50%;
-  content: ' ';
-  color: #fff
-}
-.c-checkbox-xl input[disabled] + i::before,
-.c-radio-xl input[disabled] + i::before,
-fieldset[disabled] .c-checkbox-xl input + i::before,
-fieldset[disabled] .c-radio-xl input + i::before {
-  opacity: .5;
-  background: #dee2e6;
-  cursor: not-allowed
-}
-.c-checkbox-xl input[disabled]:checked + i::before,
-.c-radio-xl input[disabled]:checked + i::before {
-  opacity: .5;
-  cursor: not-allowed;
-  border: 1px solid #adb5bd
-}
-.c-checkbox-xl input[disabled]:checked + i::after,
-.c-radio-xl input[disabled]:checked + i::after {
-  color: #adb5bd
-}
-.c-checkbox-xl > i,
-.c-radio-xl > i {
-  height: 24px;
-  display: inline-block;
-  margin: 0 24px 0 0;
-  position: relative
-}
-.c-checkbox-xl > i::before,
-.c-radio-xl > i::before {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  border: 1px solid #dee2e6;
-  border-radius: 2px;
-  transition: all .2s
 }
 .c-checkbox-xl input,
 .c-radio-xl input {
@@ -817,16 +541,44 @@ fieldset[disabled] .c-radio-xl input + i::before {
   width: 40px;
   height: 40px
 }
+.c-checkbox-gray input:checked + i::before,
+.c-radio-gray input:checked + i::before {
+  background-color: #495057
+}
+.c-checkbox i.c-bg-gray,
+.c-radio i.c-bg-gray {
+  background-color: #495057
+}
+.c-checkbox-primary input:checked + i::before,
+.c-radio-primary input:checked + i::before {
+  background-color: #1c7cd6
+}
+.c-checkbox i.c-bg-primary,
+.c-radio i.c-bg-primary {
+  background-color: #1c7cd6
+}
 .c-checkbox-success input:checked + i::before,
 .c-radio-success input:checked + i::before {
+  background-color: #37b24d
+}
+.c-checkbox i.c-bg-success,
+.c-radio i.c-bg-success {
   background-color: #37b24d
 }
 .c-checkbox-warning input:checked + i::before,
 .c-radio-warning input:checked + i::before {
   background-color: #f76707
 }
+.c-checkbox i.c-bg-warning,
+.c-radio i.c-bg-warning {
+  background-color: #f76707
+}
 .c-checkbox-danger input:checked + i::before,
 .c-radio-danger input:checked + i::before {
+  background-color: #f03e3e
+}
+.c-checkbox i.c-bg-danger,
+.c-radio i.c-bg-danger {
   background-color: #f03e3e
 }
 .c-control {
@@ -835,7 +587,7 @@ fieldset[disabled] .c-radio-xl input + i::before {
   cursor: pointer;
   font-size: 24px;
   line-height: 1;
-  padding: 0 16px 0 32px
+  padding-left: 32px
 }
 .c-control.c-checkbox > i,
 .c-control.c-radio > i {
@@ -848,10 +600,10 @@ fieldset[disabled] .c-radio-xl input + i::before {
   cursor: pointer;
   font-size: 16px;
   line-height: 1;
-  padding: 0 4px 0 20px
+  padding-left: 24px
 }
-.c-control-sm.c-checkbox-sm > i,
-.c-control-sm.c-radio-sm > i {
+.c-control-sm.c-checkbox > i,
+.c-control-sm.c-radio > i {
   position: absolute;
   left: 0
 }
@@ -861,10 +613,10 @@ fieldset[disabled] .c-radio-xl input + i::before {
   cursor: pointer;
   font-size: 32px;
   line-height: 1;
-  padding: 0 10.66667px 0 40px
+  padding-left: 40px
 }
-.c-control-lg.c-checkbox-lg > i,
-.c-control-lg.c-radio-lg > i {
+.c-control-lg.c-checkbox > i,
+.c-control-lg.c-radio > i {
   position: absolute;
   left: 0
 }
@@ -874,24 +626,12 @@ fieldset[disabled] .c-radio-xl input + i::before {
   cursor: pointer;
   font-size: 40px;
   line-height: 1;
-  padding: 0 10px 0 48px
+  padding-left: 48px
 }
-.c-control-xl.c-checkbox-xl > i,
-.c-control-xl.c-radio-xl > i {
+.c-control-xl.c-checkbox > i,
+.c-control-xl.c-radio > i {
   position: absolute;
   left: 0
-}
-i.c-bg-primary {
-  background-color: #1c7cd6
-}
-i.c-bg-success {
-  background-color: #37b24d
-}
-i.c-bg-warning {
-  background-color: #f76707
-}
-i.c-bg-danger {
-  background-color: #f03e3e
 }
 .c-radio input:disabled:checked + i::before {
   background: #dee2e6

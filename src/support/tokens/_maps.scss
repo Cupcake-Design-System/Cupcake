@@ -147,3 +147,16 @@ $font: map-merge(
   ),
   $font
 );
+
+
+// Default map settings for $theme-sizes.
+// Retrieve via function.
+$theme-sizes: () !default;
+$theme-sizes: map-merge(
+  (
+    sm: 16px,
+    lg: 32px,
+    xl: 40px,
+  ),
+  $theme-sizes
+);

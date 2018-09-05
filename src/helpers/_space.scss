@@ -1,5 +1,5 @@
 @mixin spacer-export {
-  .#{$prefix}-p {
+  .#{$padding-prefix} {
     @include modifiers($space, 'padding');
 
     &-top {
@@ -19,7 +19,7 @@
     }
   }
 
-  .#{$prefix}-m {
+  .#{$margin-prefix} {
     @include modifiers($space, 'margin');
 
     &-top {

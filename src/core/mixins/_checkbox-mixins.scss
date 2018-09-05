@@ -1,6 +1,6 @@
 
 
-@mixin checkbox($size:$checkbox-size) {
+@mixin checkbox($size:$checkbox-default-size) {
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -101,7 +101,7 @@
   }
 }
 
-@mixin checkbox-size($size:$checkbox-size) {
+@mixin checkbox-size($size:$checkbox-default-size) {
   height: $size;
 
   input {
@@ -143,10 +143,17 @@
   }
 }
 
-@mixin control($font-size: $checkbox-size) {
+@mixin control($font-size: $checkbox-default-size) {
   display: inline-block;
   position: relative;
   cursor: pointer;
   font-size: $font-size;
   line-height: 1;
+  padding-left: $font-size + 8;
+
+  &.c-checkbox > i,
+  &.c-radio > i {
+    position: absolute;
+    left: 0;
+  }
 }

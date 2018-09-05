@@ -1,40 +1,7 @@
-$avatar-prefix: #{$prefix}-avatar !default;
-
-$avatar-sizes: (
-  sm: $all-control-sm,
-  lg: $all-control-lg,
-  xl: $all-control-xl
-) !default;
-
-
 /*  Avatar Base
 * ====================================== */
-
-@mixin avatar-base($size: space(xl)) {
-  font-size: $size / 2;
-  height: $size;
-  width: $size;
-
-  i {
-    font-size: $size / 2;
-    line-height: $size;
-  }
-}
-
-
-// Avatars
 .#{$avatar-prefix} {
   @include avatar-base();
-
-  color: white;
-  display: inline-block;
-  text-align: center;
-  position: relative;
-  vertical-align: middle;
-  background: color(primary);
-  border-radius: radius(round);
-  font-weight: font-weight(normal);
-  line-height: line-height(normal);
 
   &-square {
     border-radius: radius(square);
@@ -104,7 +71,7 @@ $avatar-sizes: (
 
 @each $name, $size in config($avatar-sizes) {
   .#{$avatar-prefix}-#{$name} {
-    @include avatar-base($size);
+    @include avatar-size($size);
   }
 }
 

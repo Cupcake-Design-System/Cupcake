@@ -3,34 +3,6 @@
   @return map-fetch($config, $keys...);
 }
 
-
-@function multimerge(
-  $maps...
-) {
-  $return: ();
-
-  @each $map in $maps {
-    $return: map-merge($return, $map);
-  }
-
-  @return $return;
-}
-
-
-@function non-destructive-map-merge($parent-map, $child-map) {
-  $result: $parent-map;
-
-  @each $key, $value in $child-map {
-    @if (not map-has-key($result, $key)) or (type-of(map-get($result, $key)) != type-of($value)) or (not (type-of(map-get($result, $key)) == map and type-of($value) == map)) {
-      $result: map-merge($result, ($key: $value));
-    } @else {
-      $result: map-merge($result, ($key: non-destructive-map-merge(map-get($result, $key), $value)));
-    }
-  }
-
-  @return $result;
-}
-
 @function map-extend($map, $maps.../*, $deep */) {
   $last: nth($maps, -1);
   $deep: $last == true;
