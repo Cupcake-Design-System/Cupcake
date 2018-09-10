@@ -8,6 +8,8 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="../demo.css">
+  <script
+  src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script>
     var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
     document.write('<link media="all" rel="stylesheet" href="../' + flavor + '.css">');
@@ -19,6 +21,7 @@
       <main class="docs-content">
           
 
+<div class="page-section" id="colors">
 	<div class="c-col-12" id="colors">
 		<h2 class="c-header-md c-m-vertical-md">Colors</h2>
     <div class=""><div class="color-block">
@@ -87,8 +90,24 @@
     <br>
     <br>
 	</div>
+</div>
 
+<div class="page-section" id="header">
+	<div class="c-col-12" id="header">
+		<h2 class="c-header-md c-m-vertical-md">Header</h2>
+    <div class=""><div class="c-header-xs">This is the xs header</div>
+<div class="c-header-sm">This is the sm header</div>
+<div class="c-header-md">This is the md header</div>
+<div class="c-header-lg">This is the lg header</div>
+<div class="c-header-xl">This is the xl header</div>
+<div class="c-header-xxl">This is the xxl header</div></div>
+    <!-- <hr class="c-hr"> -->
+    <br>
+    <br>
+	</div>
+</div>
 
+<div class="page-section" id="shadows">
 	<div class="c-col-12" id="shadows">
 		<h2 class="c-header-md c-m-vertical-md">Shadows</h2>
     <div class=""><div class="layer-types">
@@ -103,8 +122,9 @@
     <br>
     <br>
 	</div>
+</div>
 
-
+<div class="page-section" id="typography">
 	<div class="c-col-12" id="typography">
 		<h2 class="c-header-md c-m-vertical-md">Typography</h2>
     <div class=""><div class="c-text-xs">This is xs text</div>
@@ -124,9 +144,10 @@
     <br>
     <br>
 	</div>
+</div>
 
 
-
+<div class="page-section" id="avatars">
 	<div class="c-col-12" id="avatars">
 		<h2 class="c-header-md c-m-vertical-md">Avatars</h2>
     <div class=""><div style="padding: 40px 0;">
@@ -187,8 +208,9 @@
     <br>
     <br>
 	</div>
+</div>
 
-
+<div class="page-section" id="checkboxes">
 	<div class="c-col-12" id="checkboxes">
 		<h2 class="c-header-md c-m-vertical-md">Checkboxes</h2>
     <div class=""><section id="checkbox">
@@ -308,7 +330,7 @@
     <br>
     <br>
 	</div>
-
+</div>
 
       </main>
       <nav class="docs-nav">
@@ -317,9 +339,10 @@
           <div class="cupcake">Cupcake</div>
           <div class="docs-version">Version 2.0</div>
         </div>
-          <ul>
+          <ul class="navigation">
               <li class="docs-menu-title">Tokens</li>
               <li class="docs-menu-item"><a href="#colors">Colors</a></li>
+              <li class="docs-menu-item"><a href="#header">Header</a></li>
               <li class="docs-menu-item"><a href="#shadows">Shadows</a></li>
               <li class="docs-menu-item"><a href="#typography">Typography</a></li>
             </ul>
@@ -335,5 +358,33 @@
 
 
   </body>
+
+  <script>
+  $(document).ready(function() {
+		$('a[href*=#]').bind('click', function(e) {
+				e.preventDefault(); // prevent hard jump, the default behavior
+
+				var target = $(this).attr("href"); // Set the target as variable
+
+				// perform animated scrolling by getting top-position of target-element and set it as scroll target
+				$('html, body').stop().animate({
+						scrollTop: $(target).offset().top
+				}, 600, function() {
+						location.hash = target; //attach the hash (#jumptarget) to the pageurl
+				});
+
+				return false;
+    });
+    
+    $('ul li a').click( function(){
+    if ( $(this).hasClass('current') ) {
+        $(this).removeClass('current');
+    } else {
+        $('li a.current').removeClass('current');
+        $(this).addClass('current');    
+    }
+});
+});
+</script>
 
 </html>

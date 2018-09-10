@@ -13,7 +13,7 @@
           <div class="cupcake">Cupcake</div>
           <div class="docs-version">Version 2.0</div>
         </div>
-          <ul>
+          <ul class="navigation">
               <li class="docs-menu-title">Tokens</li>
               {{#each materials.tokens.items}}
               <li class="docs-menu-item"><a href="#{{@key}}">{{name}}</a></li>
@@ -32,5 +32,33 @@
 
 
   </body>
+
+  <script>
+  $(document).ready(function() {
+		$('a[href*=#]').bind('click', function(e) {
+				e.preventDefault(); // prevent hard jump, the default behavior
+
+				var target = $(this).attr("href"); // Set the target as variable
+
+				// perform animated scrolling by getting top-position of target-element and set it as scroll target
+				$('html, body').stop().animate({
+						scrollTop: $(target).offset().top
+				}, 600, function() {
+						location.hash = target; //attach the hash (#jumptarget) to the pageurl
+				});
+
+				return false;
+    });
+    
+    $('ul li a').click( function(){
+    if ( $(this).hasClass('current') ) {
+        $(this).removeClass('current');
+    } else {
+        $('li a.current').removeClass('current');
+        $(this).addClass('current');    
+    }
+});
+});
+</script>
 
 </html>

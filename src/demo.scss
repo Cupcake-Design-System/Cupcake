@@ -16,19 +16,21 @@
 .docs-content {
   flex: 1;
   padding: 0 space(lg);
-  margin: 0;
+  margin: 16px 16px 16px 256px;
 }
 
 
 .docs-nav {
   padding: 0 20px;
   flex: 0 0 240px;
+  height: 100%;
   background-color: color(gray, 0);
   box-shadow: inset -1px 0 0 0 color(gray, 2);
   border-radius: 3px;
   order: -1;
   white-space: nowrap;
   color: color(gray, 9);
+  position: fixed;
 }
 
 nav ul {
@@ -37,7 +39,7 @@ nav ul {
   padding: 0;
 }
 
-.docs-menu-item a .current {
+.docs-menu-item a.current {
   background-color: color(gray, 1);
   padding: 0 space(md);
   font-weight: bold;
@@ -157,3 +159,6 @@ nav ul {
   }
 }
 
+.page-section {
+  padding: 50px 0;
+}

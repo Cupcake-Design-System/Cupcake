@@ -23,26 +23,28 @@
   -ms-flex: 1;
   flex: 1;
   padding: 0 1.5rem;
-  margin: 0
+  margin: 16px 16px 16px 256px
 }
 .docs-nav {
   padding: 0 20px;
   -ms-flex: 0 0 240px;
   flex: 0 0 240px;
+  height: 100%;
   background-color: #f8f9fa;
   box-shadow: inset -1px 0 0 0 #e9ecef;
   border-radius: 3px;
   -ms-flex-order: -1;
   order: -1;
   white-space: nowrap;
-  color: #212529
+  color: #212529;
+  position: fixed
 }
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0
 }
-.docs-menu-item a .current {
+.docs-menu-item a.current {
   background-color: #f1f3f5;
   padding: 0 1rem;
   font-weight: 700;
@@ -155,6 +157,9 @@ nav ul {
   -ms-flex: 1;
   flex: 1;
   display: block
+}
+.page-section {
+  padding: 50px 0
 }
   /* 🎂 CUPCAKE 🎂 */
   /* END */
