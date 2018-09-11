@@ -1,5 +1,5 @@
 @mixin radius-export {
-  .#{$prefix}-radius {
+  .#{$radius-prefix} {
     @include modifiers($radius, 'border-radius');
   }
 }

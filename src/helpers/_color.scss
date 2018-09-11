@@ -1,15 +1,15 @@
 @mixin color-export {
-  .#{$prefix}-bg {
+  .c-bg {
     @include modifiers($colors, 'background-color');
     @include modifiers($theme-colors, 'background-color');
   }
 
-  .#{$prefix}-text {
+  .c-text {
     @include modifiers($colors, 'color');
     @include modifiers($theme-colors, 'color');
   }
 
-  .#{$prefix}-bd {
+  .c-bd {
     @include modifiers($colors, 'border-color');
     @include modifiers($theme-colors, 'border-color');
   }

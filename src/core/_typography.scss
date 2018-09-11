@@ -1,62 +1,51 @@
-.#{$prefix}-header-xxl {
+.c-header-xxl {
   @include H1-text-style();
 }
 
-.#{$prefix}-header-xl {
+.c-header-xl {
   @include H2-text-style();
 }
 
-.#{$prefix}-header-lg {
+.c-header-lg {
   @include H3-text-style();
 }
 
-.#{$prefix}-header-md {
+.c-header-md {
   @include H4-text-style();
 }
 
-.#{$prefix}-header-sm {
+.c-header-sm {
   @include H5-text-style();
 }
 
-.#{$prefix}-header-xs {
+.c-header-xs {
   @include H6-text-style();
 }
 
-
-.subtitle1-text-style {
-  @include subtitle1-text-style();
-}
-
-.subtitle2-text-style {
-  @include subtitle2-text-style();
-}
-
-.body2-text-style {
-  @include body2-text-style();
-}
-
-.body1-text-style {
-  @include body1-text-style();
-}
-
-.#{$prefix}aption-text-style {
-  @include caption-text-style();
-}
-
-.overline-text-style {
-  @include overline-text-style();
-
-  color: color(gray, 6);
-}
-
-.button-text-style {
-  @include button-text-style();
-}
-
-.link-text-style {
-  @include link-text-style();
-}
-
-.#{$prefix}-text {
+.c-text {
   @include modifiers(font-weights, 'font-weight');
+}
+
+.c-text-xxl {
+  @include body-xxl();
+}
+
+.c-text-xl {
+  @include body-xl();
+}
+
+.c-text-lg {
+  @include body-lg();
+}
+
+.c-text-md {
+  @include body-md();
+}
+
+.c-text-sm {
+  @include body-sm();
+}
+
+.c-text-xs {
+  @include body-xs();
 }

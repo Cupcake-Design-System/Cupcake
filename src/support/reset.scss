@@ -19,6 +19,7 @@
     font-size: font-size(base);
     line-height: line-height(normal);
     -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
   }
 
   body {

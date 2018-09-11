@@ -1,0 +1,52 @@
+.#{$checkbox-prefix},
+.#{$radio-prefix} {
+  @include checkbox;
+}
+
+.#{$checkbox-prefix},
+.#{$radio-prefix} {
+  @each $name, $size in $checkbox-sizes {
+    &-#{$name} {
+      @include checkbox-size($size);
+    }
+  }
+}
+
+.#{$checkbox-prefix},
+.#{$radio-prefix} {
+  @each $name, $hex in config($theme-colors) {
+    &-#{$name} {
+      @include checkbox-color($hex);
+    }
+
+    i.c-bg-#{$name} {
+      background-color: $hex;
+    }
+  }
+}
+
+
+.c-control {
+  @include control;
+
+  @each $name, $size in $checkbox-sizes {
+    &-#{$name} {
+      @include control($size);
+    }
+  }
+}
+
+
+.#{$radio-prefix} {
+  input:disabled:checked {
+    + i {
+      &::before {
+        background: $checkbox-disabled;
+      }
+
+      &::after {
+        background: $color-gray-5;
+      }
+    }
+  }
+}

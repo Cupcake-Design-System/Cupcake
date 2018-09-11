@@ -1,0 +1,290 @@
+
+  /* 🎂 CUPCAKE 🎂 */
+  /* pkg name: cupcake */
+  /* version: 2.0.0 */
+  /* flavor: Default */
+
+.docs-container {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+.docs-body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -ms-flex-direction: row;
+  flex-direction: row
+}
+.docs-content {
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 1.5rem;
+  margin-left: 240px;
+  margin-top: 3rem
+}
+.docs-content-fullwidth {
+  margin-left: 0
+}
+.docs-nav {
+  padding: 2rem 1.5rem;
+  width: 240px;
+  height: 100%;
+  background-color: #f8f9fa;
+  box-shadow: inset -1px 0 0 0 #e9ecef;
+  border-radius: 2px;
+  -ms-flex-order: -1;
+  order: -1;
+  white-space: nowrap;
+  color: #212529;
+  position: fixed;
+  overflow-y: auto
+}
+.docs-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+.docs-nav-header {
+  height: 160px;
+  padding: 1.5rem .5rem;
+  box-shadow: inset 0 -1px 0 0 #f1f3f5
+}
+.docs-nav-title {
+  color: #adb5bd;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  padding: 0 .5rem
+}
+.docs-nav-title a {
+  text-decoration: none;
+  color: inherit
+}
+.docs-nav-title a:hover {
+  color: #495057
+}
+.docs-nav-title:first-child {
+  margin-top: 3rem
+}
+.docs-nav-item {
+  color: #212529;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-size: 14px;
+  line-height: 40px;
+  display: block
+}
+.docs-nav-item a {
+  color: #212529;
+  text-decoration: none;
+  padding: 0 .5rem
+}
+.docs-nav-item a:hover {
+  font-weight: 700;
+  color: #1c7cd6
+}
+.docs-nav-item .current {
+  background-color: #f1f3f5;
+  font-weight: 700;
+  display: block;
+  border-radius: 2px;
+  color: #1c7cd6
+}
+.ipreo {
+  color: #212529;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 24px
+}
+.cupcake {
+  color: #1c7cd6;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 24px
+}
+.docs-version {
+  width: 96px;
+  border: 1px solid #f1f3f5;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #212529;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 24px;
+  padding: 0 .5rem;
+  margin-top: .5rem;
+  text-transform: uppercase
+}
+.layer-types {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: space-around;
+  align-items: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: #f1f3f5;
+  padding: 1rem
+}
+.layer-types div {
+  width: 7.5rem;
+  height: 7.5rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: 1rem
+}
+.space {
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f1f3f5;
+  height: 1.5rem;
+  margin: .5rem 0;
+  border-radius: 2px
+}
+.space-block-title {
+  color: #212529;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px
+}
+.space * {
+  background-color: rgba(240,62,62,.8)
+}
+.space .xxs {
+  width: .125rem
+}
+.space .xs {
+  width: .25rem
+}
+.space .sm {
+  width: .5rem
+}
+.space .md {
+  width: 1rem
+}
+.space .lg {
+  width: 1.5rem
+}
+.space .xl {
+  width: 2rem
+}
+.space .xxl {
+  width: 3rem
+}
+.color-block {
+  background-color: #fff;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  position: relative;
+  min-width: 150px;
+  text-transform: capitalize
+}
+.color-block-title {
+  color: #212529;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px
+}
+.color-block .colors {
+  height: 3rem;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex
+}
+.color-block .colors span {
+  -ms-flex: 1;
+  flex: 1;
+  display: block;
+  border-radius: 3px;
+  padding: .5rem;
+  margin-right: 1.5rem;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16px
+}
+.color-block .colors span:last-child {
+  margin-right: 0
+}
+.color-block .colors span.info {
+  font-weight: 400;
+  color: #212529;
+  font-size: 11px;
+  line-height: 16px;
+  padding: .5rem 0
+}
+.docs-section {
+  padding: 1.5rem 0;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #f8f9fa
+}
+.docs-section:first-child {
+  padding: 3rem 0
+}
+.docs-section-title {
+  height: 24px;
+  color: #212529;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: .5rem 0
+}
+.docs-section-title a {
+  color: #1c7cd6;
+  padding-left: .5rem;
+  font-size: 80%
+}
+.docs-section-title a:hover {
+  color: #228ae6
+}
+.docs-section-subtitle {
+  height: 40px;
+  color: #495057;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px
+}
+.docs-section-header {
+  padding-bottom: .5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #f1f3f5
+}
+.c-text-primary-9 {
+  color: #1862ab!important
+}
+.c-text-success-9 {
+  color: #2b8a3e!important
+}
+.c-text-warning-9 {
+  color: #d9480f!important
+}
+.c-text-danger-9 {
+  color: #c92a2a!important
+}
+.c-text-gray-9 {
+  color: #212529!important
+}
+  /* 🎂 CUPCAKE 🎂 */
+  /* END */
+  /* ----------------------- */
+  
+/*# sourceMappingURL=maps/demo.css.map */

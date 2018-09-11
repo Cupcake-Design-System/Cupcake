@@ -1,15 +1,60 @@
 ---
-title: Overview | All
+title: Overview | Fabricator
+fabricator: true
 ---
-<div style="padding: 5%;">
+
+<h1>Overview</h1>
+
+<p>This UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.</p>
+
+<p>This guide contains real working examples, code snippets, documentation, and style guidelines.</p>
+
+<h2>Usage</h2>
+
+<p>Start by adding the following files to your page:</p>
+
+<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;</code></pre>
+
+<pre class="language-markup"><code class="language-markup">&lt;script src=&quot;assets/toolkit/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code></pre>
 
 
-{{#each materials.elements.items}}
+<h2>Color</h2>
 
-{{> f-item this}}
-
+{{#each toolkit.colors}}
+{{#each this}}
+<div class="color-block">
+    <div class="color-block-title">{{this}}</div>
+    <div class="colors">
+      <span class="c-bg-{{this}}-8">Primary</span>
+      <span class="c-bg-{{this}}-7">{{this}} Light</span>
+    </div>
+    <div class="colors">
+      <span class="info">{{this}} Button + Link + Info State</span>
+      <span class="info">{{this}} Button Hover + Link Hover + Info State Hover</span>
+    </div>
+    <div class="colors">
+      <span class="c-bg-{{this}}-9">{{this}} Dark</span>
+      <span class="c-bg-{{this}}-0 c-text-{{this}}-9">{{this}} Lightest</span>
+    </div>
+    <div class="colors">
+      <span class="info">{{this}} Button Active + {{this}} Button Line + Link Active + {{this}} State Active + {{this}} Text</span>
+      <span class="info">{{this}} Background + {{this}} State Background + Pill Background</span>
+    </div>
+  </div>
+  {{/each}}
 {{/each}}
 
 
 
-</div>
+
+
+<h2>Typography</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim sunt sapiente molestias, sed dicta inventore consectetur beatae asperiores, aliquid laboriosam animi, praesentium repudiandae et, quam saepe sint cupiditate reiciendis.</p>
+
+<h1>Heading Level 1</h1>
+<h2>Heading Level 2</h2>
+<h3>Heading Level 3</h3>
+<h4>Heading Level 4</h4>
+<h5>Heading Level 5</h5>
+<h6>Heading Level 6</h6>

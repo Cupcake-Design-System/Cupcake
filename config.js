@@ -52,7 +52,8 @@ export default {
     layoutIncludes: ["html/views/layouts/includes/**/*", 'src/layout/**/*.html'],
     views: ['html/views/**/*', '!html/views/+(layouts)/**'],
     data: ['html/data/**/*.{json,yml}'],
-    core: 'html/elements/*.html',
+    docs: 'html/docs/**/*.md',
+    core: ['html/core/**/*'],
     build: 'dist'
   },
 

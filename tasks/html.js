@@ -11,7 +11,8 @@ gulp.task('make:html', (done) => {
 		materials: config.html.core,
 		layouts: config.html.layouts,
 		views: config.html.views,
-		data: config.html.data,
+    data: config.html.data,
+    docs: config.html.docs,
 		layoutIncludes: config.html.layoutIncludes,
     dest: config.html.build,
 	});

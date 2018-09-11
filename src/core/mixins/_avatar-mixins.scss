@@ -1,0 +1,32 @@
+@mixin avatar-base($size: $avatar-default-size) {
+  font-size: $size / 2;
+  height: $size;
+  width: $size;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  vertical-align: middle;
+  background: color(primary);
+  border-radius: radius(round);
+  font-weight: font-weight(normal);
+  line-height: line-height(normal);
+
+  i {
+    font-size: $size / 2;
+    line-height: $size;
+  }
+}
+
+@mixin avatar-size($size: $avatar-default-size) {
+  font-size: $size / 2;
+  height: $size;
+  width: $size;
+
+  i {
+    font-size: $size / 2;
+    line-height: $size;
+  }
+}
+
+
