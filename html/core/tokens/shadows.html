@@ -1,0 +1,12 @@
+---
+title: Tokens | Shadows
+notes: Use depth to create hierarchy and layering
+---
+
+<div class="layer-types">
+{{#each toolkit.shadow}}
+  {{#each this}}
+  <div class="c-depth-{{this}}">{{this}}</div>
+  {{/each}}
+{{/each}}
+</div>

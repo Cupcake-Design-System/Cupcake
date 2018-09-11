@@ -23,13 +23,14 @@
   -ms-flex: 1;
   flex: 1;
   padding: 0 1.5rem;
-  margin-left: 240px
+  margin-left: 240px;
+  margin-top: 3rem
 }
 .docs-content-fullwidth {
   margin-left: 0
 }
 .docs-nav {
-  padding: 0 1.5rem;
+  padding: 2rem 1.5rem;
   width: 240px;
   height: 100%;
   background-color: #f8f9fa;
@@ -39,7 +40,8 @@
   order: -1;
   white-space: nowrap;
   color: #212529;
-  position: fixed
+  position: fixed;
+  overflow-y: auto
 }
 .docs-nav ul {
   list-style: none;
@@ -62,6 +64,13 @@
   margin-top: 1.5rem;
   padding: 0 .5rem
 }
+.docs-nav-title a {
+  text-decoration: none;
+  color: inherit
+}
+.docs-nav-title a:hover {
+  color: #495057
+}
 .docs-nav-title:first-child {
   margin-top: 3rem
 }
@@ -76,6 +85,10 @@
   color: #212529;
   text-decoration: none;
   padding: 0 .5rem
+}
+.docs-nav-item a:hover {
+  font-weight: 700;
+  color: #1c7cd6
 }
 .docs-nav-item .current {
   background-color: #f1f3f5;

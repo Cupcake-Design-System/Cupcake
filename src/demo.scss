@@ -28,6 +28,7 @@ $docs-spacer-xxl: space(xxl);
     flex: 1;
     padding: 0 $docs-spacer-lg;
     margin-left: $docs-sidebar-size;
+    margin-top: $docs-spacer-xxl;
 
     &-fullwidth {
       margin-left: 0;
@@ -42,7 +43,7 @@ $docs-spacer-xxl: space(xxl);
     padding: 0;
   }
 
-  padding: 0 $docs-spacer-lg;
+  padding: $docs-spacer-xl $docs-spacer-lg;
   width: $docs-sidebar-size;
   height: 100%;
   background-color: color(gray, 0);
@@ -52,6 +53,7 @@ $docs-spacer-xxl: space(xxl);
   white-space: nowrap;
   color: $text;
   position: fixed;
+  overflow-y: auto;
 
   &-header {
     height: 160px;
@@ -70,6 +72,15 @@ $docs-spacer-xxl: space(xxl);
     margin-top: $docs-spacer-lg;
     padding: 0 $docs-spacer-sm;
 
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        color: color(gray, 7);
+      }
+    }
+
     &:first-child {
       margin-top: $docs-spacer-xxl;
     }
@@ -86,6 +97,11 @@ $docs-spacer-xxl: space(xxl);
       color: $text;
       text-decoration: none;
       padding: 0 $docs-spacer-sm;
+
+      &:hover {
+        font-weight: bold;
+        color: color(primary);
+      }
     }
 
     .current {

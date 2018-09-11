@@ -1,0 +1,30 @@
+colors:
+  base:
+    - primary
+    - success
+    - warning
+    - danger
+space:
+  base:
+    - xxl
+    - xl
+    - lg
+    - md
+    - sm
+    - xs
+    - xxs
+shadow:
+  base:
+    - xs
+    - sm
+    - md
+    - lg
+    - xl
+type:
+  base:
+    - xxl
+    - xl
+    - lg
+    - md
+    - sm
+    - xs

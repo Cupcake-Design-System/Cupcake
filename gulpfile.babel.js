@@ -34,7 +34,7 @@ gulp.task(
 
 gulp.task(
   'codes',
-  gulp.series('styles', 'html')
+  gulp.series('styles', 'html', 'sassdoc')
 );
 
 gulp.task('build', gulp.series('clean', 'codes'));
