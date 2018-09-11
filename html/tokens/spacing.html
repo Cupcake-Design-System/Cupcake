@@ -1,0 +1,13 @@
+---
+title: Tokens | Spacing
+notes: Spacing is used to consistently apply paddings and margins across our components. .c-p-{direction}-{value}, .c-m-{direction}-{value}
+---
+
+{{#each space.base}}
+  {{#each this}}
+  <div class="space-block-title">{{this}}</div>
+<div class="space">
+  <div class="{{this}}"></div>
+</div>
+  {{/each}}
+{{/each}}

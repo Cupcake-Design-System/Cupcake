@@ -1,87 +1,108 @@
 @import 'support/support';
 
-.docs-container {
-  display: flex;
-  height: 100%; /* 1, 3 */
-  flex-direction: column;
+$docs-sidebar-size: 240px;
+$text: color(gray, 9);
+$text-light: color(gray, 7);
+$docs-spacer-sm: space(sm);
+$docs-spacer-md: space(md);
+$docs-spacer-lg: space(lg);
+$docs-spacer-xl: space(xl);
+$docs-spacer-xxl: space(xxl);
+
+// dummy stuff til we get layout classes
+
+.docs {
+  &-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  &-body {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+  }
+
+  &-content {
+    flex: 1;
+    padding: 0 $docs-spacer-lg;
+    margin-left: $docs-sidebar-size;
+
+    &-fullwidth {
+      margin-left: 0;
+    }
+  }
 }
-
-
-.docs-body {
-  display: flex;
-  flex: 1 0 auto; /* 2 */
-  flex-direction: row;
-}
-
-.docs-content {
-  flex: 1;
-  padding: 0 space(lg);
-  margin: 16px 16px 16px 256px;
-}
-
 
 .docs-nav {
-  padding: 0 20px;
-  flex: 0 0 240px;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  padding: 0 $docs-spacer-lg;
+  width: $docs-sidebar-size;
   height: 100%;
   background-color: color(gray, 0);
   box-shadow: inset -1px 0 0 0 color(gray, 2);
-  border-radius: 3px;
+  border-radius: radius(sm);
   order: -1;
   white-space: nowrap;
-  color: color(gray, 9);
+  color: $text;
   position: fixed;
-}
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  &-header {
+    height: 160px;
+    padding: $docs-spacer-lg $docs-spacer-sm;
+    box-shadow: inset 0 -1px 0 0 color(gray, 1);
+  }
 
-.docs-menu-item a.current {
-  background-color: color(gray, 1);
-  padding: 0 space(md);
-  font-weight: bold;
-  display: block;
-  border-radius: 2px;
-  color: color(primary);
-}
+  &-title {
+    color: color(gray, 5);
+    font-family: font(primary);
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 14px;
+    text-transform: uppercase;
+    margin-bottom: $docs-spacer-md;
+    margin-top: $docs-spacer-lg;
+    padding: 0 $docs-spacer-sm;
 
-.docs-menu-title {
-  height: 14px;
-  width: 200px;
-  color: color(gray, 5);
-  font-family: font(primary);
-  font-size: 10px;
-  letter-spacing: 1px;
-  line-height: 14px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  margin-top: 40px;
-  padding: 0 20px;
-}
+    &:first-child {
+      margin-top: $docs-spacer-xxl;
+    }
+  }
 
-.docs-menu-item {
-  width: 220px;
-  color: color(gray, 9);
-  font-family: font(primary);
-  font-size: 14px;
-  line-height: 40px;
-  display: block;
+  &-item {
+    color: $text;
+    font-family: font(primary);
+    font-size: 14px;
+    line-height: 40px;
+    display: block;
 
-  a {
-    color: color(gray, 9);
-    text-decoration: none;
-    padding: 0 20px;
+    a {
+      color: $text;
+      text-decoration: none;
+      padding: 0 $docs-spacer-sm;
+    }
+
+    .current {
+      background-color: color(gray, 1);
+      font-weight: bold;
+      display: block;
+      border-radius: radius(sm);
+      color: color(primary);
+    }
   }
 }
 
 .ipreo {
-  color: color(gray, 9);
+  color: $text;
   font-family: font(primary);
   font-size: 24px;
-  font-weight: bold;
+  font-weight: font-weight(bold);
   line-height: 24px;
 }
 
@@ -89,34 +110,26 @@ nav ul {
   color: color(primary);
   font-family: font(primary);
   font-size: 24px;
-  font-weight: bold;
+  font-weight: font-weight(bold);
   line-height: 24px;
 }
 
-.docs-nav-header {
-  height: 160px;
-  width: 220px;
-  padding: 40px 20px;
-  box-shadow: inset 0 -1px 0 0 color(gray, 1);
-}
 
 .docs-version {
   width: 96px;
   border: 1px solid color(gray, 1);
   border-radius: 2px;
   background-color: white;
-  padding: 0 10px;
-  color: color(gray, 9);
+  color: $text;
   font-family: font(primary);
   font-size: 10px;
-  font-weight: bold;
+  font-weight: font-weight(bold);
   letter-spacing: 1px;
   line-height: 24px;
-  margin-top: 10px;
+  padding: 0 $docs-spacer-sm;
+  margin-top: $docs-spacer-sm;
   text-transform: uppercase;
 }
-
-// dummy stuff til we get layout classes
 
 .layer-types {
   display: flex;
@@ -124,7 +137,7 @@ nav ul {
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: color(gray, 1);
-  padding: space(md);
+  padding: $docs-spacer-md;
 
   div {
     width: 7.5rem;
@@ -134,31 +147,142 @@ nav ul {
     align-items: center;
     justify-content: center;
     background-color: white;
-    margin: space(md);
+    margin: $docs-spacer-md;
   }
 }
 
+.space {
+  display: flex;
+  background-color: color(gray, 1);
+  height: $docs-spacer-lg;
+  margin: $docs-spacer-sm 0;
+  border-radius: radius(sm);
+
+  &-block-title {
+    color: $text;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  * {
+    background-color: rgba(240, 62, 62, 0.8);
+  }
+
+  .xxs {
+    width: 0.125rem;
+  }
+
+  .xs {
+    width: 0.25rem;
+  }
+
+  .sm {
+    width: 0.5rem;
+  }
+
+  .md {
+    width: 1rem;
+  }
+
+  .lg {
+    width: 1.5rem;
+  }
+
+  .xl {
+    width: 2rem;
+  }
+
+  .xxl {
+    width: 3rem;
+  }
+}
 
 .color-block {
   background-color: white;
-  box-shadow: 0 1px 0 #e9ecef;
   overflow: hidden;
-  margin: 1rem 0;
+  margin: $docs-spacer-lg 0;
   position: relative;
   min-width: 150px;
-}
+  text-transform: capitalize;
 
-.colors {
-  height: 6rem;
-  width: 100%;
-  display: flex;
+  &-title {
+    color: $text;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+  }
 
-  span {
-    flex: 1;
-    display: block;
+  .colors {
+    height: $docs-spacer-xxl;
+    width: 100%;
+    display: flex;
+
+    span {
+      flex: 1;
+      display: block;
+      border-radius: 3px;
+      padding: $docs-spacer-sm;
+      margin-right: $docs-spacer-lg;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.info {
+        font-weight: normal;
+        color: $text;
+        font-size: 11px;
+        line-height: 16px;
+        padding: $docs-spacer-sm 0;
+      }
+    }
   }
 }
 
-.page-section {
-  padding: 50px 0;
+.docs-section {
+  padding: $docs-spacer-lg 0;
+  margin-bottom: $docs-spacer-xxl;
+  border-bottom: 1px solid color(gray, 0);
+
+  &:first-child {
+    padding: $docs-spacer-lg * 2 0;
+  }
+
+  &-title {
+    height: 24px;
+    color: $text;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: $docs-spacer-sm 0;
+
+    a {
+      color: color(primary);
+      padding-left: $docs-spacer-sm;
+      font-size: 80%;
+
+      &:hover {
+        color: color(primary, 6);
+      }
+    }
+  }
+
+  &-subtitle {
+    height: 40px;
+    color: $text-light;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &-header {
+    padding-bottom: $docs-spacer-sm;
+    margin-bottom: $docs-spacer-lg;
+    border-bottom: 1px solid color(gray, 1);
+  }
 }

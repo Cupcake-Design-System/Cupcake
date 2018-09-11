@@ -3,35 +3,13 @@
 {{> head}}
 
 <body class="docs-container">
-    <div class="docs-body">
-      <main class="docs-content">
-          {% body %}
-      </main>
-      <nav class="docs-nav">
-        <div class="docs-nav-header">
-          <div class="ipreo">Ipreo</div>
-          <div class="cupcake">Cupcake</div>
-          <div class="docs-version">Version 2.0</div>
-        </div>
-          <ul class="navigation">
-              <li class="docs-menu-title">Tokens</li>
-              {{#each materials.tokens.items}}
-              <li class="docs-menu-item"><a href="#{{@key}}">{{name}}</a></li>
-              {{/each}}
-            </ul>
-          <ul>
-            <li class="docs-menu-title">Elements</li>
-            {{#each materials.elements.items}}
-            <li class="docs-menu-item"><a href="#{{@key}}">{{name}}</a></li>
-            {{/each}}
-          </ul>
-        </nav>
-
-
-    </div>
-
-
-  </body>
+  <div class="docs-body">
+    <main class="docs-content">
+      {% body %}
+    </main>
+    {{> sidenav}}
+  </div>
+</body>
 
   <script>
   $(document).ready(function() {
@@ -49,15 +27,27 @@
 
 				return false;
     });
-    
-    $('ul li a').click( function(){
+
+    $('.docs-nav-items a').click( function(){
     if ( $(this).hasClass('current') ) {
         $(this).removeClass('current');
     } else {
-        $('li a.current').removeClass('current');
-        $(this).addClass('current');    
+        $('.docs-nav-items a.current').removeClass('current');
+        $(this).addClass('current');
     }
 });
+
+$(window).scroll(function() {
+		var scrollDistance = $(window).scrollTop();
+
+		// Assign active class to nav links while scolling
+		$('.page-section').each(function(i) {
+				if ($(this).position().top <= scrollDistance) {
+						$('.docs-nav-items a.current').removeClass('current');
+						$('.docs-nav-items a').eq(i).addClass('current');
+				}
+		});
+}).scroll();
 });
 </script>
 

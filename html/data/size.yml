@@ -1,0 +1,5 @@
+base:
+  size:
+    - sm
+    - lg
+    - xl

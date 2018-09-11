@@ -1,0 +1,21 @@
+<nav class="docs-nav">
+  <div class="docs-nav-header">
+    <div class="ipreo">Ipreo</div>
+    <div class="cupcake">Cupcake</div>
+    <div class="docs-version">Version 2.0</div>
+  </div>
+
+  <ul class="docs-nav-items">
+    <li class="docs-nav-title">Design Tokens</li>
+    {{#each materials.tokens.items}}
+    <li class="docs-nav-item"><a href="#{{@key}}">{{name}}</a></li>
+    {{/each}}
+  </ul>
+
+  <ul class="docs-nav-items">
+    <li class="docs-nav-title">Elements</li>
+    {{#each materials.elements.items}}
+    <li class="docs-nav-item"><a href="#{{@key}}">{{name}}</a></li>
+    {{/each}}
+  </ul>
+</nav>

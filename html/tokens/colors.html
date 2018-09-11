@@ -1,27 +1,78 @@
+---
+title: Tokens | Colors
+notes: These are the colors used throughout Cupcake’s elements and components that help give visual context, emphasize meaning and to aesthetically style the user interface.
+---
+
+{{#each color.base}}
+{{#each this}}
 <div class="color-block">
-  <div class="colors">
-    {{#iterate 10}}
-    <span class="c-bg-gray-{{@index}}"></span>
-    {{/iterate}}
+    <div class="color-block-title">{{this}}</div>
+    <div class="colors">
+      <span class="c-bg-{{this}}-8">Primary</span>
+      <span class="c-bg-{{this}}-7">{{this}} Light</span>
+    </div>
+    <div class="colors">
+      <span class="info">{{this}} Button + Link + Info State</span>
+      <span class="info">{{this}} Button Hover + Link Hover + Info State Hover</span>
+    </div>
+    <div class="colors">
+      <span class="c-bg-{{this}}-9">{{this}} Dark</span>
+      <span class="c-bg-{{this}}-0 c-text-{{this}}-9">{{this}} Lightest</span>
+    </div>
+    <div class="colors">
+      <span class="info">{{this}} Button Active + {{this}} Button Line + Link Active + {{this}} State Active + {{this}} Text</span>
+      <span class="info">{{this}} Background + {{this}} State Background + Pill Background</span>
+    </div>
   </div>
-  <div class="colors">
-    {{#iterate 10}}
-    <span class="c-bg-primary-{{@index}}"></span>
-    {{/iterate}}
+  {{/each}}
+{{/each}}
+
+
+
+<div class="color-block">
+    <div class="color-block-title">Gray</div>
+    <div class="colors">
+      <span class="c-bg-gray-9">Gray 9</span>
+      <span class="c-bg-gray-4">Gray 4</span>
+    </div>
+    <div class="colors">
+    <span class="info">Header Text + Icon</span>
+    <span class="info">Button Disabled + Icon Disabled Secondary Button Line + Understated Icon Disabled + Card Line Hover + Dark Divider Line</span>
   </div>
+
   <div class="colors">
-    {{#iterate 10}}
-    <span class="c-bg-success-{{@index}}"></span>
-    {{/iterate}}
+      <span class="c-bg-gray-8">Gray 8</span>
+      <span class="c-bg-gray-3">Gray 3</span>
+    </div>
+    <div class="colors">
+    <span class="info">Body Text</span>
+    <span class="info">Shadows + Decorative Icon</span>
   </div>
+
   <div class="colors">
-    {{#iterate 10}}
-    <span class="c-bg-warning-{{@index}}"></span>
-    {{/iterate}}
+      <span class="c-bg-gray-7">Gray 7</span>
+      <span class="c-bg-gray-2 c-text-gray-9">Gray 2</span>
+    </div>
+    <div class="colors">
+    <span class="info">Helper Text</span>
+    <span class="info">Secondary Background Active + Card Line + Pill Background</span>
   </div>
+
   <div class="colors">
-    {{#iterate 10}}
-    <span class="c-bg-danger-{{@index}}"></span>
-    {{/iterate}}
+      <span class="c-bg-gray-6">Gray 6</span>
+      <span class="c-bg-gray-1 c-text-gray-9">Gray 2</span>
+    </div>
+    <div class="colors">
+    <span class="info">Header Text Disabled + Body Text Disabled + Icon Disabled + Link Disabled</span>
+    <span class="info">Secondary Button + Page Background + Light Divider Line + Pill Background</span>
+  </div>
+
+  <div class="colors">
+      <span class="c-bg-gray-5">Gray 5</span>
+      <span class="c-bg-gray-0 c-text-gray-9">Gray 0</span>
+    </div>
+    <div class="colors">
+    <span class="info">Understated Icon</span>
+    <span class="info">Secondary Background Hover + Table Row Hover + Dropdown Item Hover + List Item Hover</span>
   </div>
 </div>

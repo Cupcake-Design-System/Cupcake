@@ -4,3 +4,17 @@ layout: blank
 ---
 
 {{> colors}}
+
+
+<div class="color-block">
+    {{#each color.base}}
+    {{#each this}}
+    <div class="color-block-title">{{this}}</div>
+    <div class="colors c-m-bottom-md">
+      {{#iterate 10}}
+      <span class="c-bg-{{../this}}-{{@index}}"></span>
+      {{/iterate}}
+    </div>
+    {{/each}}
+    {{/each}}
+  </div>
