@@ -2,81 +2,144 @@
 /// @group Global Variables
 ////
 
-/// Global prefix
+/// Global
 $enable-reset         : true !default;
 $enable-shadow-classes: true !default;
 $enable-color-classes : true !default;
 $enable-spacer-classes: true !default;
 $enable-radius-classes: true !default;
 $white-label          : false !default;
+$global-space-base    : 8px !default;
+
+$theme-sizes: (
+  sm: $global-space-base * 2,
+  lg: $global-space-base * 4,
+  xl: $global-space-base * 5,
+) !default;
+
+$breakpoints: (
+  sm: 600px,
+  lg: 1200px
+) !default;
 
 
 //### TYPOGRAPHY START  ################################//
-$base-font-family    : -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
-$base-font-size      : 16px !default;
-$font-weight-bold    : 900 !default;
-$font-weight-semibold: 600 !default;
-$font-weight-normal  : 400 !default;
-$font-weight-light   : 300 !default;
+$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
+$base-font-size  : 16px !default;
+$text-prefix     : 'c-text' !default;
+$header-prefix   : 'c-header' !default;
+
+$font: (
+  primary: $base-font-family,
+  code   : $base-font-family
+) !default;
+
+$line-height: (
+  normal   : normal,
+  default  : 1.5,
+  condensed: 1.25
+) !default;
+
+$font-weight: () !default;
+$font-weight: map-merge(
+  (
+    bold    : 900,
+    semibold: 600,
+    normal  : 400,
+    light   : 300
+  ),
+  $font-weight
+);
+
+$header-text: (
+  xs : 12px,
+  sm : 14px,
+  md : 16px,
+  lg : 20px,
+  xl : 24px,
+  xxl: 36px
+) !default;
+
+$body-text: (
+  xs : 10px,
+  sm : 11px,
+  md : 12px,
+  lg : 14px,
+  xl : 16px,
+  xxl: 18px
+) !default;
 //### TYPOGRAPHY END  ################################//
 
 
 //### RADIUS START ################################//
 $radius-prefix: 'c-radius' !default;
-$radius-sm    : 2px !default;
-$radius-md    : 4px !default;
-$radius-lg    : 6px !default;
-$radius-square: 0 !default;
-$radius-pill  : 100% !default;
-$radius-round : 200px !default;
+$radius: (
+  0     : none,
+  square: 0,
+  sm    : 2px,
+  md    : 4px,
+  lg    : 8px,
+  round : 200px,
+  pill  : 100%
+) !default;
 //### RADIUS END  ################################//
 
 
 //### SPACING START ################################//
-$padding-prefix: 'c-p' !default;
-$margin-prefix: 'c-m' !default;
-$theme-base-point-grid: .5rem !default;
-$space-none           : 0 !default;
-$space-xxs            : $theme-base-point-grid / 4 !default; // .125rem, 2px
-$space-xs             : $theme-base-point-grid / 2 !default; // .25rem, 4px
-$space-sm             : $theme-base-point-grid !default;     //;.5rem, 8px
-$space-md             : $theme-base-point-grid * 2 !default; // 1rem, 16px
-$space-lg             : $theme-base-point-grid * 3 !default; // 1.5rem, 24px
-$space-xl             : $theme-base-point-grid * 4 !default; // 2rem, 32px
-$space-xxl            : $theme-base-point-grid * 6 !default;// 3rem, 48px
+$padding-prefix       : 'c-p' !default;
+$margin-prefix        : 'c-m' !default;
+$space-base: $global-space-base !default;
+$space: (
+  0  : 0,
+  xxs: $space-base / 4,
+  xs : $space-base / 2,
+  sm : $space-base, // 8px
+  md : $space-base * 2,
+  lg : $space-base * 3,
+  xl : $space-base * 4,
+  xxl: $space-base * 6
+) !default;
 //### SPACING END ################################//
 
 
 //### SHADOWS START ################################//
 $shadow-prefix: 'c-depth' !default;
-$shadow-xl  : 0 12px 24px 0 rgba(0, 0, 0, .1) !default;
-$shadow-lg  : 0 8px 16px 0 rgba(0, 0, 0, .1) !default;
-$shadow-md  : 0 6px 12px 0 rgba(0, 0, 0, .1) !default;
-$shadow-sm  : 0 4px 8px 0 rgba(0, 0, 0, 0.1) !default;
-$shadow-xs  : 0 1px 2px 0 rgba(0, 0, 0, .1) !default;
-$shadow-none: 0 0 0 0 transparent !default;
+$shadows: (
+  xl  : 0 12px 24px 0 rgba(0, 0, 0, .1),
+  lg  : 0 8px 16px 0 rgba(0, 0, 0, .1),
+  md  : 0 6px 12px 0 rgba(0, 0, 0, .1),
+  sm  : 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+  xs  : 0 1px 2px 0 rgba(0, 0, 0, .1),
+  none: 0 0 0 0 transparent
+) !default;
 //### SHADOWS END ################################//
 
 
 //### ANIMATION START ################################//
-$duration-unit    : 100ms;
-$duration-fast    : $duration-unit !default;
-$duration-base    : $duration-unit * 2 !default;
-$duration-slow    : $duration-unit * 3 !default;
-$duration-slower  : $duration-unit * 4 !default;
-$duration-slowest : $duration-unit * 5 !default;
-$easing-base      : cubic-bezier(0.64, 0, 0.35, 1) !default;
-$easing-in        : cubic-bezier(0.36, 0, 1, 1) !default;
-$easing-out       : cubic-bezier(0, 0, 0.42, 1) !default;
-$easing-excite    : cubic-bezier(0.18, 0.67, 0.6, 1.22) !default;
-$easing-overshoot : cubic-bezier(0.07, 0.28, 0.32, 1.22) !default;
-$easing-anticipate: cubic-bezier(0.38, -0.4, 0.88, 0.65) !default;
+$duration-unit: 100ms;
+$duration:(
+  fast   : $duration-unit,
+  base   : $duration-unit * 2,
+  slow   : $duration-unit * 3,
+  slower : $duration-unit * 4,
+  slowest: $duration-unit * 5,
+) !default;
+
+$easing: (
+  base      : cubic-bezier(0.64, 0, 0.35, 1),
+  in        : cubic-bezier(0.36, 0, 1, 1),
+  out       : cubic-bezier(0, 0, 0.42, 1),
+  excite    : cubic-bezier(0.18, 0.67, 0.6, 1.22),
+  overshot  : cubic-bezier(0.07, 0.28, 0.32, 1.22),
+  anticipate: cubic-bezier(0.38, -0.4, 0.88, 0.65),
+) !default;
 //### ANIMATION END ################################//
 
 
 //### AVATAR START ################################//
 $avatar-prefix: 'c-avatar' !default;
 $avatar-default-size: 32px !default;
+$avatar-palette: $theme-colors !default;
 $avatar-sizes: (
   sm: $avatar-default-size - 8,
   lg: $avatar-default-size + 8,
@@ -89,14 +152,16 @@ $avatar-sizes: (
 $checkbox-prefix          : 'c-checkbox' !default;
 $radio-prefix             : 'c-radio' !default;
 $checkbox-icon-bd         : 1px solid color(gray, 3) !default;
-$checkbox-icon-radius     : 2px !default;
+$checkbox-icon-radius     : radius(sm) !default;
 $checkbox-transition      : all 0.2s !default;
-$checkbox-disabled        : color(gray, 3) !default;
+$checkbox-disabled-bg     : color(gray, 3) !default;
+$checkbox-disabled-color  : color(gray, 5) !default;
 $checkbox-disabled-opacity: 0.5 !default;
+$checkbox-palette: $theme-colors !default;
 $checkbox-default-size    : 24px !default;
 $checkbox-sizes: (
-  sm: $checkbox-default-size - 8,
-  lg: $checkbox-default-size + 8,
-  xl: $checkbox-default-size + 16,
+  sm: theme-size(sm),
+  lg: theme-size(lg),
+  xl: theme-size(xl),
 ) !default;
 //### CHECKBOX END ################################//

@@ -14,7 +14,7 @@
 
 .#{$checkbox-prefix},
 .#{$radio-prefix} {
-  @each $name, $hex in config($theme-colors) {
+  @each $name, $hex in $checkbox-palette {
     &-#{$name} {
       @include checkbox-color($hex);
     }
@@ -41,11 +41,11 @@
   input:disabled:checked {
     + i {
       &::before {
-        background: $checkbox-disabled;
+        background: $checkbox-disabled-bg;
       }
 
       &::after {
-        background: $color-gray-5;
+        background: $checkbox-disabled-color;
       }
     }
   }

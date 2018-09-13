@@ -1,5 +1,6 @@
 @import 'support/support';
 
+/* stylelint-disable */
 $docs-sidebar-size: 240px;
 $text: color(gray, 9);
 $text-light: color(gray, 7);
@@ -322,3 +323,4 @@ $docs-spacer-xxl: space(xxl);
 .c-text-gray-9 {
   color: $color-gray-9 !important;
 }
+/* stylelint-enable */

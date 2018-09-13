@@ -20,6 +20,21 @@
 ///
 /// @param {String} $radius - how much space do you need.
 /// @return {Number} The spacing for the variant in px.
+@function theme-size($value: sm) {
+  $fetched-value: map-get($theme-sizes, $value);
+
+  @if type-of($fetched-value) == number {
+    @return $fetched-value;
+  } @else {
+    @error 'theme-sizes variant `#{$value}` not found.';
+  }
+}
+
+
+/// Returns the radius value for a given variant.
+///
+/// @param {String} $radius - how much space do you need.
+/// @return {Number} The spacing for the variant in px.
 @function radius($value: md) {
   $fetched-value: map-get($radius, $value);
 
@@ -63,7 +78,7 @@
 /// @param {String} $value - The font size.
 /// @return {Number} The font-size for the given definition.
 @function font-size($value) {
-  $fetched-font-size: map-get($font-size, $value);
+  $fetched-font-size: map-get($body-text, $value);
 
   @if type-of($fetched-font-size) != null {
     @return $fetched-font-size;
@@ -71,7 +86,6 @@
     @error 'Font size `#{$variant}` not found.';
   }
 }
-
 
 /// Returns the font family for a given definition.
 ///

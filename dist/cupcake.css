@@ -4,12 +4,6 @@
   /* version: 2.0.0 */
   /* flavor: Default */
 
-:root {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  font-size: 16px;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased
-}
 *,
 ::after,
 ::before {
@@ -17,9 +11,6 @@
 }
 html {
   box-sizing: border-box;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  font-size: 16px;
-  line-height: normal;
   -webkit-tap-highlight-color: transparent;
   text-rendering: optimizeLegibility
 }
@@ -265,10 +256,10 @@ th {
   content: attr(data-badge);
   box-shadow: 0 0 0 1px #fff;
   font-size: 10px;
-  height: 1rem;
+  height: 16px;
   line-height: 1;
-  min-width: 1rem;
-  padding: .125rem .25rem;
+  min-width: 16px;
+  padding: 2px 4px;
   text-align: center;
   white-space: nowrap
 }
@@ -282,31 +273,31 @@ th {
   z-index: 0
 }
 .c-avatar-gray {
-  background: #495057
+  background-color: #495057
 }
 .c-avatar[data-status=gray]::after {
   background-color: #495057
 }
 .c-avatar-primary {
-  background: #1c7cd6
+  background-color: #1c7cd6
 }
 .c-avatar[data-status=primary]::after {
   background-color: #1c7cd6
 }
 .c-avatar-success {
-  background: #37b24d
+  background-color: #37b24d
 }
 .c-avatar[data-status=success]::after {
   background-color: #37b24d
 }
 .c-avatar-warning {
-  background: #f76707
+  background-color: #f76707
 }
 .c-avatar[data-status=warning]::after {
   background-color: #f76707
 }
 .c-avatar-danger {
-  background: #f03e3e
+  background-color: #f03e3e
 }
 .c-avatar[data-status=danger]::after {
   background-color: #f03e3e
@@ -368,15 +359,15 @@ th {
 .c-checkbox input[type=radio] + i::before,
 .c-radio input[type=radio] + i,
 .c-radio input[type=radio] + i::before {
-  border-radius: 50%
+  border-radius: 200px
 }
 .c-checkbox input[type=checkbox]:checked + i::after,
 .c-radio input[type=checkbox]:checked + i::after {
+  display: table-cell;
   transform: rotate(45deg);
   position: absolute;
   left: 8px;
   top: 3px;
-  display: table-cell;
   width: 8px;
   height: 16px;
   border: 3px solid;
@@ -394,7 +385,7 @@ th {
   width: 12px;
   height: 12px;
   background: #fff;
-  border-radius: 50%;
+  border-radius: 200px;
   content: ' ';
   color: #fff
 }
@@ -639,99 +630,89 @@ fieldset[disabled] .c-radio input + i::before {
 .c-radio input:disabled:checked + i::after {
   background: #adb5bd
 }
-.c-header-xxl {
-  font-size: 64px;
-  line-height: normal;
-  font-weight: 600;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  letter-spacing: -1.5px;
-  text-rendering: optimizeLegibility
+.c-text-bold {
+  font-weight: 900
 }
-.c-header-xl {
-  font-size: 48px;
-  line-height: normal;
-  font-weight: 600;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  letter-spacing: -.5px;
-  text-rendering: optimizeLegibility
+.c-text-semibold {
+  font-weight: 600
 }
-.c-header-lg {
-  font-size: 36px;
-  line-height: normal;
-  font-weight: 600;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  letter-spacing: 0;
-  text-rendering: optimizeLegibility
+.c-text-normal {
+  font-weight: 400
 }
-.c-header-md {
-  font-size: 24px;
-  line-height: normal;
-  font-weight: 600;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  letter-spacing: .25px;
-  text-rendering: optimizeLegibility
-}
-.c-header-sm {
-  font-size: 20px;
-  line-height: normal;
-  font-weight: 600;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  letter-spacing: 0;
-  text-rendering: optimizeLegibility
-}
-.c-header-xs {
-  font-size: 18px;
-  line-height: normal;
-  font-weight: 600;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  letter-spacing: .15px;
-  text-rendering: optimizeLegibility
-}
-.c-text-xxl {
-  font-size: 34px;
-  line-height: 1.5;
-  font-weight: 600;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  letter-spacing: .1px;
-  text-rendering: optimizeLegibility
-}
-.c-text-xl {
-  font-size: 20px;
-  line-height: 1.5;
-  font-weight: 600;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  letter-spacing: .1px;
-  text-rendering: optimizeLegibility
-}
-.c-text-lg {
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 600;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  letter-spacing: .1px;
-  text-rendering: optimizeLegibility
-}
-.c-text-md {
-  font-size: 14px;
-  line-height: 1.25;
-  font-weight: 600;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
-  letter-spacing: .1px;
-  text-rendering: optimizeLegibility
-}
-.c-text-sm {
-  font-size: 12px;
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: .15px;
-  text-rendering: optimizeLegibility
+.c-text-light {
+  font-weight: 300
 }
 .c-text-xs {
   font-size: 10px;
-  line-height: 1;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
-  letter-spacing: .7px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto
+  line-height: 1.5
+}
+.c-text-sm {
+  font-size: 11px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-weight: 400;
+  line-height: 1.5
+}
+.c-text-md {
+  font-size: 12px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-weight: 400;
+  line-height: 1.5
+}
+.c-text-lg {
+  font-size: 14px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-weight: 400;
+  line-height: 1.5
+}
+.c-text-xl {
+  font-size: 16px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-weight: 400;
+  line-height: 1.5
+}
+.c-text-xxl {
+  font-size: 18px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-weight: 400;
+  line-height: 1.5
+}
+.c-header-xs {
+  font-size: 12px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-weight: 600;
+  line-height: 1.5
+}
+.c-header-sm {
+  font-size: 14px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-weight: 600;
+  line-height: 1.5
+}
+.c-header-md {
+  font-size: 16px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-weight: 600;
+  line-height: 1.5
+}
+.c-header-lg {
+  font-size: 20px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-weight: 600;
+  line-height: 1.5
+}
+.c-header-xl {
+  font-size: 24px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-weight: 600;
+  line-height: 1.5
+}
+.c-header-xxl {
+  font-size: 36px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-weight: 600;
+  line-height: 1.5
 }
 .c-depth-xl {
   box-shadow: 0 12px 24px 0 rgba(0,0,0,.1)
@@ -1250,307 +1231,273 @@ fieldset[disabled] .c-radio input + i::before {
   padding: 0
 }
 .c-p-xxs {
-  padding: .125rem
+  padding: 2px
 }
 .c-p-xs {
-  padding: .25rem
+  padding: 4px
 }
 .c-p-sm {
-  padding: .5rem
+  padding: 8px
 }
 .c-p-md {
-  padding: 1rem
+  padding: 16px
 }
 .c-p-lg {
-  padding: 1.5rem
+  padding: 24px
 }
 .c-p-xl {
-  padding: 2rem
+  padding: 32px
 }
 .c-p-xxl {
-  padding: 3rem
-}
-.c-p-xxxl {
-  padding: 6rem
+  padding: 48px
 }
 .c-p-top-0 {
   padding-top: 0
 }
 .c-p-top-xxs {
-  padding-top: .125rem
+  padding-top: 2px
 }
 .c-p-top-xs {
-  padding-top: .25rem
+  padding-top: 4px
 }
 .c-p-top-sm {
-  padding-top: .5rem
+  padding-top: 8px
 }
 .c-p-top-md {
-  padding-top: 1rem
+  padding-top: 16px
 }
 .c-p-top-lg {
-  padding-top: 1.5rem
+  padding-top: 24px
 }
 .c-p-top-xl {
-  padding-top: 2rem
+  padding-top: 32px
 }
 .c-p-top-xxl {
-  padding-top: 3rem
-}
-.c-p-top-xxxl {
-  padding-top: 6rem
+  padding-top: 48px
 }
 .c-p-bottom-0 {
   padding-bottom: 0
 }
 .c-p-bottom-xxs {
-  padding-bottom: .125rem
+  padding-bottom: 2px
 }
 .c-p-bottom-xs {
-  padding-bottom: .25rem
+  padding-bottom: 4px
 }
 .c-p-bottom-sm {
-  padding-bottom: .5rem
+  padding-bottom: 8px
 }
 .c-p-bottom-md {
-  padding-bottom: 1rem
+  padding-bottom: 16px
 }
 .c-p-bottom-lg {
-  padding-bottom: 1.5rem
+  padding-bottom: 24px
 }
 .c-p-bottom-xl {
-  padding-bottom: 2rem
+  padding-bottom: 32px
 }
 .c-p-bottom-xxl {
-  padding-bottom: 3rem
-}
-.c-p-bottom-xxxl {
-  padding-bottom: 6rem
+  padding-bottom: 48px
 }
 .c-p-horizontal-0 {
   padding-left: 0;
   padding-right: 0
 }
 .c-p-horizontal-xxs {
-  padding-left: .125rem;
-  padding-right: .125rem
+  padding-left: 2px;
+  padding-right: 2px
 }
 .c-p-horizontal-xs {
-  padding-left: .25rem;
-  padding-right: .25rem
+  padding-left: 4px;
+  padding-right: 4px
 }
 .c-p-horizontal-sm {
-  padding-left: .5rem;
-  padding-right: .5rem
+  padding-left: 8px;
+  padding-right: 8px
 }
 .c-p-horizontal-md {
-  padding-left: 1rem;
-  padding-right: 1rem
+  padding-left: 16px;
+  padding-right: 16px
 }
 .c-p-horizontal-lg {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem
+  padding-left: 24px;
+  padding-right: 24px
 }
 .c-p-horizontal-xl {
-  padding-left: 2rem;
-  padding-right: 2rem
+  padding-left: 32px;
+  padding-right: 32px
 }
 .c-p-horizontal-xxl {
-  padding-left: 3rem;
-  padding-right: 3rem
-}
-.c-p-horizontal-xxxl {
-  padding-left: 6rem;
-  padding-right: 6rem
+  padding-left: 48px;
+  padding-right: 48px
 }
 .c-p-vertical-0 {
   padding-top: 0;
   padding-bottom: 0
 }
 .c-p-vertical-xxs {
-  padding-top: .125rem;
-  padding-bottom: .125rem
+  padding-top: 2px;
+  padding-bottom: 2px
 }
 .c-p-vertical-xs {
-  padding-top: .25rem;
-  padding-bottom: .25rem
+  padding-top: 4px;
+  padding-bottom: 4px
 }
 .c-p-vertical-sm {
-  padding-top: .5rem;
-  padding-bottom: .5rem
+  padding-top: 8px;
+  padding-bottom: 8px
 }
 .c-p-vertical-md {
-  padding-top: 1rem;
-  padding-bottom: 1rem
+  padding-top: 16px;
+  padding-bottom: 16px
 }
 .c-p-vertical-lg {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem
+  padding-top: 24px;
+  padding-bottom: 24px
 }
 .c-p-vertical-xl {
-  padding-top: 2rem;
-  padding-bottom: 2rem
+  padding-top: 32px;
+  padding-bottom: 32px
 }
 .c-p-vertical-xxl {
-  padding-top: 3rem;
-  padding-bottom: 3rem
-}
-.c-p-vertical-xxxl {
-  padding-top: 6rem;
-  padding-bottom: 6rem
+  padding-top: 48px;
+  padding-bottom: 48px
 }
 .c-m-0 {
   margin: 0
 }
 .c-m-xxs {
-  margin: .125rem
+  margin: 2px
 }
 .c-m-xs {
-  margin: .25rem
+  margin: 4px
 }
 .c-m-sm {
-  margin: .5rem
+  margin: 8px
 }
 .c-m-md {
-  margin: 1rem
+  margin: 16px
 }
 .c-m-lg {
-  margin: 1.5rem
+  margin: 24px
 }
 .c-m-xl {
-  margin: 2rem
+  margin: 32px
 }
 .c-m-xxl {
-  margin: 3rem
-}
-.c-m-xxxl {
-  margin: 6rem
+  margin: 48px
 }
 .c-m-top-0 {
   margin-top: 0
 }
 .c-m-top-xxs {
-  margin-top: .125rem
+  margin-top: 2px
 }
 .c-m-top-xs {
-  margin-top: .25rem
+  margin-top: 4px
 }
 .c-m-top-sm {
-  margin-top: .5rem
+  margin-top: 8px
 }
 .c-m-top-md {
-  margin-top: 1rem
+  margin-top: 16px
 }
 .c-m-top-lg {
-  margin-top: 1.5rem
+  margin-top: 24px
 }
 .c-m-top-xl {
-  margin-top: 2rem
+  margin-top: 32px
 }
 .c-m-top-xxl {
-  margin-top: 3rem
-}
-.c-m-top-xxxl {
-  margin-top: 6rem
+  margin-top: 48px
 }
 .c-m-bottom-0 {
   margin-bottom: 0
 }
 .c-m-bottom-xxs {
-  margin-bottom: .125rem
+  margin-bottom: 2px
 }
 .c-m-bottom-xs {
-  margin-bottom: .25rem
+  margin-bottom: 4px
 }
 .c-m-bottom-sm {
-  margin-bottom: .5rem
+  margin-bottom: 8px
 }
 .c-m-bottom-md {
-  margin-bottom: 1rem
+  margin-bottom: 16px
 }
 .c-m-bottom-lg {
-  margin-bottom: 1.5rem
+  margin-bottom: 24px
 }
 .c-m-bottom-xl {
-  margin-bottom: 2rem
+  margin-bottom: 32px
 }
 .c-m-bottom-xxl {
-  margin-bottom: 3rem
-}
-.c-m-bottom-xxxl {
-  margin-bottom: 6rem
+  margin-bottom: 48px
 }
 .c-m-horizontal-0 {
   margin-left: 0;
   margin-right: 0
 }
 .c-m-horizontal-xxs {
-  margin-left: .125rem;
-  margin-right: .125rem
+  margin-left: 2px;
+  margin-right: 2px
 }
 .c-m-horizontal-xs {
-  margin-left: .25rem;
-  margin-right: .25rem
+  margin-left: 4px;
+  margin-right: 4px
 }
 .c-m-horizontal-sm {
-  margin-left: .5rem;
-  margin-right: .5rem
+  margin-left: 8px;
+  margin-right: 8px
 }
 .c-m-horizontal-md {
-  margin-left: 1rem;
-  margin-right: 1rem
+  margin-left: 16px;
+  margin-right: 16px
 }
 .c-m-horizontal-lg {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem
+  margin-left: 24px;
+  margin-right: 24px
 }
 .c-m-horizontal-xl {
-  margin-left: 2rem;
-  margin-right: 2rem
+  margin-left: 32px;
+  margin-right: 32px
 }
 .c-m-horizontal-xxl {
-  margin-left: 3rem;
-  margin-right: 3rem
-}
-.c-m-horizontal-xxxl {
-  margin-left: 6rem;
-  margin-right: 6rem
+  margin-left: 48px;
+  margin-right: 48px
 }
 .c-m-vertical-0 {
   margin-top: 0;
   margin-bottom: 0
 }
 .c-m-vertical-xxs {
-  margin-top: .125rem;
-  margin-bottom: .125rem
+  margin-top: 2px;
+  margin-bottom: 2px
 }
 .c-m-vertical-xs {
-  margin-top: .25rem;
-  margin-bottom: .25rem
+  margin-top: 4px;
+  margin-bottom: 4px
 }
 .c-m-vertical-sm {
-  margin-top: .5rem;
-  margin-bottom: .5rem
+  margin-top: 8px;
+  margin-bottom: 8px
 }
 .c-m-vertical-md {
-  margin-top: 1rem;
-  margin-bottom: 1rem
+  margin-top: 16px;
+  margin-bottom: 16px
 }
 .c-m-vertical-lg {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem
+  margin-top: 24px;
+  margin-bottom: 24px
 }
 .c-m-vertical-xl {
-  margin-top: 2rem;
-  margin-bottom: 2rem
+  margin-top: 32px;
+  margin-bottom: 32px
 }
 .c-m-vertical-xxl {
-  margin-top: 3rem;
-  margin-bottom: 3rem
-}
-.c-m-vertical-xxxl {
-  margin-top: 6rem;
-  margin-bottom: 6rem
+  margin-top: 48px;
+  margin-bottom: 48px
 }
 .c-radius-0 {
   border-radius: none
@@ -1565,13 +1512,15 @@ fieldset[disabled] .c-radio input + i::before {
   border-radius: 4px
 }
 .c-radius-lg {
-  border-radius: 6px
+  border-radius: 8px
 }
 .c-radius-round {
   border-radius: 200px
+}
+.c-radius-pill {
+  border-radius: 100%
 }
   /* 🎂 CUPCAKE 🎂 */
   /* END */
   /* ----------------------- */
   
-/*# sourceMappingURL=maps/cupcake.css.map */

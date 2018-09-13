@@ -24,8 +24,10 @@
     min-width: .5em;
     background-clip: padding-box;
     border-radius: radius(round);
-    box-shadow: 0 0 0 1px white;
-    color: white;
+    /* stylelint-disable */
+    box-shadow: 0 0 0 1px $white;
+    /* stylelint-enable */
+    color: $white;
     z-index: 1;
   }
 
@@ -38,8 +40,10 @@
     border-radius: radius(round);
     z-index: 1;
     content: attr(data-badge);
-    box-shadow: 0 0 0 1px white;
-    font-size: font-size(body-xs);
+    /* stylelint-disable */
+    box-shadow: 0 0 0 1px $white;
+    /* stylelint-enable */
+    font-size: font-size(xs);
     height: space(md);
     line-height: 1;
     min-width: space(md);
@@ -59,9 +63,9 @@
   }
 }
 
-@each $name, $hex in config($theme-colors) {
+@each $name, $hex in $avatar-palette {
   .#{$avatar-prefix}-#{$name} {
-    background: $hex;
+    background-color: $hex;
   }
 
   .#{$avatar-prefix}[data-status='#{$name}']::after {

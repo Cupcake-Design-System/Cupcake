@@ -15,10 +15,6 @@ $colors: (
   )
 );
 
-$breakpoints: (
-    sm: 200px,
-    xxl: 2200px
-);
 
 @import '../src/support/support';
 
@@ -49,11 +45,7 @@ $breakpoints: (
   }
 
   @include it('Should override breakpoints to match change in map') {
-    @include assert-equal(breakpoint(sm), 200px);
-  }
-
-  @include it('Checks additional breakpoints in map remain unchanged') {
-    @include assert-equal(breakpoint(xxl), 2200px);
+    @include assert-equal(breakpoint(sm), 600px);
   }
 
 }

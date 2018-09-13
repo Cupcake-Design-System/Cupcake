@@ -100,7 +100,7 @@ $color-danger-7: #f03e3e !default;
 $color-danger-8: #e03131 !default;
 $color-danger-9: #c92a2a !default;
 
-/// 
+///
 /// Warning - Used to communicate warnings or feedback to the user
 ///
 /// @prop {Color} $color-warning-0 [#fff4e6]
@@ -130,7 +130,7 @@ $colors: () !default;
 
 /// Full Color Palette map
 /// @see {function} color
-/// 
+///
 ///
 $colors: map-merge(
   (
@@ -201,7 +201,7 @@ $colors: map-merge(
 $theme-colors: () !default;
 /// Default map settings for $theme-colors.
 /// Retrieve via function. !IMPORTANT: only used to generate color based classes without the whole palette;
-/// 
+///
 /// @see {mixin} modifiers
 ///
 /// @prop {Color} $color-gray-7 [#495057]
@@ -219,3 +219,6 @@ $theme-colors: map-merge(
   ),
   $theme-colors
 );
+
+$white: white;
+$black: black;

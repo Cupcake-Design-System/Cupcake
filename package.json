@@ -20,9 +20,6 @@
     "precommit": "lint-staged && npm run lint",
     "docs": "sassdoc src/ -d docs/"
   },
-  "dependencies": {
-    "npm": "^6.4.1"
-  },
   "browserslist": [
     "> 2%",
     "IE 10"
@@ -61,6 +58,7 @@
     "postcss-scss": "^2.0.0",
     "require-dir": "^1.0.0",
     "stylelint": "^9.5.0",
+    "stylelint-declaration-strict-value": "^1.0.4",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-scss": "^3.3.0",
     "mocha": "^5.2.0",

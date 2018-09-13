@@ -206,14 +206,13 @@
       }
       @include expect {
         .space-0 { padding: 0; }
-        .space-xxs { padding: 0.125rem; }
-        .space-xs { padding: 0.25rem; }
-        .space-sm { padding: 0.5rem; }
-        .space-md { padding: 1rem; }
-        .space-lg { padding: 1.5rem; }
-        .space-xl { padding: 2rem; }
-        .space-xxl { padding: 3rem; }
-        .space-xxxl { padding: 6rem; }
+        .space-xxs { padding: 2px; }
+        .space-xs { padding: 4px; }
+        .space-sm { padding: 8px; }
+        .space-md { padding: 16px; }
+        .space-lg { padding: 24px; }
+        .space-xl { padding: 32px; }
+        .space-xxl { padding: 48px; }
       }
     }
   }
@@ -227,14 +226,13 @@
       }
       @include expect {
         .space-horizontal-0 { padding-left   : 0; padding-right   : 0; }
-        .space-horizontal-xxs { padding-left : 0.125rem; padding-right : 0.125rem; }
-        .space-horizontal-xs { padding-left  : 0.25rem; padding-right  : 0.25rem; }
-        .space-horizontal-sm { padding-left  : 0.5rem; padding-right  : 0.5rem; }
-        .space-horizontal-md { padding-left  : 1rem; padding-right  : 1rem; }
-        .space-horizontal-lg { padding-left  : 1.5rem; padding-right  : 1.5rem; }
-        .space-horizontal-xl { padding-left  : 2rem; padding-right  : 2rem; }
-        .space-horizontal-xxl { padding-left : 3rem; padding-right : 3rem; }
-        .space-horizontal-xxxl { padding-left: 6rem; padding-right: 6rem; }
+        .space-horizontal-xxs { padding-left : 2px; padding-right : 2px; }
+        .space-horizontal-xs { padding-left  : 4px; padding-right  : 4px; }
+        .space-horizontal-sm { padding-left  : 8px; padding-right  : 8px; }
+        .space-horizontal-md { padding-left  : 16px; padding-right  : 16px; }
+        .space-horizontal-lg { padding-left  : 24px; padding-right  : 24px; }
+        .space-horizontal-xl { padding-left  : 32px; padding-right  : 32px; }
+        .space-horizontal-xxl { padding-left : 48px; padding-right : 48px; }
       }
     }
   }

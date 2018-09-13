@@ -27,23 +27,23 @@
     &[type="radio"] + i {
       &,
       &::before {
-        border-radius: 50%;
+        border-radius: radius(round);
       }
     }
 
     &[type="checkbox"]:checked + i::after {
+      display: table-cell;
       transform: rotate(45deg);
       position: absolute;
       left: round($size / 3);
       top: round($size / 9);
-      display: table-cell;
       width: round($size / 3);
       height: round($size / 1.5);
       border: round($size / 9) solid;
       border-top: 0;
       border-left: 0;
       content: ' ';
-      color: white;
+      color: $white;
     }
 
     &[type="radio"]:checked + i::after {
@@ -53,17 +53,17 @@
       top: round($size / 4);
       width: round($size / 2);
       height: round($size / 2);
-      background: white;
-      border-radius: 50%;
+      background: $white;
+      border-radius: radius(round);
       content: ' ';
-      color: white;
+      color: $white;
     }
 
     &[disabled],
     fieldset[disabled] & {
       & + i::before {
         opacity: $checkbox-disabled-opacity;
-        background: $checkbox-disabled;
+        background: $checkbox-disabled-bg;
         cursor: not-allowed;
       }
     }
@@ -72,13 +72,13 @@
       & + i::before {
         opacity: $checkbox-disabled-opacity;
         cursor: not-allowed;
-        border: 1px solid $color-gray-5;
+        border: 1px solid $checkbox-disabled-color;
       }
     }
 
     &[disabled]:checked {
       & + i::after {
-        color: $color-gray-5;
+        color: $checkbox-disabled-color;
       }
     }
   }
@@ -86,7 +86,9 @@
   > i {
     height: $size;
     display: inline-block;
+    /* stylelint-disable */
     margin: 0 $size 0 0;
+    /* stylelint-enable */
     position: relative;
 
     &::before {
@@ -128,7 +130,9 @@
 
   > i {
     height: $size;
+    /* stylelint-disable */
     margin: 0 $size 0 0;
+    /* stylelint-enable */
 
     &::before {
       width: $size;

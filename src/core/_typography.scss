@@ -1,51 +1,16 @@
-.c-header-xxl {
-  @include H1-text-style();
+.#{$text-prefix} {
+  @include modifiers($font-weight, 'font-weight');
+
+  @each $name, $value in $body-text {
+    &-#{$name} {
+      @include body-text($value);
+    }
+  }
 }
 
-.c-header-xl {
-  @include H2-text-style();
+@each $name, $value in $header-text {
+  .#{$header-prefix}-#{$name} {
+    @include header-text($value);
+  }
 }
 
-.c-header-lg {
-  @include H3-text-style();
-}
-
-.c-header-md {
-  @include H4-text-style();
-}
-
-.c-header-sm {
-  @include H5-text-style();
-}
-
-.c-header-xs {
-  @include H6-text-style();
-}
-
-.c-text {
-  @include modifiers(font-weights, 'font-weight');
-}
-
-.c-text-xxl {
-  @include body-xxl();
-}
-
-.c-text-xl {
-  @include body-xl();
-}
-
-.c-text-lg {
-  @include body-lg();
-}
-
-.c-text-md {
-  @include body-md();
-}
-
-.c-text-sm {
-  @include body-sm();
-}
-
-.c-text-xs {
-  @include body-xs();
-}
