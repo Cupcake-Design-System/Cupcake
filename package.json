@@ -16,7 +16,7 @@
     "test": "mocha build/test",
     "list-selectors": "list-selectors ./dist/cupcake.css -p -i classes stdout > 2.0-classes.json",
     "beautify": "gulp beautify",
-    "precommit": "lint-staged && npm run lint",
+    "precommit": "lint-staged && npm run lint && npm run test",
     "docs": "sassdoc src/ -d docs/"
   },
   "dependencies": {

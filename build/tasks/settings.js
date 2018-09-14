@@ -11,6 +11,6 @@ gulp.task('variables', (done) => {
       'Global Config'
     ]
   };
-  octophant('src/**/*.scss', options, done);
+  octophant(`${config.styles.source}/**/*`, options, done);
 });
 

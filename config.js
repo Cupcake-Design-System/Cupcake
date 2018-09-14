@@ -19,7 +19,8 @@ export default {
   root: __dirname,
 
   paths: {
-    source: 'scss',
+    source: 'src',
+    scss: 'scss',
     build: 'dist',
     docs: 'docs'
   },
@@ -32,20 +33,20 @@ export default {
   },
 
   styles: {
-    source: 'scss',
+    source: 'src/scss',
     build: 'dist',
-    docs: 'build/html'
+    docs: 'src/docs'
   },
 
   html: {
-    all: 'build/html/**/*.{html,md,json,yml}',
-    pages: 'build/html/views/pages/**/*',
-    layouts: 'build/html/views/layouts/**/*',
-    layoutIncludes: ["build/html/views/layouts/includes/**/*", 'layout/**/*.html'],
-    views: ['build/html/views/**/*', '!build/html/views/+(layouts)/**'],
-    data: ['build/html/data/**/*.{json,yml}'],
-    docs: 'build/html/docs/**/*.md',
-    core: ['build/html/core/**/*'],
+    all: 'src/docs/**/*.{html,md,json,yml}',
+    pages: 'src/docs/views/pages/**/*',
+    layouts: 'src/docs/views/layouts/**/*',
+    layoutIncludes: ["src/docs/views/layouts/includes/**/*", 'layout/**/*.html'],
+    views: ['src/docs/views/**/*', '!src/docs/views/+(layouts)/**'],
+    data: ['src/docs/data/**/*.{json,yml}'],
+    docs: 'src/docs/docs/**/*.md',
+    core: ['src/docs/core/**/*'],
     build: 'docs'
   }
 };

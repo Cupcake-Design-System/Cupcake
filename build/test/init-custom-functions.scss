@@ -1,6 +1,6 @@
 // stylelint-disable
 @import '../../node_modules/sass-true/sass/true';
-@import '../../scss/support/support';
+@import '../../src/scss/support/support';
 
 @mixin test-mixin {
   transition: all easing(overshot) duration(slow);

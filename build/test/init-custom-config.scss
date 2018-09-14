@@ -20,7 +20,7 @@ $breakpoints: (
     xxl: 2200px
 );
 
-@import '../../scss/support/support';
+@import '../../src/scss/support/support';
 
 @include describe('Initialisation with custom config') {
 

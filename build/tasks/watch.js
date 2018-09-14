@@ -13,6 +13,10 @@ gulp.task('watch:sassdoc', () => {
   gulp.watch(`${config.styles.source}/**/*`, gulp.series('sassdoc'));
 });
 
+gulp.task('watch:docs', () => {
+  gulp.watch(`${config.styles.docs}/**/*`, gulp.series('styles'));
+});
+
 
 gulp.task('watch:html', () => {
   gulp.watch(
@@ -29,6 +33,7 @@ gulp.task(
   'watch',
   gulp.parallel(
     'watch:styles',
+    'watch:docs',
     'watch:sassdoc',
     'watch:html'
   )
