@@ -1,0 +1,26 @@
+---
+title: Test
+layout: blank
+---
+
+{{> colors}}
+
+
+<div class="color-block">
+    {{#each toolkit.colors}}
+  {{#each this}}
+  <div class="color-block-title">{{this}}</div>
+  <div class="colors c-m-bottom-md">
+    {{#iterate 10}}
+    <span class="c-bg-{{../this}}-{{@index}}"></span>
+    {{/iterate}}
+  </div>
+  {{/each}}
+  {{/each}}
+  <div class="color-block-title">Gray</div>
+  <div class="colors c-m-bottom-md">
+    {{#iterate 10}}
+    <span class="c-bg-gray-{{@index}}"></span>
+    {{/iterate}}
+  </div>
+</div>

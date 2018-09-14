@@ -1,0 +1,30 @@
+<nav class="docs-nav">
+  <div class="docs-nav-header">
+    <div class="ipreo">Ipreo</div>
+    <div class="cupcake">Cupcake</div>
+    <div class="docs-version">Version 2.0</div>
+  </div>
+
+  <ul class="docs-nav-items">
+
+    <ul class="docs-nav-items">
+      <li class="docs-nav-title"><a href="design-tokens.html">Design Tokens</a></li>
+      {{#each materials.tokens.items}}
+      <li class="docs-nav-item"><a href="design-tokens.html#{{@key}}">{{name}}</a></li>
+      {{/each}}
+    </ul>
+
+    <ul class="docs-nav-items">
+      <li class="docs-nav-title"><a href="elements.html">Elements</a></li>
+      {{#each materials.elements.items}}
+      <li class="docs-nav-item"><a href="elements.html#{{@key}}">{{name}}</a></li>
+      {{/each}}
+    </ul>
+
+      <ul class="docs-nav-items">
+          <li class="docs-nav-title"><a href="sassdoc/index.html" target="_blank">SassDocs</a></li>
+      </ul>
+
+  </ul>
+
+</nav>
