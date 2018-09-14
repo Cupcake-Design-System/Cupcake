@@ -20,45 +20,33 @@ export default {
 
   paths: {
     source: 'src',
-    build: 'dist'
-  },
-
-  assets: {
-    source: 'src/assets',
-    build: 'dist/assets'
+    scss: 'scss',
+    build: 'dist',
+    docs: 'docs'
   },
 
   server: {
     port: 4000,
     notify: true,
-    open: true
+    open: true,
+    logPrefix: `Serving your Cupcake 🎂`
   },
 
   styles: {
-    source: 'src',
+    source: 'src/scss',
     build: 'dist',
-    tokens: 'dist/tokens'
-  },
-
-  scripts: {
-    source: 'src/scripts',
-    build: 'dist/assets/scripts'
+    docs: 'src/docs'
   },
 
   html: {
-    all: 'html/**/*.{html,md,json,yml}',
-    pages: 'html/views/pages/**/*',
-    layouts: 'html/views/layouts/**/*',
-    layoutIncludes: ["html/views/layouts/includes/**/*", 'src/layout/**/*.html'],
-    views: ['html/views/**/*', '!html/views/+(layouts)/**'],
-    data: ['html/data/**/*.{json,yml}'],
-    docs: 'html/docs/**/*.md',
-    core: ['html/core/**/*'],
-    build: 'dist'
-  },
-
-  fonts: {
-    source: 'src/fonts',
-    build: 'dist/assets/fonts'
+    all: 'src/docs/**/*.{html,md,json,yml}',
+    pages: 'src/docs/views/pages/**/*',
+    layouts: 'src/docs/views/layouts/**/*',
+    layoutIncludes: ["src/docs/views/layouts/includes/**/*", 'layout/**/*.html'],
+    views: ['src/docs/views/**/*', '!src/docs/views/+(layouts)/**'],
+    data: ['src/docs/data/**/*.{json,yml}'],
+    docs: 'src/docs/docs/**/*.md',
+    core: ['src/docs/core/**/*'],
+    build: 'docs'
   }
 };

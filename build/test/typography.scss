@@ -1,0 +1,75 @@
+// stylelint-disable
+@import '../../node_modules/sass-true/sass/true';
+@import '../../src/scss/support/support';
+
+$values: (
+  xs : 22px,
+  sm : 24px
+);
+
+$header-prefix   : 'header-test';
+$body-prefix   : 'body-test';
+
+@include describe('Test output for header-text mixin') {
+
+  @include it('Given a map generates correct header-text classes') {
+    @include assert {
+      @include output {
+        @each $name, $value in $values {
+          .#{$header-prefix}-#{$name} {
+            @include header-text($value);
+          }
+        }
+
+      }
+      @include expect {
+        .header-test-xs {
+          font-size: 22px;
+          font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+          font-weight: 600;
+          line-height: 1.5
+        }
+        .header-test-sm {
+          font-size: 24px;
+          font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+          font-weight: 600;
+          line-height: 1.5
+        }
+      }
+    }
+  }
+
+}
+
+@include describe('Test output for body-text mixin') {
+
+  @include it('Given a map generates correct body-text classes') {
+    @include assert {
+      @include output {
+        @each $name, $value in $values {
+          .#{$body-prefix}-#{$name} {
+            @include body-text($value);
+          }
+        }
+
+      }
+      @include expect {
+        .body-test-xs {
+          font-size: 22px;
+          font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+          font-weight: 400;
+          line-height: 1.5;
+        }
+        .body-test-sm {
+          font-size: 24px;
+          font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+          font-weight: 400;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+}
+
+@include report;
