@@ -6,23 +6,23 @@ import c from "ansi-colors";
 
 console.log(c.yellow(`🎂 Cupcake v${config.version} 🔧  Development`));
 
-requiredir('./tasks');
+requiredir('./build/tasks');
 
 gulp.task(
   'assets',
-  gulp.series('copy', 'scripts')
+  gulp.series('copy')
 );
 
 gulp.task(
   'styles',
-  gulp.series('lint:styles', 'make:styles', (done) => {
+  gulp.series('lint:styles', 'make:styles', 'make:styles:docs', (done) => {
     done();
   })
 );
 
 gulp.task(
   'styles:prod',
-  gulp.series('clean', 'lint:styles', 'make:styles', 'styles:min', (done) => {
+  gulp.series('clean', 'lint:styles', 'make:styles', 'make:styles:min', (done) => {
     done();
   })
 );
@@ -37,7 +37,6 @@ gulp.task(
   gulp.series('styles', 'html', 'sassdoc')
 );
 
-gulp.task('build', gulp.series('clean', 'codes'));
+gulp.task('build', gulp.series('clean', 'codes', 'make:styles:min'));
 gulp.task('dev', gulp.series('clean', 'codes', gulp.parallel('server', 'watch')));
 gulp.task('default', gulp.series('dev'));
-gulp.task('deploy', gulp.series('pages'));
