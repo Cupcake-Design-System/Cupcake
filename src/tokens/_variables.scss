@@ -134,34 +134,3 @@ $easing: (
   anticipate: cubic-bezier(0.38, -0.4, 0.88, 0.65),
 ) !default;
 //### ANIMATION END ################################//
-
-
-//### AVATAR START ################################//
-$avatar-prefix: 'c-avatar' !default;
-$avatar-default-size: 32px !default;
-$avatar-palette: $theme-colors !default;
-$avatar-sizes: (
-  sm: $avatar-default-size - 8,
-  lg: $avatar-default-size + 8,
-  xl: $avatar-default-size + 24,
-) !default;
-//### AVATAR END ################################//
-
-
-//### CHECKBOX START ################################//
-$checkbox-prefix          : 'c-checkbox' !default;
-$radio-prefix             : 'c-radio' !default;
-$checkbox-icon-bd         : 1px solid color(gray, 3) !default;
-$checkbox-icon-radius     : radius(sm) !default;
-$checkbox-transition      : all 0.2s !default;
-$checkbox-disabled-bg     : color(gray, 3) !default;
-$checkbox-disabled-color  : color(gray, 5) !default;
-$checkbox-disabled-opacity: 0.5 !default;
-$checkbox-palette: $theme-colors !default;
-$checkbox-default-size    : 24px !default;
-$checkbox-sizes: (
-  sm: theme-size(sm),
-  lg: theme-size(lg),
-  xl: theme-size(xl),
-) !default;
-//### CHECKBOX END ################################//

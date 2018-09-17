@@ -211,7 +211,6 @@ $theme-colors: () !default;
 /// @prop {Color} $color-danger-7 [#f03e3e]
 $theme-colors: map-merge(
   (
-    gray: $color-gray-7,
     primary: $color-primary-7,
     success: $color-success-7,
     warning: $color-warning-7,

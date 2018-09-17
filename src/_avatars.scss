@@ -1,3 +1,14 @@
+//### AVATAR START ################################//
+$avatar-prefix: 'c-avatar' !default;
+$avatar-default-size: 32px !default;
+$avatar-palette: $theme-colors !default;
+$avatar-sizes: (
+  sm: $avatar-default-size - 8,
+  lg: $avatar-default-size + 8,
+  xl: $avatar-default-size + 24,
+) !default;
+//### AVATAR END ################################//
+
 /*  Avatar Base
 * ====================================== */
 .#{$avatar-prefix} {

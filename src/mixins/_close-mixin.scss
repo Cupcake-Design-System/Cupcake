@@ -1,0 +1,43 @@
+@mixin close($size: 24px, $close-size:3px, $color:color(gray, 4)) {
+  border: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: $size;
+  width: $size;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  text-decoration: none;
+
+  &::before {
+    height: $close-size;
+    width: 50%;
+  }
+
+  &::after {
+    height: 50%;
+    width: $close-size;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    background-color: $color;
+    border-radius: radius(sm);
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: darken($color, 10);
+  }
+}

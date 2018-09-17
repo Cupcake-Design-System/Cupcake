@@ -11,3 +11,11 @@ notes: Spacing is used to consistently apply paddings and margins across our com
 </div>
   {{/each}}
 {{/each}}
+
+
+{{#each space.props}}
+  <div class="space-block-title">{{name}}</div>
+<div class="space">
+  <div class="{{value}}" style="width:{{value}}"></div>
+</div>
+{{/each}}

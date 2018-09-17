@@ -1,0 +1,68 @@
+@mixin toast($color: color(primary)) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: $white;
+  color: color(gray, 9);
+  /* stylelint-disable */
+  padding: 11px $alert-top-padding;
+  /* stylelint-enable */
+  margin: $alert-margin;
+  font-size: $alert-font-size;
+  font-weight: font-weight(bold);
+  border-radius: radius(sm);
+  border: 1px solid color(gray, 2);
+  word-wrap: break-word;
+  box-shadow: shadow(md);
+
+  i:not(.fa-times),
+  &-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: $alert-top-padding;
+    font-size: $alert-font-size + 2;
+    color: $color;
+  }
+
+  // Alert Bar
+  &::before {
+    content: '';
+    position: absolute;
+    background: $color;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 4px;
+    border: darken($color, 20);
+    border-radius: radius(sm) 0 0 radius(sm);
+  }
+
+  &-close {
+    @include close;
+
+    /* stylelint-disable */
+    margin-left: auto;
+    /* stylelint-enable */
+    margin-right: -(space(xs));
+  }
+}
+
+@mixin toast-style($color: color(primary)) {
+  i:not(.fa-times),
+  &-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: $alert-top-padding;
+    font-size: $alert-font-size + 2;
+    color: $color;
+  }
+
+  // Alert Bar
+  &::before {
+    background: $color;
+    border: darken($color, 20);
+  }
+}
