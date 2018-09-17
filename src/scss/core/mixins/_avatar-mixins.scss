@@ -2,7 +2,7 @@
   font-size: $size / 2;
   height: $size;
   width: $size;
-  color: white;
+  color: $white;
   display: inline-block;
   text-align: center;
   position: relative;
@@ -28,5 +28,4 @@
     line-height: $size;
   }
 }
-
 

@@ -9,3 +9,6 @@ sassTrue.runSass({file: initCustomFunctions}, describe, it);
 
 const initCustomConfig = path.join(__dirname, 'init-custom-config.scss');
 sassTrue.runSass({file: initCustomConfig}, describe, it);
+
+const typography = path.join(__dirname, 'typography.scss');
+sassTrue.runSass({file: typography}, describe, it);

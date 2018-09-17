@@ -1,6 +1,7 @@
 /*
  * Mixins and functions
  */
+/* stylelint-disable */
 .docs-container {
   display: -ms-flexbox;
   display: flex;
@@ -19,14 +20,14 @@
 .docs-content {
   -ms-flex: 1;
       flex: 1;
-  padding: 0 1.5rem;
+  padding: 0 24px;
   margin-left: 240px;
-  margin-top: 3rem; }
+  margin-top: 48px; }
   .docs-content-fullwidth {
     margin-left: 0; }
 
 .docs-nav {
-  padding: 2rem 1.5rem;
+  padding: 32px 24px;
   width: 240px;
   color: #212529;
   height: 100%;
@@ -44,12 +45,12 @@
     padding: 0; }
   .docs-nav-header {
     height: 160px;
-    padding: 1.5rem 0.5rem;
+    padding: 24px 8px;
     border-bottom: 1px solid #f1f3f5; }
   .docs-nav-title {
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
-    padding: 0 0.5rem;
+    margin-bottom: 16px;
+    margin-top: 24px;
+    padding: 0 8px;
     color: #adb5bd;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
     font-size: 10px;
@@ -62,7 +63,7 @@
       .docs-nav-title a:hover {
         color: #495057; }
     .docs-nav-title:first-child {
-      margin-top: 3rem; }
+      margin-top: 48px; }
   .docs-nav-item {
     color: #212529;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
@@ -70,7 +71,7 @@
     .docs-nav-item a {
       color: #212529;
       text-decoration: none;
-      padding: 0 0.5rem;
+      padding: 0 8px;
       line-height: 40px;
       display: block; }
       .docs-nav-item a:hover {
@@ -108,8 +109,8 @@
   font-weight: 900;
   letter-spacing: 1px;
   line-height: 24px;
-  padding: 0 0.5rem;
-  margin-top: 0.5rem;
+  padding: 0 8px;
+  margin-top: 8px;
   text-transform: uppercase; }
 
 .layer-types {
@@ -122,7 +123,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #f1f3f5;
-  padding: 1rem; }
+  padding: 16px; }
   .layer-types div {
     width: 7.5rem;
     height: 7.5rem;
@@ -135,14 +136,14 @@
     -ms-flex-pack: center;
         justify-content: center;
     background-color: white;
-    margin: 1rem; }
+    margin: 16px; }
 
 .space {
   display: -ms-flexbox;
   display: flex;
   background-color: #f1f3f5;
-  height: 1.5rem;
-  margin: 0.5rem 0;
+  height: 24px;
+  margin: 8px 0;
   border-radius: 2px; }
   .space-block-title {
     color: #212529;
@@ -174,7 +175,7 @@
   line-height: 20px; }
 
 .color-block .colors {
-  height: 3rem;
+  height: 48px;
   width: 100%;
   display: -ms-flexbox;
   display: flex; }
@@ -183,8 +184,8 @@
         flex: 1;
     display: block;
     border-radius: 3px;
-    padding: 0.5rem;
-    margin-right: 1.5rem;
+    padding: 8px;
+    margin-right: 24px;
     color: #ffffff;
     font-size: 11px;
     font-weight: bold;
@@ -197,24 +198,24 @@
       color: #212529;
       font-size: 11px;
       line-height: 16px;
-      padding: 0.5rem 0; }
+      padding: 8px 0; }
 
 .docs-section {
-  padding: 1.5rem 0;
-  margin-bottom: 3rem;
+  padding: 24px 0;
+  margin-bottom: 48px;
   border-bottom: 1px solid #f8f9fa; }
   .docs-section:first-child {
-    padding: 3rem 0; }
+    padding: 48px 0; }
   .docs-section-title {
     height: 24px;
     color: #212529;
     font-size: 16px;
     font-weight: bold;
     line-height: 24px;
-    margin: 0.5rem 0; }
+    margin: 8px 0; }
     .docs-section-title a {
       color: #1c7cd6;
-      padding-left: 0.5rem;
+      padding-left: 8px;
       font-size: 80%; }
       .docs-section-title a:hover {
         color: #228ae6; }
@@ -225,8 +226,8 @@
     font-size: 14px;
     line-height: 20px; }
   .docs-section-header {
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
     border-bottom: 1px solid #f1f3f5; }
 
 .c-text-primary-9 {

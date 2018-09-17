@@ -1,0 +1,96 @@
+@mixin alert-base(
+  $bg: $alert-primary-bg,
+  $color: $alert-primary-color,
+  $icon: $alert-primary-icon-color
+) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: $alert-margin;
+  padding: $alert-padding;
+  background-color: $bg;
+  height: $alert-height;
+  color: $color;
+  border: $alert-border;
+  border-radius: $alert-radius;
+  font-family: $alert-font-family;
+  font-weight: $alert-font-weight;
+  font-size: $alert-font-size;
+  line-height: $alert-line-height;
+
+  .c-a:not(.c-alert-close),
+  .c-alert-link:not(.c-alert-close) {
+    padding: 0 space(sm);
+    text-decoration: underline;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .c-alert-close {
+    @include close($size: $alert-close-font-size, $color: $color);
+
+    display: inline-flex;
+    order: 2;
+    opacity: 0.6;
+    padding-left: $alert-padding;
+    /* stylelint-disable */
+    margin-left: auto;
+    /* stylelint-enable */
+    margin-right: -(space(xs));
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .c-alert-icon {
+    display: inline-flex;
+    padding-right: $alert-padding;
+    font-size: $alert-icon-width;
+    color: $icon;
+  }
+}
+
+@mixin alert-style($bg: color(gray, 0), $color: color(gray, 9)) {
+  @if $white-label == true {
+    background-color: rgba($color, .1);
+    border-color: $color;
+    color: $color;
+  } @else {
+    background-color: $bg;
+    border-color: $color;
+    color: $color;
+  }
+
+
+  .c-alert-close {
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      background-color: $color;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: darken($color, 10);
+    }
+  }
+
+  .c-a,
+  .c-alert-link {
+    color: $color;
+
+    &:hover {
+      color: lighten($color, 10%);
+    }
+  }
+
+  .c-alert-icon {
+    color: $color;
+  }
+}

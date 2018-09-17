@@ -1,6 +1,11 @@
+@function map-collect($maps...) {
+  $collection: ();
 
-@function get-value($keys...) {
-  @return map-fetch($config, $keys...);
+  @each $map in $maps {
+    $collection: map-merge($collection, $map);
+  }
+
+  @return $collection;
 }
 
 @function map-extend($map, $maps.../*, $deep */) {

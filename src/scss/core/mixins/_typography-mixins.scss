@@ -1,0 +1,15 @@
+
+@mixin body-text($value, $weight: normal, $lh: default) {
+  font-size: $value;
+  font-family: font(primary);
+  font-weight: font-weight($weight);
+  line-height: line-height($lh);
+}
+
+@mixin header-text($value, $weight: semibold, $lh: default) {
+  font-size: $value;
+  font-family: font(primary);
+  font-weight: font-weight($weight);
+  line-height: line-height($lh);
+}
+

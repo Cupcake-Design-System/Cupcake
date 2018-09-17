@@ -1,6 +1,8 @@
 /*
  * Mixins and functions
  */
+
+@import 'color';
+@import 'variables';
 @import 'functions/functions';
-@import 'tokens/tokens';
 @import 'mixins/mixins';

@@ -1,3 +1,20 @@
+$checkbox-prefix          : 'c-checkbox' !default;
+$radio-prefix             : 'c-radio' !default;
+$checkbox-icon-bd         : 1px solid color(gray, 3) !default;
+$checkbox-icon-radius     : radius(sm) !default;
+$checkbox-transition      : all 0.2s !default;
+$checkbox-disabled-bg     : color(gray, 3) !default;
+$checkbox-disabled-color  : color(gray, 5) !default;
+$checkbox-disabled-opacity: 0.5 !default;
+$checkbox-palette         : $theme-colors !default;
+$checkbox-default-size    : 24px !default;
+$checkbox-sizes: (
+  sm: theme-size(sm),
+  lg: theme-size(lg),
+  xl: theme-size(xl),
+) !default;
+
+
 .#{$checkbox-prefix},
 .#{$radio-prefix} {
   @include checkbox;
@@ -14,7 +31,7 @@
 
 .#{$checkbox-prefix},
 .#{$radio-prefix} {
-  @each $name, $hex in config($theme-colors) {
+  @each $name, $hex in $checkbox-palette {
     &-#{$name} {
       @include checkbox-color($hex);
     }
@@ -41,11 +58,11 @@
   input:disabled:checked {
     + i {
       &::before {
-        background: $checkbox-disabled;
+        background: $checkbox-disabled-bg;
       }
 
       &::after {
-        background: $color-gray-5;
+        background: $checkbox-disabled-color;
       }
     }
   }

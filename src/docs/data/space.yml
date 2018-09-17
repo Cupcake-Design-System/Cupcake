@@ -1,0 +1,19 @@
+props:
+  - name: primary-0
+    value: "#e8f7ff"
+  - name: primary-1
+    value: "#ccedff"
+  - name: primary-2
+    value: "#a3daff"
+  - name: primary-3
+    value: "#72c3fc"
+  - name: primary-4
+    value: "#4dadf7"
+  - name: primary-5
+    value: "#329af0"
+  - name: primary-6
+    value: "#228ae6"
+
+global:
+  type: number
+  category: spacing
