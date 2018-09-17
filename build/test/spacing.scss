@@ -1,0 +1,309 @@
+// stylelint-disable
+@import '../../node_modules/sass-true/sass/true';
+@import '../../src/scss/support/support';
+@import '../../src/scss/helpers/helpers';
+
+
+@include describe('Test output for toggling spacer classes') {
+
+  @include it('Given true generate spacer classes') {
+    @include assert {
+      @include output {
+        $enable-spacer-classes: true;
+        @if $enable-spacer-classes == true {
+          @include spacer-export();
+        }
+      }
+      @include expect {
+        .c-p-0 {
+          padding: 0
+        }
+        .c-p-xxs {
+          padding: 2px
+        }
+        .c-p-xs {
+          padding: 4px
+        }
+        .c-p-sm {
+          padding: 8px
+        }
+        .c-p-md {
+          padding: 16px
+        }
+        .c-p-lg {
+          padding: 24px
+        }
+        .c-p-xl {
+          padding: 32px
+        }
+        .c-p-xxl {
+          padding: 48px
+        }
+        .c-p-top-0 {
+          padding-top: 0
+        }
+        .c-p-top-xxs {
+          padding-top: 2px
+        }
+        .c-p-top-xs {
+          padding-top: 4px
+        }
+        .c-p-top-sm {
+          padding-top: 8px
+        }
+        .c-p-top-md {
+          padding-top: 16px
+        }
+        .c-p-top-lg {
+          padding-top: 24px
+        }
+        .c-p-top-xl {
+          padding-top: 32px
+        }
+        .c-p-top-xxl {
+          padding-top: 48px
+        }
+        .c-p-bottom-0 {
+          padding-bottom: 0
+        }
+        .c-p-bottom-xxs {
+          padding-bottom: 2px
+        }
+        .c-p-bottom-xs {
+          padding-bottom: 4px
+        }
+        .c-p-bottom-sm {
+          padding-bottom: 8px
+        }
+        .c-p-bottom-md {
+          padding-bottom: 16px
+        }
+        .c-p-bottom-lg {
+          padding-bottom: 24px
+        }
+        .c-p-bottom-xl {
+          padding-bottom: 32px
+        }
+        .c-p-bottom-xxl {
+          padding-bottom: 48px
+        }
+        .c-p-horizontal-0 {
+          padding-left: 0;
+          padding-right: 0
+        }
+        .c-p-horizontal-xxs {
+          padding-left: 2px;
+          padding-right: 2px
+        }
+        .c-p-horizontal-xs {
+          padding-left: 4px;
+          padding-right: 4px
+        }
+        .c-p-horizontal-sm {
+          padding-left: 8px;
+          padding-right: 8px
+        }
+        .c-p-horizontal-md {
+          padding-left: 16px;
+          padding-right: 16px
+        }
+        .c-p-horizontal-lg {
+          padding-left: 24px;
+          padding-right: 24px
+        }
+        .c-p-horizontal-xl {
+          padding-left: 32px;
+          padding-right: 32px
+        }
+        .c-p-horizontal-xxl {
+          padding-left: 48px;
+          padding-right: 48px
+        }
+        .c-p-vertical-0 {
+          padding-top: 0;
+          padding-bottom: 0
+        }
+        .c-p-vertical-xxs {
+          padding-top: 2px;
+          padding-bottom: 2px
+        }
+        .c-p-vertical-xs {
+          padding-top: 4px;
+          padding-bottom: 4px
+        }
+        .c-p-vertical-sm {
+          padding-top: 8px;
+          padding-bottom: 8px
+        }
+        .c-p-vertical-md {
+          padding-top: 16px;
+          padding-bottom: 16px
+        }
+        .c-p-vertical-lg {
+          padding-top: 24px;
+          padding-bottom: 24px
+        }
+        .c-p-vertical-xl {
+          padding-top: 32px;
+          padding-bottom: 32px
+        }
+        .c-p-vertical-xxl {
+          padding-top: 48px;
+          padding-bottom: 48px
+        }
+        .c-m-0 {
+          margin: 0
+        }
+        .c-m-xxs {
+          margin: 2px
+        }
+        .c-m-xs {
+          margin: 4px
+        }
+        .c-m-sm {
+          margin: 8px
+        }
+        .c-m-md {
+          margin: 16px
+        }
+        .c-m-lg {
+          margin: 24px
+        }
+        .c-m-xl {
+          margin: 32px
+        }
+        .c-m-xxl {
+          margin: 48px
+        }
+        .c-m-top-0 {
+          margin-top: 0
+        }
+        .c-m-top-xxs {
+          margin-top: 2px
+        }
+        .c-m-top-xs {
+          margin-top: 4px
+        }
+        .c-m-top-sm {
+          margin-top: 8px
+        }
+        .c-m-top-md {
+          margin-top: 16px
+        }
+        .c-m-top-lg {
+          margin-top: 24px
+        }
+        .c-m-top-xl {
+          margin-top: 32px
+        }
+        .c-m-top-xxl {
+          margin-top: 48px
+        }
+        .c-m-bottom-0 {
+          margin-bottom: 0
+        }
+        .c-m-bottom-xxs {
+          margin-bottom: 2px
+        }
+        .c-m-bottom-xs {
+          margin-bottom: 4px
+        }
+        .c-m-bottom-sm {
+          margin-bottom: 8px
+        }
+        .c-m-bottom-md {
+          margin-bottom: 16px
+        }
+        .c-m-bottom-lg {
+          margin-bottom: 24px
+        }
+        .c-m-bottom-xl {
+          margin-bottom: 32px
+        }
+        .c-m-bottom-xxl {
+          margin-bottom: 48px
+        }
+        .c-m-horizontal-0 {
+          margin-left: 0;
+          margin-right: 0
+        }
+        .c-m-horizontal-xxs {
+          margin-left: 2px;
+          margin-right: 2px
+        }
+        .c-m-horizontal-xs {
+          margin-left: 4px;
+          margin-right: 4px
+        }
+        .c-m-horizontal-sm {
+          margin-left: 8px;
+          margin-right: 8px
+        }
+        .c-m-horizontal-md {
+          margin-left: 16px;
+          margin-right: 16px
+        }
+        .c-m-horizontal-lg {
+          margin-left: 24px;
+          margin-right: 24px
+        }
+        .c-m-horizontal-xl {
+          margin-left: 32px;
+          margin-right: 32px
+        }
+        .c-m-horizontal-xxl {
+          margin-left: 48px;
+          margin-right: 48px
+        }
+        .c-m-vertical-0 {
+          margin-top: 0;
+          margin-bottom: 0
+        }
+        .c-m-vertical-xxs {
+          margin-top: 2px;
+          margin-bottom: 2px
+        }
+        .c-m-vertical-xs {
+          margin-top: 4px;
+          margin-bottom: 4px
+        }
+        .c-m-vertical-sm {
+          margin-top: 8px;
+          margin-bottom: 8px
+        }
+        .c-m-vertical-md {
+          margin-top: 16px;
+          margin-bottom: 16px
+        }
+        .c-m-vertical-lg {
+          margin-top: 24px;
+          margin-bottom: 24px
+        }
+        .c-m-vertical-xl {
+          margin-top: 32px;
+          margin-bottom: 32px
+        }
+        .c-m-vertical-xxl {
+          margin-top: 48px;
+          margin-bottom: 48px
+        }
+      }
+    }
+  }
+
+  @include it('Given false do not generate spacer classes') {
+    @include assert {
+      @include output {
+        $enable-spacer-classes: false;
+        @if $enable-spacer-classes == true {
+          @include spacer-export();
+        }
+      }
+      @include expect {
+      }
+    }
+  }
+
+}
+
+@include report;
