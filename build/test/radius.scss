@@ -1,0 +1,61 @@
+// stylelint-disable
+@import '../../node_modules/sass-true/sass/true';
+@import '../../src/scss/support/support';
+@import '../../src/scss/helpers/helpers';
+
+
+
+$radius-prefix: 'radius';
+
+@include describe('Test output for toggling shadow classes') {
+
+  @include it('Given true generate shadow classes') {
+    @include assert {
+      @include output {
+        $enable-radius-classes: true;
+        @if $enable-radius-classes == true {
+          @include radius-export();
+        }
+      }
+      @include expect {
+        .radius-0 {
+          border-radius: none
+        }
+        .radius-square {
+          border-radius: 0
+        }
+        .radius-sm {
+          border-radius: 2px
+        }
+        .radius-md {
+          border-radius: 4px
+        }
+        .radius-lg {
+          border-radius: 8px
+        }
+        .radius-round {
+          border-radius: 200px
+        }
+        .radius-pill {
+          border-radius: 100%
+        }
+      }
+    }
+  }
+
+  @include it('Given false do not generate shadow classes') {
+    @include assert {
+      @include output {
+        $enable-radius-classes: false;
+        @if $enable-radius-classes == true {
+          @include radius-export();
+        }
+      }
+      @include expect {
+      }
+    }
+  }
+
+}
+
+@include report;
