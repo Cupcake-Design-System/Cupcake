@@ -2,15 +2,11 @@
 //
 // Imports all cupcake files in their intended order for easy mass-inclusion.
 // Should you need specific files, you can easily use separate `@import`s.
-@import 'support';
-@import 'reset';
+@import 'support/support';
+@import 'support/reset';
 
 // Core
-@import 'avatars';
-@import 'alert';
-@import 'checkboxes';
-@import 'typography';
-@import 'toast';
+@import 'core/core';
 // Core
 
 // Helpers

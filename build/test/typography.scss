@@ -1,6 +1,7 @@
 // stylelint-disable
 @import '../../node_modules/sass-true/sass/true';
 @import '../../src/scss/support/support';
+@import '../../src/scss/core/mixins/mixins';
 
 $values: (
   xs : 22px,

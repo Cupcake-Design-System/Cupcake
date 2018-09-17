@@ -33,7 +33,7 @@ export default {
   },
 
   styles: {
-    source: 'src',
+    source: 'src/scss',
     build: 'dist',
     docs: 'src/docs'
   },
