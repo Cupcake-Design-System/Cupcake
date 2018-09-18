@@ -5,14 +5,14 @@ imports:
   - ./_aliases.yml
 
 props:
-  - name: font-weight-bold
+  - name: bold
     value: "{!font-weight-bold}"
 
-  - name: font-weight-semibold
+  - name: semibold
     value: "{!font-weight-semibold}"
 
-  - name: font-weight-normal
+  - name: normal
     value: "{!font-weight-normal}"
 
-  - name: font-weight-light
+  - name: light
     value: "{!font-weight-light}"

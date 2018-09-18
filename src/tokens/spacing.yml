@@ -6,18 +6,18 @@ imports:
 
 props:
 
-  - name: space-xs
+  - name: xs
     value: "{!spacing-xs}"
 
-  - name: space-sm
+  - name: sm
     value: "{!spacing-sm}"
 
-  - name: space-md
+  - name: md
     value: "{!spacing-md}"
 
-  - name: space-lg
+  - name: lg
     value: "{!spacing-lg}"
 
-  - name: space-xl
+  - name: xl
     value: "{!spacing-xl}"
 

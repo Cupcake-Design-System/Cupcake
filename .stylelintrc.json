@@ -59,6 +59,7 @@
           ]
       }],
       "max-empty-lines": 2,
+      "value-list-max-empty-lines": 2,
       "unit-whitelist": ["em", "rem", "s", "ms", "%", "vh", "vw", "px", "deg"],
       "scale-unlimited/declaration-strict-value": [["/color/", "/padding/", "/margin/", "box-shadow", "border-radius"], {
         "ignoreKeywords": ["currentColor", "transparent", "inherit", "auto"]

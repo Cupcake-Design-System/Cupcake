@@ -6,6 +6,6 @@ imports:
   - ./font-stack.yml
   - ./font-weights.yml
   - ./radius.yml
-  - ./shadows.yml
+  - ./shadow.yml
   - ./spacing.yml
   - ./theme.yml

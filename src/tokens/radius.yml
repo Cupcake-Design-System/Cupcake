@@ -6,24 +6,24 @@ imports:
 
 props:
 
-  - name: radius-0
+  - name: 0
     value: "{!radius-0}"
 
-  - name: radius-square
+  - name: square
     value: "{!radius-square}"
 
-  - name: radius-sm
+  - name: sm
     value: "{!radius-sm}"
 
-  - name: radius-md
+  - name: md
     value: "{!radius-md}"
 
-  - name: radius-lg
+  - name: lg
     value: "{!radius-lg}"
 
-  - name: radius-round
+  - name: round
     value: "{!radius-round}"
 
-  - name: radius-pill
+  - name: pill
     value: "{!radius-pill}"
 

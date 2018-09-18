@@ -6,20 +6,20 @@ imports:
 
 props:
 
-  - name: font-header-xs
+  - name: xs
     value: "{!font-header-xs}"
 
-  - name: font-header-sm
+  - name: sm
     value: "{!font-header-sm}"
 
-  - name: font-header-md
+  - name: md
     value: "{!font-header-md}"
 
-  - name: font-header-lg
+  - name: lg
     value: "{!font-header-lg}"
 
-  - name: font-header-xl
+  - name: xl
     value: "{!font-header-xl}"
 
-  - name: font-header-xxl
+  - name: xxl
     value: "{!font-header-xxl}"

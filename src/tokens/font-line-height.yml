@@ -6,12 +6,12 @@ imports:
 
 props:
 
-  - name: font-line-height-normal
+  - name: normal
     value: "{!line-height-normal}"
 
-  - name: font-line-height-default
+  - name: default
     value: "{!line-height-default}"
 
-  - name: font-line-height-condensed
+  - name: condensed
     value: "{!line-height-condensed}"
 

@@ -6,20 +6,20 @@ imports:
 
 props:
 
-  - name: font-body-xs
+  - name: xs
     value: '{!font-body-xs}'
 
-  - name: font-body-sm
+  - name: sm
     value: '{!font-body-sm}'
 
-  - name: font-body-md
+  - name: md
     value: '{!font-body-md}'
 
-  - name: font-body-lg
+  - name: lg
     value: '{!font-body-lg}'
 
-  - name: font-body-xl
+  - name: xl
     value: '{!font-body-xl}'
 
-  - name: font-body-xxl
+  - name: xxl
     value: '{!font-body-xxl}'

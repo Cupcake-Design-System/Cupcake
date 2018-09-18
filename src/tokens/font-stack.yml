@@ -6,8 +6,8 @@ imports:
 
 props:
 
-  - name: font-stack-sans
+  - name: sans
     value: '{!font-stack-sans}'
 
-  - name: font-stack-mono
+  - name: mono
     value: '{!font-stack-mono}'

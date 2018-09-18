@@ -43,15 +43,16 @@ theo.registerFormat("deep", result => {
 theo.registerFormat('map.variables.scss', `
 $\{{stem meta.file}}: (
   {{#each props as |prop|}}
-    {{kebabcase prop.name}}: $\{{kebabcase prop.name}},
+    {{kebabcase prop.name}}: $\{{kebabcase prop.type}}-{{kebabcase prop.name}},
   {{/each}}
   );`);
 
+  theo.registerFormat('default', `
+  {{#each props as |prop|}}
+  $\{{kebabcase prop.type}}-{{kebabcase prop.name}}: {{#eq prop.type "string"}}"{{/eq}}{{{prop.value}}}{{#eq prop.type "string"}}"{{/eq}} !default;
+{{/each}}`);
+  
 
-// Formats with hex values
-const indexFormats = [
-  'default.scss',
-];
 
 // Formats with px values
 const unitsFormats = [
@@ -59,24 +60,21 @@ const unitsFormats = [
 ];
 
 gulp.task('tokens:base', (done) => {
-  indexFormats.map((format) => {
     gulp.src(config.tokens.input + '/index.yml')
           .pipe(gulpTheo({
               transform: { includeMeta: true },
-              format: { type: format }
+              format: { type: 'default' }
           }))
           .pipe(rename(function(path) {
               path.basename = 'tokens';
               path.extname = ".scss"
           }))
           .pipe(gulp.dest('src/scss/'))
-  })
   done();
 });
 
 
-gulp.task('tokens:core', (done) => {
-  unitsFormats.map((format) => {
+gulp.task('tokens:map', (done) => {
       gulp.src([
         config.tokens.input + '/*.yml',
         '!./src/tokens/index.yml',
@@ -85,20 +83,43 @@ gulp.task('tokens:core', (done) => {
       ])
           .pipe(gulpTheo({
               transform: { includeMeta: true },
-              format: { type: format }
+              format: { type: 'map.variables.scss' }
           }))
           .pipe(vinylPaths(del))
           .pipe(rename(function (opt) {
             opt.basename = opt.basename.replace(/.map.variables/, '');
             return opt;
           }))
+          .pipe(concat('maps.scss'))
           .pipe(gulp.dest('src/scss/tokens'))
-  })
   done();
 });
 
+
+gulp.task('tokens:core', (done) => {
+  gulp.src([
+    config.tokens.input + '/*.yml',
+    '!./src/tokens/index.yml',
+    '!./src/tokens/_aliases.yml',
+    '!./src/tokens/colors-map.yml'
+  ])
+      .pipe(gulpTheo({
+          transform: { includeMeta: true },
+          format: { type: 'default' }
+      }))
+      .pipe(vinylPaths(del))
+      .pipe(rename(function (opt) {
+        opt.extname = ".scss";
+        opt.basename = opt.basename.replace(/.default/, '');
+        return opt;
+      }))
+      .pipe(concat('all.scss'))
+      .pipe(gulp.dest('src/scss/tokens'))
+done();
+});
+
+
 gulp.task('tokens:colors-map', (done) => {
-  indexFormats.map((format) => {
       gulp.src(config.tokens.input + '/colors-map.yml')
           .pipe(gulpTheo({
               transform: { includeMeta: true },
@@ -109,7 +130,6 @@ gulp.task('tokens:colors-map', (done) => {
               path.extname = ".scss";
           }))
           .pipe(gulp.dest('src/scss/tokens'))
-  })
   done();
 });
 
@@ -122,4 +142,11 @@ gulp.task('token:concat', (done) => {
     .pipe(concat('all.scss'))
     .pipe(gulp.dest('src/scss/tokens'))
   done();
+});
+
+
+gulp.task('clean:tokens', (done) => {
+  return del('src/scss/tokens/**').then(() => {
+    done();
+  });
 });

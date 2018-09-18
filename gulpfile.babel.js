@@ -44,7 +44,7 @@ gulp.task('default', gulp.series('dev'));
 
 gulp.task(
   'core:tokens',
-  gulp.series('tokens:base', 'tokens:colors-map', 'tokens:core', 'token:concat',(done) => {
+  gulp.series('clean:tokens', 'tokens:base', 'tokens:colors-map', 'tokens:core', 'tokens:map', (done) => {
     done();
   })
 );
