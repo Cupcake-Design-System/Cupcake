@@ -1,0 +1,25 @@
+global:
+  type: font-body
+  category: font-body
+imports:
+  - ./_aliases.yml
+
+props:
+
+  - name: font-body-xs
+    value: '{!font-body-xs}'
+
+  - name: font-body-sm
+    value: '{!font-body-sm}'
+
+  - name: font-body-md
+    value: '{!font-body-md}'
+
+  - name: font-body-lg
+    value: '{!font-body-lg}'
+
+  - name: font-body-xl
+    value: '{!font-body-xl}'
+
+  - name: font-body-xxl
+    value: '{!font-body-xxl}'

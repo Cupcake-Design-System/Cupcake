@@ -1,0 +1,111 @@
+aliases:
+
+  # Ipreo Brand Colors
+
+  primary-0: '#e8f7ff'
+  primary-1: '#ccedff'
+  primary-2: '#a3daff'
+  primary-3: '#72c3fc'
+  primary-4: '#4dadf7'
+  primary-5: '#329af0'
+  primary-7: '#1c7cd6'
+  primary-6: '#228ae6'
+  primary-8: '#1b6ec2'
+  primary-9: '#1862ab'
+
+  success-0: '#ebfbee'
+  success-1: '#d3f9d8'
+  success-2: '#b2f2bb'
+  success-3: '#8ce99a'
+  success-4: '#69db7c'
+  success-5: '#51cf66'
+  success-7: '#40c057'
+  success-6: '#37b24d'
+  success-8: '#2f9e44'
+  success-9: '#2b8a3e'
+
+  warning-0: '#fff4e6'
+  warning-1: '#ffe8cc'
+  warning-2: '#ffd8a8'
+  warning-3: '#ffc078'
+  warning-4: '#ffa94d'
+  warning-5: '#ff922b'
+  warning-7: '#fd7e14'
+  warning-6: '#f76707'
+  warning-8: '#e8590c'
+  warning-9: '#d9480f'
+
+  danger-0: '#fff5f5'
+  danger-1: '#ffe3e3'
+  danger-2: '#ffc9c9'
+  danger-3: '#ffa8a8'
+  danger-4: '#ff8787'
+  danger-5: '#ff6b6b'
+  danger-7: '#fa5252'
+  danger-6: '#f03e3e'
+  danger-8: '#e03131'
+  danger-9: '#c92a2a'
+
+  # Base theme palette
+  primary: '{!primary-8}'
+  success: '{!success-8}'
+  warning: '{!warning-8}'
+  danger: '{!danger-8}'
+
+  black: '#000000'
+  white: '#ffffff'
+
+  # Link Colors
+  color-link: '{!primary-8}'
+  color-link-hover: '{!primary-7}'
+  color-link-visited: '{!primary-9}'
+
+  shadow-xs: '0 1px 2px 0 rgba(0, 0, 0, .1)'
+  shadow-sm: '0 4px 8px 0 rgba(0, 0, 0, 0.1)'
+  shadow-md: '0 6px 12px 0 rgba(0, 0, 0, .1)'
+  shadow-lg: '0 8px 16px 0 rgba(0, 0, 0, .1)'
+  shadow-xl: '0 12px 24px 0 rgba(0, 0, 0, .1)'
+
+  # Units
+  spacing-xs: 4px
+  spacing-sm: 8px
+  spacing-md: 16px
+  spacing-lg: 24px
+  spacing-xl: 32px
+  spacing-2xl: 48px
+  spacing-base: '{!spacing-md}'
+
+  # Font Stack
+  font-stack-sans: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto
+  font-stack-mono: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
+
+  font-weight-bold: 900
+  font-weight-semibold: 600
+  font-weight-normal: 400
+  font-weight-light: 300
+
+  font-header-xs : 12px
+  font-header-sm : 14px
+  font-header-md : 16px
+  font-header-lg : 20px
+  font-header-xl : 24px
+  font-header-xxl: 36px
+
+  font-body-xs : 10px
+  font-body-sm : 11px
+  font-body-md : 12px
+  font-body-lg : 14px
+  font-body-xl : 16px
+  font-body-xxl: 18px
+
+  line-height-normal   : 'normal'
+  line-height-default  : '1.5'
+  line-height-condensed: '1.25'
+
+  radius-0     : none
+  radius-square: 0
+  radius-sm    : 2px
+  radius-md    : 4px
+  radius-lg    : 8px
+  radius-round : 200px
+  radius-pill  : 100%

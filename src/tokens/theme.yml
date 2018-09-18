@@ -1,0 +1,19 @@
+global:
+  type: color
+  category: background-color
+imports:
+  - ./_aliases.yml
+props:
+
+  # these are aliases to the main palette - we loop over these to generate components
+  - name: primary
+    value: "{!primary-8}"
+
+  - name: success
+    value: "{!success-8}"
+
+  - name: warning
+    value: "{!warning-8}"
+
+  - name: danger
+    value: "{!danger-8}"

@@ -1,0 +1,121 @@
+global:
+  type: color
+  category: background-color
+imports:
+  - ./_aliases.yml
+props:
+
+  - name: primary
+    value: "{!primary-8}"
+
+  - name: success
+    value: "{!success-8}"
+
+  - name: warning
+    value: "{!warning-8}"
+
+  - name: danger
+    value: "{!danger-8}"
+
+  - name: black
+    value: "{!black}"
+
+  - name: white
+    value: "{!white}"
+
+  # Brand Colors
+  - name: primary-0
+    value: "{!primary-0}"
+  - name: primary-1
+    value: "{!primary-1}"
+  - name: primary-2
+    value: "{!primary-2}"
+  - name: primary-3
+    value: "{!primary-3}"
+  - name: primary-4
+    value: "{!primary-4}"
+  - name: primary-5
+    value: "{!primary-5}"
+  - name: primary-7
+    value: "{!primary-7}"
+  - name: primary-6
+    value: "{!primary-6}"
+  - name: primary-8
+    value: "{!primary-8}"
+  - name: primary-9
+    value: "{!primary-9}"
+
+  - name: success-0
+    value: "{!success-0}"
+  - name: success-1
+    value: "{!success-1}"
+  - name: success-2
+    value: "{!success-2}"
+  - name: success-3
+    value: "{!success-3}"
+  - name: success-4
+    value: "{!success-4}"
+  - name: success-5
+    value: "{!success-5}"
+  - name: success-7
+    value: "{!success-7}"
+  - name: success-6
+    value: "{!success-6}"
+  - name: success-8
+    value: "{!success-8}"
+  - name: success-9
+    value: "{!success-9}"
+
+  - name: warning-0
+    value: "{!warning-0}"
+  - name: warning-1
+    value: "{!warning-1}"
+  - name: warning-2
+    value: "{!warning-2}"
+  - name: warning-3
+    value: "{!warning-3}"
+  - name: warning-4
+    value: "{!warning-4}"
+  - name: warning-5
+    value: "{!warning-5}"
+  - name: warning-7
+    value: "{!warning-7}"
+  - name: warning-6
+    value: "{!warning-6}"
+  - name: warning-8
+    value: "{!warning-8}"
+  - name: warning-9
+    value: "{!warning-9}"
+
+  - name: danger-0
+    value: "{!danger-0}"
+  - name: danger-1
+    value: "{!danger-1}"
+  - name: danger-2
+    value: "{!danger-2}"
+  - name: danger-3
+    value: "{!danger-3}"
+  - name: danger-4
+    value: "{!danger-4}"
+  - name: danger-5
+    value: "{!danger-5}"
+  - name: danger-7
+    value: "{!danger-7}"
+  - name: danger-6
+    value: "{!danger-6}"
+  - name: danger-8
+    value: "{!danger-8}"
+  - name: danger-9
+    value: "{!danger-9}"
+
+
+  # Link Colors
+
+  - name: color-link
+    value: '{!color-link}'
+    meta:
+      friendlyName: Link
+  - name: color-link-hover
+    value: '{!color-link-hover}'
+    meta:
+      friendlyName: Link:Hover

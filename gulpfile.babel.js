@@ -40,3 +40,11 @@ gulp.task(
 gulp.task('build', gulp.series('clean', 'codes', 'make:styles:min'));
 gulp.task('dev', gulp.series('clean', 'codes', gulp.parallel('server', 'watch')));
 gulp.task('default', gulp.series('dev'));
+
+
+gulp.task(
+  'core:tokens',
+  gulp.series('tokens:base', 'tokens:colors-map', 'tokens:core', 'token:concat',(done) => {
+    done();
+  })
+);

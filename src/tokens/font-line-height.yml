@@ -1,0 +1,17 @@
+global:
+  type: line-height
+  category: line-height
+imports:
+  - ./_aliases.yml
+
+props:
+
+  - name: font-line-height-normal
+    value: "{!line-height-normal}"
+
+  - name: font-line-height-default
+    value: "{!line-height-default}"
+
+  - name: font-line-height-condensed
+    value: "{!line-height-condensed}"
+

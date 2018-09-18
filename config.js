@@ -25,6 +25,12 @@ export default {
     docs: 'docs'
   },
 
+  tokens: {
+    input: 'src/tokens',
+    output: 'src/scss/tokens',
+    formats: 'dist/formats'
+  },
+
   server: {
     port: 4000,
     notify: true,

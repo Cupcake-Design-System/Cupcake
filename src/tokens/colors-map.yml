@@ -1,0 +1,61 @@
+global:
+  type: palette
+  category: color
+
+imports:
+  - ./_aliases.yml
+
+props:
+  - name: primary
+    value:
+      0: "{!primary-0}"
+      1: "{!primary-1}"
+      2: "{!primary-2}"
+      3: "{!primary-3}"
+      4: "{!primary-4}"
+      5: "{!primary-5}"
+      7: "{!primary-7}"
+      6: "{!primary-6}"
+      8: "{!primary-8}"
+      9: "{!primary-9}"
+
+  - name: success
+    value:
+      0: "{!success-0}"
+      1: "{!success-1}"
+      2: "{!success-2}"
+      3: "{!success-3}"
+      4: "{!success-4}"
+      5: "{!success-5}"
+      7: "{!success-7}"
+      6: "{!success-6}"
+      8: "{!success-8}"
+      9: "{!success-9}"
+
+  - name: warning
+    value:
+      0: "{!warning-0}"
+      1: "{!warning-1}"
+      2: "{!warning-2}"
+      3: "{!warning-3}"
+      4: "{!warning-4}"
+      5: "{!warning-5}"
+      7: "{!warning-7}"
+      6: "{!warning-6}"
+      8: "{!warning-8}"
+      9: "{!warning-9}"
+
+  - name: danger
+    value:
+      0: "{!danger-0}"
+      1: "{!danger-1}"
+      2: "{!danger-2}"
+      3: "{!danger-3}"
+      4: "{!danger-4}"
+      5: "{!danger-5}"
+      7: "{!danger-7}"
+      6: "{!danger-6}"
+      8: "{!danger-8}"
+      9: "{!danger-9}"
+
+

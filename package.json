@@ -13,6 +13,9 @@
     "deploy:test": "surge --project ./dist --domain cupcake-design-system.surge.sh",
     "deploy": "gulp build && npm run deploy:test",
     "lint": "gulp lint --fail-on-error",
+    "lint:tokens:css": "stylelint 'src/scss/tokens/*.scss'  --fix",
+    "lint:tokens": "yamllint ./src/tokens/*.yml",
+    "build:tokens": "npm run lint:tokens && gulp core:tokens && npm run lint:tokens:css",
     "test": "mocha build/test",
     "list-selectors": "list-selectors ./dist/cupcake.css -p -i classes stdout > 2.0-classes.json",
     "beautify": "gulp beautify",
@@ -40,6 +43,7 @@
     "fabricator-assemble": "^1.2.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
     "gulp-footer": "^2.0.1",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-header": "^2.0.5",
@@ -50,6 +54,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-theo": "^2.0.0-beta.1",
     "handlebars": "^4.0.12",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
@@ -65,6 +70,9 @@
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-declaration-strict-value": "^1.0.4",
-    "stylelint-scss": "^3.3.0"
+    "stylelint-scss": "^3.3.0",
+    "theo": "^8.0.0-beta.2",
+    "vinyl-paths": "^2.1.0",
+    "yaml-lint": "^1.2.4"
   }
 }

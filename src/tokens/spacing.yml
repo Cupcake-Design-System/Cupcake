@@ -1,0 +1,23 @@
+global:
+  type: spacing
+  category: spacing
+imports:
+  - ./_aliases.yml
+
+props:
+
+  - name: space-xs
+    value: "{!spacing-xs}"
+
+  - name: space-sm
+    value: "{!spacing-sm}"
+
+  - name: space-md
+    value: "{!spacing-md}"
+
+  - name: space-lg
+    value: "{!spacing-lg}"
+
+  - name: space-xl
+    value: "{!spacing-xl}"
+
