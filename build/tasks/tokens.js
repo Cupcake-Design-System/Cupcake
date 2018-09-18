@@ -54,32 +54,30 @@ $\{{stem meta.file}}: (
   
 
 
-// Formats with px values
-const unitsFormats = [
-  'map.variables.scss'
-];
-
-gulp.task('tokens:base', (done) => {
-    gulp.src(config.tokens.input + '/index.yml')
-          .pipe(gulpTheo({
-              transform: { includeMeta: true },
-              format: { type: 'default' }
-          }))
-          .pipe(rename(function(path) {
-              path.basename = 'tokens';
-              path.extname = ".scss"
-          }))
-          .pipe(gulp.dest('src/scss/'))
-  done();
-});
+// This runs the task over index.yml -making variables and adding !default
+// gulp.task('tokens:base', (done) => {
+//     gulp.src(config.tokens.input + '/index.yml')
+//           .pipe(gulpTheo({
+//               transform: { includeMeta: true },
+//               format: { type: 'default' }
+//           }))
+//           .pipe(rename(function(path) {
+//               path.basename = 'tokens';
+//               path.extname = ".scss"
+//           }))
+//           .pipe(gulp.dest('src/scss/'))
+//   done();
+// });
 
 
+// This runs the task over the files making a map based on default variables
 gulp.task('tokens:map', (done) => {
       gulp.src([
         config.tokens.input + '/*.yml',
         '!./src/tokens/index.yml',
         '!./src/tokens/_aliases.yml',
-        '!./src/tokens/colors-map.yml'
+        '!./src/tokens/colors-map.yml',
+        '!./src/tokens/colors.yml'
       ])
           .pipe(gulpTheo({
               transform: { includeMeta: true },
@@ -95,7 +93,7 @@ gulp.task('tokens:map', (done) => {
   done();
 });
 
-
+// This runs the task over the files making a single file with default variables
 gulp.task('tokens:core', (done) => {
   gulp.src([
     config.tokens.input + '/*.yml',
@@ -113,7 +111,7 @@ gulp.task('tokens:core', (done) => {
         opt.basename = opt.basename.replace(/.default/, '');
         return opt;
       }))
-      .pipe(concat('all.scss'))
+      .pipe(concat('index.scss'))
       .pipe(gulp.dest('src/scss/tokens'))
 done();
 });
@@ -129,18 +127,8 @@ gulp.task('tokens:colors-map', (done) => {
               path.basename = 'colors-map';
               path.extname = ".scss";
           }))
+          .pipe(concat('maps.scss'))
           .pipe(gulp.dest('src/scss/tokens'))
-  done();
-});
-
-
-gulp.task('token:concat', (done) => {
-  return gulp.src(['./src/scss/tokens/*.scss',
-  '!./src/scss/tokens/index.scss',
-  '!./src/scss/tokens/_aliases.scss',
-  '!./src/scss/tokens/colors.scss'])
-    .pipe(concat('all.scss'))
-    .pipe(gulp.dest('src/scss/tokens'))
   done();
 });
 
@@ -149,4 +137,10 @@ gulp.task('clean:tokens', (done) => {
   return del('src/scss/tokens/**').then(() => {
     done();
   });
+});
+
+gulp.task('tokens:map:concat', function() {
+  return gulp.src(['src/tokens/colors-map.scss','src/tokens/maps.scss'])
+    .pipe(concat('maps.scss'))
+    .pipe(gulp.dest('src/scss/tokens'))
 });
