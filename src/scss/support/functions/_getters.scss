@@ -191,14 +191,44 @@
 ///    background: #74c0fc;
 ///   }
 ///
-@function color($value: primary, $range: 7) {
-  $fetched-value: config($colors, $value, $range);
-
-  @if type-of($fetched-value) == color {
-    @return $fetched-value;
-  } @else {
-    @error 'Color `#{$hue} - #{$range}` not found.';
+@function get-colors($palette: null) {
+  // Return a list of colors available if nothing is passed in
+  @if $palette == null {
+    @return map-keys($color-palette);
   }
+  // Return the full color map if 'all' is passed in
+  @else if $palette == 'all' {
+    // Remove single maps white and black
+    $new-colors: map-remove($color-palette, black, white);
+
+    @return $new-colors;
+  }
+  // Return just the color map if a specific color is passed in
+  @else {
+    @return map-get($color-palette, $palette);
+  }
+}
+
+@function color($palette, $grade: 7, $alpha: 1) {
+
+  $colors: map-get($color-palette, $palette);
+
+  @if $colors {
+    $grd: map-get($colors, $grade);
+
+    @return rgba($grd, $alpha);
+  }
+
+  $error-message: 'Color palette "#{$palette}" not found';
+  @if not $found-index {
+    @if feature-exists(at-error) {
+      @error $error-message;
+    } @else {
+      @warn $error-message;
+    }
+  }
+
+  @return false;
 }
 
 

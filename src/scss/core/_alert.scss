@@ -1,27 +1,27 @@
 //### ALERT START ################################//
 $alert-border               : 1px solid !default;
 $alert-margin               : 0 0 space(md) 0 !default;
-$alert-padding              : 8px !default;
+$alert-padding              : space(sm) !default;
 $alert-top-padding          : space(md) !default;
 $alert-font-size            : 12px !default;
 $alert-line-height          : 16px !default;
 $alert-height               : 32px !default;
-$alert-font-family          : $base-font-family !default;
-$alert-font-weight          : normal !default;
+$alert-font-family          : font(primary) !default;
+$alert-font-weight          : font-weight(normal) !default;
 $alert-primary-bg           : rgba(color(primary), .07) !default;
 $alert-primary-color        : color(primary) !default;
 $alert-primary-icon-color   : color(primary) !default;
+$alert-radius               : radius(sm) !default;
+$alert-top-radius           : 0 !default;
+$alert-shadows              : shadow(lg) !default;
+$alert-icon-width           : 12px !default;
+$alert-close-font-size      : 24px !default;
 $alert-colors:
   (primary, $color-primary-0, $color-primary-8)
   (success, $color-success-0, $color-success-8)
   (warning, $color-warning-0, $color-warning-8)
   (danger, $color-danger-0, $color-danger-8) !default;
-$toast-palette: $theme-colors !default;
-$alert-radius               : 2px !default;
-$alert-top-radius           : 0 !default;
-$alert-shadows              : 0 1px 0 0 transparentize(#212529, 0.9) !default;
-$alert-icon-width           : 12px !default;
-$alert-close-font-size      : 24px !default;
+$toast-colors               : $theme-colors !default;
 //### ALERT END ################################//
 
 .c-alert {
@@ -34,3 +34,12 @@ $alert-close-font-size      : 24px !default;
   }
 }
 
+.c-toast-alert {
+  @include toast;
+
+  @each $name, $hex in $toast-colors {
+    &-#{$name} {
+      @include toast-style($hex);
+    }
+  }
+}

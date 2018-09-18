@@ -304,6 +304,46 @@
     }
   }
 
+  @include it('Checks modifier mixin outputs the right information for sizing') {
+    @include assert {
+      @include output {
+        .space {
+          @include modifiers($space, 'padding');
+        }
+      }
+      @include expect {
+        .space-0 { padding: 0; }
+        .space-xxs { padding: 2px; }
+        .space-xs { padding: 4px; }
+        .space-sm { padding: 8px; }
+        .space-md { padding: 16px; }
+        .space-lg { padding: 24px; }
+        .space-xl { padding: 32px; }
+        .space-xxl { padding: 48px; }
+      }
+    }
+  }
+
+  @include it('Checks modifier mixin outputs the right information for sizing with two values') {
+    @include assert {
+      @include output {
+        .space-horizontal {
+          @include modifiers($space, ('padding-left', 'padding-right'));
+        }
+      }
+      @include expect {
+        .space-horizontal-0 { padding-left   : 0; padding-right   : 0; }
+        .space-horizontal-xxs { padding-left : 2px; padding-right : 2px; }
+        .space-horizontal-xs { padding-left  : 4px; padding-right  : 4px; }
+        .space-horizontal-sm { padding-left  : 8px; padding-right  : 8px; }
+        .space-horizontal-md { padding-left  : 16px; padding-right  : 16px; }
+        .space-horizontal-lg { padding-left  : 24px; padding-right  : 24px; }
+        .space-horizontal-xl { padding-left  : 32px; padding-right  : 32px; }
+        .space-horizontal-xxl { padding-left : 48px; padding-right : 48px; }
+      }
+    }
+  }
+
 }
 
 @include report;

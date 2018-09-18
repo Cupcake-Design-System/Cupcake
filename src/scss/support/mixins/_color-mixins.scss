@@ -1,0 +1,84 @@
+$color-keys: get-colors();
+$base-color: get-colors();
+$primary: get-colors('primary');
+$full-color-map: get-colors('all');
+
+//////////////////////////////
+// Example Usage
+//////////////////////////////
+
+// @mixin color-theme {
+//   @each $color in $color-keys {
+//     $key: color($color);
+
+//     &-#{$color} {
+//       background: $key;
+//     }
+//   }
+// }
+
+// .puppy {
+//   @include color-theme();
+// }
+
+// Generating a class for each color palette
+// @each $color in $color-keys {
+//   $key: color($color);
+
+//   .key-#{$color} {
+//     background: $key;
+//   }
+// }
+
+// Generate a class for each color of a color palette
+// @each $value, $color in $primary {
+//   .primary-#{$value} {
+//     background: $color;
+//   }
+// }
+
+// Generate a class for each color of each color palette
+// @each $palette-name, $palette in $full-color-map {
+//   @each $grade, $color in $palette {
+//     .#{$palette-name}-#{$grade} {
+//       background: $color;
+//     }
+//   }
+// }
+
+
+@mixin colors($palette: all, $attribute: background-color) {
+
+  @if $palette == 'theme' {
+    $map: get-colors();
+
+    @each $color in $map {
+      $key: color($color);
+
+      &-#{$color} {
+        #{$attribute}: $key;
+      }
+    }
+  } @else if $palette == 'all' {
+    $map: get-colors('all');
+
+    @each $color-name, $color in $map {
+      @each $value, $key in $color {
+        &-#{$color-name}-#{$value} {
+          #{$attribute}: $key;
+        }
+      }
+    }
+
+    $map: get-colors();
+
+    @each $color in $map {
+      $key: color($color);
+
+      &-#{$color} {
+        #{$attribute}: $key;
+      }
+    }
+  }
+}
+

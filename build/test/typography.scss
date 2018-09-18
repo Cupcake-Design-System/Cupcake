@@ -73,4 +73,22 @@ $body-prefix   : 'body-test';
 
 }
 
+@include describe('Test output for font-weight mixin') {
+@include it('Checks modifier mixin outputs the right information for font-weights with different prefix') {
+  @include assert {
+    @include output {
+      .font-weight {
+        @include modifiers($font-weight, 'font-weight', '-_-_');
+      }
+    }
+    @include expect {
+      .font-weight-_-_bold {font-weight: 900; }
+      .font-weight-_-_semibold {font-weight: 600; }
+      .font-weight-_-_normal {font-weight: 400; }
+      .font-weight-_-_light {font-weight: 300; }
+    }
+  }
+}
+}
+
 @include report;

@@ -1,16 +1,13 @@
 @mixin color-export {
   .c-bg {
-    @include modifiers($colors, 'background-color');
-    @include modifiers($theme-colors, 'background-color');
+    @include colors();
   }
 
   .c-text {
-    @include modifiers($colors, 'color');
-    @include modifiers($theme-colors, 'color');
+    @include colors($attribute: color);
   }
 
   .c-bd {
-    @include modifiers($colors, 'border-color');
-    @include modifiers($theme-colors, 'border-color');
+    @include colors($attribute: border-color);
   }
 }

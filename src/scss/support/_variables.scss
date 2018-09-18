@@ -40,16 +40,13 @@ $line-height: (
   condensed: 1.25
 ) !default;
 
-$font-weight: () !default;
-$font-weight: map-merge(
-  (
-    bold    : 900,
-    semibold: 600,
-    normal  : 400,
-    light   : 300
-  ),
-  $font-weight
-);
+
+$font-weight:(
+  bold    : 900,
+  semibold: 600,
+  normal  : 400,
+  light   : 300
+) !default;
 
 $header-text: (
   xs : 12px,

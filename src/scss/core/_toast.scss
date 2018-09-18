@@ -1,9 +1,0 @@
-.c-toast-alert {
-  @include toast;
-
-  @each $name, $hex in $toast-palette {
-    &-#{$name} {
-      @include toast-style($hex);
-    }
-  }
-}

@@ -1,0 +1,260 @@
+// stylelint-disable
+@import '../../node_modules/sass-true/sass/true';
+@import '../../src/scss/support/support';
+
+@include describe('Test output for color classes') {
+
+  @include it('Checks mixins for the brand color palette output') {
+    @include assert {
+      @include output {
+        .thing {
+          @include colors(theme);
+        }
+      }
+      @include expect {
+        .thing-white {
+          background-color: white;
+        }
+        .thing-black {
+          background-color: black;
+        }
+        .thing-gray {
+          background-color: #495057;
+        }
+        .thing-primary {
+          background-color: #1c7cd6;
+        }
+        .thing-success {
+          background-color: #37b24d;
+        }
+        .thing-warning {
+          background-color: #f76707;
+        }
+        .thing-danger {
+          background-color: #f03e3e;
+        }
+
+      }
+    }
+  }
+
+  @include it('Checks mixins for the FULL color palette output') {
+    @include assert {
+      @include output {
+        .thing {
+          @include colors();
+        }
+      }
+      @include expect {
+        .thing-gray-0 {
+          background-color: #f8f9fa;
+        }
+        .thing-gray-1 {
+          background-color: #f1f3f5;
+        }
+        .thing-gray-2 {
+          background-color: #e9ecef;
+        }
+        .thing-gray-3 {
+          background-color: #dee2e6;
+        }
+        .thing-gray-4 {
+          background-color: #ced4da;
+        }
+        .thing-gray-5 {
+          background-color: #adb5bd;
+        }
+        .thing-gray-6 {
+          background-color: #868e96;
+        }
+        .thing-gray-7 {
+          background-color: #495057;
+        }
+        .thing-gray-8 {
+          background-color: #343a40;
+        }
+        .thing-gray-9 {
+          background-color: #212529;
+        }
+        .thing-primary-0 {
+          background-color: #e8f7ff;
+        }
+        .thing-primary-1 {
+          background-color: #ccedff;
+        }
+        .thing-primary-2 {
+          background-color: #a3daff;
+        }
+        .thing-primary-3 {
+          background-color: #72c3fc;
+        }
+        .thing-primary-4 {
+          background-color: #4dadf7;
+        }
+        .thing-primary-5 {
+          background-color: #329af0;
+        }
+        .thing-primary-6 {
+          background-color: #228ae6;
+        }
+        .thing-primary-7 {
+          background-color: #1c7cd6;
+        }
+        .thing-primary-8 {
+          background-color: #1b6ec2;
+        }
+        .thing-primary-9 {
+          background-color: #1862ab;
+        }
+        .thing-success-0 {
+          background-color: #ebfbee;
+        }
+        .thing-success-1 {
+          background-color: #d3f9d8;
+        }
+        .thing-success-2 {
+          background-color: #b2f2bb;
+        }
+        .thing-success-3 {
+          background-color: #8ce99a;
+        }
+        .thing-success-4 {
+          background-color: #69db7c;
+        }
+        .thing-success-5 {
+          background-color: #51cf66;
+        }
+        .thing-success-6 {
+          background-color: #40c057;
+        }
+        .thing-success-7 {
+          background-color: #37b24d;
+        }
+        .thing-success-8 {
+          background-color: #2f9e44;
+        }
+        .thing-success-9 {
+          background-color: #2b8a3e;
+        }
+        .thing-warning-0 {
+          background-color: #fff4e6;
+        }
+        .thing-warning-1 {
+          background-color: #ffe8cc;
+        }
+        .thing-warning-2 {
+          background-color: #ffd8a8;
+        }
+        .thing-warning-3 {
+          background-color: #ffc078;
+        }
+        .thing-warning-4 {
+          background-color: #ffa94d;
+        }
+        .thing-warning-5 {
+          background-color: #ff922b;
+        }
+        .thing-warning-6 {
+          background-color: #fd7e14;
+        }
+        .thing-warning-7 {
+          background-color: #f76707;
+        }
+        .thing-warning-8 {
+          background-color: #e8590c;
+        }
+        .thing-warning-9 {
+          background-color: #d9480f;
+        }
+        .thing-danger-0 {
+          background-color: #fff5f5;
+        }
+        .thing-danger-1 {
+          background-color: #ffe3e3;
+        }
+        .thing-danger-2 {
+          background-color: #ffc9c9;
+        }
+        .thing-danger-3 {
+          background-color: #ffa8a8;
+        }
+        .thing-danger-4 {
+          background-color: #ff8787;
+        }
+        .thing-danger-5 {
+          background-color: #ff6b6b;
+        }
+        .thing-danger-6 {
+          background-color: #fa5252;
+        }
+        .thing-danger-7 {
+          background-color: #f03e3e;
+        }
+        .thing-danger-8 {
+          background-color: #e03131;
+        }
+        .thing-danger-9 {
+          background-color: #c92a2a;
+        }
+        .thing-white {
+          background-color: white;
+        }
+        .thing-black {
+          background-color: black;
+        }
+        .thing-gray {
+          background-color: #495057;
+        }
+        .thing-primary {
+          background-color: #1c7cd6;
+        }
+        .thing-success {
+          background-color: #37b24d;
+        }
+        .thing-warning {
+          background-color: #f76707;
+        }
+        .thing-danger {
+          background-color: #f03e3e;
+        }
+
+      }
+    }
+  }
+
+  @include it('Checks mixins for border attribute change and theme color palette output') {
+    @include assert {
+      @include output {
+        .thing {
+          @include colors(theme, $attribute:border-color);
+        }
+      }
+      @include expect {
+        .thing-white {
+          border-color: white;
+        }
+        .thing-black {
+          border-color: black;
+        }
+        .thing-gray {
+          border-color: #495057;
+        }
+        .thing-primary {
+          border-color: #1c7cd6;
+        }
+        .thing-success {
+          border-color: #37b24d;
+        }
+        .thing-warning {
+          border-color: #f76707;
+        }
+        .thing-danger {
+          border-color: #f03e3e;
+        }
+
+      }
+    }
+  }
+}
+
+@include report;

@@ -53,6 +53,37 @@ $shadow-prefix: 'shadow';
     }
   }
 
+  @include it('Checks modifier mixins output the right information for shadows') {
+    @include assert {
+      @include output {
+        .depth {
+          @include modifiers($shadows, 'box-shadow');
+        }
+      }
+      @include expect {
+        .depth-xl {
+          box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.1); }
+
+        .depth-lg {
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1); }
+
+        .depth-md {
+          box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1); }
+
+        .depth-sm {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); }
+
+        .depth-xs {
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
+
+        .depth-none {
+          box-shadow: 0 0 0 0 transparent; }
+
+      }
+    }
+  }
+
+
 }
 
 @include report;
