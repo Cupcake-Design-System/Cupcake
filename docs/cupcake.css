@@ -851,61 +851,73 @@ fieldset[disabled] .c-radio input + i::before {
 }
 .c-text-xs {
   font-size: 10px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
   line-height: 1.5
 }
 .c-text-sm {
   font-size: 11px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
   line-height: 1.5
 }
 .c-text-md {
   font-size: 12px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
   line-height: 1.5
 }
 .c-text-lg {
   font-size: 14px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
   line-height: 1.5
 }
 .c-text-xl {
   font-size: 16px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
   line-height: 1.5
 }
 .c-text-xxl {
   font-size: 18px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
   line-height: 1.5
 }
 .c-header-xs {
   font-size: 12px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 600;
   line-height: 1.5
 }
 .c-header-sm {
   font-size: 14px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 600;
   line-height: 1.5
 }
 .c-header-md {
   font-size: 16px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 600;
   line-height: 1.5
 }
 .c-header-lg {
   font-size: 20px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 600;
   line-height: 1.5
 }
 .c-header-xl {
   font-size: 24px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 600;
   line-height: 1.5
 }
 .c-header-xxl {
   font-size: 36px;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 600;
   line-height: 1.5
 }
@@ -1088,21 +1100,6 @@ fieldset[disabled] .c-radio input + i::before {
 .c-toast-alert-white::before {
   background: #fff;
   border: #ccc
-}
-.c-depth-xs {
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1)
-}
-.c-depth-sm {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,.1)
-}
-.c-depth-md {
-  box-shadow: 0 6px 12px 0 rgba(0,0,0,.1)
-}
-.c-depth-lg {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,.1)
-}
-.c-depth-xl {
-  box-shadow: 0 12px 24px 0 rgba(0,0,0,.1)
 }
 .c-bg-danger-0 {
   background-color: #fff5f5
@@ -1845,6 +1842,21 @@ fieldset[disabled] .c-radio input + i::before {
 .c-m-vertical-xl {
   margin-top: 32px;
   margin-bottom: 32px
+}
+.c-depth-xs {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1)
+}
+.c-depth-sm {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.1)
+}
+.c-depth-md {
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,.1)
+}
+.c-depth-lg {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.1)
+}
+.c-depth-xl {
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,.1)
 }
 .c-radius-0 {
   border-radius: none

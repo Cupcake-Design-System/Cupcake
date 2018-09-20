@@ -1,5 +1,12 @@
+////
+/// @group Alerts
+////
+
+/// $toast-palette
 $toast-palette: $theme-colors !default;
-$toast-prefix               : 'c-toast-alert' !default;
+
+/// $toast-prefix
+$toast-prefix: 'c-toast-alert' !default;
 
 
 .#{$toast-prefix} {

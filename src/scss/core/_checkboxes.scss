@@ -1,14 +1,38 @@
+////
+/// @group Checkbox
+////
+
+/// $checkbox-prefix
 $checkbox-prefix          : 'c-checkbox' !default;
+
+/// $radio-prefix
 $radio-prefix             : 'c-radio' !default;
+
+/// $checkbox-icon-bd
 $checkbox-icon-bd         : 1px solid color(gray, 3) !default;
+
+/// $checkbox-icon-radius
 $checkbox-icon-radius     : radius(sm) !default;
+
+/// $checkbox-transition
 $checkbox-transition      : all 0.2s !default;
+
+/// $checkbox-disabled-bg
 $checkbox-disabled-bg     : color(gray, 3) !default;
+
+/// $checkbox-disabled-color
 $checkbox-disabled-color  : color(gray, 5) !default;
+
+/// $checkbox-disabled-opacity
 $checkbox-disabled-opacity: 0.5 !default;
+
+/// $checkbox-palette
 $checkbox-palette         : $theme-colors !default;
+
+/// $checkbox-default-size
 $checkbox-default-size    : 24px !default;
 
+/// $checkbox-sizes
 $checkbox-sizes: (
   sm: theme-size(sm),
   lg: theme-size(lg),

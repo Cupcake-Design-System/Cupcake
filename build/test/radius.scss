@@ -1,7 +1,7 @@
 // stylelint-disable
 @import '../../node_modules/sass-true/sass/true';
 @import '../../src/scss/support/support';
-@import '../../src/scss/helpers/helpers';
+@import '../../src/scss/core/helpers';
 
 
 
@@ -14,7 +14,9 @@ $radius-prefix: 'radius';
       @include output {
         $enable-radius-classes: true;
         @if $enable-radius-classes == true {
-          @include radius-export();
+          .#{$radius-prefix} {
+            @include modifiers($radius, 'border-radius');
+          }
         }
       }
       @include expect {

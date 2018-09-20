@@ -1,7 +1,7 @@
 // stylelint-disable
 @import '../../node_modules/sass-true/sass/true';
 @import '../../src/scss/support/support';
-@import '../../src/scss/helpers/helpers';
+@import '../../src/scss/core/helpers';
 
 
 @include describe('Test output for toggling spacer classes') {
@@ -11,7 +11,45 @@
       @include output {
         $enable-spacer-classes: true;
         @if $enable-spacer-classes == true {
-          @include spacer-export();
+          .#{$padding-prefix} {
+            @include modifiers($space, 'padding');
+
+            &-top {
+              @include modifiers($space, ('padding-top'));
+            }
+
+            &-bottom {
+              @include modifiers($space, ('padding-bottom'));
+            }
+
+            &-horizontal {
+              @include modifiers($space, ('padding-left', 'padding-right'));
+            }
+
+            &-vertical {
+              @include modifiers($space, ('padding-top', 'padding-bottom'));
+            }
+          }
+
+          .#{$margin-prefix} {
+            @include modifiers($space, 'margin');
+
+            &-top {
+              @include modifiers($space, ('margin-top'));
+            }
+
+            &-bottom {
+              @include modifiers($space, ('margin-bottom'));
+            }
+
+            &-horizontal {
+              @include modifiers($space, ('margin-left', 'margin-right'));
+            }
+
+            &-vertical {
+              @include modifiers($space, ('margin-top', 'margin-bottom'));
+            }
+          }
         }
       }
       @include expect {
