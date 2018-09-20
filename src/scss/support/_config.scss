@@ -1,0 +1,20 @@
+////
+/// @group Global Variables
+////
+
+/// Global
+$enable-reset         : true !default;
+$enable-shadow-classes: true !default;
+$enable-color-classes : true !default;
+$enable-spacer-classes: true !default;
+$enable-radius-classes: true !default;
+$white-label          : false !default;
+
+
+// this needs to go upstream at some point
+$theme-sizes: (
+  sm: 16px,
+  lg: 32px,
+  xl: 40px,
+) !default;
+

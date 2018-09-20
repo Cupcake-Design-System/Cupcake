@@ -1,16 +1,14 @@
-//### AVATAR START ################################//
 $avatar-prefix: 'c-avatar' !default;
 $avatar-default-size: 32px !default;
 $avatar-palette: $theme-colors !default;
+
 $avatar-sizes: (
   sm: $avatar-default-size - 8,
   lg: $avatar-default-size + 8,
   xl: $avatar-default-size + 24,
 ) !default;
-//### AVATAR END ################################//
 
-/*  Avatar Base
-* ====================================== */
+
 .#{$avatar-prefix} {
   @include avatar-base();
 
@@ -35,10 +33,8 @@ $avatar-sizes: (
     min-width: .5em;
     background-clip: padding-box;
     border-radius: radius(round);
-    /* stylelint-disable */
-    box-shadow: 0 0 0 1px $white;
-    /* stylelint-enable */
-    color: $white;
+    box-shadow: 0 0 0 1px color(white);
+    color: color(white);
     z-index: 1;
   }
 
@@ -52,7 +48,7 @@ $avatar-sizes: (
     z-index: 1;
     content: attr(data-badge);
     /* stylelint-disable */
-    box-shadow: 0 0 0 1px $white;
+    box-shadow: 0 0 0 1px color(white);
     /* stylelint-enable */
     font-size: font-size(xs);
     height: space(md);

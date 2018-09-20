@@ -1,6 +1,8 @@
+$shadow-prefix        : 'c-depth' !default;
+
 @mixin shadow-export {
   .#{$shadow-prefix} {
-    @include modifiers($shadows, 'box-shadow');
+    @include modifiers($shadow, 'box-shadow');
   }
 }
 

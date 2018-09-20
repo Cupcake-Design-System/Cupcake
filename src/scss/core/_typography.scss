@@ -1,14 +1,17 @@
+$text-prefix     : 'c-text' !default;
+$header-prefix   : 'c-header' !default;
+
 .#{$text-prefix} {
   @include modifiers($font-weight, 'font-weight');
 
-  @each $name, $value in $body-text {
+  @each $name, $value in $font-body {
     &-#{$name} {
       @include body-text($value);
     }
   }
 }
 
-@each $name, $value in $header-text {
+@each $name, $value in $font-headers {
   .#{$header-prefix}-#{$name} {
     @include header-text($value);
   }

@@ -41,7 +41,7 @@
       border-top: 0;
       border-left: 0;
       content: ' ';
-      color: $white;
+      color: $color-white;
     }
 
     &[type="radio"]:checked + i::after {
@@ -51,10 +51,10 @@
       top: round($size / 4);
       width: round($size / 2);
       height: round($size / 2);
-      background: $white;
+      background: $color-white;
       border-radius: radius(round);
       content: ' ';
-      color: $white;
+      color: $color-white;
     }
 
     &[disabled],

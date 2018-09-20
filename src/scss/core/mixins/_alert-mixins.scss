@@ -37,9 +37,7 @@
     order: 2;
     opacity: 0.6;
     padding-left: $alert-padding;
-    /* stylelint-disable */
     margin-left: auto;
-    /* stylelint-enable */
     margin-right: -(space(xs));
 
     &:hover {

@@ -4,6 +4,7 @@
   /* version: 2.0.0 */
   /* flavor: Default */
 
+@charset "UTF-8";
 *,
 ::after,
 ::before {
@@ -273,28 +274,40 @@ th {
   z-index: 0
 }
 .c-avatar-primary {
-  background-color: #1c7cd6
+  background-color: #1b6ec2
 }
 .c-avatar[data-status=primary]::after {
-  background-color: #1c7cd6
+  background-color: #1b6ec2
 }
 .c-avatar-success {
-  background-color: #37b24d
+  background-color: #2f9e44
 }
 .c-avatar[data-status=success]::after {
-  background-color: #37b24d
+  background-color: #2f9e44
 }
 .c-avatar-warning {
-  background-color: #f76707
+  background-color: #e8590c
 }
 .c-avatar[data-status=warning]::after {
-  background-color: #f76707
+  background-color: #e8590c
 }
 .c-avatar-danger {
-  background-color: #f03e3e
+  background-color: #e03131
 }
 .c-avatar[data-status=danger]::after {
-  background-color: #f03e3e
+  background-color: #e03131
+}
+.c-avatar-black {
+  background-color: #000
+}
+.c-avatar[data-status=black]::after {
+  background-color: #000
+}
+.c-avatar-white {
+  background-color: #fff
+}
+.c-avatar[data-status=white]::after {
+  background-color: #fff
 }
 .c-avatar-sm {
   font-size: 12px;
@@ -413,107 +426,107 @@ th {
 }
 .c-alert-primary {
   background-color: #e8f7ff;
-  border-color: #1b6ec2;
-  color: #1b6ec2
+  border-color: #1c7cd6;
+  color: #1c7cd6
 }
 .c-alert-primary .c-alert-close::after,
 .c-alert-primary .c-alert-close::before {
   position: absolute;
   display: block;
-  background-color: #1b6ec2
+  background-color: #1c7cd6
 }
 .c-alert-primary .c-alert-close:hover::after,
 .c-alert-primary .c-alert-close:hover::before {
-  background-color: #155595
+  background-color: #1662a9
 }
 .c-alert-primary .c-a,
 .c-alert-primary .c-alert-link {
-  color: #1b6ec2
+  color: #1c7cd6
 }
 .c-alert-primary .c-a:hover,
 .c-alert-primary .c-alert-link:hover {
-  color: #2e87e2
+  color: #3f95e6
 }
 .c-alert-primary .c-alert-icon {
-  color: #1b6ec2
+  color: #1c7cd6
 }
 .c-alert-success {
   background-color: #ebfbee;
-  border-color: #2f9e44;
-  color: #2f9e44
+  border-color: #40c057;
+  color: #40c057
 }
 .c-alert-success .c-alert-close::after,
 .c-alert-success .c-alert-close::before {
   position: absolute;
   display: block;
-  background-color: #2f9e44
+  background-color: #40c057
 }
 .c-alert-success .c-alert-close:hover::after,
 .c-alert-success .c-alert-close:hover::before {
-  background-color: #237733
+  background-color: #339a45
 }
 .c-alert-success .c-a,
 .c-alert-success .c-alert-link {
-  color: #2f9e44
+  color: #40c057
 }
 .c-alert-success .c-a:hover,
 .c-alert-success .c-alert-link:hover {
-  color: #3bc555
+  color: #66cd79
 }
 .c-alert-success .c-alert-icon {
-  color: #2f9e44
+  color: #40c057
 }
 .c-alert-warning {
   background-color: #fff4e6;
-  border-color: #e8590c;
-  color: #e8590c
+  border-color: #fd7e14;
+  color: #fd7e14
 }
 .c-alert-warning .c-alert-close::after,
 .c-alert-warning .c-alert-close::before {
   position: absolute;
   display: block;
-  background-color: #e8590c
+  background-color: #fd7e14
 }
 .c-alert-warning .c-alert-close:hover::after,
 .c-alert-warning .c-alert-close:hover::before {
-  background-color: #b84609
+  background-color: #dc6502
 }
 .c-alert-warning .c-a,
 .c-alert-warning .c-alert-link {
-  color: #e8590c
+  color: #fd7e14
 }
 .c-alert-warning .c-a:hover,
 .c-alert-warning .c-alert-link:hover {
-  color: #f47633
+  color: #fd9a47
 }
 .c-alert-warning .c-alert-icon {
-  color: #e8590c
+  color: #fd7e14
 }
 .c-alert-danger {
   background-color: #fff5f5;
-  border-color: #e03131;
-  color: #e03131
+  border-color: #fa5252;
+  color: #fa5252
 }
 .c-alert-danger .c-alert-close::after,
 .c-alert-danger .c-alert-close::before {
   position: absolute;
   display: block;
-  background-color: #e03131
+  background-color: #fa5252
 }
 .c-alert-danger .c-alert-close:hover::after,
 .c-alert-danger .c-alert-close:hover::before {
-  background-color: #c11d1d
+  background-color: #f92020
 }
 .c-alert-danger .c-a,
 .c-alert-danger .c-alert-link {
-  color: #e03131
+  color: #fa5252
 }
 .c-alert-danger .c-a:hover,
 .c-alert-danger .c-alert-link:hover {
-  color: #e75d5d
+  color: #fb8484
 }
 .c-alert-danger .c-alert-icon {
-  color: #e03131
+  color: #fa5252
 }
 .c-checkbox,
 .c-radio {
@@ -720,35 +733,51 @@ fieldset[disabled] .c-radio input + i::before {
 }
 .c-checkbox-primary input:checked + i::before,
 .c-radio-primary input:checked + i::before {
-  background-color: #1c7cd6
+  background-color: #1b6ec2
 }
 .c-checkbox i.c-bg-primary,
 .c-radio i.c-bg-primary {
-  background-color: #1c7cd6
+  background-color: #1b6ec2
 }
 .c-checkbox-success input:checked + i::before,
 .c-radio-success input:checked + i::before {
-  background-color: #37b24d
+  background-color: #2f9e44
 }
 .c-checkbox i.c-bg-success,
 .c-radio i.c-bg-success {
-  background-color: #37b24d
+  background-color: #2f9e44
 }
 .c-checkbox-warning input:checked + i::before,
 .c-radio-warning input:checked + i::before {
-  background-color: #f76707
+  background-color: #e8590c
 }
 .c-checkbox i.c-bg-warning,
 .c-radio i.c-bg-warning {
-  background-color: #f76707
+  background-color: #e8590c
 }
 .c-checkbox-danger input:checked + i::before,
 .c-radio-danger input:checked + i::before {
-  background-color: #f03e3e
+  background-color: #e03131
 }
 .c-checkbox i.c-bg-danger,
 .c-radio i.c-bg-danger {
-  background-color: #f03e3e
+  background-color: #e03131
+}
+.c-checkbox-black input:checked + i::before,
+.c-radio-black input:checked + i::before {
+  background-color: #000
+}
+.c-checkbox i.c-bg-black,
+.c-radio i.c-bg-black {
+  background-color: #000
+}
+.c-checkbox-white input:checked + i::before,
+.c-radio-white input:checked + i::before {
+  background-color: #fff
+}
+.c-checkbox i.c-bg-white,
+.c-radio i.c-bg-white {
+  background-color: #fff
 }
 .c-control {
   display: inline-block;
@@ -822,73 +851,61 @@ fieldset[disabled] .c-radio input + i::before {
 }
 .c-text-xs {
   font-size: 10px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
   line-height: 1.5
 }
 .c-text-sm {
   font-size: 11px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
   line-height: 1.5
 }
 .c-text-md {
   font-size: 12px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
   line-height: 1.5
 }
 .c-text-lg {
   font-size: 14px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
   line-height: 1.5
 }
 .c-text-xl {
   font-size: 16px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
   line-height: 1.5
 }
 .c-text-xxl {
   font-size: 18px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 400;
   line-height: 1.5
 }
 .c-header-xs {
   font-size: 12px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 600;
   line-height: 1.5
 }
 .c-header-sm {
   font-size: 14px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 600;
   line-height: 1.5
 }
 .c-header-md {
   font-size: 16px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 600;
   line-height: 1.5
 }
 .c-header-lg {
   font-size: 20px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 600;
   line-height: 1.5
 }
 .c-header-xl {
   font-size: 24px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 600;
   line-height: 1.5
 }
 .c-header-xxl {
   font-size: 36px;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
   font-weight: 600;
   line-height: 1.5
 }
@@ -986,11 +1003,11 @@ fieldset[disabled] .c-radio input + i::before {
   justify-content: center;
   padding-right: 16px;
   font-size: 14px;
-  color: #1c7cd6
+  color: #1b6ec2
 }
 .c-toast-alert-primary::before {
-  background: #1c7cd6;
-  border: #10487c
+  background: #1b6ec2;
+  border: #0f3b68
 }
 .c-toast-alert-success i:not(.fa-times),
 .c-toast-alert-success-icon {
@@ -1002,11 +1019,11 @@ fieldset[disabled] .c-radio input + i::before {
   justify-content: center;
   padding-right: 16px;
   font-size: 14px;
-  color: #37b24d
+  color: #2f9e44
 }
 .c-toast-alert-success::before {
-  background: #37b24d;
-  border: #1f642b
+  background: #2f9e44;
+  border: #184f22
 }
 .c-toast-alert-warning i:not(.fa-times),
 .c-toast-alert-warning-icon {
@@ -1018,11 +1035,11 @@ fieldset[disabled] .c-radio input + i::before {
   justify-content: center;
   padding-right: 16px;
   font-size: 14px;
-  color: #f76707
+  color: #e8590c
 }
 .c-toast-alert-warning::before {
-  background: #f76707;
-  border: #943e04
+  background: #e8590c;
+  border: #873407
 }
 .c-toast-alert-danger i:not(.fa-times),
 .c-toast-alert-danger-icon {
@@ -1034,29 +1051,88 @@ fieldset[disabled] .c-radio input + i::before {
   justify-content: center;
   padding-right: 16px;
   font-size: 14px;
-  color: #f03e3e
+  color: #e03131
 }
 .c-toast-alert-danger::before {
-  background: #f03e3e;
-  border: #ba0e0e
+  background: #e03131;
+  border: #951616
 }
-.c-depth-xl {
-  box-shadow: 0 12px 24px 0 rgba(0,0,0,.1)
+.c-toast-alert-black i:not(.fa-times),
+.c-toast-alert-black-icon {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #000
 }
-.c-depth-lg {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,.1)
+.c-toast-alert-black::before {
+  background: #000;
+  border: #000
 }
-.c-depth-md {
-  box-shadow: 0 6px 12px 0 rgba(0,0,0,.1)
+.c-toast-alert-white i:not(.fa-times),
+.c-toast-alert-white-icon {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #fff
 }
-.c-depth-sm {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,.1)
+.c-toast-alert-white::before {
+  background: #fff;
+  border: #ccc
 }
 .c-depth-xs {
   box-shadow: 0 1px 2px 0 rgba(0,0,0,.1)
 }
-.c-depth-none {
-  box-shadow: 0 0 0 0 transparent
+.c-depth-sm {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.1)
+}
+.c-depth-md {
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,.1)
+}
+.c-depth-lg {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.1)
+}
+.c-depth-xl {
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,.1)
+}
+.c-bg-danger-0 {
+  background-color: #fff5f5
+}
+.c-bg-danger-1 {
+  background-color: #ffe3e3
+}
+.c-bg-danger-2 {
+  background-color: #ffc9c9
+}
+.c-bg-danger-3 {
+  background-color: #ffa8a8
+}
+.c-bg-danger-4 {
+  background-color: #ff8787
+}
+.c-bg-danger-5 {
+  background-color: #ff6b6b
+}
+.c-bg-danger-6 {
+  background-color: #f03e3e
+}
+.c-bg-danger-7 {
+  background-color: #fa5252
+}
+.c-bg-danger-8 {
+  background-color: #e03131
+}
+.c-bg-danger-9 {
+  background-color: #c92a2a
 }
 .c-bg-gray-0 {
   background-color: #f8f9fa
@@ -1137,10 +1213,10 @@ fieldset[disabled] .c-radio input + i::before {
   background-color: #51cf66
 }
 .c-bg-success-6 {
-  background-color: #40c057
+  background-color: #37b24d
 }
 .c-bg-success-7 {
-  background-color: #37b24d
+  background-color: #40c057
 }
 .c-bg-success-8 {
   background-color: #2f9e44
@@ -1167,10 +1243,10 @@ fieldset[disabled] .c-radio input + i::before {
   background-color: #ff922b
 }
 .c-bg-warning-6 {
-  background-color: #fd7e14
+  background-color: #f76707
 }
 .c-bg-warning-7 {
-  background-color: #f76707
+  background-color: #fd7e14
 }
 .c-bg-warning-8 {
   background-color: #e8590c
@@ -1178,47 +1254,53 @@ fieldset[disabled] .c-radio input + i::before {
 .c-bg-warning-9 {
   background-color: #d9480f
 }
-.c-bg-danger-0 {
-  background-color: #fff5f5
-}
-.c-bg-danger-1 {
-  background-color: #ffe3e3
-}
-.c-bg-danger-2 {
-  background-color: #ffc9c9
-}
-.c-bg-danger-3 {
-  background-color: #ffa8a8
-}
-.c-bg-danger-4 {
-  background-color: #ff8787
-}
-.c-bg-danger-5 {
-  background-color: #ff6b6b
-}
-.c-bg-danger-6 {
-  background-color: #fa5252
-}
-.c-bg-danger-7 {
-  background-color: #f03e3e
-}
-.c-bg-danger-8 {
-  background-color: #e03131
-}
-.c-bg-danger-9 {
-  background-color: #c92a2a
-}
 .c-bg-primary {
-  background-color: #1c7cd6
+  background-color: #1b6ec2
 }
 .c-bg-success {
-  background-color: #37b24d
+  background-color: #2f9e44
 }
 .c-bg-warning {
-  background-color: #f76707
+  background-color: #e8590c
 }
 .c-bg-danger {
-  background-color: #f03e3e
+  background-color: #e03131
+}
+.c-bg-black {
+  background-color: #000
+}
+.c-bg-white {
+  background-color: #fff
+}
+.c-text-danger-0 {
+  color: #fff5f5
+}
+.c-text-danger-1 {
+  color: #ffe3e3
+}
+.c-text-danger-2 {
+  color: #ffc9c9
+}
+.c-text-danger-3 {
+  color: #ffa8a8
+}
+.c-text-danger-4 {
+  color: #ff8787
+}
+.c-text-danger-5 {
+  color: #ff6b6b
+}
+.c-text-danger-6 {
+  color: #f03e3e
+}
+.c-text-danger-7 {
+  color: #fa5252
+}
+.c-text-danger-8 {
+  color: #e03131
+}
+.c-text-danger-9 {
+  color: #c92a2a
 }
 .c-text-gray-0 {
   color: #f8f9fa
@@ -1299,10 +1381,10 @@ fieldset[disabled] .c-radio input + i::before {
   color: #51cf66
 }
 .c-text-success-6 {
-  color: #40c057
+  color: #37b24d
 }
 .c-text-success-7 {
-  color: #37b24d
+  color: #40c057
 }
 .c-text-success-8 {
   color: #2f9e44
@@ -1329,10 +1411,10 @@ fieldset[disabled] .c-radio input + i::before {
   color: #ff922b
 }
 .c-text-warning-6 {
-  color: #fd7e14
+  color: #f76707
 }
 .c-text-warning-7 {
-  color: #f76707
+  color: #fd7e14
 }
 .c-text-warning-8 {
   color: #e8590c
@@ -1340,209 +1422,191 @@ fieldset[disabled] .c-radio input + i::before {
 .c-text-warning-9 {
   color: #d9480f
 }
-.c-text-danger-0 {
-  color: #fff5f5
-}
-.c-text-danger-1 {
-  color: #ffe3e3
-}
-.c-text-danger-2 {
-  color: #ffc9c9
-}
-.c-text-danger-3 {
-  color: #ffa8a8
-}
-.c-text-danger-4 {
-  color: #ff8787
-}
-.c-text-danger-5 {
-  color: #ff6b6b
-}
-.c-text-danger-6 {
-  color: #fa5252
-}
-.c-text-danger-7 {
-  color: #f03e3e
-}
-.c-text-danger-8 {
-  color: #e03131
-}
-.c-text-danger-9 {
-  color: #c92a2a
-}
 .c-text-primary {
-  color: #1c7cd6
+  color: #1b6ec2
 }
 .c-text-success {
-  color: #37b24d
+  color: #2f9e44
 }
 .c-text-warning {
-  color: #f76707
+  color: #e8590c
 }
 .c-text-danger {
-  color: #f03e3e
+  color: #e03131
 }
-.c-bd-gray-0 {
-  border-color: #f8f9fa
+.c-text-black {
+  color: #000
 }
-.c-bd-gray-1 {
-  border-color: #f1f3f5
+.c-text-white {
+  color: #fff
 }
-.c-bd-gray-2 {
-  border-color: #e9ecef
-}
-.c-bd-gray-3 {
-  border-color: #dee2e6
-}
-.c-bd-gray-4 {
-  border-color: #ced4da
-}
-.c-bd-gray-5 {
-  border-color: #adb5bd
-}
-.c-bd-gray-6 {
-  border-color: #868e96
-}
-.c-bd-gray-7 {
-  border-color: #495057
-}
-.c-bd-gray-8 {
-  border-color: #343a40
-}
-.c-bd-gray-9 {
-  border-color: #212529
-}
-.c-bd-primary-0 {
-  border-color: #e8f7ff
-}
-.c-bd-primary-1 {
-  border-color: #ccedff
-}
-.c-bd-primary-2 {
-  border-color: #a3daff
-}
-.c-bd-primary-3 {
-  border-color: #72c3fc
-}
-.c-bd-primary-4 {
-  border-color: #4dadf7
-}
-.c-bd-primary-5 {
-  border-color: #329af0
-}
-.c-bd-primary-6 {
-  border-color: #228ae6
-}
-.c-bd-primary-7 {
-  border-color: #1c7cd6
-}
-.c-bd-primary-8 {
-  border-color: #1b6ec2
-}
-.c-bd-primary-9 {
-  border-color: #1862ab
-}
-.c-bd-success-0 {
-  border-color: #ebfbee
-}
-.c-bd-success-1 {
-  border-color: #d3f9d8
-}
-.c-bd-success-2 {
-  border-color: #b2f2bb
-}
-.c-bd-success-3 {
-  border-color: #8ce99a
-}
-.c-bd-success-4 {
-  border-color: #69db7c
-}
-.c-bd-success-5 {
-  border-color: #51cf66
-}
-.c-bd-success-6 {
-  border-color: #40c057
-}
-.c-bd-success-7 {
-  border-color: #37b24d
-}
-.c-bd-success-8 {
-  border-color: #2f9e44
-}
-.c-bd-success-9 {
-  border-color: #2b8a3e
-}
-.c-bd-warning-0 {
-  border-color: #fff4e6
-}
-.c-bd-warning-1 {
-  border-color: #ffe8cc
-}
-.c-bd-warning-2 {
-  border-color: #ffd8a8
-}
-.c-bd-warning-3 {
-  border-color: #ffc078
-}
-.c-bd-warning-4 {
-  border-color: #ffa94d
-}
-.c-bd-warning-5 {
-  border-color: #ff922b
-}
-.c-bd-warning-6 {
-  border-color: #fd7e14
-}
-.c-bd-warning-7 {
-  border-color: #f76707
-}
-.c-bd-warning-8 {
-  border-color: #e8590c
-}
-.c-bd-warning-9 {
-  border-color: #d9480f
-}
-.c-bd-danger-0 {
+.c-bg-danger-0 {
   border-color: #fff5f5
 }
-.c-bd-danger-1 {
+.c-bg-danger-1 {
   border-color: #ffe3e3
 }
-.c-bd-danger-2 {
+.c-bg-danger-2 {
   border-color: #ffc9c9
 }
-.c-bd-danger-3 {
+.c-bg-danger-3 {
   border-color: #ffa8a8
 }
-.c-bd-danger-4 {
+.c-bg-danger-4 {
   border-color: #ff8787
 }
-.c-bd-danger-5 {
+.c-bg-danger-5 {
   border-color: #ff6b6b
 }
-.c-bd-danger-6 {
+.c-bg-danger-6 {
+  border-color: #f03e3e
+}
+.c-bg-danger-7 {
   border-color: #fa5252
 }
-.c-bd-danger-7 {
-  border-color: #f03e3e
-}
-.c-bd-danger-8 {
+.c-bg-danger-8 {
   border-color: #e03131
 }
-.c-bd-danger-9 {
+.c-bg-danger-9 {
   border-color: #c92a2a
 }
-.c-bd-primary {
+.c-bg-gray-0 {
+  border-color: #f8f9fa
+}
+.c-bg-gray-1 {
+  border-color: #f1f3f5
+}
+.c-bg-gray-2 {
+  border-color: #e9ecef
+}
+.c-bg-gray-3 {
+  border-color: #dee2e6
+}
+.c-bg-gray-4 {
+  border-color: #ced4da
+}
+.c-bg-gray-5 {
+  border-color: #adb5bd
+}
+.c-bg-gray-6 {
+  border-color: #868e96
+}
+.c-bg-gray-7 {
+  border-color: #495057
+}
+.c-bg-gray-8 {
+  border-color: #343a40
+}
+.c-bg-gray-9 {
+  border-color: #212529
+}
+.c-bg-primary-0 {
+  border-color: #e8f7ff
+}
+.c-bg-primary-1 {
+  border-color: #ccedff
+}
+.c-bg-primary-2 {
+  border-color: #a3daff
+}
+.c-bg-primary-3 {
+  border-color: #72c3fc
+}
+.c-bg-primary-4 {
+  border-color: #4dadf7
+}
+.c-bg-primary-5 {
+  border-color: #329af0
+}
+.c-bg-primary-6 {
+  border-color: #228ae6
+}
+.c-bg-primary-7 {
   border-color: #1c7cd6
 }
-.c-bd-success {
+.c-bg-primary-8 {
+  border-color: #1b6ec2
+}
+.c-bg-primary-9 {
+  border-color: #1862ab
+}
+.c-bg-success-0 {
+  border-color: #ebfbee
+}
+.c-bg-success-1 {
+  border-color: #d3f9d8
+}
+.c-bg-success-2 {
+  border-color: #b2f2bb
+}
+.c-bg-success-3 {
+  border-color: #8ce99a
+}
+.c-bg-success-4 {
+  border-color: #69db7c
+}
+.c-bg-success-5 {
+  border-color: #51cf66
+}
+.c-bg-success-6 {
   border-color: #37b24d
 }
-.c-bd-warning {
+.c-bg-success-7 {
+  border-color: #40c057
+}
+.c-bg-success-8 {
+  border-color: #2f9e44
+}
+.c-bg-success-9 {
+  border-color: #2b8a3e
+}
+.c-bg-warning-0 {
+  border-color: #fff4e6
+}
+.c-bg-warning-1 {
+  border-color: #ffe8cc
+}
+.c-bg-warning-2 {
+  border-color: #ffd8a8
+}
+.c-bg-warning-3 {
+  border-color: #ffc078
+}
+.c-bg-warning-4 {
+  border-color: #ffa94d
+}
+.c-bg-warning-5 {
+  border-color: #ff922b
+}
+.c-bg-warning-6 {
   border-color: #f76707
 }
-.c-bd-danger {
-  border-color: #f03e3e
+.c-bg-warning-7 {
+  border-color: #fd7e14
+}
+.c-bg-warning-8 {
+  border-color: #e8590c
+}
+.c-bg-warning-9 {
+  border-color: #d9480f
+}
+.c-bg-primary {
+  border-color: #1b6ec2
+}
+.c-bg-success {
+  border-color: #2f9e44
+}
+.c-bg-warning {
+  border-color: #e8590c
+}
+.c-bg-danger {
+  border-color: #e03131
+}
+.c-bg-black {
+  border-color: #000
+}
+.c-bg-white {
+  border-color: #fff
 }
 .c-p-0 {
   padding: 0
@@ -1565,9 +1629,6 @@ fieldset[disabled] .c-radio input + i::before {
 .c-p-xl {
   padding: 32px
 }
-.c-p-xxl {
-  padding: 48px
-}
 .c-p-top-0 {
   padding-top: 0
 }
@@ -1589,9 +1650,6 @@ fieldset[disabled] .c-radio input + i::before {
 .c-p-top-xl {
   padding-top: 32px
 }
-.c-p-top-xxl {
-  padding-top: 48px
-}
 .c-p-bottom-0 {
   padding-bottom: 0
 }
@@ -1612,9 +1670,6 @@ fieldset[disabled] .c-radio input + i::before {
 }
 .c-p-bottom-xl {
   padding-bottom: 32px
-}
-.c-p-bottom-xxl {
-  padding-bottom: 48px
 }
 .c-p-horizontal-0 {
   padding-left: 0;
@@ -1644,10 +1699,6 @@ fieldset[disabled] .c-radio input + i::before {
   padding-left: 32px;
   padding-right: 32px
 }
-.c-p-horizontal-xxl {
-  padding-left: 48px;
-  padding-right: 48px
-}
 .c-p-vertical-0 {
   padding-top: 0;
   padding-bottom: 0
@@ -1676,10 +1727,6 @@ fieldset[disabled] .c-radio input + i::before {
   padding-top: 32px;
   padding-bottom: 32px
 }
-.c-p-vertical-xxl {
-  padding-top: 48px;
-  padding-bottom: 48px
-}
 .c-m-0 {
   margin: 0
 }
@@ -1700,9 +1747,6 @@ fieldset[disabled] .c-radio input + i::before {
 }
 .c-m-xl {
   margin: 32px
-}
-.c-m-xxl {
-  margin: 48px
 }
 .c-m-top-0 {
   margin-top: 0
@@ -1725,9 +1769,6 @@ fieldset[disabled] .c-radio input + i::before {
 .c-m-top-xl {
   margin-top: 32px
 }
-.c-m-top-xxl {
-  margin-top: 48px
-}
 .c-m-bottom-0 {
   margin-bottom: 0
 }
@@ -1748,9 +1789,6 @@ fieldset[disabled] .c-radio input + i::before {
 }
 .c-m-bottom-xl {
   margin-bottom: 32px
-}
-.c-m-bottom-xxl {
-  margin-bottom: 48px
 }
 .c-m-horizontal-0 {
   margin-left: 0;
@@ -1780,10 +1818,6 @@ fieldset[disabled] .c-radio input + i::before {
   margin-left: 32px;
   margin-right: 32px
 }
-.c-m-horizontal-xxl {
-  margin-left: 48px;
-  margin-right: 48px
-}
 .c-m-vertical-0 {
   margin-top: 0;
   margin-bottom: 0
@@ -1811,10 +1845,6 @@ fieldset[disabled] .c-radio input + i::before {
 .c-m-vertical-xl {
   margin-top: 32px;
   margin-bottom: 32px
-}
-.c-m-vertical-xxl {
-  margin-top: 48px;
-  margin-bottom: 48px
 }
 .c-radius-0 {
   border-radius: none

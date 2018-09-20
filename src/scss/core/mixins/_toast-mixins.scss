@@ -2,8 +2,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  background: $white;
-  color: color(gray, 9);
+  background: $color-white;
+  color: $color-gray-9;
   /* stylelint-disable */
   padding: 11px $alert-top-padding;
   /* stylelint-enable */
@@ -11,7 +11,7 @@
   font-size: $alert-font-size;
   font-weight: font-weight(bold);
   border-radius: radius(sm);
-  border: 1px solid color(gray, 2);
+  border: 1px solid $color-gray-2;
   word-wrap: break-word;
   box-shadow: shadow(md);
 

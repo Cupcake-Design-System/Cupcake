@@ -49,7 +49,7 @@
 ///
 /// @param {String} $weight - The font weight.
 /// @return {Number} The font-weight for the text-weight.
-@function font-weight($value) {
+@function font-weight($value: normal) {
   $fetched-font-weight: map-get($font-weight, $value);
 
   @if type-of($fetched-font-weight) != null {
@@ -77,8 +77,8 @@
 ///
 /// @param {String} $value - The font size.
 /// @return {Number} The font-size for the given definition.
-@function font-size($value) {
-  $fetched-font-size: map-get($body-text, $value);
+@function font-size($value: md) {
+  $fetched-font-size: map-get($font-body, $value);
 
   @if type-of($fetched-font-size) != null {
     @return $fetched-font-size;
@@ -91,8 +91,8 @@
 ///
 /// @param {String} $value - The font key.
 /// @return {Number} The font-family for the given definition.
-@function font($value: primary) {
-  $fetched-font: map-get($font, $value);
+@function font($value: sans) {
+  $fetched-font: map-get($font-family, $value);
 
   @if type-of($fetched-font) != null {
     @return $fetched-font;
@@ -134,7 +134,7 @@
 /// @param {String} $value - The shadow's depth.
 /// @return {List} The shadow value.
 @function shadow($value: sm) {
-  $fetched-value: map-get($shadows, $value);
+  $fetched-value: map-get($shadow, $value);
 
   @if type-of($fetched-value) == list {
     @return $fetched-value;
@@ -159,21 +159,8 @@
 }
 
 
-/// Generic return from an map given in function.
-/// @param {String} $key - The key for the element.
-/// @param {Map} $map - The map in which to search for the element.
-/// @return {Number} The value from the map.
-///
-@function config($map, $keys...) {
-  @each $key in $keys {
-    $map: map-get($map, $key);
-  }
-
-  @return $map;
-}
-
 /// Returns the color value for a given color name and group.
-/// @param {String} $hue - The color's hue.
+/// @param {String} $value [primary] - The color's base.
 /// @param {Number} $range [7] - The darkness/lightness of the color. Defaults to 7. The higher the number, the darker the color.
 /// @return {Color} - The color value.
 ///
@@ -192,29 +179,17 @@
 ///   }
 ///
 @function color($value: primary, $range: 7) {
-  $fetched-value: config($colors, $value, $range);
 
-  @if type-of($fetched-value) == color {
-    @return $fetched-value;
+  @if $value == black {
+    @return $color-black;
+  } @else if $value == white {
+    @return $color-white;
+  } @else if $value == gray {
+    @return config($color, 'gray', $range);
+  } @else if {
+    @return config($color, $value, $range);
   } @else {
-    @error 'Color `#{$hue} - #{$range}` not found.';
-  }
-}
-
-
-/// Returns a foreground color based on a given background-color in accordance with accessibility standards.
-/// @param {Color} $background-color - The background color where the foreground will sit.
-/// @param {Color} $dark-color - The dark color you wish to display if there is enough contrast.
-/// @param {Color} $light-color - The light color you wish to display if there is enough contrast.
-/// @return {Color} The HEX color of the foreground.
-@function color-contrast($background-color, $dark-color: color(neutral, 700), $light-color: color(neutral, 000)) {
-  @if $background-color == null {
-    @return null;
-  } @else {
-    // Based on the algorithm recommended by W3: https://www.w3.org/TR/AERT/#color-contrast
-    $yiq: (red($background-color) * 299 + green($background-color) * 587 + blue($background-color) * 114) / 1000;
-
-    @return if($yiq >= 128, $dark-color, $light-color);
+    @error 'Color `#{value} - #{$range}` not found.';
   }
 }
 

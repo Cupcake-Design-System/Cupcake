@@ -44,9 +44,6 @@ $colors: (
     @include assert-equal(font-weight(semibold), 600);
   }
 
-  @include it('Should override breakpoints to match change in map') {
-    @include assert-equal(breakpoint(sm), 600px);
-  }
 
 }
 

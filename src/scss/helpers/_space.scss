@@ -1,3 +1,6 @@
+$padding-prefix       : 'c-p' !default;
+$margin-prefix        : 'c-m' !default;
+
 @mixin spacer-export {
   .#{$padding-prefix} {
     @include modifiers($space, 'padding');

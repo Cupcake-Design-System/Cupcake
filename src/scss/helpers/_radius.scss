@@ -1,3 +1,5 @@
+$radius-prefix        : 'c-radius' !default;
+
 @mixin radius-export {
   .#{$radius-prefix} {
     @include modifiers($radius, 'border-radius');

@@ -2,14 +2,14 @@
 
 /* stylelint-disable */
 $docs-sidebar-size: 240px;
-$docs-sidebar-bg: color(gray, 0);
-$text: color(gray, 9);
-$text-light: color(gray, 7);
+$docs-sidebar-bg: color('gray', 0);
+$text: $color-gray-9;
+$text-light: $color-gray-7;
 $docs-spacer-sm: space(sm);
 $docs-spacer-md: space(md);
 $docs-spacer-lg: space(lg);
 $docs-spacer-xl: space(xl);
-$docs-spacer-xxl: space(xxl);
+$docs-spacer-xxl: space(xl);
 
 // dummy stuff til we get layout classes
 
@@ -50,7 +50,7 @@ $docs-spacer-xxl: space(xxl);
   color: $text;
   height: 100%;
   background-color: $docs-sidebar-bg;
-  border-right: 1px solid color(gray, 2);
+  border-right: 1px solid $color-gray-2;
   order: -1;
   white-space: nowrap;
   position: fixed;
@@ -60,15 +60,15 @@ $docs-spacer-xxl: space(xxl);
   &-header {
     height: 160px;
     padding: $docs-spacer-lg $docs-spacer-sm;
-    border-bottom: 1px solid color(gray, 1);
+    border-bottom: 1px solid $color-gray-1;
   }
 
   &-title {
     margin-bottom: $docs-spacer-md;
     margin-top: $docs-spacer-lg;
     padding: 0 $docs-spacer-sm;
-    color: color(gray, 5);
-    font-family: font(primary);
+    color: $color-gray-5;
+    font-family: font();
     font-size: 10px;
     line-height: 14px;
     letter-spacing: 1px;
@@ -79,7 +79,7 @@ $docs-spacer-xxl: space(xxl);
       color: inherit;
 
       &:hover {
-        color: color(gray, 7);
+        color: $color-gray-7;
       }
     }
 
@@ -101,13 +101,13 @@ $docs-spacer-xxl: space(xxl);
       display: block;
 
       &:hover {
-        background-color: color(gray, 1);
+        background-color: $color-gray-1;
         border-radius: radius(md);
       }
     }
 
     .current {
-      background-color: color(gray, 1);
+      background-color: $color-gray-1;
       font-weight: bold;
       display: block;
       border-radius: radius(sm);
@@ -135,11 +135,11 @@ $docs-spacer-xxl: space(xxl);
 
 .docs-version {
   width: 96px;
-  border: 1px solid color(gray, 1);
+  border: 1px solid $color-gray-1;
   border-radius: 2px;
   background-color: white;
   color: $text;
-  font-family: font(primary);
+  font-family: font();
   font-size: 10px;
   font-weight: font-weight(bold);
   letter-spacing: 1px;
@@ -154,7 +154,7 @@ $docs-spacer-xxl: space(xxl);
   align-items: space-around;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: color(gray, 1);
+  background-color: $color-gray-1;
   padding: $docs-spacer-md;
 
   div {
@@ -171,7 +171,7 @@ $docs-spacer-xxl: space(xxl);
 
 .space {
   display: flex;
-  background-color: color(gray, 1);
+  background-color: $color-gray-1;
   height: $docs-spacer-lg;
   margin: $docs-spacer-sm 0;
   border-radius: radius(sm);
@@ -260,7 +260,7 @@ $docs-spacer-xxl: space(xxl);
 .docs-section {
   padding: $docs-spacer-lg 0;
   margin-bottom: $docs-spacer-xxl;
-  border-bottom: 1px solid color(gray, 0);
+  border-bottom: 1px solid $color-gray-0;
 
   &:first-child {
     padding: $docs-spacer-lg * 2 0;
@@ -296,7 +296,7 @@ $docs-spacer-xxl: space(xxl);
   &-header {
     padding-bottom: $docs-spacer-sm;
     margin-bottom: $docs-spacer-lg;
-    border-bottom: 1px solid color(gray, 1);
+    border-bottom: 1px solid $color-gray-1;
   }
 }
 
@@ -324,15 +324,15 @@ $docs-spacer-xxl: space(xxl);
   display: none;
   position: fixed;
   z-index: 1000;
-  color: color(gray, 6);
-  background-color: color(gray, 0);
-  border: 1px solid color(gray, 2);
+  color: $color-gray-6;
+  background-color: $color-gray-0;
+  border: 1px solid $color-gray-2;
   padding: 8px 10px;
   margin-top: -20px;
 
   &:hover {
     cursor: pointer;
-    color: color(gray, 7);
+    color: $color-gray-7;
   }
 }
 
@@ -375,11 +375,11 @@ $docs-spacer-xxl: space(xxl);
   width: .25em;
 
   &-track {
-    background-color: color(gray, 0);
+    background-color: $color-gray-0;
   }
 
   &-thumb {
-    background-color: color(gray, 4);
+    background-color: $color-gray-4;
     outline: none;
   }
 }

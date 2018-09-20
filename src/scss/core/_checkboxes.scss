@@ -8,6 +8,7 @@ $checkbox-disabled-color  : color(gray, 5) !default;
 $checkbox-disabled-opacity: 0.5 !default;
 $checkbox-palette         : $theme-colors !default;
 $checkbox-default-size    : 24px !default;
+
 $checkbox-sizes: (
   sm: theme-size(sm),
   lg: theme-size(lg),

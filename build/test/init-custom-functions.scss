@@ -3,15 +3,13 @@
 @import '../../src/scss/support/support';
 
 @mixin test-mixin {
-  transition: all easing(overshot) duration(slow);
   box-shadow: shadow(xl);
-  margin-top: space(xxl);
+  margin-top: space(xl);
   background: color(success);
   color: color(gray, 9);
   font-weight: font-weight(bold);
   line-height: line-height();
-  size: breakpoint(sm);
-  font-family: font(primary);
+  font-family: font(sans);
 }
 
 @include describe('Test functions for retrieving map data') {
@@ -37,17 +35,6 @@
     }
   }
 
-  @include describe("Testing animation [functions]") {
-    @include it('Checks animation functions return the right data') {
-      @include assert-equal(all easing(overshot) duration(slow), all cubic-bezier(0.07, 0.28, 0.32, 1.22) 300ms);
-    }
-  }
-
-  @include describe("Testing breakpoint [functions]") {
-    @include it('Checks breakpoint functions return the right data') {
-      @include assert-equal(breakpoint('sm'), 600px);
-    }
-  }
 
   @include describe("Testing typography [functions]") {
 
@@ -64,7 +51,7 @@
     // }
 
     @include it('Checks font function return the right data') {
-      @include assert-equal(font(primary), (-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto));
+      @include assert-equal(font(sans), (-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto));
     }
   }
 
@@ -76,14 +63,12 @@
           @include test-mixin;
         }
       @include expect {
-        transition: all cubic-bezier(0.07, 0.28, 0.32, 1.22) 300ms;
         box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.1);
-        margin-top: 48px;
-        background: #37b24d;
+        margin-top: 32px;
+        background: #40c057;
         color: #212529;
         font-weight: 900;
         line-height: normal;
-        size: 600px;
         font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
       }
     }

@@ -10,6 +10,8 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
+    "postinstall": "gulp copy:sprinkles",
+    "get:tokens": "gulp copy:sprinkles",
     "deploy:test": "surge --project ./dist --domain cupcake-design-system.surge.sh",
     "deploy": "gulp build && npm run deploy:test",
     "lint": "gulp lint --fail-on-error",
@@ -30,6 +32,7 @@
     "*.scss": "stylelint --syntax=scss"
   },
   "devDependencies": {
+    "@cupcake-ds/cupcake-sprinkles": "^0.2.2",
     "ansi-colors": "^3.0.5",
     "autoprefixer": "^9.1.5",
     "babel-cli": "^6.26.0",

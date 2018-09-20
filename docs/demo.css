@@ -1,6 +1,13 @@
+@charset "UTF-8";
 /*
  * Mixins and functions
  */
+/* ----------------------- */
+/* 🎂 Cupcake Sprinkles 🎂 */
+/* imported from: @cupcake-ds/cupcake-sprinkles version: 0.2.1 */
+/* DO NOT MODIFY THIS FILE DIRECTLY! */
+/* ALL VALUES COME FROM THE @cupcake-ds/cupcake-sprinkles PACKAGE */
+/* ----------------------- */
 /* stylelint-disable */
 .docs-container {
   display: -ms-flexbox;
@@ -22,7 +29,7 @@
       flex: 1;
   padding: 0 24px;
   margin-left: 240px;
-  margin-top: 48px; }
+  margin-top: 32px; }
   .docs-content-fullwidth {
     margin-left: 0; }
 
@@ -63,10 +70,9 @@
       .docs-nav-title a:hover {
         color: #495057; }
     .docs-nav-title:first-child {
-      margin-top: 48px; }
+      margin-top: 32px; }
   .docs-nav-item {
     color: #212529;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
     font-size: 14px; }
     .docs-nav-item a {
       color: #212529;
@@ -86,14 +92,12 @@
 
 .ipreo {
   color: #212529;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
   font-size: 24px;
   font-weight: 900;
   line-height: 24px; }
 
 .cupcake {
   color: #1c7cd6;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
   font-size: 24px;
   font-weight: 900;
   line-height: 24px; }
@@ -175,7 +179,7 @@
   line-height: 20px; }
 
 .color-block .colors {
-  height: 48px;
+  height: 32px;
   width: 100%;
   display: -ms-flexbox;
   display: flex; }
@@ -202,7 +206,7 @@
 
 .docs-section {
   padding: 24px 0;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   border-bottom: 1px solid #f8f9fa; }
   .docs-section:first-child {
     padding: 48px 0; }
