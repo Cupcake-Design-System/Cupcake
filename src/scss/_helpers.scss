@@ -1,20 +1,20 @@
 /// $backgound-prefix
-$backgound-prefix        : 'c-bg' !default;
+$backgound-prefix: 'c-bg' !default;
 
 /// $border-prefix
-$border-prefix           : 'c-bg' !default;
+$border-prefix   : 'c-bg' !default;
 
 /// $padding-prefix
-$padding-prefix       : 'c-p' !default;
+$padding-prefix  : 'c-p' !default;
 
 /// $margin-prefix
-$margin-prefix        : 'c-m' !default;
+$margin-prefix   : 'c-m' !default;
 
 /// $shadow-prefix
-$shadow-prefix        : 'c-depth' !default;
+$shadow-prefix   : 'c-depth' !default;
 
 /// $radius-prefix
-$radius-prefix        : 'c-radius' !default;
+$radius-prefix   : 'c-radius' !default;
 
 
 @if $enable-color-classes == true {
