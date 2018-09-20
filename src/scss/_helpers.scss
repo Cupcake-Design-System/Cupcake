@@ -1,0 +1,93 @@
+/// $backgound-prefix
+$backgound-prefix: 'c-bg' !default;
+
+/// $border-prefix
+$border-prefix   : 'c-bg' !default;
+
+/// $padding-prefix
+$padding-prefix  : 'c-p' !default;
+
+/// $margin-prefix
+$margin-prefix   : 'c-m' !default;
+
+/// $shadow-prefix
+$shadow-prefix   : 'c-depth' !default;
+
+/// $radius-prefix
+$radius-prefix   : 'c-radius' !default;
+
+
+@if $enable-color-classes == true {
+  .#{$backgound-prefix} {
+    @include modifiers($color, 'background-color');
+    @include modifiers($theme-colors, 'background-color');
+  }
+
+  .c-text {
+    @include modifiers($color, 'color');
+    @include modifiers($theme-colors, 'color');
+  }
+
+  .#{$border-prefix} {
+    @include modifiers($color, 'border-color');
+    @include modifiers($theme-colors, 'border-color');
+  }
+}
+
+
+@if $enable-spacer-classes == true {
+  .#{$padding-prefix} {
+    @include modifiers($space, 'padding');
+
+    &-top {
+      @include modifiers($space, ('padding-top'));
+    }
+
+    &-bottom {
+      @include modifiers($space, ('padding-bottom'));
+    }
+
+    &-horizontal {
+      @include modifiers($space, ('padding-left', 'padding-right'));
+    }
+
+    &-vertical {
+      @include modifiers($space, ('padding-top', 'padding-bottom'));
+    }
+  }
+
+  .#{$margin-prefix} {
+    @include modifiers($space, 'margin');
+
+    &-top {
+      @include modifiers($space, ('margin-top'));
+    }
+
+    &-bottom {
+      @include modifiers($space, ('margin-bottom'));
+    }
+
+    &-horizontal {
+      @include modifiers($space, ('margin-left', 'margin-right'));
+    }
+
+    &-vertical {
+      @include modifiers($space, ('margin-top', 'margin-bottom'));
+    }
+  }
+}
+
+
+@if $enable-shadow-classes == true {
+  .#{$shadow-prefix} {
+    @include modifiers($shadow, 'box-shadow');
+  }
+}
+
+
+@if $enable-radius-classes == true {
+  .#{$radius-prefix} {
+    @include modifiers($radius, 'border-radius');
+  }
+}
+

@@ -1,7 +1,7 @@
 // stylelint-disable
 @import '../../node_modules/sass-true/sass/true';
 @import '../../src/scss/support/support';
-@import '../../src/scss/helpers/helpers';
+@import '../../src/scss/helpers';
 
 
 
@@ -14,7 +14,9 @@ $shadow-prefix: 'shadow';
       @include output {
         $enable-shadow-classes: true;
         @if $enable-shadow-classes == true {
-          @include shadow-export();
+          .#{$shadow-prefix} {
+            @include modifiers($shadow, 'box-shadow');
+          }
         }
       }
       @include expect {

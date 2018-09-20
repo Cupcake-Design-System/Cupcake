@@ -1,27 +1,66 @@
+////
+/// @group Alerts
+////
+
+/// $alert-border
 $alert-border               : 1px solid !default;
+
+/// $alert-margin
 $alert-margin               : 0 0 space(md) 0 !default;
+
+/// $alert-padding
 $alert-padding              : space(sm) !default;
+
+/// $alert-top-padding
 $alert-top-padding          : space(md) !default;
+
+/// $alert-font-size
 $alert-font-size            : 12px !default;
+
+/// $alert-line-height
 $alert-line-height          : 16px !default;
+
+/// $alert-height
 $alert-height               : 32px !default;
+
+/// $alert-font-family
 $alert-font-family          : font() !default;
+
+/// $alert-font-weight
 $alert-font-weight          : font-weight() !default;
+
+/// $alert-primary-bg
 $alert-primary-bg           : rgba(color(primary), .07) !default;
+
+/// $alert-primary-color
 $alert-primary-color        : color(primary) !default;
+
+/// $alert-primary-icon-color
 $alert-primary-icon-color   : color(primary) !default;
 
+/// $alert-colors
 $alert-colors:
   (primary, color(primary, 0), color(primary))
   (success, color(success, 0), color(success))
   (warning, color(warning, 0), color(warning))
   (danger, color(danger, 0), color(danger)) !default;
 
-$alert-radius               : 2px !default;
+/// $alert-radius
+$alert-radius               : radius(sm) !default;
+
+/// $alert-top-radius
 $alert-top-radius           : 0 !default;
+
+/// $alert-shadows
 $alert-shadows              : shadow(lg) !default;
+
+/// $alert-icon-width
 $alert-icon-width           : 12px !default;
+
+/// $alert-close-font-size
 $alert-close-font-size      : 24px !default;
+
+/// $alert-prefix
 $alert-prefix               : 'c-alert' !default;
 
 

@@ -1,4 +1,11 @@
+////
+/// @group Typography
+////
+
+/// $text-prefix
 $text-prefix     : 'c-text' !default;
+
+/// $header-prefix
 $header-prefix   : 'c-header' !default;
 
 .#{$text-prefix} {
