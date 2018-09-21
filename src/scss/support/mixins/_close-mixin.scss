@@ -38,6 +38,6 @@
 
   &:hover::before,
   &:hover::after {
-    background-color: darken($color, 10);
+    background-color: darken($color, 20);
   }
 }
