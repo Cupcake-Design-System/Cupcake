@@ -53,14 +53,14 @@
   }
 }
 
-@mixin alert-style($bg: color(gray, 0), $color: color(gray, 9)) {
+@mixin alert-style($bg: color(gray, 0), $border: color(gray, 9), $color: color(gray, 9)) {
   @if $white-label == true {
-    background-color: rgba($color, .1);
-    border-color: $color;
+    background-color: rgba($border, .025);
+    border-color: $border;
     color: $color;
   } @else {
     background-color: $bg;
-    border-color: $color;
+    border-color: $border;
     color: $color;
   }
 
@@ -68,27 +68,25 @@
   .c-alert-close {
     &::before,
     &::after {
-      position: absolute;
-      display: block;
-      background-color: $color;
+      background-color: $border;
     }
 
     &:hover::before,
     &:hover::after {
-      background-color: darken($color, 10);
+      background-color: darken($border, 10);
     }
   }
 
   .c-a,
   .c-alert-link {
-    color: $color;
+    color: $border;
 
     &:hover {
-      color: lighten($color, 10%);
+      color: lighten($border, 10%);
     }
   }
 
   .c-alert-icon {
-    color: $color;
+    color: $border;
   }
 }

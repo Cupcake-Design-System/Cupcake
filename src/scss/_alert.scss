@@ -74,3 +74,16 @@ $alert-prefix               : 'c-alert' !default;
   }
 }
 
+.c-alert-top {
+  border-radius: $alert-top-radius;
+  padding: $alert-top-padding;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  box-shadow: $alert-shadows;
+  height: 48px;
+
+  .c-alert-icon {
+    padding-right: $alert-top-padding;
+  }
+}

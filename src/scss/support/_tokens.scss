@@ -1,14 +1,14 @@
 
 /* ----------------------- */
 /* 🎂 Cupcake Sprinkles 🎂 */
-/* imported from: @cupcake-ds/cupcake-sprinkles version: 0.2.1 */
+/* imported from: @cupcake-ds/cupcake-sprinkles version: 0.2.2 */
 /* DO NOT MODIFY THIS FILE DIRECTLY! */
 /* ALL VALUES COME FROM THE @cupcake-ds/cupcake-sprinkles PACKAGE */
 /* ----------------------- */
 
 $color-primary: #1b6ec2 !default;
 $color-success: #2f9e44 !default;
-$color-warning: #e8590c !default;
+$color-warning: #f08c00 !default;
 $color-danger: #e03131 !default;
 $color-black: #000000 !default;
 $color-white: #ffffff !default;
@@ -18,8 +18,8 @@ $color-primary-2: #a3daff !default;
 $color-primary-3: #72c3fc !default;
 $color-primary-4: #4dadf7 !default;
 $color-primary-5: #329af0 !default;
-$color-primary-7: #1c7cd6 !default;
 $color-primary-6: #228ae6 !default;
+$color-primary-7: #1c7cd6 !default;
 $color-primary-8: #1b6ec2 !default;
 $color-primary-9: #1862ab !default;
 $color-success-0: #ebfbee !default;
@@ -28,28 +28,28 @@ $color-success-2: #b2f2bb !default;
 $color-success-3: #8ce99a !default;
 $color-success-4: #69db7c !default;
 $color-success-5: #51cf66 !default;
-$color-success-7: #40c057 !default;
-$color-success-6: #37b24d !default;
+$color-success-6: #40c057 !default;
+$color-success-7: #37b24d !default;
 $color-success-8: #2f9e44 !default;
 $color-success-9: #2b8a3e !default;
-$color-warning-0: #fff4e6 !default;
-$color-warning-1: #ffe8cc !default;
-$color-warning-2: #ffd8a8 !default;
-$color-warning-3: #ffc078 !default;
-$color-warning-4: #ffa94d !default;
-$color-warning-5: #ff922b !default;
-$color-warning-7: #fd7e14 !default;
-$color-warning-6: #f76707 !default;
-$color-warning-8: #e8590c !default;
-$color-warning-9: #d9480f !default;
+$color-warning-0: #fff9db !default;
+$color-warning-1: #fff3bf !default;
+$color-warning-2: #ffec99 !default;
+$color-warning-3: #ffe066 !default;
+$color-warning-4: #ffd43b !default;
+$color-warning-5: #fcc419 !default;
+$color-warning-6: #fab005 !default;
+$color-warning-7: #f59f00 !default;
+$color-warning-8: #f08c00 !default;
+$color-warning-9: #e67700 !default;
 $color-danger-0: #fff5f5 !default;
 $color-danger-1: #ffe3e3 !default;
 $color-danger-2: #ffc9c9 !default;
 $color-danger-3: #ffa8a8 !default;
 $color-danger-4: #ff8787 !default;
 $color-danger-5: #ff6b6b !default;
-$color-danger-7: #fa5252 !default;
-$color-danger-6: #f03e3e !default;
+$color-danger-6: #fa5252 !default;
+$color-danger-7: #f03e3e !default;
 $color-danger-8: #e03131 !default;
 $color-danger-9: #c92a2a !default;
 $color-gray-0: #f8f9fa !default;
@@ -58,8 +58,8 @@ $color-gray-2: #e9ecef !default;
 $color-gray-3: #dee2e6 !default;
 $color-gray-4: #ced4da !default;
 $color-gray-5: #adb5bd !default;
-$color-gray-7: #495057 !default;
 $color-gray-6: #868e96 !default;
+$color-gray-7: #495057 !default;
 $color-gray-8: #343a40 !default;
 $color-gray-9: #212529 !default;
 $color-link: #1b6ec2 !default;
@@ -106,6 +106,7 @@ $radius-round: 200px !default;
 $radius-pill: 100% !default;
 
 
+$shadow-0: 0 0 0 0 transparent !default;
 $shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, .1) !default;
 $shadow-sm: 0 4px 8px 0 rgba(0, 0, 0, 0.1) !default;
 $shadow-md: 0 6px 12px 0 rgba(0, 0, 0, .1) !default;
@@ -120,18 +121,19 @@ $space-sm: 8px !default;
 $space-md: 16px !default;
 $space-lg: 24px !default;
 $space-xl: 32px !default;
+$space-xxl: 48px !default;
 
 
 $color-primary: #1b6ec2 !default;
 $color-success: #2f9e44 !default;
-$color-warning: #e8590c !default;
+$color-warning: #f08c00 !default;
 $color-danger: #e03131 !default;
 $color-black: #000000 !default;
 $color-white: #ffffff !default;
 
 
 $color: (
-  
+
   'danger': (
     0: $color-danger-0,
     1: $color-danger-1,
@@ -197,7 +199,7 @@ $color: (
     9: $color-warning-9
   ),
 );
-  
+
 
 $font-body: (
   xs: $font-body-xs,
@@ -246,6 +248,7 @@ $radius: (
 );
 
 $shadow: (
+  0: $shadow-0,
   xs: $shadow-xs,
   sm: $shadow-sm,
   md: $shadow-md,
@@ -261,6 +264,7 @@ $space: (
   md: $space-md,
   lg: $space-lg,
   xl: $space-xl,
+  xxl: $space-xxl,
 );
 
 $theme-colors: (

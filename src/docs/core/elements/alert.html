@@ -5,10 +5,10 @@ notes: Avatars are used to show a representation of an individual or business in
 
 {{#each toolkit.colors}}
 {{#each this}}
-<div class="c-alert c-alert-{{this}}">
-  <a href="" class="c-a c-alert-close" data-dismiss="c-alert" aria-hidden="true">
-      </a>
-      <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i> <strong>This is a {{this}} alert</strong> <a href="" class="c-a">Link</a>
+<div class="c-alert c-alert-{{this}} c-alert-top c-m-bottom-xl">
+  <a href="javascript:void(0)" class="c-alert-close" aria-hidden="true">
+  </a>
+  <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i> <strong>This is a {{this}} alert</strong> <a href="" class="c-a">Link</a>
 </div>
 {{/each}}
 {{/each}}
@@ -16,7 +16,17 @@ notes: Avatars are used to show a representation of an individual or business in
 
 {{#each toolkit.colors}}
 {{#each this}}
-<div class="c-toast-alert c-toast-alert-{{this}}">
+<div class="c-alert c-alert-{{this}} c-m-bottom-xl">
+  <a href="" class="c-alert-close" aria-hidden="true"></a>
+    <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i> <strong>This is a {{this}} alert</strong> <a href="" class="c-a">Link</a>
+</div>
+{{/each}}
+{{/each}}
+
+
+{{#each toolkit.colors}}
+{{#each this}}
+<div class="c-toast-alert c-toast-alert-{{this}} c-m-bottom-xl">
   <i class="c-toast-alert-icon fa fa-check-circle"></i>
   Nam porttitor blandit accumsan.
   Ut vel dictum sem, a pretium dui.
