@@ -1,0 +1,29 @@
+global:
+  type: radius
+  category: radius
+imports:
+  - ./_aliases.yml
+
+props:
+
+  - name: 0
+    value: "{!radius-0}"
+
+  - name: square
+    value: "{!radius-square}"
+
+  - name: sm
+    value: "{!radius-sm}"
+
+  - name: md
+    value: "{!radius-md}"
+
+  - name: lg
+    value: "{!radius-lg}"
+
+  - name: round
+    value: "{!radius-round}"
+
+  - name: pill
+    value: "{!radius-pill}"
+

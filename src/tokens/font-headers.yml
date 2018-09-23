@@ -1,0 +1,25 @@
+global:
+  type: font-header
+  category: font-header
+imports:
+  - ./_aliases.yml
+
+props:
+
+  - name: xs
+    value: "{!font-header-xs}"
+
+  - name: sm
+    value: "{!font-header-sm}"
+
+  - name: md
+    value: "{!font-header-md}"
+
+  - name: lg
+    value: "{!font-header-lg}"
+
+  - name: xl
+    value: "{!font-header-xl}"
+
+  - name: xxl
+    value: "{!font-header-xxl}"

@@ -37,6 +37,13 @@ gulp.task(
   gulp.series('styles', 'html', 'sassdoc')
 );
 
+gulp.task(
+  'tokens',
+  gulp.series('tokens:colors-map', 'tokens:map', 'tokens:core', (done) => {
+    done();
+  })
+);
+
 gulp.task('build', gulp.series('clean', 'codes', 'make:styles:min'));
 gulp.task('dev', gulp.series('clean', 'codes', gulp.parallel('server', 'watch')));
 gulp.task('default', gulp.series('dev'));

@@ -1,0 +1,17 @@
+global:
+  type: line-height
+  category: line-height
+imports:
+  - ./_aliases.yml
+
+props:
+
+  - name: normal
+    value: "{!line-height-normal}"
+
+  - name: default
+    value: "{!line-height-default}"
+
+  - name: condensed
+    value: "{!line-height-condensed}"
+

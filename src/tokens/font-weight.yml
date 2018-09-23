@@ -1,0 +1,18 @@
+global:
+  type: font-weight
+  category: font-weight
+imports:
+  - ./_aliases.yml
+
+props:
+  - name: bold
+    value: "{!font-weight-bold}"
+
+  - name: semibold
+    value: "{!font-weight-semibold}"
+
+  - name: normal
+    value: "{!font-weight-normal}"
+
+  - name: light
+    value: "{!font-weight-light}"

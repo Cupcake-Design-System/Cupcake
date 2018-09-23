@@ -1,0 +1,29 @@
+global:
+  type: space
+  category: space
+imports:
+  - ./_aliases.yml
+
+props:
+
+  - name: 0
+    value: "{!space-0}"
+
+  - name: xxs
+    value: "{!space-xxs}"
+
+  - name: xs
+    value: "{!space-xs}"
+
+  - name: sm
+    value: "{!space-sm}"
+
+  - name: md
+    value: "{!space-md}"
+
+  - name: lg
+    value: "{!space-lg}"
+
+  - name: xl
+    value: "{!space-xl}"
+

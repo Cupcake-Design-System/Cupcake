@@ -38,6 +38,12 @@ export default {
     docs: 'src/docs'
   },
 
+  tokens: {
+    input: 'src/tokens',
+    output: 'src/scss/support',
+    formats: 'dist/formats'
+  },
+
   html: {
     all: 'src/docs/**/*.{html,md,json,yml}',
     pages: 'src/docs/views/pages/**/*',
