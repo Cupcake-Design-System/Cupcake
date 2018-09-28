@@ -5,7 +5,7 @@
 @mixin test-mixin {
   box-shadow: shadow(xl);
   margin-top: space(xl);
-  background: color(success);
+  background: color(danger);
   color: color(gray, 9);
   font-weight: font-weight(bold);
   line-height: line-height();
@@ -65,7 +65,7 @@
       @include expect {
         box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.1);
         margin-top: 32px;
-        background: #40c057;
+        background: #f03e3e;
         color: #212529;
         font-weight: 900;
         line-height: normal;
