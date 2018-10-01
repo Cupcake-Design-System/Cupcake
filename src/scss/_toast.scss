@@ -1,13 +1,6 @@
-////
-/// @group Alerts
-////
-
-/// $toast-palette
-$toast-palette: $theme-colors !default;
-
-/// $toast-prefix
-$toast-prefix: 'c-toast-alert' !default;
-
+// --------------------------------------------
+// ALERTS & TOASTS ----------------------------
+// --------------------------------------------
 
 .#{$toast-prefix} {
   @include toast;

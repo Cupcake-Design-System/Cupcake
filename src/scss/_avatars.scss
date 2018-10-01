@@ -1,23 +1,6 @@
-////
-/// @group Avatar
-////
-
-/// $avatar-prefix
-$avatar-prefix: 'c-avatar' !default;
-
-/// $avatar-default-size
-$avatar-default-size: 32px !default;
-
-/// $avatar-palette
-$avatar-palette: $theme-colors !default;
-
-/// $avatar-sizes
-$avatar-sizes: (
-  sm: $avatar-default-size - 8,
-  lg: $avatar-default-size + 8,
-  xl: $avatar-default-size + 24,
-) !default;
-
+// --------------------------------------------
+// Avatars ------------------------------------
+// --------------------------------------------
 
 .#{$avatar-prefix} {
   @include avatar-base();

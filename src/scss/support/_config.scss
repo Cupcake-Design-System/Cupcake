@@ -1,8 +1,6 @@
-////
-/// @group Global Variables
-////
-
-/// Global
+// --------------------------------------------
+// GLOBAL BOOLEANS ----------------------------
+// --------------------------------------------
 $enable-reset         : true !default;
 $enable-shadow-classes: true !default;
 $enable-color-classes : true !default;
@@ -18,3 +16,83 @@ $theme-sizes: (
   xl: 40px,
 ) !default;
 
+
+// --------------------------------------------
+// ALERTS & TOASTS ----------------------------
+// --------------------------------------------
+$alert-prefix               : 'c-alert' !default;
+$toast-prefix               : 'c-toast-alert' !default;
+$alert-border               : 1px solid !default;
+$alert-margin               : 0 0 space(md) 0 !default;
+$alert-padding              : space(sm) !default;
+$alert-top-padding          : space(md) !default;
+$alert-font-size            : 12px !default;
+$alert-line-height          : 16px !default;
+$alert-height               : 32px !default;
+$alert-font-family          : font() !default;
+$alert-font-weight          : font-weight() !default;
+$alert-primary-bg           : rgba(color(primary), .07) !default;
+$alert-primary-color        : color(primary) !default;
+$alert-primary-icon-color   : color(primary) !default;
+$alert-radius               : radius(sm) !default;
+$alert-top-radius           : 0 !default;
+$alert-shadows              : shadow(lg) !default;
+$alert-icon-width           : 12px !default;
+$alert-close-font-size      : 24px !default;
+$toast-palette              : $theme-colors !default;
+$alert-colors: // for base alerts the is name, bg-color, text/border color
+  (primary, color(primary, 0), color(primary))
+  (success, color(success, 0), color(success))
+  (warning, color(warning, 0), color(warning))
+  (danger, color(danger, 0), color(danger)) !default;
+
+
+// --------------------------------------------
+// Avatars ------------------------------------
+// --------------------------------------------
+$avatar-prefix      : 'c-avatar' !default;
+$avatar-default-size: 32px !default;
+$avatar-palette     : $theme-colors !default;
+$avatar-sizes: (
+  sm: $avatar-default-size - 8,
+  lg: $avatar-default-size + 8,
+  xl: $avatar-default-size + 24,
+) !default;
+
+
+// --------------------------------------------
+// CHECKBOX & RADIOS --------------------------
+// --------------------------------------------
+$checkbox-prefix          : 'c-checkbox' !default;
+$radio-prefix             : 'c-radio' !default;
+$checkbox-icon-bd         : 1px solid color(gray, 3) !default;
+$checkbox-icon-radius     : radius(sm) !default;
+$checkbox-transition      : all 0.2s !default;
+$checkbox-disabled-bg     : color(gray, 3) !default;
+$checkbox-disabled-color  : color(gray, 5) !default;
+$checkbox-disabled-opacity: 0.5 !default;
+$checkbox-palette         : $theme-colors !default;
+$checkbox-default-size    : 24px !default;
+$checkbox-sizes: (
+  sm: theme-size(sm),
+  lg: theme-size(lg),
+  xl: theme-size(xl),
+) !default;
+
+
+// --------------------------------------------
+// HELPER CLASSES -----------------------------
+// --------------------------------------------
+$backgound-prefix: 'c-bg' !default;
+$border-prefix   : 'c-bg' !default;
+$padding-prefix  : 'c-p' !default;
+$margin-prefix   : 'c-m' !default;
+$shadow-prefix   : 'c-depth' !default;
+$radius-prefix   : 'c-radius' !default;
+
+
+// --------------------------------------------
+// TYPOGRAPHY ---------------------------------
+// --------------------------------------------
+$text-prefix     : 'c-text' !default;
+$header-prefix   : 'c-header' !default;
