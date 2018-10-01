@@ -1,5 +1,5 @@
 // stylelint-disable
-@import '../../node_modules/sass-true/sass/true';
+@import '../node_modules/sass-true/sass/true';
 
 $color-primary-9: #5018ab;
 $base-font-family: 'Arial' sans-serif;
@@ -16,7 +16,7 @@ $colors: (
 );
 
 
-@import '../../src/scss/support/support';
+@import '../src/scss/support/support';
 
 @include describe('Initialisation with custom config') {
 

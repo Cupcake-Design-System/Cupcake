@@ -4,7 +4,7 @@
   "description": "Design System framework.",
   "scripts": {
     "clean": "rimraf dist/{css/*,js/*,images/*}",
-    "test": "mocha build/test",
+    "test": "mocha test",
     "autoprefixer": "postcss -u autoprefixer -r dist/cupcake.css",
     "scss": "node-sass --output-style expanded -o dist src/scss/cupcake.scss",
     "docs-css": "node-sass --output-style expanded -o dist src/docs/demo.scss",
@@ -13,15 +13,17 @@
     "serve": "browser-sync start --server 'dist' --files \"dist/**/*, !node_modules/**/*.html\"",
     "build:css": "run-s lint scss autoprefixer",
     "build:css-docs": "run-s lint-docs docs-css",
-    "build:html": "gulp",
+    "build:html": "gulp html",
     "build": "run-s build:*",
     "watch:css": "onchange \"src/scss\" -- run-s build:css",
     "watch:docs": "onchange './src/docs/*.scss' -- run-s build:css-docs",
     "watch:html": "onchange 'src/docs/**/*.{html,md,json,yml}' -- run-s build:html",
     "watch": "run-p watch:*",
-    "start": "run-p build watch serve",
+    "docs": "run-s build serve",
+    "start": "run-p docs watch",
+    "sassdocs": "sassdoc src/scss/ -d dist/sassdoc",
     "precommit": "lint-staged && npm run lint",
-    "postinstall": "run-p build watch serve"
+    "postinstall": "run-p docs watch"
   },
   "browserslist": [
     "> 2%",
@@ -31,7 +33,7 @@
     "*.scss": "stylelint --syntax=scss"
   },
   "devDependencies": {
-    "@cupcake-ds/cupcake-sprinkles": "^0.2.2",
+    "@cupcake-ds/cupcake-sprinkles": "^0.2.3",
     "autoprefixer": "^9.1.5",
     "browser-sync": "^2.24.7",
     "fabricator-assemble": "^1.2.0",
@@ -45,6 +47,8 @@
     "postcss-cli": "^6.0.0",
     "rimraf": "^2.6.2",
     "sass-true": "^4.0.0",
+    "sassdoc": "^2.5.0",
+    "sassdoc-theme-flippant": "^0.1.0",
     "stylelint": "^9.6.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-declaration-strict-value": "^1.0.4",

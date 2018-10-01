@@ -34,6 +34,3 @@ gulp.task('server', () => {
     }
   );
 });
-
-
-gulp.task('default', ['html']);
