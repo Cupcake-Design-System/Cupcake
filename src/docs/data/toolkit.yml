@@ -4,6 +4,16 @@ colors:
     - success
     - warning
     - danger
+extended-colors:
+  base:
+    - cyan
+    - grape
+    - indigo
+    - lime
+    - orange
+    - pink
+    - teal
+    - violet
 space:
   base:
     - xxl

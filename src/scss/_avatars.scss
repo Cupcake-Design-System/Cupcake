@@ -6,7 +6,7 @@
   @include avatar-base();
 
   &-square {
-    border-radius: radius(square);
+    border-radius: radius(sm);
   }
 
   img {
@@ -73,9 +73,16 @@
   }
 }
 
-@each $name, $size in config($avatar-sizes) {
+@each $name, $hex in $avatar-palette-light {
   .#{$avatar-prefix}-#{$name} {
-    @include avatar-size($size);
+    background-color: $hex;
+    color: color(gray, 9);
+  }
+}
+
+@each $name, $size, $font-size in config($avatar-sizes) {
+  .#{$avatar-prefix}-#{$name} {
+    @include avatar-size($size, $font-size);
   }
 }
 

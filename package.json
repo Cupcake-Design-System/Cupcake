@@ -9,6 +9,7 @@
     "scss": "node-sass --source-map true --output-style expanded -o dist src/scss/cupcake.scss",
     "docs-css": "node-sass --output-style expanded -o dist src/docs/demo.scss",
     "group": "group-css-media-queries dist/cupcake.css dist/cupcake.css",
+    "stylestats": "stylestats dist/cupcake.css -p > thing",
     "min-css": "cleancss -o dist/cupcake.min.css dist/cupcake.css",
     "prodcss": "run-s group min-css",
     "lint": "stylelint src/scss/ --syntax scss || true",
@@ -39,8 +40,8 @@
     "autoprefixer": "^9.1.5",
     "browser-sync": "^2.24.7",
     "clean-css-cli": "^4.2.1",
-    "group-css-media-queries": "^1.4.1",
     "fabricator-assemble": "^1.2.0",
+    "group-css-media-queries": "^1.4.1",
     "gulp": "^3.9.1",
     "handlebars": "^4.0.12",
     "lint-staged": "^7.3.0",
@@ -57,6 +58,7 @@
     "stylelint": "^9.6.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-declaration-strict-value": "^1.0.4",
-    "stylelint-scss": "^3.3.1"
+    "stylelint-scss": "^3.3.1",
+    "stylestats": "^7.0.2"
   }
 }
