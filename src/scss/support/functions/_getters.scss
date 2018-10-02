@@ -194,6 +194,28 @@
 }
 
 
+@function color-extended($value: cyan, $range: 7) {
+
+  @if $value == violet {
+    @return config($color-extended, 'violet', $range);
+  } @else if $value == lime {
+    @return config($color-extended, 'lime', $range);
+  } @else if $value == grape {
+    @return config($color-extended, 'grape', $range);
+  } @else if $value == indigo {
+    @return config($color-extended, 'indigo', $range);
+  } @else if $value == teal {
+    @return config($color-extended, 'teal', $range);
+  } @else if $value == pink {
+    @return config($color-extended, 'pink', $range);
+  } @else if $value == orange {
+    @return config($color-extended, 'orange', $range);
+  } @else {
+    @error 'Color `#{$value} - #{$range}` not found.';
+  }
+}
+
+
 /// Returns the breakpoint size given its named size.
 ///
 /// @param {string} $name - the named size of the breakpoint requested (e.g. `small` or `large`) as configured in `$cupcake`.
