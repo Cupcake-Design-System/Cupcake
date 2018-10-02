@@ -1,12 +1,6 @@
-////
-/// @group Typography
-////
-
-/// $text-prefix
-$text-prefix     : 'c-text' !default;
-
-/// $header-prefix
-$header-prefix   : 'c-header' !default;
+// --------------------------------------------
+// TYPOGRAPHY ---------------------------------
+// --------------------------------------------
 
 .#{$text-prefix} {
   @include modifiers($font-weight, 'font-weight');

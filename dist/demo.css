@@ -1,0 +1,363 @@
+@charset "UTF-8";
+/* ----------------------- */
+/* 🎂 Cupcake Sprinkles 🎂 */
+/* imported from: @cupcake-ds/cupcake-sprinkles version: 0.2.1 */
+/* DO NOT MODIFY THIS FILE DIRECTLY! */
+/* ALL VALUES COME FROM THE @cupcake-ds/cupcake-sprinkles PACKAGE */
+/* ----------------------- */
+/* stylelint-disable */
+.docs-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.docs-body {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: row;
+}
+
+.docs-content {
+  flex: 1;
+  padding: 0 24px;
+  margin-left: 240px;
+  margin-top: 32px;
+}
+
+.docs-content-fullwidth {
+  margin-left: 0;
+}
+
+.docs-nav {
+  padding: 32px 24px;
+  width: 240px;
+  color: #212529;
+  height: 100%;
+  background-color: #f8f9fa;
+  border-right: 1px solid #e9ecef;
+  order: -1;
+  white-space: nowrap;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.docs-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.docs-nav-header {
+  height: 160px;
+  padding: 24px 8px;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.docs-nav-title {
+  margin-bottom: 16px;
+  margin-top: 24px;
+  padding: 0 8px;
+  color: #adb5bd;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.docs-nav-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.docs-nav-title a:hover {
+  color: #495057;
+}
+
+.docs-nav-title:first-child {
+  margin-top: 32px;
+}
+
+.docs-nav-item {
+  color: #212529;
+  font-size: 14px;
+}
+
+.docs-nav-item a {
+  color: #212529;
+  text-decoration: none;
+  padding: 0 8px;
+  line-height: 40px;
+  display: block;
+}
+
+.docs-nav-item a:hover {
+  background-color: #f1f3f5;
+  border-radius: 4px;
+}
+
+.docs-nav-item .current {
+  background-color: #f1f3f5;
+  font-weight: bold;
+  display: block;
+  border-radius: 2px;
+  color: #1c7cd6;
+}
+
+.ipreo {
+  color: #212529;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 24px;
+}
+
+.cupcake {
+  color: #1c7cd6;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 24px;
+}
+
+.docs-version {
+  width: 96px;
+  border: 1px solid #f1f3f5;
+  border-radius: 2px;
+  background-color: white;
+  color: #212529;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 24px;
+  padding: 0 8px;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.layer-types {
+  display: flex;
+  align-items: space-around;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #f1f3f5;
+  padding: 16px;
+}
+
+.layer-types div {
+  width: 7.5rem;
+  height: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin: 16px;
+}
+
+.space {
+  display: flex;
+  background-color: #f1f3f5;
+  height: 24px;
+  margin: 8px 0;
+  border-radius: 2px;
+}
+
+.space-block-title {
+  color: #212529;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.space * {
+  background-color: rgba(240, 62, 62, 0.8);
+}
+
+.space .xxs {
+  width: 0.125rem;
+}
+
+.space .xs {
+  width: 0.25rem;
+}
+
+.space .sm {
+  width: 0.5rem;
+}
+
+.space .md {
+  width: 1rem;
+}
+
+.space .lg {
+  width: 1.5rem;
+}
+
+.space .xl {
+  width: 2rem;
+}
+
+.space .xxl {
+  width: 3rem;
+}
+
+.color-block-title {
+  color: #212529;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.color-block .colors {
+  height: 32px;
+  width: 100%;
+  display: flex;
+}
+
+.color-block .colors span {
+  flex: 1;
+  display: block;
+  border-radius: 3px;
+  padding: 8px;
+  margin-right: 24px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 16px;
+  text-transform: capitalize;
+}
+
+.color-block .colors span:last-child {
+  margin-right: 0;
+}
+
+.color-block .colors span.info {
+  font-weight: normal;
+  color: #212529;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 8px 0;
+}
+
+.docs-section {
+  padding: 24px 0;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.docs-section:first-child {
+  padding: 48px 0;
+}
+
+.docs-section-title {
+  height: 24px;
+  color: #212529;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  margin: 8px 0;
+}
+
+.docs-section-title a {
+  color: #1c7cd6;
+  padding-left: 8px;
+  font-size: 80%;
+}
+
+.docs-section-title a:hover {
+  color: #228ae6;
+}
+
+.docs-section-subtitle {
+  height: 40px;
+  color: #495057;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.docs-section-header {
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.c-text-primary-9 {
+  color: #1862ab !important;
+}
+
+.c-text-success-9 {
+  color: #2b8a3e !important;
+}
+
+.c-text-warning-9 {
+  color: #d9480f !important;
+}
+
+.c-text-danger-9 {
+  color: #c92a2a !important;
+}
+
+.c-text-gray-9 {
+  color: #212529 !important;
+}
+
+.docs-menu-toggle {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  color: #868e96;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 8px 10px;
+  margin-top: -20px;
+}
+
+.docs-menu-toggle:hover {
+  cursor: pointer;
+  color: #495057;
+}
+
+@media (max-width: 60em) {
+  .docs-nav {
+    margin-left: -240px;
+  }
+  .docs-menu-toggle {
+    display: block;
+    margin-left: 0;
+    border-radius: 4px;
+  }
+  .docs-content {
+    margin-left: 0;
+  }
+  .docs-nav-open .docs-nav {
+    margin-left: 0;
+  }
+  .docs-nav-open .docs-menu-toggle {
+    margin-left: 215px;
+    border-left: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .docs-nav-open .docs-content {
+    margin-left: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: .25em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f8f9fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ced4da;
+  outline: none;
+}

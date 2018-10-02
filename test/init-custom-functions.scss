@@ -1,6 +1,6 @@
 // stylelint-disable
-@import '../../node_modules/sass-true/sass/true';
-@import '../../src/scss/support/support';
+@import '../node_modules/sass-true/sass/true';
+@import '../src/scss/support/support';
 
 @mixin test-mixin {
   box-shadow: shadow(xl);
