@@ -9,7 +9,7 @@ $docs-spacer-sm: space(sm);
 $docs-spacer-md: space(md);
 $docs-spacer-lg: space(lg);
 $docs-spacer-xl: space(xl);
-$docs-spacer-xxl: space(xl);
+$docs-spacer-xxl: space(xl) + space(md);
 
 // dummy stuff til we get layout classes
 
