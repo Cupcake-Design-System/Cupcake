@@ -53,7 +53,7 @@ $alert-colors: // for base alerts the is name, bg-color, text/border color
 $avatar-prefix       : 'c-avatar' !default;
 $avatar-default-size : 32px !default;
 $avatar-border-radius: radius(round);
-$avatar-font-weight  : font-weight(normal);
+$avatar-font-weight  : font-weight(semibold);
 $avatar-line-height  : line-height(normal);
 
 $avatar-palette: (
@@ -90,7 +90,7 @@ $avatar-sizes: // for base avatar the is map name, bg-color, text/border color
   (xs, $avatar-default-size / 2, 10px)
   (sm, $avatar-default-size - 8, 11px)
   (lg, $avatar-default-size + 8, 14px)
-  (xl, ($avatar-default-size + 8) * 2, 18px) !default;
+  (xl, ($avatar-default-size + 8) * 2, 28px) !default;
 
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------

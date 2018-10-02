@@ -7,6 +7,11 @@
 
   &-square {
     border-radius: radius(sm);
+
+    &.#{$avatar-prefix}[data-status]::after {
+      top: -2px;
+      right: -2px;
+    }
   }
 
   img {
@@ -22,8 +27,9 @@
     position: absolute;
     top: 0;
     right: 0;
-    min-height: .5em;
-    min-width: .5em;
+    font-weight: font-weight(normal);
+    min-height: 8px;
+    min-width: 8px;
     background-clip: padding-box;
     border-radius: radius(round);
     box-shadow: 0 0 0 1px color(white);
@@ -45,7 +51,7 @@
     /* stylelint-enable */
     font-size: font-size(xs);
     height: space(md);
-    line-height: 1;
+    line-height: 1.2;
     min-width: space(md);
     padding: space(xxs) space(xs);
     text-align: center;
@@ -83,6 +89,11 @@
 @each $name, $size, $font-size in config($avatar-sizes) {
   .#{$avatar-prefix}-#{$name} {
     @include avatar-size($size, $font-size);
+
+    &[data-status]::after {
+      min-height: round($size / 4);
+      min-width: round($size / 4);
+    }
   }
 }
 

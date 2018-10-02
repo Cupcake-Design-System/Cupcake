@@ -33,7 +33,7 @@ $docs-spacer-xxl: space(xl) + space(md);
     margin-top: $docs-spacer-xxl;
 
     &-fullwidth {
-      margin-left: 0;
+      margin: $docs-spacer-xxl;
     }
   }
 }
