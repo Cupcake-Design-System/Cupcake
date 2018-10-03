@@ -5,21 +5,26 @@
 .#{$avatar-prefix} {
   @include avatar-base();
 
+  img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    border-radius: $avatar-border-radius;
+    border: $avatar-img-border;
+  }
+
   &-square {
     border-radius: radius(sm);
+
+    img {
+      border-radius: radius(sm);
+    }
 
     &.#{$avatar-prefix}[data-status]::after {
       top: -2px;
       right: -2px;
     }
-  }
-
-  img {
-    position: relative;
-    border-radius: radius(round);
-    height: 100%;
-    width: 100%;
-    z-index: 0;
   }
 
   &[data-status]::after {
@@ -51,7 +56,7 @@
     /* stylelint-enable */
     font-size: font-size(xs);
     height: space(md);
-    line-height: 1.2;
+    line-height: 1.5;
     min-width: space(md);
     padding: space(xxs) space(xs);
     text-align: center;

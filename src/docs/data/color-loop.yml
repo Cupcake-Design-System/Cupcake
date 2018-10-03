@@ -1,0 +1,26 @@
+colors:
+  base:
+    - primary
+    - success
+    - warning
+    - danger
+    - cyan
+    - grape
+    - indigo
+    - lime
+    - orange
+    - pink
+    - teal
+    - violet
+    - primary-light
+    - success-light
+    - warning-light
+    - danger-light
+    - cyan-light
+    - grape-light
+    - indigo-light
+    - lime-light
+    - orange-light
+    - pink-light
+    - teal-light
+    - violet-light

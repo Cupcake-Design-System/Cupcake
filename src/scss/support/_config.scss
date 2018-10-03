@@ -52,15 +52,18 @@ $alert-colors: // for base alerts the is name, bg-color, text/border color
 // --------------------------------------------
 $avatar-prefix       : 'c-avatar' !default;
 $avatar-default-size : 32px !default;
-$avatar-border-radius: radius(round);
-$avatar-font-weight  : font-weight(semibold);
-$avatar-line-height  : line-height(normal);
+$avatar-border-radius: radius(round) !default;
+$avatar-font-weight  : font-weight(semibold) !default;
+$avatar-font-size    : 12px !default;
+$avatar-line-height  : line-height(normal) !default;
+$avatar-img-border   : 1px solid color(gray, 4) !default;
 
 $avatar-palette: (
   primary: $color-primary,
   success: $color-success,
   warning: $color-warning,
   danger: $color-danger,
+  dark: $color-gray-9,
   cyan: $color-cyan-7,
   grape: $color-grape-7,
   indigo: $color-indigo-7,
@@ -72,6 +75,7 @@ $avatar-palette: (
 ) !default;
 
 $avatar-palette-light: (
+  secondary: $color-gray-1,
   primary-light: $color-primary-0,
   success-light: $color-success-0,
   warning-light: $color-warning-0,

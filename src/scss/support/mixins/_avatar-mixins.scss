@@ -1,13 +1,13 @@
 @mixin avatar-base($size: $avatar-default-size) {
-  font-size: 12px;
   height: $size;
   width: $size;
-  color: $color-white;
   display: inline-block;
   text-align: center;
   position: relative;
   vertical-align: middle;
   background: color(primary);
+  color: color(white);
+  font-size: $avatar-font-size;
   border-radius: $avatar-border-radius;
   font-weight: $avatar-font-weight;
   line-height: $size;

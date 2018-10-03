@@ -1,0 +1,70 @@
+// stylelint-disable
+@import '../node_modules/sass-true/sass/true';
+@import '../src/scss/support/support';
+
+$avatar-prefix   : 'avi';
+
+@include describe('Test output for avatar-base mixin') {
+
+  @include it('Given a prefix generates correct attributes') {
+    @include assert {
+      @include output {
+        .#{$avatar-prefix} {
+          @include avatar-base();
+        }
+      }
+      @include expect {
+        .avi {
+          height: 32px;
+          width: 32px;
+          display: inline-block;
+          text-align: center;
+          position: relative;
+          vertical-align: middle;
+          background: #1c7cd6;
+          color: #ffffff;
+          font-size: 12px;
+          border-radius: 200px;
+          font-weight: 600;
+          line-height: 32px;
+        }
+
+        .avi i {
+          font-size: 16px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+
+}
+
+@include describe('Test output for avatar-size mixin') {
+
+  @include it('Given a prefix generates correct attributes') {
+    @include assert {
+      @include output {
+        .#{$avatar-prefix}-sm {
+          @include avatar-size(30px, 10px);
+        }
+      }
+      @include expect {
+        .avi-sm {
+          font-size: 10px;
+          height: 30px;
+          width: 30px;
+          line-height: 30px;
+        }
+
+        .avi-sm i {
+          font-size: 15px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+
+}
+
+
+@include report;
