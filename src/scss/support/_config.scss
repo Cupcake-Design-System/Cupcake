@@ -94,7 +94,7 @@ $avatar-sizes: // for base avatar the is map name, bg-color, text/border color
   (xs, $avatar-default-size / 2, 10px)
   (sm, $avatar-default-size - 8, 11px)
   (lg, $avatar-default-size + 8, 14px)
-  (xl, ($avatar-default-size + 8) * 2, 28px) !default;
+  (xl, ($avatar-default-size + 8) * 2, 18px) !default;
 
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------
