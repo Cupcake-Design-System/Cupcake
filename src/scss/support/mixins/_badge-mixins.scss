@@ -1,0 +1,217 @@
+
+// Badge
+@mixin badge-base {
+  display: inline-flex;
+  align-items: center;
+  background: $color-black;
+  border-radius: $badge-default-border-radius;
+  color: $color-white;
+  font-size: $badge-default-font-size;
+  font-weight: $badge-default-font-weight;
+  height: $badge-default-size;
+  line-height: $badge-default-line-height;
+  padding: $badge-default-padding;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &-close {
+    @include close($size: $badge-default-size - 6, $close-size: 2px, $color: $color-white);
+
+    margin-left: $space-xs;
+    margin-right: -$space-xs;
+  }
+
+  i {
+    padding-right: $space-xs;
+    font-size: $badge-default-font-size - 2;
+  }
+}
+
+@mixin badge-size($size: $badge-default-size, $font-size: 12px) {
+  font-size: $font-size;
+  height: $size;
+
+  i {
+    font-size: $font-size - 2;
+  }
+}
+
+.c-badge {
+  .c-badge-close {
+    height: 20px;
+    width: 20px;
+  }
+
+  .c-badge-close-2 {
+    @include close($size: $badge-default-size, $close-size: 2px, $color: $color-white);
+
+    transition: background-color 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: $badge-default-border-radius;
+    margin-left: $space-xs;
+    margin-right: -$space-sm;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+
+      &::before,
+      &::after {
+        background-color: $color-white;
+      }
+    }
+  }
+
+  .c-badge-close-2::before {
+    height: 2px;
+    width: 10px;
+  }
+
+  .c-badge-close-2::after {
+    height: 10px;
+    width: 2px;
+  }
+
+  .c-badge-close-3 {
+    @include close($size: 16px, $close-size: 2px, $color: $color-white);
+
+    transition: background-color 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: $badge-default-border-radius;
+    margin-left: $space-xs;
+    margin-right: -$space-xs;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+
+      &::before,
+      &::after {
+        background-color: $color-white;
+      }
+    }
+  }
+
+  .c-badge-close-3::before {
+    height: 2px;
+    width: 10px;
+  }
+
+  .c-badge-close-3::after {
+    height: 10px;
+    width: 2px;
+  }
+}
+
+.c-badge-sm {
+  .c-badge-close {
+    height: 16px;
+    width: 16px;
+      /* stylelint-disable */
+    margin-right: -2px;
+      /* stylelint-enable */
+  }
+
+  .c-badge-close-2 {
+    @include close($size: 16px, $close-size: 2px, $color: $color-white);
+
+    transition: background-color 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: $badge-default-border-radius;
+    margin-left: $space-xs;
+    margin-right: -$space-xs;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+
+      &::before,
+      &::after {
+        background-color: $color-white;
+      }
+    }
+  }
+
+  .c-badge-close-3 {
+    @include close($size: 14px, $close-size: 2px, $color: $color-white);
+
+    transition: background-color 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: $badge-default-border-radius;
+    margin-left: $space-xs;
+    margin-right: -$space-xs;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+
+      &::before,
+      &::after {
+        background-color: $color-white;
+      }
+    }
+  }
+}
+
+.c-badge-lg {
+  .c-badge-close {
+    height: 24px;
+    width: 24px;
+    margin-right: -$space-sm;
+  }
+
+  .c-badge-close-2 {
+    @include close($size: 32px, $close-size: 2px, $color: $color-white);
+
+    transition: background-color 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: $badge-default-border-radius;
+    margin-left: $space-sm;
+    margin-right: -($space-xs + $space-sm);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+
+      &::before,
+      &::after {
+        background-color: $color-white;
+      }
+    }
+  }
+
+  .c-badge-close-2::before {
+    height: 2px;
+    width: 12px;
+  }
+
+  .c-badge-close-2::after {
+    height: 12px;
+    width: 2px;
+  }
+
+  .c-badge-close-3 {
+    @include close($size: 24px, $close-size: 2px, $color: $color-white);
+
+    transition: background-color 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: $badge-default-border-radius;
+    margin-left: $space-sm;
+    margin-right: -$space-sm;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+
+      &::before,
+      &::after {
+        background-color: $color-white;
+      }
+    }
+  }
+}
+
+.c-badge-square.c-badge,
+.c-badge-square.c-badge-sm,
+.c-badge-square.c-badge-lg {
+  border-radius: radius(sm);
+
+  .c-badge-close-3,
+  .c-badge-close-2 {
+    border-radius: radius(sm);
+  }
+}

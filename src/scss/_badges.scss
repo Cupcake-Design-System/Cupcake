@@ -1,0 +1,54 @@
+// --------------------------------------------
+// BADGES ------------------------------------
+// --------------------------------------------
+
+.#{$badge-prefix} {
+  @include badge-base();
+
+  &-sm {
+    @include badge-size($size: 16px, $font-size: 10px);
+
+    padding: $space-0 $space-xs;
+  }
+
+  &-lg {
+    @include badge-size($size: 32px, $font-size: 12px);
+
+    padding: $space-0 ($space-xs + $space-sm);
+  }
+}
+
+@each $name, $hex in $badge-palette {
+  .#{$badge-prefix}-#{$name} {
+    background-color: $hex;
+  }
+}
+
+@each $name, $hex in $badge-palette-light {
+  .#{$badge-prefix}-#{$name} {
+    background-color: $hex;
+    color: color(gray, 9);
+
+    .c-badge-close::before,
+    .c-badge-close::after {
+      background-color: color(gray, 7);
+    }
+
+    .c-badge-close-3,
+    .c-badge-close-2 {
+      background-color: rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .c-badge-close-3::before,
+    .c-badge-close-3::after,
+    .c-badge-close-2::before,
+    .c-badge-close-2::after {
+      background-color: color(gray, 7) !important;
+    }
+  }
+}
+

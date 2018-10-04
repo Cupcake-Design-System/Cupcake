@@ -1,0 +1,78 @@
+---
+title: Elements | Badges
+notes: Avatars are used to show a representation of an individual or business in the interface.
+---
+
+<div class="c-badge c-badge-sm c-badge-primary">Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
+<div class="c-badge c-badge-primary">Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
+<div class="c-badge c-badge-lg c-badge-primary">Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
+
+<div class="c-badge c-badge-square c-badge-sm c-badge-primary">Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
+<div class="c-badge c-badge-square c-badge-primary">Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
+<div class="c-badge c-badge-square c-badge-lg c-badge-primary">Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
+
+<br>
+<br>
+
+<div class="c-badge c-badge-sm c-badge-primary">Value <a href="" class="c-badge-close-2" aria-hidden="true"></a></div>
+<div class="c-badge c-badge-primary">Value <a href="" class="c-badge-close-2" aria-hidden="true"></a></div>
+<div class="c-badge c-badge-lg c-badge-primary">Value <a href="" class="c-badge-close-2" aria-hidden="true"></a></div>
+
+<div class="c-badge c-badge-square c-badge-sm c-badge-primary">Value <a href="" class="c-badge-close-2" aria-hidden="true"></a></div>
+<div class="c-badge c-badge-square c-badge-primary">Value <a href="" class="c-badge-close-2" aria-hidden="true"></a></div>
+<div class="c-badge c-badge-square c-badge-lg c-badge-primary">Value <a href="" class="c-badge-close-2" aria-hidden="true"></a></div>
+
+
+
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-{{this}}">Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
+  {{/each}}
+  {{/each}}
+</div>
+
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-{{this}}">Value <a href="" class="c-badge-close-2" aria-hidden="true"></a></div>
+  {{/each}}
+  {{/each}}
+</div>
+
+<br>
+<br>
+<strong>Small</strong>
+<br>
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-sm c-badge-{{this}}">Value</div>
+  {{/each}}
+  {{/each}}
+</div>
+
+
+<br>
+<br>
+<strong>Default</strong>
+<br>
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-{{this}}">Value</div>
+  {{/each}}
+  {{/each}}
+</div>
+
+<br>
+<br>
+<strong>Large</strong>
+<br>
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-lg c-badge-{{this}}">Value</div>
+  {{/each}}
+  {{/each}}
+</div>
