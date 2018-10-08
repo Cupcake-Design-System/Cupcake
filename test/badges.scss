@@ -1,0 +1,148 @@
+// stylelint-disable
+@import '../node_modules/sass-true/sass/true';
+@import '../src/scss/support/support';
+
+
+@include describe('Test output for avatar-badge mixin') {
+
+  @include it('Given a prefix generates correct attributes') {
+    @include assert {
+      @include output {
+        .c-badge {
+          @include badge-base();
+        }
+      }
+      @include expect {
+        .c-badge {
+          display: inline-flex;
+          align-items: center;
+          background: #000000;
+          border-radius: 200px;
+          color: #ffffff;
+          font-size: 11px;
+          font-weight: 600;
+          height: 24px;
+          line-height: 2;
+          padding: 0 8px;
+          text-decoration: none;
+          vertical-align: middle;
+        }
+        
+        .c-badge-close {
+          border: 0;
+          cursor: pointer;
+          pointer-events: auto;
+          display: inline-block;
+          flex-grow: 0;
+          flex-shrink: 0;
+          font-size: 0;
+          height: 16px;
+          width: 16px;
+          outline: none;
+          position: relative;
+          vertical-align: top;
+          text-decoration: none;
+          transition: background-color 0.2s ease;
+          border-radius: 200px;
+          margin-left: 8px;
+          margin-right: -4px;
+        }
+        
+        .c-badge-close::before {
+          height: 2px;
+          width: 8px;
+        }
+        
+        .c-badge-close::after {
+          height: 8px;
+          width: 2px;
+        }
+        
+        .c-badge-close::before,
+        .c-badge-close::after {
+          position: absolute;
+          display: block;
+          background-color: #ffffff;
+          border-radius: 2px;
+          content: "";
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform-origin: center center;
+        }
+        
+        .c-badge-close:hover::before,
+        .c-badge-close:hover::after {
+          background-color: #e6e6e6;
+        }
+        
+        .c-badge-close::before,
+        .c-badge-close::after {
+          background-color: #ffffff;
+        }
+        
+        .c-badge-close:hover {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .c-badge-close:hover::before,
+        .c-badge-close:hover::after {
+          background-color: #ffffff;
+        }
+        
+        .c-badge i {
+          padding-right: 8px;
+        }
+        
+        .c-badge .c-avatar {
+          font-size: 12px;
+          height: 24px;
+          width: 24px;
+          line-height: 24px;
+          margin-right: 8px;
+          margin-left: -8px;
+        }
+        
+        .c-badge .c-avatar i {
+          font-size: 12px;
+          line-height: 24px;
+        }
+        
+        .c-badge .c-avatar img {
+          border: 0;
+        }
+      }
+    }
+  }
+
+}
+
+// @include describe('Test output for avatar-size mixin') {
+
+//   @include it('Given a prefix generates correct attributes') {
+//     @include assert {
+//       @include output {
+//         .#{$avatar-prefix}-sm {
+//           @include avatar-size(30px, 10px);
+//         }
+//       }
+//       @include expect {
+//         .avi-sm {
+//           font-size: 10px;
+//           height: 30px;
+//           width: 30px;
+//           line-height: 30px;
+//         }
+
+//         .avi-sm i {
+//           font-size: 15px;
+//           line-height: 30px;
+//         }
+//       }
+//     }
+//   }
+
+// }
+
+
+@include report;

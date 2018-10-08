@@ -106,7 +106,7 @@ $badge-default-padding      : space(0) space(sm) !default;
 $badge-default-border-radius: radius(round) !default;
 $badge-default-font-weight  : font-weight(semibold) !default;
 $badge-default-font-size    : 11px !default;
-$badge-default-line-height  : line-height(normal) !default;
+$badge-default-line-height  : 2 !default;
 
 $badge-palette: (
   primary: $color-primary,

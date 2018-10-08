@@ -5,52 +5,6 @@
 /* DO NOT MODIFY THIS FILE DIRECTLY! */
 /* ALL VALUES COME FROM THE @cupcake-ds/cupcake-sprinkles PACKAGE */
 /* ----------------------- */
-.c-badge-close-2 {
-  border: 0;
-  cursor: pointer;
-  pointer-events: auto;
-  display: inline-block;
-  flex-grow: 0;
-  flex-shrink: 0;
-  font-size: 0;
-  height: 24px;
-  width: 24px;
-  outline: none;
-  position: relative;
-  vertical-align: top;
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 200px;
-  margin-left: 4px;
-  margin-right: -4px;
-}
-
-.c-badge-close-2::before {
-  height: 2px;
-  width: 50%;
-}
-
-.c-badge-close-2::after {
-  height: 50%;
-  width: 2px;
-}
-
-.c-badge-close-2::before, .c-badge-close-2::after {
-  position: absolute;
-  display: block;
-  background-color: #ffffff;
-  border-radius: 2px;
-  content: "";
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%) rotate(45deg);
-  transform-origin: center center;
-}
-
-.c-badge-close-2:hover::before, .c-badge-close-2:hover::after {
-  background-color: #e6e6e6;
-}
-
 /* stylelint-disable */
 .docs-container {
   display: flex;

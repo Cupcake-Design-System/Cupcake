@@ -5,16 +5,69 @@
 .#{$badge-prefix} {
   @include badge-base();
 
+  .#{$avatar-prefix} { // support avatar in badges
+    @include avatar-size(24px);
+    
+    margin-right: $space-sm;
+    margin-left: -($space-sm);
+
+    img {
+      border: 0;
+    }
+  }
+
   &-sm {
     @include badge-size($size: 16px, $font-size: 10px);
 
     padding: $space-0 $space-xs;
+
+    i {
+      padding-right: $space-xs;
+    }
+
+    .#{$avatar-prefix} {
+      @include avatar-size(16px);
+
+      margin-right: $space-xs;
+      margin-left: -($space-xs);
+    }
+
+    .#{$badge-prefix}-close {
+      margin-left: $space-xs;
+      margin-right: -($space-xs);
+    }
   }
 
   &-lg {
     @include badge-size($size: 32px, $font-size: 12px);
 
     padding: $space-0 ($space-xs + $space-sm);
+
+    .#{$avatar-prefix} {
+      @include avatar-size(32px);
+
+      margin-right: $space-sm;
+      margin-left: -($space-sm + $space-xs);
+    }
+
+    .#{$badge-prefix}-close {
+      @include close-size($size: 24px, $x-size: 3px);
+      
+      margin-right: -$space-sm;
+    }
+  }
+
+  &-square {
+    border-radius: radius(sm);
+    
+    .#{$avatar-prefix},
+    .#{$avatar-prefix} img {
+      border-radius: radius(sm);
+    }
+    
+    .#{$badge-prefix}-close {
+      border-radius: radius(sm);
+    }
   }
 }
 
@@ -29,25 +82,8 @@
     background-color: $hex;
     color: color(gray, 9);
 
-    .c-badge-close::before,
-    .c-badge-close::after {
-      background-color: color(gray, 7);
-    }
-
-    .c-badge-close-3,
-    .c-badge-close-2 {
-      background-color: rgba(0, 0, 0, 0.05);
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-      }
-    }
-
-    .c-badge-close-3::before,
-    .c-badge-close-3::after,
-    .c-badge-close-2::before,
-    .c-badge-close-2::after {
-      background-color: color(gray, 7) !important;
+    .#{$badge-prefix}-close {
+      @include close-style($style: "bg-light");
     }
   }
 }
