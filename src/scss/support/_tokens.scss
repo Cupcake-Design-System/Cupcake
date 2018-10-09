@@ -469,3 +469,32 @@ $theme-colors: (
   black: $color-black,
   white: $color-white,
 );
+
+
+$extended-palette: (
+  dark: $color-gray-9,
+  cyan: $color-cyan-7,
+  grape: $color-grape-7,
+  indigo: $color-indigo-7,
+  lime: $color-lime-7,
+  orange: $color-orange-7,
+  pink: $color-pink-7,
+  teal: $color-teal-7,
+  violet: $color-violet-7,
+) !default;
+
+$extended-palette-light: (
+  secondary: $color-gray-1,
+  primary-light: $color-primary-0,
+  success-light: $color-success-0,
+  warning-light: $color-warning-0,
+  danger-light: $color-danger-0,
+  cyan-light: $color-cyan-0,
+  grape-light: $color-grape-0,
+  indigo-light: $color-indigo-0,
+  lime-light: $color-lime-0,
+  orange-light: $color-orange-0,
+  pink-light: $color-pink-0,
+  teal-light: $color-teal-0,
+  violet-light: $color-violet-0,
+) !default;
