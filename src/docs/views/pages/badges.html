@@ -3,113 +3,16 @@ title: Test
 layout: blank
 ---
 
-<div class="c-badge c-badge-primary">
-    <div class="c-avatar c-avatar-success" data-text="AB">
-        <img src="https://unsplash.it/200?image=433">
-    </div> 
-    Primary Bear
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
-</div>
-  
-<div class="c-badge c-badge-lg c-badge-primary">
-  <div class="c-avatar c-avatar-success" data-text="AB">
-      <img src="https://unsplash.it/200?image=433">
-  </div> 
-  Primary Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
-</div>
 
-<div class="c-badge c-badge-success">
-    <div class="c-avatar c-avatar-success" data-text="AB">
-        <img src="https://unsplash.it/200?image=433">
-    </div> 
-    Success Bear 
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
-  </div>
-  
-<div class="c-badge c-badge-lg c-badge-success">
-  <div class="c-avatar c-avatar-success" data-text="AB">
-      <img src="https://unsplash.it/200?image=433">
-  </div> 
-  Success Bear 
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
-</div>
-
-
+<h3>Sooo Many Options...</h3>
+<br>
+<br>
+<hr>
 <br>
 <br>
 
-
-<div class="c-badge c-badge-square c-badge-primary">
-    <div class="c-avatar c-avatar-success" data-text="AB">
-        <img src="https://unsplash.it/200?image=433">
-    </div> 
-    Primary Bear
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
-</div>
-  
-
-<div class="c-badge c-badge-square c-badge-lg c-badge-primary">
-  <div class="c-avatar c-avatar-success" data-text="AB">
-      <img src="https://unsplash.it/200?image=433">
-  </div> 
-  Primary Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
-</div>
-
-<div class="c-badge c-badge-square c-badge-success">
-    <div class="c-avatar c-avatar-success" data-text="AB">
-        <img src="https://unsplash.it/200?image=433">
-    </div> 
-    Success Bear 
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
-  </div>
-  
-<div class="c-badge c-badge-square c-badge-lg c-badge-success">
-  <div class="c-avatar c-avatar-success" data-text="AB">
-      <img src="https://unsplash.it/200?image=433">
-  </div> 
-  Success Bear 
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
-</div>
-
-
-<div class="c-badge c-badge-sm c-badge-primary"><i class="fas fa-info-circle"></i> Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
-<div class="c-badge c-badge-primary"><i class="fas fa-info-circle"></i> Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
-<div class="c-badge c-badge-lg c-badge-primary"><i class="fas fa-info-circle"></i> Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
-<div class="c-badge c-badge-square c-badge-sm c-badge-primary"><div class="c-avatar c-avatar-success" data-text="A">
-</div> Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
-<div class="c-badge c-badge-square c-badge-primary"><i class="fas fa-info-circle"></i> Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
-<div class="c-badge c-badge-square c-badge-lg c-badge-primary"><i class="fas fa-info-circle"></i> Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
-<br>
-<br>
-
-<div class="avatar-wrap">
-  {{#each color-loop.colors}}
-  {{#each this}}
-  <div class="c-badge c-badge-{{this}}">Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
-  {{/each}}
-  {{/each}}
-</div>
-
-<br>
-<br>
-
-<div class="avatar-wrap">
-  {{#each color-loop.colors}}
-  {{#each this}}
-  <div class="c-badge c-badge-square c-badge-{{this}}">Value <a href="" class="c-badge-close" aria-hidden="true"></a></div>
-  {{/each}}
-  {{/each}}
-</div>
-
-  
-
-
-
-<br>
-<br>
 <strong>Small</strong>
+<br>
 <br>
 <div class="avatar-wrap">
   {{#each color-loop.colors}}
@@ -118,11 +21,54 @@ layout: blank
   {{/each}}
   {{/each}}
 </div>
+<br>
+<strong>Small w/close</strong>
+<br>
+<br>
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-sm c-badge-{{this}}">Value
+    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  </div>
+  {{/each}}
+  {{/each}}
+</div>
 
+<br>
+<strong>Small Square</strong>
+<br>
+<br>
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-square c-badge-sm c-badge-{{this}}">Value</div>
+  {{/each}}
+  {{/each}}
+</div>
+
+<br>
+<strong>Small Square w/close</strong>
+<br>
+<br>
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-square c-badge-sm c-badge-{{this}}">Value
+    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  </div>
+  {{/each}}
+  {{/each}}
+</div>
 
 <br>
 <br>
+<hr>
+<br>
+<br>
+
 <strong>Default</strong>
+<br>
 <br>
 <div class="avatar-wrap">
   {{#each color-loop.colors}}
@@ -131,10 +77,54 @@ layout: blank
   {{/each}}
   {{/each}}
 </div>
+<br>
+<strong>Default w/close</strong>
+<br>
+<br>
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-{{this}}">Value
+    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  </div>
+  {{/each}}
+  {{/each}}
+</div>
+
+<br>
+<strong>Default Square</strong>
+<br>
+<br>
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-square c-badge-{{this}}">Value</div>
+  {{/each}}
+  {{/each}}
+</div>
+
+<br>
+<strong>Default Square w/close</strong>
+<br>
+<br>
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-square c-badge-{{this}}">Value
+    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  </div>
+  {{/each}}
+  {{/each}}
+</div>
 
 <br>
 <br>
+<hr>
+<br>
+<br>
+
 <strong>Large</strong>
+<br>
 <br>
 <div class="avatar-wrap">
   {{#each color-loop.colors}}
@@ -143,3 +133,158 @@ layout: blank
   {{/each}}
   {{/each}}
 </div>
+<br>
+<strong>Large w/close</strong>
+<br>
+<br>
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-lg c-badge-{{this}}">Value
+    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  </div>
+  {{/each}}
+  {{/each}}
+</div>
+
+<br>
+<strong>Large Square</strong>
+<br>
+<br>
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-lg c-badge-square c-badge-{{this}}">Value</div>
+  {{/each}}
+  {{/each}}
+</div>
+
+<br>
+<strong>Large Square w/close</strong>
+<br>
+<br>
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-lg c-badge-square c-badge-{{this}}">Value
+    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  </div>
+  {{/each}}
+  {{/each}}
+</div>
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+<br>
+<strong>Miscellaneous</strong>
+<br>
+<br>
+
+<div class="c-badge c-badge-primary">
+  <div class="c-avatar c-avatar-success" data-text="AB">
+    <img src="https://unsplash.it/200?image=433">
+  </div>
+  Primary Bear
+  <a href="" class="c-badge-close" aria-hidden="true"></a>
+</div>
+
+<div class="c-badge c-badge-square c-badge-primary">
+  <div class="c-avatar c-avatar-success" data-text="AB">
+    <img src="https://unsplash.it/200?image=433">
+  </div>
+  Primary Bear
+  <a href="" class="c-badge-close" aria-hidden="true"></a>
+</div>
+
+<div class="c-badge c-badge-lg c-badge-primary">
+  <div class="c-avatar c-avatar-success" data-text="AB">
+    <img src="https://unsplash.it/200?image=433">
+  </div>
+  Primary Bear
+  <a href="" class="c-badge-close" aria-hidden="true"></a>
+</div>
+
+<div class="c-badge c-badge-square c-badge-lg c-badge-primary">
+  <div class="c-avatar c-avatar-success" data-text="AB">
+    <img src="https://unsplash.it/200?image=433">
+  </div>
+  Primary Bear
+  <a href="" class="c-badge-close" aria-hidden="true"></a>
+</div>
+
+
+<div class="c-badge c-badge-success">
+  <div class="c-avatar c-avatar-success" data-text="AB">
+    <img src="https://unsplash.it/200?image=433">
+  </div>
+  Success Bear
+  <a href="" class="c-badge-close" aria-hidden="true"></a>
+</div>
+
+<div class="c-badge c-badge-square c-badge-success">
+  <div class="c-avatar c-avatar-success" data-text="AB">
+    <img src="https://unsplash.it/200?image=433">
+  </div>
+  Success Bear
+  <a href="" class="c-badge-close" aria-hidden="true"></a>
+</div>
+
+<div class="c-badge c-badge-lg c-badge-success">
+  <div class="c-avatar c-avatar-success" data-text="AB">
+    <img src="https://unsplash.it/200?image=433">
+  </div>
+  Success Bear
+  <a href="" class="c-badge-close" aria-hidden="true"></a>
+</div>
+
+
+<div class="c-badge c-badge-square c-badge-lg c-badge-success">
+  <div class="c-avatar c-avatar-success" data-text="AB">
+    <img src="https://unsplash.it/200?image=433">
+  </div>
+  Success Bear
+  <a href="" class="c-badge-close" aria-hidden="true"></a>
+</div>
+
+<br>
+<br>
+
+<div class="c-badge c-badge-lg c-badge-orange-light">
+    <div class="c-avatar c-avatar-orange">
+        <i class="fab fa-amazon"></i>
+    </div>
+    Amazon
+    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  </div>
+
+<div class="c-badge c-badge-lg c-badge-success-light">
+  <div class="c-avatar c-avatar-success">
+      <i class="fab fa-apple"></i>
+  </div>
+  Apple
+  <a href="" class="c-badge-close" aria-hidden="true"></a>
+</div>
+
+<div class="c-badge c-badge-square c-badge-lg c-badge-pink">
+  <div class="c-avatar c-avatar-success" data-text="AB">
+      <img src="https://unsplash.it/200?image=433">
+  </div>
+  Pink Bear Large Square - with long title
+  <a href="" class="c-badge-close" aria-hidden="true"></a>
+</div>
+
+<div class="c-badge c-badge-square c-badge-lg c-badge-teal">
+  <div class="c-avatar c-avatar-success" data-text="AB">
+      <img src="https://unsplash.it/200?image=433">
+  </div>
+  Teal Bear Large Square - with long title
+  <a href="" class="c-badge-close" aria-hidden="true"></a>
+</div>
+<br>
+<br>
+<br>
+<br>

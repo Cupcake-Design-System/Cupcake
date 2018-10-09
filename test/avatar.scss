@@ -4,9 +4,9 @@
 
 $avatar-prefix   : 'avi';
 
-@include describe('Test output for avatar-base mixin') {
+@include describe('Test output for avatar mixins') {
 
-  @include it('Given a prefix generates correct attributes') {
+  @include it('Given a prefix - generates base attributes for an avatar') {
     @include assert {
       @include output {
         .#{$avatar-prefix} {
@@ -37,11 +37,7 @@ $avatar-prefix   : 'avi';
     }
   }
 
-}
-
-@include describe('Test output for avatar-size mixin') {
-
-  @include it('Given a prefix generates correct attributes') {
+  @include it('Given two arguments - outputs alternative SIZE') {
     @include assert {
       @include output {
         .#{$avatar-prefix}-sm {

@@ -15,9 +15,9 @@
   vertical-align: middle;
 
   &-close {
-    @include close($size: 16px, $x-size: 2px, $color: $color-white);
+    @include close($size: 16px, $x-size: 2px);
     @include close-style($style: "bg-dark");
-    
+
     border-radius: $badge-default-border-radius;
     margin-left: $space-sm;
     margin-right: -$space-xs;
@@ -35,4 +35,9 @@
   i {
     font-size: $font-size;
   }
+}
+
+@mixin badge-style($bg, $color: $color-white) {
+  background-color: $bg;
+  color: $color;
 }

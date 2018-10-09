@@ -10,9 +10,9 @@ $values: (
 $header-prefix   : 'header-test';
 $body-prefix   : 'body-test';
 
-@include describe('Test output for header-text mixin') {
+@include describe('Test output for text mixins') {
 
-  @include it('Given a map generates correct header-text classes') {
+  @include it('Given a map generates correct HEADER-text classes') {
     @include assert {
       @include output {
         @each $name, $value in $values {
@@ -39,11 +39,7 @@ $body-prefix   : 'body-test';
     }
   }
 
-}
-
-@include describe('Test output for body-text mixin') {
-
-  @include it('Given a map generates correct body-text classes') {
+  @include it('Given a map generates correct BODY-text classes') {
     @include assert {
       @include output {
         @each $name, $value in $values {

@@ -3,17 +3,17 @@
 @import '../src/scss/support/support';
 
 
-@include describe('Test output for avatar-badge mixin') {
+@include describe('Test output for badge mixins') {
 
-  @include it('Given a prefix generates correct attributes') {
+  @include it('Generates base attributes for a badge') {
     @include assert {
       @include output {
-        .c-badge {
+        .badge {
           @include badge-base();
         }
       }
       @include expect {
-        .c-badge {
+        .badge {
           display: inline-flex;
           align-items: center;
           background: #000000;
@@ -27,8 +27,7 @@
           text-decoration: none;
           vertical-align: middle;
         }
-        
-        .c-badge-close {
+        .badge-close {
           border: 0;
           cursor: pointer;
           pointer-events: auto;
@@ -47,22 +46,18 @@
           margin-left: 8px;
           margin-right: -4px;
         }
-        
-        .c-badge-close::before {
+        .badge-close::before {
           height: 2px;
           width: 8px;
         }
-        
-        .c-badge-close::after {
+        .badge-close::after {
           height: 8px;
           width: 2px;
         }
-        
-        .c-badge-close::before,
-        .c-badge-close::after {
+        .badge-close::before, .badge-close::after {
           position: absolute;
           display: block;
-          background-color: #ffffff;
+          background-color: #868e96;
           border-radius: 2px;
           content: "";
           left: 50%;
@@ -70,79 +65,77 @@
           transform: translateX(-50%) translateY(-50%) rotate(45deg);
           transform-origin: center center;
         }
-        
-        .c-badge-close:hover::before,
-        .c-badge-close:hover::after {
-          background-color: #e6e6e6;
+        .badge-close:hover::before, .badge-close:hover::after {
+          background-color: #6c757d;
         }
-        
-        .c-badge-close::before,
-        .c-badge-close::after {
+        .badge-close::before, .badge-close::after {
           background-color: #ffffff;
         }
-        
-        .c-badge-close:hover {
+        .badge-close:hover {
           background-color: rgba(0, 0, 0, 0.3);
         }
-        
-        .c-badge-close:hover::before,
-        .c-badge-close:hover::after {
+        .badge-close:hover::before, .badge-close:hover::after {
           background-color: #ffffff;
         }
-        
-        .c-badge i {
+        .badge i {
           padding-right: 8px;
         }
-        
-        .c-badge .c-avatar {
-          font-size: 12px;
-          height: 24px;
-          width: 24px;
-          line-height: 24px;
-          margin-right: 8px;
-          margin-left: -8px;
+      }
+    }
+  }
+
+  @include it('Given arguments - outputs correct SIZE attributes') {
+    @include assert {
+      @include output {
+        .badge {
+          @include badge-size($size: 32px, $font-size: 12px);
         }
-        
-        .c-badge .c-avatar i {
+      }
+      @include expect {
+        .badge {
           font-size: 12px;
-          line-height: 24px;
+          height: 32px;
         }
-        
-        .c-badge .c-avatar img {
-          border: 0;
+        .badge i {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  @include it('Given single argument - outputs correct COLOR bg with white color') {
+    @include assert {
+      @include output {
+        .badge {
+          @include badge-style(purple);
+        }
+      }
+      @include expect {
+        .badge {
+          background-color: purple;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  @include it('Given two arguments - outputs correct COLOR BACKGROUND & FOREGROUND') {
+    @include assert {
+      @include output {
+        .badge {
+          @include badge-style(yellow, black);
+        }
+      }
+      @include expect {
+        .badge {
+          background-color: yellow;
+          color: black;
         }
       }
     }
   }
 
 }
-
-// @include describe('Test output for avatar-size mixin') {
-
-//   @include it('Given a prefix generates correct attributes') {
-//     @include assert {
-//       @include output {
-//         .#{$avatar-prefix}-sm {
-//           @include avatar-size(30px, 10px);
-//         }
-//       }
-//       @include expect {
-//         .avi-sm {
-//           font-size: 10px;
-//           height: 30px;
-//           width: 30px;
-//           line-height: 30px;
-//         }
-
-//         .avi-sm i {
-//           font-size: 15px;
-//           line-height: 30px;
-//         }
-//       }
-//     }
-//   }
-
-// }
 
 
 @include report;
