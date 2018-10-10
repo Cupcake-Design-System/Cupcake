@@ -1,0 +1,107 @@
+// stylelint-disable
+@import '../node_modules/sass-true/sass/true';
+@import '../src/scss/support/support';
+
+
+@include describe('Test output for close-base mixin') {
+
+  @include it('Generates style for default X') {
+    @include assert {
+      @include output {
+        .new {
+          @include close();
+        }
+      }
+      @include expect {
+        .new {
+          border: 0;
+          cursor: pointer;
+          pointer-events: auto;
+          display: inline-block;
+          flex-grow: 0;
+          flex-shrink: 0;
+          font-size: 0;
+          height: 24px;
+          width: 24px;
+          outline: none;
+          position: relative;
+          vertical-align: top;
+          text-decoration: none;
+        }
+        .new::before {
+          height: 3px;
+          width: 12px;
+        }
+        .new::after {
+          height: 12px;
+          width: 3px;
+        }
+        .new::before, .new::after {
+          position: absolute;
+          display: block;
+          background-color: #868e96;
+          border-radius: 2px;
+          content: "";
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform-origin: center center;
+        }
+        .new:hover::before, .new:hover::after {
+          background-color: #6c757d;
+        }
+      }
+    }
+  }
+
+  @include it('Given defined arguments - generates appropriate STYLE for close X') {
+    @include assert {
+      @include output {
+        .new {
+          @include close-style(bg-dark);
+        }
+      }
+      @include expect {
+        .new {
+          transition: background-color 0.2s ease;
+        }
+        .new::before, .new::after {
+          background-color: #ffffff;
+        }
+        .new:hover {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+        .new:hover::before, .new:hover::after {
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+
+  @include it('Given two arguments - generates alternate SIZE for close X') {
+    @include assert {
+      @include output {
+        .close-lg {
+          @include close-size(24px, 9px);
+        }
+      }
+      @include expect {
+        .close-lg {
+          height: 24px;
+          width: 24px;
+        }
+        .close-lg::before {
+          height: 9px;
+          width: 12px;
+        }
+        .close-lg::after {
+          height: 12px;
+          width: 9px;
+        }
+      }
+    }
+  }
+
+}
+
+@include report;

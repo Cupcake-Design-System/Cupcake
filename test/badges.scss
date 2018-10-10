@@ -1,0 +1,142 @@
+// stylelint-disable
+@import '../node_modules/sass-true/sass/true';
+@import '../src/scss/support/support';
+
+
+@include describe('Test output for badge mixins') {
+
+  @include it('Generates base attributes for a badge') {
+    @include assert {
+      @include output {
+        .badge {
+          @include badge-base();
+        }
+      }
+      @include expect {
+        .badge {
+          display: inline-flex;
+          align-items: center;
+          background: #000000;
+          border-radius: 200px;
+          color: #ffffff;
+          font-size: 11px;
+          font-weight: 600;
+          height: 24px;
+          line-height: 2;
+          padding: 0 8px;
+          text-decoration: none;
+          vertical-align: middle;
+        }
+        .badge-close {
+          border: 0;
+          cursor: pointer;
+          pointer-events: auto;
+          display: inline-block;
+          flex-grow: 0;
+          flex-shrink: 0;
+          font-size: 0;
+          height: 16px;
+          width: 16px;
+          outline: none;
+          position: relative;
+          vertical-align: top;
+          text-decoration: none;
+          transition: background-color 0.2s ease;
+          border-radius: 200px;
+          margin-left: 4px;
+          margin-right: -4px;
+        }
+        .badge-close::before {
+          height: 2px;
+          width: 8px;
+        }
+        .badge-close::after {
+          height: 8px;
+          width: 2px;
+        }
+        .badge-close::before, .badge-close::after {
+          position: absolute;
+          display: block;
+          background-color: #868e96;
+          border-radius: 2px;
+          content: "";
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform-origin: center center;
+        }
+        .badge-close:hover::before, .badge-close:hover::after {
+          background-color: #6c757d;
+        }
+        .badge-close::before, .badge-close::after {
+          background-color: #ffffff;
+        }
+        .badge-close:hover {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+        .badge-close:hover::before, .badge-close:hover::after {
+          background-color: #ffffff;
+        }
+        .badge i {
+          padding-right: 8px;
+        }
+      }
+    }
+  }
+
+  @include it('Given arguments - outputs correct SIZE attributes') {
+    @include assert {
+      @include output {
+        .badge {
+          @include badge-size($size: 32px, $font-size: 12px);
+        }
+      }
+      @include expect {
+        .badge {
+          font-size: 12px;
+          height: 32px;
+          min-width: 32px;
+        }
+        .badge i {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  @include it('Given single argument - outputs correct COLOR bg with white color') {
+    @include assert {
+      @include output {
+        .badge {
+          @include badge-style(purple);
+        }
+      }
+      @include expect {
+        .badge {
+          background-color: purple;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  @include it('Given two arguments - outputs correct COLOR BACKGROUND & FOREGROUND') {
+    @include assert {
+      @include output {
+        .badge {
+          @include badge-style(yellow, black);
+        }
+      }
+      @include expect {
+        .badge {
+          background-color: yellow;
+          color: black;
+        }
+      }
+    }
+  }
+
+}
+
+
+@include report;

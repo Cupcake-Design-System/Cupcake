@@ -1,0 +1,106 @@
+// --------------------------------------------
+// BADGES ------------------------------------
+// --------------------------------------------
+
+.#{$badge-prefix} {
+  @include badge-base();
+
+  .#{$avatar-prefix} { // support avatar in badges
+    @include avatar-size($badge-default-size);
+
+    margin-right: $space-sm;
+    margin-left: -($space-sm);
+
+    img {
+      border: 0;
+    }
+
+    i {
+      padding: $space-0;
+    }
+  }
+
+  &-sm {
+    @include badge-size($badge-sm-size, $badge-sm-font-size);
+
+    padding: $space-0 $space-xs;
+
+    i {
+      padding-right: $space-xs;
+    }
+
+    .#{$avatar-prefix} {
+      @include avatar-size($badge-sm-size);
+
+      margin-right: $space-xs;
+      margin-left: -($space-xs);
+    }
+
+    .#{$badge-prefix}-close {
+      margin-left: $space-xs;
+      margin-right: -($space-xs);
+    }
+  }
+
+  &-lg {
+    @include badge-size($badge-lg-size, $badge-lg-font-size);
+
+    padding: $space-0 ($space-xs + $space-sm);
+
+    .#{$avatar-prefix} {
+      @include avatar-size($badge-lg-size);
+
+      margin-right: $space-sm;
+      margin-left: -($space-sm + $space-xs);
+    }
+
+    .#{$badge-prefix}-close {
+      @include close-size(($badge-lg-size - 8), 3px);
+
+      margin-right: -$space-sm;
+    }
+  }
+
+  &-top {
+    vertical-align: top;
+  }
+
+  &-square {
+    border-radius: radius(sm);
+
+    .#{$avatar-prefix},
+    .#{$avatar-prefix} img {
+      border-radius: radius(sm);
+    }
+
+    .#{$badge-prefix}-close {
+      border-radius: radius(sm);
+    }
+  }
+}
+
+// All default Badge color classes
+@each $name, $hex in $theme-colors {
+  .#{$badge-prefix}-#{$name} {
+    @include badge-style($hex);
+  }
+}
+
+// Extended Badge color classes
+@if $enable-extend-badge-colors == true {
+  @each $name, $hex in $extended-palette-light {
+    .#{$badge-prefix}-#{$name} {
+      @include badge-style($hex, $color-gray-9);
+
+      .#{$badge-prefix}-close {
+        @include close-style($style: "bg-light");
+      }
+    }
+  }
+
+  @each $name, $hex in $extended-palette {
+    .#{$badge-prefix}-#{$name} {
+      @include badge-style($hex);
+    }
+  }
+}

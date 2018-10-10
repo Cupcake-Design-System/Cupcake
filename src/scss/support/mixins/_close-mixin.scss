@@ -1,4 +1,8 @@
-@mixin close($size: 24px, $close-size:3px, $color:$color-gray-4) {
+@mixin close(
+  $size: 24px,
+  $x-size:3px,
+  $color: $color-gray-6
+) {
   border: 0;
   cursor: pointer;
   pointer-events: auto;
@@ -14,13 +18,13 @@
   text-decoration: none;
 
   &::before {
-    height: $close-size;
-    width: 50%;
+    height: $x-size;
+    width: ($size / 2);
   }
 
   &::after {
-    height: 50%;
-    width: $close-size;
+    height: ($size / 2);
+    width: $x-size;
   }
 
   &::before,
@@ -39,5 +43,66 @@
   &:hover::before,
   &:hover::after {
     background-color: darken($color, 10);
+  }
+}
+
+
+@mixin close-style(
+  $style: "bg-dark"
+) {
+
+  @if $style == "bg-light" {
+    transition: background-color 0.2s ease;
+
+    &::before,
+    &::after {
+      background-color: color(gray, 7);
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+
+      &::before,
+      &::after {
+        background-color: color(gray, 7);
+      }
+    }
+  }
+
+  @if $style == "bg-dark" {
+    transition: background-color 0.2s ease;
+
+    &::before,
+    &::after {
+      background-color: $color-white;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+
+      &::before,
+      &::after {
+        background-color: $color-white;
+      }
+    }
+  }
+}
+
+
+@mixin close-size(
+  $size: 24px,
+  $x-size:3px
+) {
+  height: $size;
+  width: $size;
+
+  &::before {
+    height: $x-size;
+    width: ($size / 2);
+  }
+
+  &::after {
+    height: ($size / 2);
+    width: $x-size;
   }
 }

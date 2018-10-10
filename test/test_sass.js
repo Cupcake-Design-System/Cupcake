@@ -13,6 +13,12 @@ sassTrue.runSass({file: initCustomFunctions}, describe, it);
 const avatar = path.join(__dirname, 'avatar.scss');
 sassTrue.runSass({file: avatar}, describe, it);
 
+const badges = path.join(__dirname, 'badges.scss');
+sassTrue.runSass({file: badges}, describe, it);
+
+const closeMixin = path.join(__dirname, 'close-mixin.scss');
+sassTrue.runSass({file: closeMixin}, describe, it);
+
 const typography = path.join(__dirname, 'typography.scss');
 sassTrue.runSass({file: typography}, describe, it);
 
