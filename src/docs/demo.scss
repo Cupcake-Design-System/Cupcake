@@ -33,7 +33,7 @@ $docs-spacer-xxl: space(xl) + space(md);
     margin-top: $docs-spacer-xxl;
 
     &-fullwidth {
-      margin-left: 0;
+      margin: $docs-spacer-xxl;
     }
   }
 }
@@ -381,5 +381,13 @@ $docs-spacer-xxl: space(xl) + space(md);
   &-thumb {
     background-color: $color-gray-4;
     outline: none;
+  }
+}
+
+.avatar-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  > div {
+    margin: 5px;
   }
 }

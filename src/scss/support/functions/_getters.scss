@@ -200,6 +200,8 @@
     @return config($color-extended, 'violet', $range);
   } @else if $value == lime {
     @return config($color-extended, 'lime', $range);
+  } @else if $value == cyan {
+    @return config($color-extended, 'cyan', $range);
   } @else if $value == grape {
     @return config($color-extended, 'grape', $range);
   } @else if $value == indigo {

@@ -50,14 +50,21 @@ $alert-colors: // for base alerts the is name, bg-color, text/border color
 // --------------------------------------------
 // Avatars ------------------------------------
 // --------------------------------------------
-$avatar-prefix      : 'c-avatar' !default;
-$avatar-default-size: 32px !default;
-$avatar-palette     : $theme-colors !default;
-$avatar-sizes: (
-  sm: $avatar-default-size - 8,
-  lg: $avatar-default-size + 8,
-  xl: $avatar-default-size + 24,
-) !default;
+$avatar-prefix       : 'c-avatar' !default;
+$enable-extend-avatar-colors: true !default;
+$avatar-default-size : 32px !default;
+$avatar-border-radius: radius(round) !default;
+$avatar-font-weight  : font-weight(semibold) !default;
+$avatar-font-size    : 12px !default;
+$avatar-line-height  : line-height(normal) !default;
+$avatar-img-border   : 1px solid color(gray, 4) !default;
+
+// for base avatar the maps to name, bg-color, text/border color
+$avatar-sizes:
+  (xs, $avatar-default-size / 2, 10px)
+  (sm, $avatar-default-size - 8, 11px)
+  (lg, $avatar-default-size + 8, 14px)
+  (xl, ($avatar-default-size + 8) * 2, 24px) !default;
 
 
 // --------------------------------------------

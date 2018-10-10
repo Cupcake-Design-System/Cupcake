@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* ----------------------- */
 /* 🎂 Cupcake Sprinkles 🎂 */
-/* imported from: @cupcake-ds/cupcake-sprinkles version: 0.2.1 */
+/* imported from: @cupcake-ds/cupcake-sprinkles version: 0.2.2 */
 /* DO NOT MODIFY THIS FILE DIRECTLY! */
 /* ALL VALUES COME FROM THE @cupcake-ds/cupcake-sprinkles PACKAGE */
 /* ----------------------- */
@@ -22,11 +22,11 @@
   flex: 1;
   padding: 0 24px;
   margin-left: 240px;
-  margin-top: 32px;
+  margin-top: 48px;
 }
 
 .docs-content-fullwidth {
-  margin-left: 0;
+  margin: 48px;
 }
 
 .docs-nav {
@@ -77,7 +77,7 @@
 }
 
 .docs-nav-title:first-child {
-  margin-top: 32px;
+  margin-top: 48px;
 }
 
 .docs-nav-item {
@@ -212,7 +212,7 @@
 }
 
 .color-block .colors {
-  height: 32px;
+  height: 48px;
   width: 100%;
   display: flex;
 }
@@ -244,7 +244,7 @@
 
 .docs-section {
   padding: 24px 0;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
   border-bottom: 1px solid #f8f9fa;
 }
 
@@ -294,7 +294,7 @@
 }
 
 .c-text-warning-9 {
-  color: #d9480f !important;
+  color: #e67700 !important;
 }
 
 .c-text-danger-9 {
@@ -360,4 +360,13 @@
 ::-webkit-scrollbar-thumb {
   background-color: #ced4da;
   outline: none;
+}
+
+.avatar-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.avatar-wrap > div {
+  margin: 5px;
 }
