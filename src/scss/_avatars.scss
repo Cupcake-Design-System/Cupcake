@@ -74,7 +74,8 @@
   }
 }
 
-@each $name, $hex in $avatar-palette {
+// All default Avatar color classes
+@each $name, $hex in $theme-colors {
   .#{$avatar-prefix}-#{$name} {
     background-color: $hex;
   }
@@ -84,13 +85,7 @@
   }
 }
 
-@each $name, $hex in $avatar-palette-light {
-  .#{$avatar-prefix}-#{$name} {
-    background-color: $hex;
-    color: color(gray, 9);
-  }
-}
-
+// All default Avatar size classes
 @each $name, $size, $font-size in config($avatar-sizes) {
   .#{$avatar-prefix}-#{$name} {
     @include avatar-size($size, $font-size);
@@ -98,6 +93,23 @@
     &[data-status]::after {
       min-height: round($size / 4);
       min-width: round($size / 4);
+    }
+  }
+}
+
+// Extended Avatar color classes
+@if $enable-extend-avatar-colors == true {
+  @each $name, $hex in $extended-palette-light {
+    .#{$avatar-prefix}-#{$name} {
+      background-color: $hex;
+      color: color(gray, 9);
+    }
+  }
+
+  // Extended Avatar LIGHT color classes
+  @each $name, $hex in $extended-palette {
+    .#{$avatar-prefix}-#{$name} {
+      background-color: $hex;
     }
   }
 }

@@ -75,19 +75,29 @@
   }
 }
 
-@each $name, $hex in $badge-palette {
+// All default Badge color classes
+@each $name, $hex in $theme-colors {
   .#{$badge-prefix}-#{$name} {
     @include badge-style($hex);
   }
 }
 
-@each $name, $hex in $badge-palette-light {
-  .#{$badge-prefix}-#{$name} {
-    @include badge-style($hex, $color-gray-9);
 
-    .#{$badge-prefix}-close {
-      @include close-style($style: "bg-light");
+// Extended Badge color classes
+@if $enable-extend-badge-colors == true {
+  @each $name, $hex in $extended-palette-light {
+    .#{$badge-prefix}-#{$name} {
+      @include badge-style($hex, $color-gray-9);
+
+      .#{$badge-prefix}-close {
+        @include close-style($style: "bg-light");
+      }
+    }
+  }
+
+  @each $name, $hex in $extended-palette {
+    .#{$badge-prefix}-#{$name} {
+      @include badge-style($hex);
     }
   }
 }
-

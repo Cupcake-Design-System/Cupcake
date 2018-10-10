@@ -51,6 +51,7 @@ $alert-colors: // for base alerts the is name, bg-color, text/border color
 // Avatars ------------------------------------
 // --------------------------------------------
 $avatar-prefix       : 'c-avatar' !default;
+$enable-extend-avatar-colors: true !default;
 $avatar-default-size : 32px !default;
 $avatar-border-radius: radius(round) !default;
 $avatar-font-weight  : font-weight(semibold) !default;
@@ -58,49 +59,19 @@ $avatar-font-size    : 12px !default;
 $avatar-line-height  : line-height(normal) !default;
 $avatar-img-border   : 1px solid color(gray, 4) !default;
 
-$avatar-palette: (
-  primary: $color-primary,
-  success: $color-success,
-  warning: $color-warning,
-  danger: $color-danger,
-  dark: $color-gray-9,
-  cyan: $color-cyan-7,
-  grape: $color-grape-7,
-  indigo: $color-indigo-7,
-  lime: $color-lime-7,
-  orange: $color-orange-7,
-  pink: $color-pink-7,
-  teal: $color-teal-7,
-  violet: $color-violet-7,
-) !default;
-
-$avatar-palette-light: (
-  secondary: $color-gray-1,
-  primary-light: $color-primary-0,
-  success-light: $color-success-0,
-  warning-light: $color-warning-0,
-  danger-light: $color-danger-0,
-  cyan-light: $color-cyan-0,
-  grape-light: $color-grape-0,
-  indigo-light: $color-indigo-0,
-  lime-light: $color-lime-0,
-  orange-light: $color-orange-0,
-  pink-light: $color-pink-0,
-  teal-light: $color-teal-0,
-  violet-light: $color-violet-0,
-) !default;
-
-$avatar-sizes: // for base avatar the is map name, bg-color, text/border color
+// for base avatar the maps to name, bg-color, text/border color
+$avatar-sizes:
   (xs, $avatar-default-size / 2, 10px)
   (sm, $avatar-default-size - 8, 11px)
   (lg, $avatar-default-size + 8, 14px)
-  (xl, ($avatar-default-size + 8) * 2, 18px) !default;
+  (xl, ($avatar-default-size + 8) * 2, 24px) !default;
 
 
 // --------------------------------------------
 // Badge ------------------------------------
 // --------------------------------------------
 $badge-prefix               : 'c-badge' !default;
+$enable-extend-badge-colors: true !default;
 $badge-default-size         : 24px !default;
 $badge-default-padding      : space(0) space(sm) !default;
 $badge-default-border-radius: radius(round) !default;

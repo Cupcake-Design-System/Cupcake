@@ -19,7 +19,7 @@
     @include close-style($style: "bg-dark");
 
     border-radius: $badge-default-border-radius;
-    margin-left: $space-sm;
+    margin-left: $space-xs;
     margin-right: -$space-xs;
   }
 
