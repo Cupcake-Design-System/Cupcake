@@ -6,7 +6,7 @@
   @include badge-base();
 
   .#{$avatar-prefix} { // support avatar in badges
-    @include avatar-size(24px);
+    @include avatar-size($badge-default-size);
 
     margin-right: $space-sm;
     margin-left: -($space-sm);
@@ -21,7 +21,7 @@
   }
 
   &-sm {
-    @include badge-size($size: 16px, $font-size: 10px);
+    @include badge-size($badge-sm-size, $badge-sm-font-size);
 
     padding: $space-0 $space-xs;
 
@@ -30,7 +30,7 @@
     }
 
     .#{$avatar-prefix} {
-      @include avatar-size(16px);
+      @include avatar-size($badge-sm-size);
 
       margin-right: $space-xs;
       margin-left: -($space-xs);
@@ -43,22 +43,26 @@
   }
 
   &-lg {
-    @include badge-size($size: 32px, $font-size: 12px);
+    @include badge-size($badge-lg-size, $badge-lg-font-size);
 
     padding: $space-0 ($space-xs + $space-sm);
 
     .#{$avatar-prefix} {
-      @include avatar-size(32px);
+      @include avatar-size($badge-lg-size);
 
       margin-right: $space-sm;
       margin-left: -($space-sm + $space-xs);
     }
 
     .#{$badge-prefix}-close {
-      @include close-size($size: 24px, $x-size: 3px);
+      @include close-size(($badge-lg-size - 8), 3px);
 
       margin-right: -$space-sm;
     }
+  }
+
+  &-top {
+    vertical-align: top;
   }
 
   &-square {
@@ -81,7 +85,6 @@
     @include badge-style($hex);
   }
 }
-
 
 // Extended Badge color classes
 @if $enable-extend-badge-colors == true {

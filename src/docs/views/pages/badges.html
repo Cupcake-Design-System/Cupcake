@@ -288,3 +288,31 @@ layout: blank
 <br>
 <br>
 <br>
+
+<span><strong style="font-size: 26px;"> Hello </strong>
+<div class="c-badge c-badge-top c-badge-sm c-badge-success">4</div></span>
+
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-sm c-badge-{{this}}">A</div>
+  {{/each}}
+  {{/each}}
+</div>
+
+
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-{{this}}">A</div>
+  {{/each}}
+  {{/each}}
+</div>
+
+<div class="avatar-wrap">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-badge c-badge-lg c-badge-{{this}}">A</div>
+  {{/each}}
+  {{/each}}
+</div>

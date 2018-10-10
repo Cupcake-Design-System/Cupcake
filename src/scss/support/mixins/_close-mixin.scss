@@ -19,11 +19,11 @@
 
   &::before {
     height: $x-size;
-    width: $size / 2;
+    width: ($size / 2);
   }
 
   &::after {
-    height: $size / 2;
+    height: ($size / 2);
     width: $x-size;
   }
 
@@ -98,107 +98,11 @@
 
   &::before {
     height: $x-size;
-    width: $size / 2;
+    width: ($size / 2);
   }
 
   &::after {
-    height: $size / 2;
+    height: ($size / 2);
     width: $x-size;
   }
 }
-
-
-@mixin close-all (
-  $style: null,
-  $size: 24px,
-  $x-size:3px,
-  $color: $color-gray-9
-) {
-  border: 0;
-  cursor: pointer;
-  pointer-events: auto;
-  display: inline-block;
-  flex-grow: 0;
-  flex-shrink: 0;
-  font-size: 0;
-  height: $size;
-  width: $size;
-  outline: none;
-  position: relative;
-  vertical-align: top;
-  text-decoration: none;
-
-  &::before {
-    height: $x-size;
-    width: $size / 2;
-  }
-
-  &::after {
-    height: $size / 2;
-    width: $x-size;
-  }
-
-  &::before,
-  &::after {
-    position: absolute;
-    display: block;
-    border-radius: radius(sm);
-    content: "";
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    transform-origin: center center;
-
-    @if $style == "dark" or $style == null {
-      background-color: $color;
-    } @else if $style == "light" {
-      background-color: $color-white;
-    }
-  }
-
-  &:hover::before,
-  &:hover::after {
-    @if $style == "dark" or $style == null {
-      background-color: lighten($color, 10);
-    } @else if $style == "light" {
-      background-color: darken($color-white, 10);
-    }
-  }
-
-  @if $style == "bg-light" {
-    transition: background-color 0.2s ease;
-
-    &::before,
-    &::after {
-      background-color: color(gray, 7);
-    }
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.1);
-
-      &::before,
-      &::after {
-        background-color: color(gray, 7);
-      }
-    }
-  }
-
-  @if $style == "bg-dark" {
-    transition: background-color 0.2s ease;
-
-    &::before,
-    &::after {
-      background-color: $color-white;
-    }
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.3);
-
-      &::before,
-      &::after {
-        background-color: $color-white;
-      }
-    }
-  }
-}
-

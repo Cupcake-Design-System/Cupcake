@@ -28,9 +28,10 @@
   }
 }
 
-@mixin badge-size($size: $badge-default-size, $font-size: 12px) {
+@mixin badge-size($size: $badge-default-size, $font-size: $badge-default-font-size) {
   font-size: $font-size;
   height: $size;
+  min-width: $size;
 
   i {
     font-size: $font-size;

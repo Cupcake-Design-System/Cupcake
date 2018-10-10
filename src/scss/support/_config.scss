@@ -71,18 +71,17 @@ $avatar-sizes:
 // Badge ------------------------------------
 // --------------------------------------------
 $badge-prefix               : 'c-badge' !default;
-$enable-extend-badge-colors: true !default;
+$enable-extend-badge-colors : true !default;
 $badge-default-size         : 24px !default;
 $badge-default-padding      : space(0) space(sm) !default;
 $badge-default-border-radius: radius(round) !default;
 $badge-default-font-weight  : font-weight(semibold) !default;
-$badge-default-font-size    : 11px !default;
 $badge-default-line-height  : 2 !default;
-
-$badge-sizes: // for base avatar the is map name, bg-color, text/border color
-  (sm, $badge-default-size - 8, 10px)
-  (lg, $badge-default-size + 8, 12px) !default;
-
+$badge-default-font-size    : 11px !default;
+$badge-lg-size              : $badge-default-size + 8 !default;
+$badge-lg-font-size         : 13px !default;
+$badge-sm-size              : $badge-default-size - 8 !default;
+$badge-sm-font-size         : 10px !default;
 
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------
