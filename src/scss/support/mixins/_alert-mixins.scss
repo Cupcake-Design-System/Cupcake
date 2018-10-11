@@ -1,16 +1,15 @@
 @mixin alert-base(
   $bg: $alert-primary-bg,
-  $color: $alert-primary-color,
+  $color: $alert-default-color,
   $icon: $alert-primary-icon-color
 ) {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: start;
   text-align: left;
   margin: $alert-margin;
   padding: $alert-padding;
   background-color: $bg;
-  height: $alert-height;
   color: $color;
   border: $alert-border;
   border-radius: $alert-radius;
@@ -21,7 +20,7 @@
 
   .c-a:not(.c-alert-close),
   .c-alert-link:not(.c-alert-close) {
-    padding: 0 space(sm);
+    padding: 0 space(xs);
     text-decoration: underline;
     font-weight: bold;
 
@@ -33,23 +32,39 @@
   .c-alert-close {
     @include close($size: $alert-close-font-size, $color: $color);
 
-    display: inline-flex;
     order: 2;
     opacity: 0.6;
     padding-left: $alert-padding;
     margin-left: auto;
-    margin-right: -(space(xs));
 
     &:hover {
       opacity: 1;
     }
+
+    &::before {
+      width: 12px;
+    }
+
+    &::after {
+      height: 12px;
+    }
+  }
+
+  .c-alert-title {
+    font-weight: font-weight(bold);
+  }
+
+  .c-alert-content {
+    flex: 1;
+    line-height: $alert-line-height;
   }
 
   .c-alert-icon {
-    display: inline-flex;
+    align-self: stretch;
     padding-right: $alert-padding;
     font-size: $alert-icon-width;
     color: $icon;
+    line-height: $alert-line-height;
   }
 }
 
@@ -61,7 +76,6 @@
   } @else {
     background-color: $bg;
     border-color: $color;
-    color: $color;
   }
 
 

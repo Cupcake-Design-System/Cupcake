@@ -1,0 +1,72 @@
+---
+title: Elements | Alert
+notes: Alerts are used to show a representation of an individual or business in the interface.
+---
+
+<div class="c-alert c-alert-top c-alert-primary" style="max-width: 600px;">
+    <a href="" class="c-a c-alert-close" data-dismiss="c-alert" aria-hidden="true">
+        </a>
+        <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i>
+        <div class="c-alert-title">Alert Title</div>
+  </div>
+
+<div class="c-alert c-alert-top c-alert-primary" style="max-width: 600px;">
+  <a href="" class="c-a c-alert-close" data-dismiss="c-alert" aria-hidden="true">
+      </a>
+      <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i>
+      <div class="c-alert-content">
+          <div class="c-alert-title">Alert Title</div>
+          Lipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+</div>
+
+{{#each toolkit.colors}}
+{{#each this}}
+<div class="c-alert c-alert-top c-alert-{{this}}" style="max-width: 600px;">
+  <a href="" class="c-a c-alert-close" data-dismiss="c-alert" aria-hidden="true">
+      </a>
+      <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i>
+      <div class="c-alert-content">
+        <div class="c-alert-title">Alert Title</div>
+      Lipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<a href="" class="c-a">Link</a></div>
+</div>
+{{/each}}
+{{/each}}
+
+{{#each toolkit.colors}}
+{{#each this}}
+<div class="c-alert c-alert-{{this}}" style="max-width: 600px;">
+  <a href="" class="c-a c-alert-close" data-dismiss="c-alert" aria-hidden="true">
+      </a>
+      <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i> <strong>Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.
+        Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.
+        <a href="" class="c-a">Link</a>
+      </strong>
+</div>
+{{/each}}
+{{/each}}
+
+
+{{#each toolkit.colors}}
+{{#each this}}
+<div class="c-alert c-alert-{{this}}">
+  <a href="" class="c-a c-alert-close" data-dismiss="c-alert" aria-hidden="true">
+      </a>
+      <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i> <strong>This is a {{this}} alert <a href="" class="c-a">Link</a></strong>
+</div>
+{{/each}}
+{{/each}}
+
+
+{{#each toolkit.colors}}
+{{#each this}}
+<div class="c-toast-alert c-toast-alert-{{this}}">
+  <i class="c-toast-alert-icon fa fa-check-circle"></i>
+  Nam porttitor blandit accumsan.
+  Ut vel dictum sem, a pretium dui.
+  <a href="" class="c-toast-alert-close"></a>
+</div>
+{{/each}}
+{{/each}}
+
+
