@@ -106,3 +106,38 @@
     width: $x-size;
   }
 }
+
+@mixin simple-close($size, $color) {
+  position: absolute;
+  display: inline-block;
+  width: $size;
+  height: $size;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      background: lighten($color, 10);
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    background: $color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
