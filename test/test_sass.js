@@ -10,6 +10,9 @@ sassTrue.runSass({file: initCustomFunctions}, describe, it);
 // const initCustomConfig = path.join(__dirname, 'init-custom-config.scss');
 // sassTrue.runSass({file: initCustomConfig}, describe, it);
 
+const alert = path.join(__dirname, 'alert.scss');
+sassTrue.runSass({file: alert}, describe, it);
+
 const avatar = path.join(__dirname, 'avatar.scss');
 sassTrue.runSass({file: avatar}, describe, it);
 

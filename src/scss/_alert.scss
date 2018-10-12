@@ -9,11 +9,12 @@
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-radius: $radius-0;
+    /* stylelint-disable */
+    border-radius: 0;
+    /* stylelint-enable */
     padding: $alert-top-padding;
-    min-height: 48px;
 
-    .c-alert-icon {
+    .#{$alert-prefix}-icon {
       padding-right: $alert-top-padding;
     }
   }
@@ -24,4 +25,3 @@
     }
   }
 }
-

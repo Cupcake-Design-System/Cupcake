@@ -108,8 +108,11 @@
 }
 
 @mixin simple-close($size, $color) {
-  position: absolute;
+  position: relative;
   display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
   width: $size;
   height: $size;
   overflow: hidden;

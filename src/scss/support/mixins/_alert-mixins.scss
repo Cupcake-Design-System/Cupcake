@@ -18,48 +18,24 @@
   font-size: $alert-font-size;
   line-height: $alert-line-height;
 
-  .c-a:not(.c-alert-close),
-  .c-alert-link:not(.c-alert-close) {
-    padding: 0 space(xs);
-    text-decoration: underline;
-    font-weight: bold;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .c-alert-close {
-    @include close($size: $alert-close-font-size, $color: $color);
+  &-close {
+    @include simple-close($size: $alert-close-font-size, $color: $color);
 
     order: 2;
-    opacity: 0.6;
-    padding-left: $alert-padding;
     margin-left: auto;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &::before {
-      width: 12px;
-    }
-
-    &::after {
-      height: 12px;
-    }
   }
 
-  .c-alert-title {
+  &-title {
     font-weight: font-weight(bold);
   }
 
-  .c-alert-content {
+  &-content {
     flex: 1;
     line-height: $alert-line-height;
+    margin-right: $space-xs;
   }
 
-  .c-alert-icon {
+  &-icon {
     align-self: stretch;
     padding-right: $alert-padding;
     font-size: $alert-icon-width;
@@ -70,7 +46,7 @@
 
 @mixin alert-style($bg: color(gray, 0), $color: color(gray, 9)) {
   @if $white-label == true {
-    background-color: rgba($color, .1);
+    background-color: rgba($color, .08);
     border-color: $color;
     color: $color;
   } @else {
@@ -78,31 +54,21 @@
     border-color: $color;
   }
 
-
-  .c-alert-close {
+  &-close,
+  .#{$alert-prefix}-close {
     &::before,
     &::after {
-      position: absolute;
-      display: block;
       background-color: $color;
     }
 
     &:hover::before,
     &:hover::after {
-      background-color: darken($color, 10);
+      background-color: darken($color, 15);
     }
   }
 
-  .c-a,
-  .c-alert-link {
-    color: $color;
-
-    &:hover {
-      color: lighten($color, 10%);
-    }
-  }
-
-  .c-alert-icon {
+  &-icon,
+  .#{$alert-prefix}-icon {
     color: $color;
   }
 }
