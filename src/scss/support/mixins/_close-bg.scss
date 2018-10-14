@@ -1,4 +1,5 @@
-@mixin close(
+@mixin close-bg(
+  $style: "bg-dark",
   $size: 24px,
   $x-size:3px,
   $color: $color-gray-6
@@ -16,6 +17,7 @@
   position: relative;
   vertical-align: top;
   text-decoration: none;
+  transition: background-color 0.2s ease;
 
   &::before {
     height: $x-size;
@@ -38,26 +40,11 @@
     top: 50%;
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform-origin: center center;
+    @if $style == "bg-light" { background-color: color(gray, 7); }
+    @if $style == "bg-dark" { background-color: $color-white; }
   }
-
-  &:hover::before,
-  &:hover::after {
-    background-color: darken($color, 10);
-  }
-}
-
-@mixin close-style(
-  $style: "bg-dark"
-) {
 
   @if $style == "bg-light" {
-    transition: background-color 0.2s ease;
-
-    &::before,
-    &::after {
-      background-color: color(gray, 7);
-    }
-
     &:hover {
       background-color: rgba(0, 0, 0, 0.1);
 
@@ -69,13 +56,6 @@
   }
 
   @if $style == "bg-dark" {
-    transition: background-color 0.2s ease;
-
-    &::before,
-    &::after {
-      background-color: $color-white;
-    }
-
     &:hover {
       background-color: rgba(0, 0, 0, 0.3);
 
@@ -86,6 +66,7 @@
     }
   }
 }
+
 
 @mixin close-size(
   $size: 24px,

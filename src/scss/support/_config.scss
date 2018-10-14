@@ -27,19 +27,19 @@ $alert-margin               : 0 0 space(md) 0 !default;
 $alert-padding              : space(sm) !default;
 $alert-top-padding          : space(md) !default;
 $alert-font-size            : 12px !default;
-$alert-line-height          : 16px !default;
-$alert-height               : 32px !default;
+$alert-line-height          : 15px !default;
 $alert-font-family          : font() !default;
 $alert-font-weight          : font-weight() !default;
 $alert-primary-bg           : rgba(color(primary), .07) !default;
-$alert-primary-color        : color(primary) !default;
+$alert-default-color        : color(gray, 9) !default;
 $alert-primary-icon-color   : color(primary) !default;
 $alert-radius               : radius(sm) !default;
 $alert-top-radius           : 0 !default;
 $alert-shadows              : shadow(lg) !default;
 $alert-icon-width           : 12px !default;
-$alert-close-font-size      : 24px !default;
+$alert-close-font-size      : 12px !default;
 $toast-palette              : $theme-colors !default;
+$toast-left-border          : 4px !default;
 $alert-colors: // for base alerts the is name, bg-color, text/border color
   (primary, color(primary, 0), color(primary))
   (success, color(success, 0), color(success))

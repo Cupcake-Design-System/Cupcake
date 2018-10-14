@@ -1,0 +1,131 @@
+// stylelint-disable
+@import '../node_modules/sass-true/sass/true';
+@import '../src/scss/support/support';
+
+$alert-prefix   : 'alert';
+
+@include describe('Test output for alert mixins') {
+
+  @include it('Given a prefix - generates base attributes for an alert') {
+    @include assert {
+      @include output {
+        .#{$alert-prefix} {
+          @include alert-base();
+        }
+      }
+      @include expect {
+        .alert {
+          position: relative;
+          display: flex;
+          align-items: start;
+          text-align: left;
+          margin: 0 0 16px 0;
+          padding: 8px;
+          background-color: rgba(28, 124, 214, 0.07);
+          color: #212529;
+          border: 1px solid;
+          border-radius: 2px;
+          font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15px;
+        }
+
+        .alert-close {
+          position: relative;
+          display: inline-block;
+          flex-grow: 0;
+          flex-shrink: 0;
+          font-size: 0;
+          width: 12px;
+          height: 12px;
+          overflow: hidden;
+          order: 2;
+          margin-left: auto;
+        }
+
+        .alert-close:hover {
+          cursor: pointer;
+        }
+
+        .alert-close:hover::before,
+        .alert-close:hover::after {
+          background: #383f45;
+        }
+
+        .alert-close::before,
+        .alert-close::after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          top: 50%;
+          background: #212529;
+        }
+
+        .alert-close::before {
+          transform: rotate(45deg);
+        }
+
+        .alert-close::after {
+          transform: rotate(-45deg);
+        }
+
+        .alert-title {
+          font-weight: 900;
+        }
+
+        .alert-content {
+          flex: 1;
+          line-height: 15px;
+          margin-right: 4px;
+        }
+
+        .alert-icon {
+          align-self: stretch;
+          padding-right: 8px;
+          font-size: 12px;
+          color: #1c7cd6;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+
+  @include it('Given two arguments - outputs alternative COLOR') {
+    @include assert {
+      @include output {
+        .#{$alert-prefix}-primary {
+          @include alert-style(purple, green);
+        }
+      }
+      @include expect {
+
+
+        .alert-primary {
+          background-color: purple;
+          border-color: green;
+        }
+
+        .alert-primary .alert-close:hover::before,
+        .alert-primary .alert-close:hover::after {
+          background: #00b300;
+        }
+
+        .alert-primary .alert-close::before,
+        .alert-primary .alert-close::after {
+          background: green;
+        }
+
+        .alert-primary .alert-icon {
+          color: green;
+        }
+
+      }
+    }
+  }
+
+}
+
+
+@include report;

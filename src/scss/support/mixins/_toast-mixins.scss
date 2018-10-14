@@ -5,7 +5,7 @@
   background: $color-white;
   color: $color-gray-9;
   /* stylelint-disable */
-  padding: 11px $alert-top-padding;
+  padding: 11px $alert-top-padding 11px ($alert-top-padding + $toast-left-border);
   /* stylelint-enable */
   margin: $alert-margin;
   font-size: $alert-font-size;
@@ -34,17 +34,15 @@
     right: 0;
     bottom: 0;
     height: 100%;
-    width: 4px;
+    width: $toast-left-border;
     border: darken($color, 20);
     border-radius: radius(sm) 0 0 radius(sm);
   }
 
   &-close {
-    @include close;
+    @include delete($size: 12px, $color: $color-gray-6);
 
-    /* stylelint-disable */
     margin-left: auto;
-    /* stylelint-enable */
     margin-right: -(space(xs));
   }
 }

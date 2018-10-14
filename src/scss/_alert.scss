@@ -5,10 +5,23 @@
 .#{$alert-prefix} {
   @include alert-base;
 
+  &-top {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    /* stylelint-disable */
+    border-radius: 0;
+    /* stylelint-enable */
+    padding: $alert-top-padding;
+
+    .#{$alert-prefix}-icon {
+      padding-right: $alert-top-padding;
+    }
+  }
+
   @each $name, $bg, $color in $alert-colors {
     &-#{$name} {
       @include alert-style($bg, $color);
     }
   }
 }
-
