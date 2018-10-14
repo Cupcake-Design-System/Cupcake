@@ -101,29 +101,26 @@ $alert-prefix   : 'alert';
       }
       @include expect {
 
+
         .alert-primary {
           background-color: purple;
           border-color: green;
         }
 
-        .alert-primary-close::before,
-        .alert-primary-close::after,
-        .alert-primary .alert-close::before,
-        .alert-primary .alert-close::after {
-          background-color: green;
-        }
-
-        .alert-primary-close:hover::before,
-        .alert-primary-close:hover::after,
         .alert-primary .alert-close:hover::before,
         .alert-primary .alert-close:hover::after {
-          background-color: #003400;
+          background: #00b300;
         }
 
-        .alert-primary-icon,
+        .alert-primary .alert-close::before,
+        .alert-primary .alert-close::after {
+          background: green;
+        }
+
         .alert-primary .alert-icon {
           color: green;
         }
+
       }
     }
   }

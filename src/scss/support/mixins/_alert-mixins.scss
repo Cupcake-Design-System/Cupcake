@@ -19,7 +19,7 @@
   line-height: $alert-line-height;
 
   &-close {
-    @include simple-close($size: $alert-close-font-size, $color: $color);
+    @include delete($size: $alert-close-font-size, $color: $color);
 
     order: 2;
     margin-left: auto;
@@ -54,20 +54,10 @@
     border-color: $color;
   }
 
-  &-close,
   .#{$alert-prefix}-close {
-    &::before,
-    &::after {
-      background-color: $color;
-    }
-
-    &:hover::before,
-    &:hover::after {
-      background-color: darken($color, 15);
-    }
+    @include delete-color($color);
   }
 
-  &-icon,
   .#{$alert-prefix}-icon {
     color: $color;
   }
