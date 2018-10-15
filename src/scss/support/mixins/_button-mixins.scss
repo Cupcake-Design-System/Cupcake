@@ -1,0 +1,254 @@
+@mixin btn-base {
+  position: relative;
+  display: inline-block;
+  vertical-align: $btn-v-align;
+  white-space: nowrap;
+  outline: 0;
+  line-height: $btn-line-height;
+  padding: $btn-default-padding-v $btn-default-padding-h;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  font-family: $btn-font-family;
+  color: $btn-default-c;
+  text-align: center;
+  text-decoration: none;
+  border: $btn-bd;
+  border-radius: $btn-radius;
+  cursor: pointer;
+
+  @if $btn-shadow == true {
+    box-shadow: $btn-shadow-inset;
+  }
+}
+
+
+// Button Style
+
+@mixin btn-style($bg, $bg-hover, $border: $btn-border, $active:$bg, $color: white) {
+  background: $bg;
+  color: $color;
+
+  @if $btn-white-label == true {
+    border-color: darken($bg, 15);
+  } @else {
+    border-color: $border;
+  }
+
+  @if $btn-border == false {
+    border-color: transparent;
+    background-size: 100% calc(100% + 2px);
+    background-position-y: -1px;
+  }
+
+  @if $btn-gradient == true {
+    background-image: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
+  }
+
+  &:active,
+  &.c-btn-active {
+    background: $active;
+
+    @if $btn-border == false {
+      border-color: transparent;
+    } @else {
+      border-color: $border;
+    }
+  }
+
+  @if $btn-white-label == true {
+    &:hover {
+      background-color: lighten($bg, 5%);
+      background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
+    }
+  } @else {
+    &:hover {
+      background-color: $bg-hover;
+      background-image: none;
+    }
+  }
+}
+
+
+//Button Outline
+
+@mixin btn-outline($border-color, $color: $border-color, $border-color-hover: $border-color, $bg: transparent, $bg-hover: $border-color, $color-hover: $color-white) {
+  border: 1px solid $border-color;
+  background-color: $bg;
+  color: $color;
+  box-shadow: none;
+
+  &.c-btn-outline-active {
+    @include btn-active($bg, $border-color);
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: $bg-hover;
+      color: $color-hover;
+      border-color: $border-color-hover;
+    }
+
+    &:active,
+    &.c-btn-active {
+      @include btn-active($bg-hover, $border-color);
+
+      color: $color-hover;
+    }
+  }
+}
+
+/* Button Sizes
+* ================ ================ ================ ================ */
+@mixin btn-size($size) {
+  @if $size == xs {
+    font-size: $btn-xs-font;
+    padding: $btn-xs-padding;
+  }
+
+  @if $size == sm {
+    font-size: $btn-sm-font;
+    padding: $btn-sm-padding;
+  } @else if $size == md {
+    font-size: $btn-md-font;
+    padding: $btn-md-padding;
+  } @else if $size == lg {
+    font-size: $btn-lg-font;
+    padding: $btn-lg-padding;
+  } @else if $size == xl {
+    font-size: $btn-xl-font;
+    padding: $btn-xl-padding;
+  }
+}
+
+/* Button Focus
+* ================ ================ ================ ================ */
+@mixin btn-focus($shadow: $btn-shadow-focus) {
+  // focus styles go here
+  box-shadow: $shadow;
+}
+
+/* Button Active
+* ================ ================ ================ ================ */
+@mixin btn-active($bg: $color-gray-1, $border: $color-gray-4) {
+  text-decoration: none;
+  background-color: desaturate($bg, 15%);
+  border-color: darken($border, 15%);
+  box-shadow: $btn-shadow-active;
+
+  &:focus {
+    box-shadow: $btn-shadow-active, $btn-shadow-focus;
+  }
+}
+
+@mixin btn-active-selected () {
+  &-active {
+    &.c-btn,
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
+      border-color: transparent;
+      background: $btn-active-selected;
+      box-shadow: $btn-shadow-active;
+    }
+
+    &:focus {
+      box-shadow: $btn-shadow-active, $btn-shadow-focus;
+    }
+  }
+}
+
+/* Button Disabled
+* ================ ================ ================ ================ */
+@mixin btn-disabled($bg: $btn-disabled-bg, $bd: $btn-border-width solid $bg, $color: $color-gray-0, $shadow:none ) {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    top: 0;
+    background: $bg;
+    text-shadow: $shadow;
+    color: $color;
+    line-height: 1;
+    cursor: not-allowed;
+    appearance: none;
+    box-shadow: none;
+    opacity: $btn-disabled-opacity;
+
+    @if $btn-disabled-bd-colored == false {
+      border: $bd;
+    }
+  }
+}
+
+// Button Secondary
+
+@mixin btn-secondary($bg: $btn-secondary-bg, $bg-hover: $btn-secondary-bg-hover, $bg-active: $btn-secondary-bg-active, $bd: $btn-secondary-bd, $color: $btn-secondary-c ) {
+  border: 1px solid $bd;
+  background-color: $bg;
+  color: $color;
+
+  @if $btn-shadow == true {
+    box-shadow: $btn-shadow-secondary;
+  } @else {
+    box-shadow: none;
+  }
+
+  @if $btn-gradient == true {
+    background-image: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
+  }
+
+  &:hover {
+    background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
+    background-color: $bg-hover;
+  }
+
+  &:active,
+  &.c-btn-active {
+    box-shadow: $btn-shadow-active;
+
+    @if $bg-active {
+      background: $bg-active;
+    }
+
+    &:focus {
+      box-shadow: $btn-shadow-active, $btn-shadow-focus;
+    }
+  }
+}
+
+// Button inside a table
+
+@mixin btn-table-icon() {
+  &#{&} {
+    padding-left: $btn-default-padding-v / 1.8;
+    padding-right: $btn-default-padding-v / 1.8;
+    margin-right: -$btn-default-padding-v / 1.8;
+  }
+
+  &:not(:hover) {
+    background: none;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  th:not(:hover) &,
+  td:not(:hover) & {
+    color: $color-gray-4;
+  }
+}
+
+
+// Button Link Style
+
+@mixin btn-link-style($color, $hover:lighten($color, 10), $active:darken($color, 10) ) {
+  color: $color;
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:active {
+    color: $active;
+  }
+}

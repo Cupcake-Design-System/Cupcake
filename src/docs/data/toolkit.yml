@@ -4,6 +4,13 @@ colors:
     - success
     - warning
     - danger
+btn-colors:
+  base:
+    - primary
+    - secondary    
+    - success
+    - warning
+    - danger    
 extended-colors:
   base:
     - cyan
