@@ -4,9 +4,6 @@
   vertical-align: $btn-v-align;
   white-space: nowrap;
   outline: 0;
-  line-height: $btn-line-height;
-  padding: $btn-default-padding-v $btn-default-padding-h;
-  font-size: $btn-font-size;
   font-weight: $btn-font-weight;
   font-family: $btn-font-family;
   color: $btn-default-c;
@@ -24,7 +21,7 @@
 
 // Button Style
 
-@mixin btn-style($bg, $bg-hover, $border: $btn-border, $active:$bg, $color: white) {
+@mixin btn-style($bg, $bg-hover, $border: $btn-border, $active:$bg, $color: $color-white) {
   background: $bg;
   color: $color;
 
@@ -146,7 +143,7 @@
     &:hover,
     &:active,
     &:focus {
-      color: white;
+      color: $color-white;
       border-color: transparent;
       background: $btn-active-selected;
       box-shadow: $btn-shadow-active;

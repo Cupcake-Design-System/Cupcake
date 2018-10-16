@@ -5,6 +5,14 @@
 /* DO NOT MODIFY THIS FILE DIRECTLY! */
 /* ALL VALUES COME FROM THE @cupcake-ds/cupcake-sprinkles PACKAGE */
 /* ----------------------- */
+/* Button Sizes
+* ================ ================ ================ ================ */
+/* Button Focus
+* ================ ================ ================ ================ */
+/* Button Active
+* ================ ================ ================ ================ */
+/* Button Disabled
+* ================ ================ ================ ================ */
 /* stylelint-disable */
 .docs-container {
   display: flex;

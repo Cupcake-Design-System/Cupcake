@@ -91,7 +91,7 @@ $btn-font-family         : Arial, Helvetica, Sans-Serif !default;
 $btn-white-label: false;
 $btn-font-size           : 12px !default;
 $btn-v-align             : baseline !default;
-$btn-line-height         : 1 !default;
+$btn-line-height         : 1.5 !default;
 $btn-default-padding-v   : 8px !default;
 $btn-default-padding-h   : 24px !default;
 $btn-font-weight         : bold !default;
@@ -111,7 +111,7 @@ $btn-disabled-bg         : $color-gray-1 !default;
 $btn-disabled-bd         : 1px solid $color-gray-3 !default;
 $btn-disabled-bd-colored         : false !default;
 $btn-disabled-text-shadow: 0 1px 1px rgba(255, 255, 255, 1) !default;
-$btn-disabled-opacity    : 1 !default;
+$btn-disabled-opacity    : 1.2 !default;
 $btn-default-c           : $color-gray-6 !default;
 $btn-primary-bg          : $color-primary-8 !default;
 $btn-primary-bd          : $color-primary-9 !default;
@@ -144,13 +144,77 @@ $btn-lg-font             : 16px !default;
 $btn-lg-padding          : 12px 32px 11px !default;
 $btn-xl-font             : 18px !default;
 $btn-xl-padding          : 18px 40px !default;
-$btn-box-width           : 30px !default;
-$btn-box-width-xs        : 20px !default;
-$btn-box-width-sm        : 25px !default;
+$btn-box-width           : 32px !default;
+$btn-box-width-xs        : 16px !default;
+$btn-box-width-sm        : 24px !default;
 $btn-box-width-lg        : 40px !default;
 $btn-box-width-xl        : 55px !default;
 $btn-caret-width         : 25px !default;
 $btn-icon-dropdown-width : 45px !default;
+
+
+// --------------------------------------------
+// Buttons NEW --------------------------------
+// --------------------------------------------
+
+$button-prefix          : 'c-btn' !default;
+$button-gradients       : false !default;
+$button-shadows         : false !default;
+
+$button-colors: (
+  primary: (
+    bg: $color-primary-8,
+    bg-hover: $color-primary-7,
+    border: $color-primary-9
+  ),
+  purple: (
+    bg: purple
+  ),
+  success: (
+    bg: $color-success-8,
+    bg-hover: $color-success-7,
+    border: $color-success-9
+  ),
+  warning: (
+    bg: $color-warning-8,
+    bg-hover: $color-warning-7,
+    border: $color-warning-9
+  ),
+  danger: (
+    bg: $color-danger-8,
+    bg-hover: $color-danger-7,
+    border: $color-danger-9
+  ),
+  secondary: (
+    bg: $color-gray-1,
+    bg-hover: $color-gray-0,
+    border: $color-gray-4,
+    color: $color-gray-8
+  )
+);
+
+$button-sizes: (
+  default: (
+    font-size: 12px,
+    padding: 0 16px,
+    height: 32px
+  ),
+  xs: (
+    font-size: 10px,
+    padding: 0 4px,
+    height: 16px
+  ),
+  sm: (
+    font-size: 11px,
+    padding: 0 8px,
+    height: 24px
+  ),
+  lg: (
+    font-size: 14px,
+    padding: 0 32px,
+    height: 40px
+  )
+);
 
 
 // --------------------------------------------

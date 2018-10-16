@@ -2,7 +2,7 @@
 // BUTTONS ------------------------------------
 // --------------------------------------------
 
-.c-btn {
+.#{$button-prefix} {
   @include btn-base;
 
   &:focus,
@@ -16,95 +16,9 @@
   }
 
   &-disabled,
+  &.c-btn-disabled,
   &[disabled] {
     @include btn-disabled;
-  }
-
-  &-primary {
-    @include btn-style($btn-primary-bg, $btn-primary-hover, $btn-primary-bd, $btn-primary-bd);
-
-    &-outline {
-      @include btn-outline($btn-primary-bg);
-    }
-
-    &-disabled,
-    &.c-btn-disabled,
-    &[disabled] {
-      @if $btn-white-label == true {
-        @include btn-disabled(rgba($btn-primary-bg, .5));
-      } @else {
-        @include btn-disabled($btn-primary-disabled, $color: $color-gray-6);
-      }
-    }
-  }
-
-  &-secondary,
-  &-default {
-    @include btn-secondary($btn-secondary-bg);
-
-    &-outline {
-      @include btn-outline($color-gray-7);
-    }
-
-    &-disabled,
-    &.c-btn-disabled,
-    &[disabled] {
-      @include btn-disabled($btn-secondary-disabled, $color: $color-gray-6);
-    }
-  }
-
-  &-success {
-    @include btn-style($btn-success-bg, $btn-success-hover, $btn-success-bd, $btn-success-bd);
-
-    &-outline {
-      @include btn-outline($btn-success-bg);
-    }
-
-    &-disabled,
-    &.c-btn-disabled,
-    &[disabled] {
-      @if $btn-white-label == true {
-        @include btn-disabled(rgba($btn-success-bg, .5));
-      } @else {
-        @include btn-disabled($btn-success-disabled, $color: $color-gray-6);
-      }
-    }
-  }
-
-  &-warning {
-    @include btn-style($btn-warning-bg, $btn-warning-hover, $btn-warning-bd, $btn-warning-bd);
-
-    &-outline {
-      @include btn-outline($btn-warning-bg);
-    }
-
-    &-disabled,
-    &.c-btn-disabled,
-    &[disabled] {
-      @if $btn-white-label == true {
-        @include btn-disabled(rgba($btn-warning-bg, .5));
-      } @else {
-        @include btn-disabled($btn-warning-disabled, $color: $color-gray-6);
-      }
-    }
-  }
-
-  &-danger {
-    @include btn-style($btn-danger-bg, $btn-danger-hover, $btn-danger-bd, $btn-danger-bd);
-
-    &-outline {
-      @include btn-outline($btn-danger-bg);
-    }
-
-    &-disabled,
-    &.c-btn-disabled,
-    &[disabled] {
-      @if $btn-white-label == true {
-        @include btn-disabled(rgba($btn-danger-bg, .5));
-      } @else {
-        @include btn-disabled($btn-danger-disabled, $color: $color-gray-6);
-      }
-    }
   }
 
   @if $btn-active-selected {
@@ -113,6 +27,22 @@
 
   &-table-icon {
     @include btn-table-icon;
+  }
+
+  @each $type in map-keys($button-colors) {
+    &-#{$type} {
+      @include button-colors(map-get($button-colors, $type));
+    }
+  }
+
+  @each $type in map-keys($button-sizes) {
+    @if $type == default {
+      @include button-sizing(map-get($button-sizes, default));
+    } @else {
+      &-#{$type} {
+        @include button-sizing(map-get($button-sizes, $type));
+      }
+    }
   }
 }
 
@@ -148,26 +78,6 @@
       box-shadow: none;
       opacity: $btn-disabled-opacity;
     }
-  }
-}
-
-
-.c-btn,
-.c-btn-link {
-  &-xs {
-    @include btn-size(xs);
-  }
-
-  &-sm {
-    @include btn-size(sm);
-  }
-
-  &-lg {
-    @include btn-size(lg);
-  }
-
-  &-xl {
-    @include btn-size(xl);
   }
 }
 
@@ -209,7 +119,7 @@ $btn-shapes: (
   square: $radius-square,
   box: 3px,
   rounded: 3px,
-  pill: $radius-pill,
+  pill: 200px,
   circle: $radius-round
 ) !default;
 
@@ -227,8 +137,8 @@ $btn-shapes: (
 
 @mixin btn-box($width: $btn-box-width) {
   width: $width;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: space(0);
+  padding-right: space(0);
   text-align: center;
 }
 
@@ -261,7 +171,5 @@ $btn-shapes: (
 }
 
 .c-btn-circle {
-  overflow: hidden;
-
   @extend .c-btn-box;
 }
