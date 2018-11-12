@@ -11,7 +11,8 @@ $white-label          : false !default;
 
 // this needs to go upstream at some point
 $theme-sizes: (
-  sm: 16px,
+  xs: 16px,
+  sm: 24px,
   lg: 32px,
   xl: 40px,
 ) !default;
@@ -81,52 +82,44 @@ $badge-default-font-size    : 11px !default;
 $badge-lg-size              : $badge-default-size + 8 !default;
 $badge-lg-font-size         : 13px !default;
 $badge-sm-size              : $badge-default-size - 8 !default;
-$badge-sm-font-size         : 10px !default;
+$badge-sm-font-size         : 9px !default;
 
 
 // --------------------------------------------
 // Buttons ------------------------------------
 // --------------------------------------------
+$button-prefix         : 'c-btn' !default;
+$enable-btn-shadows    : false !default;
+$enable-btn-gradients  : false !default;
+$enable-btn-border     : true !default;
+$enable-btn-white-label: false !default;
+$enable-circle-buttons : true !default;
+$enable-outline-buttons: false !default;
+$enable-pill-buttons   : false !default;
+$enable-square-buttons : false !default;
+
 $btn-font-family         : font() !default;
-$btn-white-label         : false !default;
 $btn-font-size           : 12px !default;
-$btn-v-align             : baseline !default;
-$btn-default-padding-v   : 8px !default;
-$btn-default-padding-h   : 24px !default;
 $btn-font-weight         : bold !default;
 $btn-bd                  : 1px solid transparent !default;
-$btn-radius              : 2px !default;
+$btn-radius              : 3px !default;
+$btn-disabled-bg         : $color-gray-1 !default;
+$btn-disabled-bd         : 1px solid $color-gray-3 !default;
+$btn-disabled-bd-colored : false !default;
+$btn-disabled-opacity    : .2 !default;
+$btn-default-c           : $color-gray-7 !default;
 $btn-shadow-active       : inset 0 1px 2px rgba(black, 0.3) !default;
 $btn-shadow-focus        : 0 0 2px 1px $color-primary-4 !default;
 $btn-active-selected     : false !default;
-$btn-shadow              : false !default;
 $btn-shadow-inset        : 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 2px rgba(black, .25) !default;
 $btn-shadow-secondary    : 0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
-$btn-gradient            : false !default;
-$btn-border              : true !default;
-$btn-disabled-bg         : $color-gray-1 !default;
-$btn-disabled-bd         : 1px solid $color-gray-3 !default;
-$btn-disabled-bd-colored         : false !default;
-$btn-disabled-opacity    : .2 !default;
-$btn-default-c           : $color-gray-7 !default;
+$btn-box-width          : theme-size(lg) !default;
+$btn-box-sizes: (
+  xs: theme-size(xs),
+  sm: theme-size(sm),
+  lg: theme-size(xl),
+) !default;
 
-$btn-link-font-weight    : $btn-font-weight !default;
-
-$btn-caret-width         : 25px !default;
-$btn-icon-dropdown-width : 45px !default;
-
-
-// --------------------------------------------
-// Buttons NEW --------------------------------
-// --------------------------------------------
-
-$button-prefix          : 'c-btn' !default;
-$button-gradients       : false !default;
-$button-shadows         : false !default;
-$btn-box-width           : 32px !default;
-$btn-box-width-xs        : 16px !default;
-$btn-box-width-sm        : 24px !default;
-$btn-box-width-lg        : 40px !default;
 
 $button-colors: (
   primary: (
@@ -161,31 +154,23 @@ $button-sizes: (
   default: (
     font-size: 12px,
     padding: 0 16px,
-    height: 32px
+    height: theme-size(lg)
   ),
   xs: (
-    font-size: 10px,
+    font-size: 9px,
     padding: 0 4px,
-    height: 16px
+    height: theme-size(xs)
   ),
   sm: (
     font-size: 11px,
     padding: 0 8px,
-    height: 24px
+    height: theme-size(sm)
   ),
   lg: (
     font-size: 14px,
     padding: 0 32px,
-    height: 40px
+    height: theme-size(xl)
   )
-) !default;
-
-$btn-shapes: (
-  square: $radius-square,
-  box: 3px,
-  rounded: 3px,
-  pill: 200px,
-  circle: $radius-round
 ) !default;
 
 

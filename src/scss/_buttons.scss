@@ -15,17 +15,13 @@
   }
 
   &-disabled,
-  &.c-btn-disabled,
+  &.#{$button-prefix}-disabled,
   &[disabled] {
     @include btn-disabled;
   }
 
   @if $btn-active-selected {
     @include btn-active-selected;
-  }
-
-  &-table-icon {
-    @include btn-table-icon;
   }
 
   @each $type in map-keys($button-colors) {
@@ -47,14 +43,14 @@
 
 /* Button Links
 * ================ ================ ================ ================ */
-.c-btn-link {
+.#{$button-prefix}-link {
   @include btn-base;
 
   background: transparent;
   border: 1px solid transparent;
   color: $color-primary-7;
   box-shadow: none;
-  font-weight: $btn-link-font-weight;
+  font-weight: $btn-font-weight;
   transition: all 0.3s ease 0s;
 
   &:hover {
@@ -67,7 +63,7 @@
     box-shadow: none;
   }
 
-  &.c-btn-disabled,
+  &.#{$button-prefix}-disabled,
   &-disabled,
   &[disabled] {
     &,
@@ -98,49 +94,68 @@
   @each $name, $hex in $theme-colors {
     &-#{$name} {
       color: $hex;
+      
+      &:active {
+        color: $hex;
+        box-shadow: none;
+      }
     }
   }
 }
 
 /* Button Shapes
 * ================ ================ ================ ================ */
-@each $btn-shape in $btn-shapes {
-  $btn-shape-name: nth($btn-shape, 1);
-  $btn-shape-radius: nth($btn-shape, 2);
-
-  .c-btn-#{$btn-shape-name} {
-    border-radius: $btn-shape-radius;
+.#{$button-prefix} {
+  @if $enable-outline-buttons == true {
+    @each $name, $hex in $theme-colors {
+      &-#{$name}-outline {
+        @include btn-outline($hex);
+      }
+    }
   }
+
+  @if $enable-circle-buttons == true {
+    &-circle {
+      border-radius: $radius-round;
+    }
+  }
+
+  /* stylelint-disable */
+  @if $enable-square-buttons == true {
+    &-square {
+      border-radius: 0;
+    }
+  }
+
+  @if $enable-pill-buttons == true {
+    &-pill {
+      border-radius: 200px;
+    }
+  }/* stylelint-enable */
 }
+
 
 /* Button Icons/Circle/Box
 * ================ ================ ================ ================ */
-.c-btn-icon,
-.c-btn-circle,
-.c-btn-box {
+.#{$button-prefix}-icon,
+.#{$button-prefix}-circle,
+.#{$button-prefix}-box {
   width: $btn-box-width;
   padding-left: space(0);
   padding-right: space(0);
   text-align: center;
   font-size: 16px;
 
-  &.c-btn-xs {
-    width: $btn-box-width-xs;
-    font-size: 8px;
-  }
 
-  &.c-btn-sm {
-    width: $btn-box-width-sm;
-    font-size: 12px;
-  }
-
-  &.c-btn-lg {
-    width: $btn-box-width-lg;
-    font-size: 21px;
+  @each $name, $size in $btn-box-sizes {
+    &.#{$button-prefix}-#{$name} {
+      width: $size;
+      font-size: $size / 2;
+    }
   }
 }
 
-.c-btn-icon {
+.#{$button-prefix}-icon {
   background: transparent;
   border: 1px solid transparent;
   color: $color-gray-5;
@@ -162,19 +177,8 @@
   }
 }
 
-.c-btn-block {
+.#{$button-prefix}-block {
   display: block;
   width: 100%;
-  text-align: center;
-}
-
-.c-btn-caret {
-  width: $btn-caret-width;
-}
-
-.c-btn-icon-dropdown {
-  width: $btn-icon-dropdown-width;
-  padding-left: space(0);
-  padding-right: space(0);
   text-align: center;
 }

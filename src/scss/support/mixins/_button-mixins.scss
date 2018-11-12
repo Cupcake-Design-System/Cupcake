@@ -1,69 +1,23 @@
 /* Button Base
 * ================ ================ ================ ================ */
 @mixin btn-base {
-  position: relative;
+  vertical-align: baseline;
   display: inline-block;
-  vertical-align: $btn-v-align;
+  text-decoration: none;
   white-space: nowrap;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
   outline: 0;
   font-weight: $btn-font-weight;
   font-family: $btn-font-family;
   color: $btn-default-c;
-  text-align: center;
-  text-decoration: none;
   border: $btn-bd;
   border-radius: $btn-radius;
-  cursor: pointer;
 
-  @if $btn-shadow == true {
+
+  @if $enable-btn-shadows == true {
     box-shadow: $btn-shadow-inset;
-  }
-}
-
-
-/* Button Styles
-* ================ ================ ================ ================ */
-@mixin btn-style($bg, $bg-hover, $border: $btn-border, $active:$bg, $color: $color-white) {
-  background: $bg;
-  color: $color;
-
-  @if $btn-white-label == true {
-    border-color: darken($bg, 15);
-  } @else {
-    border-color: $border;
-  }
-
-  @if $btn-border == false {
-    border-color: transparent;
-    background-size: 100% calc(100% + 2px);
-    background-position-y: -1px;
-  }
-
-  @if $btn-gradient == true {
-    background-image: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
-  }
-
-  &:active,
-  &.c-btn-active {
-    background: $active;
-
-    @if $btn-border == false {
-      border-color: transparent;
-    } @else {
-      border-color: $border;
-    }
-  }
-
-  @if $btn-white-label == true {
-    &:hover {
-      background-color: lighten($bg, 5%);
-      background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
-    }
-  } @else {
-    &:hover {
-      background-color: $bg-hover;
-      background-image: none;
-    }
   }
 }
 
@@ -93,30 +47,6 @@
 
       color: $color-hover;
     }
-  }
-}
-
-
-/* Button Sizes
-* ================ ================ ================ ================ */
-@mixin btn-size($size) {
-  @if $size == xs {
-    font-size: $btn-xs-font;
-    padding: $btn-xs-padding;
-  }
-
-  @if $size == sm {
-    font-size: $btn-sm-font;
-    padding: $btn-sm-padding;
-  } @else if $size == md {
-    font-size: $btn-md-font;
-    padding: $btn-md-padding;
-  } @else if $size == lg {
-    font-size: $btn-lg-font;
-    padding: $btn-lg-padding;
-  } @else if $size == xl {
-    font-size: $btn-xl-font;
-    padding: $btn-xl-padding;
   }
 }
 
@@ -185,60 +115,114 @@
 }
 
 
-/* Button Secondary
+/* Button Styles
 * ================ ================ ================ ================ */
-@mixin btn-secondary($bg: $btn-secondary-bg, $bg-hover: $btn-secondary-bg-hover, $bg-active: $btn-secondary-bg-active, $bd: $btn-secondary-bd, $color: $btn-secondary-c ) {
-  border: 1px solid $bd;
-  background-color: $bg;
-  color: $color;
+@mixin btn-style($bg, $bg-hover, $border, $color: $color-white) {
 
-  @if $btn-shadow == true {
-    box-shadow: $btn-shadow-secondary;
+  @if $enable-btn-gradients == true {
+    background: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
   } @else {
-    box-shadow: none;
+    background: $bg;
+  }
+  
+  @if $enable-btn-shadows == true {
+    box-shadow: $shadow-xs;
   }
 
-  @if $btn-gradient == true {
-    background-image: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
+  @if $enable-btn-border == false {
+    border-color: transparent;
+    background-size: 100% calc(100% + 2px);
+    background-position-y: -1px;
+  } @else {
+    border-color: $border;
   }
-
-  &:hover {
-    background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
-    background-color: $bg-hover;
-  }
+  
+  color: $color;
 
   &:active,
   &.c-btn-active {
-    box-shadow: $btn-shadow-active;
+    background: darken($bg, 9);
 
-    @if $bg-active {
-      background: $bg-active;
+    @if $enable-btn-border == false {
+      border-color: transparent;
+    } @else {
+      border-color: $border;
     }
+  }
 
+  @if $enable-btn-white-label == true {
+    &:hover,
     &:focus {
-      box-shadow: $btn-shadow-active, $btn-shadow-focus;
+      background-color: lighten($bg, 5%);
+      background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
+    }
+  } @else {
+    &:hover,
+    &:focus {
+      background-color: $bg-hover;
+      background-image: none;
     }
   }
 }
 
+@mixin button-colors($map...) {
+  @each $type in $map {
+    // Defaults
+    $bg: '';
+    $bg-hover: '';
+    $border: '';
+    $color: $color-white;
 
-/* Button Inside Table
-* ================ ================ ================ ================ */
-@mixin btn-table-icon() {
-  &#{&} {
-    padding-left: $btn-default-padding-v / 1.8;
-    padding-right: $btn-default-padding-v / 1.8;
-    margin-right: -$btn-default-padding-v / 1.8;
+    @if map-has-key($type, bg) {
+      $bg: map-get($type, bg);
+    }
+
+    @if map-has-key($type, bg-hover) {
+      $bg-hover: map-get($type, bg-hover);
+    } @elseif map-has-key($type, bg) {
+      $bg-hover: lighten($bg, 7);
+    }
+
+    @if map-has-key($type, border) {
+      $border: map-get($type, border);
+    } @elseif map-has-key($type, border) {
+      $border: transparent;
+    }
+
+    @if map-has-key($type, color) {
+      $color: map-get($type, color);
+    }
+    
+    @include btn-style($bg, $bg-hover, $border, $color);
   }
+}
 
-  &:not(:hover) {
-    background: none;
-    border-color: transparent;
-    box-shadow: none;
-  }
+@mixin btn-size($font-size, $padding, $height) {
+  font-size: $font-size;
+  padding: $padding;
+  height: $height;
+  line-height: $height - 2;
+}
 
-  th:not(:hover) &,
-  td:not(:hover) & {
-    color: $color-gray-4;
+@mixin button-sizing($map...) {
+  @each $size in $map {
+    // Defaults
+    $font-size: '';
+    $padding: '';
+    $height: '';
+
+    @if map-has-key($size, font-size) {
+      $font-size: map-get($size, font-size);
+    }
+
+    @if map-has-key($size, padding) {
+      $padding: map-get($size, padding);
+    }
+
+    @if map-has-key($size, height) {
+      $height: map-get($size, height);
+    }
+
+    @include btn-size($font-size, $padding, $height);
   }
 }
