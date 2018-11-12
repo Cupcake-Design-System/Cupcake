@@ -1,3 +1,5 @@
+/* Button Base
+* ================ ================ ================ ================ */
 @mixin btn-base {
   position: relative;
   display: inline-block;
@@ -19,8 +21,8 @@
 }
 
 
-// Button Style
-
+/* Button Styles
+* ================ ================ ================ ================ */
 @mixin btn-style($bg, $bg-hover, $border: $btn-border, $active:$bg, $color: $color-white) {
   background: $bg;
   color: $color;
@@ -66,8 +68,8 @@
 }
 
 
-//Button Outline
-
+/* Button Outlines
+* ================ ================ ================ ================ */
 @mixin btn-outline($border-color, $color: $border-color, $border-color-hover: $border-color, $bg: transparent, $bg-hover: $border-color, $color-hover: $color-white) {
   border: 1px solid $border-color;
   background-color: $bg;
@@ -94,6 +96,7 @@
   }
 }
 
+
 /* Button Sizes
 * ================ ================ ================ ================ */
 @mixin btn-size($size) {
@@ -117,12 +120,14 @@
   }
 }
 
+
 /* Button Focus
 * ================ ================ ================ ================ */
 @mixin btn-focus($shadow: $btn-shadow-focus) {
   // focus styles go here
   box-shadow: $shadow;
 }
+
 
 /* Button Active
 * ================ ================ ================ ================ */
@@ -155,9 +160,10 @@
   }
 }
 
+
 /* Button Disabled
 * ================ ================ ================ ================ */
-@mixin btn-disabled($bg: $btn-disabled-bg, $bd: $btn-border-width solid $bg, $color: $color-gray-0, $shadow:none ) {
+@mixin btn-disabled($bg: $btn-disabled-bg, $bd: 1px solid $bg, $color: $color-gray-0, $shadow:none ) {
   &,
   &:hover,
   &:focus,
@@ -178,8 +184,9 @@
   }
 }
 
-// Button Secondary
 
+/* Button Secondary
+* ================ ================ ================ ================ */
 @mixin btn-secondary($bg: $btn-secondary-bg, $bg-hover: $btn-secondary-bg-hover, $bg-active: $btn-secondary-bg-active, $bd: $btn-secondary-bd, $color: $btn-secondary-c ) {
   border: 1px solid $bd;
   background-color: $bg;
@@ -214,8 +221,9 @@
   }
 }
 
-// Button inside a table
 
+/* Button Inside Table
+* ================ ================ ================ ================ */
 @mixin btn-table-icon() {
   &#{&} {
     padding-left: $btn-default-padding-v / 1.8;
@@ -232,20 +240,5 @@
   th:not(:hover) &,
   td:not(:hover) & {
     color: $color-gray-4;
-  }
-}
-
-
-// Button Link Style
-
-@mixin btn-link-style($color, $hover:lighten($color, 10), $active:darken($color, 10) ) {
-  color: $color;
-
-  &:hover {
-    color: $hover;
-  }
-
-  &:active {
-    color: $active;
   }
 }

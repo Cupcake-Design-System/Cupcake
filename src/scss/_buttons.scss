@@ -1,7 +1,6 @@
 // --------------------------------------------
 // BUTTONS ------------------------------------
 // --------------------------------------------
-
 .#{$button-prefix} {
   @include btn-base;
 
@@ -46,15 +45,21 @@
   }
 }
 
+/* Button Links
+* ================ ================ ================ ================ */
 .c-btn-link {
   @include btn-base;
 
-  color: $color-primary-8;
+  background: transparent;
+  border: 1px solid transparent;
+  color: $color-primary-7;
   box-shadow: none;
   font-weight: $btn-link-font-weight;
+  transition: all 0.3s ease 0s;
 
   &:hover {
-    color: $color-primary-7;
+    background-color: $color-gray-1;
+    border: 1px solid $color-gray-4;
   }
 
   &:active {
@@ -79,53 +84,26 @@
       opacity: $btn-disabled-opacity;
     }
   }
-}
 
-
-.c-btn-block {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
-
-.c-btn-link {
-  &-secondary,
-  &-default {
-    @include btn-link-style($color-gray-8);
+  @each $type in map-keys($button-sizes) {
+    @if $type == default {
+      @include button-sizing(map-get($button-sizes, default));
+    } @else {
+      &-#{$type} {
+        @include button-sizing(map-get($button-sizes, $type));
+      }
+    }
   }
 
-  &-success {
-    @include btn-link-style($color-success-8, $color-success-7, $color-success-9);
-  }
-
-  &-warning {
-    @include btn-link-style($color-warning-8, $color-warning-7, $color-warning-9);
-  }
-
-  &-danger {
-    @include btn-link-style($color-danger-8, $color-danger-7, $color-danger-9);
+  @each $name, $hex in $theme-colors {
+    &-#{$name} {
+      color: $hex;
+    }
   }
 }
 
-
-// BUTTON SHAPES
-// This map is used to generate the different button shapes.
-// Edit or add shapes to the list below and recompile.
-// Each block contains the (name, border-radius).
-// The class is generated using the name: (ex .c-btn-square).
-//
-$btn-shapes: (
-  square: $radius-square,
-  box: 3px,
-  rounded: 3px,
-  pill: 200px,
-  circle: $radius-round
-) !default;
-
-
-// Button Shapes
-
+/* Button Shapes
+* ================ ================ ================ ================ */
 @each $btn-shape in $btn-shapes {
   $btn-shape-name: nth($btn-shape, 1);
   $btn-shape-radius: nth($btn-shape, 2);
@@ -135,41 +113,68 @@ $btn-shapes: (
   }
 }
 
-@mixin btn-box($width: $btn-box-width) {
-  width: $width;
+/* Button Icons/Circle/Box
+* ================ ================ ================ ================ */
+.c-btn-icon,
+.c-btn-circle,
+.c-btn-box {
+  width: $btn-box-width;
   padding-left: space(0);
   padding-right: space(0);
   text-align: center;
-}
-
-.c-btn-box {
-  @include btn-box;
+  font-size: 16px;
 
   &.c-btn-xs {
     width: $btn-box-width-xs;
+    font-size: 8px;
   }
 
   &.c-btn-sm {
     width: $btn-box-width-sm;
+    font-size: 12px;
   }
 
   &.c-btn-lg {
     width: $btn-box-width-lg;
+    font-size: 21px;
+  }
+}
+
+.c-btn-icon {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $color-gray-5;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    color: $color-primary-7;
+    background-color: $color-gray-1;
+    border: 1px solid $color-gray-4;
   }
 
-  &.c-btn-xl {
-    width: $btn-box-width-xl;
+  // All default color classes
+  @each $name, $hex in $theme-colors {
+    &-#{$name} {
+      &:hover {
+        color: $hex;
+      }
+    }
   }
+}
+
+.c-btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .c-btn-caret {
-  @include btn-box($btn-caret-width);
+  width: $btn-caret-width;
 }
 
 .c-btn-icon-dropdown {
-  @include btn-box($btn-icon-dropdown-width);
-}
-
-.c-btn-circle {
-  @extend .c-btn-box;
+  width: $btn-icon-dropdown-width;
+  padding-left: space(0);
+  padding-right: space(0);
+  text-align: center;
 }

@@ -53,7 +53,6 @@
   }
 }
 
-
 @mixin button-sizing($map...) {
   @each $size in $map {
     // Defaults
@@ -76,6 +75,6 @@
     font-size: $font-size;
     padding: $padding;
     height: $height;
-    line-height: $height - 1;
+    line-height: $height - 2;
   }
 }
