@@ -48,8 +48,8 @@
 
   background: transparent;
   border: 1px solid transparent;
-  color: $color-primary-7;
   box-shadow: none;
+  color: $color-primary-7;
   font-weight: $btn-font-weight;
   transition: all 0.3s ease 0s;
 
@@ -94,7 +94,7 @@
   @each $name, $hex in $theme-colors {
     &-#{$name} {
       color: $hex;
-      
+
       &:active {
         color: $hex;
         box-shadow: none;

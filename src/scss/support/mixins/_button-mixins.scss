@@ -15,7 +15,6 @@
   border: $btn-bd;
   border-radius: $btn-radius;
 
-
   @if $enable-btn-shadows == true {
     box-shadow: $btn-shadow-inset;
   }
@@ -124,7 +123,7 @@
   } @else {
     background: $bg;
   }
-  
+
   @if $enable-btn-shadows == true {
     box-shadow: $shadow-xs;
   }
@@ -136,7 +135,7 @@
   } @else {
     border-color: $border;
   }
-  
+
   color: $color;
 
   &:active,
@@ -192,7 +191,7 @@
     @if map-has-key($type, color) {
       $color: map-get($type, color);
     }
-    
+
     @include btn-style($bg, $bg-hover, $border, $color);
   }
 }
