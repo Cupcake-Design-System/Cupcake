@@ -138,7 +138,8 @@
     }
   }
 
-  &:focus {
+  &:focus,
+  &.c-btn-focus {
     box-shadow: 0 0 0 0.15rem rgba($bg, .5);
   }
 
