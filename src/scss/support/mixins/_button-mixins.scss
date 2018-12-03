@@ -21,7 +21,7 @@
 }
 
 
-/* Button Outlines
+/* Button Outline
 * ================ ================ ================ ================ */
 @mixin btn-outline($border-color, $color: $border-color, $border-color-hover: $border-color, $bg: transparent, $bg-hover: $border-color, $color-hover: $color-white) {
   border: 1px solid $border-color;
@@ -53,7 +53,6 @@
 /* Button Focus
 * ================ ================ ================ ================ */
 @mixin btn-focus($shadow: $btn-shadow-focus) {
-  // focus styles go here
   box-shadow: $shadow;
 }
 
@@ -63,12 +62,7 @@
 @mixin btn-active($bg: $color-gray-1, $border: $color-gray-4) {
   text-decoration: none;
   background-color: desaturate($bg, 15%);
-  border-color: darken($border, 15%);
-  box-shadow: $btn-shadow-active;
-
-  &:focus {
-    box-shadow: $btn-shadow-active, $btn-shadow-focus;
-  }
+  border-color: darken($bg, 15%);
 }
 
 @mixin btn-active-selected () {
@@ -80,11 +74,6 @@
       color: $color-white;
       border-color: transparent;
       background: $btn-active-selected;
-      box-shadow: $btn-shadow-active;
-    }
-
-    &:focus {
-      box-shadow: $btn-shadow-active, $btn-shadow-focus;
     }
   }
 }
@@ -116,7 +105,7 @@
 
 /* Button Styles
 * ================ ================ ================ ================ */
-@mixin btn-style($bg, $bg-hover, $border, $color: $color-white) {
+@mixin btn-style($bg, $bg-hover, $bg-active, $border, $color: $color-white) {
 
   @if $enable-btn-gradients == true {
     background: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
@@ -140,7 +129,7 @@
 
   &:active,
   &.c-btn-active {
-    background: darken($bg, 9);
+    background: $bg-active;
 
     @if $enable-btn-border == false {
       border-color: transparent;
@@ -149,15 +138,17 @@
     }
   }
 
+  &:focus {
+    box-shadow: 0 0 0 0.15rem rgba($bg, .5);
+  }
+
   @if $enable-btn-white-label == true {
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: lighten($bg, 5%);
       background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
     }
   } @else {
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: $bg-hover;
       background-image: none;
     }
@@ -170,6 +161,7 @@
     $bg: '';
     $bg-hover: '';
     $border: '';
+    $bg-active: '';
     $color: $color-white;
 
     @if map-has-key($type, bg) {
@@ -182,6 +174,12 @@
       $bg-hover: lighten($bg, 7);
     }
 
+    @if map-has-key($type, bg-active) {
+      $bg-active: map-get($type, bg-active);
+    } @elseif map-has-key($type, bg) {
+      $bg-active: desaturate($bg, 15%);
+    }
+
     @if map-has-key($type, border) {
       $border: map-get($type, border);
     } @elseif map-has-key($type, border) {
@@ -192,7 +190,7 @@
       $color: map-get($type, color);
     }
 
-    @include btn-style($bg, $bg-hover, $border, $color);
+    @include btn-style($bg, $bg-hover, $bg-active, $border, $color);
   }
 }
 

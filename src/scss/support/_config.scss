@@ -41,7 +41,7 @@ $alert-icon-width           : 12px !default;
 $alert-close-font-size      : 12px !default;
 $toast-palette              : $theme-colors !default;
 $toast-left-border          : 4px !default;
-$alert-colors: // for base alerts the is name, bg-color, text/border color
+$alert-colors: // for base alerts this maps to name, bg-color, text/border color
   (primary, color(primary, 0), color(primary))
   (success, color(success, 0), color(success))
   (warning, color(warning, 0), color(warning))
@@ -51,16 +51,16 @@ $alert-colors: // for base alerts the is name, bg-color, text/border color
 // --------------------------------------------
 // Avatars ------------------------------------
 // --------------------------------------------
-$avatar-prefix       : 'c-avatar' !default;
+$avatar-prefix              : 'c-avatar' !default;
 $enable-extend-avatar-colors: true !default;
-$avatar-default-size : 32px !default;
-$avatar-border-radius: radius(round) !default;
-$avatar-font-weight  : font-weight(semibold) !default;
-$avatar-font-size    : 12px !default;
-$avatar-line-height  : line-height(normal) !default;
-$avatar-img-border   : 1px solid color(gray, 4) !default;
+$avatar-default-size        : 32px !default;
+$avatar-border-radius       : radius(round) !default;
+$avatar-font-weight         : font-weight(semibold) !default;
+$avatar-font-size           : 12px !default;
+$avatar-line-height         : line-height(normal) !default;
+$avatar-img-border          : 1px solid color(gray, 4) !default;
 
-// for base avatar the maps to name, bg-color, text/border color
+// for base avatar this maps to name, bg-color, text/border color
 $avatar-sizes:
   (xs, $avatar-default-size / 2, 10px)
   (sm, $avatar-default-size - 8, 11px)
@@ -108,12 +108,11 @@ $btn-disabled-bd         : 1px solid $color-gray-3 !default;
 $btn-disabled-bd-colored : false !default;
 $btn-disabled-opacity    : .2 !default;
 $btn-default-c           : $color-gray-7 !default;
-$btn-shadow-active       : inset 0 1px 2px rgba(black, 0.3) !default;
 $btn-shadow-focus        : 0 0 2px 1px $color-primary-4 !default;
 $btn-active-selected     : false !default;
 $btn-shadow-inset        : 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 2px rgba(black, .25) !default;
 $btn-shadow-secondary    : 0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
-$btn-box-width          : theme-size(lg) !default;
+$btn-box-width           : theme-size(lg) !default;
 $btn-box-sizes: (
   xs: theme-size(xs),
   sm: theme-size(sm),
@@ -125,11 +124,13 @@ $button-colors: (
   primary: (
     bg: $color-primary-8,
     bg-hover: $color-primary-7,
+    bg-active: $color-primary-9,
     border: $color-primary-9
   ),
   success: (
     bg: $color-success-8,
     bg-hover: $color-success-7,
+    bg-active: $color-success-9,
     border: $color-success-9
   ),
   warning: (
@@ -140,11 +141,13 @@ $button-colors: (
   danger: (
     bg: $color-danger-8,
     bg-hover: $color-danger-7,
+    bg-active: $color-danger-9,
     border: $color-danger-9
   ),
   secondary: (
     bg: $color-gray-1,
     bg-hover: $color-gray-0,
+    bg-active: $color-gray-2,
     border: $color-gray-4,
     color: $color-gray-8
   )

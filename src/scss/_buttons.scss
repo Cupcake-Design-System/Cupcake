@@ -41,8 +41,9 @@
   }
 }
 
-/* Button Links
-* ================ ================ ================ ================ */
+// --------------------------------------------
+// Button Links -------------------------------
+// --------------------------------------------
 .#{$button-prefix}-link {
   @include btn-base;
 
@@ -55,10 +56,12 @@
 
   &:hover {
     background-color: $color-gray-1;
-    border: 1px solid $color-gray-4;
+    border: 1px solid $color-gray-2;
   }
 
   &:active {
+    @include btn-active;
+    
     color: $color-primary-9;
     box-shadow: none;
   }
@@ -103,40 +106,40 @@
   }
 }
 
-/* Button Shapes
-* ================ ================ ================ ================ */
-.#{$button-prefix} {
-  @if $enable-outline-buttons == true {
-    @each $name, $hex in $theme-colors {
-      &-#{$name}-outline {
-        @include btn-outline($hex);
-      }
+// --------------------------------------------
+// Button Shapes ------------------------------
+// --------------------------------------------
+@if $enable-outline-buttons == true {
+  @each $name, $hex in $theme-colors {
+    .#{$button-prefix}-#{$name}-outline {
+      @include btn-outline($hex);
     }
   }
-
-  @if $enable-circle-buttons == true {
-    &-circle {
-      border-radius: $radius-round;
-    }
-  }
-
-  /* stylelint-disable */
-  @if $enable-square-buttons == true {
-    &-square {
-      border-radius: 0;
-    }
-  }
-
-  @if $enable-pill-buttons == true {
-    &-pill {
-      border-radius: 200px;
-    }
-  }/* stylelint-enable */
 }
 
+@if $enable-circle-buttons == true {
+  .#{$button-prefix}-circle {
+    border-radius: $radius-round;
+  }
+}
 
-/* Button Icons/Circle/Box
-* ================ ================ ================ ================ */
+/* stylelint-disable */
+@if $enable-square-buttons == true {
+  .#{$button-prefix}-square {
+    border-radius: 0;
+  }
+}
+
+@if $enable-pill-buttons == true {
+  .#{$button-prefix}-pill {
+    border-radius: 200px;
+  }
+}/* stylelint-enable */
+
+
+// --------------------------------------------
+// Button Icons/Circle/Box --------------------
+// --------------------------------------------
 .#{$button-prefix}-icon,
 .#{$button-prefix}-circle,
 .#{$button-prefix}-box {
