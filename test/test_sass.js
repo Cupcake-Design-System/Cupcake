@@ -25,8 +25,8 @@ sassTrue.runSass({file: buttons}, describe, it);
 const closeMixin = path.join(__dirname, 'test-close-mixin.scss');
 sassTrue.runSass({file: closeMixin}, describe, it);
 
-const typography = path.join(__dirname, 'test-typography.scss');
-sassTrue.runSass({file: typography}, describe, it);
+// const typography = path.join(__dirname, 'test-typography.scss');
+// sassTrue.runSass({file: typography}, describe, it);
 
 const shadows = path.join(__dirname, 'test-shadows.scss');
 sassTrue.runSass({file: shadows}, describe, it);

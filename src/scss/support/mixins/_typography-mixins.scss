@@ -1,15 +1,30 @@
 
-@mixin body-text($value, $weight: normal, $lh: default) {
-  font-size: $value;
+@mixin text-size($font-size, $font-weight, $line-height) {
+  font-size: $font-size;
   font-family: font(sans);
-  font-weight: font-weight($weight);
-  line-height: line-height($lh);
+  font-weight: $font-weight;
+  line-height: $line-height;
 }
 
-@mixin header-text($value, $weight: semibold, $lh: default) {
-  font-size: $value;
-  font-family: font(sans);
-  font-weight: font-weight($weight);
-  line-height: line-height($lh);
-}
+@mixin text-sizing($map...) {
+  @each $size in $map {
+    // Defaults
+    $font-size: '';
+    $font-weight: normal;
+    $line-height: default;
 
+    @if map-has-key($size, font-size) {
+      $font-size: map-get($size, font-size);
+    }
+
+    @if map-has-key($size, font-weight) {
+      $font-weight: map-get($size, font-weight);
+    }
+
+    @if map-has-key($size, line-height) {
+      $line-height: map-get($size, line-height);
+    }
+
+    @include text-size($font-size, $font-weight, $line-height);
+  }
+}

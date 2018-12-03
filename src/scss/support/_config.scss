@@ -213,3 +213,71 @@ $radius-prefix   : 'c-radius' !default;
 // --------------------------------------------
 $text-prefix     : 'c-text' !default;
 $header-prefix   : 'c-header' !default;
+$monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$header-text-sizes: (
+  xs: (
+    font-size: 12px,
+    font-weight: 700,
+    line-height: 16px
+  ),
+  sm: (
+    font-size: 14px,
+    font-weight: 700,
+    line-height: 24px
+  ),
+  md: (
+    font-size: 16px,
+    font-weight: 700,
+    line-height: 24px
+  ),
+  lg: (
+    font-size: 20px,
+    font-weight: 700,
+    line-height: 24px
+  ),
+  xl: (
+    font-size: 24px,
+    font-weight: 700,
+    line-height: 32px
+  ),
+  xxl: (
+    font-size: 36px,
+    font-weight: 700,
+    line-height: 40px
+  )
+) !default;
+
+
+$body-text-sizes: (
+  xs: (
+    font-size: 10px,
+    font-weight: 500,
+    line-height: 16px
+  ),
+  sm: (
+    font-size: 11px,
+    font-weight: 500,
+    line-height: 16px
+  ),
+  md: (
+    font-size: 12px,
+    font-weight: 500,
+    line-height: 16px
+  ),
+  lg: (
+    font-size: 14px,
+    font-weight: 500,
+    line-height: 24px
+  ),
+  xl: (
+    font-size: 16px,
+    font-weight: 500,
+    line-height: 24px
+  ),
+  xxl: (
+    font-size: 18px,
+    font-weight: 500,
+    line-height: 24px
+  )
+) !default;

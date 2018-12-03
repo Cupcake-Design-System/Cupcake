@@ -3,18 +3,50 @@
 // --------------------------------------------
 
 .#{$text-prefix} {
-  @include modifiers($font-weight, 'font-weight');
-
-  @each $name, $value in $font-body {
-    &-#{$name} {
-      @include body-text($value);
+  @each $size in map-keys($body-text-sizes) {
+    &-#{$size} {
+      @include text-sizing(map-get($body-text-sizes, $size));
     }
+  }
+
+  @each $name, $weight in $font-weight {
+    &-#{$name} {
+      font-weight: $weight !important;
+    }
+  }
+
+  &-left {
+    text-align: left !important;
+  }
+
+  &-right {
+    text-align: right !important;
+  }
+
+  &-center {
+    text-align: center !important;
+  }
+
+  &-lowercase {
+    text-transform: lowercase !important;
+  }
+
+  &-uppercase {
+    text-transform: uppercase !important;
+  }
+
+  &-capitalize {
+    text-transform: capitalize !important;
+  }
+
+  &-monospace {
+    font-family: $monospace !important;
   }
 }
 
-@each $name, $value in $font-headers {
-  .#{$header-prefix}-#{$name} {
-    @include header-text($value);
+@each $size in map-keys($header-text-sizes) {
+  .#{$header-prefix}-#{$size} {
+    @include text-sizing(map-get($header-text-sizes, $size));
   }
 }
 
