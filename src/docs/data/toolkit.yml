@@ -7,10 +7,10 @@ colors:
 btn-colors:
   base:
     - primary
-    - secondary    
+    - secondary   
     - success
     - warning
-    - danger    
+    - danger 
 extended-colors:
   base:
     - cyan
