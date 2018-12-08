@@ -4,3 +4,26 @@ layout: blank
 ---
 
 {{> typography}}
+
+<div class="c-header-lg">I'm a Header <span class="c-text-muted"> I am muted</span></div>
+
+<div class="c-text-lg">This is normal text<span class="c-text-bold"> This text is bold.</span></div>
+
+<div class="c-text-lg c-a">This is a link</div>
+<div class="c-text-lg c-text-capitalize">this is capitalized</div>
+<div class="c-text-lg c-text-italic">This is italic</div>
+<div class="c-header-xs">This header is bold <span class="c-text-light">yet this has.c-text-light applied</span>
+</div>
+
+
+<div class="avatar-wrap">
+  {{#each toolkit.colors}}
+  {{#each this}}
+  {{#iterate 10}}
+  <div class="c-header-xs c-text-{{../this}}-{{@index}}">.c-text-{{../this}}-{{@index}}</div>
+  {{/iterate}}
+  <br>
+  {{/each}}
+  {{/each}}
+</div>
+

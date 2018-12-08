@@ -39,6 +39,15 @@
     text-transform: capitalize !important;
   }
 
+  &-italic {
+    font-style: italic;
+  }
+
+  &-muted {
+    color: inherit;
+    opacity: .6;
+  }
+
   &-monospace {
     font-family: $monospace !important;
   }

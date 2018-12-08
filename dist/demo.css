@@ -121,14 +121,14 @@
 .ipreo {
   color: #212529;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 24px;
 }
 
 .cupcake {
   color: #1c7cd6;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 24px;
 }
 
@@ -140,7 +140,7 @@
   color: #212529;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
   font-size: 10px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1px;
   line-height: 24px;
   padding: 0 8px;
