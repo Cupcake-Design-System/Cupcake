@@ -32,12 +32,13 @@ space:
     - xxs
 shadow:
   base:
+    - none
     - xs
     - sm
     - md
     - lg
     - xl
-type:
+type-sizes:
   base:
     - xxl
     - xl

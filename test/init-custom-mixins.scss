@@ -241,9 +241,10 @@
         }
       }
       @include expect {
-        .font-weight-_-_bold {font-weight: 900; }
+        .font-weight-_-_heavy {font-weight: 900; }
+        .font-weight-_-_bold {font-weight: 700; }
         .font-weight-_-_semibold {font-weight: 600; }
-        .font-weight-_-_normal {font-weight: 400; }
+        .font-weight-_-_normal {font-weight: 500; }
         .font-weight-_-_light {font-weight: 300; }
       }
     }

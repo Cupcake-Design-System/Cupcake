@@ -5,36 +5,30 @@ notes: Documentation and examples for Cupcake typography, including global setti
 
 
 <div class="docs-section-title">01. Headers</div>
-{{#each type-sizes.headers}}
+{{#each toolkit.type-sizes}}
+{{#each this}}
 <div class="type-block">
   <div class="type">
-    <span class="info">.c-header-{{name}}</span>
-    <span class="c-header-{{name}}">The quick brown fox jumps over the lazy dog.</span>
+    <span class="info">.c-header-{{this}}</span>
+    <span class="c-header-{{this}}">The quick brown fox jumps over the lazy dog.</span>
   </div>
-  <div class="type">
-  <span class="info"><b>Font Size:</b> {{value.fontSize}}</span>
-  <span class="info"><b>Font Weight:</b> {{value.fontWeight}}</span>
-  <span class="info"><b>Line Height:</b> {{value.lineHeight}}</span>
 </div>
-</div>
+{{/each}}
 {{/each}}
 
 
 <br><br>
 
 <div class="docs-section-title">02. Body</div>
-{{#each type-sizes.body}}
+{{#each toolkit.type-sizes}}
+{{#each this}}
 <div class="type-block">
   <div class="type">
-    <span class="info">.c-text-{{name}}</span>
-    <span class="c-text-{{name}}">The quick brown fox jumps over the lazy dog.</span>
+    <span class="info">.c-text-{{this}}</span>
+    <span class="c-text-{{this}}">The quick brown fox jumps over the lazy dog.</span>
   </div>
-  <div class="type">
-  <span class="info"><b>Font Size:</b> {{value.fontSize}}</span>
-  <span class="info"><b>Font Weight:</b> {{value.fontWeight}}</span>
-  <span class="info"><b>Line Height:</b> {{value.lineHeight}}</span>
 </div>
-</div>
+{{/each}}
 {{/each}}
 
 <br><br>
