@@ -39,6 +39,14 @@
     text-transform: capitalize !important;
   }
 
+  &-underline {
+    text-decoration: underline !important;
+  }
+
+  &-strikethrough {
+    text-decoration: line-through !important;
+  }
+
   &-italic {
     font-style: italic;
   }

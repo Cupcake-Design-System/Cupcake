@@ -1,0 +1,77 @@
+headers:
+  - name: xxl
+    value:
+      fontSize: "36px"
+      fontWeight: "600"
+      lineHeight: "40px"
+
+  - name: xl
+    value:
+      fontSize: "24px"
+      fontWeight: "600"
+      lineHeight: "32px"
+
+  - name: lg
+    value:
+      fontSize: "20px"
+      fontWeight: "600"
+      lineHeight: "24px"
+
+  - name: md
+    value:
+      fontSize: "16px"
+      fontWeight: "600"
+      lineHeight: "24px"
+
+  - name: sm
+    value:
+      fontSize: "14px"
+      fontWeight: "600"
+      lineHeight: "24px"
+
+  - name: xs
+    value:
+      fontSize: "12px"
+      fontWeight: "600"
+      lineHeight: "16px"
+
+body:
+  - name: xxl
+    value:
+      fontSize: "18px"
+      fontWeight: "600"
+      lineHeight: "24px"
+
+  - name: xl
+    value:
+      fontSize: "16px"
+      fontWeight: "600"
+      lineHeight: "24px"
+
+  - name: lg
+    value:
+      fontSize: "14px"
+      fontWeight: "600"
+      lineHeight: "24px"
+
+  - name: md
+    value:
+      fontSize: "12px"
+      fontWeight: "600"
+      lineHeight: "16px"
+
+  - name: sm
+    value:
+      fontSize: "11px"
+      fontWeight: "600"
+      lineHeight: "16px"
+
+  - name: xs
+    value:
+      fontSize: "10px"
+      fontWeight: "600"
+      lineHeight: "16px"
+
+global:
+  type: header
+  category: header

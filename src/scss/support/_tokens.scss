@@ -169,7 +169,7 @@ $font-header-xxl: 36px !default;
 $font-weight-heavy: 900 !default;
 $font-weight-bold: 700 !default;
 $font-weight-semibold: 600 !default;
-$font-weight-normal: 400 !default;
+$font-weight-normal: 500 !default;
 $font-weight-light: 300 !default;
 
 
@@ -180,8 +180,8 @@ $line-height-condensed: 1.25 !default;
 
 $radius-0: none !default;
 $radius-square: 0 !default;
-$radius-sm: 2px !default;
-$radius-md: 4px !default;
+$radius-sm: 3px !default;
+$radius-md: 6px !default;
 $radius-lg: 8px !default;
 $radius-round: 200px !default;
 $radius-pill: 100% !default;
@@ -202,6 +202,10 @@ $space-md: 16px !default;
 $space-lg: 24px !default;
 $space-xl: 32px !default;
 
+$global-size-xs: 16px !default;
+$global-size-sm: 24px !default;
+$global-size-lg: 32px !default;
+$global-size-xl: 40px !default;
 
 $color: (
 

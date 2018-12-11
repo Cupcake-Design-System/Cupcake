@@ -107,14 +107,14 @@
 
 .docs-nav-item a:hover {
   background-color: #f1f3f5;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .docs-nav-item .current {
   background-color: #f1f3f5;
   font-weight: bold;
   display: block;
-  border-radius: 2px;
+  border-radius: 3px;
   color: #1c7cd6;
 }
 
@@ -173,7 +173,7 @@
   background-color: #f1f3f5;
   height: 24px;
   margin: 8px 0;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .space-block-title {
@@ -252,6 +252,55 @@
   font-size: 11px;
   line-height: 16px;
   padding: 8px 0;
+}
+
+.type-block {
+  display: flex;
+  padding: 16px 0;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.type-block:not(:first-child) {
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.type-block-title {
+  color: #212529;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.type-block .type {
+  display: flex;
+  flex-direction: column;
+}
+
+.type-block .type:last-child {
+  margin-right: 5%;
+}
+
+.type-block .type span.info {
+  font-weight: normal;
+  color: #212529;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 8px 0;
+}
+
+.type-block-2 {
+  flex-wrap: wrap;
+}
+
+.type-block-2 .type {
+  min-width: 20%;
+  margin-right: 0;
+}
+
+.type-block-2 .type:last-child {
+  margin-right: 0;
 }
 
 .docs-section {
@@ -340,7 +389,7 @@
   .docs-menu-toggle {
     display: block;
     margin-left: 0;
-    border-radius: 4px;
+    border-radius: 6px;
   }
   .docs-content {
     margin-left: 0;
@@ -351,8 +400,8 @@
   .docs-nav-open .docs-menu-toggle {
     margin-left: 215px;
     border-left: 0;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }

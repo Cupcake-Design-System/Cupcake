@@ -7,10 +7,10 @@ colors:
 btn-colors:
   base:
     - primary
-    - secondary   
+    - secondary
     - success
     - warning
-    - danger 
+    - danger
 extended-colors:
   base:
     - cyan
@@ -45,3 +45,20 @@ type:
     - md
     - sm
     - xs
+type-styles:
+  base:
+    - heavy
+    - bold
+    - semibold
+    - light
+    - italic
+    - uppercase
+    - lowercase
+    - capitalize
+    - monospace
+    - underline
+    - strikethrough
+    - primary
+    - success
+    - warning
+    - danger
