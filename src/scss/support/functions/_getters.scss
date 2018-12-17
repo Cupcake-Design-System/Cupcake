@@ -21,7 +21,7 @@
 /// @param {String} $radius - how much space do you need.
 /// @return {Number} The spacing for the variant in px.
 @function theme-size($value: sm) {
-  $fetched-value: map-get($theme-sizes, $value);
+  $fetched-value: map-get($global-theme-sizes, $value);
 
   @if type-of($fetched-value) == number {
     @return $fetched-value;
@@ -86,6 +86,21 @@
     @error 'Font size `#{$variant}` not found.';
   }
 }
+
+/// Returns the font size for a given size definition.
+///
+/// @param {String} $value - The font size.
+/// @return {Number} The font-size for the given definition.
+@function font-size-header($value: md) {
+  $fetched-font-size: map-get($font-header, $value);
+
+  @if type-of($fetched-font-size) != null {
+    @return $fetched-font-size;
+  } @else {
+    @error 'Font size `#{$variant}` not found.';
+  }
+}
+
 
 /// Returns the font family for a given definition.
 ///

@@ -4,6 +4,13 @@ colors:
     - success
     - warning
     - danger
+btn-colors:
+  base:
+    - primary
+    - secondary
+    - success
+    - warning
+    - danger
 extended-colors:
   base:
     - cyan
@@ -25,12 +32,13 @@ space:
     - xxs
 shadow:
   base:
+    - none
     - xs
     - sm
     - md
     - lg
     - xl
-type:
+type-sizes:
   base:
     - xxl
     - xl
@@ -38,3 +46,20 @@ type:
     - md
     - sm
     - xs
+type-styles:
+  base:
+    - heavy
+    - bold
+    - semibold
+    - light
+    - italic
+    - uppercase
+    - lowercase
+    - capitalize
+    - monospace
+    - underline
+    - strikethrough
+    - primary
+    - success
+    - warning
+    - danger

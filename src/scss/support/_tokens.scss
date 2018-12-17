@@ -154,8 +154,8 @@ $font-body-xl: 16px !default;
 $font-body-xxl: 18px !default;
 
 
-$font-family-sans: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
-$font-family-mono: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !default;
+$font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !default;
+$font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
 
 
 $font-header-xs: 12px !default;
@@ -166,17 +166,10 @@ $font-header-xl: 24px !default;
 $font-header-xxl: 36px !default;
 
 
-$font-header-xs: 12px !default;
-$font-header-sm: 14px !default;
-$font-header-md: 16px !default;
-$font-header-lg: 20px !default;
-$font-header-xl: 24px !default;
-$font-header-xxl: 36px !default;
-
-
-$font-weight-bold: 900 !default;
+$font-weight-heavy: 900 !default;
+$font-weight-bold: 700 !default;
 $font-weight-semibold: 600 !default;
-$font-weight-normal: 400 !default;
+$font-weight-normal: 500 !default;
 $font-weight-light: 300 !default;
 
 
@@ -187,8 +180,8 @@ $line-height-condensed: 1.25 !default;
 
 $radius-0: none !default;
 $radius-square: 0 !default;
-$radius-sm: 2px !default;
-$radius-md: 4px !default;
+$radius-sm: 3px !default;
+$radius-md: 6px !default;
 $radius-lg: 8px !default;
 $radius-round: 200px !default;
 $radius-pill: 100% !default;
@@ -209,6 +202,10 @@ $space-md: 16px !default;
 $space-lg: 24px !default;
 $space-xl: 32px !default;
 
+$global-size-xs: 16px !default;
+$global-size-sm: 24px !default;
+$global-size-lg: 32px !default;
+$global-size-xl: 40px !default;
 
 $color: (
 
@@ -410,16 +407,9 @@ $font-header: (
   xxl: $font-header-xxl,
 );
 
-$font-headers: (
-  xs: $font-header-xs,
-  sm: $font-header-sm,
-  md: $font-header-md,
-  lg: $font-header-lg,
-  xl: $font-header-xl,
-  xxl: $font-header-xxl,
-);
 
 $font-weight: (
+  heavy: $font-weight-heavy,
   bold: $font-weight-bold,
   semibold: $font-weight-semibold,
   normal: $font-weight-normal,

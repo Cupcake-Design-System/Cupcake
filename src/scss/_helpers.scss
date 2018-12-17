@@ -9,7 +9,7 @@
     @include modifiers($theme-colors, 'background-color');
   }
 
-  .c-text {
+  .#{$text-prefix} {
     @include modifiers($color, 'color');
     @include modifiers($theme-colors, 'color');
   }

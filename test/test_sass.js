@@ -19,11 +19,14 @@ sassTrue.runSass({file: avatar}, describe, it);
 const badges = path.join(__dirname, 'test-badges.scss');
 sassTrue.runSass({file: badges}, describe, it);
 
+const buttons = path.join(__dirname, 'test-button.scss');
+sassTrue.runSass({file: buttons}, describe, it);
+
 const closeMixin = path.join(__dirname, 'test-close-mixin.scss');
 sassTrue.runSass({file: closeMixin}, describe, it);
 
-const typography = path.join(__dirname, 'test-typography.scss');
-sassTrue.runSass({file: typography}, describe, it);
+// const typography = path.join(__dirname, 'test-typography.scss');
+// sassTrue.runSass({file: typography}, describe, it);
 
 const shadows = path.join(__dirname, 'test-shadows.scss');
 sassTrue.runSass({file: shadows}, describe, it);

@@ -1,0 +1,100 @@
+// stylelint-disable
+@import '../node_modules/sass-true/sass/true';
+@import '../src/scss/support/support';
+
+$button-test-map: (
+  purple: (
+    bg: purple,
+    bg-hover: orange,
+    bg-active: red,
+    border: green
+  )
+);
+
+@include describe('Test output for button mixins') {
+
+  @include it('Generates base attributes for button') {
+    @include assert {
+      @include output {
+        .c-btn {
+          @include btn-base();
+        }
+      }
+      @include expect {
+        .c-btn {
+          vertical-align: baseline;
+          display: inline-block;
+          text-decoration: none;
+          white-space: nowrap;
+          position: relative;
+          text-align: center;
+          cursor: pointer;
+          outline: 0;
+          font-weight: 700;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+          color: #495057;
+          border: 1px solid transparent;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+
+  @include it('Given two arguments - outputs alternative SIZE') {
+    @include assert {
+      @include output {
+        .c-btn-sm {
+          @include btn-size(11px, 0 8px, 24px);
+        }
+      }
+      @include expect {
+        .c-btn-sm {
+          font-size: 11px;
+          padding: 0 8px;
+          height: 24px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+
+  @include it('Given new map - outputs outputs correct styling') {
+    @include assert {
+      @include output {
+        @each $type in map-keys($button-test-map) {
+          .c-btn-#{$type} {
+            @include button-colors(map-get($button-test-map, $type));
+          }
+        }
+      }
+      @include expect {
+        .c-btn-purple {
+          background: purple;
+          border-color: green;
+          color: #ffffff;
+        }
+
+        .c-btn-purple:active,
+        .c-btn-purple.c-btn-active {
+          background: red;
+          border-color: green;
+        }
+
+        .c-btn-purple:focus,
+        .c-btn-purple.c-btn-focus {
+          box-shadow: 0 0 0 0.15rem rgba(128, 0, 128, 0.5);
+        }
+
+        .c-btn-purple:hover {
+          background-color: orange;
+          background-image: none;
+        }
+
+      }
+    }
+  }
+
+}
+
+
+@include report;

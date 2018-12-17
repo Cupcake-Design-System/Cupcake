@@ -1,0 +1,226 @@
+/* Button Base
+* ================ ================ ================ ================ */
+@mixin btn-base {
+  vertical-align: baseline;
+  display: inline-block;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  outline: 0;
+  font-weight: $btn-font-weight;
+  font-family: $btn-font-family;
+  color: $btn-default-c;
+  border: $btn-bd;
+  border-radius: $btn-radius;
+
+  @if $enable-btn-shadows == true {
+    box-shadow: $btn-shadow-inset;
+  }
+}
+
+
+/* Button Outline
+* ================ ================ ================ ================ */
+@mixin btn-outline($border-color, $color: $border-color, $border-color-hover: $border-color, $bg: transparent, $bg-hover: $border-color, $color-hover: $color-white) {
+  border: 1px solid $border-color;
+  background-color: $bg;
+  color: $color;
+  box-shadow: none;
+
+  &.c-btn-outline-active {
+    @include btn-active($bg, $border-color);
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: $bg-hover;
+      color: $color-hover;
+      border-color: $border-color-hover;
+    }
+
+    &:active,
+    &.c-btn-active {
+      @include btn-active($bg-hover, $border-color);
+
+      color: $color-hover;
+    }
+  }
+}
+
+
+/* Button Focus
+* ================ ================ ================ ================ */
+@mixin btn-focus($shadow: $btn-shadow-focus) {
+  box-shadow: $shadow;
+}
+
+
+/* Button Active
+* ================ ================ ================ ================ */
+@mixin btn-active($bg: $color-gray-1, $border: $color-gray-4) {
+  text-decoration: none;
+  background-color: desaturate($bg, 15%);
+  border-color: darken($bg, 15%);
+}
+
+@mixin btn-active-selected () {
+  &-active {
+    &.c-btn,
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-white;
+      border-color: transparent;
+      background: $btn-active-selected;
+    }
+  }
+}
+
+
+/* Button Disabled
+* ================ ================ ================ ================ */
+@mixin btn-disabled($bg: $btn-disabled-bg, $bd: 1px solid $bg, $color: $color-gray-0, $shadow:none ) {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    top: 0;
+    background: $bg;
+    text-shadow: $shadow;
+    color: $color;
+    line-height: 1;
+    cursor: not-allowed;
+    appearance: none;
+    box-shadow: none;
+    opacity: $btn-disabled-opacity;
+
+    @if $btn-disabled-bd-colored == false {
+      border: $bd;
+    }
+  }
+}
+
+
+/* Button Styles
+* ================ ================ ================ ================ */
+@mixin btn-style($bg, $bg-hover, $bg-active, $border, $color: $color-white) {
+
+  @if $enable-btn-gradients == true {
+    background: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
+  } @else {
+    background: $bg;
+  }
+
+  @if $enable-btn-shadows == true {
+    box-shadow: $shadow-xs;
+  }
+
+  @if $enable-btn-border == false {
+    border-color: transparent;
+    background-size: 100% calc(100% + 2px);
+    background-position-y: -1px;
+  } @else {
+    border-color: $border;
+  }
+
+  color: $color;
+
+  &:active,
+  &.c-btn-active {
+    background: $bg-active;
+
+    @if $enable-btn-border == false {
+      border-color: transparent;
+    } @else {
+      border-color: $border;
+    }
+  }
+
+  &:focus,
+  &.c-btn-focus {
+    box-shadow: 0 0 0 0.15rem rgba($bg, .5);
+  }
+
+  @if $enable-btn-white-label == true {
+    &:hover {
+      background-color: lighten($bg, 5%);
+      background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
+    }
+  } @else {
+    &:hover {
+      background-color: $bg-hover;
+      background-image: none;
+    }
+  }
+}
+
+@mixin button-colors($map...) {
+  @each $type in $map {
+    // Defaults
+    $bg: '';
+    $bg-hover: '';
+    $border: '';
+    $bg-active: '';
+    $color: $color-white;
+
+    @if map-has-key($type, bg) {
+      $bg: map-get($type, bg);
+    }
+
+    @if map-has-key($type, bg-hover) {
+      $bg-hover: map-get($type, bg-hover);
+    } @elseif map-has-key($type, bg) {
+      $bg-hover: lighten($bg, 7);
+    }
+
+    @if map-has-key($type, bg-active) {
+      $bg-active: map-get($type, bg-active);
+    } @elseif map-has-key($type, bg) {
+      $bg-active: desaturate($bg, 15%);
+    }
+
+    @if map-has-key($type, border) {
+      $border: map-get($type, border);
+    } @elseif map-has-key($type, border) {
+      $border: transparent;
+    }
+
+    @if map-has-key($type, color) {
+      $color: map-get($type, color);
+    }
+
+    @include btn-style($bg, $bg-hover, $bg-active, $border, $color);
+  }
+}
+
+@mixin btn-size($font-size, $padding, $height) {
+  font-size: $font-size;
+  padding: $padding;
+  height: $height;
+  line-height: $height - 2;
+}
+
+@mixin button-sizing($map...) {
+  @each $size in $map {
+    // Defaults
+    $font-size: '';
+    $padding: '';
+    $height: '';
+
+    @if map-has-key($size, font-size) {
+      $font-size: map-get($size, font-size);
+    }
+
+    @if map-has-key($size, padding) {
+      $padding: map-get($size, padding);
+    }
+
+    @if map-has-key($size, height) {
+      $height: map-get($size, height);
+    }
+
+    @include btn-size($font-size, $padding, $height);
+  }
+}

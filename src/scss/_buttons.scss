@@ -1,0 +1,187 @@
+// --------------------------------------------
+// BUTTONS ------------------------------------
+// --------------------------------------------
+.#{$button-prefix} {
+  @include btn-base;
+
+  &:focus,
+  &-focus {
+    @include btn-focus;
+  }
+
+  &:active,
+  &-active {
+    @include btn-active;
+  }
+
+  &-disabled,
+  &.#{$button-prefix}-disabled,
+  &[disabled] {
+    @include btn-disabled;
+  }
+
+  @if $btn-active-selected {
+    @include btn-active-selected;
+  }
+
+  @each $type in map-keys($button-colors) {
+    &-#{$type} {
+      @include button-colors(map-get($button-colors, $type));
+    }
+  }
+
+  @each $type in map-keys($button-sizes) {
+    @if $type == default {
+      @include button-sizing(map-get($button-sizes, default));
+    } @else {
+      &-#{$type} {
+        @include button-sizing(map-get($button-sizes, $type));
+      }
+    }
+  }
+}
+
+// --------------------------------------------
+// Button Links -------------------------------
+// --------------------------------------------
+.#{$button-prefix}-link {
+  @include btn-base;
+
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+  color: $color-primary-7;
+  font-weight: $btn-font-weight;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    background-color: $color-gray-1;
+    border: 1px solid $color-gray-2;
+  }
+
+  &:active {
+    @include btn-active;
+    
+    color: $color-primary-9;
+    box-shadow: none;
+  }
+
+  &.#{$button-prefix}-disabled,
+  &-disabled,
+  &[disabled] {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      background: transparent;
+      color: $color-gray-6;
+      line-height: 1;
+      border-color: transparent;
+      cursor: not-allowed;
+      appearance: none;
+      box-shadow: none;
+      opacity: $btn-disabled-opacity;
+    }
+  }
+
+  @each $type in map-keys($button-sizes) {
+    @if $type == default {
+      @include button-sizing(map-get($button-sizes, default));
+    } @else {
+      &-#{$type} {
+        @include button-sizing(map-get($button-sizes, $type));
+      }
+    }
+  }
+
+  @each $name, $hex in $theme-colors {
+    &-#{$name} {
+      color: $hex;
+
+      &:active {
+        color: $hex;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+// --------------------------------------------
+// Button Shapes ------------------------------
+// --------------------------------------------
+@if $enable-outline-buttons == true {
+  @each $name, $hex in $theme-colors {
+    .#{$button-prefix}-#{$name}-outline {
+      @include btn-outline($hex);
+    }
+  }
+}
+
+@if $enable-circle-buttons == true {
+  .#{$button-prefix}-circle {
+    border-radius: $radius-round;
+  }
+}
+
+/* stylelint-disable */
+@if $enable-square-buttons == true {
+  .#{$button-prefix}-square {
+    border-radius: 0;
+  }
+}
+
+@if $enable-pill-buttons == true {
+  .#{$button-prefix}-pill {
+    border-radius: 200px;
+  }
+}/* stylelint-enable */
+
+
+// --------------------------------------------
+// Button Icons/Circle/Box --------------------
+// --------------------------------------------
+.#{$button-prefix}-icon,
+.#{$button-prefix}-circle,
+.#{$button-prefix}-box {
+  width: $btn-box-width;
+  padding-left: space(0);
+  padding-right: space(0);
+  text-align: center;
+  font-size: 16px;
+
+
+  @each $name, $size in $btn-box-sizes {
+    &.#{$button-prefix}-#{$name} {
+      width: $size;
+      font-size: $size / 2;
+    }
+  }
+}
+
+.#{$button-prefix}-icon {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $color-gray-5;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    color: $color-primary-7;
+    background-color: $color-gray-1;
+    border: 1px solid $color-gray-4;
+  }
+
+  // All default color classes
+  @each $name, $hex in $theme-colors {
+    &-#{$name} {
+      &:hover {
+        color: $hex;
+      }
+    }
+  }
+}
+
+.#{$button-prefix}-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
