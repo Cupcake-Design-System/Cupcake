@@ -1,18 +1,4 @@
 // --------------------------------------------
-// GLOBAL BOOLEANS ----------------------------
-// --------------------------------------------
-$enable-reset         : true !default;
-$enable-shadow-classes: true !default;
-$enable-color-classes : true !default;
-$enable-spacer-classes: true !default;
-$enable-radius-classes: true !default;
-$white-label          : false !default;
-
-$font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !default;
-$font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
-
-
-// --------------------------------------------
 // ALERTS & TOASTS ----------------------------
 // --------------------------------------------
 $alert-prefix               : 'c-alert' !default;
@@ -55,7 +41,7 @@ $avatar-font-size           : $font-body-md !default;
 $avatar-line-height         : normal !default;
 $avatar-img-border          : 1px solid $color-gray-4 !default;
 
-// for base avatar this maps to name, bg-color, text/border color
+// for avatar sizes this maps to name, size, font-size
 $avatar-sizes:
   (xs, $avatar-default-size / 2, $font-body-xs)
   (sm, $avatar-default-size - 8, $font-body-sm)
@@ -189,17 +175,6 @@ $checkbox-sizes: (
   sm: $global-size-sm,
   lg: $global-size-xl,
 ) !default;
-
-
-// --------------------------------------------
-// HELPER CLASSES -----------------------------
-// --------------------------------------------
-$backgound-prefix: 'c-bg' !default;
-$border-prefix   : 'c-bd' !default;
-$padding-prefix  : 'c-p' !default;
-$margin-prefix   : 'c-m' !default;
-$shadow-prefix   : 'c-depth' !default;
-$radius-prefix   : 'c-radius' !default;
 
 
 // --------------------------------------------
