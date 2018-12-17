@@ -44,6 +44,7 @@ $global-size-xl: 40px !default;
 // --------------------------------------------
 // Spacing and map for generating helpers 
 // --------------------------------------------
+// Changing only $global-px-grid will adapt all space values.
 $global-px-grid: 8px !default;
 $space-0: 0 !default;
 $space-xxs: $global-px-grid / 4 !default;
@@ -63,10 +64,6 @@ $space: (
   lg: $space-lg,
   xl: $space-xl,
 );
-
-// Spacing End
-// --------------------------------------------
-
 
 // --------------------------------------------
 // Font Weights and map for generating helpers 

@@ -22,7 +22,8 @@ $alert-close-font-size      : $font-body-md !default;
 $toast-palette              : $theme-colors !default;
 $toast-left-border          : 4px !default;
 
-$alert-colors: // for base alerts this maps to name, bg-color, text/border color
+// for alerts this maps to name, bg-color, text/border color
+$alert-colors:
   (primary, $color-primary-0, $color-primary)
   (success, $color-success-0, $color-success)
   (warning, $color-warning-0, $color-warning)
