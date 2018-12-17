@@ -1,3 +1,6 @@
+// --------------------------------------------
+// Alert Base Mixin ---------------------------
+// --------------------------------------------
 @mixin alert-base(
   $bg: $alert-primary-bg,
   $color: $alert-default-color,
@@ -26,7 +29,7 @@
   }
 
   &-title {
-    font-weight: font-weight(bold);
+    font-weight: $font-weight-bold;
   }
 
   &-content {
@@ -44,7 +47,11 @@
   }
 }
 
-@mixin alert-style($bg: color(gray, 0), $color: color(gray, 9)) {
+
+// --------------------------------------------
+// Alert Style Mixin --------------------------
+// --------------------------------------------
+@mixin alert-style($bg: $color-gray-0, $color: $color-gray-9) {
   @if $white-label == true {
     background-color: rgba($color, .08);
     border-color: $color;

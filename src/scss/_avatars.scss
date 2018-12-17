@@ -15,10 +15,10 @@
   }
 
   &-square {
-    border-radius: radius(sm);
+    border-radius: $radius-sm;
 
     img {
-      border-radius: radius(sm);
+      border-radius: $radius-sm;
     }
 
     &.#{$avatar-prefix}[data-status]::after {
@@ -32,13 +32,15 @@
     position: absolute;
     top: 0;
     right: 0;
-    font-weight: font-weight(normal);
+    font-weight: $font-weight-normal;
     min-height: 8px;
     min-width: 8px;
     background-clip: padding-box;
-    border-radius: radius(round);
-    box-shadow: 0 0 0 1px color(white);
-    color: color(white);
+    border-radius: $radius-round;
+    /* stylelint-disable */
+    box-shadow: 0 0 0 1px $color-white;
+    /* stylelint-enable */
+    color: $color-white;
     z-index: 1;
   }
 
@@ -47,18 +49,18 @@
     top: 14.64%;
     right: 14.64%;
     transform: translate(50%, -50%);
-    background: color(primary);
-    border-radius: radius(round);
+    background: $color-primary;
+    border-radius: $radius-round;
     z-index: 1;
     content: attr(data-badge);
     /* stylelint-disable */
-    box-shadow: 0 0 0 1px color(white);
+    box-shadow: 0 0 0 1px $color-white;
     /* stylelint-enable */
-    font-size: font-size(xs);
-    height: space(md);
+    font-size: $font-body-xs;
+    height: $space-md;
     line-height: 1.5;
-    min-width: space(md);
-    padding: space(xxs) space(xs);
+    min-width: $space-md;
+    padding: $space-xxs $space-xs;
     text-align: center;
     white-space: nowrap;
   }
@@ -102,7 +104,7 @@
   @each $name, $hex in $extended-palette-light {
     .#{$avatar-prefix}-#{$name} {
       background-color: $hex;
-      color: color(gray, 9);
+      color: $color-gray-9;
     }
   }
 

@@ -50,19 +50,19 @@
   background: transparent;
   border: 1px solid transparent;
   box-shadow: none;
-  color: $color-primary-7;
+  color: color(primary, 7);
   font-weight: $btn-font-weight;
   transition: all 0.3s ease 0s;
 
   &:hover {
-    background-color: $color-gray-1;
-    border: 1px solid $color-gray-2;
+    background-color: color(gray, 1);
+    border: 1px solid color(gray, 2);
   }
 
   &:active {
     @include btn-active;
     
-    color: $color-primary-9;
+    color: color(primary, 9);
     box-shadow: none;
   }
 
@@ -74,7 +74,7 @@
     &:focus,
     &:active {
       background: transparent;
-      color: $color-gray-6;
+      color: color(gray, 6);
       line-height: 1;
       border-color: transparent;
       cursor: not-allowed;
@@ -119,22 +119,21 @@
 
 @if $enable-circle-buttons == true {
   .#{$button-prefix}-circle {
-    border-radius: $radius-round;
+    border-radius: radius(round);
   }
 }
 
-/* stylelint-disable */
 @if $enable-square-buttons == true {
   .#{$button-prefix}-square {
-    border-radius: 0;
+    border-radius: radius(none);
   }
 }
 
 @if $enable-pill-buttons == true {
   .#{$button-prefix}-pill {
-    border-radius: 200px;
+    border-radius: radius(pill);
   }
-}/* stylelint-enable */
+}
 
 
 // --------------------------------------------
@@ -161,13 +160,13 @@
 .#{$button-prefix}-icon {
   background: transparent;
   border: 1px solid transparent;
-  color: $color-gray-5;
+  color: color(gray, 5);
   transition: all 0.3s ease 0s;
 
   &:hover {
-    color: $color-primary-7;
-    background-color: $color-gray-1;
-    border: 1px solid $color-gray-4;
+    color: color(primary, 7);
+    background-color: color(gray, 1);
+    border: 1px solid color(gray, 4);
   }
 
   // All default color classes
