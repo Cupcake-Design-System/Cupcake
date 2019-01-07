@@ -1,3 +1,6 @@
+// --------------------------------------------
+// Checkbox Base Mixin ------------------------
+// --------------------------------------------
 @mixin checkbox($size:$checkbox-default-size) {
   display: inline-block;
   position: relative;
@@ -52,7 +55,7 @@
       width: round($size / 2);
       height: round($size / 2);
       background: $color-white;
-      border-radius: radius(round);
+      border-radius: $radius-round;
       content: ' ';
       color: $color-white;
     }
@@ -101,6 +104,10 @@
   }
 }
 
+
+// --------------------------------------------
+// Checkbox Size Mixin ------------------------
+// --------------------------------------------
 @mixin checkbox-size($size:$checkbox-default-size) {
   height: $size;
 
@@ -139,12 +146,20 @@
   }
 }
 
+
+// --------------------------------------------
+// Checkbox Color Mixin -----------------------
+// --------------------------------------------
 @mixin checkbox-color($color: $primary) {
   input:checked + i::before {
     background-color: $color;
   }
 }
 
+
+// --------------------------------------------
+// Checkbox Control Mixin ---------------------
+// --------------------------------------------
 @mixin control($font-size: $checkbox-default-size) {
   display: inline-block;
   position: relative;

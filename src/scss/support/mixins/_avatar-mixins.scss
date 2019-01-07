@@ -1,3 +1,6 @@
+// --------------------------------------------
+// Avatar Base Mixin --------------------------
+// --------------------------------------------
 @mixin avatar-base($size: $avatar-default-size) {
   height: $size;
   width: $size;
@@ -5,8 +8,8 @@
   text-align: center;
   position: relative;
   vertical-align: middle;
-  background: color(primary);
-  color: color(white);
+  background: $color-primary;
+  color: $color-white;
   font-size: $avatar-font-size;
   border-radius: $avatar-border-radius;
   font-weight: $avatar-font-weight;
@@ -18,7 +21,12 @@
   }
 }
 
-@mixin avatar-size($size: $avatar-default-size, $font-size: 12px) {
+// --------------------------------------------
+// Avatar Size Mixin --------------------------
+// --------------------------------------------
+@mixin avatar-size(
+  $size: $avatar-default-size, 
+  $font-size: 12px) {
   font-size: $font-size;
   height: $size;
   width: $size;

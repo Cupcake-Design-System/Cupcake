@@ -9,7 +9,7 @@
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-radius: radius(square);
+    border-radius: $radius-square;
     padding: $alert-top-padding;
 
     .#{$alert-prefix}-icon {

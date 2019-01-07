@@ -68,7 +68,7 @@ $docs-spacer-xxl: space(xl) + space(md);
     margin-top: $docs-spacer-lg;
     padding: 0 $docs-spacer-sm;
     color: $color-gray-5;
-    font-family: font();
+    font-family: $font-family-sans;
     font-size: 10px;
     line-height: 14px;
     letter-spacing: 1px;
@@ -90,7 +90,7 @@ $docs-spacer-xxl: space(xl) + space(md);
 
   &-item {
     color: $text;
-    font-family: font(primary);
+    font-family: $font-family-sans;
     font-size: 14px;
 
     a {
@@ -118,17 +118,17 @@ $docs-spacer-xxl: space(xl) + space(md);
 
 .ipreo {
   color: $text;
-  font-family: font(primary);
+  font-family: $font-family-sans;
   font-size: 24px;
-  font-weight: font-weight(bold);
+  font-weight: $font-weight-bold;
   line-height: 24px;
 }
 
 .cupcake {
   color: color(primary);
-  font-family: font(primary);
+  font-family: $font-family-sans;
   font-size: 24px;
-  font-weight: font-weight(bold);
+  font-weight: $font-weight-bold;
   line-height: 24px;
 }
 
@@ -139,9 +139,9 @@ $docs-spacer-xxl: space(xl) + space(md);
   border-radius: 2px;
   background-color: white;
   color: $text;
-  font-family: font();
+  font-family: $font-family-sans;
   font-size: 10px;
-  font-weight: font-weight(bold);
+  font-weight: $font-weight-bold;
   letter-spacing: 1px;
   line-height: 24px;
   padding: 0 $docs-spacer-sm;

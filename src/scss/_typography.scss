@@ -48,12 +48,12 @@
   }
 
   &-italic {
-    font-style: italic;
+    font-style: italic !important;
   }
 
   &-muted {
-    color: inherit;
-    opacity: .6;
+    color: inherit !important;
+    opacity: .6 !important;
   }
 
   &-monospace {

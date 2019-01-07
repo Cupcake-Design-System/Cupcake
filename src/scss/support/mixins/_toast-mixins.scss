@@ -1,4 +1,7 @@
-@mixin toast($color: color(primary)) {
+// --------------------------------------------
+// Toast Base Mixin ---------------------------
+// --------------------------------------------
+@mixin toast($color: $color-primary) {
   position: relative;
   display: flex;
   align-items: center;
@@ -9,11 +12,11 @@
   /* stylelint-enable */
   margin: $alert-margin;
   font-size: $alert-font-size;
-  font-weight: font-weight(bold);
-  border-radius: radius(sm);
+  font-weight: $font-weight-bold;
+  border-radius: $radius-sm;
   border: 1px solid $color-gray-2;
   word-wrap: break-word;
-  box-shadow: shadow(sm);
+  box-shadow: $shadow-sm;
 
   i:not(.fa-times),
   &-icon {
@@ -36,7 +39,7 @@
     height: 100%;
     width: $toast-left-border;
     border: darken($color, 20);
-    border-radius: radius(sm) 0 0 radius(sm);
+    border-radius: $radius-sm 0 0 $radius-sm;
   }
 
   &-close {
@@ -47,6 +50,10 @@
   }
 }
 
+
+// --------------------------------------------
+// Toast Style Mixin --------------------------
+// --------------------------------------------
 @mixin toast-style($color: color(primary)) {
   i:not(.fa-times),
   &-icon {
