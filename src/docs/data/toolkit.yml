@@ -11,6 +11,11 @@ btn-colors:
     - success
     - warning
     - danger
+btn-sizes:
+  base:
+    - xs
+    - sm
+    - lg    
 extended-colors:
   base:
     - cyan

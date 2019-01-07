@@ -96,20 +96,14 @@
   }
 }
 
-.#{$button-prefix}-group-lg {
-  .#{$button-prefix}-box {
-    height: 40px;
-    width: 40px;
-    text-align: center;
-  }
-}
 
-.#{$button-prefix}-group-sm {
-  .#{$button-prefix}-box {
-    height: 32px;
-    width: 32px;
-    text-align: center;
-    padding: 0;
+@each $name, $size in $btn-box-sizes {
+  .#{$button-prefix}-group-#{$name} {
+    .#{$button-prefix}-box {
+      width: $size;
+      height: $size;
+      text-align: center;
+    }
   }
 }
 
