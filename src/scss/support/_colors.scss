@@ -1,9 +1,5 @@
-
 /* ----------------------- */
 /* 🎂 Cupcake Sprinkles 🎂 */
-/* imported from: @cupcake-ds/cupcake-sprinkles version: 0.2.2 */
-/* DO NOT MODIFY THIS FILE DIRECTLY! */
-/* ALL VALUES COME FROM THE @cupcake-ds/cupcake-sprinkles PACKAGE */
 /* ----------------------- */
 
 $color-primary: #1b6ec2 !default;
@@ -12,6 +8,7 @@ $color-warning: #f08c00 !default;
 $color-danger: #e03131 !default;
 $color-black: #000000 !default;
 $color-white: #ffffff !default;
+
 $color-primary-0: #e8f7ff !default;
 $color-primary-1: #ccedff !default;
 $color-primary-2: #a3daff !default;
@@ -22,6 +19,7 @@ $color-primary-6: #228ae6 !default;
 $color-primary-7: #1c7cd6 !default;
 $color-primary-8: #1b6ec2 !default;
 $color-primary-9: #1862ab !default;
+
 $color-success-0: #ebfbee !default;
 $color-success-1: #d3f9d8 !default;
 $color-success-2: #b2f2bb !default;
@@ -32,6 +30,7 @@ $color-success-6: #40c057 !default;
 $color-success-7: #37b24d !default;
 $color-success-8: #2f9e44 !default;
 $color-success-9: #2b8a3e !default;
+
 $color-warning-0: #fff9db !default;
 $color-warning-1: #fff3bf !default;
 $color-warning-2: #ffec99 !default;
@@ -42,6 +41,7 @@ $color-warning-6: #fab005 !default;
 $color-warning-7: #f59f00 !default;
 $color-warning-8: #f08c00 !default;
 $color-warning-9: #e67700 !default;
+
 $color-danger-0: #fff5f5 !default;
 $color-danger-1: #ffe3e3 !default;
 $color-danger-2: #ffc9c9 !default;
@@ -52,6 +52,7 @@ $color-danger-6: #fa5252 !default;
 $color-danger-7: #f03e3e !default;
 $color-danger-8: #e03131 !default;
 $color-danger-9: #c92a2a !default;
+
 $color-gray-0: #f8f9fa !default;
 $color-gray-1: #f1f3f5 !default;
 $color-gray-2: #e9ecef !default;
@@ -62,8 +63,7 @@ $color-gray-6: #868e96 !default;
 $color-gray-7: #495057 !default;
 $color-gray-8: #343a40 !default;
 $color-gray-9: #212529 !default;
-$color-link: #1b6ec2 !default;
-$color-link-hover: #1c7cd6 !default;
+
 $color-cyan-0: #e3fafc !default;
 $color-cyan-1: #c5f6fa !default;
 $color-cyan-2: #99e9f2 !default;
@@ -74,6 +74,7 @@ $color-cyan-6: #15aabf !default;
 $color-cyan-7: #1098ad !default;
 $color-cyan-8: #0c8599 !default;
 $color-cyan-9: #0b7285 !default;
+
 $color-grape-0: #f8f0fc !default;
 $color-grape-1: #f3d9fa !default;
 $color-grape-2: #eebefa !default;
@@ -84,6 +85,7 @@ $color-grape-6: #be4bdb !default;
 $color-grape-7: #ae3ec9 !default;
 $color-grape-8: #9c36b5 !default;
 $color-grape-9: #862e9c !default;
+
 $color-indigo-0: #edf2ff !default;
 $color-indigo-1: #dbe4ff !default;
 $color-indigo-2: #bac8ff !default;
@@ -94,6 +96,7 @@ $color-indigo-6: #4c6ef5 !default;
 $color-indigo-7: #4263eb !default;
 $color-indigo-8: #3b5bdb !default;
 $color-indigo-9: #364fc7 !default;
+
 $color-lime-0: #f4fce3 !default;
 $color-lime-1: #e9fac8 !default;
 $color-lime-2: #d8f5a2 !default;
@@ -104,6 +107,7 @@ $color-lime-6: #82c91e !default;
 $color-lime-7: #74b816 !default;
 $color-lime-8: #66a80f !default;
 $color-lime-9: #5c940d !default;
+
 $color-orange-0: #fff4e6 !default;
 $color-orange-1: #ffe8cc !default;
 $color-orange-2: #ffd8a8 !default;
@@ -114,6 +118,7 @@ $color-orange-6: #fd7e14 !default;
 $color-orange-7: #f76707 !default;
 $color-orange-8: #e8590c !default;
 $color-orange-9: #d9480f !default;
+
 $color-pink-0: #fff0f6 !default;
 $color-pink-1: #ffdeeb !default;
 $color-pink-2: #fcc2d7 !default;
@@ -124,6 +129,7 @@ $color-pink-6: #e64980 !default;
 $color-pink-7: #d6336c !default;
 $color-pink-8: #c2255c !default;
 $color-pink-9: #a61e4d !default;
+
 $color-teal-0: #e6fcf5 !default;
 $color-teal-1: #c3fae8 !default;
 $color-teal-2: #96f2d7 !default;
@@ -134,6 +140,7 @@ $color-teal-6: #12b886 !default;
 $color-teal-7: #0ca678 !default;
 $color-teal-8: #099268 !default;
 $color-teal-9: #087f5b !default;
+
 $color-violet-0: #f3f0ff !default;
 $color-violet-1: #e5dbff !default;
 $color-violet-2: #d0bfff !default;
@@ -146,72 +153,7 @@ $color-violet-8: #6741d9 !default;
 $color-violet-9: #5f3dc4 !default;
 
 
-$font-body-xs: 10px !default;
-$font-body-sm: 11px !default;
-$font-body-md: 12px !default;
-$font-body-lg: 14px !default;
-$font-body-xl: 16px !default;
-$font-body-xxl: 18px !default;
-
-
-$font-family-sans: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
-$font-family-mono: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !default;
-
-
-$font-header-xs: 12px !default;
-$font-header-sm: 14px !default;
-$font-header-md: 16px !default;
-$font-header-lg: 20px !default;
-$font-header-xl: 24px !default;
-$font-header-xxl: 36px !default;
-
-
-$font-header-xs: 12px !default;
-$font-header-sm: 14px !default;
-$font-header-md: 16px !default;
-$font-header-lg: 20px !default;
-$font-header-xl: 24px !default;
-$font-header-xxl: 36px !default;
-
-
-$font-weight-bold: 900 !default;
-$font-weight-semibold: 600 !default;
-$font-weight-normal: 400 !default;
-$font-weight-light: 300 !default;
-
-
-$line-height-normal: normal !default;
-$line-height-default: 1.5 !default;
-$line-height-condensed: 1.25 !default;
-
-
-$radius-0: none !default;
-$radius-square: 0 !default;
-$radius-sm: 2px !default;
-$radius-md: 4px !default;
-$radius-lg: 8px !default;
-$radius-round: 200px !default;
-$radius-pill: 100% !default;
-
-
-$shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, .1) !default;
-$shadow-sm: 0 4px 8px 0 rgba(0, 0, 0, 0.1) !default;
-$shadow-md: 0 6px 12px 0 rgba(0, 0, 0, .1) !default;
-$shadow-lg: 0 8px 16px 0 rgba(0, 0, 0, .1) !default;
-$shadow-xl: 0 12px 24px 0 rgba(0, 0, 0, .1) !default;
-
-
-$space-0: 0 !default;
-$space-xxs: 2px !default;
-$space-xs: 4px !default;
-$space-sm: 8px !default;
-$space-md: 16px !default;
-$space-lg: 24px !default;
-$space-xl: 32px !default;
-
-
 $color: (
-
   'danger': (
     0: $color-danger-0,
     1: $color-danger-1,
@@ -278,9 +220,7 @@ $color: (
   ),
 );
 
-
 $color-extended: (
-
   'cyan': (
     0: $color-cyan-0,
     1: $color-cyan-1,
@@ -386,81 +326,6 @@ $color-extended: (
   ),
 );
 
-
-$font-body: (
-  xs: $font-body-xs,
-  sm: $font-body-sm,
-  md: $font-body-md,
-  lg: $font-body-lg,
-  xl: $font-body-xl,
-  xxl: $font-body-xxl,
-);
-
-$font-family: (
-  sans: $font-family-sans,
-  mono: $font-family-mono,
-);
-
-$font-header: (
-  xs: $font-header-xs,
-  sm: $font-header-sm,
-  md: $font-header-md,
-  lg: $font-header-lg,
-  xl: $font-header-xl,
-  xxl: $font-header-xxl,
-);
-
-$font-headers: (
-  xs: $font-header-xs,
-  sm: $font-header-sm,
-  md: $font-header-md,
-  lg: $font-header-lg,
-  xl: $font-header-xl,
-  xxl: $font-header-xxl,
-);
-
-$font-weight: (
-  bold: $font-weight-bold,
-  semibold: $font-weight-semibold,
-  normal: $font-weight-normal,
-  light: $font-weight-light,
-);
-
-$line-height: (
-  normal: $line-height-normal,
-  default: $line-height-default,
-  condensed: $line-height-condensed,
-);
-
-$radius: (
-  0: $radius-0,
-  square: $radius-square,
-  sm: $radius-sm,
-  md: $radius-md,
-  lg: $radius-lg,
-  round: $radius-round,
-  pill: $radius-pill,
-);
-
-$shadow: (
-  xs: $shadow-xs,
-  sm: $shadow-sm,
-  md: $shadow-md,
-  lg: $shadow-lg,
-  xl: $shadow-xl,
-);
-
-$space: (
-  0: $space-0,
-  xxs: $space-xxs,
-  xs: $space-xs,
-  sm: $space-sm,
-  md: $space-md,
-  lg: $space-lg,
-  xl: $space-xl,
-);
-
-/// Missing from upstream!
 $theme-colors: (
   primary: $color-primary,
   success: $color-success,
@@ -469,7 +334,6 @@ $theme-colors: (
   black: $color-black,
   white: $color-white,
 );
-
 
 $extended-palette: (
   dark: $color-gray-9,

@@ -1,5 +1,6 @@
-/* Button Base
-* ================ ================ ================ ================ */
+// --------------------------------------------
+// Button Base Mixin --------------------------
+// --------------------------------------------
 @mixin btn-base {
   vertical-align: baseline;
   display: inline-block;
@@ -21,9 +22,17 @@
 }
 
 
-/* Button Outline
-* ================ ================ ================ ================ */
-@mixin btn-outline($border-color, $color: $border-color, $border-color-hover: $border-color, $bg: transparent, $bg-hover: $border-color, $color-hover: $color-white) {
+// --------------------------------------------
+// Button Outline Mixin -----------------------
+// --------------------------------------------
+@mixin btn-outline(
+  $border-color, 
+  $color: $border-color, 
+  $border-color-hover: 
+  $border-color, 
+  $bg: transparent, 
+  $bg-hover: $border-color, 
+  $color-hover: $color-white) {
   border: 1px solid $border-color;
   background-color: $bg;
   color: $color;
@@ -50,16 +59,21 @@
 }
 
 
-/* Button Focus
-* ================ ================ ================ ================ */
-@mixin btn-focus($shadow: $btn-shadow-focus) {
+// --------------------------------------------
+// Button Focus Mixin -----------------------
+// --------------------------------------------
+@mixin btn-focus(
+  $shadow: $btn-shadow-focus) {
   box-shadow: $shadow;
 }
 
 
-/* Button Active
-* ================ ================ ================ ================ */
-@mixin btn-active($bg: $color-gray-1, $border: $color-gray-4) {
+// --------------------------------------------
+// Button Active Mixin -----------------------
+// --------------------------------------------
+@mixin btn-active(
+  $bg: $color-gray-1, 
+  $border: $color-gray-4) {
   text-decoration: none;
   background-color: desaturate($bg, 15%);
   border-color: darken($bg, 15%);
@@ -79,9 +93,14 @@
 }
 
 
-/* Button Disabled
-* ================ ================ ================ ================ */
-@mixin btn-disabled($bg: $btn-disabled-bg, $bd: 1px solid $bg, $color: $color-gray-0, $shadow:none ) {
+// --------------------------------------------
+// Button Disabled Mixin ----------------------
+// --------------------------------------------
+@mixin btn-disabled(
+  $bg: $btn-disabled-bg, 
+  $bd: 1px solid $bg, 
+  $color: $color-gray-0, 
+  $shadow:none ) {
   &,
   &:hover,
   &:focus,
@@ -103,9 +122,14 @@
 }
 
 
-/* Button Styles
-* ================ ================ ================ ================ */
-@mixin btn-style($bg, $bg-hover, $bg-active, $border, $color: $color-white) {
+// --------------------------------------------
+// Button Style Mixins ------------------------
+// --------------------------------------------
+@mixin btn-style(
+  $bg, $bg-hover, 
+  $bg-active, 
+  $border, 
+  $color: $color-white) {
 
   @if $enable-btn-gradients == true {
     background: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
@@ -195,6 +219,10 @@
   }
 }
 
+
+// --------------------------------------------
+// Button Size Mixin --------------------------
+// --------------------------------------------
 @mixin btn-size($font-size, $padding, $height) {
   font-size: $font-size;
   padding: $padding;

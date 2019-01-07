@@ -30,8 +30,8 @@ $button-test-map: (
           text-align: center;
           cursor: pointer;
           outline: 0;
-          font-weight: bold;
-          font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+          font-weight: 700;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
           color: #495057;
           border: 1px solid transparent;
           border-radius: 3px;
@@ -73,23 +73,23 @@ $button-test-map: (
           border-color: green;
           color: #ffffff;
         }
-        
+
         .c-btn-purple:active,
         .c-btn-purple.c-btn-active {
           background: red;
           border-color: green;
         }
-        
+
         .c-btn-purple:focus,
         .c-btn-purple.c-btn-focus {
           box-shadow: 0 0 0 0.15rem rgba(128, 0, 128, 0.5);
         }
-        
+
         .c-btn-purple:hover {
           background-color: orange;
           background-image: none;
         }
-        
+
       }
     }
   }

@@ -32,7 +32,7 @@
     position: absolute;
     display: block;
     background-color: $color;
-    border-radius: radius(sm);
+    border-radius: $radius-sm;
     content: "";
     left: 50%;
     top: 50%;
@@ -55,7 +55,7 @@
 
     &::before,
     &::after {
-      background-color: color(gray, 7);
+      background-color: $color-gray-7;
     }
 
     &:hover {
@@ -63,7 +63,7 @@
 
       &::before,
       &::after {
-        background-color: color(gray, 7);
+        background-color: $color-gray-7;
       }
     }
   }

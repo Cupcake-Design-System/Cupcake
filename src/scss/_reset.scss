@@ -13,8 +13,9 @@
   }
 
   body {
-    font-family: font();
-    font-size: font-size(xl);
+    font-family: $font-family-sans;
+    font-size: $font-body-xl;
+    color: $color-gray-9;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -106,11 +107,6 @@
 
   dfn {
     font-style: italic;
-  }
-
-  mark {
-    color: #ffffff;
-    background: #ffff00;
   }
 
   small {

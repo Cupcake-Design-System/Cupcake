@@ -1,5 +1,6 @@
-
-// Badge
+// --------------------------------------------
+// Badge Base Mixin ---------------------------
+// --------------------------------------------
 @mixin badge-base {
   display: inline-flex;
   align-items: center;
@@ -28,7 +29,13 @@
   }
 }
 
-@mixin badge-size($size: $badge-default-size, $font-size: $badge-default-font-size) {
+
+// --------------------------------------------
+// Badge Size Mixin ---------------------------
+// --------------------------------------------
+@mixin badge-size(
+  $size: $badge-default-size, 
+  $font-size: $badge-default-font-size) {
   font-size: $font-size;
   height: $size;
   min-width: $size;
@@ -38,6 +45,10 @@
   }
 }
 
+
+// --------------------------------------------
+// Badge Style Mixin --------------------------
+// --------------------------------------------
 @mixin badge-style($bg, $color: $color-white) {
   background-color: $bg;
   color: $color;

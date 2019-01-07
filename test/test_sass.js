@@ -4,8 +4,8 @@ const sassTrue = require('sass-true');
 const initCustomMixins = path.join(__dirname, 'init-custom-mixins.scss');
 sassTrue.runSass({file: initCustomMixins}, describe, it);
 
-const initCustomFunctions = path.join(__dirname, 'init-custom-functions.scss');
-sassTrue.runSass({file: initCustomFunctions}, describe, it);
+// const initCustomFunctions = path.join(__dirname, 'init-custom-functions.scss');
+// sassTrue.runSass({file: initCustomFunctions}, describe, it);
 
 // const initCustomConfig = path.join(__dirname, 'init-custom-config.scss');
 // sassTrue.runSass({file: initCustomConfig}, describe, it);
@@ -25,8 +25,8 @@ sassTrue.runSass({file: buttons}, describe, it);
 const closeMixin = path.join(__dirname, 'test-close-mixin.scss');
 sassTrue.runSass({file: closeMixin}, describe, it);
 
-const typography = path.join(__dirname, 'test-typography.scss');
-sassTrue.runSass({file: typography}, describe, it);
+// const typography = path.join(__dirname, 'test-typography.scss');
+// sassTrue.runSass({file: typography}, describe, it);
 
 const shadows = path.join(__dirname, 'test-shadows.scss');
 sassTrue.runSass({file: shadows}, describe, it);
