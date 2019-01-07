@@ -13,7 +13,7 @@
 
   > :not(:first-child):not(:last-child) > .#{$button-prefix},
   > .#{$button-prefix}:not(:first-child):not(:last-child) {
-    border-radius: 0;
+    border-radius: $radius-0;
   }
 
   > :first-child > .#{$button-prefix},
@@ -30,7 +30,7 @@
     border-bottom-left-radius: 0;
 
     &:hover {
-      margin-right: 0;
+      margin-right: $space-0;
     }
 
     &.selected,
@@ -42,28 +42,30 @@
   }
 }
 
-.#{$button-prefix}-group {
-  .#{$button-prefix}-pill {
-    &:first-child {
-      border-left-width: 1px;
-      border-top-left-radius: $radius-pill;
-      border-bottom-left-radius: $radius-pill;
-    }
-
-    &:last-child {
-      border-left-width: 0;
-      border-top-right-radius: $radius-pill;
-      border-bottom-right-radius: $radius-pill;
-
-      &:hover {
-        margin-right: 0;
+@if $enable-pill-buttons == true {
+  .#{$button-prefix}-group {
+    .#{$button-prefix}-pill {
+      &:first-child {
+        border-left-width: 1px;
+        border-top-left-radius: $radius-pill;
+        border-bottom-left-radius: $radius-pill;
       }
 
-      &.selected,
-      &:focus,
-      &:active,
-      &:hover {
-        border-right-width: 1px;
+      &:last-child {
+        border-left-width: 0;
+        border-top-right-radius: $radius-pill;
+        border-bottom-right-radius: $radius-pill;
+
+        &:hover {
+          margin-right: $space-0;
+        }
+
+        &.selected,
+        &:focus,
+        &:active,
+        &:hover {
+          border-right-width: 1px;
+        }
       }
     }
   }
@@ -74,10 +76,12 @@
   flex-direction: column;
 
   .#{$button-prefix} {
+    /* stylelint-disable */
     margin-top: -1px;
+    /* stylelint-enable */
 
     &:first-child:not(:only-child) {
-      margin-top: 0;
+      margin-top: $space-0;
     }
 
     &:first-child:not(:only-child) {
@@ -91,7 +95,7 @@
     }
 
     &:not(:first-child):not(:last-child) {
-      border-radius: 0;
+      border-radius: $radius-0;
     }
   }
 }

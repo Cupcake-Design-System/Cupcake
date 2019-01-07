@@ -87,13 +87,13 @@ $font-weight: (
 // --------------------------------------------
 // Radius and map for generating helpers 
 // --------------------------------------------
-$radius-0: none !default;
+$radius-0: 0 !default;
 $radius-square: 0 !default;
 $radius-sm: 3px !default;
 $radius-md: 6px !default;
 $radius-lg: 8px !default;
 $radius-round: 200px !default;
-$radius-pill: 100% !default;
+$radius-pill: 50px !default;
 
 // This is a looped map & classes will be generated based on key/value pairs i.e. "c-radius-sm"
 $radius: (

@@ -21,7 +21,7 @@ $radius-prefix: 'radius';
       }
       @include expect {
         .radius-0 {
-          border-radius: none
+          border-radius: 0
         }
         .radius-square {
           border-radius: 0
@@ -39,7 +39,7 @@ $radius-prefix: 'radius';
           border-radius: 200px
         }
         .radius-pill {
-          border-radius: 100%
+          border-radius: 50px
         }
       }
     }
