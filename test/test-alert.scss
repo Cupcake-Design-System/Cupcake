@@ -17,7 +17,7 @@ $alert-prefix   : 'alert';
         .alert {
           position: relative;
           display: flex;
-          align-items: start;
+          align-items: flex-start;
           text-align: left;
           margin: 0 0 16px 0;
           padding: 8px;

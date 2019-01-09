@@ -61,7 +61,7 @@
 
   &:active {
     @include btn-active;
-    
+
     color: color(primary, 9);
     box-shadow: none;
   }
@@ -146,13 +146,10 @@
   padding-left: space(0);
   padding-right: space(0);
   text-align: center;
-  font-size: 16px;
-
 
   @each $name, $size in $btn-box-sizes {
     &.#{$button-prefix}-#{$name} {
       width: $size;
-      font-size: $size / 2;
     }
   }
 }
