@@ -1,0 +1,394 @@
+.c-input-label {
+  @include label;
+}
+
+.c-input {
+  @include input;
+
+  &-right-icon {
+    padding-right: $control-icon-padding;
+  }
+
+  .c-input-icon + & {
+    padding-left: $control-icon-padding;
+  }
+}
+
+.c-input-icon {
+  @include vertical-center;
+
+  left: $control-padding-h;
+  color: $control-icon-color;
+
+  .c-input ~ & {
+    left: auto;
+    right: $control-padding-h;
+  }
+}
+
+textarea.c-input {
+  height: auto;
+}
+
+
+$control-colors:
+  ("success", $control-success-c, $control-success-bg)
+  ("warning", $control-warning-c, $control-warning-bg)
+  ("error", $control-danger-c, $control-danger-bg) !default;
+
+@each $name, $color, $bg in $control-colors {
+  .c-input-#{$name} {
+    &,
+    &:hover {
+      border-color: $color;
+
+      @if $bg {
+        background-color: $bg;
+      }
+    }
+
+    &:focus {
+      @if $bg {
+        border-color: $color;
+        background-color: $control-background;
+      } @else {
+        border-color: $control-active-border;
+      }
+    }
+
+    & ~ .c-input-icon {
+      color: $color;
+    }
+  }
+}
+
+
+$control-ng-validation:
+  ("ng-valid", "success")
+  ("ng-invalid", "error") !default;
+
+@each $ng-state, $color in $control-ng-validation {
+  .c-ng-validate.ng-dirty.#{$ng-state},
+  .c-ng-validate-form .ng-dirty.#{$ng-state} {
+    @extend .c-input-#{$color};
+  }
+}
+
+$form-sizes:
+  (sm, 24px, 4px 8px, 11px)
+  (lg, 40px, 8px 16px, 16px)
+  (xl, 48px, 16px, 18px) !default;
+
+
+@each $name, $height, $padding, $font-size in config($form-sizes) {
+  .c-input-#{$name},
+  .c-input-label-#{$name} {
+    font-size: $font-size;
+    padding: $padding;
+  }
+
+  .c-input-#{$name} {
+    height: $height;
+  }
+
+  .c-input-label-#{$name} {
+    padding-left: $space-0;
+    padding-right: $space-0;
+  }
+}
+
+
+.c-input-addon {
+  display: flex;
+  align-items: center; // vertically align all child elements
+  padding: $space-0 $control-padding-h;
+  font-size: $control-font-size;
+  border: 1px solid $control-border;
+  background-color: $control-addon-background;
+
+  &:first-child {
+    border-radius: $radius-sm $radius-0 $radius-0 $radius-sm;
+  }
+
+  &:last-child {
+    margin-right: $space-0;
+    border-left: $space-0;
+    border-radius: $radius-0 $radius-sm $radius-sm $radius-0;
+  }
+}
+
+.c-form-element {
+  position: relative;
+  padding: $control-element-padding;
+
+  .c-label:first-child {
+    padding: $control-element-label-padding;
+  }
+}
+
+
+.c-fieldset {
+  &,
+  &.c-list {
+    display: block;
+    width: 100%;
+    margin: $space-sm $space-0;
+    padding: $space-0;
+    border: 0;
+  }
+
+  &-legend {
+    @include label;
+    /* stylelint-disable */
+    padding: 0.3em 0;
+    /* stylelint-enable */
+  }
+
+  &:disabled,
+  &-disabled {
+    .c-input {
+      @include input-disabled;
+    }
+  }
+}
+
+.c-hint {
+  position: absolute;
+  transform: scale(.8);
+  transform-origin: top left;
+  margin-top: $space-sm;
+  color: $control-hint-color;
+  font-size: $control-hint-font-size;
+  opacity: 0;
+  pointer-events: none;
+  transition: $control-hint-transition;
+
+  &-static,
+  .c-input:focus ~ & {
+    transform: scale(.9);
+    opacity: 1;
+  }
+}
+
+@each $name, $color in $control-colors {
+  .c-hint-#{$name} {
+    color: $color;
+  }
+}
+
+
+// INPUT GROUP
+.c-input-group {
+  display: flex;
+
+  .c-btn,
+  .c-input-addon,
+  .c-input-container {
+    &:not(:first-child) {
+       /* stylelint-disable */
+      margin-left: -1px;
+       /* stylelint-enable */
+    }
+  }
+
+  .c-input-container {
+    z-index: 1;
+
+    &:hover,
+    &:focus,
+    &:active {
+      z-index: 1;
+    }
+  }
+
+  .c-btn {
+    &:focus,
+    &:active {
+      z-index: 2;
+    }
+
+    &:first-child {
+      border-top-right-radius: $radius-0;
+      border-bottom-right-radius: $radius-0;
+    }
+
+    &:last-child {
+      border-top-left-radius: $radius-0;
+      border-bottom-left-radius: $radius-0;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: $radius-0;
+    }
+  }
+
+  .c-input-container {
+    flex: 1 0 auto;
+
+    &-fixed {
+      flex: 0 1 auto;
+    }
+
+    // .c-input {
+    //   height: 100%;
+    // }
+
+    &:first-child .c-input {
+      border-top-right-radius: $radius-0;
+      border-bottom-right-radius: $radius-0;
+    }
+
+    &:last-child .c-input {
+      border-top-left-radius: $radius-0;
+      border-bottom-left-radius: $radius-0;
+    }
+
+    &:not(:first-child):not(:last-child) .c-input {
+      border-radius: $radius-0;
+    }
+  }
+}
+
+.c-input-group-rounded {
+  .c-btn {
+    &:first-child {
+      border-top-left-radius: $control-border-radius-rounded;
+      border-bottom-left-radius: $control-border-radius-rounded;
+    }
+
+    &:last-child {
+      border-top-right-radius: $control-border-radius-rounded;
+      border-bottom-right-radius: $control-border-radius-rounded;
+    }
+  }
+
+  .c-input-container {
+    &:first-child .c-input {
+      border-top-left-radius: $control-border-radius-rounded;
+      border-bottom-left-radius: $control-border-radius-rounded;
+    }
+
+    &:last-child .c-input {
+      border-top-right-radius: $control-border-radius-rounded;
+      border-bottom-right-radius: $control-border-radius-rounded;
+    }
+  }
+}
+
+.c-input-group-rounded-left {
+  .c-btn {
+    &:first-child {
+      border-top-left-radius: $control-border-radius-rounded;
+      border-bottom-left-radius: $control-border-radius-rounded;
+    }
+  }
+
+  .c-input-container {
+    &:first-child .c-input {
+      border-top-left-radius: $control-border-radius-rounded;
+      border-bottom-left-radius: $control-border-radius-rounded;
+    }
+  }
+}
+
+.c-input-group-rounded-right {
+  .c-btn {
+    &:last-child {
+      border-top-right-radius: $control-border-radius-rounded;
+      border-bottom-right-radius: $control-border-radius-rounded;
+    }
+  }
+
+  .c-input-container {
+    &:last-child .c-input {
+      border-top-right-radius: $control-border-radius-rounded;
+      border-bottom-right-radius: $control-border-radius-rounded;
+    }
+  }
+}
+
+.c-input-group-stacked {
+  display: flex;
+  flex-wrap: wrap;
+
+  .c-btn,
+  .c-input-addon,
+  .c-input-container {
+    &:not(:first-child) {
+      margin-left: $space-0; // reset margin from .c-input-group
+       /* stylelint-disable */
+      margin-top: -1px;
+       /* stylelint-enable */
+    }
+  }
+
+  .c-input-container,
+  .c-btn {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: $space-0;
+  }
+
+  .c-btn {
+    &:not(:first-child):not(:last-child) {
+      border-radius: $radius-0;
+    }
+
+    &:first-child {
+      border-radius: $control-border-radius $control-border-radius $radius-0 $radius-0;
+    }
+
+    &:last-child {
+      border-radius: $radius-0 $radius-0 $control-border-radius $control-border-radius;
+    }
+  }
+
+  .c-input-container {
+    &:not(:first-child):not(:last-child) .c-input {
+      border-radius: $radius-0;
+    }
+
+    &:first-child .c-input {
+      border-radius: $control-border-radius $control-border-radius $radius-0 $radius-0;
+    }
+
+    &:last-child .c-input {
+      border-radius: $radius-0 $radius-0 $control-border-radius $control-border-radius;
+    }
+  }
+}
+
+.c-form-group {
+  margin-bottom: $space-md;
+}
+
+.c-input-results {
+  .c-input {
+    border-bottom-left-radius: $radius-0;
+    border-bottom-right-radius: $radius-0;
+  }
+
+  &-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 2px 5px 4px rgba(0, 0, 0, .05);
+    border: 1px solid rgb(204, 204, 204);
+    border-top: 0;
+    list-style: none;
+    margin-left: $space-0;
+    border-bottom-left-radius: $radius-sm;
+    border-bottom-right-radius: $radius-sm;
+
+    li {
+       /* stylelint-disable */
+      padding: 0.5em;
+       /* stylelint-enable */
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgb(204, 204, 204);
+      }
+    }
+  }
+}

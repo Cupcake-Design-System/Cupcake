@@ -15,6 +15,7 @@
   color: $btn-default-c;
   border: $btn-bd;
   border-radius: $btn-radius;
+  transition: background-color 0.1s ease-in;
 
   @if $enable-btn-shadows == true {
     box-shadow: $btn-shadow-inset;
@@ -26,12 +27,12 @@
 // Button Outline Mixin -----------------------
 // --------------------------------------------
 @mixin btn-outline(
-  $border-color, 
-  $color: $border-color, 
-  $border-color-hover: 
-  $border-color, 
-  $bg: transparent, 
-  $bg-hover: $border-color, 
+  $border-color,
+  $color: $border-color,
+  $border-color-hover:
+  $border-color,
+  $bg: transparent,
+  $bg-hover: $border-color,
   $color-hover: $color-white) {
   border: 1px solid $border-color;
   background-color: $bg;
@@ -72,7 +73,7 @@
 // Button Active Mixin -----------------------
 // --------------------------------------------
 @mixin btn-active(
-  $bg: $color-gray-1, 
+  $bg: $color-gray-1,
   $border: $color-gray-4) {
   text-decoration: none;
   background-color: desaturate($bg, 15%);
@@ -97,9 +98,9 @@
 // Button Disabled Mixin ----------------------
 // --------------------------------------------
 @mixin btn-disabled(
-  $bg: $btn-disabled-bg, 
-  $bd: 1px solid $bg, 
-  $color: $color-gray-0, 
+  $bg: $btn-disabled-bg,
+  $bd: 1px solid $bg,
+  $color: $color-gray-0,
   $shadow:none ) {
   &,
   &:hover,
@@ -126,9 +127,9 @@
 // Button Style Mixins ------------------------
 // --------------------------------------------
 @mixin btn-style(
-  $bg, $bg-hover, 
-  $bg-active, 
-  $border, 
+  $bg, $bg-hover,
+  $bg-active,
+  $border,
   $color: $color-white) {
 
   @if $enable-btn-gradients == true {
