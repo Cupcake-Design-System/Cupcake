@@ -3,11 +3,11 @@
 // --------------------------------------------
 .#{$button-prefix}-group {
   display: inline-flex;
-  vertical-align: middle;
+  // vertical-align: middle;
 
   .#{$button-prefix} {
     position: relative;
-    float: left;
+    flex: 1 0 auto;
     border-left-width: 0;
   }
 
@@ -39,6 +39,10 @@
     &:hover {
       border-right-width: 1px;
     }
+  }
+
+  &-block {
+    display: flex;
   }
 }
 
@@ -99,7 +103,6 @@
     }
   }
 }
-
 
 @each $name, $size in $btn-box-sizes {
   .#{$button-prefix}-group-#{$name} {

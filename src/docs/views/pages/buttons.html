@@ -5,13 +5,70 @@ layout: blank
 
 {{#each toolkit.btn-colors}}
 {{#each this}}
-<button class="c-btn c-btn-xs c-btn-{{this}}">X-Small</button>
-<button class="c-btn-link c-btn-link-xs c-btn-link-{{this}}">X-Small Link</button>
-<div class="c-btn-group c-m-right-md">
-  <button class="c-btn c-btn-{{this}} c-btn-xs">Small</button>
-  <button class="c-btn c-btn-{{this}} c-btn-xs">Group</button>
-  <button class="c-btn c-btn-{{this}} c-btn-xs">Buttons</button>
-</div>
+<button class="c-btn c-btn-xs c-btn-{{this}}">X-Sm</button>
+{{/each}}
+{{/each}}
+
+{{#each toolkit.btn-colors}}
+{{#each this}}
+<button class="c-btn-link c-btn-link-xs c-btn-link-{{this}}">X-Sm Link</button>
+{{/each}}
+{{/each}}
+
+<br>
+<br>
+
+{{#each toolkit.btn-colors}}
+{{#each this}}
+<button class="c-btn c-btn-sm c-btn-{{this}}">Small</button>
+{{/each}}
+{{/each}}
+
+{{#each toolkit.btn-colors}}
+{{#each this}}
+<button class="c-btn-link c-btn-link-sm c-btn-link-{{this}}">Small Link</button>
+{{/each}}
+{{/each}}
+
+<br>
+<br>
+
+{{#each toolkit.btn-colors}}
+{{#each this}}
+<button class="c-btn c-btn-{{this}}">Default</button>
+{{/each}}
+{{/each}}
+
+{{#each toolkit.btn-colors}}
+{{#each this}}
+<button class="c-btn-link c-btn-link-{{this}}">Default Link</button>
+{{/each}}
+{{/each}}
+
+<br>
+<br>
+
+{{#each toolkit.btn-colors}}
+{{#each this}}
+<button class="c-btn c-btn-lg c-btn-{{this}}">Large</button>
+{{/each}}
+{{/each}}
+
+{{#each toolkit.btn-colors}}
+{{#each this}}
+<button class="c-btn-link c-btn-link-lg c-btn-link-{{this}}">Large Link</button>
+{{/each}}
+{{/each}}
+
+<br>
+<br>
+<br>
+<br>
+
+{{#each toolkit.btn-colors}}
+{{#each this}}
+<button class="c-btn c-btn-xs c-btn-{{this}}">X-Sm</button>
+<button class="c-btn-link c-btn-link-xs c-btn-link-{{this}}">X-Sm Link</button>
 {{/each}}
 {{/each}}
 
@@ -47,6 +104,8 @@ layout: blank
 
 <br>
 <br>
+<br>
+<br>
 
 {{#each toolkit.btn-colors}}
 {{#each this}}
@@ -71,6 +130,8 @@ layout: blank
 
 <br>
 <br>
+<br>
+<br>
 
 {{#each toolkit.btn-colors}}
 {{#each this}}
@@ -88,7 +149,7 @@ layout: blank
 
 {{#each toolkit.btn-sizes}}
 {{#each this}}
-<div class="c-btn-group c-m-right-md">
+<div class="c-btn-group">
   <button class="c-btn c-btn-primary c-btn-{{this}}">Simple</button>
   <button class="c-btn c-btn-primary c-btn-{{this}}">Button</button>
   <button class="c-btn c-btn-primary c-btn-{{this}}">Group</button>
@@ -101,7 +162,7 @@ layout: blank
 
 {{#each toolkit.btn-sizes}}
 {{#each this}}
-<div class="c-btn-group-vertical c-m-right-md">
+<div class="c-btn-group-vertical">
   <button class="c-btn c-btn-primary c-btn-{{this}}">Vertical</button>
   <button class="c-btn c-btn-primary c-btn-{{this}}">Button</button>
   <button class="c-btn c-btn-primary c-btn-{{this}}">Group</button>
@@ -125,6 +186,20 @@ layout: blank
 <br>
 <br>
 
+{{#each toolkit.btn-sizes}}
+{{#each this}}
+<div class="c-btn-group c-btn-group-block">
+    <button class="c-btn c-btn-{{this}} c-btn-secondary">Block</button>
+    <button class="c-btn c-btn-{{this}} c-btn-secondary">Button</button>
+    <button class="c-btn c-btn-{{this}} c-btn-secondary">Group</button>
+</div>
+<br>
+{{/each}}
+{{/each}}
+
+<br>
+<br>
+
 <a class="c-btn c-btn-block c-btn-primary" href="#">Block Button</a>
 <br>
-<a class="c-btn c-btn-lg c-btn-block c-btn-primary" href="#">Block Button Large</a>      
+<a class="c-btn c-btn-lg c-btn-block c-btn-primary" href="#">Block Button Large</a>
