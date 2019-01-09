@@ -1,37 +1,37 @@
-$select-border-color : $color-gray-4 !default;
-$select-background   : $color-gray-1 !default;
-$select-color        : $color-gray-9 !default;
-$select-box-shadow   : none !default;
-$select-border-radius: $control-border-radius !default;
-$select-error-c      : $color-danger !default;
-$select-error-fw     : normal !default;
-$select-error-bd     : $control-danger-c !default;
-$select-padding      : 7px 10px !default;
-$select-padding-xs   : 3px 10px !default;
-$select-padding-sm   : 3px 10px !default;
-$select-padding-lg   : 9px 20px !default;
-$select-padding-xl   : 11px 20px !default;
-$select-font-size    : 12px !default;
-$select-font-size-xs : 10px !default;
-$select-font-size-sm : 11px !default;
-$select-font-size-lg : 14px !default;
-$select-font-size-xl : 18px !default;
-$select-height       : $control-height !default;
-$select-height-sm    : $control-sm-height !default;
-$select-height-lg    : $control-lg-height !default;
-$select-height-xl    : $control-xl-height !default;
-$select-padding-r        : 22px !default;
+$select-border-color           : $color-gray-4 !default;
+$select-background             : $color-gray-1 !default;
+$select-color                  : $color-gray-9 !default;
+$select-box-shadow             : none !default;
+$select-border-radius          : $control-border-radius !default;
+$select-error-c                : $color-danger !default;
+$select-error-fw               : normal !default;
+$select-error-bd               : $control-danger-c !default;
+$select-padding                : 7px 10px !default;
+$select-padding-xs             : 3px 10px !default;
+$select-padding-sm             : 3px 10px !default;
+$select-padding-lg             : 9px 20px !default;
+$select-padding-xl             : 11px 20px !default;
+$select-font-size              : 12px !default;
+$select-font-size-xs           : 10px !default;
+$select-font-size-sm           : 11px !default;
+$select-font-size-lg           : 14px !default;
+$select-font-size-xl           : 18px !default;
+$select-height                 : $control-height !default;
+$select-height-sm              : $control-sm-height !default;
+$select-height-lg              : $control-lg-height !default;
+$select-height-xl              : $control-xl-height !default;
+$select-padding-r              : 22px !default;
 
-$select-background-img   : url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
-$select-background-img-disabled : url("data:image/gif;base64,R0lGODlhDwAUAIABAMzMzP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
-$select-background-pos   : right 6px top 50% !default;
-$select-background-hover : $color-gray-0 !default;
-$select-background-active: $color-gray-2 !default;
-$select-box-shadow-active: inset 0 1px 0 1px $color-gray-3 !default;
-$select-box-shadow-focus : 0 0 1px 2px rgba($color-primary-4, .5) !default;
+$select-background-img         : url("data: image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw == ") !default;
+$select-background-img-disabled: url("data: image/gif;base64,R0lGODlhDwAUAIABAMzMzP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw == ") !default;
+$select-background-pos         : right 6px top 50% !default;
+$select-background-hover       : $color-gray-0 !default;
+$select-background-active      : $color-gray-2 !default;
+$select-box-shadow-active      : inset 0 1px 0 1px $color-gray-3 !default;
+$select-box-shadow-focus       : 0 0 1px 2px rgba($color-primary-4, .5) !default;
 
 // --------------------------------------------
-// Alert Base Mixin ---------------------------
+// Select Base Mixin ---------------------------
 // --------------------------------------------
 
 @mixin select {
