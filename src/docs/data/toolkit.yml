@@ -15,7 +15,7 @@ btn-sizes:
   base:
     - xs
     - sm
-    - lg    
+    - lg
 extended-colors:
   base:
     - cyan
