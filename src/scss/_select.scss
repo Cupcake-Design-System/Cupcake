@@ -1,50 +1,24 @@
-
 .c-select,
 select.c-input:not([multiple]) {
   @include select;
 }
 
-// select sizes
-.c-select-xs,
-select.c-input:not([multiple]).c-input-xs {
-  height: $control-xs-height;
-  padding: $select-padding-xs;
-  padding-right: $select-padding-r;
-  font-size: $select-font-size-xs;
+@each $name, $height, $padding, $font-size in config($control-sizes) {
+  .c-select-#{$name},
+  select.c-input:not([multiple]).c-input-#{$name} {
+    height: $height;
+    padding-right: $select-padding-r;
+    font-size: $font-size;
+  }
 }
-
-.c-select-sm,
-select.c-input:not([multiple]).c-input-sm {
-  height: $control-sm-height;
-  padding: $select-padding-sm;
-  padding-right: $select-padding-r;
-  font-size: $select-font-size-sm;
-}
-
-.c-select-lg,
-select.c-input:not([multiple]).c-input-lg {
-  height: $control-lg-height;
-  padding: $select-padding-lg;
-  padding-right: $select-padding-r;
-  font-size: $select-font-size-lg;
-}
-
-.c-select-xl,
-select.c-input:not([multiple]).c-input-xl {
-  height: $control-xl-height;
-  padding: $select-padding-xl;
-  padding-right: $select-padding-r;
-  font-size: $select-font-size-xl;
-}
-
 
 .c-select-error,
 select.c-input-error:not([multiple]) {
-  color: $select-error-c;
-  font-weight: $select-error-fw;
-  border-color: $select-error-bd;
+  color: $color-danger;
+  font-weight: normal;
+  border-color: $color-danger;
 
   option {
-    color: $select-color;
+    color: $control-color;
   }
 }

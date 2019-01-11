@@ -1,43 +1,38 @@
-.c-input-label {
+.#{$form-prefix}-label {
   @include label;
 }
 
-.c-input {
+.#{$form-prefix} {
   @include input;
 
   &-right-icon {
     padding-right: $control-icon-padding;
   }
 
-  .c-input-icon + & {
+  .#{$form-prefix}-icon + & {
     padding-left: $control-icon-padding;
   }
 }
 
-.c-input-icon {
+.#{$form-prefix}-icon {
   @include vertical-center;
 
-  left: $control-padding-h;
+  left: $control-padding;
   color: $control-icon-color;
 
-  .c-input ~ & {
+  .#{$form-prefix} ~ & {
     left: auto;
-    right: $control-padding-h;
+    right: $control-padding;
   }
 }
 
-textarea.c-input {
+textarea.#{$form-prefix} {
   height: auto;
 }
 
 
-$control-colors:
-  ("success", $control-success-c, $control-success-bg)
-  ("warning", $control-warning-c, $control-warning-bg)
-  ("error", $control-danger-c, $control-danger-bg) !default;
-
 @each $name, $color, $bg in $control-colors {
-  .c-input-#{$name} {
+  .#{$form-prefix}-#{$name} {
     &,
     &:hover {
       border-color: $color;
@@ -56,52 +51,40 @@ $control-colors:
       }
     }
 
-    & ~ .c-input-icon {
+    & ~ .#{$form-prefix}-icon {
       color: $color;
     }
   }
 }
 
-
-$control-ng-validation:
-  ("ng-valid", "success")
-  ("ng-invalid", "error") !default;
-
 @each $ng-state, $color in $control-ng-validation {
   .c-ng-validate.ng-dirty.#{$ng-state},
   .c-ng-validate-form .ng-dirty.#{$ng-state} {
-    @extend .c-input-#{$color};
+    @extend .#{$form-prefix}-#{$color};
   }
 }
 
-$form-sizes:
-  (sm, 24px, 4px 8px, 11px)
-  (lg, 40px, 8px 16px, 16px)
-  (xl, 48px, 16px, 18px) !default;
-
-
-@each $name, $height, $padding, $font-size in config($form-sizes) {
-  .c-input-#{$name},
-  .c-input-label-#{$name} {
+@each $name, $height, $padding, $font-size in config($control-sizes) {
+  .#{$form-prefix}-#{$name},
+  .#{$form-prefix}-label-#{$name} {
     font-size: $font-size;
     padding: $padding;
   }
 
-  .c-input-#{$name} {
+  .#{$form-prefix}-#{$name} {
     height: $height;
   }
 
-  .c-input-label-#{$name} {
+  .#{$form-prefix}-label-#{$name} {
     padding-left: $space-0;
     padding-right: $space-0;
   }
 }
 
-
-.c-input-addon {
+.#{$form-prefix}-addon {
   display: flex;
   align-items: center; // vertically align all child elements
-  padding: $space-0 $control-padding-h;
+  padding: $space-0 $control-padding;
   font-size: $control-font-size;
   border: 1px solid $control-border;
   background-color: $control-addon-background;
@@ -126,13 +109,12 @@ $form-sizes:
   }
 }
 
-
 .c-fieldset {
   &,
   &.c-list {
     display: block;
     width: 100%;
-    margin: $space-sm $space-0;
+    margin: $control-padding $space-0;
     padding: $space-0;
     border: 0;
   }
@@ -146,7 +128,7 @@ $form-sizes:
 
   &:disabled,
   &-disabled {
-    .c-input {
+    .#{$form-prefix} {
       @include input-disabled;
     }
   }
@@ -156,7 +138,7 @@ $form-sizes:
   position: absolute;
   transform: scale(.8);
   transform-origin: top left;
-  margin-top: $space-sm;
+  margin-top: $control-padding;
   color: $control-hint-color;
   font-size: $control-hint-font-size;
   opacity: 0;
@@ -164,7 +146,7 @@ $form-sizes:
   transition: $control-hint-transition;
 
   &-static,
-  .c-input:focus ~ & {
+  .#{$form-prefix}:focus ~ & {
     transform: scale(.9);
     opacity: 1;
   }
@@ -178,12 +160,12 @@ $form-sizes:
 
 
 // INPUT GROUP
-.c-input-group {
+.#{$form-prefix}-group {
   display: flex;
 
   .c-btn,
-  .c-input-addon,
-  .c-input-container {
+  .#{$form-prefix}-addon,
+  .#{$form-prefix}-container {
     &:not(:first-child) {
        /* stylelint-disable */
       margin-left: -1px;
@@ -191,7 +173,7 @@ $form-sizes:
     }
   }
 
-  .c-input-container {
+  .#{$form-prefix}-container {
     z-index: 1;
 
     &:hover,
@@ -222,107 +204,49 @@ $form-sizes:
     }
   }
 
-  .c-input-container {
+  .#{$form-prefix}-container {
     flex: 1 0 auto;
 
     &-fixed {
       flex: 0 1 auto;
     }
 
-    // .c-input {
+    // .#{$form-prefix} {
     //   height: 100%;
     // }
 
-    &:first-child .c-input {
+    &:first-child .#{$form-prefix} {
       border-top-right-radius: $radius-0;
       border-bottom-right-radius: $radius-0;
     }
 
-    &:last-child .c-input {
+    &:last-child .#{$form-prefix} {
       border-top-left-radius: $radius-0;
       border-bottom-left-radius: $radius-0;
     }
 
-    &:not(:first-child):not(:last-child) .c-input {
+    &:not(:first-child):not(:last-child) .#{$form-prefix} {
       border-radius: $radius-0;
     }
   }
 }
 
-.c-input-group-rounded {
-  .c-btn {
-    &:first-child {
-      border-top-left-radius: $control-border-radius-rounded;
-      border-bottom-left-radius: $control-border-radius-rounded;
-    }
-
-    &:last-child {
-      border-top-right-radius: $control-border-radius-rounded;
-      border-bottom-right-radius: $control-border-radius-rounded;
-    }
-  }
-
-  .c-input-container {
-    &:first-child .c-input {
-      border-top-left-radius: $control-border-radius-rounded;
-      border-bottom-left-radius: $control-border-radius-rounded;
-    }
-
-    &:last-child .c-input {
-      border-top-right-radius: $control-border-radius-rounded;
-      border-bottom-right-radius: $control-border-radius-rounded;
-    }
-  }
-}
-
-.c-input-group-rounded-left {
-  .c-btn {
-    &:first-child {
-      border-top-left-radius: $control-border-radius-rounded;
-      border-bottom-left-radius: $control-border-radius-rounded;
-    }
-  }
-
-  .c-input-container {
-    &:first-child .c-input {
-      border-top-left-radius: $control-border-radius-rounded;
-      border-bottom-left-radius: $control-border-radius-rounded;
-    }
-  }
-}
-
-.c-input-group-rounded-right {
-  .c-btn {
-    &:last-child {
-      border-top-right-radius: $control-border-radius-rounded;
-      border-bottom-right-radius: $control-border-radius-rounded;
-    }
-  }
-
-  .c-input-container {
-    &:last-child .c-input {
-      border-top-right-radius: $control-border-radius-rounded;
-      border-bottom-right-radius: $control-border-radius-rounded;
-    }
-  }
-}
-
-.c-input-group-stacked {
+.#{$form-prefix}-group-stacked {
   display: flex;
   flex-wrap: wrap;
 
   .c-btn,
-  .c-input-addon,
-  .c-input-container {
+  .#{$form-prefix}-addon,
+  .#{$form-prefix}-container {
     &:not(:first-child) {
-      margin-left: $space-0; // reset margin from .c-input-group
+      margin-left: $space-0; // reset margin from .#{$form-prefix}-group
        /* stylelint-disable */
       margin-top: -1px;
        /* stylelint-enable */
     }
   }
 
-  .c-input-container,
+  .#{$form-prefix}-container,
   .c-btn {
     flex: 0 0 100%;
     max-width: 100%;
@@ -343,27 +267,27 @@ $form-sizes:
     }
   }
 
-  .c-input-container {
-    &:not(:first-child):not(:last-child) .c-input {
+  .#{$form-prefix}-container {
+    &:not(:first-child):not(:last-child) .#{$form-prefix} {
       border-radius: $radius-0;
     }
 
-    &:first-child .c-input {
+    &:first-child .#{$form-prefix} {
       border-radius: $control-border-radius $control-border-radius $radius-0 $radius-0;
     }
 
-    &:last-child .c-input {
+    &:last-child .#{$form-prefix} {
       border-radius: $radius-0 $radius-0 $control-border-radius $control-border-radius;
     }
   }
 }
 
 .c-form-group {
-  margin-bottom: $space-md;
+  margin-bottom: $control-padding;
 }
 
-.c-input-results {
-  .c-input {
+.#{$form-prefix}-results {
+  .#{$form-prefix} {
     border-bottom-left-radius: $radius-0;
     border-bottom-right-radius: $radius-0;
   }
@@ -372,9 +296,9 @@ $form-sizes:
     position: absolute;
     left: 0;
     right: 0;
-    background: white;
+    background: $color-white;
     box-shadow: 2px 5px 4px rgba(0, 0, 0, .05);
-    border: 1px solid rgb(204, 204, 204);
+    border: 1px solid $color-gray-3;
     border-top: 0;
     list-style: none;
     margin-left: $space-0;
@@ -382,13 +306,12 @@ $form-sizes:
     border-bottom-right-radius: $radius-sm;
 
     li {
-       /* stylelint-disable */
-      padding: 0.5em;
-       /* stylelint-enable */
+      padding: $space-sm;
 
       &:not(:last-child) {
-        border-bottom: 1px solid rgb(204, 204, 204);
+        border-bottom: 1px solid $color-gray-3;
       }
     }
   }
 }
+

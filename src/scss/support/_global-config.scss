@@ -21,7 +21,6 @@ $radius-prefix   : 'c-radius' !default;
 $font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !default;
 $font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
 
-
 $font-body-xs: 10px !default;
 $font-body-sm: 11px !default;
 $font-body-md: 12px !default;
@@ -36,13 +35,9 @@ $font-header-lg: 20px !default;
 $font-header-xl: 24px !default;
 $font-header-xxl: 36px !default;
 
-$global-size-xs: 16px !default;
-$global-size-sm: 24px !default;
-$global-size-lg: 32px !default;
-$global-size-xl: 40px !default;
 
 // --------------------------------------------
-// Spacing and map for generating helpers 
+// Spacing and map for generating helpers
 // --------------------------------------------
 // Changing only $global-px-grid will adapt all space values.
 $global-px-grid: 8px !default;
@@ -66,7 +61,25 @@ $space: (
 );
 
 // --------------------------------------------
-// Font Weights and map for generating helpers 
+// Global sizes and map for generating helpers
+// --------------------------------------------
+$global-size-xs: $global-px-grid * 2 !default;
+$global-size-sm: $global-px-grid * 3 !default;
+$global-size-md: $global-px-grid * 4 !default;
+$global-size-lg: $global-px-grid * 5 !default;
+$global-size-xl: $global-px-grid * 6 !default;
+
+// This is a looped map & classes will be generated based on key/value pairs i.e. "c-shadow-sm"
+$global-sizes: (
+  xs: $global-size-xs,
+  sm: $global-size-sm,
+  md: $global-size-md,
+  lg: $global-size-lg,
+  xl: $global-size-xl,
+);
+
+// --------------------------------------------
+// Font Weights and map for generating helpers
 // --------------------------------------------
 $font-weight-heavy: 900 !default;
 $font-weight-bold: 700 !default;
@@ -85,7 +98,7 @@ $font-weight: (
 
 
 // --------------------------------------------
-// Radius and map for generating helpers 
+// Radius and map for generating helpers
 // --------------------------------------------
 $radius-0: 0 !default;
 $radius-square: 0 !default;
@@ -94,6 +107,8 @@ $radius-md: 6px !default;
 $radius-lg: 8px !default;
 $radius-round: 200px !default;
 $radius-pill: 50px !default;
+
+$global-default-radius: $radius-sm !default;
 
 // This is a looped map & classes will be generated based on key/value pairs i.e. "c-radius-sm"
 $radius: (
@@ -108,7 +123,7 @@ $radius: (
 
 
 // --------------------------------------------
-// Shadows and map for generating helpers 
+// Shadows and map for generating helpers
 // --------------------------------------------
 $shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, .1) !default;
 $shadow-sm: 0 4px 8px 0 rgba(0, 0, 0, 0.1) !default;
@@ -124,4 +139,3 @@ $shadow: (
   lg: $shadow-lg,
   xl: $shadow-xl,
 );
-

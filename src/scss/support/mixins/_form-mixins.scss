@@ -1,64 +1,25 @@
-
-$control-font-size            : 12px !default;
-$control-color                : $color-gray-9 !default;
-$control-font-weight          : normal !default;
-$control-line-height          : 1.166667 !default;  //line height optimized for IE compatibility
-$control-placeholder-c        : $color-gray-5 !default;
-$control-placeholder-hover-c  : $control-placeholder-c !default;
-$control-background           : white !default;
-$control-padding-v            : 7px !default;
-$control-padding-h            : 8px !default;
-$control-height               : 32px !default;
-
-$control-border               : $color-gray-4 !default;
-$control-border-radius        : 2px !default;
-$control-border-radius-rounded: 30em !default;
-$control-shadow               : none !default;
-$control-focused-shadow       : inset 0 1px 2px 0 rgba(33, 37, 41, 0.08) !default;
-$control-shadow-disabled      : none !default;
-$control-transition           : border-color 0.1s ease-in !default;
-$control-hover                : $color-primary !default;
-$control-hover-border         : $color-gray-5 !default;
-$control-active               : $color-primary !default;
-$control-active-border        : $color-primary !default;
-$control-icon-padding         : 26px !default;
-$control-icon-color           : $color-gray-9 !default;
-$control-disabled-border      : transparent !default;
-$control-disabled-background  : $color-gray-3 !default;
-$control-hint-color           : $color-gray-6 !default;
-$control-hint-font-size       : 85% !default;
-$control-hint-transition      : all 0.2s ease !default;
-$control-label-padding        : $control-padding-v 0 !default;
-$control-addon-background     : #eeeeee !default;
-$control-element-padding      : 1em 0 !default;
-$control-element-label-padding: 0 0 $control-padding-v 0 !default;
-
-
-$control-success-c            : $color-success !default;
-$control-success-bg           : false !default;
-$control-warning-c            : $color-warning !default;
-$control-warning-bg           : false !default;
-$control-danger-c             : $color-danger !default;
-$control-danger-bg            : false !default;
-
-
 // --------------------------------------------
-// Alert Base Mixin ---------------------------
+// Label Base Mixin ---------------------------
 // --------------------------------------------
 
 @mixin label {
   display: block;
   width: 100%;
-  padding: $control-label-padding;
+  padding: $control-padding 0;
   color: $control-color;
   font-size: $control-font-size;
 }
+
+
+// --------------------------------------------
+// Input Base Mixin ---------------------------
+// --------------------------------------------
 
 @mixin input {
   display: block;
   width: 100%;
   height: $control-height;
-  padding: $control-padding-v $control-padding-h;
+  padding: $space-0 $control-padding;
   border: 1px solid $control-border;
   border-radius: $control-border-radius;
   outline: 0;
@@ -124,6 +85,11 @@ $control-danger-bg            : false !default;
   }
 }
 
+
+// --------------------------------------------
+// Input Disabled Mixin ------------------------
+// --------------------------------------------
+
 @mixin input-disabled {
   border-color: $control-disabled-border;
   background-color: $control-disabled-background;
@@ -133,5 +99,81 @@ $control-danger-bg            : false !default;
 
   &::placeholder {
     color: $control-placeholder-c;
+  }
+}
+
+
+// --------------------------------------------
+// Select Base Mixin ---------------------------
+// --------------------------------------------
+
+@mixin select {
+  outline: 0;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: none;
+  appearance: none;
+  color: $control-color;
+  height: $control-height;
+  font-size: $control-font-size;
+  padding: $space-0 $control-padding;
+  padding-right: $select-padding-r;
+  font-weight: $control-font-weight;
+  line-height: $control-line-height;
+  border: 1px solid $control-border;
+  border-radius: $control-border-radius;
+  background: $color-white $select-bg-img $select-bg-pos;
+  background-size: 8px 10px;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus::-ms-value {
+    color: $control-color;
+    background-color: transparent;
+  }
+
+  &-inline {
+    display: inline;
+    width: auto;
+  }
+
+  .c-input-icon + & {
+    padding-left: $control-icon-padding;
+  }
+
+  &:focus {
+    box-shadow: $select-box-shadow, $select-box-shadow-focus;
+  }
+
+  // &:hover {
+  //   background: $_dropdown-arrow, $select-background-hover;
+  // }
+
+  &:active,
+  &.c-input-active,
+  &.c-select-active {
+    &:focus {
+      border-color: $control-active-border;
+      outline: none;
+    }
+  }
+
+  &:disabled,
+  &[disabled],
+  &.c-input-disabled {
+    &,
+    &:hover,
+    &:active {
+      @include input-disabled;
+
+      background: $control-disabled-background $select-bg-img $select-bg-pos;
+      box-shadow: none;
+      cursor: not-allowed;
+      background-size: 8px 10px;
+    }
   }
 }
