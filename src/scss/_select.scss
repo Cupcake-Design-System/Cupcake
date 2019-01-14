@@ -8,7 +8,14 @@ select.c-input:not([multiple]) {
     padding-right: $select-padding-r;
     font-size: $font-size;
   }
+
+  .c-input-icon-#{$name} {
+    + select.c-input:not([multiple]) {
+      padding-left: $height;
+    }
+  }
 }
+
 
 select.c-input-error:not([multiple]) {
   color: $color-danger;

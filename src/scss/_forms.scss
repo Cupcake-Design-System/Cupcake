@@ -9,11 +9,12 @@
     padding-right: $control-icon-padding;
   }
 
-  .#{$control-prefix}-icon + & {
+  &-icon + & {
     padding-left: $control-icon-padding;
   }
 }
 
+// Support Right Icon inside control
 .#{$control-prefix}-icon {
   @include vertical-center;
 
@@ -23,8 +24,25 @@
   .#{$control-prefix} ~ & {
     left: auto;
     right: $control-padding;
+
+    &-lg {
+      right: $control-padding * 2;
+    }
   }
 }
+
+// Support Left Icon inside control
+@each $name, $height, $padding, $font-size in config($control-sizes) {
+  .c-input-icon-#{$name} {
+    font-size: $font-size;
+    left: $font-size - 4;
+
+    + .c-input:not([multiple]) {
+      padding-left: $height;
+    }
+  }
+}
+
 
 textarea.#{$control-prefix} {
   height: auto;
@@ -65,19 +83,14 @@ textarea.#{$control-prefix} {
 }
 
 @each $name, $height, $padding, $font-size in config($control-sizes) {
-  .#{$control-prefix}-#{$name},
-  .#{$control-prefix}-label-#{$name} {
+  .#{$control-prefix}-#{$name} {
     font-size: $font-size;
+    height: $height;
     padding: $padding;
   }
 
-  .#{$control-prefix}-#{$name} {
-    height: $height;
-  }
-
   .#{$control-prefix}-label-#{$name} {
-    padding-left: $space-0;
-    padding-right: $space-0;
+    font-size: $font-size;
   }
 }
 

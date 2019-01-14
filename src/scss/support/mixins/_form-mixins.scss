@@ -5,7 +5,8 @@
 @mixin label {
   display: block;
   width: 100%;
-  padding: $control-padding 0;
+  font-weight: $font-weight-bold;
+  padding: $control-padding / 2 0;
   color: $control-color;
   font-size: $control-font-size;
 }
@@ -95,10 +96,10 @@
   background-color: $control-disabled-background;
   box-shadow: $control-shadow-disabled;
   cursor: not-allowed;
-  color: $control-placeholder-c;
+  color: $color-gray-9;
 
   &::placeholder {
-    color: $control-placeholder-c;
+    color: $color-gray-9;
   }
 }
 
@@ -125,7 +126,7 @@
   border: 1px solid $control-border;
   border-radius: $control-border-radius;
   background: $color-white $select-bg-img $select-bg-pos;
-  background-size: 8px 10px;
+  background-size: 8px;
 
   &::-ms-expand {
     display: none;
@@ -170,7 +171,7 @@
     &:active {
       @include input-disabled;
 
-      background: $control-disabled-background $select-bg-img $select-bg-pos;
+      background: $control-disabled-background $select-bg-img-disabled $select-bg-pos;
       box-shadow: none;
       cursor: not-allowed;
       background-size: 8px 10px;
