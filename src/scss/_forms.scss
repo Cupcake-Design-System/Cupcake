@@ -1,7 +1,6 @@
-.#{$control-prefix}-label {
-  @include label;
-}
-
+// --------------------------------------------
+// Form Input ---------------------------------
+// --------------------------------------------
 .#{$control-prefix} {
   @include input;
 
@@ -12,9 +11,16 @@
   &-icon + & {
     padding-left: $control-icon-padding;
   }
+
+  &-label {
+    @include label;
+  }
 }
 
-// Support Right Icon inside control
+
+// --------------------------------------------
+// Form Input Right Icon ----------------------
+// --------------------------------------------
 .#{$control-prefix}-icon {
   @include vertical-center;
 
@@ -31,24 +37,33 @@
   }
 }
 
-// Support Left Icon inside control
+
+// --------------------------------------------
+// Form Input Left Icon -----------------------
+// --------------------------------------------
 @each $name, $height, $padding, $font-size in config($control-sizes) {
-  .c-input-icon-#{$name} {
+  .#{$control-prefix}-icon-#{$name} {
     font-size: $font-size;
     left: $font-size - 4;
 
-    + .c-input:not([multiple]) {
+    + .#{$control-prefix}:not([multiple]) {
       padding-left: $height;
     }
   }
 }
 
 
+// --------------------------------------------
+// Form Input Textarea ------------------------
+// --------------------------------------------
 textarea.#{$control-prefix} {
   height: auto;
 }
 
 
+// --------------------------------------------
+// Form Input Colors --------------------------
+// --------------------------------------------
 @each $name, $color, $bg in $control-colors {
   .#{$control-prefix}-#{$name} {
     &,
@@ -75,6 +90,10 @@ textarea.#{$control-prefix} {
   }
 }
 
+
+// --------------------------------------------
+// Form Input Colors (NG specific -------------
+// --------------------------------------------
 @each $ng-state, $color in $control-ng-validation {
   .c-ng-validate.ng-dirty.#{$ng-state},
   .c-ng-validate-form .ng-dirty.#{$ng-state} {
@@ -82,6 +101,10 @@ textarea.#{$control-prefix} {
   }
 }
 
+
+// --------------------------------------------
+// Form Input Sizes ---------------------------
+// --------------------------------------------
 @each $name, $height, $padding, $font-size in config($control-sizes) {
   .#{$control-prefix}-#{$name} {
     font-size: $font-size;
@@ -94,6 +117,10 @@ textarea.#{$control-prefix} {
   }
 }
 
+
+// --------------------------------------------
+// Form Input Addons --------------------------
+// --------------------------------------------
 .#{$control-prefix}-addon {
   display: flex;
   align-items: center; // vertically align all child elements
@@ -113,6 +140,10 @@ textarea.#{$control-prefix} {
   }
 }
 
+
+// --------------------------------------------
+// Form Elements ------------------------------
+// --------------------------------------------
 .c-form-element {
   position: relative;
   padding: $control-element-padding;
@@ -122,6 +153,10 @@ textarea.#{$control-prefix} {
   }
 }
 
+
+// --------------------------------------------
+// Form Fieldset ------------------------------
+// --------------------------------------------
 .c-fieldset {
   &,
   &.c-list {
@@ -147,6 +182,10 @@ textarea.#{$control-prefix} {
   }
 }
 
+
+// --------------------------------------------
+// Form Hint & Hint Colors --------------------
+// --------------------------------------------
 .c-hint {
   position: absolute;
   transform: scale(.8);
@@ -163,16 +202,18 @@ textarea.#{$control-prefix} {
     transform: scale(.9);
     opacity: 1;
   }
-}
 
-@each $name, $color in $control-colors {
-  .c-hint-#{$name} {
-    color: $color;
+  @each $name, $color in $control-colors {
+    &-#{$name} {
+      color: $color;
+    }
   }
 }
 
 
-// INPUT GROUP
+// --------------------------------------------
+// Form Input Group & Group Stacked -----------
+// --------------------------------------------
 .#{$control-prefix}-group {
   display: flex;
 
@@ -295,10 +336,18 @@ textarea.#{$control-prefix} {
   }
 }
 
+
+// --------------------------------------------
+// Form Group ---------------------------------
+// --------------------------------------------
 .c-form-group {
   margin-bottom: $control-padding;
 }
 
+
+// --------------------------------------------
+// Form Results -------------------------------
+// --------------------------------------------
 .#{$control-prefix}-results {
   .#{$control-prefix} {
     border-bottom-left-radius: $radius-0;
