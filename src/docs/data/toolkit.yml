@@ -9,7 +9,6 @@ btn-colors:
     - primary
     - secondary
     - success
-    - warning
     - danger
 btn-sizes:
   base:
