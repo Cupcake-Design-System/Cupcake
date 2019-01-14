@@ -1,38 +1,38 @@
-.#{$form-prefix}-label {
+.#{$control-prefix}-label {
   @include label;
 }
 
-.#{$form-prefix} {
+.#{$control-prefix} {
   @include input;
 
   &-right-icon {
     padding-right: $control-icon-padding;
   }
 
-  .#{$form-prefix}-icon + & {
+  .#{$control-prefix}-icon + & {
     padding-left: $control-icon-padding;
   }
 }
 
-.#{$form-prefix}-icon {
+.#{$control-prefix}-icon {
   @include vertical-center;
 
   left: $control-padding;
   color: $control-icon-color;
 
-  .#{$form-prefix} ~ & {
+  .#{$control-prefix} ~ & {
     left: auto;
     right: $control-padding;
   }
 }
 
-textarea.#{$form-prefix} {
+textarea.#{$control-prefix} {
   height: auto;
 }
 
 
 @each $name, $color, $bg in $control-colors {
-  .#{$form-prefix}-#{$name} {
+  .#{$control-prefix}-#{$name} {
     &,
     &:hover {
       border-color: $color;
@@ -51,7 +51,7 @@ textarea.#{$form-prefix} {
       }
     }
 
-    & ~ .#{$form-prefix}-icon {
+    & ~ .#{$control-prefix}-icon {
       color: $color;
     }
   }
@@ -60,28 +60,28 @@ textarea.#{$form-prefix} {
 @each $ng-state, $color in $control-ng-validation {
   .c-ng-validate.ng-dirty.#{$ng-state},
   .c-ng-validate-form .ng-dirty.#{$ng-state} {
-    @extend .#{$form-prefix}-#{$color};
+    @extend .#{$control-prefix}-#{$color};
   }
 }
 
 @each $name, $height, $padding, $font-size in config($control-sizes) {
-  .#{$form-prefix}-#{$name},
-  .#{$form-prefix}-label-#{$name} {
+  .#{$control-prefix}-#{$name},
+  .#{$control-prefix}-label-#{$name} {
     font-size: $font-size;
     padding: $padding;
   }
 
-  .#{$form-prefix}-#{$name} {
+  .#{$control-prefix}-#{$name} {
     height: $height;
   }
 
-  .#{$form-prefix}-label-#{$name} {
+  .#{$control-prefix}-label-#{$name} {
     padding-left: $space-0;
     padding-right: $space-0;
   }
 }
 
-.#{$form-prefix}-addon {
+.#{$control-prefix}-addon {
   display: flex;
   align-items: center; // vertically align all child elements
   padding: $space-0 $control-padding;
@@ -128,7 +128,7 @@ textarea.#{$form-prefix} {
 
   &:disabled,
   &-disabled {
-    .#{$form-prefix} {
+    .#{$control-prefix} {
       @include input-disabled;
     }
   }
@@ -146,7 +146,7 @@ textarea.#{$form-prefix} {
   transition: $control-hint-transition;
 
   &-static,
-  .#{$form-prefix}:focus ~ & {
+  .#{$control-prefix}:focus ~ & {
     transform: scale(.9);
     opacity: 1;
   }
@@ -160,12 +160,12 @@ textarea.#{$form-prefix} {
 
 
 // INPUT GROUP
-.#{$form-prefix}-group {
+.#{$control-prefix}-group {
   display: flex;
 
   .c-btn,
-  .#{$form-prefix}-addon,
-  .#{$form-prefix}-container {
+  .#{$control-prefix}-addon,
+  .#{$control-prefix}-container {
     &:not(:first-child) {
        /* stylelint-disable */
       margin-left: -1px;
@@ -173,7 +173,7 @@ textarea.#{$form-prefix} {
     }
   }
 
-  .#{$form-prefix}-container {
+  .#{$control-prefix}-container {
     z-index: 1;
 
     &:hover,
@@ -204,49 +204,49 @@ textarea.#{$form-prefix} {
     }
   }
 
-  .#{$form-prefix}-container {
+  .#{$control-prefix}-container {
     flex: 1 0 auto;
 
     &-fixed {
       flex: 0 1 auto;
     }
 
-    // .#{$form-prefix} {
+    // .#{$control-prefix} {
     //   height: 100%;
     // }
 
-    &:first-child .#{$form-prefix} {
+    &:first-child .#{$control-prefix} {
       border-top-right-radius: $radius-0;
       border-bottom-right-radius: $radius-0;
     }
 
-    &:last-child .#{$form-prefix} {
+    &:last-child .#{$control-prefix} {
       border-top-left-radius: $radius-0;
       border-bottom-left-radius: $radius-0;
     }
 
-    &:not(:first-child):not(:last-child) .#{$form-prefix} {
+    &:not(:first-child):not(:last-child) .#{$control-prefix} {
       border-radius: $radius-0;
     }
   }
 }
 
-.#{$form-prefix}-group-stacked {
+.#{$control-prefix}-group-stacked {
   display: flex;
   flex-wrap: wrap;
 
   .c-btn,
-  .#{$form-prefix}-addon,
-  .#{$form-prefix}-container {
+  .#{$control-prefix}-addon,
+  .#{$control-prefix}-container {
     &:not(:first-child) {
-      margin-left: $space-0; // reset margin from .#{$form-prefix}-group
+      margin-left: $space-0; // reset margin from .#{$control-prefix}-group
        /* stylelint-disable */
       margin-top: -1px;
        /* stylelint-enable */
     }
   }
 
-  .#{$form-prefix}-container,
+  .#{$control-prefix}-container,
   .c-btn {
     flex: 0 0 100%;
     max-width: 100%;
@@ -267,16 +267,16 @@ textarea.#{$form-prefix} {
     }
   }
 
-  .#{$form-prefix}-container {
-    &:not(:first-child):not(:last-child) .#{$form-prefix} {
+  .#{$control-prefix}-container {
+    &:not(:first-child):not(:last-child) .#{$control-prefix} {
       border-radius: $radius-0;
     }
 
-    &:first-child .#{$form-prefix} {
+    &:first-child .#{$control-prefix} {
       border-radius: $control-border-radius $control-border-radius $radius-0 $radius-0;
     }
 
-    &:last-child .#{$form-prefix} {
+    &:last-child .#{$control-prefix} {
       border-radius: $radius-0 $radius-0 $control-border-radius $control-border-radius;
     }
   }
@@ -286,8 +286,8 @@ textarea.#{$form-prefix} {
   margin-bottom: $control-padding;
 }
 
-.#{$form-prefix}-results {
-  .#{$form-prefix} {
+.#{$control-prefix}-results {
+  .#{$control-prefix} {
     border-bottom-left-radius: $radius-0;
     border-bottom-right-radius: $radius-0;
   }

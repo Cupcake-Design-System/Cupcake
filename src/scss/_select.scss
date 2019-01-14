@@ -1,10 +1,8 @@
-.c-select,
 select.c-input:not([multiple]) {
   @include select;
 }
 
 @each $name, $height, $padding, $font-size in config($control-sizes) {
-  .c-select-#{$name},
   select.c-input:not([multiple]).c-input-#{$name} {
     height: $height;
     padding-right: $select-padding-r;
@@ -12,7 +10,6 @@ select.c-input:not([multiple]) {
   }
 }
 
-.c-select-error,
 select.c-input-error:not([multiple]) {
   color: $color-danger;
   font-weight: normal;

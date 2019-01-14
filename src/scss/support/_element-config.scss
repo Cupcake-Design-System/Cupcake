@@ -181,7 +181,7 @@ $checkbox-sizes: (
 // --------------------------------------------
 // FORMS --------------------------------------
 // --------------------------------------------
-$form-prefix                  : 'c-input' !default;
+$control-prefix                  : 'c-input' !default;
 $control-font-size            : $font-body-md !default;
 $control-color                : $color-gray-9 !default;
 $control-font-weight          : normal !default;
@@ -193,8 +193,8 @@ $control-padding              : $space-sm !default;
 $control-height               : $global-size-md !default;
 
 $control-sizes:
-  (sm, $global-size-sm, 0 8px, $font-body-sm)
-  (lg, $global-size-lg, 0 8px, $font-body-xl) !default;
+  (sm, $global-size-sm, 0 $control-padding, $font-body-sm)
+  (lg, $global-size-lg, 0 $control-padding, $font-body-xl) !default;
 
 $control-colors:
   ("success", $color-success, false)
@@ -225,7 +225,7 @@ $control-hint-color           : $color-gray-6 !default;
 $control-hint-font-size       : 85% !default;
 $control-hint-transition      : all 0.2s ease !default;
 
-$control-addon-background     : #eeeeee !default;
+$control-addon-background     : $color-gray-0 !default;
 $control-element-padding      : $control-padding * 2 0 !default;
 $control-element-label-padding: 0 0 $control-padding 0 !default;
 
