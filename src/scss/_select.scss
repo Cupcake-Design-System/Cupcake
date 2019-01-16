@@ -1,0 +1,38 @@
+// --------------------------------------------
+// Form Select --------------------------------
+// --------------------------------------------
+select.c-input:not([multiple]) {
+  @include select;
+}
+
+
+// --------------------------------------------
+// Form Select Sizes --------------------------
+// --------------------------------------------
+@each $name, $height, $padding, $font-size in config($control-sizes) {
+  select.c-input:not([multiple]).c-input-#{$name} {
+    height: $height;
+    padding-right: $select-padding-r;
+    font-size: $font-size;
+  }
+
+  .c-input-icon-#{$name} {
+    + select.c-input:not([multiple]) {
+      padding-left: $height;
+    }
+  }
+}
+
+
+// --------------------------------------------
+// Form Select Error---------------------------
+// --------------------------------------------
+select.c-input-error:not([multiple]) {
+  color: $color-danger;
+  font-weight: normal;
+  border-color: $color-danger;
+
+  option {
+    color: $control-color;
+  }
+}

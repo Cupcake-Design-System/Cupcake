@@ -17,7 +17,7 @@ $color-primary-4: #4dadf7 !default;
 $color-primary-5: #329af0 !default;
 $color-primary-6: #228ae6 !default;
 $color-primary-7: #1c7cd6 !default;
-$color-primary-8: #1b6ec2 !default;
+$color-primary-8: $color-primary !default;
 $color-primary-9: #1862ab !default;
 
 $color-success-0: #ebfbee !default;
@@ -28,7 +28,7 @@ $color-success-4: #69db7c !default;
 $color-success-5: #51cf66 !default;
 $color-success-6: #40c057 !default;
 $color-success-7: #37b24d !default;
-$color-success-8: #2f9e44 !default;
+$color-success-8: $color-success !default;
 $color-success-9: #2b8a3e !default;
 
 $color-warning-0: #fff9db !default;
@@ -39,7 +39,7 @@ $color-warning-4: #ffd43b !default;
 $color-warning-5: #fcc419 !default;
 $color-warning-6: #fab005 !default;
 $color-warning-7: #f59f00 !default;
-$color-warning-8: #f08c00 !default;
+$color-warning-8: $color-warning !default;
 $color-warning-9: #e67700 !default;
 
 $color-danger-0: #fff5f5 !default;
@@ -50,7 +50,7 @@ $color-danger-4: #ff8787 !default;
 $color-danger-5: #ff6b6b !default;
 $color-danger-6: #fa5252 !default;
 $color-danger-7: #f03e3e !default;
-$color-danger-8: #e03131 !default;
+$color-danger-8: $color-danger !default;
 $color-danger-9: #c92a2a !default;
 
 $color-gray-0: #f8f9fa !default;

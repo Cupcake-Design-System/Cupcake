@@ -164,9 +164,9 @@
   display: inline-block;
   position: relative;
   cursor: pointer;
-  font-size: $font-size;
-  line-height: 1;
-  padding-left: $font-size + 8;
+  font-size: $font-size - 4;
+  line-height: 1.2;
+  padding: $space-0 $space-sm $space-0 $font-size + 8;
 
   &.c-checkbox > i,
   &.c-radio > i {

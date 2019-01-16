@@ -1,0 +1,180 @@
+// --------------------------------------------
+// Label Base Mixin ---------------------------
+// --------------------------------------------
+
+@mixin label {
+  display: block;
+  width: 100%;
+  font-weight: $font-weight-bold;
+  padding: $control-padding / 2 0;
+  color: $control-color;
+  font-size: $control-font-size;
+}
+
+
+// --------------------------------------------
+// Input Base Mixin ---------------------------
+// --------------------------------------------
+
+@mixin input {
+  display: block;
+  width: 100%;
+  height: $control-height;
+  padding: $space-0 $control-padding;
+  border: $control-border;
+  border-radius: $control-border-radius;
+  outline: 0;
+  color: $control-color;
+  background-color: $control-background;
+  font-family: inherit;
+  font-size: $control-font-size;
+  font-weight: $control-font-weight;
+  line-height: $control-line-height;
+  box-shadow: $control-shadow;
+  resize: vertical;
+  appearance: none;
+  transition: $control-transition;
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  &::placeholder {
+    color: $control-placeholder-c;
+    transition: $control-transition;
+  }
+
+  &:hover,
+  &#{&}-hover {
+    border-color: $control-hover-border;
+
+    &::placeholder {
+      color: $control-placeholder-hover-c;
+    }
+  }
+
+  &:focus,
+  &#{&}-focus {
+    border-color: $control-active-border;
+    box-shadow: $control-focused-shadow;
+  }
+
+  // in separate selector because it breaks ie11
+  &:focus-within {
+    border-color: $control-active-border;
+  }
+
+  &[disabled],
+  &-disabled {
+    &,
+    &:hover {
+      @include input-disabled;
+    }
+
+    & ~ .c-input-icon {
+      color: $control-disabled-border;
+    }
+  }
+
+  &-inline {
+    display: inline;
+    width: auto;
+  }
+
+  &-container {
+    position: relative;
+  }
+}
+
+
+// --------------------------------------------
+// Input Disabled Mixin ------------------------
+// --------------------------------------------
+
+@mixin input-disabled {
+  border-color: $control-disabled-border;
+  background-color: $control-disabled-background;
+  box-shadow: $control-shadow-disabled;
+  cursor: not-allowed;
+  color: $color-gray-9;
+
+  &::placeholder {
+    color: $color-gray-9;
+  }
+}
+
+
+// --------------------------------------------
+// Select Base Mixin ---------------------------
+// --------------------------------------------
+
+@mixin select {
+  outline: 0;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: none;
+  appearance: none;
+  color: $control-color;
+  height: $control-height;
+  font-size: $control-font-size;
+  padding: $space-0 $control-padding;
+  padding-right: $select-padding-r;
+  font-weight: $control-font-weight;
+  line-height: $control-line-height;
+  border: $control-border;
+  border-radius: $control-border-radius;
+  background: $color-white $select-bg-img $select-bg-pos;
+  background-size: 8px;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus::-ms-value {
+    color: $control-color;
+    background-color: transparent;
+  }
+
+  &-inline {
+    display: inline;
+    width: auto;
+  }
+
+  .c-input-icon + & {
+    padding-left: $control-icon-padding;
+  }
+
+  &:focus {
+    box-shadow: $select-box-shadow, $select-box-shadow-focus;
+  }
+
+  // &:hover {
+  //   background: $_dropdown-arrow, $select-background-hover;
+  // }
+
+  &:active,
+  &.c-input-active,
+  &.c-select-active {
+    &:focus {
+      border-color: $control-active-border;
+      outline: none;
+    }
+  }
+
+  &:disabled,
+  &[disabled],
+  &.c-input-disabled {
+    &,
+    &:hover,
+    &:active {
+      @include input-disabled;
+
+      background: $control-disabled-background $select-bg-img-disabled $select-bg-pos;
+      box-shadow: none;
+      cursor: not-allowed;
+      background-size: 8px 10px;
+    }
+  }
+}

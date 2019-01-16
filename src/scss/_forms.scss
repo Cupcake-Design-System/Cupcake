@@ -1,0 +1,379 @@
+// --------------------------------------------
+// Form Input ---------------------------------
+// --------------------------------------------
+.#{$control-prefix} {
+  @include input;
+
+  &-right-icon {
+    padding-right: $control-icon-padding;
+  }
+
+  &-icon + & {
+    padding-left: $control-icon-padding;
+  }
+
+  &-label {
+    @include label;
+  }
+}
+
+
+// --------------------------------------------
+// Form Input Right Icon ----------------------
+// --------------------------------------------
+.#{$control-prefix}-icon {
+  @include vertical-center;
+
+  left: $control-padding;
+  color: $control-icon-color;
+
+  .#{$control-prefix} ~ & {
+    left: auto;
+    right: $control-padding;
+
+    &-lg {
+      right: $control-padding * 2;
+    }
+  }
+}
+
+
+// --------------------------------------------
+// Form Input Left Icon -----------------------
+// --------------------------------------------
+@each $name, $height, $padding, $font-size in config($control-sizes) {
+  .#{$control-prefix}-icon-#{$name} {
+    font-size: $font-size;
+    left: $font-size - 4;
+
+    + .#{$control-prefix}:not([multiple]) {
+      padding-left: $height;
+    }
+  }
+}
+
+
+// --------------------------------------------
+// Form Input Textarea ------------------------
+// --------------------------------------------
+textarea.#{$control-prefix} {
+  height: auto;
+}
+
+
+// --------------------------------------------
+// Form Input Colors --------------------------
+// --------------------------------------------
+@each $name, $color, $bg in $control-colors {
+  .#{$control-prefix}-#{$name} {
+    &,
+    &:hover {
+      border-color: $color;
+
+      @if $bg {
+        background-color: $bg;
+      }
+    }
+
+    &:focus {
+      @if $bg {
+        border-color: $color;
+        background-color: $control-background;
+      } @else {
+        border-color: $control-active-border;
+      }
+    }
+
+    & ~ .#{$control-prefix}-icon {
+      color: $color;
+    }
+  }
+}
+
+
+// --------------------------------------------
+// Form Input Colors (NG specific -------------
+// --------------------------------------------
+@each $ng-state, $color in $control-ng-validation {
+  .c-ng-validate.ng-dirty.#{$ng-state},
+  .c-ng-validate-form .ng-dirty.#{$ng-state} {
+    @extend .#{$control-prefix}-#{$color};
+  }
+}
+
+
+// --------------------------------------------
+// Form Input Sizes ---------------------------
+// --------------------------------------------
+@each $name, $height, $padding, $font-size in config($control-sizes) {
+  .#{$control-prefix}-#{$name} {
+    font-size: $font-size;
+    height: $height;
+    padding: $padding;
+  }
+
+  .#{$control-prefix}-label-#{$name} {
+    font-size: $font-size;
+  }
+}
+
+
+// --------------------------------------------
+// Form Input Addons --------------------------
+// --------------------------------------------
+.#{$control-prefix}-addon {
+  display: flex;
+  align-items: center; // vertically align all child elements
+  padding: $space-0 $control-padding;
+  font-size: $control-font-size;
+  border: $control-border;
+  background-color: $control-addon-background;
+
+  &:first-child {
+    border-radius: $radius-sm $radius-0 $radius-0 $radius-sm;
+  }
+
+  &:last-child {
+    margin-right: $space-0;
+    border-left: $space-0;
+    border-radius: $radius-0 $radius-sm $radius-sm $radius-0;
+  }
+}
+
+
+// --------------------------------------------
+// Form Elements ------------------------------
+// --------------------------------------------
+.c-form-element {
+  position: relative;
+  padding: $control-element-padding;
+
+  .c-label:first-child {
+    padding: $control-element-label-padding;
+  }
+}
+
+
+// --------------------------------------------
+// Form Fieldset ------------------------------
+// --------------------------------------------
+.c-fieldset {
+  &,
+  &.c-list {
+    display: block;
+    width: 100%;
+    margin: $control-padding $space-0;
+    padding: $space-0;
+    border: 0;
+  }
+
+  &-legend {
+    @include label;
+    /* stylelint-disable */
+    padding: 0.3em 0;
+    /* stylelint-enable */
+  }
+
+  &:disabled,
+  &-disabled {
+    .#{$control-prefix} {
+      @include input-disabled;
+    }
+  }
+}
+
+
+// --------------------------------------------
+// Form Hint & Hint Colors --------------------
+// --------------------------------------------
+.c-hint {
+  position: absolute;
+  transform: scale(.8);
+  transform-origin: top left;
+  margin-top: $control-padding;
+  color: $control-hint-color;
+  font-size: $control-hint-font-size;
+  opacity: 0;
+  pointer-events: none;
+  transition: $control-hint-transition;
+
+  &-static,
+  .#{$control-prefix}:focus ~ & {
+    transform: scale(.9);
+    opacity: 1;
+  }
+
+  @each $name, $color in $control-colors {
+    &-#{$name} {
+      color: $color;
+    }
+  }
+}
+
+
+// --------------------------------------------
+// Form Input Group & Group Stacked -----------
+// --------------------------------------------
+.#{$control-prefix}-group {
+  display: flex;
+
+  .c-btn,
+  .#{$control-prefix}-addon,
+  .#{$control-prefix}-container {
+    &:not(:first-child) {
+       /* stylelint-disable */
+      margin-left: -1px;
+       /* stylelint-enable */
+    }
+  }
+
+  .#{$control-prefix}-container {
+    z-index: 1;
+
+    &:hover,
+    &:focus,
+    &:active {
+      z-index: 1;
+    }
+  }
+
+  .c-btn {
+    &:focus,
+    &:active {
+      z-index: 2;
+    }
+
+    &:first-child {
+      border-top-right-radius: $radius-0;
+      border-bottom-right-radius: $radius-0;
+    }
+
+    &:last-child {
+      border-top-left-radius: $radius-0;
+      border-bottom-left-radius: $radius-0;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: $radius-0;
+    }
+  }
+
+  .#{$control-prefix}-container {
+    flex: 1 0 auto;
+
+    &-fixed {
+      flex: 0 1 auto;
+    }
+
+    // .#{$control-prefix} {
+    //   height: 100%;
+    // }
+
+    &:first-child .#{$control-prefix} {
+      border-top-right-radius: $radius-0;
+      border-bottom-right-radius: $radius-0;
+    }
+
+    &:last-child .#{$control-prefix} {
+      border-top-left-radius: $radius-0;
+      border-bottom-left-radius: $radius-0;
+    }
+
+    &:not(:first-child):not(:last-child) .#{$control-prefix} {
+      border-radius: $radius-0;
+    }
+  }
+}
+
+.#{$control-prefix}-group-stacked {
+  display: flex;
+  flex-wrap: wrap;
+
+  .c-btn,
+  .#{$control-prefix}-addon,
+  .#{$control-prefix}-container {
+    &:not(:first-child) {
+      margin-left: $space-0; // reset margin from .#{$control-prefix}-group
+       /* stylelint-disable */
+      margin-top: -1px;
+       /* stylelint-enable */
+    }
+  }
+
+  .#{$control-prefix}-container,
+  .c-btn {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: $space-0;
+  }
+
+  .c-btn {
+    &:not(:first-child):not(:last-child) {
+      border-radius: $radius-0;
+    }
+
+    &:first-child {
+      border-radius: $control-border-radius $control-border-radius $radius-0 $radius-0;
+    }
+
+    &:last-child {
+      border-radius: $radius-0 $radius-0 $control-border-radius $control-border-radius;
+    }
+  }
+
+  .#{$control-prefix}-container {
+    &:not(:first-child):not(:last-child) .#{$control-prefix} {
+      border-radius: $radius-0;
+    }
+
+    &:first-child .#{$control-prefix} {
+      border-radius: $control-border-radius $control-border-radius $radius-0 $radius-0;
+    }
+
+    &:last-child .#{$control-prefix} {
+      border-radius: $radius-0 $radius-0 $control-border-radius $control-border-radius;
+    }
+  }
+}
+
+
+// --------------------------------------------
+// Form Group ---------------------------------
+// --------------------------------------------
+.c-form-group {
+  margin-bottom: $control-padding;
+}
+
+
+// --------------------------------------------
+// Form Results -------------------------------
+// --------------------------------------------
+.#{$control-prefix}-results {
+  .#{$control-prefix} {
+    border-bottom-left-radius: $radius-0;
+    border-bottom-right-radius: $radius-0;
+  }
+
+  &-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: $color-white;
+    box-shadow: 2px 5px 4px rgba(0, 0, 0, .05);
+    border: $control-border;
+    border-top: 0;
+    list-style: none;
+    margin-left: $space-0;
+    border-bottom-left-radius: $radius-sm;
+    border-bottom-right-radius: $radius-sm;
+
+    li {
+      padding: $space-sm;
+
+      &:not(:last-child) {
+        border-bottom: $control-border;
+      }
+    }
+  }
+}
+

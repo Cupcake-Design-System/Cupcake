@@ -14,7 +14,7 @@ $alert-font-weight          : $font-weight-normal !default;
 $alert-primary-bg           : rgba($color-primary, .07) !default;
 $alert-default-color        : $color-gray-9 !default;
 $alert-primary-icon-color   : $color-primary !default;
-$alert-radius               : $radius-sm !default;
+$alert-radius               : $global-default-radius !default;
 $alert-top-radius           : 0 !default;
 $alert-shadows              : $shadow-lg !default;
 $alert-icon-width           : $font-body-md !default;
@@ -35,12 +35,12 @@ $alert-colors:
 // --------------------------------------------
 $avatar-prefix              : 'c-avatar' !default;
 $enable-extend-avatar-colors: true !default;
-$avatar-default-size        : $global-size-lg !default;
+$avatar-default-size        : $global-size-md !default;
 $avatar-border-radius       : $radius-round !default;
 $avatar-font-weight         : $font-weight-semibold !default;
 $avatar-font-size           : $font-body-md !default;
 $avatar-line-height         : normal !default;
-$avatar-img-border          : 1px solid $color-gray-4 !default;
+$avatar-img-border          : $global-default-border !default;
 
 // for avatar sizes this maps to name, size, font-size
 $avatar-sizes:
@@ -83,7 +83,7 @@ $enable-square-buttons  : false !default;
 $btn-font-family        : $font-family-sans !default;
 $btn-font-weight        : $font-weight-bold !default;
 $btn-bd                 : 1px solid transparent !default;
-$btn-radius             : $radius-sm !default;
+$btn-radius             : $global-default-radius !default;
 $btn-default-c          : $color-gray-7 !default;
 $btn-disabled-bg        : $color-gray-1 !default;
 $btn-disabled-bd        : 1px solid $color-gray-3 !default;
@@ -93,29 +93,29 @@ $btn-shadow-focus       : 0 0 2px 1px $color-primary-7 !default;
 $btn-active-selected    : false !default;
 $btn-shadow-inset       : 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 2px rgba(black, .25) !default;
 $btn-shadow-secondary   : 0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
-$btn-box-width          : $global-size-lg !default;
+$btn-box-width          : $global-size-md !default;
 
 $btn-box-sizes: (
   xs: $global-size-xs,
   sm: $global-size-sm,
-  lg: $global-size-xl,
+  lg: $global-size-lg,
 ) !default;
 
 $button-colors: (
   primary: (
-    bg: $color-primary-8,
+    bg: $color-primary,
     bg-hover: $color-primary-7,
     bg-active: $color-primary-9,
     border: $color-primary-9
   ),
   success: (
-    bg: $color-success-8,
+    bg: $color-success,
     bg-hover: $color-success-7,
     bg-active: $color-success-9,
     border: $color-success-9
   ),
   danger: (
-    bg: $color-danger-8,
+    bg: $color-danger,
     bg-hover: $color-danger-7,
     bg-active: $color-danger-9,
     border: $color-danger-9
@@ -133,7 +133,7 @@ $button-sizes: (
   default: (
     font-size: $font-body-md,
     padding: 0 $space-md,
-    height: $global-size-lg
+    height: $global-size-md
   ),
   xs: (
     font-size: $font-body-xs,
@@ -148,7 +148,7 @@ $button-sizes: (
   lg: (
     font-size: $font-body-lg,
     padding: 0 $space-xl,
-    height: $global-size-xl
+    height: $global-size-lg
   )
 ) !default;
 
@@ -158,18 +158,77 @@ $button-sizes: (
 // --------------------------------------------
 $checkbox-prefix          : 'c-checkbox' !default;
 $radio-prefix             : 'c-radio' !default;
-$checkbox-icon-bd         : 1px solid $color-gray-3 !default;
-$checkbox-icon-radius     : $radius-sm !default;
+$checkbox-icon-bd         : $global-default-border !default;
+$checkbox-icon-radius     : $global-default-radius !default;
 $checkbox-transition      : all 0.2s !default;
 $checkbox-disabled-opacity: 0.5 !default;
 $checkbox-disabled-bg     : $color-gray-3 !default;
 $checkbox-disabled-color  : $color-gray-5 !default;
 $checkbox-palette         : $theme-colors !default;
-$checkbox-default-size    : $global-size-lg !default;
+$checkbox-default-size    : $global-size-sm !default;
 $checkbox-sizes: (
-  sm: $global-size-sm,
-  lg: $global-size-xl,
+  sm: $global-size-xs,
+  lg: $global-size-md,
 ) !default;
+
+
+// --------------------------------------------
+// FORMS --------------------------------------
+// --------------------------------------------
+$control-prefix               : 'c-input' !default;
+$control-font-size            : $font-body-md !default;
+$control-color                : $color-gray-9 !default;
+$control-font-weight          : normal !default;
+$control-line-height          : 1.166667 !default;  //line height optimized for IE compatibility
+$control-placeholder-c        : $color-gray-5 !default;
+$control-placeholder-hover-c  : $control-placeholder-c !default;
+$control-background           : white !default;
+$control-padding              : $space-sm !default;
+$control-height               : $global-size-md !default;
+
+$control-sizes:
+  (sm, $global-size-sm, 0 $control-padding, $font-body-sm)
+  (lg, $global-size-lg, 0 $control-padding, $font-body-xl) !default;
+
+$control-colors:
+  ("success", $color-success, false)
+  ("warning", $color-warning, false)
+  ("error", $color-danger, false) !default;
+
+$control-ng-validation:
+  ("ng-valid", "success")
+  ("ng-invalid", "error") !default;
+
+$control-border               : $global-default-border !default;
+$control-border-radius        : $global-default-radius !default;
+$control-shadow               : none !default;
+$control-focused-shadow       : inset 0 1px 2px 0 rgba(33, 37, 41, 0.08) !default;
+$control-shadow-disabled      : none !default;
+$control-transition           : border-color 0.1s ease-in !default;
+$control-hover                : $color-primary !default;
+$control-hover-border         : $color-gray-5 !default;
+$control-active               : $color-primary !default;
+$control-active-border        : $color-primary !default;
+
+$control-icon-padding         : $global-size-md !default;
+$control-icon-color           : $color-gray-9 !default;
+
+$control-disabled-border      : transparent !default;
+$control-disabled-background  : $color-gray-3 !default;
+$control-hint-color           : $color-gray-6 !default;
+$control-hint-font-size       : 85% !default;
+$control-hint-transition      : all 0.2s ease !default;
+
+$control-addon-background     : $color-gray-0 !default;
+$control-element-padding      : $control-padding * 2 0 !default;
+$control-element-label-padding: 0 0 $control-padding 0 !default;
+
+$select-padding-r             : $global-size-sm !default;
+$select-bg-img                : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC") !default;
+$select-bg-img-disabled       : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAABGdBTUEAALGPC/xhBQAAAK9JREFUOBHlkj0OgzAMRmNxMcTQoVdhZGRoGDp27FU6MCA4WeovUhA/tkNmIlkkwe8Nzuecsd6f7wtltLhK+wmQiDxX3Tyebhp/i9QrChKcAEtyEhzhnGQn0GBLsgpysCaJgquwJKFSOEnwDSH47fmuewwRcTXzrg2HhzhUnPGZs84OqrVG6R5w37U+5qBUkmCI1yRelWzhnQCHnOQInwSWRIJFgSTRYPSaC0+Mspr+0vx1PtB1wpUAAAAASUVORK5CYII=") !default;
+$select-bg-pos                : no-repeat right 8px center !default;
+$select-box-shadow            : none !default;
+$select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
 
 
 // --------------------------------------------
