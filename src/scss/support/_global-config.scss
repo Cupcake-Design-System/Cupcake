@@ -139,3 +139,5 @@ $shadow: (
   lg: $shadow-lg,
   xl: $shadow-xl,
 );
+
+$global-default-border: 1px solid $color-gray-4 !default;

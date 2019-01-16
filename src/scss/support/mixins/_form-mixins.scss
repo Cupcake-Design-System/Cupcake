@@ -21,7 +21,7 @@
   width: 100%;
   height: $control-height;
   padding: $space-0 $control-padding;
-  border: 1px solid $control-border;
+  border: $control-border;
   border-radius: $control-border-radius;
   outline: 0;
   color: $control-color;
@@ -123,7 +123,7 @@
   padding-right: $select-padding-r;
   font-weight: $control-font-weight;
   line-height: $control-line-height;
-  border: 1px solid $control-border;
+  border: $control-border;
   border-radius: $control-border-radius;
   background: $color-white $select-bg-img $select-bg-pos;
   background-size: 8px;

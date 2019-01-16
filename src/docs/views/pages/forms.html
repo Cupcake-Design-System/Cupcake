@@ -3,315 +3,257 @@ title: Test
 layout: blank
 ---
 
-<select class="c-input c-input-sm">
-  <option>SM Select</option>
+<h3>Input Colors</h3>
+{{#each form.color}}
+{{#each this}}
+<input class="c-input c-input-{{this}}" type="text" id="size-input-2" placeholder="{{this}} input">
+<br>
+{{/each}}
+{{/each}}
+
+
+<h3>Input Sizes</h3>
+{{#each form.size}}
+{{#each this}}
+<input class="c-input c-input-{{this}}" type="text" id="size-input-2" placeholder="Default input {{this}}">
+<br>
+<div class="c-input-container">
+  <i class="c-input-icon c-input-icon-{{this}} fa fa-exclamation-circle c-text-danger"></i>
+  <input type="text" id="forms-input-warning" placeholder="Input Icon Left {{this}}" class="c-input c-input-{{this}}">
+</div>
+<br>
+<div class="c-input-container">
+  <input type="text" id="forms-input-warning" placeholder="Input Icon Right {{this}}" class="c-input c-input-{{this}}">
+  <i class="c-input-icon c-input-icon-{{this}} fa fa-exclamation-circle c-text-danger"></i>
+</div>
+<br>
+{{/each}}
+{{/each}}
+
+
+<h3>Select</h3>
+<select class="c-input">
+  <option>Default Select</option>
   <option>Option</option>
   <option>Option</option>
 </select>
 
-  <br>
+<br>
 
+<div class="c-input-container">
+  <i class="c-input-icon fa fa-exclamation-circle c-text-danger"></i>
   <select class="c-input">
-    <option>Select</option>
+    <option>Default Select with icon</option>
     <option>Option</option>
     <option>Option</option>
   </select>
+</div>
 
-  <br>
+<br>
 
-  <select class="c-input c-input-lg">
-    <option>LG Select</option>
+<select disabled="disabled" class="c-input">
+  <option>Disabled Select</option>
+  <option>Option</option>
+  <option>Option</option>
+</select>
+
+<br>
+
+<select class="c-input c-input-error">
+  <option>I`m error</option>
+  <option>Option</option>
+  <option>Option</option>
+</select>
+
+<br>
+
+<h3>Select Sizes</h3>
+{{#each form.size}}
+{{#each this}}
+<select class="c-input c-input-{{this}}">
+  <option>Select {{this}}</option>
+  <option>Option</option>
+  <option>Option</option>
+</select>
+<br>
+<div class="c-input-container">
+  <i class="c-input-icon c-input-icon-{{this}} fa fa-exclamation-circle c-text-danger"></i>
+  <select class="c-input c-input-{{this}}">
+    <option>Select with icon {{this}}</option>
     <option>Option</option>
     <option>Option</option>
   </select>
+</div>
+<br>
+{{/each}}
+{{/each}}
 
-  <br>
 
+<h3>Input Labels</h3>
+<label class="c-input-label" for="size-input-2">Default Label: <sup class="c-text-danger">*</sup></label>
+<input class="c-input" type="text" id="size-input-2" placeholder="Normal input">
+
+<br>
+
+{{#each form.size}}
+{{#each this}}
+<label class="c-input-label c-input-label-{{this}}" for="size-input-2-sm">Default Label: <sup class="c-text-danger">*</sup></label>
+<input class="c-input c-input-{{this}}" type="text" id="size-input-2-sm" placeholder="{{this}} input">
+<br>
+{{/each}}
+{{/each}}
+
+
+
+<h3>Hints</h3>
+<div class="c-input-container">
+  <input class="c-input c-input-success" type="text" placeholder="Text input" value="$J-Money$" id="input-helper-1">
+  <span class="c-hint c-hint-static c-hint-success"><i class="fa fa-check"></i> This username is silly but
+    available!</span>
+</div>
+
+<br>
+<br>
+
+<div class="c-input-container">
+  <input class="c-input c-input-error" type="text" placeholder="Click in here to see helper text" value id="input-helper-1">
+  <span class="c-hint c-hint-error"><i class="fa fa-check"></i> I animate in when input is focused!</span>
+</div>
+
+<br>
+
+<h3>Input Addons</h3>
+<div class="c-input-group">
+  <div class="c-input-addon">@</div>
   <div class="c-input-container">
-    <i class="c-input-icon c-input-icon-sm fa fa-exclamation-circle c-text-danger"></i>
-    <select class="c-input c-input-sm">
-      <option>Select with an icon</option>
-      <option>Option</option>
-      <option>Option</option>
-    </select>
+    <input type="text" class="c-input">
   </div>
+</div>
 
-  <br>
+<br>
 
+<div class="c-input-group">
+  <div class="c-input-addon">$</div>
   <div class="c-input-container">
-    <i class="c-input-icon fa fa-exclamation-circle c-text-danger"></i>
-    <select class="c-input">
-      <option>Select with an icon</option>
-      <option>Option</option>
-      <option>Option</option>
-    </select>
+    <input type="text" class="c-input">
   </div>
+  <div class="c-input-addon">.00</div>
+</div>
 
-  <br>
+<br>
 
+<div class="c-input-group">
+  <div class="c-input-addon">
+    <label class="c-checkbox c-checkbox-sm">
+      <input type="checkbox" name="radio" checked>
+      <i class="c-bg-primary"></i>
+    </label>
+  </div>
   <div class="c-input-container">
-    <i class="c-input-icon c-input-icon-lg fa fa-exclamation-circle c-text-danger"></i>
-    <select class="c-input c-input-lg">
-      <option>Select with an icon</option>
-      <option>Option</option>
-      <option>Option</option>
-    </select>
+    <input type="text" class="c-input">
   </div>
+</div>
 
-  <br>
+<br>
 
-  <select disabled="disabled" class="c-input">
-    <option>Disabled Select</option>
-    <option>Option</option>
-    <option>Option</option>
-  </select>
+<div class="c-input-group">
+  <div class="c-input-addon">
+    <label class="c-checkbox c-checkbox-sm">
+      <input type="radio" name="radio">
+      <i class="c-bg-primary"></i>
+    </label>
+  </div>
+  <div class="c-input-container">
+    <input type="text" class="c-input">
+  </div>
+</div>
 
-  <br>
+<br>
 
-  <select class="c-input c-input-error">
-    <option>I`m error</option>
-    <option>Option</option>
-    <option>Option</option>
-  </select>
+<h3>Input Groups</h3>
+<div class="c-input-group">
+  <button class="c-btn c-btn-primary">Action</button>
+  <div class="c-input-container">
+    <input type="text" class="c-input" placeholder="text" id="input-group-1">
+  </div>
+</div>
 
-  <br>
+<br>
 
-
-    <label class="c-input-label c-input-label-sm" for="size-input-2-sm">Default Label: <sup class="c-text-danger">*</sup></label>
-    <input class="c-input c-input-sm" type="text" id="size-input-2-sm" placeholder="Small input">
-
-    <br>
-
-    <label class="c-input-label" for="size-input-2">Default Label: <sup class="c-text-danger">*</sup></label>
-    <input class="c-input" type="text" id="size-input-2" placeholder="Normal input">
-
-    <br>
-
-        <label class="c-input-label c-input-label-lg" for="size-input-2-lg">Default Label: <sup class="c-text-danger">*</sup></label>
-        <input class="c-input c-input-lg" type="text" id="size-input-2-lg" placeholder="Large input">
-
-    <br>
-
-    <input class="c-input c-input-sm" type="text" id="size-input-1" placeholder="Small input">
-    <br>
-    <input class="c-input" type="text" id="size-input-2" placeholder="Normal input">
-    <br>
-    <input class="c-input c-input-lg" type="text" id="size-input-3" placeholder="Large input">
-    <br>
-
-    <input class="c-input" type="text" placeholder="I`m disabled" disabled>
-    <br>
-    <input class="c-input c-input-success" type="text" placeholder="I`m success">
-    <br>
-    <input class="c-input c-input-warning" type="text" placeholder="I`m warning">
-    <br>
-    <input class="c-input c-input-error" type="text" placeholder="I`m error/danger">
-    <br>
-
-
-    <div class="c-row">
-      <div class="c-col">
-        <div class="c-input-container">
-          <input class="c-input c-input-success" type="text" placeholder="Text input" value="$J-Money$" id="input-helper-1">
-          <span class="c-hint c-hint-static c-hint-success"><i class="fa fa-check"></i> This username is silly but
-            available!</span>
-        </div>
-      </div>
-      <br><br>
-      <div class="c-col">
-        <div class="c-input-container">
-          <input class="c-input c-input-error" type="text" placeholder="Click in here to see helper text" value id="input-helper-1">
-          <span class="c-hint c-hint-error"><i class="fa fa-check"></i> I animate in when input is focused!</span>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-
-
-    <div class="c-input-group">
-      <div class="c-input-addon">@</div>
-      <div class="c-input-container">
-        <input type="text" class="c-input">
-      </div>
-    </div>
-    <br>
-    <br>
-    <div class="c-input-group">
-      <div class="c-input-addon">$</div>
-      <div class="c-input-container">
-        <input type="text" class="c-input">
-      </div>
-      <div class="c-input-addon">.00</div>
-    </div>
-
-    <br>
-    <br>
-
-    <div class="c-input-group">
-      <div class="c-input-addon">
-        <label class="c-checkbox c-checkbox-sm">
-          <input type="checkbox" name="radio" checked>
-          <i class="c-bg-primary"></i>
-        </label>
-      </div>
-      <div class="c-input-container">
-        <input type="text" class="c-input">
-      </div>
-    </div>
-
-    <br>
-    <br>
-
-    <div class="c-input-group">
-      <div class="c-input-addon">
-        <label class="c-checkbox c-checkbox-sm">
-          <input type="radio" name="radio">
-          <i class="c-bg-primary"></i>
-        </label>
-      </div>
-      <div class="c-input-container">
-        <input type="text" class="c-input">
-      </div>
-    </div>
-
-    <br>
-
-
-    <div class="c-input-group">
-      <button class="c-btn c-btn-primary c-btn-sm">Action</button>
-      <div class="c-input-container">
-        <input type="text" class="c-input c-input-sm" placeholder="text" id="input-group-1">
-      </div>
-    </div>
-    <br>
-    <div class="c-input-group">
-      <button class="c-btn c-btn-primary">Action</button>
-      <div class="c-input-container">
-        <input type="text" class="c-input" placeholder="text" id="input-group-1">
-      </div>
-    </div>
-    <br>
-    <div class="c-input-group">
-      <button class="c-btn c-btn-secondary">Action</button>
-      <div class="c-input-container">
-        <input type="text" class="c-input" placeholder="text" id="input-group-1">
-      </div>
-    </div>
-    <br>
-    <div class="c-input-group">
-      <button class="c-btn c-btn-primary c-btn-lg">Action</button>
-      <div class="c-input-container">
-        <input type="text" class="c-input c-input-lg" placeholder="text" id="input-group-1">
-      </div>
-    </div>
-
-    <br>
-
-    <div class="c-input-group">
-      <div class="c-input-container">
-        <input type="text" class="c-input c-input-sm" placeholder="text">
-      </div>
-      <button class="c-btn c-btn-primary c-btn-sm">Action</button>
-      <button class="c-btn c-btn-primary c-btn-sm c-btn-box"><i class="fa fa-caret-down"></i></button>
-    </div>
-    <br>
-    <div class="c-input-group">
-      <div class="c-input-container">
-        <input type="text" class="c-input" placeholder="text">
-      </div>
-      <button class="c-btn c-btn-primary">Action</button>
-      <button class="c-btn c-btn-primary c-btn-box"><i class="fa fa-caret-down"></i></button>
-    </div>
-    <br>
-    <div class="c-input-group">
-      <div class="c-input-container">
-        <input type="text" class="c-input" placeholder="text">
-      </div>
-      <button class="c-btn c-btn-secondary">Action</button>
-      <button class="c-btn c-btn-secondary c-btn-box"><i class="fa fa-caret-down"></i></button>
-    </div>
-    <br>
-    <div class="c-input-group">
-      <div class="c-input-container">
-        <input type="text" class="c-input c-input-lg" placeholder="text">
-      </div>
-      <button class="c-btn c-btn-primary c-btn-lg">Action</button>
-      <button class="c-btn c-btn-primary c-btn-lg c-btn-box"><i class="fa fa-caret-down"></i></button>
-    </div>
-
-    <br>
-    <br>
-
-    <h4 class="c-header-xxs">Elements inline</h4>
-    <div class="c-m-bottom-md c-body-text">
-      <span>Begin</span>
-      <button class="c-btn c-btn-primary c-btn-sm">Primary Button</button>
-      <span>text</span>
-      <input placeholder="placeholder text" type="text" class="c-input c-input-sm c-input-inline">
-      <span>Primary - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-      <button class="c-btn c-btn-secondary c-btn-sm">user <i class="fa fa-user"></i></button>
-    </div>
-
-    <div class="c-m-bottom-md c-body-text ">
-      Begin
-      <button class="c-btn c-btn-success">Success Button</button>
-      text
-      <input type="text" placeholder="placeholder text" class="c-input c-input-inline">
-      <span>Success - Lorem ipsum dolor sit amet, consectetur adipisicing elit!</span>
-      <button class="c-btn c-btn-success">
-        <i class="fa fa-star"></i> Info
-      </button>
-    </div>
-
-    <div class="c-m-bottom-md c-body-text">
-      <span class=" ">Begin</span>
-      <button class="c-btn c-btn-secondary c-btn-lg">Info Button</button>
-      <span class=" ">text</span>
-      <input type="text" placeholder="placeholder text" class="c-input c-input-lg c-input-inline">
-      <span class=" "> - Lorem ipsum dolor sit amet!</span>
-      <div class="c-btn-group">
-        <button type="button" class="c-btn c-btn-secondary c-btn-lg"><i class="fa fa-cog"></i></button>
-        <button type="button" class="c-btn c-btn-secondary c-btn-lg"><i class="fa fa-cloud-download"></i></button>
-        <button type="button" class="c-btn c-btn-secondary c-btn-lg"><i class="fa fa-bell"></i></button>
-      </div>
-    </div>
-
-    <br>
-
+{{#each form.size}}
+{{#each this}}
+<div class="c-input-group">
+    <button class="c-btn c-btn-primary c-btn-{{this}}">Action</button>
     <div class="c-input-container">
-      <input type="text" id="forms-input-warning" placeholder="With Icon" class="c-input c-input-sm">
-      <i class="c-input-icon c-input-icon-sm fa fa-exclamation-circle c-text-danger"></i>
+      <input type="text" class="c-input c-input-{{this}}" placeholder="text" id="input-group-1">
     </div>
+  </div>
+<br>
+{{/each}}
+{{/each}}
 
-    <br>
 
-    <div class="c-input-container">
-      <input type="text" id="forms-input-warning" placeholder="With Icon" class="c-input">
-      <i class="c-input-icon fa fa-exclamation-circle c-text-danger"></i>
-    </div>
+<div class="c-input-group">
+  <div class="c-input-container">
+    <input type="text" class="c-input c-input-sm" placeholder="text">
+  </div>
+  <button class="c-btn c-btn-primary c-btn-sm">Action</button>
+  <button class="c-btn c-btn-primary c-btn-sm c-btn-box"><i class="fa fa-caret-down"></i></button>
+</div>
 
-    <br>
+<br>
 
-    <div class="c-input-container">
-      <input type="text" id="forms-input-warning" placeholder="With Icon" class="c-input c-input-lg">
-      <i class="c-input-icon c-input-icon-lg fa fa-exclamation-circle c-text-danger"></i>
-    </div>
-    <br>
-    <div class="c-input-container">
-        <i class="c-input-icon c-input-icon-sm fa fa-exclamation-circle c-text-danger"></i>
-        <input type="text" id="forms-input-warning" placeholder="With Icon" class="c-input c-input-sm">
-      </div>
+<div class="c-input-group">
+  <div class="c-input-container">
+    <input type="text" class="c-input" placeholder="text">
+  </div>
+  <button class="c-btn c-btn-primary">Action</button>
+  <button class="c-btn c-btn-primary c-btn-box"><i class="fa fa-caret-down"></i></button>
+</div>
 
-    <br>
+<br>
 
-    <div class="c-input-container">
-      <i class="c-input-icon fa fa-exclamation-circle c-text-danger"></i>
-      <input type="text" id="forms-input-warning" placeholder="With Icon" class="c-input">
-    </div>
-    <br>
-    <div class="c-input-container">
-      <i class="c-input-icon c-input-icon-lg fa fa-exclamation-circle c-text-danger"></i>
-      <input type="text" id="forms-input-warning" placeholder="With Icon" class="c-input c-input-lg">
-    </div>
-    </div>
+<div class="c-input-group">
+  <div class="c-input-container">
+    <input type="text" class="c-input c-input-lg" placeholder="text">
+  </div>
+  <button class="c-btn c-btn-primary c-btn-lg">Action</button>
+  <button class="c-btn c-btn-primary c-btn-lg c-btn-box"><i class="fa fa-caret-down"></i></button>
+</div>
+
+<br>
+<br>
+
+<h4 class="c-header-xxs">Elements inline</h4>
+<div class="c-m-bottom-md c-body-text">
+  <span>Begin</span>
+  <button class="c-btn c-btn-primary c-btn-sm">Primary Button</button>
+  <span>text</span>
+  <input placeholder="placeholder text" type="text" class="c-input c-input-sm c-input-inline">
+  <span>Primary - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+  <button class="c-btn c-btn-secondary c-btn-sm">user <i class="fa fa-user"></i></button>
+</div>
+
+<div class="c-m-bottom-md c-body-text ">
+  Begin
+  <button class="c-btn c-btn-success">Success Button</button>
+  text
+  <input type="text" placeholder="placeholder text" class="c-input c-input-inline">
+  <span>Success - Lorem ipsum dolor sit amet, consectetur adipisicing elit!</span>
+  <button class="c-btn c-btn-success">
+    <i class="fa fa-star"></i> Info
+  </button>
+</div>
+
+<div class="c-m-bottom-md c-body-text">
+  <span class=" ">Begin</span>
+  <button class="c-btn c-btn-secondary c-btn-lg">Info Button</button>
+  <span class=" ">text</span>
+  <input type="text" placeholder="placeholder text" class="c-input c-input-lg c-input-inline">
+  <span class=" "> - Lorem ipsum dolor sit amet!</span>
+  <div class="c-btn-group">
+    <button type="button" class="c-btn c-btn-secondary c-btn-lg"><i class="fa fa-cog"></i></button>
+    <button type="button" class="c-btn c-btn-secondary c-btn-lg"><i class="fa fa-cloud-download"></i></button>
+    <button type="button" class="c-btn c-btn-secondary c-btn-lg"><i class="fa fa-bell"></i></button>
+  </div>
+</div>

@@ -126,7 +126,7 @@ textarea.#{$control-prefix} {
   align-items: center; // vertically align all child elements
   padding: $space-0 $control-padding;
   font-size: $control-font-size;
-  border: 1px solid $control-border;
+  border: $control-border;
   background-color: $control-addon-background;
 
   &:first-child {
@@ -360,7 +360,7 @@ textarea.#{$control-prefix} {
     right: 0;
     background: $color-white;
     box-shadow: 2px 5px 4px rgba(0, 0, 0, .05);
-    border: 1px solid $color-gray-3;
+    border: $control-border;
     border-top: 0;
     list-style: none;
     margin-left: $space-0;
@@ -371,7 +371,7 @@ textarea.#{$control-prefix} {
       padding: $space-sm;
 
       &:not(:last-child) {
-        border-bottom: 1px solid $color-gray-3;
+        border-bottom: $control-border;
       }
     }
   }

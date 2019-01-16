@@ -1,0 +1,10 @@
+color:
+  base:
+    - primary
+    - success
+    - warning
+    - error
+size:
+  base:
+    - sm
+    - lg
