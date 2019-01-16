@@ -1,0 +1,11 @@
+color:
+  base:
+    - primary
+    - secondary
+    - success
+    - danger
+size:
+  base:
+    - xs
+    - sm
+    - lg
