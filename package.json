@@ -40,13 +40,12 @@
   },
   "devDependencies": {
     "@cupcake-ds/cupcake-sprinkles": "^0.2.3",
-    "autoprefixer": "^9.4.4",
+    "autoprefixer": "^9.4.5",
     "browser-sync": "^2.26.3",
     "clean-css-cli": "^4.2.1",
     "fabricator-assemble": "^1.2.1",
     "group-css-media-queries": "^1.4.1",
     "gulp": "^4.0.0",
-    "handlebars": "^4.0.12",
     "lint-staged": "^8.1.0",
     "mkdirp": "^0.5.1",
     "mocha": "^5.2.0",
@@ -56,11 +55,9 @@
     "postcss-cli": "^6.1.1",
     "rimraf": "^2.6.3",
     "sass-true": "^4.0.0",
-    "sassdoc": "^2.5.1",
-    "sassdoc-theme-flippant": "^0.1.0",
-    "stylelint": "^9.9.0",
+    "stylelint": "^9.10.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-declaration-strict-value": "^1.1.2",
-    "stylelint-scss": "^3.4.4"
+    "stylelint-scss": "^3.5.1"
   }
 }
