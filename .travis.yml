@@ -7,6 +7,7 @@ node_js:
 before_script:
   - gem install percy-cli
 script:
+  - npm run test
   - percy snapshot dist/ --enable_javascript  
 deploy:
   provider: surge
