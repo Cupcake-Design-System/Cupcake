@@ -4,10 +4,12 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Tokens | Colors</title>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="../demo.css">
+
+ <link rel="stylesheet" href="http://filamentgroup.github.io/X-rayHTML/libs/prism.css">
 
   <script>
     var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
@@ -21,11 +23,20 @@
         <div class="docs-menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
-      <h1 class="c-header-lg">Design Tokens</h1>
+      
+<h1 class="c-header-lg">Design Tokens</h1>
+
+<div class="docs-section-subtitle" style="font-size: 18px; line-height: 24px;">
+  <p>Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes.
+  <br>We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system for UI development.</p>
+</div>
+
+<br><br>
+<br><br>
 
 
 <div class="docs-section" id="colors">
-  <div class="c-col-12" id="colors">
+  <div id="colors">
     <div class="docs-section-header">
       <div class="docs-section-title">Colors <a href="pages/colors.html" target="_blank">View Test Page</a></div>
       <div class="docs-section-subtitle">
@@ -33,7 +44,7 @@
 
       </div>
     </div>
-    <div class="docs-section-preview"><div class="color-block">
+    <div data-xrayhtml="" class="prism xrayhtml docs-section-preview"><div class="color-block">
 	<div class="color-block-title">primary</div>
 	<div class="colors">
 		<span class="c-bg-primary-8">Primary</span>
@@ -165,7 +176,7 @@
 
 
 <div class="docs-section" id="shadows">
-  <div class="c-col-12" id="shadows">
+  <div id="shadows">
     <div class="docs-section-header">
       <div class="docs-section-title">Shadows <a href="pages/shadows.html" target="_blank">View Test Page</a></div>
       <div class="docs-section-subtitle">
@@ -173,7 +184,7 @@
 
       </div>
     </div>
-    <div class="docs-section-preview"><div class="layer-types">
+    <div data-xrayhtml="" class="prism xrayhtml docs-section-preview"><div class="layer-types">
 	<div class="c-depth-none">none</div>
 	<div class="c-depth-xs">xs</div>
 	<div class="c-depth-sm">sm</div>
@@ -186,7 +197,7 @@
 
 
 <div class="docs-section" id="spacing">
-  <div class="c-col-12" id="spacing">
+  <div id="spacing">
     <div class="docs-section-header">
       <div class="docs-section-title">Spacing <a href="pages/spacing.html" target="_blank">View Test Page</a></div>
       <div class="docs-section-subtitle">
@@ -194,7 +205,7 @@
 
       </div>
     </div>
-    <div class="docs-section-preview"><div class="space-block-title">xxl</div>
+    <div data-xrayhtml="" class="prism xrayhtml docs-section-preview"><div class="space-block-title">xxl</div>
 <div class="space">
 	<div class="xxl"></div>
 </div>
@@ -265,7 +276,7 @@
 
 
 <div class="docs-section" id="typography">
-  <div class="c-col-12" id="typography">
+  <div id="typography">
     <div class="docs-section-header">
       <div class="docs-section-title">Typography <a href="pages/typography.html" target="_blank">View Test Page</a></div>
       <div class="docs-section-subtitle">
@@ -273,7 +284,7 @@
 
       </div>
     </div>
-    <div class="docs-section-preview"><div class="docs-section-title">01. Headers</div>
+    <div data-xrayhtml="" class="prism xrayhtml docs-section-preview"><div class="docs-section-title">01. Headers</div>
 <div class="type-block">
 	<div class="type">
 		<span class="info">.c-header-xxl</span>
@@ -522,8 +533,10 @@
     </main>
     <nav class="docs-nav">
       <div class="docs-nav-header">
-        <div class="ipreo">Ipreo</div>
-        <div class="cupcake">Cupcake</div>
+        <a href="index.html">
+          <div class="cupcake">Cupcake</div>
+          <div class="ipreo">Design System</div>
+        </a>
         <div class="docs-version">Version 2.0</div>
       </div>
     
@@ -543,6 +556,7 @@
           <li class="docs-nav-item"><a href="elements.html#avatars">Avatars</a></li>
           <li class="docs-nav-item"><a href="elements.html#badges">Badges</a></li>
           <li class="docs-nav-item"><a href="elements.html#buttons">Buttons</a></li>
+          <li class="docs-nav-item"><a href="elements.html#cards">Cards</a></li>
           <li class="docs-nav-item"><a href="elements.html#checkboxes">Checkboxes</a></li>
           <li class="docs-nav-item"><a href="elements.html#forms">Forms</a></li>
         </ul>
