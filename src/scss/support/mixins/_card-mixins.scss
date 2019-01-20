@@ -1,0 +1,129 @@
+// --------------------------------------------
+// Card Base Mixin --------------------------
+// --------------------------------------------
+@mixin card {
+  border: $card-border;
+  font-size: $card-body-font-size;
+  border-radius: $card-border-radius;
+  background-color: $card-bg;
+  color: $card-text-color;
+  box-shadow: $card-shadow;
+  transition: $card-transition;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 550px;
+  word-wrap: break-word;
+  background-clip: border-box;
+
+  &:hover {
+    box-shadow: $card-shadow-hover;
+  }
+}
+
+@mixin card-header {
+  border-bottom: $card-header-border-bottom;
+  border-radius: $card-border-radius $card-border-radius 0 0;
+  padding: $card-padding-v $card-padding-h;
+
+  &-title {
+    display: inline-block;
+    font-size: $card-header-font-size;
+    font-weight: $card-header-font-weight;
+    line-height: 24px;
+  }
+
+  &-subtitle {
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  &-menu {
+    float: right;
+    position: absolute;
+    right: $card-padding-h;
+    top: $card-padding-v + 2;
+    font-size: $card-menu-font-size;
+
+    a:not(:first-child) {
+      margin-left: $space-lg;
+    }
+
+    &-item {
+      padding-left: $space-xs;
+    }
+
+    &-icon {
+      padding-left: $space-xs;
+      color: $card-header-icon-color;
+
+      &:hover {
+        color: $card-header-icon-hover-color;
+      }
+    }
+  }
+}
+
+@mixin card-content {
+  padding: $card-padding-v $card-padding-h;
+  font-weight: normal;
+  flex: 1 1 auto;
+
+  &-title {
+    font-size: $card-title-font-size;
+    font-weight: $card-title-font-weight;
+    line-height: 1;
+
+    @if $card-title-margin {
+      margin: $card-title-margin;
+    }
+  }
+
+  &-subtitle {
+    font-size: $card-subtitle-font-size;
+
+    @if $card-title-margin {
+      margin: $card-title-margin;
+    }
+  }
+
+  &-body {
+    font-size: $card-body-font-size;
+  }
+}
+
+@mixin card-footer {
+  padding: $card-padding-v $card-padding-h;
+  border-top: $card-border;
+  border-radius: $radius-0 $radius-0 $card-border-radius $card-border-radius;
+}
+
+@mixin card-variant($background, $border, $color) {
+  background-color: $background;
+  border-color: $border;
+  color: $color;
+
+  .c-card-header {
+    background-color: transparent;
+    color: $color;
+    border-bottom: 1px solid darken($background, 5%);
+  }
+
+  .c-card-footer {
+    background-color: transparent;
+    border-top: 1px solid darken($background, 5%);
+  }
+
+  .c-card-content {
+    background-color: transparent;
+  }
+
+  .c-card-content-title,
+  .c-card-content-body,
+  .c-card-content-subtitle {
+    color: $color;
+  }
+}
+
