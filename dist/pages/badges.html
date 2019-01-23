@@ -19,6 +19,8 @@
 <body class="docs-container">
     <div class="docs-body">
       <main class="docs-content docs-content-fullwidth">
+        <button id="codeToggle" class="c-btn c-btn-primary" style="float: right;">Toggle Code Snippets</button>
+        <br><br><br><br>
           
 <strong>Small</strong>
 <br>
@@ -1067,4 +1069,9 @@
         Prism.highlightAll();
       }
     });
-  </script></html>
+  </script>  <script>
+      $( "#codeToggle" ).click(function() {
+        $( ".source-panel" ).slideToggle();
+      });
+      </script>
+</html>
