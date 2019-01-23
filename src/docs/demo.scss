@@ -461,7 +461,7 @@ $docs-spacer-xxl: space(xl) + space(md);
 
     pre {
       margin: 0;
-      padding: 16px;
+      padding: 0 16px;
       background: #f8f9fa !important;
     }
 
@@ -481,7 +481,6 @@ $docs-spacer-xxl: space(xl) + space(md);
 	position: relative;
 	top: 0;
 	left: 0;
-	z-index: 2;
 	min-height: 100%;
 	background-color: #fff;
 	padding: 0 0 24px 0;
@@ -494,12 +493,7 @@ $docs-spacer-xxl: space(xl) + space(md);
 	  margin-top: 0;
   }
 
-  &.view-source .snippet {
-    z-index: 1;
-  }
-
   &.view-source .source-panel {
-    z-index: 2;
     display: block;
     margin: 0 0 -26px;
     border: 1px solid #e9ecef;
