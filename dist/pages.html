@@ -121,122 +121,24 @@
 </body>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
 
 <script>
-    // Some simple js heavily modified from fabricators core for the sidebar
-    'use strict';
-    var cupcake = window.cupcake = {};
-
-    cupcake.options = {
-      menu: false,
-      mq: '(min-width: 60em)'
-    };
-
-    // open menu by default if large screen
-    cupcake.options.menu = window.matchMedia(cupcake.options.mq).matches;
-
-    cupcake.dom = {
-      root: document.querySelector('html'),
-      primaryMenu: document.querySelector('.docs-nav'),
-      menuItems: document.querySelectorAll('.docs-nav-items li a'),
-      menuToggle: document.querySelector('.docs-menu-toggle')
-    };
-
-
-    /**
-     * Add `current` class to active menu item
-     */
-    cupcake.setActiveItem = function () {
-
-      /**
-       * Match the window location with the menu item, set menu item as active
-       */
-      var setActive = function setActive() {
-
-        // get current file and hash without first slash
-        var loc = window.location.pathname + window.location.hash;
-        var current = loc.replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
-          return (file || '') + (hash || '').split('.')[0];
-        }) || 'index.html';
-
-        // find the current section in the items array
-        for (var i = cupcake.dom.menuItems.length - 1; i >= 0; i--) {
-
-          var item = cupcake.dom.menuItems[i];
-
-          // get item href without first slash
-          var href = item.getAttribute('href').replace(/^\//g, '');
-
-          if (href === current) {
-            item.classList.add('current');
-          } else {
-            item.classList.remove('current');
-          }
-        }
-      };
-
-      window.addEventListener('hashchange', setActive);
-
-      setActive();
-
-      return cupcake;
-    };
-
-
-    cupcake.menuToggle = function () {
-
-      // shortcut menu DOM
-      var toggle = cupcake.dom.menuToggle;
-
-      // toggle classes on certain elements
-      var toggleClasses = function toggleClasses() {
-        cupcake.dom.root.classList.toggle('docs-nav-open');
-      };
-
-      // toggle classes on click
-      toggle.addEventListener('click', function () {
-        toggleClasses();
-      });
-
-      // close menu when clicking on item (for collapsed menu view)
-      var closeMenu = function closeMenu() {
-        if (!window.matchMedia(cupcake.options.mq).matches) {
-          toggleClasses();
-        }
-      };
-
-      for (var i = 0; i < cupcake.dom.menuItems.length; i++) {
-        cupcake.dom.menuItems[i].addEventListener('click', closeMenu);
-      }
-
-      return cupcake;
-    };
-
-    /**
-     * Initialization
-     */
-    cupcake.menuToggle().setActiveItem();
-
-  </script>
-<script src="http://filamentgroup.github.io/X-rayHTML/libs/shoestring-dev.js"></script>
-<script>
-window.jQuery = window.jQuery || window.shoestring;
-
 (function( $ ) {
-  var xrayiframeid = 0;
   var pluginName = "xrayhtml",
 		o = {
 		text: {
-			open: "Show Code Snippet",
-			close: "Collapse Code Snippet"
+			open: "Show Code Example",
+			close: "Collapse Code Example"
 		},
 		classes: {
-			button: "c-btn c-btn-secondary c-btn-block c-btn-small",
+			button: "c-btn c-btn-sm",
 			open: "view-source",
 			sourcepanel: "source-panel"
 		},
 		initSelector: "[data-" + pluginName + "]",
-		defaultReveal: "flip"
+		defaultReveal: "inline"
 	},
 	methods = {
 		_create: function() {
@@ -256,11 +158,10 @@ window.jQuery = window.jQuery || window.shoestring;
 		_init: function() {
 			var $self =	 $(this);
 
-			$self.data( "id." + pluginName, xrayiframeid++);
 
 			var method = $( this ).attr( "data-" + pluginName ) || o.defaultReveal;
 
-			if( method === "flip" ) {
+			if( method === "slide" ) {
 				$( this )[ pluginName ]( "_createButton" );
 			}
 
@@ -359,9 +260,9 @@ window.jQuery = window.jQuery || window.shoestring;
 	$( init );
 
 
-}( jQuery ));</script>
-<script src="http://filamentgroup.github.io/X-rayHTML/libs/prism.min.js"></script>
-<script type="text/javascript">
+}( jQuery ));
+
+// Add prism highlighting to code
   $( window ).bind( "create.xrayhtml", function( e ) {
     var prism = !!~e.target.getAttribute( "class" ).indexOf( "prism" );
 
@@ -370,6 +271,102 @@ window.jQuery = window.jQuery || window.shoestring;
       Prism.highlightAll();
     }
   });
+</script><script>
+	// Some simple js heavily modified from fabricators core for the sidebar
+	'use strict';
+	var cupcake = window.cupcake = {};
+
+	cupcake.options = {
+		menu: false,
+		mq: '(min-width: 60em)'
+	};
+
+	// open menu by default if large screen
+	cupcake.options.menu = window.matchMedia(cupcake.options.mq).matches;
+
+	cupcake.dom = {
+		root: document.querySelector('html'),
+		primaryMenu: document.querySelector('.docs-nav'),
+		menuItems: document.querySelectorAll('.docs-nav-items li a'),
+		menuToggle: document.querySelector('.docs-menu-toggle')
+	};
+
+
+	/**
+	 * Add `current` class to active menu item
+	 */
+	cupcake.setActiveItem = function () {
+
+		/**
+		 * Match the window location with the menu item, set menu item as active
+		 */
+		var setActive = function setActive() {
+
+			// get current file and hash without first slash
+			var loc = window.location.pathname + window.location.hash;
+			var current = loc.replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
+				return (file || '') + (hash || '').split('.')[0];
+			}) || 'index.html';
+
+			// find the current section in the items array
+			for (var i = cupcake.dom.menuItems.length - 1; i >= 0; i--) {
+
+				var item = cupcake.dom.menuItems[i];
+
+				// get item href without first slash
+				var href = item.getAttribute('href').replace(/^\//g, '');
+
+				if (href === current) {
+					item.classList.add('current');
+				} else {
+					item.classList.remove('current');
+				}
+			}
+		};
+
+		window.addEventListener('hashchange', setActive);
+
+		setActive();
+
+		return cupcake;
+	};
+
+
+	cupcake.menuToggle = function () {
+
+		// shortcut menu DOM
+		var toggle = cupcake.dom.menuToggle;
+
+		// toggle classes on certain elements
+		var toggleClasses = function toggleClasses() {
+			cupcake.dom.root.classList.toggle('docs-nav-open');
+		};
+
+		// toggle classes on click
+		toggle.addEventListener('click', function () {
+			toggleClasses();
+		});
+
+		// close menu when clicking on item (for collapsed menu view)
+		var closeMenu = function closeMenu() {
+			if (!window.matchMedia(cupcake.options.mq).matches) {
+				toggleClasses();
+			}
+		};
+
+		for (var i = 0; i < cupcake.dom.menuItems.length; i++) {
+			cupcake.dom.menuItems[i].addEventListener('click', closeMenu);
+		}
+
+		return cupcake;
+	};
+
+	/**
+	 * Initialization
+	 */
+	cupcake.menuToggle().setActiveItem();
 
 </script>
+
+
 </html>

@@ -44,7 +44,7 @@
 
       </div>
     </div>
-    <div data-xrayhtml="" class="prism xrayhtml docs-section-preview"><div class="color-block">
+    <div data-xrayhtml="slide" class="prism xrayhtml docs-section-preview"><div class="color-block">
 	<div class="color-block-title">primary</div>
 	<div class="colors">
 		<span class="c-bg-primary-8">Primary</span>
@@ -184,7 +184,7 @@
 
       </div>
     </div>
-    <div data-xrayhtml="" class="prism xrayhtml docs-section-preview"><div class="layer-types">
+    <div data-xrayhtml="slide" class="prism xrayhtml docs-section-preview"><div class="layer-types">
 	<div class="c-depth-none">none</div>
 	<div class="c-depth-xs">xs</div>
 	<div class="c-depth-sm">sm</div>
@@ -205,7 +205,7 @@
 
       </div>
     </div>
-    <div data-xrayhtml="" class="prism xrayhtml docs-section-preview"><div class="space-block-title">xxl</div>
+    <div data-xrayhtml="slide" class="prism xrayhtml docs-section-preview"><div class="space-block-title">xxl</div>
 <div class="space">
 	<div class="xxl"></div>
 </div>
@@ -284,7 +284,7 @@
 
       </div>
     </div>
-    <div data-xrayhtml="" class="prism xrayhtml docs-section-preview"><div class="docs-section-title">01. Headers</div>
+    <div data-xrayhtml="slide" class="prism xrayhtml docs-section-preview"><div class="docs-section-title">01. Headers</div>
 <div class="type-block">
 	<div class="type">
 		<span class="info">.c-header-xxl</span>
@@ -571,102 +571,101 @@
   </div>
 </body>
 
-
-
 <script>
-    // Some simple js heavily modified from fabricators core for the sidebar
-    'use strict';
-    var cupcake = window.cupcake = {};
+	// Some simple js heavily modified from fabricators core for the sidebar
+	'use strict';
+	var cupcake = window.cupcake = {};
 
-    cupcake.options = {
-      menu: false,
-      mq: '(min-width: 60em)'
-    };
+	cupcake.options = {
+		menu: false,
+		mq: '(min-width: 60em)'
+	};
 
-    // open menu by default if large screen
-    cupcake.options.menu = window.matchMedia(cupcake.options.mq).matches;
+	// open menu by default if large screen
+	cupcake.options.menu = window.matchMedia(cupcake.options.mq).matches;
 
-    cupcake.dom = {
-      root: document.querySelector('html'),
-      primaryMenu: document.querySelector('.docs-nav'),
-      menuItems: document.querySelectorAll('.docs-nav-items li a'),
-      menuToggle: document.querySelector('.docs-menu-toggle')
-    };
-
-
-    /**
-     * Add `current` class to active menu item
-     */
-    cupcake.setActiveItem = function () {
-
-      /**
-       * Match the window location with the menu item, set menu item as active
-       */
-      var setActive = function setActive() {
-
-        // get current file and hash without first slash
-        var loc = window.location.pathname + window.location.hash;
-        var current = loc.replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
-          return (file || '') + (hash || '').split('.')[0];
-        }) || 'index.html';
-
-        // find the current section in the items array
-        for (var i = cupcake.dom.menuItems.length - 1; i >= 0; i--) {
-
-          var item = cupcake.dom.menuItems[i];
-
-          // get item href without first slash
-          var href = item.getAttribute('href').replace(/^\//g, '');
-
-          if (href === current) {
-            item.classList.add('current');
-          } else {
-            item.classList.remove('current');
-          }
-        }
-      };
-
-      window.addEventListener('hashchange', setActive);
-
-      setActive();
-
-      return cupcake;
-    };
+	cupcake.dom = {
+		root: document.querySelector('html'),
+		primaryMenu: document.querySelector('.docs-nav'),
+		menuItems: document.querySelectorAll('.docs-nav-items li a'),
+		menuToggle: document.querySelector('.docs-menu-toggle')
+	};
 
 
-    cupcake.menuToggle = function () {
+	/**
+	 * Add `current` class to active menu item
+	 */
+	cupcake.setActiveItem = function () {
 
-      // shortcut menu DOM
-      var toggle = cupcake.dom.menuToggle;
+		/**
+		 * Match the window location with the menu item, set menu item as active
+		 */
+		var setActive = function setActive() {
 
-      // toggle classes on certain elements
-      var toggleClasses = function toggleClasses() {
-        cupcake.dom.root.classList.toggle('docs-nav-open');
-      };
+			// get current file and hash without first slash
+			var loc = window.location.pathname + window.location.hash;
+			var current = loc.replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
+				return (file || '') + (hash || '').split('.')[0];
+			}) || 'index.html';
 
-      // toggle classes on click
-      toggle.addEventListener('click', function () {
-        toggleClasses();
-      });
+			// find the current section in the items array
+			for (var i = cupcake.dom.menuItems.length - 1; i >= 0; i--) {
 
-      // close menu when clicking on item (for collapsed menu view)
-      var closeMenu = function closeMenu() {
-        if (!window.matchMedia(cupcake.options.mq).matches) {
-          toggleClasses();
-        }
-      };
+				var item = cupcake.dom.menuItems[i];
 
-      for (var i = 0; i < cupcake.dom.menuItems.length; i++) {
-        cupcake.dom.menuItems[i].addEventListener('click', closeMenu);
-      }
+				// get item href without first slash
+				var href = item.getAttribute('href').replace(/^\//g, '');
 
-      return cupcake;
-    };
+				if (href === current) {
+					item.classList.add('current');
+				} else {
+					item.classList.remove('current');
+				}
+			}
+		};
 
-    /**
-     * Initialization
-     */
-    cupcake.menuToggle().setActiveItem();
+		window.addEventListener('hashchange', setActive);
 
-  </script>
+		setActive();
+
+		return cupcake;
+	};
+
+
+	cupcake.menuToggle = function () {
+
+		// shortcut menu DOM
+		var toggle = cupcake.dom.menuToggle;
+
+		// toggle classes on certain elements
+		var toggleClasses = function toggleClasses() {
+			cupcake.dom.root.classList.toggle('docs-nav-open');
+		};
+
+		// toggle classes on click
+		toggle.addEventListener('click', function () {
+			toggleClasses();
+		});
+
+		// close menu when clicking on item (for collapsed menu view)
+		var closeMenu = function closeMenu() {
+			if (!window.matchMedia(cupcake.options.mq).matches) {
+				toggleClasses();
+			}
+		};
+
+		for (var i = 0; i < cupcake.dom.menuItems.length; i++) {
+			cupcake.dom.menuItems[i].addEventListener('click', closeMenu);
+		}
+
+		return cupcake;
+	};
+
+	/**
+	 * Initialization
+	 */
+	cupcake.menuToggle().setActiveItem();
+
+</script>
+
 </html>
