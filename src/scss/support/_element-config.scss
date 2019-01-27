@@ -156,32 +156,33 @@ $button-sizes: (
 // --------------------------------------------
 // CARDS --------------------------------------
 // --------------------------------------------
-$card-header-font-size            : $font-body-lg !default;
-$card-header-font-weight          : $font-weight-bold !default;
-$card-body-font-size              : $font-body-md !default;
-$card-title-font-size             : $font-body-xl !default;
-$card-title-font-weight           : bold !default;
-$card-title-margin                : $space-xs 0 !default;
-$card-subtitle-font-size          : $font-body-lg !default;
-$card-text-color                  : $color-gray-7 !default;
-$card-menu-font-size              : 100% !default;
-$card-header-icon-color           : $color-gray-5 !default;
-$card-header-icon-hover-color     : lighten($color-gray-5, 10%) !default;
-$card-header-text-color           : $color-gray-7 !default;
-$card-border                      : 1px solid $color-gray-2 !default;
-$card-border-radius               : $global-default-radius !default;
-$card-min-width                   : 250px !default;
-$card-bg                          : $color-white !default;
-$card-padding-v                   : 12px !default;
-$card-padding-h                   : 16px !default;
-$card-shadow                      : 0 2px 4px -2px rgba(33, 37, 41, 0.1) !default;
-$card-shadow-hover                : $card-shadow !default;
-$card-transition                  : none !default;
-$card-header-border-bottom        : 1px solid rgba(177, 177, 177, 0.15) !default;
-$card-primary                     : $color-primary;
-$card-success                     : $color-success;
-$card-danger                      : $color-danger;
-$card-warning                     : $color-warning;
+$card-prefix                 : 'c-card' !default;
+$card-bg                     : $color-white !default;
+$card-text-color             : $color-gray-7 !default;
+$card-border                 : 1px solid $color-gray-2 !default;
+$card-border-radius          : $global-default-radius !default;
+$card-min-width              : 250px !default;
+$card-padding-v              : $space-md - $space-xs !default;
+$card-padding-h              : $space-md !default;
+$card-shadow                 : 0 2px 4px -2px rgba(33, 37, 41, 0.1) !default;
+$card-shadow-hover           : 0 4px 14px -2px rgba(33, 37, 41, 0.1) !default;
+$card-header-font-size       : $font-body-lg !default;
+$card-header-font-weight     : $font-weight-bold !default;
+$card-header-line-height     : 24px !default;
+$card-header-text-color      : $card-text-color !default;
+$card-header-icon-color      : $color-gray-5 !default;
+$card-header-icon-hover-color: lighten($card-header-icon-color, 10%) !default;
+$card-header-border-bottom   : 1px solid rgba(177, 177, 177, 0.15) !default;
+$card-body-font-size         : $font-body-md !default;
+$card-title-font-size        : $font-body-xl !default;
+$card-title-font-weight      : $font-weight-bold !default;
+$card-title-line-height      : 12px !default;
+$card-subtitle-font-size     : $font-body-md !default;
+$card-footer-color           : $color-primary-8 !default;
+$card-footer-hover-color     : $color-primary-6 !default;
+$card-footer-font-size       : $font-body-md !default;
+$card-footer-line-weight     : $font-body-xl !default;
+
 
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------

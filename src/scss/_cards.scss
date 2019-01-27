@@ -1,7 +1,7 @@
 // --------------------------------------------
-// BUTTONS ------------------------------------
+// CARDS --------------------------------------
 // --------------------------------------------
-.c-card {
+.#{$card-prefix} {
   @include card;
 
   &-header {
@@ -16,32 +16,8 @@
     @include card-footer;
   }
 
-  &-primary {
-    @include card-variant($color-primary, $color-primary, $color-white);
-  }
-
-  &-secondary {
-    @include card-variant($color-gray-3, $color-gray-3, $color-gray-7);
-  }
-
-  &-success {
-    @include card-variant($color-success, $color-success, $color-white);
-  }
-
-  &-danger {
-    @include card-variant($color-danger, $color-danger, $color-white);
+  &-hover:hover {
+    cursor: pointer;
+    box-shadow: $card-shadow-hover;
   }
 }
-
-.c-card-header-subtitle + .c-card-header-menu {
-  top: $card-padding-h + 4;
-}
-
-// .c-card-header-subtitle {
-//   @at-root .c-card {
-//     .c-card-header {
-//       flex-direction: column;
-//       background: green;
-//     }
-//   }
-// }
