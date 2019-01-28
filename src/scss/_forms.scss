@@ -377,3 +377,26 @@ textarea.#{$control-prefix} {
   }
 }
 
+.c-form-inline {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+
+  .#{$control-prefix}-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+
+  .#{$control-prefix} {
+    display: flex;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  .c-hint {
+    position: relative;
+    margin: $space-0;
+  }
+}
