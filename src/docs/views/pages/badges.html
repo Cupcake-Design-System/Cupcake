@@ -9,7 +9,7 @@ layout: blank
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-sm c-badge-{{this}}">Value</div>
+  <div class="c-badge c-badge-sm c-badge-{{this}}">{{this}}</div>
   {{/each}}
   {{/each}}
 </div>
@@ -21,8 +21,8 @@ layout: blank
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-sm c-badge-{{this}}">Value
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <div class="c-badge c-badge-sm c-badge-{{this}}">{{this}}
+    <a href="" class="c-badge-close"></a>
   </div>
   {{/each}}
   {{/each}}
@@ -36,7 +36,7 @@ layout: blank
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-square c-badge-sm c-badge-{{this}}">Value</div>
+  <div class="c-badge c-badge-square c-badge-sm c-badge-{{this}}">{{this}}</div>
   {{/each}}
   {{/each}}
 </div>
@@ -49,18 +49,13 @@ layout: blank
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-square c-badge-sm c-badge-{{this}}">Value
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
-  </div>
+  <div class="c-badge c-badge-square c-badge-sm c-badge-{{this}}">{{this}}
+    <a href="" class="c-badge-close"></a></div>
   {{/each}}
   {{/each}}
 </div>
 
-<br>
-<br>
-<hr>
-<br>
-<br>
+{{> space}}
 
 <strong>Default</strong>
 <br>
@@ -68,7 +63,7 @@ layout: blank
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-{{this}}">Value</div>
+  <div class="c-badge c-badge-{{this}}">{{this}}</div>
   {{/each}}
   {{/each}}
 </div>
@@ -80,8 +75,8 @@ layout: blank
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-{{this}}">Value
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <div class="c-badge c-badge-{{this}}">{{this}}
+    <a href="" class="c-badge-close"></a>
   </div>
   {{/each}}
   {{/each}}
@@ -95,7 +90,7 @@ layout: blank
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-square c-badge-{{this}}">Value</div>
+  <div class="c-badge c-badge-square c-badge-{{this}}">{{this}}</div>
   {{/each}}
   {{/each}}
 </div>
@@ -108,18 +103,14 @@ layout: blank
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-square c-badge-{{this}}">Value
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <div class="c-badge c-badge-square c-badge-{{this}}">{{this}}
+    <a href="" class="c-badge-close"></a>
   </div>
   {{/each}}
   {{/each}}
 </div>
 
-<br>
-<br>
-<hr>
-<br>
-<br>
+{{> space}}
 
 <strong>Large</strong>
 <br>
@@ -127,7 +118,7 @@ layout: blank
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-lg c-badge-{{this}}">Value</div>
+  <div class="c-badge c-badge-lg c-badge-{{this}}">{{this}}</div>
   {{/each}}
   {{/each}}
 </div>
@@ -139,8 +130,8 @@ layout: blank
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-lg c-badge-{{this}}">Value
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <div class="c-badge c-badge-lg c-badge-{{this}}">{{this}}
+    <a href="" class="c-badge-close"></a>
   </div>
   {{/each}}
   {{/each}}
@@ -154,7 +145,7 @@ layout: blank
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-lg c-badge-square c-badge-{{this}}">Value</div>
+  <div class="c-badge c-badge-lg c-badge-square c-badge-{{this}}">{{this}}</div>
   {{/each}}
   {{/each}}
 </div>
@@ -167,19 +158,14 @@ layout: blank
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-lg c-badge-square c-badge-{{this}}">Value
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <div class="c-badge c-badge-lg c-badge-square c-badge-{{this}}">{{this}}
+    <a href="" class="c-badge-close"></a>
   </div>
   {{/each}}
   {{/each}}
 </div>
 
-<br>
-<br>
-<hr>
-<br>
-<br>
-<br>
+{{> space}}
 
 <strong>Miscellaneous Option Examples</strong>
 <br>
@@ -190,7 +176,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Primary Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-square c-badge-primary">
@@ -198,7 +184,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Primary Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-lg c-badge-primary">
@@ -206,7 +192,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Primary Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-square c-badge-lg c-badge-primary">
@@ -214,7 +200,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Primary Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 
@@ -223,7 +209,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Success Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-square c-badge-success">
@@ -231,7 +217,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Success Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-lg c-badge-success">
@@ -239,7 +225,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Success Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 
@@ -248,7 +234,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Success Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <br>
@@ -259,7 +245,7 @@ layout: blank
         <i class="fab fa-amazon"></i>
     </div>
     Amazon
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
+    <a href="" class="c-badge-close"></a>
   </div>
 
 <div class="c-badge c-badge-lg c-badge-success-light">
@@ -267,7 +253,7 @@ layout: blank
       <i class="fab fa-apple"></i>
   </div>
   Apple
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-square c-badge-lg c-badge-pink">
@@ -275,7 +261,7 @@ layout: blank
       <img src="https://unsplash.it/200?image=433">
   </div>
   Pink Bear Large Square - with long title
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-square c-badge-lg c-badge-teal">
@@ -283,15 +269,12 @@ layout: blank
       <img src="https://unsplash.it/200?image=433">
   </div>
   Teal Bear Large Square - with long title
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 </div>
-<br>
-<br>
-<hr>
-<br>
-<br>
-<br>
+
+
+{{> space}}
 
 <span><strong style="font-size: 26px;"> Hello </strong>
 <div class="c-badge c-badge-top c-badge-sm c-badge-success">4</div></span>
@@ -304,12 +287,7 @@ layout: blank
   {{/each}}
 </div>
 
-<br>
-<br>
-<hr>
-<br>
-<br>
-<br>
+{{> space}}
 
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
@@ -319,12 +297,7 @@ layout: blank
   {{/each}}
 </div>
 
-<br>
-<br>
-<hr>
-<br>
-<br>
-<br>
+{{> space}}
 
 <div data-xrayhtml="" class="avatar-wrap prism xrayhtml">
   {{#each color-loop.colors}}
