@@ -67,3 +67,11 @@
   }
 }
 
+.c-a {
+  color: $color-gray-4;
+  font-size: $font-body-xl;
+
+  &:hover {
+    color: $color-gray-5;
+  }
+}
