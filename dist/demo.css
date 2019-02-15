@@ -422,7 +422,9 @@
   margin: 5px;
 }
 
+.docs-wrap > .c-card,
 .docs-wrap > .snippet .c-card,
+.docs-wrap .snippet > .c-card,
 .docs-wrap .snippet > .snippet .c-card {
   max-width: 32%;
 }
@@ -438,11 +440,7 @@ hr {
   clear: both;
 }
 
-.xrayhtml {
-  margin: 0;
-}
-
-.xrayhtml .source-panel {
+.source-panel {
   background: #f1f3f5;
   tab-size: 2;
   margin: 0;
@@ -452,17 +450,17 @@ hr {
   overflow-x: auto;
 }
 
-.xrayhtml .source-panel pre {
+.source-panel pre {
   margin: 0;
   padding: 0 16px 16px;
   background: #f1f3f5 !important;
 }
 
-.xrayhtml .source-panel code {
+.source-panel code {
   white-space: pre-wrap;
 }
 
-.xrayhtml .source-panel code.language-markup {
+.source-panel code.language-markup {
   white-space: pre-wrap !important;
   font-size: 80%;
 }
@@ -474,18 +472,18 @@ hr {
   left: 0;
   min-height: 100%;
   background-color: #fff;
-  padding: 0 0 24px 0;
+  padding: 0 0 8px 0;
 }
 
-.xrayhtml.method-slide {
+.method-slide {
   padding: 0;
 }
 
-.xrayhtml.method-slide .source-panel {
+.method-slide .source-panel {
   margin-top: 0;
 }
 
-.xrayhtml.method-slide.view-source .source-panel {
+.method-slide.view-source .source-panel {
   display: block;
   margin: 0;
   padding: 16px 0 24px;
@@ -502,7 +500,7 @@ hr {
 }
 
 .method-inline .source-panel pre {
-  margin: -8px 0 0 0;
+  margin: -28px 0 0 0;
 }
 
 #codeToggle {

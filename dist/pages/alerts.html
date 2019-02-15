@@ -22,7 +22,7 @@
         <button id="codeToggle" class="c-btn c-btn-primary" style="float: right;">Toggle Code Snippets</button>
         <br><br><br><br>
           
-<div data-xrayhtml class="prism xrayhtml">
+<div data-xrayhtml class="prism">
 <div class="c-alert c-alert-top c-alert-primary">
   <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i>
   <div class="c-alert-title">Alert Title</div>
@@ -51,7 +51,7 @@
 <br>
 <br>
 
-<div data-xrayhtml class="prism xrayhtml">
+<div data-xrayhtml class="prism">
 <div class="c-alert c-alert-top c-alert-primary">
   <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i>
     <div class="c-alert-content">
@@ -88,7 +88,7 @@
 <br>
 <br>
 
-<div data-xrayhtml class="prism xrayhtml">
+<div data-xrayhtml class="prism">
 <div class="c-alert c-alert-primary">
   <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i>
     <div class="c-alert-content"><strong>Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui.
@@ -129,7 +129,7 @@
 <br>
 <br>
 
-<div data-xrayhtml class="prism xrayhtml">
+<div data-xrayhtml class="prism">
 <div class="c-alert c-alert-primary">
   <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i> <div class="c-alert-content"><strong>This is a primary alert</strong>
   </div>
@@ -158,7 +158,7 @@
 <br>
 <br>
 
-<div data-xrayhtml class="prism xrayhtml">
+<div data-xrayhtml class="prism">
 <div class="c-toast-alert c-toast-alert-primary">
   <i class="c-toast-alert-icon fa fa-check-circle"></i>
   Nam porttitor blandit accumsan.
@@ -188,7 +188,8 @@
 <br>
 <hr>
 <br>
-<br>      </main>
+<br>
+      </main>
     </div>
   </body>
 
@@ -343,9 +344,10 @@
         Prism.highlightAll();
       }
     });
-  </script>  <script>
-      $( "#codeToggle" ).click(function() {
-        $( ".source-panel" ).slideToggle();
-      });
-      </script>
+  </script>
+<script>
+  $("#codeToggle").click(function () {
+    $(".source-panel").slideToggle();
+  });
+</script>
 </html>

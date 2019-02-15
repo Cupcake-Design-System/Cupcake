@@ -22,7 +22,7 @@
         <button id="codeToggle" class="c-btn c-btn-primary" style="float: right;">Toggle Code Snippets</button>
         <br><br><br><br>
           <strong>Card Container</strong>
-<div data-xrayhtml class="docs-wrap prism xrayhtml">
+<div data-xrayhtml class="docs-wrap prism">
 
   <div class="c-card" style="height: 200px;">
     <h3 class="c-p-left-md">Default Card Container</h3>
@@ -39,7 +39,7 @@
 <br>
 <br>
 <strong>Card Header Titles</strong>
-<div data-xrayhtml class="docs-wrap prism xrayhtml">
+<div data-xrayhtml class="docs-wrap prism">
   <div class="c-card">
     <header class="c-card-header">
       <div class="c-card-header-title">
@@ -109,7 +109,7 @@
 <br>
 <br>
 <strong>Card Header with Subtitles</strong>
-<div data-xrayhtml class="docs-wrap prism xrayhtml">
+<div data-xrayhtml class="docs-wrap prism">
   <div class="c-card">
     <header class="c-card-header">
       <div class="c-card-header-title">
@@ -189,7 +189,7 @@
 <br>
 <br>
 <strong>Cards with Footer</strong>
-<div data-xrayhtml class="docs-wrap prism xrayhtml">
+<div data-xrayhtml class="docs-wrap prism">
   <div class="c-card">
     <div class="c-card-content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
@@ -249,6 +249,7 @@
 <br>
 <br>
 <strong>Card fully loaded</strong>
+<div data-xrayhtml class="docs-wrap prism">
 <div class="c-card">
   <header class="c-card-header">
     <div class="c-card-header-title">
@@ -281,6 +282,7 @@
       Card Footer Link
     </a>
   </div>
+</div>
 </div>
 
       </main>
@@ -438,9 +440,10 @@
         Prism.highlightAll();
       }
     });
-  </script>  <script>
-      $( "#codeToggle" ).click(function() {
-        $( ".source-panel" ).slideToggle();
-      });
-      </script>
+  </script>
+<script>
+  $("#codeToggle").click(function () {
+    $(".source-panel").slideToggle();
+  });
+</script>
 </html>
