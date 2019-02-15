@@ -1,7 +1,7 @@
 <div class="docs-section" id="{{@key}}">
   {{#if items}}
   {{#each items}}
-  <div class="c-col-12" id="{{@key}}">
+  <div id="{{@key}}">
     <div class="docs-section-header">
       <div class="docs-section-title">{{name}}</div>
       {{#if notes}}
@@ -14,7 +14,7 @@
   </div>
   {{/each}}
   {{else}}
-  <div class="c-col-12" id="{{@key}}">
+  <div id="{{@key}}">
     <div class="docs-section-header">
       <div class="docs-section-title">{{name}} <a href="pages/{{@key}}.html" target="_blank">View Test Page</a></div>
       {{#if notes}}

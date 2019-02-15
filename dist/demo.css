@@ -411,15 +411,104 @@
   outline: none;
 }
 
-.docs-wrap {
+.docs-wrap,
+.docs-wrap .snippet {
   display: flex;
   flex-wrap: wrap;
 }
 
-.docs-wrap > div {
+.docs-wrap > div,
+.docs-wrap .snippet > div {
   margin: 5px;
 }
 
-.docs-wrap > .c-card {
+.docs-wrap > .snippet .c-card,
+.docs-wrap .snippet > .snippet .c-card {
   max-width: 32%;
+}
+
+hr {
+  max-width: 100%;
+  height: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #f1f3f5;
+  border-left: 0;
+  margin: 20px auto;
+  clear: both;
+}
+
+.xrayhtml {
+  margin: 0;
+}
+
+.xrayhtml .source-panel {
+  background: #f1f3f5;
+  tab-size: 2;
+  margin: 0;
+  display: none;
+  width: 100%;
+  height: 200px;
+  overflow-x: auto;
+}
+
+.xrayhtml .source-panel pre {
+  margin: 0;
+  padding: 0 16px 16px;
+  background: #f1f3f5 !important;
+}
+
+.xrayhtml .source-panel code {
+  white-space: pre-wrap;
+}
+
+.xrayhtml .source-panel code.language-markup {
+  white-space: pre-wrap !important;
+  font-size: 80%;
+}
+
+.snippet {
+  margin: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  background-color: #fff;
+  padding: 0 0 24px 0;
+}
+
+.xrayhtml.method-slide {
+  padding: 0;
+}
+
+.xrayhtml.method-slide .source-panel {
+  margin-top: 0;
+}
+
+.xrayhtml.method-slide.view-source .source-panel {
+  display: block;
+  margin: 0;
+  padding: 16px 0 24px;
+  border: 1px solid #ced4da;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  background: #f1f3f5 !important;
+}
+
+.method-inline .source-panel {
+  display: none;
+  height: 100%;
+  border: 1px solid #ced4da;
+}
+
+.method-inline .source-panel pre {
+  margin: -8px 0 0 0;
+}
+
+#codeToggle {
+  float: right;
+  position: fixed;
+  right: 75px;
+  z-index: 999;
+  box-shadow: 0px 0px 11px 4px rgba(214, 214, 214, 0.64);
 }

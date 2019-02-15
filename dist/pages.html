@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="../demo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
 
   <script>
     var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
@@ -80,8 +81,10 @@
     </main>
     <nav class="docs-nav">
       <div class="docs-nav-header">
-        <div class="ipreo">Ipreo</div>
-        <div class="cupcake">Cupcake</div>
+        <a href="index.html">
+          <div class="cupcake">Cupcake</div>
+          <div class="ipreo">Design System</div>
+        </a>
         <div class="docs-version">Version 2.0</div>
       </div>
     
@@ -117,101 +120,252 @@
 </body>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
 
 <script>
-    // Some simple js heavily modified from fabricators core for the sidebar
-    'use strict';
-    var cupcake = window.cupcake = {};
+(function( $ ) {
+  var pluginName = "xrayhtml",
+		o = {
+		text: {
+			open: "Show Code Example",
+			close: "Collapse Code Example"
+		},
+		classes: {
+			button: "c-btn c-btn-sm",
+			open: "view-source",
+			sourcepanel: "source-panel"
+		},
+		initSelector: "[data-" + pluginName + "]",
+		defaultReveal: "inline"
+	},
+	methods = {
+		_create: function() {
+			return $( this ).each(function() {
+				var init = $( this ).data( "init." + pluginName );
 
-    cupcake.options = {
-      menu: false,
-      mq: '(min-width: 60em)'
-    };
+				if( init ) {
+					return false;
+				}
 
-    // open menu by default if large screen
-    cupcake.options.menu = window.matchMedia(cupcake.options.mq).matches;
-
-    cupcake.dom = {
-      root: document.querySelector('html'),
-      primaryMenu: document.querySelector('.docs-nav'),
-      menuItems: document.querySelectorAll('.docs-nav-items li a'),
-      menuToggle: document.querySelector('.docs-menu-toggle')
-    };
-
-
-    /**
-     * Add `current` class to active menu item
-     */
-    cupcake.setActiveItem = function () {
-
-      /**
-       * Match the window location with the menu item, set menu item as active
-       */
-      var setActive = function setActive() {
-
-        // get current file and hash without first slash
-        var loc = window.location.pathname + window.location.hash;
-        var current = loc.replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
-          return (file || '') + (hash || '').split('.')[0];
-        }) || 'index.html';
-
-        // find the current section in the items array
-        for (var i = cupcake.dom.menuItems.length - 1; i >= 0; i--) {
-
-          var item = cupcake.dom.menuItems[i];
-
-          // get item href without first slash
-          var href = item.getAttribute('href').replace(/^\//g, '');
-
-          if (href === current) {
-            item.classList.add('current');
-          } else {
-            item.classList.remove('current');
-          }
-        }
-      };
-
-      window.addEventListener('hashchange', setActive);
-
-      setActive();
-
-      return cupcake;
-    };
+				$( this )
+					.data( "init." + pluginName, true )
+					[ pluginName ]( "_init" )
+					.trigger( "create." +  pluginName );
+			});
+		},
+		_init: function() {
+			var $self =	 $(this);
 
 
-    cupcake.menuToggle = function () {
+			var method = $( this ).attr( "data-" + pluginName ) || o.defaultReveal;
 
-      // shortcut menu DOM
-      var toggle = cupcake.dom.menuToggle;
+			if( method === "slide" ) {
+				$( this )[ pluginName ]( "_createButton" );
+			}
 
-      // toggle classes on certain elements
-      var toggleClasses = function toggleClasses() {
-        cupcake.dom.root.classList.toggle('docs-nav-open');
-      };
+			$( this )
+				.addClass( pluginName + " " + "method-" + method )
+			[ pluginName ]( "_createSource" );
+		},
+		_createButton: function() {
+			var btn = document.createElement( "a" ),
+				txt = document.createTextNode( o.text.open ),
+				el = $( this );
 
-      // toggle classes on click
-      toggle.addEventListener('click', function () {
-        toggleClasses();
-      });
+			btn.setAttribute( "class", o.classes.button );
+			btn.href = "#";
+			btn.appendChild( txt );
 
-      // close menu when clicking on item (for collapsed menu view)
-      var closeMenu = function closeMenu() {
-        if (!window.matchMedia(cupcake.options.mq).matches) {
-          toggleClasses();
-        }
-      };
+			$( btn )
+				.bind( "click", function( e ) {
+					var isOpen = el.attr( "class" ).indexOf( o.classes.open ) > -1;
 
-      for (var i = 0; i < cupcake.dom.menuItems.length; i++) {
-        cupcake.dom.menuItems[i].addEventListener('click', closeMenu);
-      }
+					el[ isOpen ? "removeClass" : "addClass" ]( o.classes.open );
+					btn.innerHTML = ( isOpen ? o.text.open : o.text.close );
 
-      return cupcake;
-    };
+					e.preventDefault();
 
-    /**
-     * Initialization
-     */
-    cupcake.menuToggle().setActiveItem();
+				})
+				.insertAfter( el );
+		},
+		_createSource: function() {
+			var el = this;
+			var preel = document.createElement( "pre" );
+			var codeel = document.createElement( "code" );
+			var wrap = document.createElement( "div" );
+			var sourcepanel = document.createElement( "div" );
+			var code;
+			var leadingWhiteSpace;
+			var source;
 
-  </script>
+			// remove empty value attributes
+			code = el.innerHTML.replace( /\=\"\"/g, '' );
+			leadingWhiteSpace = code.match( /(^[\s]+)/ );
+
+			if( leadingWhiteSpace ) {
+				code = code.replace( new RegExp( leadingWhiteSpace[ 1 ], "gmi" ), "\n" );
+			}
+
+			source = document.createTextNode( code );
+
+			wrap.setAttribute( "class", "snippet" );
+
+			$( el ).wrapInner( wrap );
+
+			codeel.appendChild( source );
+			preel.appendChild( codeel );
+
+			sourcepanel.setAttribute( "class", o.classes.sourcepanel );
+			sourcepanel.appendChild( preel );
+
+			this.appendChild( sourcepanel );
+		}
+	};
+
+	// Collection method.
+	$.fn[ pluginName ] = function( arrg, a, b, c ) {
+		return this.each(function() {
+
+			// if it's a method
+			if( arrg && typeof( arrg ) === "string" ){
+				return $.fn[ pluginName ].prototype[ arrg ].call( this, a, b, c );
+			}
+
+			// don't re-init
+			if( $( this ).data( pluginName + "data" ) ){
+				return $( this );
+			}
+
+			// otherwise, init
+			$( this ).data( pluginName + "active", true );
+			$.fn[ pluginName ].prototype._create.call( this );
+		});
+	};
+
+	// add methods
+	$.extend( $.fn[ pluginName ].prototype, methods );
+
+	//  auto-init
+	var initted;
+	function init(){
+		if( !initted ){
+			$( o.initSelector )[ pluginName ]();
+			initted = true;
+		}
+	}
+	// init either on beforeenhance event or domready, whichever comes first.
+	$( document ).bind("beforeenhance", init );
+	$( init );
+
+
+}( jQuery ));
+
+// Add prism highlighting to code
+  $( window ).bind( "create.xrayhtml", function( e ) {
+    var prism = !!~e.target.getAttribute( "class" ).indexOf( "prism" );
+
+    if( prism && "Prism" in window ) {
+      $( ".prism" ).find( "code" ).addClass( "language-markup" );
+      Prism.highlightAll();
+    }
+  });
+</script><script>
+	// Some simple js heavily modified from fabricators core for the sidebar
+	'use strict';
+	var cupcake = window.cupcake = {};
+
+	cupcake.options = {
+		menu: false,
+		mq: '(min-width: 60em)'
+	};
+
+	// open menu by default if large screen
+	cupcake.options.menu = window.matchMedia(cupcake.options.mq).matches;
+
+	cupcake.dom = {
+		root: document.querySelector('html'),
+		primaryMenu: document.querySelector('.docs-nav'),
+		menuItems: document.querySelectorAll('.docs-nav-items li a'),
+		menuToggle: document.querySelector('.docs-menu-toggle')
+	};
+
+
+	/**
+	 * Add `current` class to active menu item
+	 */
+	cupcake.setActiveItem = function () {
+
+		/**
+		 * Match the window location with the menu item, set menu item as active
+		 */
+		var setActive = function setActive() {
+
+			// get current file and hash without first slash
+			var loc = window.location.pathname + window.location.hash;
+			var current = loc.replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
+				return (file || '') + (hash || '').split('.')[0];
+			}) || 'index.html';
+
+			// find the current section in the items array
+			for (var i = cupcake.dom.menuItems.length - 1; i >= 0; i--) {
+
+				var item = cupcake.dom.menuItems[i];
+
+				// get item href without first slash
+				var href = item.getAttribute('href').replace(/^\//g, '');
+
+				if (href === current) {
+					item.classList.add('current');
+				} else {
+					item.classList.remove('current');
+				}
+			}
+		};
+
+		window.addEventListener('hashchange', setActive);
+
+		setActive();
+
+		return cupcake;
+	};
+
+
+	cupcake.menuToggle = function () {
+
+		// shortcut menu DOM
+		var toggle = cupcake.dom.menuToggle;
+
+		// toggle classes on certain elements
+		var toggleClasses = function toggleClasses() {
+			cupcake.dom.root.classList.toggle('docs-nav-open');
+		};
+
+		// toggle classes on click
+		toggle.addEventListener('click', function () {
+			toggleClasses();
+		});
+
+		// close menu when clicking on item (for collapsed menu view)
+		var closeMenu = function closeMenu() {
+			if (!window.matchMedia(cupcake.options.mq).matches) {
+				toggleClasses();
+			}
+		};
+
+		for (var i = 0; i < cupcake.dom.menuItems.length; i++) {
+			cupcake.dom.menuItems[i].addEventListener('click', closeMenu);
+		}
+
+		return cupcake;
+	};
+
+	/**
+	 * Initialization
+	 */
+	cupcake.menuToggle().setActiveItem();
+
+</script>
+
+
 </html>

@@ -4,10 +4,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Tokens | Colors</title>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="../demo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
 
   <script>
     var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
@@ -21,11 +22,20 @@
         <div class="docs-menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
-      <h1 class="c-header-lg">Design Tokens</h1>
+      
+<h1 class="c-header-lg">Design Tokens</h1>
+
+<div class="docs-section-subtitle" style="font-size: 18px; line-height: 24px;">
+  <p>Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes.
+  <br>We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system for UI development.</p>
+</div>
+
+<br><br>
+<br><br>
 
 
 <div class="docs-section" id="colors">
-  <div class="c-col-12" id="colors">
+  <div id="colors">
     <div class="docs-section-header">
       <div class="docs-section-title">Colors <a href="pages/colors.html" target="_blank">View Test Page</a></div>
       <div class="docs-section-subtitle">
@@ -165,7 +175,7 @@
 
 
 <div class="docs-section" id="shadows">
-  <div class="c-col-12" id="shadows">
+  <div id="shadows">
     <div class="docs-section-header">
       <div class="docs-section-title">Shadows <a href="pages/shadows.html" target="_blank">View Test Page</a></div>
       <div class="docs-section-subtitle">
@@ -186,7 +196,7 @@
 
 
 <div class="docs-section" id="spacing">
-  <div class="c-col-12" id="spacing">
+  <div id="spacing">
     <div class="docs-section-header">
       <div class="docs-section-title">Spacing <a href="pages/spacing.html" target="_blank">View Test Page</a></div>
       <div class="docs-section-subtitle">
@@ -265,7 +275,7 @@
 
 
 <div class="docs-section" id="typography">
-  <div class="c-col-12" id="typography">
+  <div id="typography">
     <div class="docs-section-header">
       <div class="docs-section-title">Typography <a href="pages/typography.html" target="_blank">View Test Page</a></div>
       <div class="docs-section-subtitle">
@@ -522,8 +532,10 @@
     </main>
     <nav class="docs-nav">
       <div class="docs-nav-header">
-        <div class="ipreo">Ipreo</div>
-        <div class="cupcake">Cupcake</div>
+        <a href="index.html">
+          <div class="cupcake">Cupcake</div>
+          <div class="ipreo">Design System</div>
+        </a>
         <div class="docs-version">Version 2.0</div>
       </div>
     
@@ -558,102 +570,101 @@
   </div>
 </body>
 
-
-
 <script>
-    // Some simple js heavily modified from fabricators core for the sidebar
-    'use strict';
-    var cupcake = window.cupcake = {};
+	// Some simple js heavily modified from fabricators core for the sidebar
+	'use strict';
+	var cupcake = window.cupcake = {};
 
-    cupcake.options = {
-      menu: false,
-      mq: '(min-width: 60em)'
-    };
+	cupcake.options = {
+		menu: false,
+		mq: '(min-width: 60em)'
+	};
 
-    // open menu by default if large screen
-    cupcake.options.menu = window.matchMedia(cupcake.options.mq).matches;
+	// open menu by default if large screen
+	cupcake.options.menu = window.matchMedia(cupcake.options.mq).matches;
 
-    cupcake.dom = {
-      root: document.querySelector('html'),
-      primaryMenu: document.querySelector('.docs-nav'),
-      menuItems: document.querySelectorAll('.docs-nav-items li a'),
-      menuToggle: document.querySelector('.docs-menu-toggle')
-    };
-
-
-    /**
-     * Add `current` class to active menu item
-     */
-    cupcake.setActiveItem = function () {
-
-      /**
-       * Match the window location with the menu item, set menu item as active
-       */
-      var setActive = function setActive() {
-
-        // get current file and hash without first slash
-        var loc = window.location.pathname + window.location.hash;
-        var current = loc.replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
-          return (file || '') + (hash || '').split('.')[0];
-        }) || 'index.html';
-
-        // find the current section in the items array
-        for (var i = cupcake.dom.menuItems.length - 1; i >= 0; i--) {
-
-          var item = cupcake.dom.menuItems[i];
-
-          // get item href without first slash
-          var href = item.getAttribute('href').replace(/^\//g, '');
-
-          if (href === current) {
-            item.classList.add('current');
-          } else {
-            item.classList.remove('current');
-          }
-        }
-      };
-
-      window.addEventListener('hashchange', setActive);
-
-      setActive();
-
-      return cupcake;
-    };
+	cupcake.dom = {
+		root: document.querySelector('html'),
+		primaryMenu: document.querySelector('.docs-nav'),
+		menuItems: document.querySelectorAll('.docs-nav-items li a'),
+		menuToggle: document.querySelector('.docs-menu-toggle')
+	};
 
 
-    cupcake.menuToggle = function () {
+	/**
+	 * Add `current` class to active menu item
+	 */
+	cupcake.setActiveItem = function () {
 
-      // shortcut menu DOM
-      var toggle = cupcake.dom.menuToggle;
+		/**
+		 * Match the window location with the menu item, set menu item as active
+		 */
+		var setActive = function setActive() {
 
-      // toggle classes on certain elements
-      var toggleClasses = function toggleClasses() {
-        cupcake.dom.root.classList.toggle('docs-nav-open');
-      };
+			// get current file and hash without first slash
+			var loc = window.location.pathname + window.location.hash;
+			var current = loc.replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
+				return (file || '') + (hash || '').split('.')[0];
+			}) || 'index.html';
 
-      // toggle classes on click
-      toggle.addEventListener('click', function () {
-        toggleClasses();
-      });
+			// find the current section in the items array
+			for (var i = cupcake.dom.menuItems.length - 1; i >= 0; i--) {
 
-      // close menu when clicking on item (for collapsed menu view)
-      var closeMenu = function closeMenu() {
-        if (!window.matchMedia(cupcake.options.mq).matches) {
-          toggleClasses();
-        }
-      };
+				var item = cupcake.dom.menuItems[i];
 
-      for (var i = 0; i < cupcake.dom.menuItems.length; i++) {
-        cupcake.dom.menuItems[i].addEventListener('click', closeMenu);
-      }
+				// get item href without first slash
+				var href = item.getAttribute('href').replace(/^\//g, '');
 
-      return cupcake;
-    };
+				if (href === current) {
+					item.classList.add('current');
+				} else {
+					item.classList.remove('current');
+				}
+			}
+		};
 
-    /**
-     * Initialization
-     */
-    cupcake.menuToggle().setActiveItem();
+		window.addEventListener('hashchange', setActive);
 
-  </script>
+		setActive();
+
+		return cupcake;
+	};
+
+
+	cupcake.menuToggle = function () {
+
+		// shortcut menu DOM
+		var toggle = cupcake.dom.menuToggle;
+
+		// toggle classes on certain elements
+		var toggleClasses = function toggleClasses() {
+			cupcake.dom.root.classList.toggle('docs-nav-open');
+		};
+
+		// toggle classes on click
+		toggle.addEventListener('click', function () {
+			toggleClasses();
+		});
+
+		// close menu when clicking on item (for collapsed menu view)
+		var closeMenu = function closeMenu() {
+			if (!window.matchMedia(cupcake.options.mq).matches) {
+				toggleClasses();
+			}
+		};
+
+		for (var i = 0; i < cupcake.dom.menuItems.length; i++) {
+			cupcake.dom.menuItems[i].addEventListener('click', closeMenu);
+		}
+
+		return cupcake;
+	};
+
+	/**
+	 * Initialization
+	 */
+	cupcake.menuToggle().setActiveItem();
+
+</script>
+
 </html>
