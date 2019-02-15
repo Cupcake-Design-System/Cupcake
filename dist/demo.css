@@ -491,6 +491,7 @@ hr {
 .method-inline .source-panel {
   display: none;
   height: 100%;
+  border: 1px solid #ced4da;
 }
 
 .method-inline .source-panel pre {

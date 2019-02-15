@@ -516,6 +516,7 @@ hr {
 .method-inline .source-panel {
   display: none;
   height: 100%;
+  border: 1px solid $color-gray-4;
 
   pre {
     margin: -8px 0 0 0;
