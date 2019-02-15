@@ -411,11 +411,15 @@
   outline: none;
 }
 
-.avatar-wrap {
+.docs-wrap {
   display: flex;
   flex-wrap: wrap;
 }
 
-.avatar-wrap > div {
+.docs-wrap > div {
   margin: 5px;
+}
+
+.docs-wrap > .c-card {
+  max-width: 32%;
 }

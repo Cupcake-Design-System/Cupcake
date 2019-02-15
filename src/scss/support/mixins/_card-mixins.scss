@@ -78,20 +78,7 @@
   padding: $card-padding-v $card-padding-h;
   font-weight: normal;
   flex: 1 1 auto;
-
-  &-title {
-    font-size: $card-title-font-size;
-    font-weight: $card-title-font-weight;
-    line-height: 1;
-  }
-
-  &-subtitle {
-    font-size: $card-subtitle-font-size;
-  }
-
-  &-body {
-    font-size: $card-body-font-size;
-  }
+  font-size: $card-body-font-size;
 }
 
 @mixin card-footer {

@@ -437,10 +437,14 @@ $docs-spacer-xxl: space(xl) + space(md);
   }
 }
 
-.avatar-wrap {
+.docs-wrap {
   display: flex;
   flex-wrap: wrap;
   > div {
     margin: 5px;
+  }
+
+  > .c-card {
+    max-width: 32%;
   }
 }
