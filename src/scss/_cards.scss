@@ -15,9 +15,4 @@
   &-footer {
     @include card-footer;
   }
-
-  &-hover:hover {
-    cursor: pointer;
-    box-shadow: $card-shadow-hover;
-  }
 }

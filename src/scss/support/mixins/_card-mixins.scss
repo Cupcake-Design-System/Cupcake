@@ -12,8 +12,15 @@
   min-width: $card-min-width;
   font-size: $card-body-font-size;
   border-radius: $card-border-radius;
+  transition: all .1s ease-in-out 0s;
   word-wrap: break-word;
   background-clip: border-box;
+
+  &-hover:hover {
+    cursor: pointer;
+    box-shadow: $card-shadow-hover;
+    border: $card-border-hover;
+  }
 }
 
 @mixin card-header {
