@@ -188,20 +188,18 @@ $card-footer-line-weight     : $font-body-xl !default;
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
-$checkbox-prefix          : 'c-checkbox' !default;
-$radio-prefix             : 'c-radio' !default;
-$checkbox-icon-bd         : $global-default-border !default;
-$checkbox-icon-radius     : $global-default-radius !default;
-$checkbox-transition      : all 0.2s !default;
-$checkbox-disabled-opacity: 0.5 !default;
-$checkbox-disabled-bg     : $color-gray-3 !default;
-$checkbox-disabled-color  : $color-gray-5 !default;
-$checkbox-palette         : $theme-colors !default;
-$checkbox-default-size    : $global-size-sm !default;
-$checkbox-sizes: (
-  sm: $global-size-xs,
-  lg: $global-size-md,
-) !default;
+$checkbox-prefix                : 'c-checkbox' !default;
+$radio-prefix                   : 'c-radio' !default;
+$checkbox-icon-bd               : $global-default-border !default;
+$checkbox-icon-radius           : $global-default-radius !default;
+$checkbox-transition            : all 0.2s !default;
+$checkbox-disabled-bg           : $color-gray-3 !default;
+$checkbox-disabled-color        : $color-gray-5 !default;
+$checkbox-checked-disabled-bg   : $color-gray-6 !default;
+$checkbox-checked-disabled-color: $color-gray-2 !default;
+$checkbox-palette               : $theme-colors !default;
+$checkbox-default-size          : $global-size-xs !default;
+$checkbox-sizes                 : () !default;
 
 
 // --------------------------------------------
