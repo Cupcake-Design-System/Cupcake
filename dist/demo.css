@@ -2,6 +2,22 @@
 /* ----------------------- */
 /* 🎂 Cupcake Sprinkles 🎂 */
 /* ----------------------- */
+.c-switch-primary > .c-switch-input:checked ~ .c-switch-label {
+  background: #1b6ec2;
+}
+
+.c-switch-success > .c-switch-input:checked ~ .c-switch-label {
+  background: #2f9e44;
+}
+
+.c-switch-warning > .c-switch-input:checked ~ .c-switch-label {
+  background: #f08c00;
+}
+
+.c-switch-danger > .c-switch-input:checked ~ .c-switch-label {
+  background: #e03131;
+}
+
 /* stylelint-disable */
 .docs-container {
   display: flex;

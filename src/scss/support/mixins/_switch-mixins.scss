@@ -1,0 +1,251 @@
+// --------------------------------------------
+// Switch Base Mixin --------------------------
+// --------------------------------------------
+
+$switch-style            : "default" !default;
+$default-switch-height   : 16px !default;
+$large-switch-height     : 32px !default;
+$default-switch-radius   : 50px !default;
+$default-switch-font-size: 10px !default;
+$large-switch-font-size  : 15px !default;
+$switch-label-off        : $color-gray-2 !default;
+$switch-label-on         : $color-white !default;
+$switch-handle           : $color-white !default;
+$switch-disabled         : $color-primary-0 !default;
+
+// $switch-sizes:
+$switch-sizes: (
+  xs: 30px,
+  sm: 40px,
+  lg: 80px
+) !default;
+
+// $switch-colors
+$switch-colors: ("primary", $color-primary)
+  ("success", $color-success)
+  ("warning", $color-warning)
+  ("danger", $color-danger) !default;
+
+// NOTE: Material height must remain px value
+$material-switch-height: 15px !default;
+
+@mixin switch($style: $switch-style) {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: $default-switch-font-size;
+  font-weight: bold;
+  border: $global-default-border;
+
+  @if $style == material {
+    width: $material-switch-height * 2 + 3;
+    height: $material-switch-height;
+    border-radius: $default-switch-radius;
+    background: rgba(51, 51, 51, 0.02);
+  }
+
+  @if $style == square {
+    width: $default-switch-height * 2;
+    height: $default-switch-height;
+    border-radius: $radius-sm;
+    background: #fbfbfb;
+  }
+
+  @if $style == default {
+    width: $default-switch-height * 2;
+    height: $default-switch-height;
+    border-radius: $default-switch-radius;
+    box-shadow: inset 0 2px 1px 0 rgba(33, 37, 41, .1);
+  }
+
+  &-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  &-label {
+    position: relative;
+    display: block;
+    height: inherit;
+    text-transform: uppercase;
+    border-radius: inherit;
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    box-shadow: none;
+    transition: 0.25s ease-out;
+    transition-property: opacity background;
+
+    &::after,
+    &::before {
+      position: absolute;
+      top: 50%;
+      line-height: 1;
+      transition: inherit;
+    }
+
+    &::before {
+      content: attr(data-off);
+      right: 5px;
+      color: $color-gray-8;
+      text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+      opacity: 1;
+    }
+
+    &::after {
+      content: attr(data-on);
+      left: 8px;
+      color: $switch-label-on;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+      opacity: 1;
+    }
+  }
+}
+
+@mixin switch-handle($style: default) {
+  position: absolute;
+  top: 53%;
+  transform: translateY(-50%);
+  transition: left 0.15s ease-out;
+
+  @if $style == material {
+    left: 0;
+    width: $material-switch-height + 2;
+    height: $material-switch-height + 2;
+    border-radius: $default-switch-radius;
+    background: $color-white;
+    border: 1px solid rgba(51, 51, 51, 0.15);
+    box-shadow: none;
+  }
+
+  @if $style == square {
+    width: 20px;
+    height: 20px;
+    border-radius: $radius-sm;
+    left: 0.35rem;
+    box-shadow: none;
+    background: #fbfbfb;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+  }
+
+  @if $style == default {
+    width: $default-switch-height - 2px;
+    height: $default-switch-height - 2px;
+    border-radius: $default-switch-radius;
+    left: 0;
+    background: $color-white;
+    box-shadow: 1px 1px 4px 0 rgba(33, 37, 41, .41);
+  }
+}
+
+@each $name, $color in $switch-colors {
+  .c-switch-#{$name} > .c-switch-input:checked ~ .c-switch-label {
+    background: $color;
+  }
+}
+
+@mixin switch-base($height: $default-switch-height) {
+  display: block;
+  position: relative;
+  min-height: $height;
+  padding: 0 0 0 ($height * 2 + 8);
+  font-size: $height - 4;
+
+  input,
+  &-input {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+
+    &:focus + .form-switch-handle {
+      border-color: $color-primary-7;
+      box-shadow: 0 0 0 .1rem rgba($color-primary-7, .2);
+    }
+
+    &:checked + .form-switch-handle {
+      background: $color-primary-7;
+      border-color: $color-primary-7;
+
+      &::before {
+        left: $height;
+      }
+    }
+
+    &:disabled + .form-switch-handle {
+      background: $color-gray-3;
+      border-color: $color-gray-3;
+      cursor: not-allowed;
+
+      &::before {
+        background: $color-gray-0;
+      }
+    }
+  }
+
+  &-handle {
+    left: 0;
+    height: $height;
+    width: $height * 2;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    background: $color-white;
+    background-clip: padding-box;
+    border: $global-default-border;
+    border-radius: $default-switch-radius;
+    transition: background .2s, border .2s, box-shadow .2s, color .2s;
+
+    &::before {
+      top: 0;
+      left: 0;
+      content: "";
+      display: block;
+      position: absolute;
+      width: $height - 2;
+      height: $height - 2;
+      background: $color-white;
+      border-radius: $default-switch-radius;
+      box-shadow: 1px 1px 4px 0 rgba(33, 37, 41, .4);
+      transition: background .2s, border .2s, box-shadow .2s, color .2s, left .2s;
+    }
+  }
+}
+
+@mixin switch-size($height: $default-switch-height) {
+  min-height: $height;
+  padding: 0 0 0 ($height * 2 + 8);
+  font-size: $height - 4;
+
+  .form-switch-input {
+    &:checked + .form-switch-handle::before {
+      left: $height;
+    }
+  }
+
+  .form-switch-handle {
+    height: $height;
+    width: $height * 2;
+
+    &::before {
+      width: $height - 2;
+      height: $height - 2;
+    }
+  }
+}
+
+@mixin switch-color($color: black) {
+  .form-switch input,
+  .form-switch-input {
+    &:focus + .form-switch-handle {
+      border-color: $color;
+      box-shadow: 0 0 0 .1rem rgba($color, .2);
+    }
+
+    &:checked + .form-switch-handle {
+      background: $color;
+      border-color: $color;
+    }
+  }
+}
