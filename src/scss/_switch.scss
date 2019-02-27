@@ -1,7 +1,6 @@
 // --------------------------------------------
 // Switch Base --------------------------------
 // --------------------------------------------
-
 .c-switch {
   @include switch;
 
@@ -11,7 +10,7 @@
 
   .c-switch-input:checked ~ .c-switch-handle {
     box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.3);
-    left: $default-switch-height;
+    left: $default-switch-height + 1;
   }
 }
 
@@ -24,14 +23,6 @@
 
   .c-switch-input:checked ~ .c-switch-handle {
     left: 2.25rem;
-  }
-}
-
-.c-switch-square.c-switch-lg {
-  .c-switch-handle {
-    width: 2rem;
-    height: 1.95rem;
-    left: 0.35rem;
   }
 }
 
@@ -49,14 +40,26 @@
 
 .c-switch-disabled {
   pointer-events: none;
-  background: $switch-disabled;
-  opacity: 0.5;
+  cursor: not-allowed;
+
+  .c-switch-label {
+    background: $switch-disabled;
+    border-color: $switch-disabled;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  .c-switch-input:checked ~ .c-switch-label {
+    background: $switch-disabled-checked-bg;
+    border-color: $switch-disabled-checked-bg;
+  }
 
   &.c-switch-input:checked,
-  .c-switch-label,
   .c-switch-handle {
-    background: $switch-disabled;
+    background: $switch-handle-disabled;
     pointer-events: none;
+    box-shadow: none;
+    cursor: not-allowed;
   }
 }
 
@@ -68,7 +71,7 @@
     .c-switch-handle {
       @include vertical-center;
 
-      left: 0.15rem;
+      left: 1px;
       width: $size / 2 - 2px;
       height: $size / 2 - 2px;
     }
@@ -88,7 +91,7 @@
   box-shadow: -$space-xs 0 0 0 $color-gray-7, $space-xs 0 0 0 $color-gray-7;
   content: '';
   display: block;
-  height: 10px;
+  height: $space-sm + 2;
   margin: auto;
   position: absolute;
   left: 0;
@@ -100,45 +103,21 @@
 }
 
 .c-switch-material + .c-switch-lg {
-  height: 1rem;
+  height: $space-md;
 
   .c-switch-handle {
     left: 0;
-    width: 2rem;
-    height: 1.95rem;
-  }
-
-  .c-switch-input:checked ~ .c-switch-handle {
-    left: 3rem;
-  }
-}
-
-.c-switch-material.c-switch-sm {
-  height: .5rem;
-  width: 2rem;
-
-  .c-switch-handle {
-    left: 0;
-    width: 1rem;
-    height: .95rem;
-  }
-
-  .c-switch-input:checked ~ .c-switch-handle {
-    left: 1rem;
+    width: $space-xl;
+    height: $space-xl;
   }
 }
 
 
-.form-switch {
+/// New Switches
+.#{$switch-prefix} {
   @include switch-base;
 
   &-lg {
     @include switch-size(32px);
-    @include switch-color(purple);
   }
 }
-
-
-// .form-switch input:disabled + .form-icon::before {
-//   background: #ffffff;
-// }
