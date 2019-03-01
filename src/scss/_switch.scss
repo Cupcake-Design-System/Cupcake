@@ -1,123 +1,18 @@
 // --------------------------------------------
 // Switch Base --------------------------------
 // --------------------------------------------
-.c-switch {
-  @include switch;
-
-  &-handle {
-    @include switch-handle;
-  }
-
-  .c-switch-input:checked ~ .c-switch-handle {
-    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.3);
-    left: $default-switch-height + 1;
-  }
-}
-
-.c-switch-square {
-  @include switch(square);
-
-  .c-switch-handle {
-    @include switch-handle(square);
-  }
-
-  .c-switch-input:checked ~ .c-switch-handle {
-    left: 2.25rem;
-  }
-}
-
-.c-switch-material {
-  @include switch(material);
-
-  .c-switch-handle {
-    @include switch-handle(material);
-  }
-
-  .c-switch-input:checked ~ .c-switch-handle {
-    left: $material-switch-height + 2;
-  }
-}
-
-.c-switch-disabled {
-  pointer-events: none;
-  cursor: not-allowed;
-
-  .c-switch-label {
-    background: $switch-disabled;
-    border-color: $switch-disabled;
-    box-shadow: none;
-    cursor: not-allowed;
-  }
-
-  .c-switch-input:checked ~ .c-switch-label {
-    background: $switch-disabled-checked-bg;
-    border-color: $switch-disabled-checked-bg;
-  }
-
-  &.c-switch-input:checked,
-  .c-switch-handle {
-    background: $switch-handle-disabled;
-    pointer-events: none;
-    box-shadow: none;
-    cursor: not-allowed;
-  }
-}
-
-@each $name, $size in $switch-sizes {
-  .c-switch-#{$name} {
-    width: $size;
-    height: $size / 2;
-
-    .c-switch-handle {
-      @include vertical-center;
-
-      left: 1px;
-      width: $size / 2 - 2px;
-      height: $size / 2 - 2px;
-    }
-
-    .c-switch-input:checked ~ .c-switch-handle {
-      left: $size / 2 + 1px;
-    }
-
-    .c-switch-label {
-      font-size: $size / 6;
-    }
-  }
-}
-
-.c-switch-square .c-switch-handle::before {
-  background: $color-gray-7;
-  box-shadow: -$space-xs 0 0 0 $color-gray-7, $space-xs 0 0 0 $color-gray-7;
-  content: '';
-  display: block;
-  height: $space-sm + 2;
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  transition: all 0.15s ease;
-  width: 2px;
-}
-
-.c-switch-material + .c-switch-lg {
-  height: $space-md;
-
-  .c-switch-handle {
-    left: 0;
-    width: $space-xl;
-    height: $space-xl;
-  }
-}
-
-
-/// New Switches
 .#{$switch-prefix} {
   @include switch-base;
 
-  &-lg {
-    @include switch-size(32px);
+  @each $name, $size in $switch-sizes {
+    &-#{$name} {
+      @include switch-size($size);
+    }
+  }
+
+  @each $name, $color in $switch-colors {
+    &-#{$name} {
+      @include switch-color($color);
+    }
   }
 }

@@ -1,0 +1,208 @@
+// stylelint-disable
+@import '../node_modules/sass-true/sass/true';
+@import '../src/scss/support/support';
+
+$switch-test-sizes: (
+  crazy: 32px
+);
+
+@include describe('Test output for switch mixins') {
+
+  @include it('Generates base attributes for switch') {
+    @include assert {
+      @include output {
+        .c-switch {
+          @include switch-base();
+        }
+      }
+      @include expect {
+        .c-switch {
+            position: relative;
+            min-height: 16px;
+            padding: 0 0 0 40px;
+            font-size: 12px;
+            vertical-align: top;
+          }
+
+          .c-switch input,
+          .c-switch-input {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+          }
+
+          .c-switch input:focus + .c-switch-handle,
+          .c-switch-input:focus + .c-switch-handle {
+            border-color: #1c7cd6;
+            box-shadow: 0 0 0 0.1rem rgba(28, 124, 214, 0.2);
+          }
+
+          .c-switch input:checked + .c-switch-handle,
+          .c-switch-input:checked + .c-switch-handle {
+            background: #1c7cd6;
+            border-color: #1c7cd6;
+          }
+
+          .c-switch input:checked + .c-switch-handle::before,
+          .c-switch-input:checked + .c-switch-handle::before {
+            left: 16px;
+          }
+
+          .c-switch input:checked + .c-switch-handle + .c-switch-label::after,
+          .c-switch-input:checked + .c-switch-handle + .c-switch-label::after {
+            opacity: 0;
+            display: none;
+          }
+
+          .c-switch input:disabled + .c-switch-handle,
+          .c-switch-input:disabled + .c-switch-handle {
+            background: #dee2e6;
+            border-color: #dee2e6;
+            cursor: not-allowed;
+          }
+
+          .c-switch input:disabled + .c-switch-handle::before,
+          .c-switch-input:disabled + .c-switch-handle::before {
+            background: #f8f9fa;
+            box-shadow: none;
+          }
+
+          .c-switch input:checked[disabled] + .c-switch-handle,
+          .c-switch-input:checked[disabled] + .c-switch-handle {
+            background: #868e96;
+            border-color: #868e96;
+            cursor: not-allowed;
+          }
+
+          .c-switch input:checked[disabled] + .c-switch-handle::before,
+          .c-switch-input:checked[disabled] + .c-switch-handle::before {
+            background: #f8f9fa;
+            box-shadow: none;
+          }
+
+          .c-switch-handle {
+            left: 0;
+            height: 16px;
+            width: 32px;
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            background: #ffffff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 200px;
+            transition: background .2s, border .2s, box-shadow .2s, color .2s;
+          }
+
+          .c-switch-handle::before {
+            top: 0;
+            left: 0;
+            content: "";
+            display: block;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: #ffffff;
+            border-radius: 200px;
+            box-shadow: 1px 1px 4px 0 rgba(33, 37, 41, 0.4);
+            transition: background .2s, border .2s, box-shadow .2s, color .2s, left .2s;
+          }
+
+          .c-switch-label {
+            height: inherit;
+            cursor: pointer;
+            box-shadow: none;
+            position: absolute;
+            border-radius: inherit;
+            text-transform: uppercase;
+            transition: 0.25s ease-out;
+            font-size: 12px;
+            top: 8px;
+            left: 8px;
+          }
+
+          .c-switch-label::after,
+          .c-switch-label::before {
+            line-height: 1;
+            transition: 0.25s ease-out;
+          }
+
+          .c-switch-label::before {
+            content: attr(data-on);
+            margin-right: 4px;
+            color: #ffffff;
+            opacity: 1;
+          }
+
+          .c-switch-label::after {
+            content: attr(data-off);
+            color: #495057;
+            margin-left: 4px;
+            opacity: 1;
+          }
+
+          .c-switch-disabled {
+            color: #868e96;
+            cursor: not-allowed;
+          }
+
+          .c-switch-disabled .c-switch input,
+          .c-switch-disabled .c-switch-input {
+            cursor: not-allowed;
+          }
+
+          .c-switch-disabled .c-switch input:checked + .c-switch-handle,
+          .c-switch-disabled .c-switch-input:checked + .c-switch-handle {
+            background: #868e96;
+            border-color: #868e96;
+            cursor: not-allowed;
+          }
+
+          .c-switch-disabled .c-switch-handle {
+            background: #dee2e6;
+            border-color: #dee2e6;
+            cursor: not-allowed;
+          }
+
+        }
+      }
+    }
+
+  @include it('Given two arguments - outputs alternative SIZE') {
+    @include assert {
+      @include output {
+        @each $name, $size in $switch-test-sizes {
+          .c-switch-#{$name} {
+            @include switch-size($size);
+          }
+        }
+      }
+      @include expect {
+        .c-switch-crazy {
+          min-height: 32px;
+          padding: 0 0 0 72px;
+          font-size: 28px;
+        }
+
+        .c-switch-crazy .c-switch-input:checked + .c-switch-handle::before {
+          left: 32px;
+        }
+
+        .c-switch-crazy .c-switch-handle {
+          height: 32px;
+          width: 64px;
+        }
+
+        .c-switch-crazy .c-switch-handle::before {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+
+@include report;
