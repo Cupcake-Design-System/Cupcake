@@ -5,9 +5,12 @@
   display: inline-block;
   position: relative;
   cursor: pointer;
-  line-height: 1.4;
+  line-height: 1.5;
   font-size: 12px;
+  padding-left: $size + 8;
+  min-height: $size;
   transition: $checkbox-transition;
+  top: 3px;
 
   input {
     position: absolute;
@@ -20,7 +23,7 @@
 
     &:checked + i::before {
       border-width: 0;
-      background-color: inherit;
+      background-color: $color-primary;
     }
 
     &:checked + span .active {
@@ -88,10 +91,10 @@
 
   > i {
     height: $size;
-    /* stylelint-disable */
-    margin: 0 $size + 8 0 0;
-    /* stylelint-enable */
-    position: relative;
+    width: $size;
+    position: absolute;
+    left: 0;
+    background-color: $color-white;
 
     &::before {
       content: "";
@@ -123,10 +126,10 @@
         background: $checkbox-disabled-bg;
       }
 
-      &:checked + i::after {
-        height: 0;
-        border: 0;
-      }
+      // &:checked + i::after {
+      //   height: 0;
+      //   border: 0;
+      // }
     }
   }
 }
