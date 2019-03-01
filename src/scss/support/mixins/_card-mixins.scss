@@ -24,7 +24,7 @@
 }
 
 @mixin card-header {
-  border-bottom: $card-header-border-bottom;
+  border-bottom: $card-border;
   border-radius: $card-border-radius $card-border-radius 0 0;
   padding: $card-padding-v $card-padding-h;
 
@@ -38,10 +38,10 @@
   &-subtitle {
     display: block;
     font-size: $card-subtitle-font-size;
-    line-height: $card-title-line-height;
+    line-height: $card-subtitle-line-height;
 
     + .#{$card-prefix}-header-menu {
-      height: $card-header-line-height + $card-title-line-height + ($card-padding-v * 2);
+      height: $card-header-line-height + $card-subtitle-line-height + ($card-padding-v * 2);
     }
   }
 
