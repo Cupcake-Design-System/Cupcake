@@ -1,0 +1,77 @@
+// stylelint-disable
+@import '../node_modules/sass-true/sass/true';
+@import '../src/scss/support/support';
+
+$card-prefix   : 'card';
+
+@include describe('Test output for card mixins') {
+
+  @include it('Given a prefix - generates base attributes for card') {
+    @include assert {
+      @include output {
+        .#{$card-prefix} {
+          @include card();
+        }
+      }
+      @include expect {
+        .card {
+          display: flex;
+          position: relative;
+          flex-direction: column;
+          border: 1px solid #e9ecef;
+          color: #495057;
+          box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1);
+          background-color: #ffffff;
+          min-width: 250px;
+          font-size: 12px;
+          border-radius: 2px;
+          transition: all .1s ease-in-out 0s;
+          word-wrap: break-word;
+          background-clip: border-box;
+        }
+        .card-hover:hover {
+          cursor: pointer;
+          box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1);
+          border: 1px solid #ced4da;
+        }
+      }
+    }
+  }
+
+  // @include it('Given two arguments - outputs alternative COLOR') {
+  //   @include assert {
+  //     @include output {
+  //       .#{$alert-prefix}-primary {
+  //         @include alert-style(purple, green);
+  //       }
+  //     }
+  //     @include expect {
+
+
+  //       .alert-primary {
+  //         background-color: purple;
+  //         border-color: green;
+  //       }
+
+  //       .alert-primary .alert-close:hover::before,
+  //       .alert-primary .alert-close:hover::after {
+  //         background: #00b300;
+  //       }
+
+  //       .alert-primary .alert-close::before,
+  //       .alert-primary .alert-close::after {
+  //         background: green;
+  //       }
+
+  //       .alert-primary .alert-icon {
+  //         color: green;
+  //       }
+
+  //     }
+  //   }
+  // }
+
+}
+
+
+@include report;

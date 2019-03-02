@@ -1,0 +1,18 @@
+// --------------------------------------------
+// Switch Base --------------------------------
+// --------------------------------------------
+.#{$switch-prefix} {
+  @include switch-base;
+
+  @each $name, $size in $switch-sizes {
+    &-#{$name} {
+      @include switch-size($size);
+    }
+  }
+
+  @each $name, $color in $switch-colors {
+    &-#{$name} {
+      @include switch-color($color);
+    }
+  }
+}

@@ -16,41 +16,29 @@
   }
 }
 
-.#{$checkbox-prefix},
-.#{$radio-prefix} {
-  @each $name, $hex in $checkbox-palette {
-    &-#{$name} {
-      @include checkbox-color($hex);
-    }
-
-    i.c-bg-#{$name} {
-      background-color: $hex;
-    }
-  }
-}
-
-
-.c-control {
-  @include control;
-
-  @each $name, $size in $checkbox-sizes {
-    &-#{$name} {
-      @include control($size);
-    }
-  }
-}
-
-
 .#{$radio-prefix} {
   input:disabled:checked {
     + i {
       &::before {
-        background: $checkbox-disabled-bg;
+        background: $checkbox-checked-disabled-bg;
       }
 
       &::after {
-        background: $checkbox-disabled-color;
+        background: $checkbox-checked-disabled-color;
       }
     }
   }
 }
+
+
+// .form-checkbox input:indeterminate + .form-icon::before {
+//   background: #fff;
+//   content: "";
+//   height: 2px;
+//   left: 50%;
+//   margin-left: -5px;
+//   margin-top: -1px;
+//   position: absolute;
+//   top: 50%;
+//   width: 10px;
+// }

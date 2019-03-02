@@ -33,6 +33,14 @@
       @include modifiers($space, ('padding-bottom'));
     }
 
+    &-left {
+      @include modifiers($space, ('padding-left'));
+    }
+
+    &-right {
+      @include modifiers($space, ('padding-right'));
+    }
+
     &-horizontal {
       @include modifiers($space, ('padding-left', 'padding-right'));
     }
@@ -51,6 +59,14 @@
 
     &-bottom {
       @include modifiers($space, ('margin-bottom'));
+    }
+
+    &-left {
+      @include modifiers($space, ('margin-left'));
+    }
+
+    &-right {
+      @include modifiers($space, ('margin-right'));
     }
 
     &-horizontal {

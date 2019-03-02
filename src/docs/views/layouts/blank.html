@@ -5,7 +5,9 @@
 <body class="docs-container">
     <div class="docs-body">
       <main class="docs-content docs-content-fullwidth">
+        {{#unless hide-snippets}}
         <button id="codeToggle" class="c-btn c-btn-primary" style="float: right;">Toggle Code Snippets</button>
+        {{/unless}}
         <br><br><br><br>
           {% body %}
       </main>
@@ -13,9 +15,9 @@
   </body>
 
   {{> scripts}}
-  <script>
-      $( "#codeToggle" ).click(function() {
-        $( ".source-panel" ).slideToggle();
-      });
-      </script>
+<script>
+  $("#codeToggle").click(function () {
+    $(".source-panel").slideToggle();
+  });
+</script>
 </html>

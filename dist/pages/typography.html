@@ -19,7 +19,6 @@
 <body class="docs-container">
     <div class="docs-body">
       <main class="docs-content docs-content-fullwidth">
-        <button id="codeToggle" class="c-btn c-btn-primary" style="float: right;">Toggle Code Snippets</button>
         <br><br><br><br>
           
 <div class="docs-section-title">01. Headers</div>
@@ -266,7 +265,7 @@
 <br><br>
 
 
-<div class="avatar-wrap">
+<div class="docs-wrap">
   <div class="c-header-xs c-text-primary-0">.c-text-primary-0</div>
   <div class="c-header-xs c-text-primary-1">.c-text-primary-1</div>
   <div class="c-header-xs c-text-primary-2">.c-text-primary-2</div>
@@ -469,9 +468,10 @@
         Prism.highlightAll();
       }
     });
-  </script>  <script>
-      $( "#codeToggle" ).click(function() {
-        $( ".source-panel" ).slideToggle();
-      });
-      </script>
+  </script>
+<script>
+  $("#codeToggle").click(function () {
+    $(".source-panel").slideToggle();
+  });
+</script>
 </html>

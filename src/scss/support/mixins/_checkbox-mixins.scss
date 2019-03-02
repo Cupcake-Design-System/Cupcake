@@ -5,7 +5,9 @@
   display: inline-block;
   position: relative;
   cursor: pointer;
-  line-height: 1;
+  line-height: 1.4;
+  font-size: 12px;
+  transition: $checkbox-transition;
 
   input {
     position: absolute;
@@ -37,9 +39,9 @@
       transform: rotate(45deg);
       position: absolute;
       left: round($size / 3);
-      top: round($size / 9);
-      width: round($size / 3);
-      height: round($size / 1.5);
+      top: round($size / 8);
+      width: round($size / 2.5);
+      height: round($size / 1.55);
       border: round($size / 9) solid;
       border-top: 0;
       border-left: 0;
@@ -63,32 +65,31 @@
     &[disabled],
     fieldset[disabled] & {
       & + i::before {
-        opacity: $checkbox-disabled-opacity;
-        background: $checkbox-disabled-bg;
         cursor: not-allowed;
+        border: 1px solid $checkbox-disabled-bg;
+        background: $checkbox-disabled-bg;
       }
     }
 
     &[disabled]:checked {
       & + i::before {
-        opacity: $checkbox-disabled-opacity;
         cursor: not-allowed;
-        border: 1px solid $checkbox-disabled-color;
+        border: 1px solid $checkbox-checked-disabled-bg;
+        background: $checkbox-checked-disabled-bg;
       }
     }
 
     &[disabled]:checked {
       & + i::after {
-        color: $checkbox-disabled-color;
+        color: $checkbox-checked-disabled-color;
       }
     }
   }
 
   > i {
     height: $size;
-    display: inline-block;
     /* stylelint-disable */
-    margin: 0 $size 0 0;
+    margin: 0 $size + 8 0 0;
     /* stylelint-enable */
     position: relative;
 
@@ -102,6 +103,32 @@
       transition: $checkbox-transition;
     }
   }
+
+  &[disabled] {
+    cursor: not-allowed;
+    color: $checkbox-disabled-color;
+
+    > i::before {
+      cursor: not-allowed;
+      border: 1px solid $checkbox-disabled-bg;
+      background: $checkbox-disabled-bg;
+    }
+
+    input {
+      cursor: not-allowed;
+
+      + i::before {
+        cursor: not-allowed;
+        border: 1px solid $checkbox-disabled-bg;
+        background: $checkbox-disabled-bg;
+      }
+
+      &:checked + i::after {
+        height: 0;
+        border: 0;
+      }
+    }
+  }
 }
 
 
@@ -110,6 +137,7 @@
 // --------------------------------------------
 @mixin checkbox-size($size:$checkbox-default-size) {
   height: $size;
+  font-size: $size - 4;
 
   input {
     width: $size;
@@ -117,7 +145,7 @@
 
     &[type="checkbox"]:checked + i::after {
       left: round($size / 3);
-      top: round($size / 9);
+      top: 0;
       width: round($size / 3);
       height: round($size / 1.5);
       border: round($size / 9) solid;
@@ -126,17 +154,17 @@
     }
 
     &[type="radio"]:checked + i::after {
-      left: round($size / 4);
-      top: round($size / 4);
-      width: round($size / 2);
-      height: round($size / 2);
+      left: round($size / 6);
+      top: round($size / 10);
+      width: round($size / 1.5);
+      height: round($size / 1.5);
     }
   }
 
   > i {
     height: $size;
     /* stylelint-disable */
-    margin: 0 $size 0 0;
+    margin: 0 ($size + 8) 0 0;
     /* stylelint-enable */
 
     &::before {
