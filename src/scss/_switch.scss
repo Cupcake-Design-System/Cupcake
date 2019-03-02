@@ -1,15 +1,26 @@
-// --------------------------------------------
-// Switch Base --------------------------------
-// --------------------------------------------
+// Switch Control
+.#{$switch-prefix}.#{$switch-control-prefix} {
+  @include switch-control;
+}
+
+
+// Switch Base
 .#{$switch-prefix} {
   @include switch-base;
 
+  // Sizing loop
   @each $name, $size in $switch-sizes {
     &-#{$name} {
       @include switch-size($size);
+
+      &.#{$switch-control-prefix} {
+        @include switch-control($size);
+      }
     }
   }
 
+
+  // Color loop
   @each $name, $color in $switch-colors {
     &-#{$name} {
       @include switch-color($color);

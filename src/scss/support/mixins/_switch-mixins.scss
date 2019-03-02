@@ -1,12 +1,21 @@
 // --------------------------------------------
+// Switch Control Mixin -----------------------
+// --------------------------------------------
+@mixin switch-control($size: $default-switch-height) {
+  line-height: $size;
+  font-size: $size - 4;
+  padding: $space-0 $space-sm $space-0 ($size * 2 + 8);
+}
+
+// --------------------------------------------
 // Switch Base Mixin --------------------------
 // --------------------------------------------
 @mixin switch-base($height: $default-switch-height) {
   position: relative;
   min-height: $height;
-  padding: 0 0 0 ($height * 2 + 8);
-  font-size: $height - 4;
-  vertical-align: top;
+  display: inline-block;
+  min-width: $height * 2;
+  vertical-align: middle;
 
   input,
   &-input {
@@ -17,13 +26,13 @@
     position: absolute;
 
     &:focus + .#{$switch-prefix}-handle {
-      border-color: $color-primary-7;
-      box-shadow: 0 0 0 .1rem rgba($color-primary-7, .2);
+      border-color: $default-switch-bg;
+      box-shadow: 0 0 0 .1rem rgba($default-switch-bg, .2);
     }
 
     &:checked + .#{$switch-prefix}-handle {
-      background: $color-primary-7;
-      border-color: $color-primary-7;
+      background: $default-switch-bg;
+      border-color: $default-switch-bg;
 
       &::before {
         left: $height;
@@ -36,24 +45,24 @@
     }
 
     &:disabled + .#{$switch-prefix}-handle {
+      cursor: not-allowed;
       background: $switch-disabled;
       border-color: $switch-disabled;
-      cursor: not-allowed;
 
       &::before {
-        background: $switch-handle-disabled;
         box-shadow: none;
+        background: $switch-handle-disabled;
       }
     }
 
     &:checked[disabled] + .#{$switch-prefix}-handle {
+      cursor: not-allowed;
       background: $switch-disabled-checked-bg;
       border-color: $switch-disabled-checked-bg;
-      cursor: not-allowed;
 
       &::before {
-        background: $switch-handle-disabled;
         box-shadow: none;
+        background: $switch-handle-disabled;
       }
     }
   }
@@ -61,10 +70,10 @@
   &-handle {
     left: 0;
     height: $height;
-    width: $height * 2;
     cursor: pointer;
-    display: inline-block;
+    width: $height * 2;
     position: absolute;
+    display: inline-block;
     background: $color-white;
     background-clip: padding-box;
     border: $global-default-border;
@@ -87,6 +96,9 @@
   }
 
   &-label {
+    top: $space-sm;
+    left: $space-sm;
+    font-size: 12px;
     height: inherit;
     cursor: pointer;
     box-shadow: none;
@@ -94,9 +106,6 @@
     border-radius: inherit;
     text-transform: uppercase;
     transition: 0.25s ease-out;
-    font-size: 12px;
-    top: $space-sm;
-    left: $space-sm;
 
     &::after,
     &::before {
@@ -105,17 +114,17 @@
     }
 
     &::before {
+      opacity: 1;
       content: attr(data-on);
       margin-right: $space-xs;
       color: $switch-label-on;
-      opacity: 1;
     }
 
     &::after {
+      opacity: 1;
+      margin-left: $space-xs;
       content: attr(data-off);
       color: $switch-label-off;
-      margin-left: $space-xs;
-      opacity: 1;
     }
   }
 
@@ -128,24 +137,27 @@
       cursor: not-allowed;
 
       &:checked + .#{$switch-prefix}-handle {
+        cursor: not-allowed;
         background: $switch-disabled-checked-bg;
         border-color: $switch-disabled-checked-bg;
-        cursor: not-allowed;
       }
     }
 
     .#{$switch-prefix}-handle {
+      cursor: not-allowed;
       background: $switch-disabled;
       border-color: $switch-disabled;
-      cursor: not-allowed;
     }
   }
 }
 
+
+// --------------------------------------------
+// Switch Size Mixin --------------------------
+// --------------------------------------------
 @mixin switch-size($height: $default-switch-height) {
   min-height: $height;
-  padding: 0 0 0 ($height * 2 + 8);
-  font-size: $height - 4;
+  min-width: $height * 2;
 
   .#{$switch-prefix}-input {
     &:checked + .#{$switch-prefix}-handle::before {
@@ -164,6 +176,10 @@
   }
 }
 
+
+// --------------------------------------------
+// Switch Color Mixin -------------------------
+// --------------------------------------------
 @mixin switch-color($color: black) {
   .#{$switch-prefix} input,
   .#{$switch-prefix}-input {

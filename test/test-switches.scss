@@ -19,9 +19,9 @@ $switch-test-sizes: (
         .c-switch {
             position: relative;
             min-height: 16px;
-            padding: 0 0 0 40px;
-            font-size: 12px;
-            vertical-align: top;
+            display: inline-block;
+            min-width: 32px;
+            vertical-align: middle;
           }
 
           .c-switch input,
@@ -35,14 +35,14 @@ $switch-test-sizes: (
 
           .c-switch input:focus + .c-switch-handle,
           .c-switch-input:focus + .c-switch-handle {
-            border-color: #1c7cd6;
-            box-shadow: 0 0 0 0.1rem rgba(28, 124, 214, 0.2);
+            border-color: #1b6ec2;
+            box-shadow: 0 0 0 0.1rem rgba(27, 110, 194, 0.2);
           }
 
           .c-switch input:checked + .c-switch-handle,
           .c-switch-input:checked + .c-switch-handle {
-            background: #1c7cd6;
-            border-color: #1c7cd6;
+            background: #1b6ec2;
+            border-color: #1b6ec2;
           }
 
           .c-switch input:checked + .c-switch-handle::before,
@@ -58,37 +58,37 @@ $switch-test-sizes: (
 
           .c-switch input:disabled + .c-switch-handle,
           .c-switch-input:disabled + .c-switch-handle {
+            cursor: not-allowed;
             background: #dee2e6;
             border-color: #dee2e6;
-            cursor: not-allowed;
           }
 
           .c-switch input:disabled + .c-switch-handle::before,
           .c-switch-input:disabled + .c-switch-handle::before {
-            background: #f8f9fa;
             box-shadow: none;
+            background: #f8f9fa;
           }
 
           .c-switch input:checked[disabled] + .c-switch-handle,
           .c-switch-input:checked[disabled] + .c-switch-handle {
+            cursor: not-allowed;
             background: #868e96;
             border-color: #868e96;
-            cursor: not-allowed;
           }
 
           .c-switch input:checked[disabled] + .c-switch-handle::before,
           .c-switch-input:checked[disabled] + .c-switch-handle::before {
-            background: #f8f9fa;
             box-shadow: none;
+            background: #f8f9fa;
           }
 
           .c-switch-handle {
             left: 0;
             height: 16px;
-            width: 32px;
             cursor: pointer;
-            display: inline-block;
+            width: 32px;
             position: absolute;
+            display: inline-block;
             background: #ffffff;
             background-clip: padding-box;
             border: 1px solid #ced4da;
@@ -111,6 +111,9 @@ $switch-test-sizes: (
           }
 
           .c-switch-label {
+            top: 8px;
+            left: 8px;
+            font-size: 12px;
             height: inherit;
             cursor: pointer;
             box-shadow: none;
@@ -118,9 +121,6 @@ $switch-test-sizes: (
             border-radius: inherit;
             text-transform: uppercase;
             transition: 0.25s ease-out;
-            font-size: 12px;
-            top: 8px;
-            left: 8px;
           }
 
           .c-switch-label::after,
@@ -130,17 +130,17 @@ $switch-test-sizes: (
           }
 
           .c-switch-label::before {
+            opacity: 1;
             content: attr(data-on);
             margin-right: 4px;
             color: #ffffff;
-            opacity: 1;
           }
 
           .c-switch-label::after {
+            opacity: 1;
+            margin-left: 4px;
             content: attr(data-off);
             color: #495057;
-            margin-left: 4px;
-            opacity: 1;
           }
 
           .c-switch-disabled {
@@ -155,22 +155,22 @@ $switch-test-sizes: (
 
           .c-switch-disabled .c-switch input:checked + .c-switch-handle,
           .c-switch-disabled .c-switch-input:checked + .c-switch-handle {
+            cursor: not-allowed;
             background: #868e96;
             border-color: #868e96;
-            cursor: not-allowed;
           }
 
           .c-switch-disabled .c-switch-handle {
+            cursor: not-allowed;
             background: #dee2e6;
             border-color: #dee2e6;
-            cursor: not-allowed;
           }
 
         }
       }
     }
 
-  @include it('Given two arguments - outputs alternative SIZE') {
+  @include it('Given one argument - outputs alternative SIZE') {
     @include assert {
       @include output {
         @each $name, $size in $switch-test-sizes {
@@ -182,8 +182,7 @@ $switch-test-sizes: (
       @include expect {
         .c-switch-crazy {
           min-height: 32px;
-          padding: 0 0 0 72px;
-          font-size: 28px;
+          min-width: 64px;
         }
 
         .c-switch-crazy .c-switch-input:checked + .c-switch-handle::before {
