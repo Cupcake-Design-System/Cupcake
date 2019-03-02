@@ -3,193 +3,180 @@ title: Test
 layout: blank
 ---
 
-
-<h3>Sooo Many Options...</h3>
-<br>
-<br>
-<hr>
-<br>
-<br>
-
 <strong>Small</strong>
 <br>
 <br>
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-sm c-badge-{{this}}">Value</div>
+  <div class="c-badge c-badge-sm c-badge-{{this}}">{{this}}</div>
   {{/each}}
   {{/each}}
 </div>
+<br>
 <br>
 <strong>Small w/close</strong>
 <br>
 <br>
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-sm c-badge-{{this}}">Value
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <div class="c-badge c-badge-sm c-badge-{{this}}">{{this}}
+    <a href="" class="c-badge-close"></a>
   </div>
   {{/each}}
   {{/each}}
 </div>
 
+<br>
 <br>
 <strong>Small Square</strong>
 <br>
 <br>
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-square c-badge-sm c-badge-{{this}}">Value</div>
+  <div class="c-badge c-badge-square c-badge-sm c-badge-{{this}}">{{this}}</div>
   {{/each}}
   {{/each}}
 </div>
 
+<br>
 <br>
 <strong>Small Square w/close</strong>
 <br>
 <br>
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-square c-badge-sm c-badge-{{this}}">Value
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
-  </div>
+  <div class="c-badge c-badge-square c-badge-sm c-badge-{{this}}">{{this}}
+    <a href="" class="c-badge-close"></a></div>
   {{/each}}
   {{/each}}
 </div>
 
-<br>
-<br>
-<hr>
-<br>
-<br>
+{{> space}}
 
 <strong>Default</strong>
 <br>
 <br>
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-{{this}}">Value</div>
+  <div class="c-badge c-badge-{{this}}">{{this}}</div>
   {{/each}}
   {{/each}}
 </div>
+<br>
 <br>
 <strong>Default w/close</strong>
 <br>
 <br>
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-{{this}}">Value
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <div class="c-badge c-badge-{{this}}">{{this}}
+    <a href="" class="c-badge-close"></a>
   </div>
   {{/each}}
   {{/each}}
 </div>
 
+<br>
 <br>
 <strong>Default Square</strong>
 <br>
 <br>
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-square c-badge-{{this}}">Value</div>
+  <div class="c-badge c-badge-square c-badge-{{this}}">{{this}}</div>
   {{/each}}
   {{/each}}
 </div>
 
+<br>
 <br>
 <strong>Default Square w/close</strong>
 <br>
 <br>
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-square c-badge-{{this}}">Value
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <div class="c-badge c-badge-square c-badge-{{this}}">{{this}}
+    <a href="" class="c-badge-close"></a>
   </div>
   {{/each}}
   {{/each}}
 </div>
 
-<br>
-<br>
-<hr>
-<br>
-<br>
+{{> space}}
 
 <strong>Large</strong>
 <br>
 <br>
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-lg c-badge-{{this}}">Value</div>
+  <div class="c-badge c-badge-lg c-badge-{{this}}">{{this}}</div>
   {{/each}}
   {{/each}}
 </div>
+<br>
 <br>
 <strong>Large w/close</strong>
 <br>
 <br>
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-lg c-badge-{{this}}">Value
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <div class="c-badge c-badge-lg c-badge-{{this}}">{{this}}
+    <a href="" class="c-badge-close"></a>
   </div>
   {{/each}}
   {{/each}}
 </div>
 
+<br>
 <br>
 <strong>Large Square</strong>
 <br>
 <br>
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-lg c-badge-square c-badge-{{this}}">Value</div>
+  <div class="c-badge c-badge-lg c-badge-square c-badge-{{this}}">{{this}}</div>
   {{/each}}
   {{/each}}
 </div>
 
 <br>
+<br>
 <strong>Large Square w/close</strong>
 <br>
 <br>
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
-  <div class="c-badge c-badge-lg c-badge-square c-badge-{{this}}">Value
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <div class="c-badge c-badge-lg c-badge-square c-badge-{{this}}">{{this}}
+    <a href="" class="c-badge-close"></a>
   </div>
   {{/each}}
   {{/each}}
 </div>
 
-<br>
-<br>
-<hr>
-<br>
-<br>
+{{> space}}
 
-<br>
 <strong>Miscellaneous Option Examples</strong>
 <br>
 <br>
-
+<div data-xrayhtml class="docs-wrap prism">
 <div class="c-badge c-badge-primary">
   <div class="c-avatar c-avatar-success" data-text="AB">
     <img src="https://unsplash.it/200?image=433">
   </div>
   Primary Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-square c-badge-primary">
@@ -197,7 +184,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Primary Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-lg c-badge-primary">
@@ -205,7 +192,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Primary Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-square c-badge-lg c-badge-primary">
@@ -213,7 +200,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Primary Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 
@@ -222,7 +209,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Success Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-square c-badge-success">
@@ -230,7 +217,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Success Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-lg c-badge-success">
@@ -238,7 +225,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Success Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 
@@ -247,7 +234,7 @@ layout: blank
     <img src="https://unsplash.it/200?image=433">
   </div>
   Success Bear
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <br>
@@ -258,7 +245,7 @@ layout: blank
         <i class="fab fa-amazon"></i>
     </div>
     Amazon
-    <a href="" class="c-badge-close" aria-hidden="true"></a>
+    <a href="" class="c-badge-close"></a>
   </div>
 
 <div class="c-badge c-badge-lg c-badge-success-light">
@@ -266,7 +253,7 @@ layout: blank
       <i class="fab fa-apple"></i>
   </div>
   Apple
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-square c-badge-lg c-badge-pink">
@@ -274,7 +261,7 @@ layout: blank
       <img src="https://unsplash.it/200?image=433">
   </div>
   Pink Bear Large Square - with long title
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
 
 <div class="c-badge c-badge-square c-badge-lg c-badge-teal">
@@ -282,17 +269,17 @@ layout: blank
       <img src="https://unsplash.it/200?image=433">
   </div>
   Teal Bear Large Square - with long title
-  <a href="" class="c-badge-close" aria-hidden="true"></a>
+  <a href="" class="c-badge-close"></a>
 </div>
-<br>
-<br>
-<br>
-<br>
+</div>
+
+
+{{> space}}
 
 <span><strong style="font-size: 26px;"> Hello </strong>
 <div class="c-badge c-badge-top c-badge-sm c-badge-success">4</div></span>
 
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
   <div class="c-badge c-badge-sm c-badge-{{this}}">A</div>
@@ -300,8 +287,9 @@ layout: blank
   {{/each}}
 </div>
 
+{{> space}}
 
-<div class="avatar-wrap">
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
   <div class="c-badge c-badge-{{this}}">A</div>
@@ -309,7 +297,9 @@ layout: blank
   {{/each}}
 </div>
 
-<div class="avatar-wrap">
+{{> space}}
+
+<div data-xrayhtml class="docs-wrap prism">
   {{#each color-loop.colors}}
   {{#each this}}
   <div class="c-badge c-badge-lg c-badge-{{this}}">A</div>

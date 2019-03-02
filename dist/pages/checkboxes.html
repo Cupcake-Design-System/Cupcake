@@ -19,74 +19,157 @@
 <body class="docs-container">
     <div class="docs-body">
       <main class="docs-content docs-content-fullwidth">
+        <button id="codeToggle" class="c-btn c-btn-primary" style="float: right;">Toggle Code Snippets</button>
         <br><br><br><br>
           
-  <div class="space-block-title">xxl</div>
-<div class="space">
-  <div class="xxl"></div>
-</div>
-  <div class="space-block-title">xl</div>
-<div class="space">
-  <div class="xl"></div>
-</div>
-  <div class="space-block-title">lg</div>
-<div class="space">
-  <div class="lg"></div>
-</div>
-  <div class="space-block-title">md</div>
-<div class="space">
-  <div class="md"></div>
-</div>
-  <div class="space-block-title">sm</div>
-<div class="space">
-  <div class="sm"></div>
-</div>
-  <div class="space-block-title">xs</div>
-<div class="space">
-  <div class="xs"></div>
-</div>
-  <div class="space-block-title">xxs</div>
-<div class="space">
-  <div class="xxs"></div>
+<h3>Default Checkbox</h3>
+
+<div data-xrayhtml class="prism xrayhtml">
+  <label class="c-checkbox">
+    <input type="checkbox" name="radio" checked>
+    <i></i>
+  </label>
+
+  <label class="c-checkbox">
+    <input type="checkbox" id="demo" name="radio" onclick="toggle(this)">
+    <i></i>
+  </label>
+
+  <label class="c-radio">
+    <input type="radio" name="radio">
+    <i></i>
+  </label>
+
+  <br>
+  <br>
+
+  <label class="c-checkbox">
+    <input type="checkbox" name="checkbox" disabled>
+    <i></i>
+  </label>
+
+  <label class="c-radio">
+    <input type="radio" name="checkbox" disabled>
+    <i></i>
+  </label>
+
+  <br>
+  <br>
+
+  <label class="c-checkbox" disabled>
+    <input type="checkbox" name="checkbox4" checked="checked" disabled="">
+    <i></i>
+  </label>
+
+  <label class="c-radio" disabled>
+    <input type="radio" name="radio6" checked="checked" disabled="">
+    <i></i>
+  </label>
+
 </div>
 
 
-<!-- 
-  <div class="space-block-title">primary-0</div>
-<div class="space">
-  <div class="#e8f7ff" style="width:#e8f7ff"></div>
-</div>
+<br>
+<hr>
+<br>
+<br>
 
-  <div class="space-block-title">primary-1</div>
-<div class="space">
-  <div class="#ccedff" style="width:#ccedff"></div>
-</div>
+<h3>Switches with Labels</h3>
 
-  <div class="space-block-title">primary-2</div>
-<div class="space">
-  <div class="#a3daff" style="width:#a3daff"></div>
-</div>
+<div data-xrayhtml class="prism xrayhtml">
+<label class="c-checkbox c-control">
+  <input type="checkbox" name="radio">
+  <i></i>
+  Default with label
+</label>
 
-  <div class="space-block-title">primary-3</div>
-<div class="space">
-  <div class="#72c3fc" style="width:#72c3fc"></div>
-</div>
+<label class="c-radio c-control">
+  <input type="radio" name="radio">
+  <i></i>
+  Default with label
+</label>
 
-  <div class="space-block-title">primary-4</div>
-<div class="space">
-  <div class="#4dadf7" style="width:#4dadf7"></div>
-</div>
+<br>
+<br>
 
-  <div class="space-block-title">primary-5</div>
-<div class="space">
-  <div class="#329af0" style="width:#329af0"></div>
-</div>
+<label class="c-checkbox c-control">
+  <input type="checkbox" name="radio" disabled="">
+  <i></i>
+  Label w/checkbox Disabled
+</label>
 
-  <div class="space-block-title">primary-6</div>
-<div class="space">
-  <div class="#228ae6" style="width:#228ae6"></div>
+
+<label class="c-radio c-control">
+  <input type="radio" name="radio" disabled="">
+  <i></i>
+  Label w/checkbox Disabled
+</label>
+
+<br>
+<br>
+
+<label class="c-checkbox c-control" disabled="">
+  <input type="checkbox" name="checkbox">
+  <i></i>
+  Label & Checkbox Disabled
+</label>
+
+
+<label class="c-radio c-control" disabled="">
+  <input type="radio" name="checkbox">
+  <i></i>
+  Label & Checkbox Disabled
+</label>
+
+
+<br>
+<br>
+
+
+<label class="c-checkbox c-control">
+  <input type="checkbox" name="checkbox4" checked="checked" disabled="">
+  <i></i>
+  Label Checked & Disabled
+</label>
+
+<label class="c-radio c-control">
+  <input type="radio" name="radio" checked="" disabled="">
+  <i></i>
+  Label Checked & Disabled
+</label>
+
+
+<br>
+<br>
+
+<label class="c-checkbox c-control" disabled>
+  <input type="checkbox" name="checkbox4" checked="checked" disabled="">
+  <i></i>
+  Label Checked & Disabled
+</label>
+
+<label class="c-radio c-control" disabled>
+  <input type="radio" name="radio3" checked="checked" disabled="">
+  <i></i>
+  Label Checked & Disabled
+</label>
+
 </div>
- -->
+<br>
+<hr>
+<br>
+<br>
+
+<script>
+var checkbox = document.getElementById("demo");
+checkbox.indeterminate = true;
+
+function toggle(demo) {
+  if (demo.readOnly) demo.checked=demo.readOnly=false;
+  else if (!demo.checked) demo.readOnly=demo.indeterminate=true;
+}
+</script>
+
       </main>
     </div>
   </body>

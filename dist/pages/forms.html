@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="../demo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
 
   <script>
     var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
@@ -18,8 +19,12 @@
 <body class="docs-container">
     <div class="docs-body">
       <main class="docs-content docs-content-fullwidth">
+        <button id="codeToggle" class="c-btn c-btn-primary" style="float: right;">Toggle Code Snippets</button>
+        <br><br><br><br>
           
 <h3>Input Colors</h3>
+
+<div data-xrayhtml class="prism xrayhtml">
 <input class="c-input c-input-primary" type="text" id="size-input-2" placeholder="primary input">
 <br>
 <input class="c-input c-input-success" type="text" id="size-input-2" placeholder="success input">
@@ -28,9 +33,17 @@
 <br>
 <input class="c-input c-input-error" type="text" id="size-input-2" placeholder="error input">
 <br>
+</div>
 
+
+<br>
+<hr>
+<br>
+<br>
 
 <h3>Input Sizes</h3>
+
+<div data-xrayhtml class="prism xrayhtml">
 <input class="c-input c-input-sm" type="text" id="size-input-2" placeholder="Default input sm">
 <br>
 <div class="c-input-container">
@@ -55,17 +68,25 @@
   <i class="c-input-icon c-input-icon-lg fa fa-exclamation-circle c-text-danger"></i>
 </div>
 <br>
+</div>
 
+<br>
+<hr>
+<br>
+<br>
 
 <h3>Select</h3>
+<div data-xrayhtml class="prism xrayhtml">
 <select class="c-input">
   <option>Default Select</option>
   <option>Option</option>
   <option>Option</option>
 </select>
+</div>
 
 <br>
 
+<div data-xrayhtml class="prism xrayhtml">
 <div class="c-input-container">
   <i class="c-input-icon fa fa-exclamation-circle c-text-danger"></i>
   <select class="c-input">
@@ -74,26 +95,33 @@
     <option>Option</option>
   </select>
 </div>
+</div>
 
 <br>
 
+<div data-xrayhtml class="prism xrayhtml">
 <select disabled="disabled" class="c-input">
   <option>Disabled Select</option>
   <option>Option</option>
   <option>Option</option>
 </select>
+</div>
 
 <br>
 
+<div data-xrayhtml class="prism xrayhtml">
 <select class="c-input c-input-error">
   <option>I`m error</option>
   <option>Option</option>
   <option>Option</option>
 </select>
+</div>
 
 <br>
 
 <h3>Select Sizes</h3>
+
+<div data-xrayhtml class="prism xrayhtml">
 <select class="c-input c-input-sm">
   <option>Select sm</option>
   <option>Option</option>
@@ -124,41 +152,63 @@
   </select>
 </div>
 <br>
+</div>
 
+<br>
+<hr>
+<br>
+<br>
 
 <h3>Input Labels</h3>
+<div data-xrayhtml class="prism xrayhtml">
 <label class="c-input-label" for="size-input-2">Default Label: <sup class="c-text-danger">*</sup></label>
 <input class="c-input" type="text" id="size-input-2" placeholder="Normal input">
+</div>
 
 <br>
 
+<div data-xrayhtml class="prism xrayhtml">
 <label class="c-input-label c-input-label-sm" for="size-input-2-sm">Default Label: <sup class="c-text-danger">*</sup></label>
 <input class="c-input c-input-sm" type="text" id="size-input-2-sm" placeholder="sm input">
 <br>
 <label class="c-input-label c-input-label-lg" for="size-input-2-sm">Default Label: <sup class="c-text-danger">*</sup></label>
 <input class="c-input c-input-lg" type="text" id="size-input-2-sm" placeholder="lg input">
 <br>
+</div>
 
 
+<br>
+<hr>
+<br>
+<br>
 
 <h3>Hints</h3>
+<div data-xrayhtml class="prism xrayhtml">
 <div class="c-input-container">
   <input class="c-input c-input-success" type="text" placeholder="Text input" value="$J-Money$" id="input-helper-1">
   <span class="c-hint c-hint-static c-hint-success"><i class="fa fa-check"></i> This username is silly but
     available!</span>
 </div>
+</div>
 
 <br>
 <br>
 
+
+<div data-xrayhtml class="prism xrayhtml">
 <div class="c-input-container">
   <input class="c-input c-input-error" type="text" placeholder="Click in here to see helper text" value id="input-helper-1">
   <span class="c-hint c-hint-error"><i class="fa fa-check"></i> I animate in when input is focused!</span>
 </div>
+</div>
 
 <br>
-
+<hr>
+<br>
+<br>
 <h3>Input Addons</h3>
+
+<div data-xrayhtml class="prism xrayhtml">
 <div class="c-input-group">
   <div class="c-input-addon">@</div>
   <div class="c-input-container">
@@ -203,10 +253,15 @@
     <input type="text" class="c-input">
   </div>
 </div>
+</div>
 
 <br>
-
+<hr>
+<br>
+<br>
 <h3>Input Groups</h3>
+
+<div data-xrayhtml class="prism xrayhtml">
 <div class="c-input-group">
   <button class="c-btn c-btn-primary">Action</button>
   <div class="c-input-container">
@@ -230,6 +285,7 @@
     </div>
   </div>
 <br>
+
 
 
 <div class="c-input-group">
@@ -259,11 +315,17 @@
   <button class="c-btn c-btn-primary c-btn-lg">Action</button>
   <button class="c-btn c-btn-primary c-btn-lg c-btn-box"><i class="fa fa-caret-down"></i></button>
 </div>
+</div>
 
+
+<br>
+<hr>
 <br>
 <br>
 
 <h4 class="c-header-xxs">Elements inline</h4>
+
+<div data-xrayhtml class="prism xrayhtml">
 <div class="c-m-bottom-md c-body-text">
   <span>Begin</span>
   <button class="c-btn c-btn-primary c-btn-sm">Primary Button</button>
@@ -273,7 +335,7 @@
   <button class="c-btn c-btn-secondary c-btn-sm">user <i class="fa fa-user"></i></button>
 </div>
 
-<div class="c-m-bottom-md c-body-text ">
+<div class="c-m-bottom-md c-body-text">
   Begin
   <button class="c-btn c-btn-success">Success Button</button>
   text
@@ -316,4 +378,162 @@
       </main>
     </div>
   </body>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+  
+  <script>
+  (function( $ ) {
+    var pluginName = "xrayhtml",
+  		o = {
+  		text: {
+  			open: "Show Code Example",
+  			close: "Collapse Code Example"
+  		},
+  		classes: {
+  			button: "c-btn c-btn-sm",
+  			open: "view-source",
+  			sourcepanel: "source-panel"
+  		},
+  		initSelector: "[data-" + pluginName + "]",
+  		defaultReveal: "inline"
+  	},
+  	methods = {
+  		_create: function() {
+  			return $( this ).each(function() {
+  				var init = $( this ).data( "init." + pluginName );
+  
+  				if( init ) {
+  					return false;
+  				}
+  
+  				$( this )
+  					.data( "init." + pluginName, true )
+  					[ pluginName ]( "_init" )
+  					.trigger( "create." +  pluginName );
+  			});
+  		},
+  		_init: function() {
+  			var $self =	 $(this);
+  
+  
+  			var method = $( this ).attr( "data-" + pluginName ) || o.defaultReveal;
+  
+  			if( method === "slide" ) {
+  				$( this )[ pluginName ]( "_createButton" );
+  			}
+  
+  			$( this )
+  				.addClass( pluginName + " " + "method-" + method )
+  			[ pluginName ]( "_createSource" );
+  		},
+  		_createButton: function() {
+  			var btn = document.createElement( "a" ),
+  				txt = document.createTextNode( o.text.open ),
+  				el = $( this );
+  
+  			btn.setAttribute( "class", o.classes.button );
+  			btn.href = "#";
+  			btn.appendChild( txt );
+  
+  			$( btn )
+  				.bind( "click", function( e ) {
+  					var isOpen = el.attr( "class" ).indexOf( o.classes.open ) > -1;
+  
+  					el[ isOpen ? "removeClass" : "addClass" ]( o.classes.open );
+  					btn.innerHTML = ( isOpen ? o.text.open : o.text.close );
+  
+  					e.preventDefault();
+  
+  				})
+  				.insertAfter( el );
+  		},
+  		_createSource: function() {
+  			var el = this;
+  			var preel = document.createElement( "pre" );
+  			var codeel = document.createElement( "code" );
+  			var wrap = document.createElement( "div" );
+  			var sourcepanel = document.createElement( "div" );
+  			var code;
+  			var leadingWhiteSpace;
+  			var source;
+  
+  			// remove empty value attributes
+  			code = el.innerHTML.replace( /\=\"\"/g, '' );
+  			leadingWhiteSpace = code.match( /(^[\s]+)/ );
+  
+  			if( leadingWhiteSpace ) {
+  				code = code.replace( new RegExp( leadingWhiteSpace[ 1 ], "gmi" ), "\n" );
+  			}
+  
+  			source = document.createTextNode( code );
+  
+  			wrap.setAttribute( "class", "snippet" );
+  
+  			$( el ).wrapInner( wrap );
+  
+  			codeel.appendChild( source );
+  			preel.appendChild( codeel );
+  
+  			sourcepanel.setAttribute( "class", o.classes.sourcepanel );
+  			sourcepanel.appendChild( preel );
+  
+  			this.appendChild( sourcepanel );
+  		}
+  	};
+  
+  	// Collection method.
+  	$.fn[ pluginName ] = function( arrg, a, b, c ) {
+  		return this.each(function() {
+  
+  			// if it's a method
+  			if( arrg && typeof( arrg ) === "string" ){
+  				return $.fn[ pluginName ].prototype[ arrg ].call( this, a, b, c );
+  			}
+  
+  			// don't re-init
+  			if( $( this ).data( pluginName + "data" ) ){
+  				return $( this );
+  			}
+  
+  			// otherwise, init
+  			$( this ).data( pluginName + "active", true );
+  			$.fn[ pluginName ].prototype._create.call( this );
+  		});
+  	};
+  
+  	// add methods
+  	$.extend( $.fn[ pluginName ].prototype, methods );
+  
+  	//  auto-init
+  	var initted;
+  	function init(){
+  		if( !initted ){
+  			$( o.initSelector )[ pluginName ]();
+  			initted = true;
+  		}
+  	}
+  	// init either on beforeenhance event or domready, whichever comes first.
+  	$( document ).bind("beforeenhance", init );
+  	$( init );
+  
+  
+  }( jQuery ));
+  
+  // Add prism highlighting to code
+    $( window ).bind( "create.xrayhtml", function( e ) {
+      var prism = !!~e.target.getAttribute( "class" ).indexOf( "prism" );
+  
+      if( prism && "Prism" in window ) {
+        $( ".prism" ).find( "code" ).addClass( "language-markup" );
+        Prism.highlightAll();
+      }
+    });
+  </script>
+<script>
+  $("#codeToggle").click(function () {
+    $(".source-panel").slideToggle();
+  });
+</script>
 </html>

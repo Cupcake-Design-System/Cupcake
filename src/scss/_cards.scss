@@ -1,0 +1,18 @@
+// --------------------------------------------
+// CARDS --------------------------------------
+// --------------------------------------------
+.#{$card-prefix} {
+  @include card;
+
+  &-header {
+    @include card-header;
+  }
+
+  &-content {
+    @include card-content;
+  }
+
+  &-footer {
+    @include card-footer;
+  }
+}

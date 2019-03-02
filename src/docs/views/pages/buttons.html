@@ -3,110 +3,136 @@ title: Button Test
 layout: blank
 ---
 
+
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <button class="c-btn c-btn-xs c-btn-{{this}}">X-Sm</button>
 {{/each}}
 {{/each}}
+</div>
 
+<br>
+<br>
+
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <button class="c-btn-link c-btn-link-xs c-btn-link-{{this}}">X-Sm Link</button>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
+{{> space}}
 
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <button class="c-btn c-btn-sm c-btn-{{this}}">Small</button>
 {{/each}}
 {{/each}}
+</div>
 
+<br>
+<br>
+
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <button class="c-btn-link c-btn-link-sm c-btn-link-{{this}}">Small Link</button>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
+{{> space}}
 
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <button class="c-btn c-btn-{{this}}">Default</button>
 {{/each}}
 {{/each}}
+</div>
 
+<br>
+<br>
+
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <button class="c-btn-link c-btn-link-{{this}}">Default Link</button>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
+{{> space}}
 
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <button class="c-btn c-btn-lg c-btn-{{this}}">Large</button>
 {{/each}}
 {{/each}}
+</div>
 
+<br>
+<br>
+
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <button class="c-btn-link c-btn-link-lg c-btn-link-{{this}}">Large Link</button>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
-<br>
-<br>
+{{> space}}
 
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <button class="c-btn c-btn-xs c-btn-{{this}}">X-Sm</button>
 <button class="c-btn-link c-btn-link-xs c-btn-link-{{this}}">X-Sm Link</button>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
+{{> space}}
 
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <button class="c-btn c-btn-sm c-btn-{{this}}">Small</button>
 <button class="c-btn-link c-btn-link-sm c-btn-link-{{this}}">Small Link</button>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
+{{> space}}
 
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <button class="c-btn c-btn-{{this}}">Default</button>
 <button class="c-btn-link c-btn-link-{{this}}">Default Link</button>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
+{{> space}}
 
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <button class="c-btn c-btn-lg c-btn-{{this}}">Large</button>
 <button class="c-btn-link c-btn-link-lg c-btn-link-{{this}}">Large Link</button>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
-<br>
-<br>
+{{> space}}
 
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <div class="c-btn c-btn-xs c-btn-{{this}} c-btn-circle"><i class="fa fa-plus"></i></div>
@@ -115,10 +141,11 @@ layout: blank
 <div class="c-btn c-btn-lg c-btn-{{this}} c-btn-circle"><i class="fa fa-plus"></i></div>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
+{{> space}}
 
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <div class="c-btn c-btn-xs c-btn-{{this}} c-btn-box"><i class="fa fa-download"></i></div>
@@ -127,12 +154,11 @@ layout: blank
 <div class="c-btn c-btn-lg c-btn-{{this}} c-btn-box"><i class="fa fa-download"></i></div>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
-<br>
-<br>
+{{> space}}
 
+<div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
 <div class="c-btn c-btn-xs c-btn-icon-{{this}} c-btn-icon"><i class="fa fa-download"></i></div>
@@ -141,12 +167,12 @@ layout: blank
 <div class="c-btn c-btn-lg c-btn-icon-{{this}} c-btn-icon"><i class="fa fa-download"></i></div>
 {{/each}}
 {{/each}}
+</div>
 
 
-<br>
-<br>
+{{> space}}
 
-
+<div data-xrayhtml class="prism">
 {{#each btn.size}}
 {{#each this}}
 <div class="c-btn-group">
@@ -156,10 +182,13 @@ layout: blank
 </div>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
 
+{{> space}}
+
+
+<div data-xrayhtml class="prism">
 {{#each btn.size}}
 {{#each this}}
 <div class="c-btn-group-vertical">
@@ -169,10 +198,11 @@ layout: blank
 </div>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
+{{> space}}
 
+<div data-xrayhtml class="prism">
 {{#each btn.size}}
 {{#each this}}
 <div class="c-btn-group-vertical">
@@ -182,10 +212,11 @@ layout: blank
 </div>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
+{{> space}}
 
+<div data-xrayhtml class="prism">
 {{#each btn.size}}
 {{#each this}}
 <div class="c-btn-group c-btn-group-block">
@@ -196,10 +227,18 @@ layout: blank
 <br>
 {{/each}}
 {{/each}}
+</div>
 
-<br>
-<br>
+{{> space}}
 
-<a class="c-btn c-btn-block c-btn-primary" href="#">Block Button</a>
-<br>
-<a class="c-btn c-btn-lg c-btn-block c-btn-primary" href="#">Block Button Large</a>
+
+<div data-xrayhtml class="prism">
+  {{#each btn.size}}
+  {{#each this}}
+  <a class="c-btn c-btn-{{this}} c-btn-block c-btn-primary" href="#">Block Button Large</a>
+  <br>
+  {{/each}}
+  {{/each}}
+  </div>
+
+  {{> space}}

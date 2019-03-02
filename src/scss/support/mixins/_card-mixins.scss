@@ -1,0 +1,159 @@
+// --------------------------------------------
+// Card Base Mixin --------------------------
+// --------------------------------------------
+@mixin card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border: $card-border;
+  color: $card-text-color;
+  box-shadow: $card-shadow;
+  background-color: $card-bg;
+  min-width: $card-min-width;
+  font-size: $card-body-font-size;
+  border-radius: $card-border-radius;
+  transition: all .1s ease-in-out 0s;
+  word-wrap: break-word;
+  background-clip: border-box;
+
+  &-hover:hover {
+    cursor: pointer;
+    box-shadow: $card-shadow-hover;
+    border: $card-border-hover;
+  }
+}
+
+@mixin card-header {
+  border-bottom: $card-border;
+  border-radius: $card-border-radius $card-border-radius 0 0;
+  padding: $card-padding-v $card-padding-h;
+
+  &-title {
+    display: inline-block;
+    font-size: $card-header-font-size;
+    font-weight: $card-header-font-weight;
+    line-height: $card-header-line-height;
+  }
+
+  &-subtitle {
+    display: block;
+    font-size: $card-subtitle-font-size;
+    line-height: $card-subtitle-line-height;
+
+    + .#{$card-prefix}-header-menu {
+      height: $card-header-line-height + $card-subtitle-line-height + ($card-padding-v * 2);
+    }
+  }
+
+  &-menu {
+    top: 0;
+    float: right;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    right: $card-padding-h;
+    height: $card-header-line-height + ($card-padding-v * 2);
+
+    > * {
+      margin: auto 12px;
+
+      &:last-child {
+        margin-right: $space-0;
+      }
+    }
+
+    &-item {
+      padding-left: $space-xs;
+    }
+
+    &-icon {
+      color: $card-header-icon-color;
+      font-size: $font-body-xl;
+
+      &:hover {
+        color: $card-header-icon-hover-color;
+      }
+
+      // &:not(:first-child) {
+      //   margin-left: $space-lg;
+      // }
+    }
+  }
+}
+
+@mixin card-content {
+  padding: $card-padding-v $card-padding-h;
+  font-weight: normal;
+  flex: 1 1 auto;
+  font-size: $card-body-font-size;
+}
+
+@mixin card-footer {
+  display: flex;
+  align-items: stretch;
+  border-top: $card-border;
+  padding: $card-padding-v $card-padding-h;
+  border-radius: $radius-0 $radius-0 $card-border-radius $card-border-radius;
+
+  &-link {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    text-decoration: underline;
+    color: $card-footer-color;
+    font-size: $card-footer-font-size;
+    line-height: $card-footer-line-weight;
+
+    &:hover {
+      color: $card-footer-hover-color;
+    }
+
+    &-center {
+      justify-content: center;
+    }
+
+    &-right {
+      justify-content: flex-end;
+    }
+  }
+}
+
+@mixin card-variant($background, $border, $color) {
+  background-color: $background;
+  border-color: $border;
+  color: $color;
+
+  .#{$card-prefix}-header {
+    background-color: transparent;
+    color: $color;
+    border-bottom: 1px solid darken($background, 5%);
+
+    &-menu-icon {
+      color: $color;
+    }
+  }
+
+  .#{$card-prefix}-footer {
+    background-color: transparent;
+    border-top: 1px solid darken($background, 5%);
+
+    &-link {
+      color: $color;
+
+      &:hover {
+        color: $color;
+      }
+    }
+  }
+
+  .#{$card-prefix}-content {
+    background-color: transparent;
+  }
+
+  .#{$card-prefix}-content-title,
+  .#{$card-prefix}-content-body,
+  .#{$card-prefix}-content-subtitle {
+    color: $color;
+  }
+}
+

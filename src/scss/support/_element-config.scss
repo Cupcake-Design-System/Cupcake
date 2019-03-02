@@ -154,22 +154,53 @@ $button-sizes: (
 
 
 // --------------------------------------------
+// CARDS --------------------------------------
+// --------------------------------------------
+$card-prefix                 : 'c-card' !default;
+$card-bg                     : $color-white !default;
+$card-text-color             : $color-gray-7 !default;
+$card-border                 : 1px solid $color-gray-2 !default;
+$card-border-radius          : $global-default-radius !default;
+$card-min-width              : 250px !default;
+$card-padding-v              : $space-md - $space-xs !default;
+$card-padding-h              : $space-md !default;
+$card-shadow                 : $shadow-sm !default;
+$card-shadow-hover           : $shadow-md !default;
+$card-border-hover           : $global-default-border !default;
+$card-header-font-size       : $font-body-lg !default;
+$card-header-font-weight     : $font-weight-bold !default;
+$card-header-line-height     : 24px !default;
+$card-header-text-color      : $card-text-color !default;
+$card-header-icon-color      : $color-gray-5 !default;
+$card-header-icon-hover-color: lighten($card-header-icon-color, 10%) !default;
+$card-body-font-size         : $font-body-md !default;
+$card-title-font-size        : $font-body-xl !default;
+$card-title-font-weight      : $font-weight-bold !default;
+$card-subtitle-line-height   : 12px !default;
+$card-subtitle-font-size     : $font-body-md !default;
+$card-footer-color           : $color-primary-8 !default;
+$card-footer-hover-color     : $color-primary-6 !default;
+$card-footer-font-size       : $font-body-md !default;
+$card-footer-line-weight     : $font-body-xl !default;
+
+
+// --------------------------------------------
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
-$checkbox-prefix          : 'c-checkbox' !default;
-$radio-prefix             : 'c-radio' !default;
-$checkbox-icon-bd         : $global-default-border !default;
-$checkbox-icon-radius     : $global-default-radius !default;
-$checkbox-transition      : all 0.2s !default;
-$checkbox-disabled-opacity: 0.5 !default;
-$checkbox-disabled-bg     : $color-gray-3 !default;
-$checkbox-disabled-color  : $color-gray-5 !default;
-$checkbox-palette         : $theme-colors !default;
-$checkbox-default-size    : $global-size-sm !default;
-$checkbox-sizes: (
-  sm: $global-size-xs,
-  lg: $global-size-md,
-) !default;
+$label-prefix                   : 'c-control' !default;
+$checkbox-prefix                : 'c-checkbox' !default;
+$radio-prefix                   : 'c-radio' !default;
+$label-font-size                : 12px !default;
+$checkbox-icon-bd               : $global-default-border !default;
+$checkbox-icon-radius           : $global-default-radius !default;
+$checkbox-transition            : background 0.2s !default;
+$checkbox-disabled-bg           : $color-gray-3 !default;
+$checkbox-disabled-color        : $color-gray-5 !default;
+$checkbox-checked-disabled-bg   : $color-gray-6 !default;
+$checkbox-checked-disabled-color: $color-gray-2 !default;
+$checkbox-palette               : $theme-colors !default;
+$checkbox-default-size          : $global-size-xs !default;
+$checkbox-sizes                 : () !default;
 
 
 // --------------------------------------------
@@ -229,6 +260,29 @@ $select-bg-img-disabled       : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEU
 $select-bg-pos                : no-repeat right 8px center !default;
 $select-box-shadow            : none !default;
 $select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
+
+
+// --------------------------------------------
+// Switches -----------------------------------
+// --------------------------------------------
+$switch-prefix             : 'c-switch' !default;
+$switch-control-prefix     : 'c-control' !default;
+$default-switch-height     : $global-size-xs !default;
+$default-switch-radius     : $radius-round !default;
+$default-switch-font-size  : $font-body-xs !default;
+$default-switch-bg         : $color-primary !default;
+$switch-label-off          : $color-gray-7 !default;
+$switch-label-on           : $color-white !default;
+$switch-handle             : $color-white !default;
+$switch-disabled           : $color-gray-3 !default;
+$switch-handle-disabled    : $color-gray-0 !default;
+$switch-disabled-checked-bg: $color-gray-6 !default;
+
+$switch-sizes: (
+  lg: $global-size-md
+) !default;
+
+$switch-colors: () !default;
 
 
 // --------------------------------------------

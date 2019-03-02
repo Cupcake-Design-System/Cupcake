@@ -3,116 +3,92 @@ title: Elements | Checkbox
 notes: Use in forms to toggle the state of something on or off.
 ---
 
-<section id="checkbox">
+<label class="c-checkbox c-control">
+  <input type="checkbox" name="radio">
+  <i></i>
+  Label Unchecked
+</label>
 
-  <label class="c-control-sm c-checkbox c-checkbox-sm">
-    <input type="checkbox" name="radio" checked="">
-    <i class="c-bg-primary"></i>
-    c-checkbox-sm
-  </label>
+<br><br>
 
+<label class="c-checkbox c-control">
+  <input type="checkbox" name="radio" checked="">
+  <i></i>
+  Label Checked
+</label>
 
-  <label class="c-control c-checkbox">
-    <input type="checkbox" name="radio" checked="">
-    <i class="c-bg-primary"></i>
-    c-checkbox
-  </label>
+<br><br>
 
-  <label class="c-control-lg c-checkbox c-checkbox-lg">
-    <input type="checkbox" name="radio" checked="">
-    <i class="c-bg-primary"></i>
-    c-checkbox-lg
-  </label>
+<label class="c-checkbox c-control">
+  <input type="checkbox" id="demo" name="radio"  onclick="toggle(this)">
+  <i></i>
+  Indeterminate - Rotate my State!
+</label>
 
-  <label class="c-control-xl c-checkbox c-checkbox-xl">
-    <input type="checkbox" name="radio" checked="">
-    <i class="c-bg-primary"></i>
-    c-checkbox-xl
-  </label>
-  <br>
-  <br>
-  <br>
+<br><br>
 
-  <label class="c-control-sm c-radio c-radio-sm">
-    <input type="radio" name="radio" checked="">
-    <i class="c-bg-primary"></i>
-    c-radio-sm
-  </label>
+<label class="c-checkbox c-control">
+  <input type="checkbox" name="radio" disabled>
+  <i></i>
+  Label w/checkbox Disabled
+</label>
 
-  <label class="c-control c-radio">
-    <input type="radio" name="radio" checked="">
-    <i class="c-bg-primary"></i>
-    c-radio
-  </label>
-  <label class="c-control-lg c-radio c-radio-lg">
-    <input type="radio" name="radio" checked="">
-    <i class="c-bg-primary"></i>
-    c-radio-lg
-  </label>
-  <label class="c-control-xl c-radio c-radio-xl">
-    <input type="radio" name="radio" checked="">
-    <i class="c-bg-primary"></i>
-    c-radio-Xl
-  </label>
+<br><br>
 
-  <br>
-  <br>
-  <br>
-  <label class="c-checkbox c-checkbox-sm">
-    <input type="checkbox" name="radio" checked="">
-    <i class="c-bg-primary"></i>
-  </label>
-
-  <label class="c-radio c-radio-sm">
-    <input type="radio" name="radio" checked="">
-    <i class="c-bg-primary"></i>
-  </label>
-
-  <label class="c-checkbox">
-    <input type="checkbox" name="radio" checked="">
-    <i class="c-bg-success"></i>
-  </label>
-
-  <label class="c-radio">
-    <input type="radio" name="radio" checked="">
-    <i class="c-bg-success"></i>
-  </label>
-
-
-  <label class="c-checkbox c-checkbox-lg">
-    <input type="checkbox" name="radio" checked="">
-    <i class="c-bg-warning"></i>
-  </label>
-
-  <label class="c-radio c-radio-lg">
-    <input type="radio" name="radio" checked="">
-    <i class="c-bg-warning"></i>
-  </label>
-
-
-  <label class="c-checkbox c-checkbox-xl">
-    <input type="checkbox" name="radio" checked="">
-    <i class="c-bg-danger"></i>
-  </label>
-
-  <label class="c-radio c-radio-xl">
-    <input type="radio" name="radio" checked="">
-    <i class="c-bg-danger"></i>
-  </label>
-
-
-  <label class="c-checkbox c-checkbox-xl">
-    <input type="checkbox" name="radio" checked="checked" disabled="">
-    <i class="c-bg-danger"></i>
-  </label>
+<label class="c-checkbox c-control" disabled>
+  <input type="checkbox" name="checkbox">
+  <i></i>
+  Label & Checkbox Disabled
+</label>
 
 
 
+<br><br><br>
 
-  <label class="c-radio c-radio-xl">
-    <input type="radio" name="radio" checked="" disabled="">
-    <i class="c-bg-danger"></i>
-  </label>
+<label class="c-radio c-control">
+  <input type="radio" name="radio5">
+  <i></i>
+  Label Unchecked
+</label>
 
+<br><br>
 
-</section>
+<label class="c-radio c-control">
+  <input type="radio" name="radio4" checked="">
+  <i></i>
+  Label Checked
+</label>
+
+<br><br>
+
+<label class="c-radio c-control">
+  <input type="radio" name="radio" disabled>
+  <i></i>
+  Label w/checkbox Disabled
+</label>
+
+<br><br>
+
+<label class="c-radio c-control" disabled>
+  <input type="radio" name="radio2">
+  <i></i>
+  Label & Checkbox Disabled
+</label>
+
+<br><br>
+
+<label class="c-radio c-control">
+  <input type="radio" name="radio3" checked="checked" disabled="">
+  <i></i>
+  Label Checked & Disabled
+</label>
+
+<script>
+var checkbox = document.getElementById("demo");
+checkbox.indeterminate = true;
+
+function toggle(demo) {
+  if (demo.readOnly) demo.checked=demo.readOnly=false;
+  else if (!demo.checked) demo.readOnly=demo.indeterminate=true;
+}
+</script>

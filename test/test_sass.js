@@ -22,6 +22,12 @@ sassTrue.runSass({file: badges}, describe, it);
 const buttons = path.join(__dirname, 'test-button.scss');
 sassTrue.runSass({file: buttons}, describe, it);
 
+const cards = path.join(__dirname, 'test-cards.scss');
+sassTrue.runSass({file: cards}, describe, it);
+
+const switches = path.join(__dirname, 'test-switches.scss');
+sassTrue.runSass({file: switches}, describe, it);
+
 const closeMixin = path.join(__dirname, 'test-close-mixin.scss');
 sassTrue.runSass({file: closeMixin}, describe, it);
 
