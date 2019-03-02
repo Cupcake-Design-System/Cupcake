@@ -3,33 +3,41 @@ title: Elements | Checkbox
 notes: Use in forms to toggle the state of something on or off.
 ---
 
-<label class="c-checkbox">
+<label class="c-checkbox c-control">
   <input type="checkbox" name="radio">
-  <i class="c-bg-primary"></i>
+  <i></i>
   Label Unchecked
 </label>
 
 <br><br>
 
-<label class="c-checkbox">
+<label class="c-checkbox c-control">
   <input type="checkbox" name="radio" checked="">
-  <i class="c-bg-primary"></i>
+  <i></i>
   Label Checked
 </label>
 
 <br><br>
 
-<label class="c-checkbox">
+<label class="c-checkbox c-control">
+  <input type="checkbox" id="demo" name="radio"  onclick="toggle(this)">
+  <i></i>
+  Indeterminate - Rotate my State!
+</label>
+
+<br><br>
+
+<label class="c-checkbox c-control">
   <input type="checkbox" name="radio" disabled>
-  <i class="c-bg-primary"></i>
+  <i></i>
   Label w/checkbox Disabled
 </label>
 
 <br><br>
 
-<label class="c-checkbox" disabled>
+<label class="c-checkbox c-control" disabled>
   <input type="checkbox" name="checkbox">
-  <i class="c-bg-primary"></i>
+  <i></i>
   Label & Checkbox Disabled
 </label>
 
@@ -37,46 +45,50 @@ notes: Use in forms to toggle the state of something on or off.
 
 <br><br><br>
 
-<label class="c-radio">
+<label class="c-radio c-control">
   <input type="radio" name="radio5">
-  <i class="c-bg-primary"></i>
+  <i></i>
   Label Unchecked
 </label>
 
 <br><br>
 
-<label class="c-radio">
+<label class="c-radio c-control">
   <input type="radio" name="radio4" checked="">
-  <i class="c-bg-primary"></i>
+  <i></i>
   Label Checked
 </label>
 
 <br><br>
 
-<label class="c-radio">
+<label class="c-radio c-control">
   <input type="radio" name="radio" disabled>
-  <i class="c-bg-primary"></i>
+  <i></i>
   Label w/checkbox Disabled
 </label>
 
 <br><br>
 
-<label class="c-radio" disabled>
+<label class="c-radio c-control" disabled>
   <input type="radio" name="radio2">
-  <i class="c-bg-primary"></i>
+  <i></i>
   Label & Checkbox Disabled
 </label>
 
 <br><br>
 
-<label class="c-radio">
+<label class="c-radio c-control">
   <input type="radio" name="radio3" checked="checked" disabled="">
-  <i class="c-bg-danger"></i>
+  <i></i>
   Label Checked & Disabled
 </label>
 
+<script>
+var checkbox = document.getElementById("demo");
+checkbox.indeterminate = true;
 
-
-
-
-
+function toggle(demo) {
+  if (demo.readOnly) demo.checked=demo.readOnly=false;
+  else if (!demo.checked) demo.readOnly=demo.indeterminate=true;
+}
+</script>

@@ -187,11 +187,13 @@ $card-footer-line-weight     : $font-body-xl !default;
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
+$label-prefix                   : 'c-control' !default;
 $checkbox-prefix                : 'c-checkbox' !default;
 $radio-prefix                   : 'c-radio' !default;
+$label-font-size                : 12px !default;
 $checkbox-icon-bd               : $global-default-border !default;
 $checkbox-icon-radius           : $global-default-radius !default;
-$checkbox-transition            : all 0.2s !default;
+$checkbox-transition            : background 0.2s !default;
 $checkbox-disabled-bg           : $color-gray-3 !default;
 $checkbox-disabled-color        : $color-gray-5 !default;
 $checkbox-checked-disabled-bg   : $color-gray-6 !default;

@@ -1,25 +1,33 @@
 // --------------------------------------------
+// Checkbox Control Mixin ---------------------
+// --------------------------------------------
+@mixin label-control($size: $checkbox-default-size) {
+  line-height: $size;
+  font-size: $size - 4;
+  padding: $space-0 $space-sm $space-0 $size + 8;
+}
+
+
+// --------------------------------------------
 // Checkbox Base Mixin ------------------------
 // --------------------------------------------
 @mixin checkbox($size:$checkbox-default-size) {
-  display: inline-block;
-  position: relative;
   cursor: pointer;
-  line-height: 1.5;
-  font-size: 12px;
-  padding-left: $size + 8;
+  min-width: $size;
   min-height: $size;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
   transition: $checkbox-transition;
-  top: 3px;
 
   input {
-    position: absolute;
-    width: $size;
-    height: $size;
     left: 0;
     opacity: 0;
     z-index: 1;
+    width: $size;
+    height: $size;
     cursor: pointer;
+    position: absolute;
 
     &:checked + i::before {
       border-width: 0;
@@ -38,47 +46,48 @@
     }
 
     &[type="checkbox"]:checked + i::after {
-      display: table-cell;
-      transform: rotate(45deg);
-      position: absolute;
-      left: round($size / 3);
-      top: round($size / 8);
-      width: round($size / 2.5);
-      height: round($size / 1.55);
-      border: round($size / 9) solid;
+      content: ' ';
       border-top: 0;
       border-left: 0;
-      content: ' ';
+      position: absolute;
+      display: table-cell;
       color: $color-white;
+      top: round($size / 8);
+      left: round($size / 3);
+      transform: rotate(45deg);
+      width: round($size / 2.5);
+      height: round($size / 1.55);
+      border-right: round($size / 9) solid;
+      border-bottom: round($size / 9) solid;
     }
 
     &[type="radio"]:checked + i::after {
-      position: absolute;
+      content: ' ';
       display: table;
-      left: round($size / 4);
+      position: absolute;
+      color: $color-white;
       top: round($size / 4);
+      left: round($size / 4);
       width: round($size / 2);
       height: round($size / 2);
       background: $color-white;
       border-radius: $radius-round;
-      content: ' ';
-      color: $color-white;
     }
 
     &[disabled],
     fieldset[disabled] & {
       & + i::before {
         cursor: not-allowed;
-        border: 1px solid $checkbox-disabled-bg;
         background: $checkbox-disabled-bg;
+        border: 1px solid $checkbox-disabled-bg;
       }
     }
 
     &[disabled]:checked {
       & + i::before {
         cursor: not-allowed;
-        border: 1px solid $checkbox-checked-disabled-bg;
         background: $checkbox-checked-disabled-bg;
+        border: 1px solid $checkbox-checked-disabled-bg;
       }
     }
 
@@ -90,20 +99,20 @@
   }
 
   > i {
-    height: $size;
-    width: $size;
-    position: absolute;
     left: 0;
+    width: $size;
+    height: $size;
+    position: absolute;
     background-color: $color-white;
 
     &::before {
       content: "";
-      position: absolute;
       width: $size;
       height: $size;
+      position: absolute;
       border: $checkbox-icon-bd;
-      border-radius: $checkbox-icon-radius;
       transition: $checkbox-transition;
+      border-radius: $checkbox-icon-radius;
     }
   }
 
@@ -113,8 +122,8 @@
 
     > i::before {
       cursor: not-allowed;
-      border: 1px solid $checkbox-disabled-bg;
       background: $checkbox-disabled-bg;
+      border: 1px solid $checkbox-disabled-bg;
     }
 
     input {
@@ -122,14 +131,9 @@
 
       + i::before {
         cursor: not-allowed;
-        border: 1px solid $checkbox-disabled-bg;
         background: $checkbox-disabled-bg;
+        border: 1px solid $checkbox-disabled-bg;
       }
-
-      // &:checked + i::after {
-      //   height: 0;
-      //   border: 0;
-      // }
     }
   }
 }
@@ -139,8 +143,8 @@
 // Checkbox Size Mixin ------------------------
 // --------------------------------------------
 @mixin checkbox-size($size:$checkbox-default-size) {
-  height: $size;
-  font-size: $size - 4;
+  min-height: $size;
+  min-width: $size;
 
   input {
     width: $size;
@@ -148,27 +152,22 @@
 
     &[type="checkbox"]:checked + i::after {
       left: round($size / 3);
-      top: 0;
-      width: round($size / 3);
+      top: round($size / 10);
+      width: round($size / 2.55);
       height: round($size / 1.5);
-      border: round($size / 9) solid;
-      border-top: 0;
-      border-left: 0;
     }
 
     &[type="radio"]:checked + i::after {
-      left: round($size / 6);
-      top: round($size / 10);
-      width: round($size / 1.5);
-      height: round($size / 1.5);
+      left: round($size / 4);
+      top: round($size / 4);
+      width: round($size / 2);
+      height: round($size / 2);
     }
   }
 
   > i {
     height: $size;
-    /* stylelint-disable */
-    margin: 0 ($size + 8) 0 0;
-    /* stylelint-enable */
+    width: $size;
 
     &::before {
       width: $size;
@@ -184,24 +183,5 @@
 @mixin checkbox-color($color: $primary) {
   input:checked + i::before {
     background-color: $color;
-  }
-}
-
-
-// --------------------------------------------
-// Checkbox Control Mixin ---------------------
-// --------------------------------------------
-@mixin control($font-size: $checkbox-default-size) {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  font-size: $font-size - 4;
-  line-height: 1.2;
-  padding: $space-0 $space-sm $space-0 $font-size + 8;
-
-  &.c-checkbox > i,
-  &.c-radio > i {
-    position: absolute;
-    left: 0;
   }
 }

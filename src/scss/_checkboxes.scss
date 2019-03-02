@@ -2,21 +2,32 @@
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
 
-.#{$checkbox-prefix},
-.#{$radio-prefix} {
-  @include checkbox;
+.#{$label-prefix} {
+  @include label-control;
 }
 
-.#{$checkbox-prefix},
-.#{$radio-prefix} {
-  @each $name, $size in $checkbox-sizes {
-    &-#{$name} {
-      @include checkbox-size($size);
+.#{$checkbox-prefix} {
+  @include checkbox;
+
+  input:indeterminate + i {
+    background: $color-primary;
+    border-radius: $checkbox-icon-radius;
+
+    &::before {
+      top: 48%;
+      left: 18%;
+      width: 10px;
+      content: "";
+      height: 2px;
+      position: absolute;
+      border-color: $color-white;
     }
   }
 }
 
 .#{$radio-prefix} {
+  @include checkbox;
+
   input:disabled:checked {
     + i {
       &::before {
@@ -30,15 +41,33 @@
   }
 }
 
+@each $name, $size in $checkbox-sizes {
+  .#{$checkbox-prefix},
+  .#{$radio-prefix} {
+    &-#{$name} {
+      @include checkbox-size($size);
 
-// .form-checkbox input:indeterminate + .form-icon::before {
-//   background: #fff;
-//   content: "";
-//   height: 2px;
-//   left: 50%;
-//   margin-left: -5px;
-//   margin-top: -1px;
-//   position: absolute;
-//   top: 50%;
-//   width: 10px;
-// }
+      + .#{$label-prefix} {
+        @include label-control($size);
+      }
+    }
+  }
+}
+
+@each $name, $color in $checkbox-palette {
+  .#{$checkbox-prefix} {
+    &-#{$name} {
+      @include checkbox-color($color);
+
+      input:indeterminate + i {
+        background-color: $color;
+      }
+    }
+  }
+
+  .#{$radio-prefix} {
+    &-#{$name} {
+      @include checkbox-color($color);
+    }
+  }
+}
