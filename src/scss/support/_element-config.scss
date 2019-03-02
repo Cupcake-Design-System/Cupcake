@@ -266,6 +266,7 @@ $select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
 // Switches -----------------------------------
 // --------------------------------------------
 $switch-prefix             : 'c-switch' !default;
+$switch-control-prefix     : 'c-control' !default;
 $default-switch-height     : $global-size-xs !default;
 $default-switch-radius     : $radius-round !default;
 $default-switch-font-size  : $font-body-xs !default;
