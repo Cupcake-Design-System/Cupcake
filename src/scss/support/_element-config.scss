@@ -299,6 +299,39 @@ $switch-colors: () !default;
 
 
 // --------------------------------------------
+// TABS ---------------------------------------
+// --------------------------------------------
+$tabs-prefix            : 'c-tabs' !default;
+$tab-item-prefix        : 'c-tab-item' !default;
+$tabs-full-width-border : true !default;
+$tabs-color             : $color-gray-7 !default;
+$tabs-color-hover       : $color-primary !default;
+$tabs-color-active      : $color-primary !default;
+$tabs-color-disabled    : $color-gray-6 !default;
+$tabs-font-weight       : bold !default;
+$tabs-border-color      : $color-gray-2 !default;
+$tabs-bordered-radius   : 2px !default;
+$tabs-bordered-bg       : $color-gray-0 !default;
+$tabs-bordered-bg-hover : $color-white !default;
+$tabs-bordered-bg-active: $tabs-bordered-bg-hover !default;
+$tabs-hover-transition  : border-color 0.2s ease 0s !default;
+$tabs-box-shadow        : inset 0 -1px 0 0 $tabs-border-color;
+$tabs-border-bottom     : 2px !default;
+
+$tabs-font-size         : 12px !default;
+$tabs-height            : 32px !default;
+$tabs-padding           : $space-sm $space-md !default;
+
+$tabs-font-size-small   : 11px !default;
+$tabs-height-small      : 24px !default;
+$tabs-padding-small     : $space-xs $space-sm !default;
+
+$tabs-font-size-large   : 14px !default;
+$tabs-height-large      : 40px !default;
+$tabs-line-height-large : 24px !default;
+
+
+// --------------------------------------------
 // TYPOGRAPHY ---------------------------------
 // --------------------------------------------
 $text-prefix     : 'c-text' !default;
