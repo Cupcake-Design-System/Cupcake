@@ -1,0 +1,87 @@
+// --------------------------------------------
+// TABS Base Mixin ----------------------------
+// --------------------------------------------
+
+@mixin tabs {
+  height: $tabs-height;
+  display: flex;
+  overflow: hidden;
+  margin: $space-0;
+  padding: $space-0;
+  white-space: nowrap;
+  align-items: stretch;
+  font-weight: $tabs-font-weight;
+  font-size: $tabs-font-size;
+
+  @if $tabs-full-width-border {
+    box-shadow: $tabs-box-shadow;
+  }
+}
+
+@mixin tab-item {
+  display: flex;
+  color: $tabs-color;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin tab-item-link {
+  flex: auto;
+  cursor: pointer;
+  margin: $space-0;
+  color: $tabs-color;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+  transition: $tabs-hover-transition;
+  padding: $tabs-padding;
+  border-bottom: $tabs-border-bottom solid transparent;
+
+  a {
+    color: $tabs-color-active;
+  }
+
+  &:hover {
+    color: $tabs-color-hover;
+    border-bottom: $tabs-border-bottom solid $tabs-color-hover;
+  }
+}
+
+@mixin tab-item-active {
+  &,
+  & a {
+    color: $tabs-color-active;
+  }
+
+  &,
+  &:hover {
+    border-bottom-style: solid;
+    border-bottom-width: $tabs-border-bottom;
+
+    @if $tabs-full-width-border {
+      border-bottom-color: $tabs-color-active;
+    } @else {
+      border-bottom-color: $tabs-color;
+    }
+  }
+}
+
+
+@mixin tab-item-disabled {
+  &,
+  & a,
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: not-allowed;
+    color: $tabs-color-disabled;
+  }
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+  }
+}
