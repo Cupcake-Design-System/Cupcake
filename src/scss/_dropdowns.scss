@@ -1,0 +1,93 @@
+// --------------------------------------------
+// CHECKBOX & RADIOS --------------------------
+// --------------------------------------------
+.c-dropdown {
+  overflow: visible;
+  position: relative;
+  display: inline-block;
+
+  &-right {
+    float: right;
+  }
+
+  &-icon {
+    color: $color-gray-4;
+    padding-right: $space-sm;
+  }
+
+  &-divider {
+    border-top: $dropdown-border;
+    margin: $space-xs -$space-xs;
+  }
+}
+
+.c-dropdown-list {
+  @include dropdown-list;
+
+  &-right {
+    right: 0;
+    left: auto;
+  }
+
+  &-below {
+    top: 110%;
+    border-radius: $dropdown-radius;
+  }
+
+  &-above {
+    top: auto;
+    bottom: 110%;
+    margin-bottom: $space-0;
+    border-radius: $dropdown-radius;
+  }
+}
+
+
+.c-dropdown-list > li > a,
+.c-dropdown-item {
+  @include dropdown-item;
+
+  @include not($link-colors) {
+    color: $dropdown-color;
+
+    &:hover {
+      color: $dropdown-color-hover;
+    }
+  }
+}
+
+.c-dropdown-grid {
+  @include dropdown-grid;
+
+  width: $dropdown-width;
+
+  li a,
+  .c-dropdown-item {
+    @include dropdown-grid-item;
+  }
+
+  &-col-2 {
+    width: $dropdown-width-sm;
+
+    li a,
+    .c-dropdown-item {
+      flex-basis: 50%;
+    }
+  }
+
+  &-col-4 {
+    width: $dropdown-width + 100px;
+
+    li a,
+    .c-dropdown-item {
+      flex-basis: 25%;
+    }
+  }
+}
+
+.c-dropdown-grid-right {
+  right: 0;
+  left: auto;
+  position: absolute;
+  min-width: $dropdown-width;
+}

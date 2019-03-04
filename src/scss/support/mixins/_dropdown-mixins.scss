@@ -1,0 +1,147 @@
+// --------------------------------------------
+// Label Base Mixin ---------------------------
+// ------------------------------------------
+$dropdown-glued           : true !default;
+$dropdown-list-margin     : 0 !default;
+
+
+$dropdown-width-sm         : 200px !default;
+$dropdown-width           : 300px !default;
+
+$dropdown-divider-margin  : 4px !default;
+$dropdown-grid-item-padding: 12px !default;
+$dropdown-grid-padding: 8px !default;
+
+$link-colors:
+  '[class*="primary"]',
+  '[class*="success"]',
+  '[class*="warning"]',
+  '[class*="danger"]',
+  '.c-text-muted';
+
+
+$dropdown-font-family     : $font-family-sans !default;
+$dropdown-font-size       : 12px !default;
+$dropdown-border          : 1px solid $color-gray-2 !default;
+$dropdown-color           : $color-gray-9 !default;
+$dropdown-color-hover     : $color-gray-9 !default;
+
+$dropdown-font-weight     : normal !default;
+$dropdown-box-shadow      : $shadow-md !default;
+$dropdown-radius          : $global-default-radius !default;
+$dropdown-background-color: $color-white !default;
+$dropdown-list-padding    : $space-xs !default;
+$dropdown-item-padding    : $space-sm ($space-xs + $space-sm) !default;
+$dropdown-background-hover: $color-gray-0 !default;
+
+$dropdown-selected-color           : $color-primary-8 !default;
+$dropdown-selected-bg     : $color-primary-0 !default;
+
+@mixin dropdown-list {
+  left: 0;
+  top: -5px;
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  list-style-type: none;
+  box-sizing: border-box;
+  color: $dropdown-color;
+  border: $dropdown-border;
+  min-width: $dropdown-width-sm;
+  margin: $dropdown-list-margin;
+  padding: $dropdown-list-padding;
+  border-radius: $dropdown-radius;
+  box-shadow: $dropdown-box-shadow;
+  font-family: $dropdown-font-family;
+  background: $dropdown-background-color;
+}
+
+@mixin dropdown-item {
+  display: block;
+  line-height: 1.4;
+  position: relative;
+  text-decoration: none;
+  font-size: $dropdown-font-size;
+  padding: $dropdown-item-padding;
+  font-weight: $dropdown-font-weight;
+
+  &:hover {
+    text-decoration: none;
+    background: $dropdown-background-hover;
+  }
+
+  &-selected {
+    color: $dropdown-selected-color !important;
+    background: $dropdown-selected-bg !important;
+    font-weight: bold !important;
+
+    &::after {
+      content: "";
+      width: 6px;
+      right: 20px;
+      height: 10px;
+      position: absolute;
+      border-style: solid;
+      top: calc(50% - 2px);
+      border-width: 0 2px 2px 0;
+      border-color: $dropdown-selected-color;
+      transform: rotate(45deg) translateY(-50%);
+    }
+
+    .c-dropdown-icon {
+      color: $dropdown-selected-color !important;
+    }
+  }
+}
+
+@mixin not($ignoreList...) {
+  @if (length($ignoreList) == 1) {
+    $ignoreList: nth($ignoreList, 1);
+  }
+
+  $exludeList: '';
+
+  @each $not in $ignoreList {
+    $exludeList: $exludeList + ':not(#{$not})';
+  }
+
+  &#{$exludeList} {
+    @content;
+  }
+}
+
+@mixin dropdown-grid {
+  top: 110%;
+  float: left;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  list-style: none;
+  position: absolute;
+  color: $dropdown-color;
+  border: $dropdown-border;
+  background-clip: padding-box;
+  font-size: $dropdown-font-size;
+  border-radius: $dropdown-radius;
+  padding: $dropdown-grid-padding;
+  box-shadow: $dropdown-box-shadow;
+  background-color: $dropdown-background-color;
+}
+
+@mixin dropdown-grid-item {
+  display: flex;
+  overflow: hidden;
+  margin: $space-0;
+  text-align: center;
+  flex-direction: column;
+  flex-basis: 33.333333%;
+  justify-content: center;
+  border: 1px solid transparent;
+  padding: $dropdown-grid-item-padding;
+
+  &:hover {
+    background: $color-gray-0;
+    border-color: $color-gray-2;
+  }
+}
