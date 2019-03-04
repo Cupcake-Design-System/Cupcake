@@ -1,45 +1,9 @@
 // --------------------------------------------
-// Label Base Mixin ---------------------------
-// ------------------------------------------
-$dropdown-glued           : true !default;
-$dropdown-list-margin     : 0 !default;
-
-
-$dropdown-width-sm         : 200px !default;
-$dropdown-width           : 300px !default;
-
-$dropdown-divider-margin  : 4px !default;
-$dropdown-grid-item-padding: 12px !default;
-$dropdown-grid-padding: 8px !default;
-
-$link-colors:
-  '[class*="primary"]',
-  '[class*="success"]',
-  '[class*="warning"]',
-  '[class*="danger"]',
-  '.c-text-muted';
-
-
-$dropdown-font-family     : $font-family-sans !default;
-$dropdown-font-size       : 12px !default;
-$dropdown-border          : 1px solid $color-gray-2 !default;
-$dropdown-color           : $color-gray-9 !default;
-$dropdown-color-hover     : $color-gray-9 !default;
-
-$dropdown-font-weight     : normal !default;
-$dropdown-box-shadow      : $shadow-md !default;
-$dropdown-radius          : $global-default-radius !default;
-$dropdown-background-color: $color-white !default;
-$dropdown-list-padding    : $space-xs !default;
-$dropdown-item-padding    : $space-sm ($space-xs + $space-sm) !default;
-$dropdown-background-hover: $color-gray-0 !default;
-
-$dropdown-selected-color           : $color-primary-8 !default;
-$dropdown-selected-bg     : $color-primary-0 !default;
-
+// Dropdown List Mixin ------------------------
+// --------------------------------------------
 @mixin dropdown-list {
+  top: 0;
   left: 0;
-  top: -5px;
   display: none;
   z-index: 1000;
   position: absolute;
@@ -47,15 +11,35 @@ $dropdown-selected-bg     : $color-primary-0 !default;
   box-sizing: border-box;
   color: $dropdown-color;
   border: $dropdown-border;
-  min-width: $dropdown-width-sm;
+  background: $dropdown-bg;
+  font-family: $dropdown-font;
+  box-shadow: $dropdown-shadow;
   margin: $dropdown-list-margin;
+  min-width: $dropdown-min-width;
   padding: $dropdown-list-padding;
   border-radius: $dropdown-radius;
-  box-shadow: $dropdown-box-shadow;
-  font-family: $dropdown-font-family;
-  background: $dropdown-background-color;
+
+  &-right {
+    right: 0;
+    left: auto;
+  }
+
+  &-below {
+    top: 110%;
+    border-radius: $dropdown-radius;
+  }
+
+  &-above {
+    top: auto;
+    bottom: 110%;
+    margin-bottom: $space-0;
+    border-radius: $dropdown-radius;
+  }
 }
 
+// --------------------------------------------
+// Dropdown Item Mixin ------------------------
+// --------------------------------------------
 @mixin dropdown-item {
   display: block;
   line-height: 1.4;
@@ -64,16 +48,29 @@ $dropdown-selected-bg     : $color-primary-0 !default;
   font-size: $dropdown-font-size;
   padding: $dropdown-item-padding;
   font-weight: $dropdown-font-weight;
+  
+  .#{$dropdown-prefix}-icon {
+    color: $dropdown-icon-color;
+    font-size: $dropdown-icon-font-size;
+    padding-right: $dropdown-icon-padding;
+  }
+
+  .#{$checkbox-prefix} {
+    /* stylelint-disable */
+    margin-top: -2px;
+    /* stylelint-enable */
+    margin-right: $dropdown-icon-padding / 2;
+  }
 
   &:hover {
     text-decoration: none;
-    background: $dropdown-background-hover;
+    background: $dropdown-bg-hover;
   }
 
   &-selected {
-    color: $dropdown-selected-color !important;
-    background: $dropdown-selected-bg !important;
-    font-weight: bold !important;
+    font-weight: bold;
+    color: $dropdown-selected-color;
+    background: $dropdown-selected-bg;
 
     &::after {
       content: "";
@@ -88,12 +85,15 @@ $dropdown-selected-bg     : $color-primary-0 !default;
       transform: rotate(45deg) translateY(-50%);
     }
 
-    .c-dropdown-icon {
-      color: $dropdown-selected-color !important;
+    .#{$dropdown-prefix}-icon {
+      color: $dropdown-selected-color;
     }
   }
 }
 
+// --------------------------------------------
+// Support Text Color Mixin -------------------
+// --------------------------------------------
 @mixin not($ignoreList...) {
   @if (length($ignoreList) == 1) {
     $ignoreList: nth($ignoreList, 1);
@@ -110,6 +110,9 @@ $dropdown-selected-bg     : $color-primary-0 !default;
   }
 }
 
+// --------------------------------------------
+// Dropdown Grid Mixin ------------------------
+// --------------------------------------------
 @mixin dropdown-grid {
   top: 110%;
   float: left;
@@ -122,13 +125,16 @@ $dropdown-selected-bg     : $color-primary-0 !default;
   color: $dropdown-color;
   border: $dropdown-border;
   background-clip: padding-box;
+  box-shadow: $dropdown-shadow;
+  background-color: $dropdown-bg;
   font-size: $dropdown-font-size;
   border-radius: $dropdown-radius;
   padding: $dropdown-grid-padding;
-  box-shadow: $dropdown-box-shadow;
-  background-color: $dropdown-background-color;
 }
 
+// --------------------------------------------
+// Dropdown Grid Item Mixin -------------------
+// --------------------------------------------
 @mixin dropdown-grid-item {
   display: flex;
   overflow: hidden;
@@ -137,11 +143,26 @@ $dropdown-selected-bg     : $color-primary-0 !default;
   flex-direction: column;
   flex-basis: 33.333333%;
   justify-content: center;
-  border: 1px solid transparent;
-  padding: $dropdown-grid-item-padding;
+  color: $dropdown-color;
+  padding: $dropdown-grid-padding * 2 0;
+
+  .#{$dropdown-prefix}-icon {
+    color: $dropdown-icon-color;
+    font-size: $dropdown-icon-font-size;
+    padding: $space-0 $dropdown-icon-padding $dropdown-icon-padding;
+  }
 
   &:hover {
-    background: $color-gray-0;
-    border-color: $color-gray-2;
+    background: $dropdown-bg-hover;
+  }
+
+  &-selected {
+    font-weight: bold;
+    color: $dropdown-selected-color;
+    background: $dropdown-selected-bg;
+
+    .#{$dropdown-prefix}-icon {
+      color: $dropdown-selected-color;
+    }
   }
 }

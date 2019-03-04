@@ -1,7 +1,5 @@
-// --------------------------------------------
-// CHECKBOX & RADIOS --------------------------
-// --------------------------------------------
-.c-dropdown {
+// Dropdown Base
+.#{$dropdown-prefix} {
   overflow: visible;
   position: relative;
   display: inline-block;
@@ -10,84 +8,65 @@
     float: right;
   }
 
-  &-icon {
-    color: $color-gray-4;
-    padding-right: $space-sm;
-  }
-
   &-divider {
     border-top: $dropdown-border;
-    margin: $space-xs -$space-xs;
-  }
-}
-
-.c-dropdown-list {
-  @include dropdown-list;
-
-  &-right {
-    right: 0;
-    left: auto;
+    margin: $space-xs (-$space-xs);
   }
 
-  &-below {
-    top: 110%;
-    border-radius: $dropdown-radius;
-  }
-
-  &-above {
-    top: auto;
-    bottom: 110%;
-    margin-bottom: $space-0;
-    border-radius: $dropdown-radius;
-  }
-}
-
-
-.c-dropdown-list > li > a,
-.c-dropdown-item {
-  @include dropdown-item;
-
-  @include not($link-colors) {
-    color: $dropdown-color;
-
-    &:hover {
-      color: $dropdown-color-hover;
+  &-list {
+    @include dropdown-list;
+  
+    > li > a,
+    .#{$dropdown-prefix}-item {
+      @include dropdown-item;
+  
+      @include not($link-colors) {
+        color: $dropdown-color;
+  
+        &:hover {
+          color: $dropdown-color-hover;
+        }
+      }
     }
   }
 }
 
-.c-dropdown-grid {
-  @include dropdown-grid;
 
-  width: $dropdown-width;
+// Dropdown Grid Style
+@if $enable-grid-dropdown-classes == true {
+  .#{$dropdown-prefix}-grid {
+    @include dropdown-grid;
 
-  li a,
-  .c-dropdown-item {
-    @include dropdown-grid-item;
-  }
-
-  &-col-2 {
-    width: $dropdown-width-sm;
+    width: $dropdown-min-width + 100px;
 
     li a,
-    .c-dropdown-item {
-      flex-basis: 50%;
+    .#{$dropdown-prefix}-item {
+      @include dropdown-grid-item;
+    }
+
+    &-col-2 {
+      width: $dropdown-min-width;
+
+      li a,
+      .#{$dropdown-prefix}-item {
+        flex-basis: 50%;
+      }
+    }
+
+    &-col-4 {
+      width: $dropdown-min-width + 100px;
+
+      li a,
+      .#{$dropdown-prefix}-item {
+        flex-basis: 25%;
+      }
+    }
+
+    &-right {
+      right: 0;
+      left: auto;
+      position: absolute;
+      min-width: $dropdown-min-width;
     }
   }
-
-  &-col-4 {
-    width: $dropdown-width + 100px;
-
-    li a,
-    .c-dropdown-item {
-      flex-basis: 25%;
-    }
-  }
-}
-
-.c-dropdown-grid-right {
-  right: 0;
-  left: auto;
-  position: absolute;
-  min-width: $dropdown-width;
 }
