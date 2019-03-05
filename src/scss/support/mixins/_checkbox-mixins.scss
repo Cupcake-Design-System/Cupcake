@@ -103,6 +103,7 @@
     width: $size;
     height: $size;
     position: absolute;
+    box-shadow: $checkbox-shadow;
     background-color: $color-white;
 
     &::before {
