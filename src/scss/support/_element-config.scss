@@ -10,7 +10,7 @@ $alert-top-padding          : $space-md !default;
 $alert-font-size            : $font-body-md !default;
 $alert-line-height          : $font-body-md + 3 !default;
 $alert-font-family          : $font-family-sans !default;
-$alert-font-weight          : $font-weight-normal !default;
+$alert-font-weight          : 300 !default;
 $alert-primary-bg           : rgba($color-primary, .07) !default;
 $alert-default-color        : $color-gray-9 !default;
 $alert-primary-icon-color   : $color-primary !default;
@@ -187,17 +187,18 @@ $card-footer-line-weight     : $font-body-xl !default;
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
+$label-font-size                : 12px !default;
+$radio-prefix                   : 'c-radio' !default;
 $label-prefix                   : 'c-control' !default;
 $checkbox-prefix                : 'c-checkbox' !default;
-$radio-prefix                   : 'c-radio' !default;
-$label-font-size                : 12px !default;
-$checkbox-icon-bd               : $global-default-border !default;
-$checkbox-icon-radius           : $global-default-radius !default;
-$checkbox-transition            : background 0.2s !default;
 $checkbox-disabled-bg           : $color-gray-3 !default;
 $checkbox-disabled-color        : $color-gray-5 !default;
 $checkbox-checked-disabled-bg   : $color-gray-6 !default;
 $checkbox-checked-disabled-color: $color-gray-2 !default;
+$checkbox-transition            : background 0.2s !default;
+$checkbox-icon-radius           : $global-default-radius !default;
+$checkbox-icon-bd               : 1px solid $color-gray-5 !default;
+$checkbox-shadow                : inset 0 2px 1px 0 rgba(33, 37, 41, .1) !default;
 $checkbox-palette               : $theme-colors !default;
 $checkbox-default-size          : $global-size-xs !default;
 $checkbox-sizes                 : () !default;
@@ -334,7 +335,7 @@ $body-text-sizes: (
   sm: (
     font-size: $font-body-sm,
     font-weight: $font-weight-normal,
-    line-height: $font-body-xs + 5
+    line-height: $font-body-xs + 6
   ),
   md: (
     font-size: $font-body-md,
