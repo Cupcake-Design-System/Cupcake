@@ -4,6 +4,21 @@ layout: blank
 ---
 
 
+
+<div data-xrayhtml class="prism">
+{{#each btn.color}}
+{{#each this}}
+<button class="c-btn c-btn-{{this}}">Normal</button>
+<button class="c-btn c-btn-{{this}} c-btn-active">Active</button>
+<button class="c-btn c-btn-{{this}} c-btn-disabled">Disabled</button>
+<br><br>
+{{/each}}
+{{/each}}
+</div>
+
+<br>
+<br>
+
 <div data-xrayhtml class="prism">
 {{#each btn.color}}
 {{#each this}}
