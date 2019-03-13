@@ -2,23 +2,23 @@
 // Button Base Mixin --------------------------
 // --------------------------------------------
 @mixin btn-base {
-  vertical-align: baseline;
-  display: inline-block;
-  text-decoration: none;
-  white-space: nowrap;
-  position: relative;
-  text-align: center;
-  cursor: pointer;
   outline: 0;
+  border: $btn-bd;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  white-space: nowrap;
+  color: $btn-default-c;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: baseline;
+  border-radius: $btn-radius;
   font-weight: $btn-font-weight;
   font-family: $btn-font-family;
-  color: $btn-default-c;
-  border: $btn-bd;
-  border-radius: $btn-radius;
   transition: background-color 0.1s ease-in;
 
-  @if $enable-btn-shadows == true {
-    box-shadow: $btn-shadow-inset;
+  @if $btn-shadow {
+    box-shadow: $btn-shadow;
   }
 }
 
@@ -34,10 +34,10 @@
   $bg: transparent,
   $bg-hover: $border-color,
   $color-hover: $color-white) {
-  border: 1px solid $border-color;
-  background-color: $bg;
   color: $color;
   box-shadow: none;
+  background-color: $bg;
+  border: 1px solid $border-color;
 
   &.c-btn-outline-active {
     @include btn-active($bg, $border-color);
@@ -45,8 +45,8 @@
 
   &:not(:disabled) {
     &:hover {
-      background-color: $bg-hover;
       color: $color-hover;
+      background-color: $bg-hover;
       border-color: $border-color-hover;
     }
 
@@ -75,9 +75,9 @@
 @mixin btn-active(
   $bg: $color-gray-1,
   $border: $color-gray-4) {
-  text-decoration: none;
-  background-color: desaturate($bg, 15%);
-  border-color: darken($bg, 15%);
+  background: $bg;
+  background-image: none;
+  box-shadow: $btn-active-shadow;
 }
 
 @mixin btn-active-selected () {
@@ -100,21 +100,18 @@
 @mixin btn-disabled(
   $bg: $btn-disabled-bg,
   $bd: 1px solid $bg,
-  $color: $color-gray-0,
+  $color: $btn-disabled-c,
   $shadow:none ) {
   &,
   &:hover,
   &:focus,
   &:active {
-    top: 0;
-    background: $bg;
-    text-shadow: $shadow;
     color: $color;
     line-height: 1;
-    cursor: not-allowed;
+    background: $bg;
     appearance: none;
     box-shadow: none;
-    opacity: $btn-disabled-opacity;
+    cursor: not-allowed;
 
     @if $btn-disabled-bd-colored == false {
       border: $bd;
@@ -138,8 +135,8 @@
     background: $bg;
   }
 
-  @if $enable-btn-shadows == true {
-    box-shadow: $shadow-xs;
+  @if $btn-shadow {
+    box-shadow: $btn-shadow;
   }
 
   @if $enable-btn-border == false {
@@ -151,17 +148,6 @@
   }
 
   color: $color;
-
-  &:active,
-  &.c-btn-active {
-    background: $bg-active;
-
-    @if $enable-btn-border == false {
-      border-color: transparent;
-    } @else {
-      border-color: $border;
-    }
-  }
 
   &:focus,
   &.c-btn-focus {
@@ -177,6 +163,17 @@
     &:hover {
       background-color: $bg-hover;
       background-image: none;
+    }
+  }
+
+  &:active,
+  &.c-btn-active {
+    @include btn-active($bg-active);
+
+    @if $enable-btn-border == false {
+      border-color: transparent;
+    } @else {
+      border-color: $border;
     }
   }
 }
@@ -225,9 +222,9 @@
 // Button Size Mixin --------------------------
 // --------------------------------------------
 @mixin btn-size($font-size, $padding, $height) {
-  font-size: $font-size;
-  padding: $padding;
   height: $height;
+  padding: $padding;
+  font-size: $font-size;
   line-height: $height - 2;
 }
 
