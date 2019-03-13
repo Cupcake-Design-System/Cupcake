@@ -18,15 +18,19 @@
   &-link {
     line-height: 1.4;
     display: inline-block;
-    margin-left: $space-sm;
+    color: $footer-color-link;
+    text-decoration: underline;
+    margin: $footer-links-margin;
     font-size: $footer-font-size;
     background-color: transparent;
-    color: $color-primary;
-    text-decoration: underline;
+
+    &:last-child {
+      margin-right: $space-0;
+    }
 
     a,
     a.c-a {
-      color: $color-primary;
+      color: $footer-color-link;
       text-decoration: underline;
       font-size: $footer-font-size;
     }

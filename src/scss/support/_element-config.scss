@@ -10,7 +10,7 @@ $alert-top-padding          : $space-md !default;
 $alert-font-size            : $font-body-md !default;
 $alert-line-height          : $font-body-md + 3 !default;
 $alert-font-family          : $font-family-sans !default;
-$alert-font-weight          : $font-weight-normal !default;
+$alert-font-weight          : 300 !default;
 $alert-primary-bg           : rgba($color-primary, .07) !default;
 $alert-default-color        : $color-gray-9 !default;
 $alert-primary-icon-color   : $color-primary !default;
@@ -71,7 +71,6 @@ $badge-sm-font-size         : $font-body-xs - 1 !default;
 // Buttons ------------------------------------
 // --------------------------------------------
 $button-prefix          : 'c-btn' !default;
-$enable-btn-shadows     : false !default;
 $enable-btn-gradients   : false !default;
 $enable-btn-border      : true !default;
 $enable-btn-white-label : false !default;
@@ -85,14 +84,20 @@ $btn-font-weight        : $font-weight-bold !default;
 $btn-bd                 : 1px solid transparent !default;
 $btn-radius             : $global-default-radius !default;
 $btn-default-c          : $color-gray-7 !default;
-$btn-disabled-bg        : $color-gray-1 !default;
+$btn-disabled-bg        : $color-gray-3 !default;
+$btn-disabled-c         : $color-gray-6 !default;
+$btn-link-bd            : 1px solid $color-gray-4 !default;
+$btn-link-hover-bg      : $color-gray-0 !default;
 $btn-disabled-bd        : 1px solid $color-gray-3 !default;
 $btn-disabled-bd-colored: false !default;
-$btn-disabled-opacity   : .2 !default;
+$btn-shadow             : false !default;
 $btn-shadow-focus       : 0 0 2px 1px $color-primary-7 !default;
 $btn-active-selected    : false !default;
-$btn-shadow-inset       : 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 2px rgba(black, .25) !default;
-$btn-shadow-secondary   : 0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
+$btn-active-shadow      : none !default;
+
+// $btn-active-shadow      : inset 0 1px 7px rgba(27, 31, 35, 0.15) !default;
+
+
 $btn-box-width          : $global-size-md !default;
 
 $btn-box-sizes: (
@@ -164,13 +169,13 @@ $card-border-radius          : $global-default-radius !default;
 $card-min-width              : 250px !default;
 $card-padding-v              : $space-md - $space-xs !default;
 $card-padding-h              : $space-md !default;
-$card-shadow                 : $shadow-sm !default;
+$card-shadow                 : $shadow-xs !default;
 $card-shadow-hover           : $shadow-md !default;
 $card-border-hover           : $global-default-border !default;
 $card-header-font-size       : $font-body-lg !default;
 $card-header-font-weight     : $font-weight-bold !default;
 $card-header-line-height     : 24px !default;
-$card-header-text-color      : $card-text-color !default;
+$card-header-color           : $color-gray-9 !default;
 $card-header-icon-color      : $color-gray-5 !default;
 $card-header-icon-hover-color: lighten($card-header-icon-color, 10%) !default;
 $card-body-font-size         : $font-body-md !default;
@@ -187,17 +192,18 @@ $card-footer-line-weight     : $font-body-xl !default;
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
+$label-font-size                : 12px !default;
+$radio-prefix                   : 'c-radio' !default;
 $label-prefix                   : 'c-control' !default;
 $checkbox-prefix                : 'c-checkbox' !default;
-$radio-prefix                   : 'c-radio' !default;
-$label-font-size                : 12px !default;
-$checkbox-icon-bd               : $global-default-border !default;
-$checkbox-icon-radius           : $global-default-radius !default;
-$checkbox-transition            : background 0.2s !default;
 $checkbox-disabled-bg           : $color-gray-3 !default;
 $checkbox-disabled-color        : $color-gray-5 !default;
 $checkbox-checked-disabled-bg   : $color-gray-6 !default;
 $checkbox-checked-disabled-color: $color-gray-2 !default;
+$checkbox-transition            : background 0.2s !default;
+$checkbox-icon-radius           : $global-default-radius !default;
+$checkbox-icon-bd               : 1px solid $color-gray-5 !default;
+$checkbox-shadow                : inset 0 2px 1px 0 rgba(33, 37, 41, .1) !default;
 $checkbox-palette               : $theme-colors !default;
 $checkbox-default-size          : $global-size-xs !default;
 $checkbox-sizes                 : () !default;
@@ -268,9 +274,10 @@ $select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
 $footer-prefix          : 'c-footer' !default;
 $footer-font-size       : 12px !default;
 $footer-color           : $color-gray-9 !default;
-$footer-color-link      : $color-gray-8 !default;
+$footer-color-link      : $color-primary !default;
 $footer-background-color: $color-gray-1 !default;
 $footer-padding         : $space-md ($space-md + $space-sm) !default;
+$footer-links-margin    : $space-0 $space-sm !default;
 $footer-height          : 48px !default;
 $footer-border-top      : 1px solid $color-gray-3;
 
@@ -296,6 +303,39 @@ $switch-sizes: (
 ) !default;
 
 $switch-colors: () !default;
+
+
+// --------------------------------------------
+// TABS ---------------------------------------
+// --------------------------------------------
+$tabs-prefix            : 'c-tabs' !default;
+$tab-item-prefix        : 'c-tab-item' !default;
+$tabs-full-width-border : true !default;
+$tabs-color             : $color-gray-7 !default;
+$tabs-color-hover       : $color-primary !default;
+$tabs-color-active      : $color-primary !default;
+$tabs-color-disabled    : $color-gray-6 !default;
+$tabs-font-weight       : bold !default;
+$tabs-border-color      : $color-gray-2 !default;
+$tabs-bordered-radius   : 2px !default;
+$tabs-bordered-bg       : $color-gray-0 !default;
+$tabs-bordered-bg-hover : $color-white !default;
+$tabs-bordered-bg-active: $tabs-bordered-bg-hover !default;
+$tabs-hover-transition  : border-color 0.2s ease 0s !default;
+$tabs-box-shadow        : inset 0 -1px 0 0 $tabs-border-color;
+$tabs-border-bottom     : 2px !default;
+
+$tabs-font-size         : 12px !default;
+$tabs-height            : 32px !default;
+$tabs-padding           : $space-sm $space-md !default;
+
+$tabs-font-size-small   : 11px !default;
+$tabs-height-small      : 24px !default;
+$tabs-padding-small     : $space-xs $space-sm !default;
+
+$tabs-font-size-large   : 14px !default;
+$tabs-height-large      : 40px !default;
+$tabs-line-height-large : 24px !default;
 
 
 // --------------------------------------------
@@ -347,7 +387,7 @@ $body-text-sizes: (
   sm: (
     font-size: $font-body-sm,
     font-weight: $font-weight-normal,
-    line-height: $font-body-xs + 5
+    line-height: $font-body-xs + 6
   ),
   md: (
     font-size: $font-body-md,

@@ -22,19 +22,19 @@ $button-test-map: (
       }
       @include expect {
         .c-btn {
-          vertical-align: baseline;
-          display: inline-block;
-          text-decoration: none;
-          white-space: nowrap;
-          position: relative;
-          text-align: center;
-          cursor: pointer;
           outline: 0;
+          border: 1px solid transparent;
+          cursor: pointer;
+          text-align: center;
+          position: relative;
+          white-space: nowrap;
+          color: #495057;
+          text-decoration: none;
+          display: inline-block;
+          vertical-align: baseline;
+          border-radius: 2px;
           font-weight: 700;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-          color: #495057;
-          border: 1px solid transparent;
-          border-radius: 2px;
           transition: background-color 0.1s ease-in;
         }
       }
@@ -50,9 +50,9 @@ $button-test-map: (
       }
       @include expect {
         .c-btn-sm {
-          font-size: 11px;
-          padding: 0 8px;
           height: 24px;
+          padding: 0 8px;
+          font-size: 11px;
           line-height: 22px;
         }
       }
@@ -75,12 +75,6 @@ $button-test-map: (
           color: #ffffff;
         }
 
-        .c-btn-purple:active,
-        .c-btn-purple.c-btn-active {
-          background: red;
-          border-color: green;
-        }
-
         .c-btn-purple:focus,
         .c-btn-purple.c-btn-focus {
           box-shadow: 0 0 0 0.15rem rgba(128, 0, 128, 0.5);
@@ -89,6 +83,14 @@ $button-test-map: (
         .c-btn-purple:hover {
           background-color: orange;
           background-image: none;
+        }
+
+        .c-btn-purple:active,
+        .c-btn-purple.c-btn-active {
+          background: red;
+          background-image: none;
+          box-shadow: none;
+          border-color: green;
         }
 
       }
