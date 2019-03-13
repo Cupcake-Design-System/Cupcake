@@ -99,15 +99,13 @@
 
 @mixin card-footer {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   border-top: $card-border;
   padding: $card-padding-v $card-padding-h;
   border-radius: $radius-0 $radius-0 $card-border-radius $card-border-radius;
 
+  a:not(.c-btn),
   &-link {
-    display: flex;
-    flex: 1 1 auto;
-    align-items: center;
     text-decoration: underline;
     color: $card-footer-color;
     font-size: $card-footer-font-size;
@@ -116,6 +114,14 @@
     &:hover {
       color: $card-footer-hover-color;
     }
+  }
+
+  &-item {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    font-size: $card-footer-font-size;
+    line-height: $card-footer-line-weight;
 
     &-center {
       justify-content: center;
@@ -123,6 +129,10 @@
 
     &-right {
       justify-content: flex-end;
+    }
+
+    &-left {
+      justify-content: flex-start;
     }
   }
 }
