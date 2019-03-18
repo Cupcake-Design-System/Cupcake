@@ -130,15 +130,13 @@ $shadow-xs: 0 2px 4px -2px rgba(33, 37, 41, .1) !default;
 $shadow-sm: 0 4px 4px -2px rgba(33, 37, 41, .1) !default;
 $shadow-md: 0 6px 8px -2px rgba(33, 37, 41, .1) !default;
 $shadow-lg: 0 8px 8px -2px rgba(33, 37, 41, .1) !default;
-$shadow-xl: 0 12px 24px 0 rgba(0, 0, 0, .1) !default;
 
 // This is a looped map & classes will be generated based on key/value pairs i.e. "c-shadow-sm"
 $shadow: (
   xs: $shadow-xs,
   sm: $shadow-sm,
   md: $shadow-md,
-  lg: $shadow-lg,
-  xl: $shadow-xl,
+  lg: $shadow-lg
 );
 
 $global-default-border: 1px solid $color-gray-4 !default;

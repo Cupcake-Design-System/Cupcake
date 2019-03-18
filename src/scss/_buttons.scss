@@ -4,14 +4,14 @@
 .#{$button-prefix} {
   @include btn-base;
 
-  &:focus,
-  &-focus {
-    @include btn-focus;
-  }
-
   &:active,
   &-active {
     @include btn-active;
+  }
+
+  &:focus,
+  &-focus {
+    @include btn-focus;
   }
 
   &-disabled,
@@ -47,23 +47,23 @@
 .#{$button-prefix}-link {
   @include btn-base;
 
-  background: transparent;
-  border: 1px solid transparent;
   box-shadow: none;
-  color: color(primary, 7);
-  font-weight: $btn-font-weight;
+  color: $btn-default-c;
+  background: transparent;
   transition: all 0.3s ease 0s;
+  border: 1px solid transparent;
+  font-weight: $btn-font-weight;
 
   &:hover {
-    background-color: color(gray, 1);
-    border: 1px solid color(gray, 2);
+    border: $btn-link-bd;
+    background-color: $btn-link-hover-bg;
   }
 
   &:active {
     @include btn-active;
 
-    color: color(primary, 9);
-    box-shadow: none;
+    border: $btn-link-bd;
+    color: $color-primary-9;
   }
 
   &.#{$button-prefix}-disabled,
@@ -74,13 +74,12 @@
     &:focus,
     &:active {
       background: transparent;
-      color: color(gray, 6);
+      color: $btn-disabled-c;
       line-height: 1;
       border-color: transparent;
       cursor: not-allowed;
       appearance: none;
       box-shadow: none;
-      opacity: $btn-disabled-opacity;
     }
   }
 

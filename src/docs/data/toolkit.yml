@@ -41,7 +41,6 @@ shadow:
     - sm
     - md
     - lg
-    - xl
 type-sizes:
   base:
     - xxl
