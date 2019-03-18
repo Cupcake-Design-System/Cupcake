@@ -52,8 +52,10 @@
           <li class="docs-nav-item"><a href="elements.html#buttons">Buttons</a></li>
           <li class="docs-nav-item"><a href="elements.html#cards">Cards</a></li>
           <li class="docs-nav-item"><a href="elements.html#checkboxes">Checkboxes</a></li>
+          <li class="docs-nav-item"><a href="elements.html#dropdowns">Dropdowns</a></li>
           <li class="docs-nav-item"><a href="elements.html#footer">Footer</a></li>
           <li class="docs-nav-item"><a href="elements.html#forms">Forms</a></li>
+          <li class="docs-nav-item"><a href="elements.html#header">Header</a></li>
           <li class="docs-nav-item"><a href="elements.html#switch">Switch</a></li>
           <li class="docs-nav-item"><a href="elements.html#tabs">Tabs</a></li>
         </ul>
@@ -73,6 +75,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
 
 <script>
+  $(document).ready(function () {
+
+$(".c-dropdown").click(function () {
+  $(this).find(".c-dropdown-list, .c-dropdown-grid").slideToggle(100);
+});
+
+$(document).on("click", function (event) {
+  var $dropdownTrigger = $(".c-dropdown");
+
+  if ($dropdownTrigger !== event.target && !$dropdownTrigger.has(event.target).length) {
+    $(".c-dropdown-list, .c-dropdown-grid").slideUp("fast");
+  }
+});
+});
+
+
 (function( $ ) {
   var pluginName = "xrayhtml",
 		o = {

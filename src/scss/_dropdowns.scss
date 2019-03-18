@@ -1,0 +1,72 @@
+// Dropdown Base
+.#{$dropdown-prefix} {
+  overflow: visible;
+  position: relative;
+  display: inline-block;
+
+  &-right {
+    float: right;
+  }
+
+  &-divider {
+    border-top: $dropdown-border;
+    margin: $space-xs (-$space-xs);
+  }
+
+  &-list {
+    @include dropdown-list;
+  
+    > li > a,
+    .#{$dropdown-prefix}-item {
+      @include dropdown-item;
+  
+      @include not($link-colors) {
+        color: $dropdown-color;
+  
+        &:hover {
+          color: $dropdown-color-hover;
+        }
+      }
+    }
+  }
+}
+
+
+// Dropdown Grid Style
+@if $enable-grid-dropdown-classes == true {
+  .#{$dropdown-prefix}-grid {
+    @include dropdown-grid;
+
+    width: $dropdown-min-width + 100px;
+
+    li a,
+    .#{$dropdown-prefix}-item {
+      @include dropdown-grid-item;
+    }
+
+    &-col-2 {
+      width: $dropdown-min-width;
+
+      li a,
+      .#{$dropdown-prefix}-item {
+        flex-basis: 50%;
+      }
+    }
+
+    &-col-4 {
+      width: $dropdown-min-width + 100px;
+
+      li a,
+      .#{$dropdown-prefix}-item {
+        flex-basis: 25%;
+      }
+    }
+
+    &-right {
+      right: 0;
+      left: auto;
+      position: absolute;
+      min-width: $dropdown-min-width;
+    }
+  }
+}

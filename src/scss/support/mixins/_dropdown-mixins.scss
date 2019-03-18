@@ -1,0 +1,168 @@
+// --------------------------------------------
+// Dropdown List Mixin ------------------------
+// --------------------------------------------
+@mixin dropdown-list {
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  list-style-type: none;
+  box-sizing: border-box;
+  color: $dropdown-color;
+  border: $dropdown-border;
+  background: $dropdown-bg;
+  font-family: $dropdown-font;
+  box-shadow: $dropdown-shadow;
+  margin: $dropdown-list-margin;
+  min-width: $dropdown-min-width;
+  padding: $dropdown-list-padding;
+  border-radius: $dropdown-radius;
+
+  &-right {
+    right: 0;
+    left: auto;
+  }
+
+  &-below {
+    top: 110%;
+    border-radius: $dropdown-radius;
+  }
+
+  &-above {
+    top: auto;
+    bottom: 110%;
+    margin-bottom: $space-0;
+    border-radius: $dropdown-radius;
+  }
+}
+
+// --------------------------------------------
+// Dropdown Item Mixin ------------------------
+// --------------------------------------------
+@mixin dropdown-item {
+  display: block;
+  line-height: 1.4;
+  position: relative;
+  text-decoration: none;
+  font-size: $dropdown-font-size;
+  padding: $dropdown-item-padding;
+  font-weight: $dropdown-font-weight;
+  
+  .#{$dropdown-prefix}-icon {
+    color: $dropdown-icon-color;
+    font-size: $dropdown-icon-font-size;
+    padding-right: $dropdown-icon-padding;
+  }
+
+  .#{$checkbox-prefix} {
+    /* stylelint-disable */
+    margin-top: -2px;
+    /* stylelint-enable */
+    margin-right: $dropdown-icon-padding / 2;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background: $dropdown-bg-hover;
+  }
+
+  &-selected {
+    font-weight: bold;
+    color: $dropdown-selected-color;
+    background: $dropdown-selected-bg;
+
+    &::after {
+      content: "";
+      width: 6px;
+      right: 20px;
+      height: 10px;
+      position: absolute;
+      border-style: solid;
+      top: calc(50% - 2px);
+      border-width: 0 2px 2px 0;
+      border-color: $dropdown-selected-color;
+      transform: rotate(45deg) translateY(-50%);
+    }
+
+    .#{$dropdown-prefix}-icon {
+      color: $dropdown-selected-color;
+    }
+  }
+}
+
+// --------------------------------------------
+// Support Text Color Mixin -------------------
+// --------------------------------------------
+@mixin not($ignoreList...) {
+  @if (length($ignoreList) == 1) {
+    $ignoreList: nth($ignoreList, 1);
+  }
+
+  $exludeList: '';
+
+  @each $not in $ignoreList {
+    $exludeList: $exludeList + ':not(#{$not})';
+  }
+
+  &#{$exludeList} {
+    @content;
+  }
+}
+
+// --------------------------------------------
+// Dropdown Grid Mixin ------------------------
+// --------------------------------------------
+@mixin dropdown-grid {
+  top: 110%;
+  float: left;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  list-style: none;
+  position: absolute;
+  color: $dropdown-color;
+  border: $dropdown-border;
+  background-clip: padding-box;
+  box-shadow: $dropdown-shadow;
+  background-color: $dropdown-bg;
+  font-size: $dropdown-font-size;
+  border-radius: $dropdown-radius;
+  padding: $dropdown-grid-padding;
+}
+
+// --------------------------------------------
+// Dropdown Grid Item Mixin -------------------
+// --------------------------------------------
+@mixin dropdown-grid-item {
+  display: flex;
+  overflow: hidden;
+  margin: $space-0;
+  text-align: center;
+  flex-direction: column;
+  flex-basis: 33.333333%;
+  justify-content: center;
+  color: $dropdown-color;
+  padding: $dropdown-grid-padding * 2 0;
+
+  .#{$dropdown-prefix}-icon {
+    color: $dropdown-icon-color;
+    font-size: $dropdown-icon-font-size;
+    padding: $space-0 $dropdown-icon-padding $dropdown-icon-padding;
+  }
+
+  &:hover {
+    background: $dropdown-bg-hover;
+  }
+
+  &-selected {
+    font-weight: bold;
+    color: $dropdown-selected-color;
+    background: $dropdown-selected-bg;
+
+    .#{$dropdown-prefix}-icon {
+      color: $dropdown-selected-color;
+    }
+  }
+}

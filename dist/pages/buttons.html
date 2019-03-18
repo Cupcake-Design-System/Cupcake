@@ -376,6 +376,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
   
   <script>
+    $(document).ready(function () {
+  
+  $(".c-dropdown").click(function () {
+    $(this).find(".c-dropdown-list, .c-dropdown-grid").slideToggle(100);
+  });
+  
+  $(document).on("click", function (event) {
+    var $dropdownTrigger = $(".c-dropdown");
+  
+    if ($dropdownTrigger !== event.target && !$dropdownTrigger.has(event.target).length) {
+      $(".c-dropdown-list, .c-dropdown-grid").slideUp("fast");
+    }
+  });
+  });
+  
+  
   (function( $ ) {
     var pluginName = "xrayhtml",
   		o = {

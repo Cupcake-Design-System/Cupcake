@@ -1,0 +1,79 @@
+// --------------------------------------------
+// HEADER -------------------------------------
+// --------------------------------------------
+
+.#{$app-header-prefix} {
+  @include header;
+
+  &-fixed {
+    position: fixed;
+    top: 0;
+  }
+
+  &-item {
+    @include header-item;
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+
+    .#{$app-header-prefix}-item {
+      border-right: 1px solid $header-borders;
+    }
+  }
+
+  &-center {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+
+    .c-input-container {
+      width: 100%;
+      margin: $space-0 1.5rem;
+    }
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+
+    .#{$app-header-prefix}-item {
+      border-left: 1px solid $header-borders;
+    }
+  }
+
+  .c-dropdown-list-below {
+    top: 100%;
+  }
+}
+
+.#{$app-header-prefix}-inverse {
+  background-color: $header-inverse-bg;
+  border-color: $header-inverse-borders;
+
+  .#{$app-header-prefix}-item {
+    border-color: $header-inverse-borders;
+
+    & a {
+      color: $header-inverse-text-color;
+
+      &:hover {
+        background: $header-inverse-bg-hover;
+      }
+    }
+  }
+}
+
+.#{$app-header-prefix}-tabs {
+  &.c-tabs {
+    /* stylelint-disable */
+    box-shadow: inset 0 -1px 0 0 #e6edf1;
+    padding-left: 20px;
+    /* stylelint-enable */
+  }
+}
+
+.#{$app-header-prefix}-logo img {
+  width: $header-logo-width;
+}

@@ -269,6 +269,39 @@ $select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
 
 
 // --------------------------------------------
+// DROPDOWN -----------------------------------
+// --------------------------------------------
+$dropdown-prefix             : 'c-dropdown' !default;
+$enable-grid-dropdown-classes: true !default;
+$dropdown-min-width          : 200px !default;
+$dropdown-font               : $font-family-sans !default;
+$dropdown-font-size          : 12px !default;
+$dropdown-font-weight        : normal !default;
+$dropdown-bg                 : $color-white !default;
+$dropdown-bg-hover           : $color-gray-0 !default;
+$dropdown-border             : 1px solid $color-gray-2 !default;
+$dropdown-shadow             : $shadow-md !default;
+$dropdown-color              : $color-gray-9 !default;
+$dropdown-color-hover        : $color-gray-9 !default;
+$dropdown-icon-color         : $color-gray-4;
+$dropdown-icon-font-size     : 14px !default;
+$dropdown-icon-padding       : $space-sm;
+$dropdown-radius             : $global-default-radius !default;
+$dropdown-list-padding       : $space-xs !default;
+$dropdown-list-margin        : 0 !default;
+$dropdown-item-padding       : $space-sm ($space-xs + $space-sm) !default;
+$dropdown-grid-padding       : $space-sm !default;
+$dropdown-selected-color     : $color-primary-8 !default;
+$dropdown-selected-bg        : $color-primary-0 !default;
+$link-colors:
+  '[class*="primary"]',
+  '[class*="success"]',
+  '[class*="warning"]',
+  '[class*="danger"]',
+  '.c-text-muted';
+
+
+// --------------------------------------------
 // FOOTER -------------------------------------
 // --------------------------------------------
 $footer-prefix          : 'c-footer' !default;
