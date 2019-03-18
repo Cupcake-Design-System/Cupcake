@@ -269,6 +269,20 @@ $select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
 
 
 // --------------------------------------------
+// FOOTER -------------------------------------
+// --------------------------------------------
+$footer-prefix          : 'c-footer' !default;
+$footer-font-size       : 12px !default;
+$footer-color           : $color-gray-9 !default;
+$footer-color-link      : $color-primary !default;
+$footer-background-color: $color-gray-1 !default;
+$footer-padding         : $space-md ($space-md + $space-sm) !default;
+$footer-links-margin    : $space-0 $space-sm !default;
+$footer-height          : 48px !default;
+$footer-border-top      : 1px solid $color-gray-3;
+
+
+// --------------------------------------------
 // Switches -----------------------------------
 // --------------------------------------------
 $switch-prefix             : 'c-switch' !default;

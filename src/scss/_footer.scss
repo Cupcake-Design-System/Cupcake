@@ -1,0 +1,50 @@
+// --------------------------------------------
+// FOOTER -------------------------------------
+// --------------------------------------------
+.#{$footer-prefix} {
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.4;
+  color: $footer-color;
+  height: $footer-height;
+  padding: $footer-padding;
+  font-size: $footer-font-size;
+  justify-content: space-between;
+  border-top: $footer-border-top;
+  background-color: $footer-background-color;
+
+  &-link {
+    line-height: 1.4;
+    display: inline-block;
+    color: $footer-color-link;
+    text-decoration: underline;
+    margin: $footer-links-margin;
+    font-size: $footer-font-size;
+    background-color: transparent;
+
+    &:last-child {
+      margin-right: $space-0;
+    }
+
+    a,
+    a.c-a {
+      color: $footer-color-link;
+      text-decoration: underline;
+      font-size: $footer-font-size;
+    }
+  }
+
+  // @include media-breakpoint-down(sm) {
+  //   text-align: center;
+  //   display: inline-block;
+  //   padding: 5px;
+  //   line-height: 1.5;
+  // }
+
+  &.#{$footer-prefix}-transparent {
+    background-color: transparent;
+  }
+}
+
