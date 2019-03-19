@@ -61,6 +61,7 @@ $switch-test-sizes: (
             cursor: not-allowed;
             background: #dee2e6;
             border-color: #dee2e6;
+            box-shadow: none;
           }
 
           .c-switch input:disabled + .c-switch-handle::before,
@@ -89,10 +90,11 @@ $switch-test-sizes: (
             width: 32px;
             position: absolute;
             display: inline-block;
-            background: #ffffff;
+            background: #f8f9fa;
             background-clip: padding-box;
             border: 1px solid #ced4da;
             border-radius: 200px;
+            box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
             transition: background .2s, border .2s, box-shadow .2s, color .2s;
           }
 
@@ -158,6 +160,7 @@ $switch-test-sizes: (
             cursor: not-allowed;
             background: #868e96;
             border-color: #868e96;
+            box-shadow: none;
           }
 
           .c-switch-disabled .c-switch-handle {

@@ -320,15 +320,18 @@ $footer-border-top      : 1px solid $color-gray-3;
 // --------------------------------------------
 $switch-prefix             : 'c-switch' !default;
 $switch-control-prefix     : 'c-control' !default;
-$default-switch-height     : $global-size-xs !default;
-$default-switch-radius     : $radius-round !default;
-$default-switch-font-size  : $font-body-xs !default;
-$default-switch-bg         : $color-primary !default;
+$switch-height             : $global-size-xs !default;
+$switch-radius             : $radius-round !default;
+$switch-font-size          : $font-body-xs !default;
+$switch-border             : $global-default-border;
 $switch-label-off          : $color-gray-7 !default;
 $switch-label-on           : $color-white !default;
+$switch-off-bg             : $color-gray-0 !default;
+$switch-on-bg              : $color-primary !default;
+$switch-shadow             : inset 0 1px 1px 0 rgba(0, 0, 0, .1) !default;
 $switch-handle             : $color-white !default;
-$switch-disabled           : $color-gray-3 !default;
 $switch-handle-disabled    : $color-gray-0 !default;
+$switch-disabled           : $color-gray-3 !default;
 $switch-disabled-checked-bg: $color-gray-6 !default;
 
 $switch-sizes: (

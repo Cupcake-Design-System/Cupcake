@@ -1,7 +1,7 @@
 // --------------------------------------------
 // Switch Control Mixin -----------------------
 // --------------------------------------------
-@mixin switch-control($size: $default-switch-height) {
+@mixin switch-control($size: $switch-height) {
   line-height: $size;
   font-size: $size - 4;
   padding: $space-0 $space-sm $space-0 ($size * 2 + 8);
@@ -10,7 +10,7 @@
 // --------------------------------------------
 // Switch Base Mixin --------------------------
 // --------------------------------------------
-@mixin switch-base($height: $default-switch-height) {
+@mixin switch-base($height: $switch-height) {
   position: relative;
   min-height: $height;
   display: inline-block;
@@ -26,13 +26,13 @@
     position: absolute;
 
     &:focus + .#{$switch-prefix}-handle {
-      border-color: $default-switch-bg;
-      box-shadow: 0 0 0 .1rem rgba($default-switch-bg, .2);
+      border-color: $switch-on-bg;
+      box-shadow: 0 0 0 .1rem rgba($switch-on-bg, .2);
     }
 
     &:checked + .#{$switch-prefix}-handle {
-      background: $default-switch-bg;
-      border-color: $default-switch-bg;
+      background: $switch-on-bg;
+      border-color: $switch-on-bg;
 
       &::before {
         left: $height;
@@ -48,6 +48,7 @@
       cursor: not-allowed;
       background: $switch-disabled;
       border-color: $switch-disabled;
+      box-shadow: none;
 
       &::before {
         box-shadow: none;
@@ -74,10 +75,11 @@
     width: $height * 2;
     position: absolute;
     display: inline-block;
-    background: $color-white;
+    background: $switch-off-bg;
     background-clip: padding-box;
     border: $global-default-border;
-    border-radius: $default-switch-radius;
+    border-radius: $switch-radius;
+    box-shadow: $switch-shadow;
     transition: background .2s, border .2s, box-shadow .2s, color .2s;
 
     &::before {
@@ -89,7 +91,7 @@
       width: $height - 2;
       height: $height - 2;
       background: $color-white;
-      border-radius: $default-switch-radius;
+      border-radius: $switch-radius;
       box-shadow: 1px 1px 4px 0 rgba(33, 37, 41, .4);
       transition: background .2s, border .2s, box-shadow .2s, color .2s, left .2s;
     }
@@ -140,6 +142,7 @@
         cursor: not-allowed;
         background: $switch-disabled-checked-bg;
         border-color: $switch-disabled-checked-bg;
+        box-shadow: none;
       }
     }
 
@@ -155,7 +158,7 @@
 // --------------------------------------------
 // Switch Size Mixin --------------------------
 // --------------------------------------------
-@mixin switch-size($height: $default-switch-height) {
+@mixin switch-size($height: $switch-height) {
   min-height: $height;
   min-width: $height * 2;
 
