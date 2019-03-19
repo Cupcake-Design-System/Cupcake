@@ -97,39 +97,6 @@
     }
   }
 
-  &-label {
-    top: $space-sm;
-    left: $space-sm;
-    font-size: 12px;
-    height: inherit;
-    cursor: pointer;
-    box-shadow: none;
-    position: absolute;
-    border-radius: inherit;
-    text-transform: uppercase;
-    transition: 0.25s ease-out;
-
-    &::after,
-    &::before {
-      line-height: 1;
-      transition: 0.25s ease-out;
-    }
-
-    &::before {
-      opacity: 1;
-      content: attr(data-on);
-      margin-right: $space-xs;
-      color: $switch-label-on;
-    }
-
-    &::after {
-      opacity: 1;
-      margin-left: $space-xs;
-      content: attr(data-off);
-      color: $switch-label-off;
-    }
-  }
-
   &-disabled {
     color: $switch-disabled-checked-bg;
     cursor: not-allowed;
@@ -175,6 +142,41 @@
     &::before {
       width: $height - 2;
       height: $height - 2;
+    }
+  }
+
+  @if ($height >= 24px) {
+    .#{$switch-prefix}-label {
+      top: $space-sm;
+      left: $space-sm;
+      font-size: 12px;
+      height: inherit;
+      cursor: pointer;
+      box-shadow: none;
+      position: absolute;
+      border-radius: inherit;
+      text-transform: uppercase;
+      transition: 0.25s ease-out;
+
+      &::after,
+      &::before {
+        line-height: 1;
+        transition: 0.25s ease-out;
+      }
+
+      &::before {
+        opacity: 1;
+        content: attr(data-on);
+        margin-right: $space-xs;
+        color: $switch-label-on;
+      }
+
+      &::after {
+        opacity: 1;
+        margin-left: $space-xs;
+        content: attr(data-off);
+        color: $switch-label-off;
+      }
     }
   }
 }
