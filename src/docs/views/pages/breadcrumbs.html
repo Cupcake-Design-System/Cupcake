@@ -3,10 +3,40 @@ title: Test
 layout: blank
 ---
 
-<h3 class="c-header-md">Breadcrumb</h3>
-<ul class="c-breadcrumb">
-    <li class="c-breadcrumb-item"><div class="c-btn c-btn-secondary c-btn-box"><i class="fa fa-ellipsis-h"></i></div></li>
+<h3>Breadcrumb</h3>
+<div data-xrayhtml class="prism xrayhtml">
+  <ul class="c-breadcrumb">
     <li class="c-breadcrumb-item"><a class="c-a" href="#">Home</a></li>
     <li class="c-breadcrumb-item"><a class="c-a" href="#">Library</a></li>
     <li class="c-breadcrumb-item c-breadcrumb-item-active">Data</li>
   </ul>
+</div>
+
+{{> space}}
+
+<h3>Breadcrumb w/overflow</h3>
+<div data-xrayhtml class="prism xrayhtml">
+  <ul class="c-breadcrumb">
+    <div class="c-dropdown">
+      <div class="c-btn c-btn-secondary c-btn-box">
+        <i class="fa fa-ellipsis-h"></i>
+      </div>
+      <div class="c-dropdown-list c-dropdown-list-below">
+        <a class="c-dropdown-item" href="#">
+          Dashboard
+        </a>
+        <div class="c-dropdown-divider"></div>
+        <a class="c-dropdown-item" href="#">
+          Calendar
+        </a>
+        <div class="c-dropdown-divider"></div>
+        <a class="c-dropdown-item" href="#">
+          Some Board Meeting
+        </a>
+      </div>
+    </div>
+    <li class="c-breadcrumb-item"><a class="c-a" href="#">Associated Materials</a></li>
+    <li class="c-breadcrumb-item"><a class="c-a" href="#">Board Book</a></li>
+    <li class="c-breadcrumb-item c-breadcrumb-item-active">2019-Board-Book.pdf</li>
+  </ul>
+</div>
