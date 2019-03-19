@@ -236,14 +236,14 @@ $control-ng-validation:
   ("ng-valid", "success")
   ("ng-invalid", "error") !default;
 
-$control-border               : $global-default-border !default;
+$control-border               : 1px solid $color-gray-5 !default;
 $control-border-radius        : $global-default-radius !default;
-$control-shadow               : none !default;
+$control-shadow               : inset 0 2px 2px 0 rgba(33, 37, 41, .1) !default;
 $control-focused-shadow       : inset 0 1px 2px 0 rgba(33, 37, 41, 0.08) !default;
 $control-shadow-disabled      : none !default;
 $control-transition           : border-color 0.1s ease-in !default;
 $control-hover                : $color-primary !default;
-$control-hover-border         : $color-gray-5 !default;
+$control-hover-border         : $color-gray-6 !default;
 $control-active               : $color-primary !default;
 $control-active-border        : $color-primary !default;
 

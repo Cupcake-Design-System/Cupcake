@@ -22,8 +22,8 @@
 // Form Input Right Icon ----------------------
 // --------------------------------------------
 .#{$control-prefix}-icon {
-  @include vertical-center;
-
+  position: absolute;
+  top: $control-padding;
   left: $control-padding;
   color: $control-icon-color;
 
@@ -45,6 +45,7 @@
   .#{$control-prefix}-icon-#{$name} {
     font-size: $font-size;
     left: $font-size - 4;
+    top: $font-size - 4;
 
     + .#{$control-prefix}:not([multiple]) {
       padding-left: $height;
@@ -58,6 +59,7 @@
 // --------------------------------------------
 textarea.#{$control-prefix} {
   height: auto;
+  padding-top: $control-padding;
 }
 
 
@@ -124,19 +126,19 @@ textarea.#{$control-prefix} {
 .#{$control-prefix}-addon {
   display: flex;
   align-items: center; // vertically align all child elements
-  padding: $space-0 $control-padding;
-  font-size: $control-font-size;
   border: $control-border;
+  font-size: $control-font-size;
+  padding: $space-0 $control-padding;
   background-color: $control-addon-background;
 
   &:first-child {
-    border-radius: $radius-sm $radius-0 $radius-0 $radius-sm;
+    border-radius: $control-border-radius $radius-0 $radius-0 $control-border-radius;
   }
 
   &:last-child {
     margin-right: $space-0;
     border-left: $space-0;
-    border-radius: $radius-0 $radius-sm $radius-sm $radius-0;
+    border-radius: $radius-0 $control-border-radius $control-border-radius $radius-0;
   }
 }
 
@@ -144,14 +146,14 @@ textarea.#{$control-prefix} {
 // --------------------------------------------
 // Form Elements ------------------------------
 // --------------------------------------------
-.c-form-element {
-  position: relative;
-  padding: $control-element-padding;
+// .c-form-element {
+//   position: relative;
+//   padding: $control-element-padding;
 
-  .c-label:first-child {
-    padding: $control-element-label-padding;
-  }
-}
+//   .c-label:first-child {
+//     padding: $control-element-label-padding;
+//   }
+// }
 
 
 // --------------------------------------------
@@ -162,7 +164,7 @@ textarea.#{$control-prefix} {
   &.c-list {
     display: block;
     width: 100%;
-    margin: $control-padding $space-0;
+    margin: $control-padding * 2 $space-0;
     padding: $space-0;
     border: 0;
   }
@@ -187,10 +189,10 @@ textarea.#{$control-prefix} {
 // Form Hint & Hint Colors --------------------
 // --------------------------------------------
 .c-hint {
-  position: absolute;
+  display: block;
   transform: scale(.8);
   transform-origin: top left;
-  margin-top: $control-padding;
+  padding-top: $control-padding;
   color: $control-hint-color;
   font-size: $control-hint-font-size;
   opacity: 0;
@@ -340,9 +342,9 @@ textarea.#{$control-prefix} {
 // --------------------------------------------
 // Form Group ---------------------------------
 // --------------------------------------------
-.c-form-group {
-  margin-bottom: $control-padding;
-}
+// .c-form-group {
+//   margin-bottom: $control-padding;
+// }
 
 
 // --------------------------------------------
@@ -364,8 +366,8 @@ textarea.#{$control-prefix} {
     border-top: 0;
     list-style: none;
     margin-left: $space-0;
-    border-bottom-left-radius: $radius-sm;
-    border-bottom-right-radius: $radius-sm;
+    border-bottom-left-radius: $control-border-radius;
+    border-bottom-right-radius: $control-border-radius;
 
     li {
       padding: $space-sm;
@@ -377,26 +379,30 @@ textarea.#{$control-prefix} {
   }
 }
 
+
+// --------------------------------------------
+// Form Inline --------------------------------
+// --------------------------------------------
 .c-form-inline {
   display: flex;
-  align-items: center;
   flex: 0 0 auto;
+  align-items: center;
 
   .#{$control-prefix}-label {
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: auto;
   }
 
   .#{$control-prefix} {
-    display: flex;
     width: auto;
+    display: flex;
     vertical-align: middle;
   }
 
   .c-hint {
-    position: relative;
     margin: $space-0;
+    position: relative;
   }
 }
