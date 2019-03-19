@@ -353,7 +353,7 @@ $tabs-color-active      : $color-primary !default;
 $tabs-color-disabled    : $color-gray-6 !default;
 $tabs-font-weight       : bold !default;
 $tabs-border-color      : $color-gray-2 !default;
-$tabs-bordered-radius   : 2px !default;
+$tabs-bordered-radius   : $global-default-radius !default;
 $tabs-bordered-bg       : $color-gray-0 !default;
 $tabs-bordered-bg-hover : $color-white !default;
 $tabs-bordered-bg-active: $tabs-bordered-bg-hover !default;
@@ -446,3 +446,19 @@ $body-text-sizes: (
     line-height: $font-body-xxl + 6
   )
 ) !default;
+
+
+// --------------------------------------------
+// PAGINATION ---------------------------------
+// --------------------------------------------
+$pagination-item-spacing         : 2px !default;
+$pagination-item-size            : $global-size-md !default;
+$pagination-font-size            : 12px !default;
+$pagination-icon-size            : 10px !default;
+$pagination-item-border-radius   : $global-default-radius !default;
+$pagination-item-color           : $color-gray-9 !default;
+$pagination-item-current-bg      : $color-primary-0 !default;
+$pagination-item-current-color   : $color-primary-9 !default;
+$pagination-next-color           : $color-primary-9 !default;
+$pagination-previous-color       : $color-gray-6 !default;
+$pagination-bg-disabled          : $color-gray-1 !default;
