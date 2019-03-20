@@ -5,11 +5,7 @@ layout: blank
 
 <h3>Breadcrumb</h3>
 <div data-xrayhtml class="prism xrayhtml">
-  <ul class="c-breadcrumb">
-    <li class="c-breadcrumb-item"><a class="c-a" href="#">Home</a></li>
-    <li class="c-breadcrumb-item"><a class="c-a" href="#">Library</a></li>
-    <li class="c-breadcrumb-item c-breadcrumb-item-active">Data</li>
-  </ul>
+  {{> breadcrumbs}}
 </div>
 
 {{> space}}
@@ -18,7 +14,7 @@ layout: blank
 <div data-xrayhtml class="prism xrayhtml">
   <ul class="c-breadcrumb">
     <div class="c-dropdown">
-      <div class="c-btn c-btn-secondary c-btn-box">
+      <div class="c-btn c-btn-sm c-btn-secondary c-btn-box">
         <i class="fa fa-ellipsis-h"></i>
       </div>
       <div class="c-dropdown-list c-dropdown-list-below">

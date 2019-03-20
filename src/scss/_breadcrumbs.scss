@@ -20,6 +20,7 @@
       font-weight: bold;
       color: $breadcrumb-color;
       font-size: $breadcrumb-font-size;
+      line-height: $breadcrumb-font-size + 4;
 
       &:hover {
         color: lighten($breadcrumb-color, 7);
@@ -63,8 +64,8 @@
       transform: rotate(45deg);
       width: $breadcrumb-divider-size;
       height: $breadcrumb-divider-size;
-      margin-top: $breadcrumb-divider-size + 4;
-      margin-left: $breadcrumb-divider-size * 2 + 4;
+      margin-top: $breadcrumb-divider-size;
+      margin-left: $breadcrumb-divider-size * 2;
       border-top: solid $breadcrumb-divider-border-width $breadcrumb-divider-color;
       border-right: solid $breadcrumb-divider-border-width $breadcrumb-divider-color;
     }
