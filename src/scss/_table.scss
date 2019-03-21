@@ -1,0 +1,97 @@
+// --------------------------------------------
+// Table DEFAULT -------------------------------
+// --------------------------------------------
+table.c-table {
+  @include table();
+}
+
+
+// table.c-table-stack {
+//   @include media-breakpoint-down(md) {
+//     @include table-stack;
+//   }
+// }
+
+table.c-table-scroll {
+  @include table-scroll;
+}
+
+table.c-table-hover {
+  @include table-hover;
+}
+
+table.c-table-header-cell-draggable {
+  @include table-header-cell-draggable;
+}
+
+table.c-table-row-draggable {
+  @include table-row-draggable;
+}
+
+table.c-table-sm,
+table.c-table-condensed {
+  @include table-condensed;
+}
+
+table.c-table-lg {
+  @include table-lg;
+}
+
+.c-table-scroll {
+  overflow-x: auto;
+
+  table.c-table {
+    width: auto;
+  }
+}
+
+// Different table borders
+table.c-table-border {
+  &-horizontal {
+    tbody tr {
+      border-bottom: 1px solid $table-border-color;
+    }
+  }
+
+  &-vertical {
+    th,
+    td {
+      &:not(:last-child) {
+        border-right: 1px solid $table-border-color;
+      }
+    }
+  }
+
+  &-both {
+    @extend table.c-table-border-horizontal;
+    @extend table.c-table-border-vertical;
+  }
+
+  &-full {
+    th,
+    td {
+      border: 1px solid $table-border-color;
+    }
+  }
+}
+
+// Table row and cell states
+.c-table {
+  //raising specificity to overrie table stripes
+  &#{&} {
+    @each $state, $color in $table-states {
+      .c-table-row-#{$state},
+      .c-table-cell-#{$state} {
+        background-color: $color;
+      }
+
+      // hover state for rows and cells
+      .c-table-row-#{$state}:hover,
+      tr:hover > .c-table-cell-#{$state},
+      .c-table-row:hover > .c-table-cell-#{$state} {
+        background-color: darken($color, 7%);
+      }
+    }
+  }
+}
+

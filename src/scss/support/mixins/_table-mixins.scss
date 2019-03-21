@@ -1,0 +1,287 @@
+// --------------------------------------------
+// TABS Base Mixin ----------------------------
+// --------------------------------------------
+
+$table-background                   : $color-white !default;
+$table-border-color                 : $color-gray-2 !default;
+$table-border-radius                : 0 !default;
+$table-border                       : 0 !default;
+
+$table-header-font-size             : 12px !default;
+$table-head-font-color              : $color-gray-7 !default;
+$table-head-border-color            : $color-gray-3 !default;
+$table-head-border-width            : 1px 0 !default;
+$table-head-border-vertical         : 1px solid $table-head-border-color !default;
+$table-head-background              : $color-gray-0 !default;
+$table-head-cell-hover              : $color-gray-2 !default;
+$table-transparent-head-background  : $color-gray-0 !default;
+
+$table-padding                      : 7px 10px 8px !default;
+$table-padding-condensed            : 3px 8px 4px !default;
+$table-padding-lg                   : 12px 10px 11px !default;
+$table-font-size-lg                 : 14px !default;
+$table-row-hover                    : $color-gray-1 !default;
+$table-row-stripe-hover             : $table-row-hover !default;
+
+$table-hover-background-img         : url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1IiBoZWlnaHQ9IjIwIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxLjMyMjkxNjYgNS4yOTE2NjY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOTEuNzEpIiBmaWxsPSIjYmJjMWM5Ij4gIDxyZWN0IHk9IjI5Ni40NyIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5MS43MSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjkxLjcxIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTYuNDciIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjk0Ljg4IiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTQuMDkiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTIuNSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC44OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC4wOSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeT0iMjkyLjUiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+IDwvZz48L3N2Zz4=') !default;
+$table-hover-background-img-body-pos: 2px center !default;
+$table-striped-background           : $color-gray-0 !default;
+$table-stripe                       : 'even' !default;
+
+$table-foot-background              : $color-gray-1 !default;
+$table-foot-font-color              : $color-gray-6 !default;
+
+$table-header-footer-font-weight    : bold !default;
+$table-line-height                  : 16px !default;
+$table-cell-font-size               : 12px !default;
+$table-shadow                       : 0 !default;
+$show-header-for-stacked            : false !default;
+$table-state-selected               : $color-primary-0 !default;
+$table-state-active                 : #fafad2 !default;
+$table-state-starred                : $color-warning-0 !default;
+$table-state-success                : lighten($color-success, 20%) !default;
+$table-state-warning                : lighten($color-warning, 20%) !default;
+$table-state-danger                 : lighten($color-danger, 20%) !default;
+
+
+// $table-states:
+$table-states: ("selected", $table-state-selected)
+  ("starred", $table-state-starred)
+  ("active", $table-state-active)
+  ("success", $table-state-success)
+  ("warning", $table-state-warning)
+  ("danger", $table-state-danger) !default;
+
+
+@mixin ipreo-table-children-styles($stripe: $table-stripe) {
+  .c-table {
+    thead,
+    tbody,
+    tfoot {
+      border: $table-border;
+      background-color: $table-background;
+    }
+
+    tbody {
+      font-size: $table-cell-font-size;
+    }
+
+    // Table head
+    thead {
+      background: $table-head-background;
+      color: $table-head-font-color;
+      border-style: solid;
+      border-color: $table-head-border-color;
+      border-width: $table-head-border-width;
+      vertical-align: bottom;
+
+      th {
+        font-size: $table-header-font-size;
+        text-align: left; //IE centers text by default
+        vertical-align: middle;
+      }
+    }
+
+    td.draggable {
+      &:hover {
+        background-image: $table-hover-background-img;
+        background-color: $table-head-cell-hover;
+        background-position: $table-hover-background-img-body-pos;
+        background-repeat: no-repeat;
+        cursor: move;  //IE fallback
+        cursor: grab;
+      }
+    }
+
+    // Table foot
+    tfoot {
+      background: $table-foot-background;
+      color: $table-foot-font-color;
+    }
+
+    // Table head and foot
+    thead,
+    tfoot {
+      tr {
+        background: transparent;
+      }
+
+      // Cells within head and foot
+      th,
+      td {
+        border-right: $table-head-border-vertical;
+        padding: $table-padding;
+        font-weight: $table-header-footer-font-weight;
+        line-height: $table-line-height;
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+
+    // Table rows
+    &:not(.c-table-transparent) {
+      tbody {
+        tr {
+          &:nth-child(#{$stripe}) {
+            background-color: $table-striped-background;
+          }
+        }
+      }
+    }
+
+    th,
+    td {
+      border-right: $table-border;
+      padding: $table-padding;
+      line-height: $table-line-height;
+    }
+  }
+}
+
+// Adds the general styles for tables.
+// Uses keywords even, odd, or none to darken rows of the table. The default value is even.
+@mixin table($stripe: $table-stripe, $nest: false) {
+  width: 100%;
+  text-align: left;
+  line-height: $table-line-height;
+
+  &-layout-fixed {
+    table-layout: fixed;
+  }
+
+  @if $nest {
+    @include ipreo-table-children-styles($stripe);
+  } @else {
+    @at-root {
+      @include ipreo-table-children-styles($stripe);
+    }
+  }
+}
+
+// @mixin table-striped($stripe: $table-stripe, $nest: false) {
+//   width: 100%;
+//   margin-bottom: $global-margin;
+//   border-radius: $global-radius;
+
+//   @include ipreo-table-children-styles($stripe);
+// }
+
+/// Adds the ability to horizontally scroll the table when the content overflows horizontally.
+@mixin table-scroll {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/// Slightly darkens the table rows on hover.
+@mixin table-hover {
+  th:hover {
+    background: $table-head-cell-hover;
+    cursor: pointer;
+  }
+
+  tbody {
+    tr {
+      &:hover {
+        background: $table-row-hover;
+        cursor: pointer;
+      }
+
+      //Darkens the even striped table rows.
+      @if ($table-stripe == even) {
+        &:nth-of-type(even):hover {
+          background-color: $table-row-hover;
+        }
+      }
+
+      //Darkens the odd striped table rows. @else if($table-stripe == odd) {
+      &:nth-of-type(odd):hover {
+        background-color: $table-row-hover;
+      }
+    }
+  }
+}
+
+@mixin table-header-cell-draggable {
+  th:hover {
+    background-image: $table-hover-background-img;
+    background-color: $table-head-cell-hover;
+    background-position: $table-hover-background-img-body-pos;
+    background-repeat: no-repeat;
+    cursor: move;  //IE fallback
+    cursor: grab;
+  }
+}
+
+
+@mixin table-row-draggable {
+  tbody tr:hover {
+    td:first-child {
+      background-image: $table-hover-background-img;
+      background-position: $table-hover-background-img-body-pos;
+      background-repeat: no-repeat;
+      cursor: move;  //IE fallback
+      cursor: grab;
+    }
+  }
+}
+
+@mixin table-condensed {
+  thead,
+  tbody,
+  tfoot {
+    th,
+    td {
+      padding: $table-padding-condensed;
+    }
+  }
+}
+
+/// Adds styles for a stacked table. Useful for sm-screen layouts.
+/// @param {Boolean} $header [$show-header-for-stacked] - Show the first th of header when stacked.
+@mixin table-stack($header: $show-header-for-stacked) {
+  @if $header {
+    thead {
+      th:first-child {
+        display: block;
+      }
+
+      th {
+        display: none;
+      }
+    }
+  } @else {
+    thead {
+      display: none;
+    }
+  }
+
+  tfoot {
+    display: none;
+  }
+
+  tr,
+  th,
+  td {
+    display: block;
+  }
+
+  td {
+    border-top: 0;
+  }
+}
+
+@mixin table-lg {
+  thead,
+  tbody,
+  tfoot {
+    th,
+    td {
+      padding: $table-padding-lg;
+      font-size: $table-font-size-lg;
+    }
+  }
+}
+
