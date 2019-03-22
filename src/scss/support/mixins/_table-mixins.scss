@@ -46,8 +46,6 @@ $table-state-danger                 : $color-danger-0 !default;
 
 // $table-states:
 $table-states: ("selected", $table-state-selected)
-  ("starred", $table-state-starred)
-  ("active", $table-state-active)
   ("success", $table-state-success)
   ("warning", $table-state-warning)
   ("danger", $table-state-danger) !default;
