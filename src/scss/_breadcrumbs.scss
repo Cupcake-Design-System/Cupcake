@@ -1,0 +1,73 @@
+// --------------------------------------------
+// BREADCRUMBS --------------------------------
+// --------------------------------------------
+
+.c-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  margin: $space-0;
+  padding: $space-0;
+  list-style: none;
+  align-items: center;
+  background-color: transparent;
+  font-size: $breadcrumb-font-size;
+  font-weight: $breadcrumb-font-weight;
+
+  &-item {
+    margin-right: $breadcrumb-margin;
+
+    a {
+      font-weight: bold;
+      color: $breadcrumb-color;
+      font-size: $breadcrumb-font-size;
+      line-height: $breadcrumb-font-size + 4;
+
+      &:hover {
+        color: lighten($breadcrumb-color, 7);
+      }
+    }
+
+    &-active,
+    &-active a {
+      margin-right: $space-0;
+      color: $breadcrumb-color-active;
+
+      &::after {
+        content: '';
+        display: none;
+        position: absolute;
+        margin-right: $space-0;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      transform: rotate(45deg);
+      width: $breadcrumb-divider-size;
+      height: $breadcrumb-divider-size;
+      margin-left: $breadcrumb-divider-size;
+      margin-top: $breadcrumb-divider-size / 2;
+      border-top: solid $breadcrumb-divider-border-width $breadcrumb-divider-color;
+      border-right: solid $breadcrumb-divider-border-width $breadcrumb-divider-color;
+    }
+  }
+}
+
+.c-breadcrumb {
+  .c-btn {
+    margin-right: $breadcrumb-margin;
+
+    &::after {
+      content: '';
+      position: absolute;
+      transform: rotate(45deg);
+      width: $breadcrumb-divider-size;
+      height: $breadcrumb-divider-size;
+      margin-top: $breadcrumb-divider-size;
+      margin-left: $breadcrumb-divider-size * 2;
+      border-top: solid $breadcrumb-divider-border-width $breadcrumb-divider-color;
+      border-right: solid $breadcrumb-divider-border-width $breadcrumb-divider-color;
+    }
+  }
+}

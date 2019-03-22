@@ -77,7 +77,7 @@ table.c-table-border {
 
 // Table row and cell states
 .c-table {
-  //raising specificity to overrie table stripes
+  //raising specificity to override table stripes
   &#{&} {
     @each $state, $color in $table-states {
       .c-table-row-#{$state},
@@ -89,7 +89,7 @@ table.c-table-border {
       .c-table-row-#{$state}:hover,
       tr:hover > .c-table-cell-#{$state},
       .c-table-row:hover > .c-table-cell-#{$state} {
-        background-color: darken($color, 7%);
+        background-color: darken($color, 3%);
       }
     }
   }

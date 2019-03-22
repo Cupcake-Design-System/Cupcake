@@ -159,6 +159,19 @@ $button-sizes: (
 
 
 // --------------------------------------------
+// BREADCRUMBS --------------------------------
+// --------------------------------------------
+$breadcrumb-color               : $color-primary-9 !default;
+$breadcrumb-color-active        : $color-gray-9 !default;
+$breadcrumb-font-size           : 12px !default;
+$breadcrumb-font-weight         : $font-weight-bold !default;
+$breadcrumb-divider-size        : 8px !default;
+$breadcrumb-divider-border-width: 2px !default;
+$breadcrumb-divider-color       : $color-gray-3 !default;
+$breadcrumb-margin              : $global-size-md !default;
+
+
+// --------------------------------------------
 // CARDS --------------------------------------
 // --------------------------------------------
 $card-prefix                 : 'c-card' !default;

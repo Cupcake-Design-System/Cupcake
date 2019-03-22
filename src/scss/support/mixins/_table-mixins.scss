@@ -39,9 +39,9 @@ $show-header-for-stacked            : false !default;
 $table-state-selected               : $color-primary-0 !default;
 $table-state-active                 : #fafad2 !default;
 $table-state-starred                : $color-warning-0 !default;
-$table-state-success                : lighten($color-success, 20%) !default;
-$table-state-warning                : lighten($color-warning, 20%) !default;
-$table-state-danger                 : lighten($color-danger, 20%) !default;
+$table-state-success                : $color-success-0 !default;
+$table-state-warning                : $color-warning-0 !default;
+$table-state-danger                 : $color-danger-0 !default;
 
 
 // $table-states:
