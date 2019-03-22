@@ -1,79 +1,55 @@
 // --------------------------------------------
 // Table DEFAULT -------------------------------
 // --------------------------------------------
-table.c-table {
-  @include table();
-}
+table {
+  &.c-table {
+    @include table();
 
-
-// table.c-table-stack {
-//   @include media-breakpoint-down(md) {
-//     @include table-stack;
-//   }
-// }
-
-table.c-table-scroll {
-  @include table-scroll;
-}
-
-table.c-table-hover {
-  @include table-hover;
-}
-
-table.c-table-header-cell-draggable {
-  @include table-header-cell-draggable;
-}
-
-table.c-table-row-draggable {
-  @include table-row-draggable;
-}
-
-table.c-table-sm,
-table.c-table-condensed {
-  @include table-condensed;
-}
-
-table.c-table-lg {
-  @include table-lg;
-}
-
-.c-table-scroll {
-  overflow-x: auto;
-
-  table.c-table {
-    width: auto;
-  }
-}
-
-// Different table borders
-table.c-table-border {
-  &-horizontal {
-    tbody tr {
-      border-bottom: 1px solid $table-border-color;
+    &-scroll {
+      @include table-scroll;
     }
-  }
 
-  &-vertical {
-    th,
-    td {
-      &:not(:last-child) {
-        border-right: 1px solid $table-border-color;
+    &-hover {
+      @include table-hover;
+    }
+
+    &-row-draggable {
+      @include table-row-draggable;
+    }
+
+    &-sm {
+      @include table-sm;
+    }
+
+    &-lg {
+      @include table-lg;
+    }
+
+    &-border {
+      @include table-border;
+    }
+
+    &.c-table-header-transparent {
+      thead {
+        background: transparent;
       }
     }
-  }
 
-  &-both {
-    @extend table.c-table-border-horizontal;
-    @extend table.c-table-border-vertical;
-  }
+    .c-table-header-cell-draggable {
+      @include table-header-cell-draggable;
+    }
 
-  &-full {
-    th,
-    td {
-      border: 1px solid $table-border-color;
+    // Repeater to allow all rows or single rows to be draggable
+    .c-table-row-draggable {
+      @include table-all-rows-draggable;
+    }
+
+    .c-table-row-cell-draggable {
+      @include table-row-cell-draggable;
     }
   }
 }
+
 
 // Table row and cell states
 .c-table {
@@ -89,6 +65,7 @@ table.c-table-border {
       .c-table-row-#{$state}:hover,
       tr:hover > .c-table-cell-#{$state},
       .c-table-row:hover > .c-table-cell-#{$state} {
+        cursor: pointer;
         background-color: darken($color, 3%);
       }
     }

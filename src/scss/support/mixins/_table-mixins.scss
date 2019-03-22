@@ -80,17 +80,6 @@ $table-states: ("selected", $table-state-selected)
       }
     }
 
-    td.draggable {
-      &:hover {
-        background-image: $table-hover-background-img;
-        background-color: $table-head-cell-hover;
-        background-position: $table-hover-background-img-body-pos;
-        background-repeat: no-repeat;
-        cursor: move;  //IE fallback
-        cursor: grab;
-      }
-    }
-
     // Table foot
     tfoot {
       background: $table-foot-background;
@@ -138,6 +127,7 @@ $table-states: ("selected", $table-state-selected)
   }
 }
 
+
 // Adds the general styles for tables.
 // Uses keywords even, odd, or none to darken rows of the table. The default value is even.
 @mixin table($stripe: $table-stripe, $nest: false) {
@@ -158,28 +148,17 @@ $table-states: ("selected", $table-state-selected)
   }
 }
 
-// @mixin table-striped($stripe: $table-stripe, $nest: false) {
-//   width: 100%;
-//   margin-bottom: $global-margin;
-//   border-radius: $global-radius;
-
-//   @include ipreo-table-children-styles($stripe);
-// }
 
 /// Adds the ability to horizontally scroll the table when the content overflows horizontally.
 @mixin table-scroll {
   display: block;
-  width: 100%;
   overflow-x: auto;
+  white-space: nowrap;
 }
+
 
 /// Slightly darkens the table rows on hover.
 @mixin table-hover {
-  th:hover {
-    background: $table-head-cell-hover;
-    cursor: pointer;
-  }
-
   tbody {
     tr {
       &:hover {
@@ -202,31 +181,9 @@ $table-states: ("selected", $table-state-selected)
   }
 }
 
-@mixin table-header-cell-draggable {
-  th:hover {
-    background-image: $table-hover-background-img;
-    background-color: $table-head-cell-hover;
-    background-position: $table-hover-background-img-body-pos;
-    background-repeat: no-repeat;
-    cursor: move;  //IE fallback
-    cursor: grab;
-  }
-}
 
-
-@mixin table-row-draggable {
-  tbody tr:hover {
-    td:first-child {
-      background-image: $table-hover-background-img;
-      background-position: $table-hover-background-img-body-pos;
-      background-repeat: no-repeat;
-      cursor: move;  //IE fallback
-      cursor: grab;
-    }
-  }
-}
-
-@mixin table-condensed {
+// Sizing Options
+@mixin table-sm {
   thead,
   tbody,
   tfoot {
@@ -234,40 +191,6 @@ $table-states: ("selected", $table-state-selected)
     td {
       padding: $table-padding-condensed;
     }
-  }
-}
-
-/// Adds styles for a stacked table. Useful for sm-screen layouts.
-/// @param {Boolean} $header [$show-header-for-stacked] - Show the first th of header when stacked.
-@mixin table-stack($header: $show-header-for-stacked) {
-  @if $header {
-    thead {
-      th:first-child {
-        display: block;
-      }
-
-      th {
-        display: none;
-      }
-    }
-  } @else {
-    thead {
-      display: none;
-    }
-  }
-
-  tfoot {
-    display: none;
-  }
-
-  tr,
-  th,
-  td {
-    display: block;
-  }
-
-  td {
-    border-top: 0;
   }
 }
 
@@ -283,3 +206,82 @@ $table-states: ("selected", $table-state-selected)
   }
 }
 
+
+// Border Options
+@mixin table-border {
+  &-horizontal {
+    tbody tr {
+      border-bottom: 1px solid $table-border-color;
+    }
+  }
+
+  &-vertical {
+    th,
+    td {
+      &:not(:last-child) {
+        border-right: 1px solid $table-border-color;
+      }
+    }
+  }
+
+  &-both {
+    @extend table.c-table-border-horizontal;
+    @extend table.c-table-border-vertical;
+  }
+
+  &-full {
+    th,
+    td {
+      border: 1px solid $table-border-color;
+    }
+  }
+}
+
+
+// Draggable Options
+@mixin draggable-bg {
+  background-image: $table-hover-background-img;
+  background-position: $table-hover-background-img-body-pos;
+  background-repeat: no-repeat;
+}
+
+@mixin draggable-cursor {
+  cursor: move;  //IE fallback
+  cursor: grab;
+}
+
+@mixin table-header-cell-draggable {
+  &:hover {
+    @include draggable-bg;
+    @include draggable-cursor;
+
+    background-color: $table-head-cell-hover;
+  }
+}
+
+@mixin table-row-cell-draggable {
+  &:hover {
+    @include draggable-cursor;
+    @include draggable-bg;
+  }
+}
+
+@mixin table-row-draggable {
+  tbody tr:hover {
+    @include draggable-cursor;
+
+    td:first-child {
+      @include draggable-bg;
+    }
+  }
+}
+
+@mixin table-all-rows-draggable {
+  &:hover {
+    @include draggable-cursor;
+
+    td:first-child {
+      @include draggable-bg;
+    }
+  }
+}

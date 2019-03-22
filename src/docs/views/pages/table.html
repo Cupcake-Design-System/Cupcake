@@ -39,8 +39,80 @@ layout: blank
 
 {{> space}}
 
-<h3>Table Transparent</h3>
+<h3>Transparent</h3>
 <table class="c-table c-table-transparent">
+  <thead>
+    <tr>
+      <th width="200">Table Header</th>
+      <th>Table Header</th>
+      <th width="150">Table Header</th>
+      <th width="150">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>
+
+
+{{> space}}
+
+<h3>Header Transparent</h3>
+<table class="c-table c-table-header-transparent">
+  <thead>
+    <tr>
+      <th width="200">Table Header</th>
+      <th>Table Header</th>
+      <th width="150">Table Header</th>
+      <th width="150">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+{{> space}}
+
+
+<h3>Scroll</h3>
+<table class="c-table c-table-scroll" style="max-width: 650px;">
   <thead>
     <tr>
       <th width="200">Table Header</th>
@@ -74,7 +146,7 @@ layout: blank
 {{> space}}
 
 
-<h3>Table Hover</h3>
+<h3>Hover</h3>
 <table class="c-table c-table-hover">
   <thead>
     <tr>
@@ -110,7 +182,7 @@ layout: blank
   {{> space}}
 
 
-<h3 class="c-header-md">Table Border Horizontal</h3>
+<h3 class="c-header-md">Border Horizontal</h3>
 <table class="c-table c-table-transparent c-table-border-horizontal c-table-hover">
 <thead>
     <tr>
@@ -147,7 +219,7 @@ layout: blank
 {{> space}}
 
 
-<h3 class="c-header-md">Table Border Vertical</h3>
+<h3 class="c-header-md">Border Vertical</h3>
 <table class="c-table c-table-transparent c-table-border-vertical c-table-hover">
 <thead>
     <tr>
@@ -183,7 +255,7 @@ layout: blank
 {{> space}}
 
 
-<h3 class="c-header-md">Table Border Both</h3>
+<h3 class="c-header-md">Border Both</h3>
 <table class="c-table c-table-transparent c-table-border-both c-table-hover">
 <thead>
     <tr>
@@ -220,7 +292,7 @@ layout: blank
 
 
 
-<h3 class="c-header-md">Table Border All Sides</h3>
+<h3 class="c-header-md">Border All Sides</h3>
 <table class="c-table c-table-transparent c-table-border-full c-table-hover">
 <thead>
     <tr>
@@ -256,7 +328,7 @@ layout: blank
   {{> space}}
 
 
-<h3>Table Small</h3>
+<h3>Small</h3>
 <table class="c-table c-table-sm">
   <thead>
     <tr>
@@ -292,7 +364,7 @@ layout: blank
   {{> space}}
 
 
-<h3>Table Large</h3>
+<h3>Large</h3>
 <table class="c-table c-table-lg">
   <thead>
     <tr>
@@ -327,11 +399,11 @@ layout: blank
   {{> space}}
 
 
-<h3 class="c-header-md">Table draggable (styles only)</h3>
-<table class="c-table c-table-border-horizontal c-table-transparent c-table-hover c-table-header-cell-draggable c-table-row-draggable">
+<h3 class="c-header-md">Header cell draggable (styles only)</h3>
+<table class="c-table c-table-border-horizontal c-table-transparent c-table-hover">
   <thead>
     <tr>
-      <th width="200">Table Header</th>
+      <th class="c-table-header-cell-draggable" width="200"><strong>DRAGGABLE</strong> Header Cell</th>
       <th>Table Header</th>
       <th width="150">Table Header</th>
       <th width="150">Table Header</th>
@@ -362,7 +434,113 @@ layout: blank
 {{> space}}
 
 
-<h3>Table w/selected rows</h3>
+<h3 class="c-header-md">Row cell draggable - select which cell is draggable (styles only)</h3>
+<table class="c-table c-table-border-horizontal c-table-transparent">
+  <thead>
+    <tr>
+      <th width="200">Table Header</th>
+      <th>Table Header</th>
+      <th width="150">Table Header</th>
+      <th width="150">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="c-table-row-cell-draggable">I'm <strong>DRAGGABLE</strong></td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td class="c-table-row-cell-draggable">ALSO <strong>DRAGGABLE</strong></td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td class="c-table-row-cell-draggable">I'm <strong>DRAGGABLE</strong> and the longer content example goes here.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td class="c-table-row-cell-draggable ">I'm <strong>DRAGGABLE</strong></td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>
+
+{{> space}}
+
+
+<h3 class="c-header-md">Row draggable - select which row is draggable (styles only)</h3>
+<table class="c-table c-table-border-horizontal c-table-transparent c-table-hover">
+  <thead>
+    <tr>
+      <th width="200">Table Header</th>
+      <th>Table Header</th>
+      <th width="150">Table Header</th>
+      <th width="150">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="c-table-row-draggable">
+      <td>Row is <strong>DRAGGABLE</strong></td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>
+
+{{> space}}
+
+
+
+<h3 class="c-header-md">ALL rows draggable (styles only)</h3>
+<table class="c-table c-table-border-horizontal c-table-transparent c-table-hover c-table-row-draggable">
+  <thead>
+    <tr>
+      <th width="200">Table Header</th>
+      <th>Table Header</th>
+      <th width="150">Table Header</th>
+      <th width="150">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Row is <strong>DRAGGABLE</strong></td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+        <td>Row is <strong>DRAGGABLE</strong></td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+        <td>Row is <strong>DRAGGABLE</strong></td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>
+
+{{> space}}
+
+
+<h3>Table w/row treatment</h3>
 
 <table class="c-table c-table-transparent">
   <thead>
@@ -380,6 +558,12 @@ layout: blank
         <td>Content Goes Here</td>
         <td>Content Goes Here</td>
       </tr>
+      <tr>
+          <td>This table-row is normal</td>
+          <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+          <td>Content Goes Here</td>
+          <td>Content Goes Here</td>
+        </tr>
     <tr class="c-table-row-success">
       <td>This table-row is success</td>
       <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>

@@ -400,6 +400,7 @@
 
 ::-webkit-scrollbar {
   width: .25em;
+  height: .25em;
 }
 
 ::-webkit-scrollbar-track {
