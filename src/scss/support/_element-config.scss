@@ -329,7 +329,7 @@ $footer-border-top      : 1px solid $color-gray-3;
 
 
 // --------------------------------------------
-// Switches -----------------------------------
+// SWITCHES -----------------------------------
 // --------------------------------------------
 $switch-prefix             : 'c-switch' !default;
 $switch-control-prefix     : 'c-control' !default;
@@ -385,6 +385,48 @@ $tabs-padding-small     : $space-xs $space-sm !default;
 $tabs-font-size-large   : 14px !default;
 $tabs-height-large      : 40px !default;
 $tabs-line-height-large : 24px !default;
+
+
+// --------------------------------------------
+// TABLES -------------------------------------
+// --------------------------------------------
+$table-background           : $color-white !default;
+$table-font-size            : 12px !default;
+$table-line-height          : 16px !default;
+$table-border               : 0 !default;
+$table-border-color         : $color-gray-2 !default;
+$table-padding              : ($space-sm - 1) ($space-sm + 2) $space-sm !default;
+$table-row-hover            : $color-gray-1 !default;
+$table-row-stripe-hover     : $table-row-hover !default;
+$table-stripe               : 'even' !default;
+$table-stripe-bg            : $color-gray-0 !default;
+$table-head-color           : $color-gray-7 !default;
+$table-head-font-weight     : $font-weight-bold !default;
+$table-head-border-color    : $color-gray-3 !default;
+$table-head-border-width    : 1px 0 !default;
+$table-head-border-vertical : 1px solid $table-head-border-color !default;
+$table-head-bg              : $color-gray-0 !default;
+$table-head-cell-hover      : $color-gray-2 !default;
+$table-foot-bg              : $table-head-bg !default;
+$table-foot-color           : $table-head-color !default;
+$table-padding-sm           : ($space-xs - 1) $space-sm $space-xs !default;
+$table-padding-lg           : ($space-sm + $space-xs) ($space-sm + 2) ($space-sm + ($space-xs - 1)) !default;
+$table-font-size-lg         : 14px !default;
+$table-hover-bg-img         : url('data: image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1IiBoZWlnaHQ9IjIwIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxLjMyMjkxNjYgNS4yOTE2NjY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOTEuNzEpIiBmaWxsPSIjYmJjMWM5Ij4gIDxyZWN0IHk9IjI5Ni40NyIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5MS43MSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjkxLjcxIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTYuNDciIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjk0Ljg4IiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTQuMDkiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTIuNSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC44OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC4wOSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeT0iMjkyLjUiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+IDwvZz48L3N2Zz4 = ') !default;
+$table-hover-bg-img-body-pos: 2px center !default;
+$table-state-selected       : $color-primary-0 !default;
+$table-state-starred        : $color-warning-0 !default;
+$table-state-success        : $color-success-0 !default;
+$table-state-warning        : $color-warning-0 !default;
+$table-state-danger         : $color-danger-0 !default;
+
+
+// $table-states:
+$table-states: ("selected", $table-state-selected)
+  ("starred", $table-state-starred)
+  ("success", $table-state-success)
+  ("warning", $table-state-warning)
+  ("danger", $table-state-danger) !default;
 
 
 // --------------------------------------------

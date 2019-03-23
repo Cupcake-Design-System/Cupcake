@@ -426,6 +426,7 @@ $docs-spacer-xxl: space(xl) + space(md);
 
 ::-webkit-scrollbar {
   width: .25em;
+  height: .25em;
 
   &-track {
     background-color: $color-gray-0;

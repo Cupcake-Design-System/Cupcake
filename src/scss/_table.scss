@@ -1,0 +1,74 @@
+// --------------------------------------------
+// Table DEFAULT -------------------------------
+// --------------------------------------------
+table {
+  &.c-table {
+    @include table();
+
+    &-scroll {
+      @include table-scroll;
+    }
+
+    &-hover {
+      @include table-hover;
+    }
+
+    &-row-draggable {
+      @include table-row-draggable;
+    }
+
+    &-sm {
+      @include table-sm;
+    }
+
+    &-lg {
+      @include table-lg;
+    }
+
+    &-border {
+      @include table-border;
+    }
+
+    &.c-table-header-transparent {
+      thead {
+        background: transparent;
+      }
+    }
+
+    .c-table-header-cell-draggable {
+      @include table-header-cell-draggable;
+    }
+
+    // Repeater to allow all rows or single rows to be draggable
+    .c-table-row-draggable {
+      @include table-all-rows-draggable;
+    }
+
+    .c-table-row-cell-draggable {
+      @include table-row-cell-draggable;
+    }
+  }
+}
+
+
+// Table row and cell states
+.c-table {
+  //raising specificity to override table stripes
+  &#{&} {
+    @each $state, $color in $table-states {
+      .c-table-row-#{$state},
+      .c-table-cell-#{$state} {
+        background-color: $color;
+      }
+
+      // hover state for rows and cells
+      .c-table-row-#{$state}:hover,
+      tr:hover > .c-table-cell-#{$state},
+      .c-table-row:hover > .c-table-cell-#{$state} {
+        cursor: pointer;
+        background-color: darken($color, 3%);
+      }
+    }
+  }
+}
+
