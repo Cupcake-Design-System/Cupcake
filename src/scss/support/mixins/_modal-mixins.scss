@@ -40,11 +40,6 @@ $modal-centered-footer-padding   : 12px 0 0 !default;
   transform: scale(0.7);
   opacity: 0;
   transition: all 0.15s;
-
-  &-old {
-    position: fixed;
-    max-width: 100%;
-  }
 }
 
 @mixin modal-content {

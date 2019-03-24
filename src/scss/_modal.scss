@@ -1,6 +1,14 @@
 .c-modal {
   @include modal-base;
 
+  &.c-modal-lg {
+    max-width: $modal-lg-width;
+  }
+
+  &.c-modal-sm {
+    max-width: $modal-sm-width;
+  }
+
   &-fade {
     opacity: 0;
     transition: $modal-transition;
@@ -22,14 +30,6 @@
   &-dialog {
     max-width: $modal-width;
     margin: $modal-dialog-top-margin auto;
-
-    .c-modal-sm & {
-      max-width: $modal-sm-width;
-    }
-
-    .c-modal-lg & {
-      max-width: $modal-lg-width;
-    }
   }
 
   &-content {
@@ -59,8 +59,4 @@
   &-close {
     @include modal-close;
   }
-}
-
-.c-d-block {
-  display: block;
 }
