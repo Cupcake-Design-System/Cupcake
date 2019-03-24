@@ -88,6 +88,11 @@
 
 
 	<li>
+		<a href="pages/modal.html" class="f-item-heading" target="_blank">Modal</a>
+	</li>
+
+
+	<li>
 		<a href="pages/pagination.html" class="f-item-heading" target="_blank">Pagination</a>
 	</li>
 
@@ -156,6 +161,7 @@
           <li class="docs-nav-item"><a href="elements.html#footer">Footer</a></li>
           <li class="docs-nav-item"><a href="elements.html#forms">Forms</a></li>
           <li class="docs-nav-item"><a href="elements.html#header">Header</a></li>
+          <li class="docs-nav-item"><a href="elements.html#modal">Modal</a></li>
           <li class="docs-nav-item"><a href="elements.html#pagination">Pagination</a></li>
           <li class="docs-nav-item"><a href="elements.html#switch">Switch</a></li>
           <li class="docs-nav-item"><a href="elements.html#table">Table</a></li>
@@ -339,6 +345,39 @@ $(document).on("click", function (event) {
       Prism.highlightAll();
     }
   });
+
+$("#defaultBtn").click(function(){
+  $("#newDark").toggleClass("c-modal-visable");
+});
+
+$("#close, #cancel").click(function(){
+  $("#newDark").removeClass("c-modal-visable");
+});
+
+$("#largeBtn").click(function(){
+  $("#largeModal, #dark").toggleClass("c-d-block");
+});
+
+$("#close, #cancel").click(function(){
+  $("#largeModal, #dark").removeClass("c-d-block");
+});
+
+$("#smallBtn").click(function(){
+  $("#smallModal, #dark").toggleClass("c-d-block");
+});
+
+$("#close, #cancel").click(function(){
+  $("#smallModal, #dark").removeClass("c-d-block");
+});
+
+$("#centerBtn").click(function(){
+  $("#centerModal, #dark").toggleClass("c-d-block");
+});
+
+$("#close, #cancel").click(function(){
+  $("#centerModal, #dark").removeClass("c-d-block");
+});
+
 </script>
 <script>
 	// Some simple js heavily modified from fabricators core for the sidebar

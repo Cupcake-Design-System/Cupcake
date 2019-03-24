@@ -1,0 +1,66 @@
+.c-modal {
+  @include modal-base;
+
+  &-fade {
+    opacity: 0;
+    transition: $modal-transition;
+
+    &.c-modal-in {
+      opacity: 1;
+    }
+  }
+
+  &-open {
+    overflow: hidden;
+
+    .c-modal {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+
+  &-dialog {
+    max-width: $modal-width;
+    margin: $modal-dialog-top-margin auto;
+
+    .c-modal-sm & {
+      max-width: $modal-sm-width;
+    }
+
+    .c-modal-lg & {
+      max-width: $modal-lg-width;
+    }
+  }
+
+  &-content {
+    @include modal-content;
+  }
+
+  &-header {
+    @include modal-header;
+  }
+
+  &-footer {
+    @include modal-footer;
+  }
+
+  &-title {
+    @include modal-title;
+  }
+
+  &-body {
+    @include modal-body;
+  }
+
+  &-backdrop {
+    @include modal-backdrop;
+  }
+
+  &-close {
+    @include modal-close;
+  }
+}
+
+.c-d-block {
+  display: block;
+}

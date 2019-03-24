@@ -1,0 +1,199 @@
+////
+/// @group modals
+////
+$modal-z-index            : 1050 !default;
+$modal-dialog-top-margin  : 30px !default;
+$modal-sm-width           : 320px !default;
+$modal-width              : 640px !default;
+$modal-lg-width           : 800px !default;
+$modal-border-radius      : 2px !default;
+$modal-shadow             : $shadow-lg !default;
+$modal-border             : 1px solid $color-gray-2 !default;
+$modal-transition         : opacity .35s !default;
+$modal-close-color        : $color-gray-6 !default;
+$modal-body-color         : $color-gray-7 !default;
+$modal-body-font-size     : $font-body-md !default;
+$modal-title-font-size    : $font-body-xl !default;
+$modal-title-color        : $color-gray-9 !default;
+$modal-title-font-weight  : $font-weight-bold !default;
+$modal-title-line-height  : 24px !default;
+$modal-bg-color           : #ffffff !default;
+$modal-backdrop-bg-color  : rgba(0, 0, 0, 0.75) !default;
+$modal-body-padding       : 24px 24px 12px !default;
+$modal-header-padding     : 8px 12px 8px 24px !default;
+$modal-footer-padding     : 12px 24px 24px !default;
+$modal-centered-padding   : 40px !default;
+$modal-centered-footer-padding   : 12px 0 0 !default;
+
+
+@mixin modal-base {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  outline: 0 none;
+  overflow: hidden;
+  z-index: $modal-z-index;
+  max-width: $modal-width;
+  visibility: hidden;
+  transform: scale(0.7);
+  opacity: 0;
+  transition: all 0.15s;
+
+  &-old {
+    position: fixed;
+    max-width: 100%;
+  }
+}
+
+@mixin modal-content {
+  display: flex;
+  outline: 0 none;
+  position: relative;
+  word-wrap: break-word;
+  border: $modal-border;
+  flex-direction: column;
+  overflow-wrap: break-word;
+  box-shadow: $modal-shadow;
+  background-clip: padding-box;
+  border-radius: $modal-border-radius;
+  background-color: $modal-bg-color;
+
+  .c-modal-centered & {
+    text-align: center;
+    padding: $modal-centered-padding;
+  }
+}
+
+@mixin modal-header {
+  display: flex;
+  align-items: center;
+  border-bottom: $modal-border;
+  justify-content: space-between;
+  padding: $modal-header-padding;
+  border-top-left-radius: $modal-border-radius;
+  border-top-right-radius: $modal-border-radius;
+
+  .c-btn-box {
+    min-width: 32px;
+  }
+}
+
+@mixin modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: $modal-footer-padding;
+  border-bottom-left-radius: $modal-border-radius;
+  border-bottom-right-radius: $modal-border-radius;
+
+  &-centered {
+    justify-content: center;
+  }
+
+  .c-modal-centered & {
+    padding: $modal-centered-footer-padding;
+  }
+}
+
+@mixin modal-title {
+  width: 100%;
+  margin: $space-0;
+  color: $modal-title-color;
+  font-size: $modal-title-font-size;
+  font-weight: $modal-title-font-weight;
+  line-height: $modal-title-line-height;
+}
+
+@mixin modal-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  position: relative;// IE11 fix.
+  color: $modal-body-color;
+  padding: $modal-body-padding;
+  font-size: $modal-body-font-size;
+  line-height: $modal-body-font-size + 4;
+
+  /* stylelint-disable */
+  > .c-modal-footer {
+    padding: 20px 0 12px;
+  }
+
+  > .c-modal-title {
+    margin-bottom: 16px;
+  }
+
+  .c-modal-centered & {
+    padding: 0 0 12px;
+  }
+  /* stylelint-enable */
+}
+
+@mixin modal-backdrop {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  position: fixed;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  z-index: $modal-z-index - 10;
+  background-color: $modal-backdrop-bg-color;
+
+  &.c-modal-visable {
+    opacity: 1;
+    visibility: visible;
+
+    .c-modal {
+      visibility: visible;
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+@mixin modal-close {
+  width: 32px;
+  height: 32px;
+  flex-grow: 0;
+  font-size: 0;
+  flex-shrink: 0;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  vertical-align: top;
+  pointer-events: auto;
+  display: inline-block;
+  text-decoration: none;
+
+  &::before {
+    height: 14px;
+    width: 3px;
+  }
+
+  &::after {
+    height: 3px;
+    width: 14px;
+  }
+
+  &::before,
+  &::after {
+    top: 50%;
+    left: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: $radius-sm;
+    background-color: $color-gray-6;
+    transform-origin: center center;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: darken($color-gray-6, 10);
+  }
+}

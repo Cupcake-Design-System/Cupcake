@@ -1337,6 +1337,48 @@
 </div>
 
 
+<div class="docs-section" id="modal">
+  <div id="modal">
+    <div class="docs-section-header">
+      <div class="docs-section-title">Modal <a href="pages/modal.html" target="_blank">View Test Page</a></div>
+      <div class="docs-section-subtitle">
+        <p>Cards provide a flexible and extensible content container with multiple options and variants.</p>
+
+      </div>
+    </div>
+    <div class="docs-section-preview"><div class="c-modal c-modal-fade c-modal-in" style="display: block; position: static;">
+	<div class="c-modal-dialog">
+		<div class="c-modal-content">
+
+			<div class="c-modal-header">
+
+				<h4 class="c-modal-title">Modal header</h4>
+				<button type="button" class="c-modal-close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+
+			<div class="c-modal-body">
+				<!-- <ng-transclude> -->
+
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus fugit perferendis voluptates cumque unde fuga
+				reprehenderit illum doloribus, error, officia earum odit quasi minus odio eveniet explicabo accusantium, tempore
+				quisquam.
+
+				<!-- </ng-transclude> -->
+			</div>
+
+			<div class="c-modal-footer">
+				<button class="c-btn c-btn-secondary c-m-right-sm">Cancel</button>
+				<button class="c-btn c-btn-primary">Submit</button>
+			</div>
+		</div>
+	</div>
+</div></div>
+  </div>
+</div>
+
+
 <div class="docs-section" id="pagination">
   <div id="pagination">
     <div class="docs-section-header">
@@ -1535,6 +1577,7 @@
           <li class="docs-nav-item"><a href="elements.html#footer">Footer</a></li>
           <li class="docs-nav-item"><a href="elements.html#forms">Forms</a></li>
           <li class="docs-nav-item"><a href="elements.html#header">Header</a></li>
+          <li class="docs-nav-item"><a href="elements.html#modal">Modal</a></li>
           <li class="docs-nav-item"><a href="elements.html#pagination">Pagination</a></li>
           <li class="docs-nav-item"><a href="elements.html#switch">Switch</a></li>
           <li class="docs-nav-item"><a href="elements.html#table">Table</a></li>
@@ -1718,6 +1761,39 @@ $(document).on("click", function (event) {
       Prism.highlightAll();
     }
   });
+
+$("#defaultBtn").click(function(){
+  $("#newDark").toggleClass("c-modal-visable");
+});
+
+$("#close, #cancel").click(function(){
+  $("#newDark").removeClass("c-modal-visable");
+});
+
+$("#largeBtn").click(function(){
+  $("#largeModal, #dark").toggleClass("c-d-block");
+});
+
+$("#close, #cancel").click(function(){
+  $("#largeModal, #dark").removeClass("c-d-block");
+});
+
+$("#smallBtn").click(function(){
+  $("#smallModal, #dark").toggleClass("c-d-block");
+});
+
+$("#close, #cancel").click(function(){
+  $("#smallModal, #dark").removeClass("c-d-block");
+});
+
+$("#centerBtn").click(function(){
+  $("#centerModal, #dark").toggleClass("c-d-block");
+});
+
+$("#close, #cancel").click(function(){
+  $("#centerModal, #dark").removeClass("c-d-block");
+});
+
 </script>
 <script>
 	// Some simple js heavily modified from fabricators core for the sidebar

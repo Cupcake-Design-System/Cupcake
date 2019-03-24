@@ -165,4 +165,37 @@ $(document).on("click", function (event) {
       Prism.highlightAll();
     }
   });
+
+$("#defaultBtn").click(function(){
+  $("#newDark").toggleClass("c-modal-visable");
+});
+
+$("#close, #cancel").click(function(){
+  $("#newDark").removeClass("c-modal-visable");
+});
+
+$("#largeBtn").click(function(){
+  $("#largeModal, #dark").toggleClass("c-d-block");
+});
+
+$("#close, #cancel").click(function(){
+  $("#largeModal, #dark").removeClass("c-d-block");
+});
+
+$("#smallBtn").click(function(){
+  $("#smallModal, #dark").toggleClass("c-d-block");
+});
+
+$("#close, #cancel").click(function(){
+  $("#smallModal, #dark").removeClass("c-d-block");
+});
+
+$("#centerBtn").click(function(){
+  $("#centerModal, #dark").toggleClass("c-d-block");
+});
+
+$("#close, #cancel").click(function(){
+  $("#centerModal, #dark").removeClass("c-d-block");
+});
+
 </script>

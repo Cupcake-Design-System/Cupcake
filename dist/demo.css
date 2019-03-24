@@ -2,6 +2,28 @@
 /* ----------------------- */
 /* 🎂 Cupcake Sprinkles 🎂 */
 /* ----------------------- */
+@keyframes backdropVisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dialogOpen {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* stylelint-disable */
 .docs-container {
   display: flex;
