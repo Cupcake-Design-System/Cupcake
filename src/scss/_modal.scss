@@ -1,42 +1,192 @@
+// Base Modal
 .c-modal {
-  @include modal-base;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  display: flex;
+  outline: 0 none;
+  overflow: hidden;
+  visibility: hidden;
+  transform: scale(0.7);
+  transition: all 0.15s;
+  z-index: $modal-z-index;
+  max-width: $modal-width;
 
+  // Large Modal
   &.c-modal-lg {
     max-width: $modal-lg-width;
   }
 
+  // Small Modal
   &.c-modal-sm {
     max-width: $modal-sm-width;
   }
 
+  // Modal Content Area
   &-content {
-    @include modal-content;
+    display: flex;
+    overflow: auto;
+    outline: 0 none;
+    position: relative;
+    word-wrap: break-word;
+    border: $modal-border;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    box-shadow: $modal-shadow;
+    background-clip: padding-box;
+    max-height: calc(100vh - 96px);
+    background-color: $modal-bg-color;
+    border-radius: $modal-border-radius;
+
+    // Modal Dialog centers and changes padding of modal-content area
+    .c-modal-dialog & {
+      text-align: center;
+      padding: $modal-centered-padding;
+    }
   }
 
+  // Modal Header
   &-header {
-    @include modal-header;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    border-bottom: $modal-border;
+    justify-content: space-between;
+    padding: $modal-header-padding;
+    border-top-left-radius: $modal-border-radius;
+    border-top-right-radius: $modal-border-radius;
+
+    // Support button box Modal Header
+    .c-btn-box {
+      min-width: 32px;
+    }
   }
 
+  // Modal Footer
   &-footer {
-    @include modal-footer;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: $modal-footer-padding;
+    border-bottom-left-radius: $modal-border-radius;
+    border-bottom-right-radius: $modal-border-radius;
+
+    // Support centeres Modal footer
+    &-centered {
+      justify-content: center;
+    }
+
+    .c-modal-dialog & {
+      padding: $modal-centered-footer-padding;
+    }
   }
 
+  // Modal Title
   &-title {
-    @include modal-title;
+    width: 100%;
+    margin: $space-0;
+    color: $modal-title-color;
+    font-size: $modal-title-font-size;
+    font-weight: $modal-title-font-weight;
+    line-height: $modal-title-line-height;
   }
 
+  // Modal Body
   &-body {
-    @include modal-body;
+    height: 100%;
+    overflow: auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    position: relative;// IE11 fix.
+    color: $modal-body-color;
+    padding: $modal-body-padding;
+    font-size: $modal-body-font-size;
+    line-height: $modal-body-font-size + 4;
+
+    > .c-modal-title {
+      margin-bottom: $modal-padding / 3;
+    }
+
+    .c-modal-dialog & {
+      padding: 0 0 ($modal-padding / 2);
+    }
   }
 
+  // Modal Backdrop
   &-backdrop {
-    @include modal-backdrop;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    position: fixed;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    z-index: $modal-z-index - 10;
+    background-color: $modal-backdrop-bg-color;
+
+    // Modal visable is the parent class to make backdrop and modal visable
+    &.c-modal-visable {
+      opacity: 1;
+      visibility: visible;
+
+      .c-modal {
+        visibility: visible;
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
   }
 
+  // Modal close X styles
   &-close {
-    @include modal-close;
+    flex-grow: 0;
+    font-size: 0;
+    outline: none;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+    vertical-align: top;
+    pointer-events: auto;
+    display: inline-block;
+    text-decoration: none;
+    width: $modal-close-size;
+    height: $modal-close-size;
+
+    &::before {
+      height: 14px;
+      width: 3px;
+    }
+
+    &::after {
+      height: 3px;
+      width: 14px;
+    }
+
+    &::before,
+    &::after {
+      top: 50%;
+      left: 50%;
+      content: "";
+      display: block;
+      position: absolute;
+      border-radius: $radius-sm;
+      background-color: $modal-close-color;
+      transform-origin: center center;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: darken($modal-close-color, 10);
+    }
   }
 
+  // Modal Fullscreen
   &-fullscreen {
     &.c-modal {
       max-width: 100%;
