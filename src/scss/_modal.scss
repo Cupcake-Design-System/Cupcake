@@ -9,29 +9,6 @@
     max-width: $modal-sm-width;
   }
 
-  &-fade {
-    opacity: 0;
-    transition: $modal-transition;
-
-    &.c-modal-in {
-      opacity: 1;
-    }
-  }
-
-  &-open {
-    overflow: hidden;
-
-    .c-modal {
-      overflow-y: auto;
-      overflow-x: hidden;
-    }
-  }
-
-  &-dialog {
-    max-width: $modal-width;
-    margin: $modal-dialog-top-margin auto;
-  }
-
   &-content {
     @include modal-content;
   }
@@ -58,5 +35,18 @@
 
   &-close {
     @include modal-close;
+  }
+
+  &-fullscreen {
+    &.c-modal {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+    }
+
+    .c-modal-content {
+      width: 100%;
+      min-height: 100%;
+    }
   }
 }

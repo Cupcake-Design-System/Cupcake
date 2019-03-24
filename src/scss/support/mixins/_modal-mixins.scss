@@ -1,49 +1,25 @@
-////
-/// @group modals
-////
-$modal-z-index            : 1050 !default;
-$modal-dialog-top-margin  : 30px !default;
-$modal-sm-width           : 320px !default;
-$modal-width              : 640px !default;
-$modal-lg-width           : 800px !default;
-$modal-border-radius      : 2px !default;
-$modal-shadow             : $shadow-lg !default;
-$modal-border             : 1px solid $color-gray-2 !default;
-$modal-transition         : opacity .35s !default;
-$modal-close-color        : $color-gray-6 !default;
-$modal-body-color         : $color-gray-7 !default;
-$modal-body-font-size     : $font-body-md !default;
-$modal-title-font-size    : $font-body-xl !default;
-$modal-title-color        : $color-gray-9 !default;
-$modal-title-font-weight  : $font-weight-bold !default;
-$modal-title-line-height  : 24px !default;
-$modal-bg-color           : #ffffff !default;
-$modal-backdrop-bg-color  : rgba(0, 0, 0, 0.75) !default;
-$modal-body-padding       : 24px 24px 12px !default;
-$modal-header-padding     : 8px 12px 8px 24px !default;
-$modal-footer-padding     : 12px 24px 24px !default;
-$modal-centered-padding   : 40px !default;
-$modal-centered-footer-padding   : 12px 0 0 !default;
-
-
+// --------------------------------------------
+// Modal Base Mixins --------------------------
+// --------------------------------------------
 @mixin modal-base {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  opacity: 0;
   display: flex;
   outline: 0 none;
   overflow: hidden;
-  z-index: $modal-z-index;
-  max-width: $modal-width;
   visibility: hidden;
   transform: scale(0.7);
-  opacity: 0;
   transition: all 0.15s;
+  z-index: $modal-z-index;
+  max-width: $modal-width;
 }
 
 @mixin modal-content {
   display: flex;
+  overflow: auto;
   outline: 0 none;
   position: relative;
   word-wrap: break-word;
@@ -52,10 +28,11 @@ $modal-centered-footer-padding   : 12px 0 0 !default;
   overflow-wrap: break-word;
   box-shadow: $modal-shadow;
   background-clip: padding-box;
-  border-radius: $modal-border-radius;
+  max-height: calc(100vh - 96px);
   background-color: $modal-bg-color;
+  border-radius: $modal-border-radius;
 
-  .c-modal-centered & {
+  .c-modal-dialog & {
     text-align: center;
     padding: $modal-centered-padding;
   }
@@ -63,6 +40,7 @@ $modal-centered-footer-padding   : 12px 0 0 !default;
 
 @mixin modal-header {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   border-bottom: $modal-border;
   justify-content: space-between;
@@ -77,6 +55,7 @@ $modal-centered-footer-padding   : 12px 0 0 !default;
 
 @mixin modal-footer {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: flex-end;
   padding: $modal-footer-padding;
@@ -87,7 +66,7 @@ $modal-centered-footer-padding   : 12px 0 0 !default;
     justify-content: center;
   }
 
-  .c-modal-centered & {
+  .c-modal-dialog & {
     padding: $modal-centered-footer-padding;
   }
 }
@@ -102,6 +81,8 @@ $modal-centered-footer-padding   : 12px 0 0 !default;
 }
 
 @mixin modal-body {
+  height: 100%;
+  overflow: auto;
   flex: 1 1 auto;
   min-height: 1px;
   position: relative;// IE11 fix.
@@ -110,21 +91,19 @@ $modal-centered-footer-padding   : 12px 0 0 !default;
   font-size: $modal-body-font-size;
   line-height: $modal-body-font-size + 4;
 
-  /* stylelint-disable */
-  > .c-modal-footer {
-    padding: 20px 0 12px;
-  }
-
   > .c-modal-title {
-    margin-bottom: 16px;
+    margin-bottom: $modal-padding / 3;
   }
 
-  .c-modal-centered & {
-    padding: 0 0 12px;
+  .c-modal-dialog & {
+    padding: 0 0 ($modal-padding / 2);
   }
-  /* stylelint-enable */
 }
 
+
+// --------------------------------------------
+// Modal Backdrop Mixin -----------------------
+// --------------------------------------------
 @mixin modal-backdrop {
   top: 0;
   left: 0;
@@ -150,19 +129,23 @@ $modal-centered-footer-padding   : 12px 0 0 !default;
   }
 }
 
+
+// --------------------------------------------
+// Modal Close Mixin --------------------------
+// --------------------------------------------
 @mixin modal-close {
-  width: 32px;
-  height: 32px;
   flex-grow: 0;
   font-size: 0;
-  flex-shrink: 0;
   outline: none;
+  flex-shrink: 0;
   cursor: pointer;
   position: relative;
   vertical-align: top;
   pointer-events: auto;
   display: inline-block;
   text-decoration: none;
+  width: $modal-close-size;
+  height: $modal-close-size;
 
   &::before {
     height: 14px;
@@ -182,13 +165,13 @@ $modal-centered-footer-padding   : 12px 0 0 !default;
     display: block;
     position: absolute;
     border-radius: $radius-sm;
-    background-color: $color-gray-6;
+    background-color: $modal-close-color;
     transform-origin: center center;
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
   }
 
   &:hover::before,
   &:hover::after {
-    background-color: darken($color-gray-6, 10);
+    background-color: darken($modal-close-color, 10);
   }
 }

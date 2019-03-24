@@ -166,6 +166,10 @@ $(document).on("click", function (event) {
     }
   });
 
+</script>
+
+{{#if modals}}
+<script>
 $("#defaultBtn").click(function(){
   $("#newDark").toggleClass("c-modal-visable");
 });
@@ -198,4 +202,12 @@ $("#close, #cancel").click(function(){
   $("#centerModal").removeClass("c-modal-visable");
 });
 
+$("#fullscreenBtn").click(function(){
+  $("#fullscreenModal").toggleClass("c-modal-visable");
+});
+
+$("#close, #cancel").click(function(){
+  $("#fullscreenModal").removeClass("c-modal-visable");
+});
 </script>
+{{/if}}

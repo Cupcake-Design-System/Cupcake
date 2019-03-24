@@ -2,28 +2,6 @@
 /* ----------------------- */
 /* 🎂 Cupcake Sprinkles 🎂 */
 /* ----------------------- */
-@keyframes backdropVisible {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes dialogOpen {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 /* stylelint-disable */
 .docs-container {
   display: flex;
@@ -418,20 +396,6 @@
   .docs-nav-open .docs-content {
     margin-left: 0;
   }
-}
-
-::-webkit-scrollbar {
-  width: .25em;
-  height: .25em;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f8f9fa;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #ced4da;
-  outline: none;
 }
 
 .docs-wrap,
