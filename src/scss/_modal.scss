@@ -43,7 +43,7 @@
     // Modal Dialog centers and changes padding of modal-content area
     .c-modal-dialog & {
       text-align: center;
-      padding: $modal-centered-padding;
+      padding: $modal-dialog-padding;
     }
   }
 
@@ -75,12 +75,12 @@
     border-bottom-right-radius: $modal-border-radius;
 
     // Support centeres Modal footer
-    &-centered {
+    &-center {
       justify-content: center;
     }
 
     .c-modal-dialog & {
-      padding: $modal-centered-footer-padding;
+      padding: $modal-dialog-footer-padding;
     }
   }
 

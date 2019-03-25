@@ -351,9 +351,9 @@ $modal-bg-color               : #ffffff !default;
 $modal-backdrop-bg-color      : rgba(0, 0, 0, 0.75) !default;
 $modal-body-padding           : $modal-padding $modal-padding ($modal-padding / 2) !default;
 $modal-header-padding         : ($modal-padding / 3) ($modal-padding / 2) ($modal-padding / 3) $modal-padding !default;
-$modal-footer-padding         : ($modal-padding / 2) $modal-padding $modal-padding !default;
-$modal-centered-padding       : 40px !default;
-$modal-centered-footer-padding: ($modal-padding / 2) 0 0 !default;
+$modal-footer-padding         : $modal-padding !default;
+$modal-dialog-padding         : 40px !default;
+$modal-dialog-footer-padding  : ($modal-padding / 2) 0 0 !default;
 
 
 // --------------------------------------------
