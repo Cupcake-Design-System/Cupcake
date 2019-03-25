@@ -1,0 +1,105 @@
+// Ascending evaluate grid breakpoints.
+@mixin _assert-ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+
+  @each $key, $num in $map {
+    @if $prev-num == null {
+      // Do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    } @else if $prev-num >= $num {
+      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
+
+@include _assert-ascending($breakpoints, "$breakpoints");
+
+// ensures the min-width of the lowest breakpoint starts at 0.
+@mixin _assert-starts-at-zero($map) {
+  $values: map-values($map);
+  $first-value: nth($values, 1);
+
+  @if $first-value != 0 {
+    @warn "First breakpoint in `$breakpoints` must start at 0, but starts at #{$first-value}.";
+  }
+}
+
+@include _assert-starts-at-zero($breakpoints);
+
+@function breakpoint-next($name, $grid-breakpoints: $breakpoints, $breakpoint-names: map-keys($grid-breakpoints)) {
+  $n: index($breakpoint-names, $name);
+
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+@function breakpoint-min($name, $grid-breakpoints: $breakpoints) {
+  $min: map-get($grid-breakpoints, $name);
+
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name, $grid-breakpoints: $breakpoints) {
+  $next: breakpoint-next($name, $grid-breakpoints);
+
+  @return if($next, breakpoint-min($next, $grid-breakpoints) - 1px, null);
+}
+
+@function breakpoint-infix($name, $grid-breakpoints: $breakpoints) {
+  @return if(breakpoint-min($name, $grid-breakpoints) == null, "", "-#{$name}");
+}
+
+// Media breakpoint up is min-width up
+@mixin media-breakpoint-up($name, $grid-breakpoints: $breakpoints) {
+  $min: breakpoint-min($name, $grid-breakpoints);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media breakpoint down is max-width down
+@mixin media-breakpoint-down($name, $grid-breakpoints: $breakpoints) {
+  $max: breakpoint-max($name, $grid-breakpoints);
+
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media breakpoint between sets min and max width and targets in between
+@mixin media-breakpoint-between($lower, $upper, $grid-breakpoints: $breakpoints) {
+  $min: breakpoint-min($lower, $grid-breakpoints);
+  $max: breakpoint-max($upper, $grid-breakpoints);
+
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+// Media breakpoint only sets min and max width and targets in between
+@mixin media-breakpoint-only($name, $grid-breakpoints: $breakpoints) {
+  $min: breakpoint-min($name, $grid-breakpoints);
+  $max: breakpoint-max($name, $grid-breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($name);
+  } @else if $min == null {
+    @include media-breakpoint-down($name);
+  }
+}

@@ -329,6 +329,32 @@ $footer-border-top      : 1px solid $color-gray-3;
 
 
 // --------------------------------------------
+// Grid ---------------------------------------
+// --------------------------------------------
+$gutter: 16px !default;
+$grid-columns: 12 !default;
+$container-fixed-width: 1200px !default;
+$grid-gutter-width: 32px !default;
+
+// Define the maximum width of `.c-container-fixed` at breakpoints.
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+) !default;
+
+
+// --------------------------------------------
 // SWITCHES -----------------------------------
 // --------------------------------------------
 $switch-prefix             : 'c-switch' !default;
