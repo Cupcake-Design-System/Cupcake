@@ -331,10 +331,10 @@ $footer-border-top      : 1px solid $color-gray-3;
 // --------------------------------------------
 // Grid ---------------------------------------
 // --------------------------------------------
-$gutter: 16px !default;
+$gutter: 12px !default;
 $grid-columns: 12 !default;
 $container-fixed-width: 1200px !default;
-$grid-gutter-width: 32px !default;
+$grid-gutter-width: 24px !default;
 
 // Define the maximum width of `.c-container-fixed` at breakpoints.
 $container-max-widths: (
