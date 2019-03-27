@@ -320,6 +320,34 @@ $footer-border-top      : 1px solid $color-gray-3;
 
 
 // --------------------------------------------
+// MODALS -------------------------------------
+// --------------------------------------------
+$modal-z-index                : 1050 !default;
+$modal-sm-width               : 480px !default;
+$modal-width                  : 640px !default;
+$modal-lg-width               : 800px !default;
+$modal-border-radius          : $global-default-radius !default;
+$modal-shadow                 : $shadow-lg !default;
+$modal-border                 : 1px solid $color-gray-2 !default;
+$modal-close-color            : $color-gray-6 !default;
+$modal-close-size             : 32px !default;
+$modal-body-color             : $color-gray-7 !default;
+$modal-body-font-size         : $font-body-md !default;
+$modal-title-font-size        : $font-body-xl !default;
+$modal-title-color            : $color-gray-9 !default;
+$modal-title-font-weight      : $font-weight-bold !default;
+$modal-title-line-height      : $line-height-body-lg !default;
+$modal-padding                : $space-lg !default;
+$modal-bg-color               : $color-white !default;
+$modal-backdrop-bg-color      : rgba(0, 0, 0, 0.75) !default;
+$modal-body-padding           : $modal-padding $modal-padding ($modal-padding / 2) !default;
+$modal-header-padding         : ($modal-padding / 3) ($modal-padding / 2) ($modal-padding / 3) $modal-padding !default;
+$modal-footer-padding         : $modal-padding !default;
+$modal-dialog-padding         : 40px !default;
+$modal-dialog-footer-padding  : ($modal-padding / 2) 0 0 !default;
+
+
+// --------------------------------------------
 // HEADER -------------------------------------
 // --------------------------------------------
 $header-bottom-border     : $color-gray-1 !default;

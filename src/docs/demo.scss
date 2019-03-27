@@ -424,19 +424,19 @@ $docs-spacer-xxl: space(xl) + space(md);
   }
 }
 
-::-webkit-scrollbar {
-  width: .25em;
-  height: .25em;
+// ::-webkit-scrollbar {
+//   width: .25em;
+//   height: .25em;
 
-  &-track {
-    background-color: $color-gray-0;
-  }
+//   &-track {
+//     background-color: $color-gray-0;
+//   }
 
-  &-thumb {
-    background-color: $color-gray-4;
-    outline: none;
-  }
-}
+//   &-thumb {
+//     background-color: $color-gray-4;
+//     outline: none;
+//   }
+// }
 
 .docs-wrap,
 .docs-wrap .snippet {

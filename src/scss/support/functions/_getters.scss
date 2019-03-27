@@ -2,11 +2,10 @@
 // API Map Retrieve --------------------------
 // --------------------------------------------
 
-/**
-* Returns the spacing value for a given variant.
-* @example
-*  padding: space(sm);
-*/
+
+// Returns the spacing value for a given variant.
+// @example
+//  padding: space(sm);
 @function space($value: md) {
   $fetched-value: map-get($space, $value);
 
@@ -18,11 +17,11 @@
 }
 
 
-/**
-* Returns the core theme sizes.
-* @example
-*  {{any-attribute}}: theme-size(sm);
-*/
+//
+// Returns the core theme sizes.
+// @example
+//  {{any-attribute}}: theme-size(sm);
+//
 @function theme-size($value: sm) {
   $fetched-value: map-get($global-theme-sizes, $value);
 
@@ -34,11 +33,9 @@
 }
 
 
-/**
-* Returns the radius value for a given variant.
-* @example
-*  radius: radius(sm);
-*/
+// Returns the radius value for a given variant.
+// @example
+//  radius: radius(sm);
 @function radius($value: md) {
   $fetched-value: map-get($radius, $value);
 
@@ -50,11 +47,9 @@
 }
 
 
-/**
-* Returns the font weight for a given weight definition.
-* @example
-*  font-weight: font-weight(bold);
-*/
+// Returns the font weight for a given weight definition.
+// @example
+//  font-weight: font-weight(bold);
 @function font-weight($value: normal) {
   $fetched-font-weight: map-get($font-weight, $value);
 
@@ -66,11 +61,9 @@
 }
 
 
-/**
-* Returns the line height for a given range.
-* @example
-*  line-height: line-height(header, sm);
-*/
+// Returns the line height for a given range.
+// @example
+//  line-height: line-height(header, sm);
 @function line-height($name, $level, $font-scale: $font-scale) {
   $fetched-line-height: map-get(font-scale-level($name, $level, $font-scale), line-height);
 
@@ -82,11 +75,9 @@
 }
 
 
-/**
-* Returns the font size for a given size definition.
-* @example
-*  font-size: font-size(header, xl);
-*/
+// Returns the font size for a given size definition.
+// @example
+//  font-size: font-size(header, xl);
 @function font-size($name, $level, $font-scale: $font-scale) {
   $fetched-font-size: map-get(font-scale-level($name, $level, $font-scale), font-size);
 
@@ -98,11 +89,9 @@
 }
 
 
-/**
-* Returns the font family for a given definition.
-* @example
-*  font-family:  font(sans);
-*/
+// Returns the font family for a given definition.
+// @example
+//  font-family:  font(sans);
 @function font($value: sans) {
   $fetched-font: map-get($font-family, $value);
 
@@ -114,11 +103,9 @@
 }
 
 
-/**
-* Returns the shadow for the specified depth.
-* @example
-*  shadow:  shadow(md);
-*/
+// Returns the shadow for the specified depth.
+// @example
+//  shadow:  shadow(md);
 @function shadow($value: sm) {
   $fetched-value: map-get($shadow, $value);
 
@@ -130,11 +117,9 @@
 }
 
 
-/**
-* Returns the z-index of the specified element.
-* @example
-*  z-index:  z-index();
-*/
+// Returns the z-index of the specified element.
+// @example
+//  z-index:  z-index();
 @function z-index($element, $context: $global-elements) {
   $index: map-get($context, $element);
 
@@ -146,11 +131,9 @@
 }
 
 
-/**
-* Returns the color value for a given color name and group.
-* @example
-*  background: color(primary, 3);
-*/
+// Returns the color value for a given color name and group.
+// @example
+//  background: color(primary, 3);
 @function color($value: primary, $range: 7) {
 
   @if $value == black {
@@ -190,11 +173,9 @@
 }
 
 
-/**
-* Returns the breakpoint size given its named size.
-* @example
-*  @media all and (min-width: breakpoint('small')) { }
-*/
+// Returns the breakpoint size given its named size.
+// @example
+//  @media all and (min-width: breakpoint('small')) { }
 @function breakpoint($value: sm) {
   $fetched-value: map-get($breakpoints, $value);
 
@@ -206,31 +187,25 @@
 }
 
 
-/**
- * Grab all levels of a font the font-scale
- * @example
- *  font-size: font-scale(header);
- */
+// Grab all levels of a font the font-scale
+// @example
+//  font-size: font-scale(header);
 @function font-scale($name, $font-scale: $font-scale) {
   @return map-get($font-scale, $name);
 }
 
 
-/**
-* Grab info for a particular level of a font-scale
-* @example
-*  font-size: font-scale-level(header, lg);
-*/
+// Grab info for a particular level of a font-scale
+// @example
+//  font-size: font-scale-level(header, lg);
 @function font-scale-level($name, $level, $font-scale: $font-scale) {
   @return map-get(font-scale($name, $font-scale), $level);
 }
 
 
-/**
-* Turn any value into pixels
-* @example
-*  font-size: convert-to-px(14); // 14px
-*/
+// Turn any value into pixels
+// @example
+//  font-size: convert-to-px(14); // 14px
 @function convert-to-px($value) {
   @if (type-of($value) == number and $value != 0) {
     $value: if(unitless($value), $value * 1px, $value);

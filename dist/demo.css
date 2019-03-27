@@ -468,20 +468,6 @@
   }
 }
 
-::-webkit-scrollbar {
-  width: .25em;
-  height: .25em;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f8f9fa;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #ced4da;
-  outline: none;
-}
-
 .docs-wrap,
 .docs-wrap .snippet {
   display: flex;
