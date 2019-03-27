@@ -1,0 +1,10 @@
+// Fluid container
+.c-container {
+  @include grid-container();
+
+  // fixed container
+  &-fixed {
+    @include grid-container();
+    @include grid-container-max-widths();
+  }
+}

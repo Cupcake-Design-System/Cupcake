@@ -1,0 +1,97 @@
+// Base column is extend to avoid duplication at breakpoints
+%column {
+  position: relative;
+  width: 100%;
+  min-height: 1px; // Prevent collapsing
+  padding-right: $grid-gutter-width / 2;
+  padding-left: $grid-gutter-width / 2;
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  $bp: breakpoint-infix($breakpoint, $breakpoints);
+
+  // Allow columns to stretch full width below their breakpoints
+  @for $i from 1 through $grid-columns {
+    .c-col#{$bp}-#{$i} {
+      @extend %column;
+    }
+  }
+
+  .c-col#{$bp},
+  .c-col#{$bp}-auto {
+    @extend %column;
+  }
+
+  @include media-breakpoint-up($breakpoint, $breakpoints) {
+    // Provide basic `.c-col-{bp}` classes for equal-width flexbox columns
+    .c-col#{$bp} {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+
+    .c-col#{$bp}-auto {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: none; // Reset earlier grid tiers
+    }
+
+    @for $i from 1 through $grid-columns {
+      .c-col#{$bp}-#{$i} {
+        @include grid-col($i, $grid-columns);
+      }
+    }
+
+    @for $i from 1 through $grid-columns {
+      .c-col#{$bp}-order-#{$i} {
+        order: $i;
+      }
+    }
+
+    @for $i from 1 through $grid-columns {
+      .c-col#{$bp}-offset-#{$i} {
+        margin-left: percentage($i / $grid-columns);
+      }
+    }
+
+    .c-col#{$bp}-collapsed {
+      padding: $space-0;
+    }
+
+    .c-col#{$bp}-align-auto {
+      align-self: auto;
+    }
+
+    .c-col#{$bp}-align-start {
+      align-self: flex-start;
+    }
+
+    .c-col#{$bp}-align-end {
+      align-self: flex-end;
+    }
+
+    .c-col#{$bp}-align-center {
+      align-self: center;
+    }
+
+    .c-col#{$bp}-align-baseline {
+      align-self: baseline;
+    }
+
+    .c-col-content#{$bp}-unstretch {
+      align-self: baseline;
+    }
+
+    .c-col#{$bp}-align-stretch {
+      display: flex;
+      align-self: stretch;
+    }
+  }
+}
+
+.c-col-shrink {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+  padding: 0 ($grid-gutter-width / 2);
+}
