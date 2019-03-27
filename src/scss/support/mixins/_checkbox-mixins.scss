@@ -105,8 +105,10 @@
     position: absolute;
     box-shadow: $checkbox-shadow;
     background-color: $color-white;
+    border-radius: $checkbox-icon-radius;
 
     &::before {
+      left: 0;
       content: "";
       width: $size;
       height: $size;

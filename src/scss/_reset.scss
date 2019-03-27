@@ -46,11 +46,11 @@
   }
 
   button {
-    padding: 0;
-    overflow: visible;
-    line-height: 1;
-    background: transparent;
     border: 0;
+    padding: 0;
+    line-height: 1;
+    overflow: visible;
+    background: transparent;
   }
 
   article,
@@ -88,8 +88,8 @@
   }
 
   a {
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
     background-color: transparent;
   }
 
@@ -128,9 +128,9 @@
 
   sub,
   sup {
-    position: relative;
     font-size: 75%;
     line-height: 0;
+    position: relative;
     vertical-align: baseline;
   }
 

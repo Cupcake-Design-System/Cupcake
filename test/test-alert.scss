@@ -2,36 +2,35 @@
 @import '../node_modules/sass-true/sass/true';
 @import '../src/scss/support/support';
 
-$alert-prefix   : 'alert';
 
 @include describe('Test output for alert mixins') {
 
   @include it('Given a prefix - generates base attributes for an alert') {
     @include assert {
       @include output {
-        .#{$alert-prefix} {
+        .c-alert {
           @include alert-base();
         }
       }
       @include expect {
-        .alert {
-          position: relative;
+        .c-alert {
+          color: #212529;
           display: flex;
-          align-items: flex-start;
           text-align: left;
+          position: relative;
+          background-color: rgba(27, 110, 194, 0.07);
+          border: 1px solid;
           margin: 0 0 16px 0;
           padding: 8px;
-          background-color: rgba(27, 110, 194, 0.07);
-          color: #212529;
-          border: 1px solid;
+          align-items: flex-start;
+          font-size: 12px;
           border-radius: 2px;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-          font-weight: 300;
-          font-size: 12px;
+          font-weight: 500;
           line-height: 15px;
         }
 
-        .alert-close {
+        .c-alert-close {
           position: relative;
           display: inline-block;
           flex-grow: 0;
@@ -44,17 +43,17 @@ $alert-prefix   : 'alert';
           margin-left: auto;
         }
 
-        .alert-close:hover {
+        .c-alert-close:hover {
           cursor: pointer;
         }
 
-        .alert-close:hover::before,
-        .alert-close:hover::after {
+        .c-alert-close:hover::before,
+        .c-alert-close:hover::after {
           background: #383f45;
         }
 
-        .alert-close::before,
-        .alert-close::after {
+        .c-alert-close::before,
+        .c-alert-close::after {
           content: '';
           position: absolute;
           height: 2px;
@@ -63,29 +62,29 @@ $alert-prefix   : 'alert';
           background: #212529;
         }
 
-        .alert-close::before {
+        .c-alert-close::before {
           transform: rotate(45deg);
         }
 
-        .alert-close::after {
+        .c-alert-close::after {
           transform: rotate(-45deg);
         }
 
-        .alert-title {
+        .c-alert-title {
           font-weight: 700;
         }
 
-        .alert-content {
+        .c-alert-content {
           flex: 1;
-          line-height: 15px;
           margin-right: 4px;
+          line-height: 15px;
         }
 
-        .alert-icon {
-          align-self: stretch;
-          padding-right: 8px;
-          font-size: 12px;
+        .c-alert-icon {
           color: #1b6ec2;
+          align-self: stretch;
+          font-size: 12px;
+          padding-right: 8px;
           line-height: 15px;
         }
       }
@@ -95,29 +94,29 @@ $alert-prefix   : 'alert';
   @include it('Given two arguments - outputs alternative COLOR') {
     @include assert {
       @include output {
-        .#{$alert-prefix}-primary {
+        .c-alert-primary {
           @include alert-style(purple, green);
         }
       }
       @include expect {
 
 
-        .alert-primary {
+        .c-alert-primary {
           background-color: purple;
           border-color: green;
         }
 
-        .alert-primary .alert-close:hover::before,
-        .alert-primary .alert-close:hover::after {
+        .c-alert-primary .c-alert-close:hover::before,
+        .c-alert-primary .c-alert-close:hover::after {
           background: #00b300;
         }
 
-        .alert-primary .alert-close::before,
-        .alert-primary .alert-close::after {
+        .c-alert-primary .c-alert-close::before,
+        .c-alert-primary .c-alert-close::after {
           background: green;
         }
 
-        .alert-primary .alert-icon {
+        .c-alert-primary .c-alert-icon {
           color: green;
         }
 

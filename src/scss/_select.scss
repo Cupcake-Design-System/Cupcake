@@ -1,14 +1,10 @@
-// --------------------------------------------
-// Form Select --------------------------------
-// --------------------------------------------
+// Select style
 select.c-input:not([multiple]) {
   @include select;
 }
 
 
-// --------------------------------------------
-// Form Select Sizes --------------------------
-// --------------------------------------------
+// Select sizes
 @each $name, $height, $padding, $font-size in config($control-sizes) {
   select.c-input:not([multiple]).c-input-#{$name} {
     height: $height;
@@ -24,9 +20,7 @@ select.c-input:not([multiple]) {
 }
 
 
-// --------------------------------------------
-// Form Select Error---------------------------
-// --------------------------------------------
+// Form Select Error
 select.c-input-error:not([multiple]) {
   color: $color-danger;
   font-weight: normal;

@@ -1,19 +1,18 @@
 
-// --------------------------------------------
-// HELPER CLASSES -----------------------------
-// --------------------------------------------
-
 @if $enable-color-classes == true {
+  // BG helpers .c-bg-{{color}}
   .#{$backgound-prefix} {
     @include modifiers($color, 'background-color');
     @include modifiers($theme-colors, 'background-color');
   }
 
+  // Text helpers .c-text-colors
   .c-text {
     @include modifiers($color, 'color');
     @include modifiers($theme-colors, 'color');
   }
 
+  // Border helpers .c-bd-{{color}}
   .#{$border-prefix} {
     @include modifiers($color, 'border-color');
     @include modifiers($theme-colors, 'border-color');
@@ -22,6 +21,7 @@
 
 
 @if $enable-spacer-classes == true {
+  // Padding helpers .c-p-{{direction}}
   .#{$padding-prefix} {
     @include modifiers($space, 'padding');
 
@@ -50,6 +50,7 @@
     }
   }
 
+  // Margin helpers .c-m-{{direction}}
   .#{$margin-prefix} {
     @include modifiers($space, 'margin');
 
@@ -80,6 +81,7 @@
 }
 
 
+// Shadow helpers .c-depth-{{size}}
 @if $enable-shadow-classes == true {
   .#{$shadow-prefix} {
     @include modifiers($shadow, 'box-shadow');
@@ -87,6 +89,7 @@
 }
 
 
+// Radius helpers .c-r-{{size}}
 @if $enable-radius-classes == true {
   .#{$radius-prefix} {
     @include modifiers($radius, 'border-radius');
@@ -94,6 +97,7 @@
 }
 
 
+// Float helpers .c-pull-{{direction}}
 .#{$float-prefix} {
   &-right {
     float: right;

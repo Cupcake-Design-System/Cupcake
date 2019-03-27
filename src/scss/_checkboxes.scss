@@ -1,11 +1,9 @@
-// --------------------------------------------
-// CHECKBOX & RADIOS --------------------------
-// --------------------------------------------
-
+// Control
 .c-control {
   @include label-control;
 }
 
+// Checkbox
 .c-checkbox {
   @include checkbox;
 
@@ -25,6 +23,7 @@
   }
 }
 
+// Radios
 .c-radio {
   @include checkbox;
 
@@ -41,6 +40,7 @@
   }
 }
 
+// Sizing loop
 @each $name, $size in $checkbox-sizes {
   .c-checkbox,
   .c-radio {
@@ -54,6 +54,7 @@
   }
 }
 
+// Color loop
 @each $name, $color in $checkbox-palette {
   .c-checkbox {
     &-#{$name} {

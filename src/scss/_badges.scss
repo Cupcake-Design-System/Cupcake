@@ -1,7 +1,4 @@
-// --------------------------------------------
-// BADGES ------------------------------------
-// --------------------------------------------
-
+// Badge
 .c-badge {
   @include badge-base();
 
@@ -20,6 +17,7 @@
     }
   }
 
+  // Badge Small
   &-sm {
     @include badge-size($badge-sm-size, $badge-sm-font-size);
 
@@ -42,6 +40,7 @@
     }
   }
 
+  // Badge Large
   &-lg {
     @include badge-size($badge-lg-size, $badge-lg-font-size);
 
@@ -61,10 +60,12 @@
     }
   }
 
+  // Badge top
   &-top {
     vertical-align: top;
   }
 
+  // Badge Swuare
   &-square {
     border-radius: $radius-sm;
 

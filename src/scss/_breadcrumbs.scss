@@ -1,6 +1,4 @@
-// --------------------------------------------
-// BREADCRUMBS --------------------------------
-// --------------------------------------------
+// Breadcrumbs
 .c-breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -54,6 +52,7 @@
   }
 }
 
+// Breadcrumbs w/ overflow
 .c-breadcrumb {
   .c-btn {
     margin-right: $breadcrumb-margin;

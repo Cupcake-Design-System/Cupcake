@@ -1,6 +1,4 @@
-// --------------------------------------------
-// BUTTONS ------------------------------------
-// --------------------------------------------
+// Buttons
 .c-btn {
   @include btn-base;
 
@@ -24,12 +22,14 @@
     @include btn-active-selected;
   }
 
+  // Button color loop
   @each $type in map-keys($button-colors) {
     &-#{$type} {
       @include button-colors(map-get($button-colors, $type));
     }
   }
 
+  // Button size loop
   @each $type in map-keys($button-sizes) {
     @if $type == default {
       @include button-sizing(map-get($button-sizes, default));
@@ -41,9 +41,7 @@
   }
 }
 
-// --------------------------------------------
-// Button Links -------------------------------
-// --------------------------------------------
+// Button links
 .c-btn-link {
   @include btn-base;
 
@@ -105,9 +103,7 @@
   }
 }
 
-// --------------------------------------------
-// Button Shapes ------------------------------
-// --------------------------------------------
+// Button shapes
 @if $enable-outline-buttons == true {
   @each $name, $hex in $theme-colors {
     .c-btn-#{$name}-outline {
@@ -135,9 +131,7 @@
 }
 
 
-// --------------------------------------------
-// Button Icons/Circle/Box --------------------
-// --------------------------------------------
+// Button Icons/Circle/Box
 .c-btn-icon,
 .c-btn-circle,
 .c-btn-box {
@@ -175,6 +169,7 @@
   }
 }
 
+// Button block
 .c-btn-block {
   display: block;
   width: 100%;

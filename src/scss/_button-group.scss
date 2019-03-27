@@ -1,6 +1,4 @@
-// --------------------------------------------
-// BUTTON Groups ------------------------------
-// --------------------------------------------
+// Button groups
 .c-btn-group {
   display: inline-flex;
   // vertical-align: middle;
@@ -46,6 +44,7 @@
   }
 }
 
+// Button groups pill shape
 @if $enable-pill-buttons == true {
   .c-btn-group {
     .c-btn-pill {
@@ -75,6 +74,7 @@
   }
 }
 
+// Button groups vertival
 .c-btn-group-vertical {
   display: inline-flex;
   flex-direction: column;
@@ -104,6 +104,7 @@
   }
 }
 
+// Button groups box sizes
 @each $name, $size in $btn-box-sizes {
   .c-btn-group-#{$name} {
     .c-btn-box {

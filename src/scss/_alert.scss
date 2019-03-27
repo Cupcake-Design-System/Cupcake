@@ -1,7 +1,4 @@
-// --------------------------------------------
-// Alerts -------------------------------------
-// --------------------------------------------
-
+// Alert Base
 .c-alert {
   @include alert-base;
 
@@ -17,9 +14,23 @@
     }
   }
 
+  // Alert Color Loop
   @each $name, $bg, $color in $alert-colors {
     &-#{$name} {
       @include alert-style($bg, $color);
+    }
+  }
+}
+
+
+// Toast
+.c-toast-alert {
+  @include toast;
+
+  // Toast Color Loop
+  @each $name, $hex in $toast-palette {
+    &-#{$name} {
+      @include toast-style($hex);
     }
   }
 }

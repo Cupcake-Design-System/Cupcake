@@ -1,6 +1,4 @@
-// --------------------------------------------
-// Form Input ---------------------------------
-// --------------------------------------------
+// Form Inputs
 .c-input {
   @include input;
 
@@ -18,9 +16,7 @@
 }
 
 
-// --------------------------------------------
-// Form Input Right Icon ----------------------
-// --------------------------------------------
+// Form Input Right Icon
 .c-input-icon {
   position: absolute;
   top: $control-padding;
@@ -38,9 +34,7 @@
 }
 
 
-// --------------------------------------------
-// Form Input Left Icon -----------------------
-// --------------------------------------------
+// Form Input Left Icon
 @each $name, $height, $padding, $font-size in config($control-sizes) {
   .c-input-icon-#{$name} {
     font-size: $font-size;
@@ -54,18 +48,14 @@
 }
 
 
-// --------------------------------------------
-// Form Input Textarea ------------------------
-// --------------------------------------------
+// Form Input Textarea
 textarea.c-input {
   height: auto;
   padding-top: $control-padding;
 }
 
 
-// --------------------------------------------
-// Form Input Colors --------------------------
-// --------------------------------------------
+// Form Input Colors
 @each $name, $color, $bg in $control-colors {
   .c-input-#{$name} {
     &,
@@ -93,9 +83,7 @@ textarea.c-input {
 }
 
 
-// --------------------------------------------
-// Form Input Colors (NG specific -------------
-// --------------------------------------------
+// Form Input Colors (NG specific)
 @each $ng-state, $color in $control-ng-validation {
   .c-ng-validate.ng-dirty.#{$ng-state},
   .c-ng-validate-form .ng-dirty.#{$ng-state} {
@@ -104,9 +92,7 @@ textarea.c-input {
 }
 
 
-// --------------------------------------------
-// Form Input Sizes ---------------------------
-// --------------------------------------------
+// Form Input Sizes
 @each $name, $height, $padding, $font-size in config($control-sizes) {
   .c-input-#{$name} {
     font-size: $font-size;
@@ -120,9 +106,7 @@ textarea.c-input {
 }
 
 
-// --------------------------------------------
-// Form Input Addons --------------------------
-// --------------------------------------------
+// Form Input Addons
 .c-input-addon {
   display: flex;
   align-items: center; // vertically align all child elements
@@ -143,22 +127,7 @@ textarea.c-input {
 }
 
 
-// --------------------------------------------
-// Form Elements ------------------------------
-// --------------------------------------------
-// .c-form-element {
-//   position: relative;
-//   padding: $control-element-padding;
-
-//   .c-label:first-child {
-//     padding: $control-element-label-padding;
-//   }
-// }
-
-
-// --------------------------------------------
-// Form Fieldset ------------------------------
-// --------------------------------------------
+// Form Fieldset
 .c-fieldset {
   &,
   &.c-list {
@@ -185,9 +154,7 @@ textarea.c-input {
 }
 
 
-// --------------------------------------------
-// Form Hint & Hint Colors --------------------
-// --------------------------------------------
+// Form Hint & Hint Colors
 .c-hint {
   display: block;
   transform: scale(.8);
@@ -213,9 +180,7 @@ textarea.c-input {
 }
 
 
-// --------------------------------------------
-// Form Input Group & Group Stacked -----------
-// --------------------------------------------
+// Form Input Group & Group Stacked
 .c-input-group {
   display: flex;
 
@@ -338,18 +303,7 @@ textarea.c-input {
   }
 }
 
-
-// --------------------------------------------
-// Form Group ---------------------------------
-// --------------------------------------------
-// .c-form-group {
-//   margin-bottom: $control-padding;
-// }
-
-
-// --------------------------------------------
-// Form Results -------------------------------
-// --------------------------------------------
+// Form Results
 .c-input-results {
   .c-input {
     border-bottom-left-radius: $radius-0;
@@ -380,9 +334,7 @@ textarea.c-input {
 }
 
 
-// --------------------------------------------
-// Form Inline --------------------------------
-// --------------------------------------------
+// Form Inline
 .c-form-inline {
   display: flex;
   flex: 0 0 auto;
