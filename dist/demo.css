@@ -1,7 +1,113 @@
 @charset "UTF-8";
+/**
+ * Grab all levels of a font the font-scale
+ * @example
+ *  font-size: get-scale(header);
+ */
+/**
+* Grab info for a particular level of a font-scale
+* @example
+*  font-size: get-scale-level(header, 1);
+*/
+/**
+* Get a font-size for a level in the font-scale matrix
+* @example
+*  font-size: get-font-size(header, 3);
+*/
+/**
+* Get a line-height for a level in the font-scale matrix
+* @example
+*  font-size: get-line-height(header, 3);
+*/
+/**
+* Turn any value into pixels
+* @example
+*  font-size: convert-to-px(14); // 14px
+*
+*/
 /* ----------------------- */
 /* 🎂 Cupcake Sprinkles 🎂 */
 /* ----------------------- */
+/**
+ * Font-size and line-height shorthand
+ * @example
+ *  @include font-size(18, 24);
+ */
+/**
+* Font styling shorthand
+* Note: prefer the usage of the font-scale mixins to stick to the font scale
+*
+* @example
+*  @include font(arial, bold, 18, 24);
+*/
+/**
+* Header family and weight properties.
+*/
+/**
+* Header typography settings.
+* @example
+*  // Output all properties (font-size, line-height, family, weight)
+*  @include font-header(3);
+*
+*  // Output font-size and line-height only
+*  @include font-header(3, $size-only: true);
+*/
+/**
+* Healdine family and weight properties.
+*/
+/**
+* Headline typography settings.
+* @example
+*  // Output all properties (font-size, line-height, family, weight)
+*  @include fs-headline(3);
+*
+*  // Output font-size and line-height only
+*  @include fs-headline(3, $size-only: true);
+*
+* @requires {function} get-font-size
+* @requires {function} font-line-height
+* @requires {mixin} font-size
+* @requires {mixin} f-headline
+*/
+/**
+* Body Heading family and weight properties.
+*/
+/**
+* Body Heading typography settings.
+* @example
+*  // Output all properties (font-size, line-height, family, weight)
+*  @include font-bodyHeading(3);
+*
+*  // Output font-size and line-height only
+*  @include font-bodyHeading(3, $size-only: true);
+*/
+/**
+ * Body Copy family property.
+ *
+ * @requires {variable} $f-serif-text
+ *
+ * @group typography
+ */
+/**
+* Body Copy typography settings.
+* @example
+*  // Output all properties (font-size, line-height, family)
+*  @include font-body(3);
+*
+*  // Output font-size and line-height only
+*  @include font-body(3, $size-only: true);
+*/
+/**
+* Text Sans family property.
+*/
+/**
+* Text Sans typography settings.
+*  // Output all properties (font-size, line-height, family)
+*  @include fs-textSans(3);
+*
+*  // Output font-size and line-height only
+*  @include fs-textSans(3, $size-only: true);
+*/
 /* stylelint-disable */
 .docs-container {
   display: flex;

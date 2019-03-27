@@ -2,10 +2,11 @@
 /// @group API Map Retrieve
 ////
 
-/// Returns the spacing value for a given variant.
-///
-/// @param {String} $space - how much space do you need.
-/// @return {Number} The spacing for the variant in px.
+/**
+* Returns the spacing value for a given variant.
+* @example
+*  padding: space(sm);
+*/
 @function space($value: md) {
   $fetched-value: map-get($space, $value);
 
@@ -16,10 +17,12 @@
   }
 }
 
-/// Returns the radius value for a given variant.
-///
-/// @param {String} $radius - how much space do you need.
-/// @return {Number} The spacing for the variant in px.
+
+/**
+* Returns the core theme sizes.
+* @example
+*  {{any-attribute}}: theme-size(sm);
+*/
 @function theme-size($value: sm) {
   $fetched-value: map-get($global-theme-sizes, $value);
 
@@ -31,10 +34,11 @@
 }
 
 
-/// Returns the radius value for a given variant.
-///
-/// @param {String} $radius - how much space do you need.
-/// @return {Number} The spacing for the variant in px.
+/**
+* Returns the radius value for a given variant.
+* @example
+*  radius: radius(sm);
+*/
 @function radius($value: md) {
   $fetched-value: map-get($radius, $value);
 
@@ -45,10 +49,12 @@
   }
 }
 
-/// Returns the font weight for a given weight definition.
-///
-/// @param {String} $weight - The font weight.
-/// @return {Number} The font-weight for the text-weight.
+
+/**
+* Returns the font weight for a given weight definition.
+* @example
+*  font-weight: font-weight(bold);
+*/
 @function font-weight($value: normal) {
   $fetched-font-weight: map-get($font-weight, $value);
 
@@ -59,12 +65,14 @@
   }
 }
 
-/// Returns the line height for a given range.
-///
-/// @param {Number} $range - The font style.
-/// @return {Number} The line-height for the text-style.
-@function line-height($value: normal) {
-  $fetched-line-height: map-get($line-height, $value);
+
+/**
+* Returns the line height for a given range.
+* @example
+*  line-height: line-height(header, sm);
+*/
+@function line-height($name, $level, $font-scale: $font-scale) {
+  $fetched-line-height: map-get(font-scale-level($name, $level, $font-scale), line-height);
 
   @if type-of($fetched-line-height) != null {
     @return $fetched-line-height;
@@ -73,26 +81,14 @@
   }
 }
 
-/// Returns the font size for a given size definition.
-///
-/// @param {String} $value - The font size.
-/// @return {Number} The font-size for the given definition.
-@function font-size($value: md) {
-  $fetched-font-size: map-get($font-body, $value);
 
-  @if type-of($fetched-font-size) != null {
-    @return $fetched-font-size;
-  } @else {
-    @error 'Font size `#{$variant}` not found.';
-  }
-}
-
-/// Returns the font size for a given size definition.
-///
-/// @param {String} $value - The font size.
-/// @return {Number} The font-size for the given definition.
-@function font-size-header($value: md) {
-  $fetched-font-size: map-get($font-header, $value);
+/**
+* Returns the font size for a given size definition.
+* @example
+*  font-size: font-size(header, xl);
+*/
+@function font-size($name, $level, $font-scale: $font-scale) {
+  $fetched-font-size: map-get(font-scale-level($name, $level, $font-scale), font-size);
 
   @if type-of($fetched-font-size) != null {
     @return $fetched-font-size;
@@ -102,10 +98,11 @@
 }
 
 
-/// Returns the font family for a given definition.
-///
-/// @param {String} $value - The font key.
-/// @return {Number} The font-family for the given definition.
+/**
+* Returns the font family for a given definition.
+* @example
+*  font-family:  font(sans);
+*/
 @function font($value: sans) {
   $fetched-font: map-get($font-family, $value);
 
@@ -116,38 +113,12 @@
   }
 }
 
-/// Returns the duration value for a given variant.
-///
-/// @param {String} $variant - The key for the given variant.
-/// @return {Number} The spacing for the variant (in milliseconds).
-@function duration($value: base) {
-  $fetched-value: map-get($duration, $value);
 
-  @if type-of($fetched-value) == number {
-    @return $fetched-value;
-  } @else {
-    @error 'Duration variant `#{$variant}` not found.';
-  }
-}
-
-/// Returns the timing-function value for a given variant.
-///
-/// @param {String} $variant - The key for the given variant.
-/// @return {String} The cubic-bezier function (string) for the variant.
-@function easing($value: base) {
-  $fetched-value: map-get($easing, $value);
-
-  @if type-of($fetched-value) == string {
-    @return $fetched-value;
-  } @else {
-    @error 'Easing variant `#{$variant}` not found. Available variants: #{$easing-data}';
-  }
-}
-
-/// Returns the shadow for the specified depth
-///
-/// @param {String} $value - The shadow's depth.
-/// @return {List} The shadow value.
+/**
+* Returns the shadow for the specified depth.
+* @example
+*  shadow:  shadow(md);
+*/
 @function shadow($value: sm) {
   $fetched-value: map-get($shadow, $value);
 
@@ -158,11 +129,12 @@
   }
 }
 
-/// Returns the z-index of the specified element.
-///
-/// @param {String} $element - The key for the element.
-/// @param {Map} $context - The map in which to search for the element.
-/// @return {Number} The z-index for the element.
+
+/**
+* Returns the z-index of the specified element.
+* @example
+*  z-index:  z-index();
+*/
 @function z-index($element, $context: $global-elements) {
   $index: map-get($context, $element);
 
@@ -174,25 +146,11 @@
 }
 
 
-/// Returns the color value for a given color name and group.
-/// @param {String} $value [primary] - The color's base.
-/// @param {Number} $range [7] - The darkness/lightness of the color. Defaults to 7. The higher the number, the darker the color.
-/// @return {Color} - The color value.
-///
-/// @example
-/// // Call:
-///
-///  .color {
-///    background: color(primary, 3);
-///   }
-///
-/// @example
-/// // Return:
-///
-///  .color {
-///    background: #74c0fc;
-///   }
-///
+/**
+* Returns the color value for a given color name and group.
+* @example
+*  background: color(primary, 3);
+*/
 @function color($value: primary, $range: 7) {
 
   @if $value == black {
@@ -207,7 +165,6 @@
     @error 'Color `#{value} - #{$range}` not found.';
   }
 }
-
 
 @function color-extended($value: cyan, $range: 7) {
 
@@ -233,23 +190,11 @@
 }
 
 
-/// Returns the breakpoint size given its named size.
-///
-/// @param {string} $name - the named size of the breakpoint requested (e.g. `small` or `large`) as configured in `$cupcake`.
-/// @return {List} The breakpoint value.
-///
-/// @example
-///
-///   // the following use:
-///     @media all and (min-width: breakpoint('small')) {
-///       display: none;
-///     }
-///
-///   // will produce the following:
-///     @media all and (min-width: 600px) {
-///       display: none;
-///     }
-///
+/**
+* Returns the breakpoint size given its named size.
+* @example
+*  @media all and (min-width: breakpoint('small')) { }
+*/
 @function breakpoint($value: sm) {
   $fetched-value: map-get($breakpoints, $value);
 
@@ -258,4 +203,38 @@
   } @else {
     @error 'Breakpoint `#{$value}` not found.';
   }
+}
+
+
+/**
+ * Grab all levels of a font the font-scale
+ * @example
+ *  font-size: font-scale(header);
+ */
+@function font-scale($name, $font-scale: $font-scale) {
+  @return map-get($font-scale, $name);
+}
+
+
+/**
+* Grab info for a particular level of a font-scale
+* @example
+*  font-size: font-scale-level(header, lg);
+*/
+@function font-scale-level($name, $level, $font-scale: $font-scale) {
+  @return map-get(font-scale($name, $font-scale), $level);
+}
+
+
+/**
+* Turn any value into pixels
+* @example
+*  font-size: convert-to-px(14); // 14px
+*/
+@function convert-to-px($value) {
+  @if (type-of($value) == number and $value != 0) {
+    $value: if(unitless($value), $value * 1px, $value);
+  }
+
+  @return $value;
 }

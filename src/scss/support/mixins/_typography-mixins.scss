@@ -1,32 +1,118 @@
+// --------------------------------------------
+// Typography Mixins --------------------------
+// --------------------------------------------
 
-@mixin text-size(
-  $font-size, 
-  $font-weight, 
-  $line-height) {
-  font-size: $font-size;
-  font-weight: $font-weight;
+// Font-size and line-height shorthand
+// @example
+// @include font-size(18, 24);
+@mixin font-size($size, $line-height: $size) {
+  font-size: $size;
   line-height: $line-height;
 }
 
-@mixin text-sizing($map...) {
-  @each $size in $map {
-    // Defaults
-    $font-size: '';
-    $font-weight: normal;
-    $line-height: default;
 
-    @if map-has-key($size, font-size) {
-      $font-size: map-get($size, font-size);
+// Font styling shorthand
+// @example
+//  @include font(arial, bold, 18px, 1.5);
+@mixin font($family, $weight, $size, $line-height: $size) {
+  font-family: $family;
+  font-weight: $weight;
+
+  @include font-size($size, $line-height);
+}
+
+
+// Header family and weight properties.
+@mixin f-header {
+  font-family: $font-family-sans;
+  font-weight: $font-weight-bold;
+}
+
+
+// Header typography settings.
+// @example
+//  Output all properties (font-size, line-height, family, weight)
+//  @include font-header(lg);
+//
+//  Output font-size and line-height only
+//  @include font-header(lg, $size-only: true);
+@mixin font-header($size: xl, $size-only: false) {
+  @include font-size(font-size(header, $size), line-height(header, $size));
+
+  @if $size-only == false {
+    @include f-header;
+  }
+}
+
+
+// Body family property.
+@mixin f-body {
+  font-family: $font-family-sans;
+  font-weight: $font-weight-normal;
+}
+
+
+// Body text settings.
+// @example
+//  Output all properties (font-size, line-height, family)
+//    @include font-body(sm);
+//
+//  Output font-size and line-height only
+//    @include font-body(sm, $size-only: true);
+@mixin font-body($size: xl, $size-only: false) {
+  @include font-size(font-size(body, $size), line-height(body, $size));
+
+  @if $size-only == false {
+    @include f-body;
+  }
+}
+
+
+// List-base for adding repeating list style
+// @example
+//   @include list-base;
+@mixin list-base {
+  @include font-body(lg);
+
+  margin: $space-0;
+  padding: $space-0;
+  color: $color-gray-7;
+  font-weight: $font-weight-normal;
+}
+
+
+// Link-style for adding standard links
+// @example
+//    @include link-style;
+@mixin link-style {
+  cursor: pointer;
+  color: $color-gray-4;
+  line-height: inherit;
+  text-decoration: none;
+  font-size: $font-body-xl;
+
+  &-hover,
+  &:hover {
+    color: $color-gray-5;
+  }
+
+  &-active,
+  &:active {
+    color: $color-primary-9;
+    text-decoration: none;
+  }
+
+  &-disabled,
+  &[disabled],
+  &:disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      color: $color-gray-4;
+      text-decoration: none;
+      cursor: not-allowed;
     }
-
-    @if map-has-key($size, font-weight) {
-      $font-weight: map-get($size, font-weight);
-    }
-
-    @if map-has-key($size, line-height) {
-      $line-height: map-get($size, line-height);
-    }
-
-    @include text-size($font-size, $font-weight, $line-height);
   }
 }

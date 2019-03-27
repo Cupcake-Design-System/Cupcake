@@ -9,7 +9,7 @@
     @include modifiers($theme-colors, 'background-color');
   }
 
-  .#{$text-prefix} {
+  .c-text {
     @include modifiers($color, 'color');
     @include modifiers($theme-colors, 'color');
   }
@@ -98,11 +98,11 @@
   &-right {
     float: right;
   }
-  
+
   &-left {
     float: left;
   }
-  
+
   &-none {
     float: none;
   }

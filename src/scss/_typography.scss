@@ -1,11 +1,10 @@
 // --------------------------------------------
 // TYPOGRAPHY ---------------------------------
 // --------------------------------------------
-
-.#{$text-prefix} {
-  @each $size in map-keys($body-text-sizes) {
-    &-#{$size} {
-      @include text-sizing(map-get($body-text-sizes, $size));
+.c-text {
+  @each $key, $font-size in config($font-scale, body) {
+    &-#{$key} {
+      @include font-body($key);
     }
   }
 
@@ -47,6 +46,17 @@
     text-decoration: line-through !important;
   }
 
+  &-shadow {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-em,
   &-italic {
     font-style: italic !important;
   }
@@ -59,19 +69,162 @@
   &-monospace {
     font-family: $font-family-mono !important;
   }
-}
 
-@each $size in map-keys($header-text-sizes) {
-  .#{$header-prefix}-#{$size} {
-    @include text-sizing(map-get($header-text-sizes, $size));
+  small,
+  &-small {
+    font-size: 80%;
+    line-height: inherit;
   }
 }
 
-.c-a {
-  color: $color-gray-4;
-  font-size: $font-body-xl;
-
-  &:hover {
-    color: $color-gray-5;
+@each $key, $font-size in config($font-scale, header) {
+  .c-header-#{$key} {
+    @include font-header($key);
   }
 }
+
+.c-a,
+.c-link {
+  @include link-style;
+
+  img {
+    border: 0;
+  }
+}
+
+hr.c-hr {
+  height: 0;
+  clear: both;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  max-width: 100%;
+  margin: $space-md auto;
+  border-bottom: 1px solid $color-gray-1;
+}
+
+ol.c-ol {
+  @include list-base;
+
+  li {
+    padding-left: $space-sm;
+    margin-left: $space-md + $space-xs;
+
+    ol {
+      padding: $space-0;
+      margin-left: $space-0;
+    }
+  }
+}
+
+ul.c-ul {
+  @include list-base;
+
+  list-style-type: disc;
+  list-style-position: outside;
+
+  li {
+    list-style-type: disc;
+    padding-left: $space-sm;
+    margin-left: $space-md + $space-xs;
+
+    & & {
+      margin-left: $space-md;
+      margin-bottom: $space-0;
+    }
+  }
+}
+
+ul.c-ul-unstyled,
+ol.c-ol-unstyled {
+  &,
+  & li {
+    @include list-base;
+
+    list-style: none;
+  }
+
+  ul,
+  ol {
+    margin-left: $space-lg;
+  }
+}
+
+.heading-all {
+  @include font-header();
+}
+
+.h1 {
+  @include font-header(xxl);
+}
+
+.h2 {
+  @include font-header(xl);
+}
+
+.h3 {
+  @include font-header(lg);
+}
+
+.h4 {
+  @include font-header(md);
+}
+
+.h5 {
+  @include font-header(sm);
+}
+
+.h6 {
+  @include font-header(xs);
+}
+
+.p-all {
+  @include font-body();
+}
+
+.p1 {
+  @include font-body(xxl);
+}
+
+.p2 {
+  @include font-body(xl);
+}
+
+.p3 {
+  @include font-body(lg);
+}
+
+.p4 {
+  @include font-body(md);
+}
+
+.p5 {
+  @include font-body(sm);
+}
+
+.p6 {
+  @include font-body(xs);
+}
+
+
+.xl-text {
+  // Output font-size and line-height only
+  @include font-body(xl, $size-only: true);
+}
+
+.body-heading {
+  // Output font family and weight settings only
+  @include f-header;
+}
+
+.body-text {
+  // Output font family and weight settings only
+  @include f-body;
+}
+
+.functionExample {
+  font-size: font-size(header, xl);
+  line-height: line-height(header, xl);
+  font-weight: font-weight(heavy);
+}
+

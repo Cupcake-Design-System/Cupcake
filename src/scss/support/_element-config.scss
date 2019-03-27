@@ -10,7 +10,8 @@ $alert-top-padding          : $space-md !default;
 $alert-font-size            : $font-body-md !default;
 $alert-line-height          : $font-body-md + 3 !default;
 $alert-font-family          : $font-family-sans !default;
-$alert-font-weight          : 300 !default;
+$alert-font-weight          : $font-weight-normal !default;
+$alert-title-font-weight    : $font-weight-bold !default;
 $alert-primary-bg           : rgba($color-primary, .07) !default;
 $alert-default-color        : $color-gray-9 !default;
 $alert-primary-icon-color   : $color-primary !default;
@@ -19,6 +20,7 @@ $alert-top-radius           : 0 !default;
 $alert-shadows              : $shadow-lg !default;
 $alert-icon-width           : $font-body-md !default;
 $alert-close-font-size      : $font-body-md !default;
+$toast-font-weight          : $font-weight-bold !default;
 $toast-palette              : $theme-colors !default;
 $toast-left-border          : 4px !default;
 
@@ -427,80 +429,6 @@ $table-states: ("selected", $table-state-selected)
   ("success", $table-state-success)
   ("warning", $table-state-warning)
   ("danger", $table-state-danger) !default;
-
-
-// --------------------------------------------
-// TYPOGRAPHY ---------------------------------
-// --------------------------------------------
-$text-prefix     : 'c-text' !default;
-$header-prefix   : 'c-header' !default;
-
-$header-text-sizes: (
-  xs: (
-    font-size: $font-header-xs,
-    font-weight: $font-weight-bold,
-    line-height: $font-header-xs + 4
-  ),
-  sm: (
-    font-size: $font-header-sm,
-    font-weight: $font-weight-bold,
-    line-height: $font-header-sm + 10
-  ),
-  md: (
-    font-size: $font-header-md,
-    font-weight: $font-weight-bold,
-    line-height: $font-header-md + 8
-  ),
-  lg: (
-    font-size: $font-header-lg,
-    font-weight: $font-weight-bold,
-    line-height: $font-header-lg + 4
-  ),
-  xl: (
-    font-size: $font-header-xl,
-    font-weight: $font-weight-bold,
-    line-height: $font-header-xl + 8
-  ),
-  xxl: (
-    font-size: $font-header-xxl,
-    font-weight: $font-weight-bold,
-    line-height: $font-header-xxl + 4
-  )
-) !default;
-
-
-$body-text-sizes: (
-  xs: (
-    font-size: $font-body-xs,
-    font-weight: $font-weight-normal,
-    line-height: $font-body-xs + 6
-  ),
-  sm: (
-    font-size: $font-body-sm,
-    font-weight: $font-weight-normal,
-    line-height: $font-body-xs + 6
-  ),
-  md: (
-    font-size: $font-body-md,
-    font-weight: $font-weight-normal,
-    line-height: $font-body-md + 4
-  ),
-  lg: (
-    font-size: $font-body-lg,
-    font-weight: $font-weight-normal,
-    line-height: $font-body-lg + 10
-  ),
-  xl: (
-    font-size: $font-body-xl,
-    font-weight: $font-weight-normal,
-    line-height: $font-body-xl + 8
-  ),
-  xxl: (
-    font-size: $font-body-xxl,
-    font-weight: $font-weight-normal,
-    line-height: $font-body-xxl + 6
-  )
-) !default;
 
 
 // --------------------------------------------

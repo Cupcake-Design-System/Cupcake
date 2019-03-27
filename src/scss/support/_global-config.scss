@@ -22,6 +22,11 @@ $float-prefix    : 'c-pull' !default;
 $font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !default;
 $font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
 
+$font-family: (
+  sans: $font-family-sans,
+  mono: $font-family-mono,
+);
+
 $font-body-xs: 10px !default;
 $font-body-sm: 11px !default;
 $font-body-md: 12px !default;
@@ -35,6 +40,25 @@ $font-header-md: 16px !default;
 $font-header-lg: 20px !default;
 $font-header-xl: 24px !default;
 $font-header-xxl: 36px !default;
+
+$font-scale: (
+  header: (
+    xxl: (font-size: $font-header-xxl, line-height: 40px),
+    xl: (font-size: $font-header-xl, line-height: 32px),
+    lg: (font-size: $font-header-lg, line-height: 24px),
+    md: (font-size: $font-header-md, line-height: 24px),
+    sm: (font-size: $font-header-sm, line-height: 24px),
+    xs: (font-size: $font-header-xs, line-height: 16px),
+  ),
+  body: (
+    xxl: (font-size: $font-body-xxl, line-height: 24px),
+    xl: (font-size: $font-body-xl, line-height: 24px),
+    lg: (font-size: $font-body-lg, line-height: 24px),
+    md: (font-size: $font-body-md, line-height: 16px),
+    sm: (font-size: $font-body-sm, line-height: 16px),
+    xs: (font-size: $font-body-xs, line-height: 16px),
+  )
+) !default;
 
 
 // --------------------------------------------

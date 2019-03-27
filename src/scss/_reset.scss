@@ -3,12 +3,20 @@
   *,
   *::before,
   *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 
   html {
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
+    font-family: $font-family-sans;
+
+    /* Make type rendering look crisper */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Disable auto-enlargement of small text in Safari */
+    text-size-adjust: 100%;
+
+    /* Enable kerning and optional ligatures */
     text-rendering: optimizeLegibility;
   }
 
@@ -18,8 +26,6 @@
     color: $color-gray-9;
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
-    text-rendering: optimizeLegibility;
   }
 
   img {
@@ -96,13 +102,20 @@
     border-bottom: 1px dotted;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   b,
   strong {
-    @if variable-exists(text-strong) {
-      font-weight: $text-strong;
-    } @else {
-      font-weight: bold;
-    }
+    font-weight: $font-weight-bold;
   }
 
   dfn {
@@ -223,11 +236,15 @@
   }
 
   optgroup {
-    @if variable-exists(text-strong) {
-      font-weight: $text-strong;
-    } @else {
-      font-weight: bold;
-    }
+    font-weight: $font-weight-bold;
+  }
+
+  ul,
+  ol,
+  dl,
+  dd {
+    margin: $space-0;
+    padding: $space-0;
   }
 
   table {
