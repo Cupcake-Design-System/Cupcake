@@ -1,4 +1,74 @@
 @charset "UTF-8";
+/**
+* Returns the spacing value for a given variant.
+* @example
+*  padding: space(sm);
+*/
+/**
+* Returns the core theme sizes.
+* @example
+*  {{any-attribute}}: theme-size(sm);
+*/
+/**
+* Returns the radius value for a given variant.
+* @example
+*  radius: radius(sm);
+*/
+/**
+* Returns the font weight for a given weight definition.
+* @example
+*  font-weight: font-weight(bold);
+*/
+/**
+* Returns the line height for a given range.
+* @example
+*  line-height: line-height(header, sm);
+*/
+/**
+* Returns the font size for a given size definition.
+* @example
+*  font-size: font-size(header, xl);
+*/
+/**
+* Returns the font family for a given definition.
+* @example
+*  font-family:  font(sans);
+*/
+/**
+* Returns the shadow for the specified depth.
+* @example
+*  shadow:  shadow(md);
+*/
+/**
+* Returns the z-index of the specified element.
+* @example
+*  z-index:  z-index();
+*/
+/**
+* Returns the color value for a given color name and group.
+* @example
+*  background: color(primary, 3);
+*/
+/**
+* Returns the breakpoint size given its named size.
+* @example
+*  @media all and (min-width: breakpoint('small')) { }
+*/
+/**
+ * Grab all levels of a font the font-scale
+ * @example
+ *  font-size: font-scale(header);
+ */
+/**
+* Grab info for a particular level of a font-scale
+* @example
+*  font-size: font-scale-level(header, lg);
+*/
+/**
+* Turn any value into pixels
+* @example
+*  font-size: convert-to-px(14); // 14px
+*/
 /* ----------------------- */
 /* 🎂 Cupcake Sprinkles 🎂 */
 /* ----------------------- */
@@ -510,4 +580,123 @@ hr {
   right: 75px;
   z-index: 999;
   box-shadow: 0px 0px 11px 4px rgba(214, 214, 214, 0.64);
+}
+
+.heading-all {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h1 {
+  font-size: 36px;
+  line-height: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h4 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h5 {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h6 {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.p-all {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.p1 {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.p2 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.p3 {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.p4 {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.p5 {
+  font-size: 11px;
+  line-height: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.p6 {
+  font-size: 10px;
+  line-height: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.xl-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.body-heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.body-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.functionExample {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 900;
 }

@@ -2,34 +2,34 @@
 @import '../node_modules/sass-true/sass/true';
 @import '../src/scss/support/support';
 
-$card-prefix   : 'card';
 
 @include describe('Test output for card mixins') {
 
   @include it('Given a prefix - generates base attributes for card') {
     @include assert {
       @include output {
-        .#{$card-prefix} {
+        .c-card {
           @include card();
         }
       }
       @include expect {
-        .card {
+        .c-card {
           display: flex;
           position: relative;
-          flex-direction: column;
           border: 1px solid #e9ecef;
+          word-wrap: break-word;
+          flex-direction: column;
           color: #495057;
           box-shadow: 0 2px 4px -2px rgba(33, 37, 41, 0.1);
           background-color: #ffffff;
-          min-width: 250px;
+          min-width: 0;
+          background-clip: border-box;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
           font-size: 12px;
           border-radius: 2px;
           transition: all .1s ease-in-out 0s;
-          word-wrap: break-word;
-          background-clip: border-box;
         }
-        .card-hover:hover {
+        .c-card-hover:hover {
           cursor: pointer;
           box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1);
           border: 1px solid #ced4da;

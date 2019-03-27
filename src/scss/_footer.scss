@@ -1,7 +1,5 @@
-// --------------------------------------------
-// FOOTER -------------------------------------
-// --------------------------------------------
-.#{$footer-prefix} {
+// Footer
+.c-footer {
   z-index: 2;
   width: 100%;
   display: flex;
@@ -13,6 +11,7 @@
   font-size: $footer-font-size;
   justify-content: space-between;
   border-top: $footer-border-top;
+  font-family: $footer-font-family;
   background-color: $footer-background-color;
 
   &-link {
@@ -43,7 +42,7 @@
   //   line-height: 1.5;
   // }
 
-  &.#{$footer-prefix}-transparent {
+  &.c-footer-transparent {
     background-color: transparent;
   }
 }

@@ -4,17 +4,18 @@
 @mixin card {
   display: flex;
   position: relative;
-  flex-direction: column;
   border: $card-border;
+  word-wrap: break-word;
+  flex-direction: column;
   color: $card-text-color;
   box-shadow: $card-shadow;
   background-color: $card-bg;
   min-width: $card-min-width;
+  background-clip: border-box;
+  font-family: $card-font-family;
   font-size: $card-body-font-size;
   border-radius: $card-border-radius;
   transition: all .1s ease-in-out 0s;
-  word-wrap: break-word;
-  background-clip: border-box;
 
   &-hover:hover {
     cursor: pointer;
@@ -25,8 +26,8 @@
 
 @mixin card-header {
   border-bottom: $card-border;
-  border-radius: $card-border-radius $card-border-radius 0 0;
   padding: $card-padding-v $card-padding-h;
+  border-radius: $card-border-radius $card-border-radius 0 0;
 
   &-title {
     display: inline-block;
@@ -40,7 +41,7 @@
     font-size: $card-subtitle-font-size;
     line-height: $card-subtitle-line-height;
 
-    + .#{$card-prefix}-header-menu {
+    + .c-card-header-menu {
       height: $card-header-line-height + $card-subtitle-line-height + ($card-padding-v * 2);
     }
   }
@@ -67,8 +68,8 @@
     }
 
     &-icon {
-      color: $card-header-icon-color;
       font-size: $font-body-xl;
+      color: $card-header-icon-color;
 
       &:hover {
         color: $card-header-icon-hover-color;
@@ -82,10 +83,11 @@
 }
 
 @mixin card-content {
-  padding: $card-padding-v $card-padding-h;
-  font-weight: normal;
   flex: 1 1 auto;
+  font-weight: normal;
+  font-family: $card-font-family;
   font-size: $card-body-font-size;
+  padding: $card-padding-v $card-padding-h;
 }
 
 @mixin card-footer {
@@ -123,7 +125,7 @@
   border-color: $border;
   color: $color;
 
-  .#{$card-prefix}-header {
+  .c-card-header {
     background-color: transparent;
     color: $color;
     border-bottom: 1px solid darken($background, 5%);
@@ -133,7 +135,7 @@
     }
   }
 
-  .#{$card-prefix}-footer {
+  .c-card-footer {
     background-color: transparent;
     border-top: 1px solid darken($background, 5%);
 
@@ -146,13 +148,13 @@
     }
   }
 
-  .#{$card-prefix}-content {
+  .c-card-content {
     background-color: transparent;
   }
 
-  .#{$card-prefix}-content-title,
-  .#{$card-prefix}-content-body,
-  .#{$card-prefix}-content-subtitle {
+  .c-card-content-title,
+  .c-card-content-body,
+  .c-card-content-subtitle {
     color: $color;
   }
 }

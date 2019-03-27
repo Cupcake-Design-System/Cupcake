@@ -1,21 +1,75 @@
-// --------------------------------------------
-// TABS DEFAULT -------------------------------
-// --------------------------------------------
-.#{$tabs-prefix} {
-  @include tabs;
+// TABS
+.c-tabs {
+  display: flex;
+  overflow: hidden;
+  margin: $space-0;
+  padding: $space-0;
+  white-space: nowrap;
+  align-items: stretch;
+  height: $tabs-height;
+  font-size: $tabs-font-size;
+  box-shadow: $tabs-box-shadow;
+  font-family: $tabs-font-family;
+  font-weight: $tabs-font-weight;
 
-  .#{$tab-item-prefix} {
-    @include tab-item;
+  .c-tab-item {
+    display: flex;
+    color: $tabs-color;
+    align-items: center;
+    justify-content: center;
 
     &-link {
-      @include tab-item-link;
+      flex: auto;
+      cursor: pointer;
+      margin: $space-0;
+      color: $tabs-color;
+      text-align: center;
+      text-decoration: none;
+      padding: $tabs-padding;
+      justify-content: center;
+      transition: $tabs-hover-transition;
+      border-bottom: $tabs-border-bottom solid transparent;
+
+      a {
+        color: $tabs-color-active;
+      }
+
+      &:hover {
+        color: $tabs-color-hover;
+        border-bottom: $tabs-border-bottom solid $tabs-color-hover;
+      }
 
       &-active {
-        @include tab-item-active;
+        &,
+        & a {
+          color: $tabs-color-active;
+        }
+
+        &,
+        &:hover {
+          border-bottom-style: solid;
+          border-bottom-color: $tabs-color-active;
+          border-bottom-width: $tabs-border-bottom;
+        }
       }
 
       &-disabled {
-        @include tab-item-disabled;
+        &,
+        & a,
+        &:hover,
+        &:focus,
+        &:active {
+          cursor: not-allowed;
+          color: $tabs-color-disabled;
+        }
+
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          border-bottom-style: solid;
+          border-bottom-color: transparent;
+        }
       }
     }
   }
@@ -30,23 +84,21 @@
   }
 
   &-fullwidth {
-    .#{$tab-item-prefix} {
+    .c-tab-item {
       flex: 1;
     }
   }
 }
 
 
-// --------------------------------------------
-// TABS BORDERED ------------------------------
-// --------------------------------------------
-.#{$tabs-prefix}-bordered {
+// TABS BORDERED
+.c-tabs-bordered {
   background-color: $tabs-bordered-bg;
   border: 1px solid $tabs-border-color;
   border-radius: $tabs-bordered-radius;
   border-bottom: 0;
 
-  .#{$tab-item-prefix} {
+  .c-tab-item {
     height: $tabs-height;
 
     &-link {
@@ -69,30 +121,30 @@
         background: $tabs-bordered-bg-active;
 
         &:hover {
-          border-bottom: 1px solid $tabs-border-color;
+          border-bottom: 1px solid $tabs-border-color !important;
         }
       }
     }
   }
 
-  &.#{$tabs-prefix}-right {
-    .#{$tab-item-prefix}-link {
+  &.c-tabs-right {
+    .c-tab-item-link {
       border-left: 1px solid $tabs-border-color;
     }
 
-    .#{$tab-item-prefix}-link:last-child {
+    .c-tab-item-link:last-child {
       /* stylelint-disable */
       margin-right: -1px;
       /* stylelint-enable */
     }
   }
 
-  &.#{$tabs-prefix}-center {
-    .#{$tab-item-prefix}-link:first-child {
+  &.c-tabs-center {
+    .c-tab-item-link:first-child {
       border-left: 1px solid $tabs-border-color;
     }
 
-    .#{$tab-item-prefix}-link:last-child {
+    .c-tab-item-link:last-child {
       /* stylelint-disable */
       margin-right: -1px;
       /* stylelint-enable */
@@ -101,37 +153,33 @@
 }
 
 
-// --------------------------------------------
-// TABS SMALL ---------------------------------
-// --------------------------------------------
-.#{$tabs-prefix}-sm {
+// TABS SMALL
+.c-tabs-sm {
   height: $tabs-height-small;
 
-  .#{$tab-item-prefix}-link {
+  .c-tab-item-link {
     height: $tabs-height-small;
     font-size: $tabs-font-size-small;
     padding: $tabs-padding-small;
   }
 
-  &.#{$tabs-prefix}-bordered .#{$tab-item-prefix} {
+  &.c-tabs-bordered .c-tab-item {
     height: $tabs-height-small;
   }
 }
 
 
-// --------------------------------------------
-// TABS LARGE ---------------------------------
-// --------------------------------------------
-.#{$tabs-prefix}-lg {
+// TABS LARGE
+.c-tabs-lg {
   height: $tabs-height-large;
 
-  .#{$tab-item-prefix}-link {
+  .c-tab-item-link {
     height: $tabs-height-large;
     font-size: $tabs-font-size-large;
     line-height: $tabs-line-height-large;
   }
 
-  &.#{$tabs-prefix}-bordered .#{$tab-item-prefix} {
+  &.c-tabs-bordered .c-tab-item {
     height: $tabs-height-large;
   }
 }

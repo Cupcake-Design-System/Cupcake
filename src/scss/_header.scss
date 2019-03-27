@@ -1,9 +1,13 @@
-// --------------------------------------------
-// HEADER -------------------------------------
-// --------------------------------------------
-
-.#{$app-header-prefix} {
-  @include header;
+// Header
+.c-header {
+  background-color: $header-bg;
+  border-bottom: 1px solid $header-borders;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  height: $header-height;
+  width: 100%;
+  z-index: 10;
 
   &-fixed {
     position: fixed;
@@ -11,14 +15,27 @@
   }
 
   &-item {
-    @include header-item;
+    &-link {
+      color: $header-text-color;
+      white-space: nowrap;
+      align-items: center;
+      display: flex;
+      height: $header-height;
+      /* stylelint-disable */
+      padding: 0 20px;
+      /* stylelint-enable */
+
+      &:hover {
+        background: $header-bg-hover;
+      }
+    }
   }
 
   &-left {
     display: flex;
     align-items: center;
 
-    .#{$app-header-prefix}-item {
+    .c-header-item {
       border-right: 1px solid $header-borders;
     }
   }
@@ -38,7 +55,7 @@
     display: flex;
     align-items: center;
 
-    .#{$app-header-prefix}-item {
+    .c-header-item {
       border-left: 1px solid $header-borders;
     }
   }
@@ -48,11 +65,13 @@
   }
 }
 
-.#{$app-header-prefix}-inverse {
+
+// Header Inverse
+.c-header-inverse {
   background-color: $header-inverse-bg;
   border-color: $header-inverse-borders;
 
-  .#{$app-header-prefix}-item {
+  .c-header-item {
     border-color: $header-inverse-borders;
 
     & a {
@@ -65,7 +84,7 @@
   }
 }
 
-.#{$app-header-prefix}-tabs {
+.c-header-tabs {
   &.c-tabs {
     /* stylelint-disable */
     box-shadow: inset 0 -1px 0 0 #e6edf1;
@@ -74,6 +93,6 @@
   }
 }
 
-.#{$app-header-prefix}-logo img {
+.c-header-logo img {
   width: $header-logo-width;
 }

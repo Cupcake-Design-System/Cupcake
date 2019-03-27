@@ -16,16 +16,17 @@
         .badge {
           display: inline-flex;
           align-items: center;
-          background: #000000;
-          border-radius: 200px;
-          color: #ffffff;
-          font-size: 11px;
-          font-weight: 600;
-          height: 24px;
-          line-height: 2;
-          padding: 0 8px;
           text-decoration: none;
           vertical-align: middle;
+          color: #ffffff;
+          background: #000000;
+          height: 24px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+          padding: 0 8px;
+          font-size: 11px;
+          font-weight: 600;
+          line-height: 2;
+          border-radius: 200px;
         }
         .badge-close {
           border: 0;
@@ -93,9 +94,9 @@
       }
       @include expect {
         .badge {
-          font-size: 12px;
           height: 32px;
           min-width: 32px;
+          font-size: 12px;
         }
         .badge i {
           font-size: 12px;
@@ -113,8 +114,8 @@
       }
       @include expect {
         .badge {
-          background-color: purple;
           color: #ffffff;
+          background-color: purple;
         }
       }
     }
@@ -129,8 +130,8 @@
       }
       @include expect {
         .badge {
-          background-color: yellow;
           color: black;
+          background-color: yellow;
         }
       }
     }
