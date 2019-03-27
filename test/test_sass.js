@@ -4,12 +4,6 @@ const sassTrue = require('sass-true');
 const initCustomMixins = path.join(__dirname, 'init-custom-mixins.scss');
 sassTrue.runSass({file: initCustomMixins}, describe, it);
 
-// const initCustomFunctions = path.join(__dirname, 'init-custom-functions.scss');
-// sassTrue.runSass({file: initCustomFunctions}, describe, it);
-
-// const initCustomConfig = path.join(__dirname, 'init-custom-config.scss');
-// sassTrue.runSass({file: initCustomConfig}, describe, it);
-
 const alert = path.join(__dirname, 'test-alert.scss');
 sassTrue.runSass({file: alert}, describe, it);
 
@@ -31,9 +25,6 @@ sassTrue.runSass({file: switches}, describe, it);
 const closeMixin = path.join(__dirname, 'test-close-mixin.scss');
 sassTrue.runSass({file: closeMixin}, describe, it);
 
-// const typography = path.join(__dirname, 'test-typography.scss');
-// sassTrue.runSass({file: typography}, describe, it);
-
 const shadows = path.join(__dirname, 'test-shadows.scss');
 sassTrue.runSass({file: shadows}, describe, it);
 
@@ -42,3 +33,6 @@ sassTrue.runSass({file: spacing}, describe, it);
 
 const radius = path.join(__dirname, 'test-radius.scss');
 sassTrue.runSass({file: radius}, describe, it);
+
+// const typography = path.join(__dirname, 'test-typography.scss');
+// sassTrue.runSass({file: typography}, describe, it);

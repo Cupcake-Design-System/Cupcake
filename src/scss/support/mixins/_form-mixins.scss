@@ -3,12 +3,13 @@
 // --------------------------------------------
 
 @mixin label {
-  display: block;
   width: 100%;
-  font-weight: $font-weight-bold;
-  padding: $control-padding / 2 0;
+  display: block;
   color: $control-color;
   font-size: $control-font-size;
+  font-weight: $font-weight-bold;
+  padding: $control-padding / 2 0;
+  font-family: $control-font-family;
 }
 
 
@@ -17,23 +18,23 @@
 // --------------------------------------------
 
 @mixin input {
-  display: block;
-  width: 100%;
-  height: $control-height;
-  padding: $space-0 $control-padding;
-  border: $control-border;
-  border-radius: $control-border-radius;
   outline: 0;
-  color: $control-color;
-  background-color: $control-background;
-  font-family: inherit;
-  font-size: $control-font-size;
-  font-weight: $control-font-weight;
-  line-height: $control-line-height;
-  box-shadow: $control-shadow;
+  width: 100%;
+  display: block;
   resize: vertical;
   appearance: none;
+  color: $control-color;
+  border: $control-border;
+  height: $control-height;
+  box-shadow: $control-shadow;
+  font-size: $control-font-size;
   transition: $control-transition;
+  font-weight: $control-font-weight;
+  line-height: $control-line-height;
+  font-family: $control-font-family;
+  padding: $space-0 $control-padding;
+  border-radius: $control-border-radius;
+  background-color: $control-background;
 
   &::-ms-clear {
     display: none;
@@ -55,8 +56,8 @@
 
   &:focus,
   &#{&}-focus {
-    border-color: $control-active-border;
     box-shadow: $control-focused-shadow;
+    border-color: $control-active-border;
   }
 
   // in separate selector because it breaks ie11
@@ -77,8 +78,8 @@
   }
 
   &-inline {
-    display: inline;
     width: auto;
+    display: inline;
   }
 
   &-container {
@@ -92,11 +93,11 @@
 // --------------------------------------------
 
 @mixin input-disabled {
-  border-color: $control-disabled-border;
-  background-color: $control-disabled-background;
-  box-shadow: $control-shadow-disabled;
   cursor: not-allowed;
   color: $color-gray-9;
+  box-shadow: $control-shadow-disabled;
+  border-color: $control-disabled-border;
+  background-color: $control-disabled-background;
 
   &::placeholder {
     color: $color-gray-9;
@@ -107,7 +108,6 @@
 // --------------------------------------------
 // Select Base Mixin ---------------------------
 // --------------------------------------------
-
 @mixin select {
   outline: 0;
   width: 100%;
@@ -118,12 +118,13 @@
   appearance: none;
   color: $control-color;
   height: $control-height;
+  border: $control-border;
   font-size: $control-font-size;
+  font-family: $control-font-family;
   padding: $space-0 $control-padding;
   padding-right: $select-padding-r;
   font-weight: $control-font-weight;
   line-height: $control-line-height;
-  border: $control-border;
   border-radius: $control-border-radius;
   background: $color-white $select-bg-img $select-bg-pos;
   background-size: 8px;
@@ -150,9 +151,9 @@
     box-shadow: $select-box-shadow, $select-box-shadow-focus;
   }
 
-  // &:hover {
-  //   background: $_dropdown-arrow, $select-background-hover;
-  // }
+  &:hover {
+    border-color: $control-hover-border;
+  }
 
   &:active,
   &.c-input-active,

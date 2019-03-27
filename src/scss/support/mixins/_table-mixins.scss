@@ -1,0 +1,239 @@
+// --------------------------------------------
+// TABLES -------------------------------------
+// --------------------------------------------
+@mixin table-children-styles($stripe: $table-stripe) {
+  .c-table {
+    thead,
+    tbody,
+    tfoot {
+      border: $table-border;
+      background-color: $table-background;
+    }
+
+    tbody {
+      font-size: $table-font-size;
+      font-family: $table-font-family;
+    }
+
+    // Table head
+    thead {
+      border-style: solid;
+      vertical-align: bottom;
+      color: $table-head-color;
+      background: $table-head-bg;
+      font-family: $table-font-family;
+      border-color: $table-head-border-color;
+      border-width: $table-head-border-width;
+
+      th {
+        text-align: left; //IE centers text by default
+        vertical-align: middle;
+        font-size: $table-font-size;
+      }
+    }
+
+    // Table foot
+    tfoot {
+      color: $table-foot-color;
+      background: $table-foot-bg;
+    }
+
+    // Table head and foot
+    thead,
+    tfoot {
+      tr {
+        background: transparent;
+      }
+
+      // Cells within head and foot
+      th,
+      td {
+        padding: $table-padding;
+        line-height: $table-line-height;
+        font-weight: $table-head-font-weight;
+        border-right: $table-head-border-vertical;
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+
+    // Table rows
+    &:not(.c-table-transparent) {
+      tbody {
+        tr {
+          &:nth-child(#{$stripe}) {
+            background-color: $table-stripe-bg;
+          }
+        }
+      }
+    }
+
+    th,
+    td {
+      padding: $table-padding;
+      border-right: $table-border;
+      line-height: $table-line-height;
+    }
+  }
+}
+
+
+// Adds the general styles for tables.
+// Uses keywords even, odd, or none to darken rows of the table. The default value is even.
+@mixin table($stripe: $table-stripe, $nest: false) {
+  width: 100%;
+  text-align: left;
+  line-height: $table-line-height;
+
+  &-layout-fixed {
+    table-layout: fixed;
+  }
+
+  @if $nest {
+    @include table-children-styles($stripe);
+  } @else {
+    @at-root {
+      @include table-children-styles($stripe);
+    }
+  }
+}
+
+
+/// Adds the ability to horizontally scroll the table when the content overflows horizontally.
+@mixin table-scroll {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+
+/// Slightly darkens the table rows on hover.
+@mixin table-hover {
+  tbody {
+    tr {
+      &:hover {
+        cursor: pointer;
+        background: $table-row-hover;
+      }
+
+      //Darkens the even striped table rows.
+      @if ($table-stripe == even) {
+        &:nth-of-type(even):hover {
+          background-color: $table-row-hover;
+        }
+      }
+
+      //Darkens the odd striped table rows. @else if($table-stripe == odd) {
+      &:nth-of-type(odd):hover {
+        background-color: $table-row-hover;
+      }
+    }
+  }
+}
+
+
+// Sizing Options
+@mixin table-sm {
+  thead,
+  tbody,
+  tfoot {
+    th,
+    td {
+      padding: $table-padding-sm;
+    }
+  }
+}
+
+@mixin table-lg {
+  thead,
+  tbody,
+  tfoot {
+    th,
+    td {
+      padding: $table-padding-lg;
+      font-size: $table-font-size-lg;
+    }
+  }
+}
+
+
+// Border Options
+@mixin table-border {
+  &-horizontal {
+    tbody tr {
+      border-bottom: 1px solid $table-border-color;
+    }
+  }
+
+  &-vertical {
+    th,
+    td {
+      &:not(:last-child) {
+        border-right: 1px solid $table-border-color;
+      }
+    }
+  }
+
+  &-both {
+    @extend table.c-table-border-horizontal;
+    @extend table.c-table-border-vertical;
+  }
+
+  &-full {
+    th,
+    td {
+      border: 1px solid $table-border-color;
+    }
+  }
+}
+
+
+// Draggable Options
+@mixin draggable-bg {
+  background-repeat: no-repeat;
+  background-image: $table-hover-bg-img;
+  background-position: $table-hover-bg-img-body-pos;
+}
+
+@mixin draggable-cursor {
+  cursor: move;  //IE fallback
+  cursor: grab;
+}
+
+@mixin table-header-cell-draggable {
+  &:hover {
+    @include draggable-bg;
+    @include draggable-cursor;
+
+    background-color: $table-head-cell-hover;
+  }
+}
+
+@mixin table-row-cell-draggable {
+  &:hover {
+    @include draggable-cursor;
+    @include draggable-bg;
+  }
+}
+
+@mixin table-row-draggable {
+  tbody tr:hover {
+    @include draggable-cursor;
+
+    td:first-child {
+      @include draggable-bg;
+    }
+  }
+}
+
+@mixin table-all-rows-draggable {
+  &:hover {
+    @include draggable-cursor;
+
+    td:first-child {
+      @include draggable-bg;
+    }
+  }
+}

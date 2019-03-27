@@ -374,6 +374,47 @@
   <button type="button" class="c-btn c-btn-secondary c-m-horizontal-md">Button</button>
 </form>
 
+<br>
+<hr>
+<br>
+<br>
+
+<h3>Textarea Example</h3>
+<label class="c-input-label">Textarea</label>
+<textarea class="c-input c-input-primary" type="text" id="size-input-2" placeholder="Textarea"></textarea>
+
+
+<br>
+<hr>
+<br>
+<br><h3>Fieldset Example</h3>
+
+<div class="c-fieldset">
+  <label class="c-input-label">Name</label>
+  <input class="c-input" type="text" placeholder="Enter your name">
+</div>
+
+<div class="c-fieldset">
+  <label class="c-input-label">Email</label>
+  <input type="text" placeholder="Input Icon Left sm" class="c-input c-input-error" value="email@email.com">
+  <span class="c-hint c-hint-static c-hint-error"><i class="fa fa-exclamation-triangle"></i> This email is unavailable!</span>
+</div>
+
+<div class="c-fieldset">
+  <label class="c-input-label">Username</label>
+  <input type="text" placeholder="Input Icon Left sm" class="c-input" value="youcancallmedragon">
+  <span class="c-hint c-hint-static c-hint-success"><i class="fa fa-check"></i> This username is silly but available!</span>
+</div>
+
+
+<div class="c-fieldset">
+  <label class="c-input-label">Name</label>
+  <div class="c-input-container">
+    <i class="c-input-icon fa fa-exclamation-circle c-text-danger"></i>
+    <input type="text" id="forms-input-warning" placeholder="Input Icon Left lg" class="c-input">
+    <span class="c-hint c-hint-static c-hint-error">This email is unavailable!</span>
+  </div>
+</div>
 
       </main>
     </div>
@@ -384,6 +425,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
   
   <script>
+    $(document).ready(function () {
+  
+  $(".c-dropdown").click(function () {
+    $(this).find(".c-dropdown-list, .c-dropdown-grid").slideToggle(100);
+  });
+  
+  $(document).on("click", function (event) {
+    var $dropdownTrigger = $(".c-dropdown");
+  
+    if ($dropdownTrigger !== event.target && !$dropdownTrigger.has(event.target).length) {
+      $(".c-dropdown-list, .c-dropdown-grid").slideUp("fast");
+    }
+  });
+  });
+  
+  
   (function( $ ) {
     var pluginName = "xrayhtml",
   		o = {
@@ -530,7 +587,9 @@
         Prism.highlightAll();
       }
     });
+  
   </script>
+  
 <script>
   $("#codeToggle").click(function () {
     $(".source-panel").slideToggle();

@@ -19,50 +19,40 @@
 <body class="docs-container">
     <div class="docs-body">
       <main class="docs-content docs-content-fullwidth">
+        <button id="codeToggle" class="c-btn c-btn-primary" style="float: right;">Toggle Code Snippets</button>
         <br><br><br><br>
           
-<label class="c-switch">
-  <input type="checkbox" class="c-switch-input">
-  <span class="c-switch-handle"></span>
-</label>
+  <h3 class="c-header-md">Pagination</h3>
 
-<label class="c-switch">
-  <input type="checkbox" class="c-switch-input" checked>
-  <span class="c-switch-handle"></span>
-</label>
+<ul class="c-pagination">
+  <li>
+    <a href="#" class="c-pagination-previous c-pagination-link"><i class="far fa-arrow-left"></i> Previous</a>
+  </li>
+  <li>
+    <a href="#" class="c-pagination-link">1</a>
+  </li>
+  <li>
+    <a href="#" class="c-pagination-link c-pagination-current">2</a>
+  </li>
+  <li>
+    <a href="#" class="c-pagination-link">3</a>
+  </li>
+  <li><a href="#" class="c-pagination-link">4</a>
+  </li>
+  <li>
+    <a href="#" class="c-pagination-link">...</a>
+  </li>
+  <li>
+    <a href="#" class="c-pagination-link">12</a>
+  </li>
+  <li>
+    <a href="#" class="c-pagination-link">13</a>
+  </li>
+  <li>
+    <a href="#" class="c-pagination-link c-pagination-next">Next <i class="far fa-arrow-right"></i></a>
+  </li>
+</ul>
 
-<label class="c-switch">
-  <input type="checkbox" class="c-switch-input" disabled>
-  <span class="c-switch-handle"></span>
-</label>
-
-<label class="c-switch">
-  <input type="checkbox" class="c-switch-input" checked disabled>
-  <span class="c-switch-handle"></span>
-</label>
-
-<br>
-<br>
-
-<label class="c-switch c-switch-lg">
-  <input type="checkbox" class="c-switch-input">
-  <span class="c-switch-handle"></span>
-</label>
-
-<label class="c-switch c-switch-lg">
-  <input type="checkbox" class="c-switch-input" checked>
-  <span class="c-switch-handle"></span>
-</label>
-
-<label class="c-switch c-switch-lg">
-  <input type="checkbox" class="c-switch-input" disabled>
-  <span class="c-switch-handle"></span>
-</label>
-
-<label class="c-switch c-switch-lg">
-  <input type="checkbox" class="c-switch-input" checked disabled>
-  <span class="c-switch-handle"></span>
-</label>
       </main>
     </div>
   </body>
@@ -72,6 +62,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
   
   <script>
+    $(document).ready(function () {
+  
+  $(".c-dropdown").click(function () {
+    $(this).find(".c-dropdown-list, .c-dropdown-grid").slideToggle(100);
+  });
+  
+  $(document).on("click", function (event) {
+    var $dropdownTrigger = $(".c-dropdown");
+  
+    if ($dropdownTrigger !== event.target && !$dropdownTrigger.has(event.target).length) {
+      $(".c-dropdown-list, .c-dropdown-grid").slideUp("fast");
+    }
+  });
+  });
+  
+  
   (function( $ ) {
     var pluginName = "xrayhtml",
   		o = {
@@ -218,7 +224,9 @@
         Prism.highlightAll();
       }
     });
+  
   </script>
+  
 <script>
   $("#codeToggle").click(function () {
     $(".source-panel").slideToggle();

@@ -43,6 +43,11 @@
 
 
 	<li>
+		<a href="pages/breadcrumbs.html" class="f-item-heading" target="_blank">Breadcrumbs</a>
+	</li>
+
+
+	<li>
 		<a href="pages/buttons.html" class="f-item-heading" target="_blank">Buttons</a>
 	</li>
 
@@ -63,7 +68,32 @@
 
 
 	<li>
+		<a href="pages/dropdowns.html" class="f-item-heading" target="_blank">Dropdowns</a>
+	</li>
+
+
+	<li>
+		<a href="pages/footer.html" class="f-item-heading" target="_blank">Footer</a>
+	</li>
+
+
+	<li>
 		<a href="pages/forms.html" class="f-item-heading" target="_blank">Forms</a>
+	</li>
+
+
+	<li>
+		<a href="pages/header.html" class="f-item-heading" target="_blank">Header</a>
+	</li>
+
+
+	<li>
+		<a href="pages/modal.html" class="f-item-heading" target="_blank">Modal</a>
+	</li>
+
+
+	<li>
+		<a href="pages/pagination.html" class="f-item-heading" target="_blank">Pagination</a>
 	</li>
 
 
@@ -79,6 +109,11 @@
 
 	<li>
 		<a href="pages/switch.html" class="f-item-heading" target="_blank">Switch</a>
+	</li>
+
+
+	<li>
+		<a href="pages/table.html" class="f-item-heading" target="_blank">Table</a>
 	</li>
 
 
@@ -118,11 +153,18 @@
           <li class="docs-nav-item"><a href="elements.html#alerts">Alerts</a></li>
           <li class="docs-nav-item"><a href="elements.html#avatars">Avatars</a></li>
           <li class="docs-nav-item"><a href="elements.html#badges">Badges</a></li>
+          <li class="docs-nav-item"><a href="elements.html#breadcrumbs">Breadcrumbs</a></li>
           <li class="docs-nav-item"><a href="elements.html#buttons">Buttons</a></li>
           <li class="docs-nav-item"><a href="elements.html#cards">Cards</a></li>
           <li class="docs-nav-item"><a href="elements.html#checkboxes">Checkboxes</a></li>
+          <li class="docs-nav-item"><a href="elements.html#dropdowns">Dropdowns</a></li>
+          <li class="docs-nav-item"><a href="elements.html#footer">Footer</a></li>
           <li class="docs-nav-item"><a href="elements.html#forms">Forms</a></li>
+          <li class="docs-nav-item"><a href="elements.html#header">Header</a></li>
+          <li class="docs-nav-item"><a href="elements.html#modal">Modal</a></li>
+          <li class="docs-nav-item"><a href="elements.html#pagination">Pagination</a></li>
           <li class="docs-nav-item"><a href="elements.html#switch">Switch</a></li>
+          <li class="docs-nav-item"><a href="elements.html#table">Table</a></li>
           <li class="docs-nav-item"><a href="elements.html#tabs">Tabs</a></li>
         </ul>
     
@@ -141,6 +183,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
 
 <script>
+  $(document).ready(function () {
+
+$(".c-dropdown").click(function () {
+  $(this).find(".c-dropdown-list, .c-dropdown-grid").slideToggle(100);
+});
+
+$(document).on("click", function (event) {
+  var $dropdownTrigger = $(".c-dropdown");
+
+  if ($dropdownTrigger !== event.target && !$dropdownTrigger.has(event.target).length) {
+    $(".c-dropdown-list, .c-dropdown-grid").slideUp("fast");
+  }
+});
+});
+
+
 (function( $ ) {
   var pluginName = "xrayhtml",
 		o = {
@@ -287,7 +345,9 @@
       Prism.highlightAll();
     }
   });
+
 </script>
+
 <script>
 	// Some simple js heavily modified from fabricators core for the sidebar
 	'use strict';
