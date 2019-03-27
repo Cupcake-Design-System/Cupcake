@@ -6,19 +6,19 @@
   $color: $alert-default-color,
   $icon: $alert-primary-icon-color
 ) {
-  position: relative;
+  color: $color;
   display: flex;
-  align-items: flex-start;
   text-align: left;
+  position: relative;
+  background-color: $bg;
+  border: $alert-border;
   margin: $alert-margin;
   padding: $alert-padding;
-  background-color: $bg;
-  color: $color;
-  border: $alert-border;
+  align-items: flex-start;
+  font-size: $alert-font-size;
   border-radius: $alert-radius;
   font-family: $alert-font-family;
   font-weight: $alert-font-weight;
-  font-size: $alert-font-size;
   line-height: $alert-line-height;
 
   &-close {
@@ -29,20 +29,20 @@
   }
 
   &-title {
-    font-weight: $font-weight-bold;
+    font-weight: $alert-title-font-weight;
   }
 
   &-content {
     flex: 1;
-    line-height: $alert-line-height;
     margin-right: $space-xs;
+    line-height: $alert-line-height;
   }
 
   &-icon {
-    align-self: stretch;
-    padding-right: $alert-padding;
-    font-size: $alert-icon-width;
     color: $icon;
+    align-self: stretch;
+    font-size: $alert-icon-width;
+    padding-right: $alert-padding;
     line-height: $alert-line-height;
   }
 }
@@ -61,11 +61,11 @@
     border-color: $color;
   }
 
-  .#{$alert-prefix}-close {
+  .c-alert-close {
     @include delete-color($color);
   }
 
-  .#{$alert-prefix}-icon {
+  .c-alert-icon {
     color: $color;
   }
 }

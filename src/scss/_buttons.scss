@@ -1,7 +1,7 @@
 // --------------------------------------------
 // BUTTONS ------------------------------------
 // --------------------------------------------
-.#{$button-prefix} {
+.c-btn {
   @include btn-base;
 
   &:active,
@@ -15,7 +15,7 @@
   }
 
   &-disabled,
-  &.#{$button-prefix}-disabled,
+  &.c-btn-disabled,
   &[disabled] {
     @include btn-disabled;
   }
@@ -44,7 +44,7 @@
 // --------------------------------------------
 // Button Links -------------------------------
 // --------------------------------------------
-.#{$button-prefix}-link {
+.c-btn-link {
   @include btn-base;
 
   box-shadow: none;
@@ -66,7 +66,7 @@
     color: $color-primary-9;
   }
 
-  &.#{$button-prefix}-disabled,
+  &.c-btn-disabled,
   &-disabled,
   &[disabled] {
     &,
@@ -110,26 +110,26 @@
 // --------------------------------------------
 @if $enable-outline-buttons == true {
   @each $name, $hex in $theme-colors {
-    .#{$button-prefix}-#{$name}-outline {
+    .c-btn-#{$name}-outline {
       @include btn-outline($hex);
     }
   }
 }
 
 @if $enable-circle-buttons == true {
-  .#{$button-prefix}-circle {
+  .c-btn-circle {
     border-radius: radius(round);
   }
 }
 
 @if $enable-square-buttons == true {
-  .#{$button-prefix}-square {
+  .c-btn-square {
     border-radius: radius(none);
   }
 }
 
 @if $enable-pill-buttons == true {
-  .#{$button-prefix}-pill {
+  .c-btn-pill {
     border-radius: radius(pill);
   }
 }
@@ -138,22 +138,22 @@
 // --------------------------------------------
 // Button Icons/Circle/Box --------------------
 // --------------------------------------------
-.#{$button-prefix}-icon,
-.#{$button-prefix}-circle,
-.#{$button-prefix}-box {
+.c-btn-icon,
+.c-btn-circle,
+.c-btn-box {
   width: $btn-box-width;
   padding-left: space(0);
   padding-right: space(0);
   text-align: center;
 
   @each $name, $size in $btn-box-sizes {
-    &.#{$button-prefix}-#{$name} {
+    &.c-btn-#{$name} {
       width: $size;
     }
   }
 }
 
-.#{$button-prefix}-icon {
+.c-btn-icon {
   background: transparent;
   border: 1px solid transparent;
   color: color(gray, 5);
@@ -175,7 +175,7 @@
   }
 }
 
-.#{$button-prefix}-block {
+.c-btn-block {
   display: block;
   width: 100%;
   text-align: center;

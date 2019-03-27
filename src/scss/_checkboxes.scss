@@ -2,11 +2,11 @@
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
 
-.#{$label-prefix} {
+.c-control {
   @include label-control;
 }
 
-.#{$checkbox-prefix} {
+.c-checkbox {
   @include checkbox;
 
   input:indeterminate + i {
@@ -25,7 +25,7 @@
   }
 }
 
-.#{$radio-prefix} {
+.c-radio {
   @include checkbox;
 
   input:disabled:checked {
@@ -42,12 +42,12 @@
 }
 
 @each $name, $size in $checkbox-sizes {
-  .#{$checkbox-prefix},
-  .#{$radio-prefix} {
+  .c-checkbox,
+  .c-radio {
     &-#{$name} {
       @include checkbox-size($size);
 
-      + .#{$label-prefix} {
+      + .c-control {
         @include label-control($size);
       }
     }
@@ -55,7 +55,7 @@
 }
 
 @each $name, $color in $checkbox-palette {
-  .#{$checkbox-prefix} {
+  .c-checkbox {
     &-#{$name} {
       @include checkbox-color($color);
 
@@ -65,7 +65,7 @@
     }
   }
 
-  .#{$radio-prefix} {
+  .c-radio {
     &-#{$name} {
       @include checkbox-color($color);
     }

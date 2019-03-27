@@ -2,7 +2,7 @@
 // Avatars ------------------------------------
 // --------------------------------------------
 
-.#{$avatar-prefix} {
+.c-avatar {
   @include avatar-base();
 
   img {
@@ -21,7 +21,7 @@
       border-radius: $radius-sm;
     }
 
-    &.#{$avatar-prefix}[data-status]::after {
+    &.c-avatar[data-status]::after {
       top: -2px;
       right: -2px;
     }
@@ -78,18 +78,18 @@
 
 // All default Avatar color classes
 @each $name, $hex in $theme-colors {
-  .#{$avatar-prefix}-#{$name} {
+  .c-avatar-#{$name} {
     background-color: $hex;
   }
 
-  .#{$avatar-prefix}[data-status='#{$name}']::after {
+  .c-avatar[data-status='#{$name}']::after {
     background-color: $hex;
   }
 }
 
 // All default Avatar size classes
 @each $name, $size, $font-size in config($avatar-sizes) {
-  .#{$avatar-prefix}-#{$name} {
+  .c-avatar-#{$name} {
     @include avatar-size($size, $font-size);
 
     &[data-status]::after {
@@ -102,7 +102,7 @@
 // Extended Avatar color classes
 @if $enable-extend-avatar-colors == true {
   @each $name, $hex in $extended-palette-light {
-    .#{$avatar-prefix}-#{$name} {
+    .c-avatar-#{$name} {
       background-color: $hex;
       color: $color-gray-9;
     }
@@ -110,7 +110,7 @@
 
   // Extended Avatar LIGHT color classes
   @each $name, $hex in $extended-palette {
-    .#{$avatar-prefix}-#{$name} {
+    .c-avatar-#{$name} {
       background-color: $hex;
     }
   }

@@ -10,8 +10,9 @@
   padding: $space-0;
   white-space: nowrap;
   align-items: stretch;
-  font-weight: $tabs-font-weight;
   font-size: $tabs-font-size;
+  font-family: $tabs-font-family;
+  font-weight: $tabs-font-weight;
 
   @if $tabs-full-width-border {
     box-shadow: $tabs-box-shadow;
@@ -32,9 +33,9 @@
   color: $tabs-color;
   text-align: center;
   text-decoration: none;
+  padding: $tabs-padding;
   justify-content: center;
   transition: $tabs-hover-transition;
-  padding: $tabs-padding;
   border-bottom: $tabs-border-bottom solid transparent;
 
   a {

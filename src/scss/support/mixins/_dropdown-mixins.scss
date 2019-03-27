@@ -48,14 +48,14 @@
   font-size: $dropdown-font-size;
   padding: $dropdown-item-padding;
   font-weight: $dropdown-font-weight;
-  
-  .#{$dropdown-prefix}-icon {
+
+  .c-dropdown-icon {
     color: $dropdown-icon-color;
     font-size: $dropdown-icon-font-size;
     padding-right: $dropdown-icon-padding;
   }
 
-  .#{$checkbox-prefix} {
+  .c-checkbox {
     /* stylelint-disable */
     margin-top: -2px;
     /* stylelint-enable */
@@ -85,7 +85,7 @@
       transform: rotate(45deg) translateY(-50%);
     }
 
-    .#{$dropdown-prefix}-icon {
+    .c-dropdown-icon {
       color: $dropdown-selected-color;
     }
   }
@@ -146,7 +146,7 @@
   color: $dropdown-color;
   padding: $dropdown-grid-padding * 2 0;
 
-  .#{$dropdown-prefix}-icon {
+  .c-dropdown-icon {
     color: $dropdown-icon-color;
     font-size: $dropdown-icon-font-size;
     padding: $space-0 $dropdown-icon-padding $dropdown-icon-padding;
@@ -161,7 +161,7 @@
     color: $dropdown-selected-color;
     background: $dropdown-selected-bg;
 
-    .#{$dropdown-prefix}-icon {
+    .c-dropdown-icon {
       color: $dropdown-selected-color;
     }
   }

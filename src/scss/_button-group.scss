@@ -1,30 +1,30 @@
 // --------------------------------------------
 // BUTTON Groups ------------------------------
 // --------------------------------------------
-.#{$button-prefix}-group {
+.c-btn-group {
   display: inline-flex;
   // vertical-align: middle;
 
-  .#{$button-prefix} {
+  .c-btn {
     position: relative;
     flex: 1 0 auto;
     border-left-width: 0;
   }
 
-  > :not(:first-child):not(:last-child) > .#{$button-prefix},
-  > .#{$button-prefix}:not(:first-child):not(:last-child) {
+  > :not(:first-child):not(:last-child) > .c-btn,
+  > .c-btn:not(:first-child):not(:last-child) {
     border-radius: $radius-0;
   }
 
-  > :first-child > .#{$button-prefix},
-  > .#{$button-prefix}:first-child {
+  > :first-child > .c-btn,
+  > .c-btn:first-child {
     border-left-width: 1px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  > :last-child > .#{$button-prefix},
-  > .#{$button-prefix}:last-child {
+  > :last-child > .c-btn,
+  > .c-btn:last-child {
     border-left-width: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -47,8 +47,8 @@
 }
 
 @if $enable-pill-buttons == true {
-  .#{$button-prefix}-group {
-    .#{$button-prefix}-pill {
+  .c-btn-group {
+    .c-btn-pill {
       &:first-child {
         border-left-width: 1px;
         border-top-left-radius: $radius-pill;
@@ -75,11 +75,11 @@
   }
 }
 
-.#{$button-prefix}-group-vertical {
+.c-btn-group-vertical {
   display: inline-flex;
   flex-direction: column;
 
-  .#{$button-prefix} {
+  .c-btn {
     /* stylelint-disable */
     margin-top: -1px;
     /* stylelint-enable */
@@ -105,8 +105,8 @@
 }
 
 @each $name, $size in $btn-box-sizes {
-  .#{$button-prefix}-group-#{$name} {
-    .#{$button-prefix}-box {
+  .c-btn-group-#{$name} {
+    .c-btn-box {
       width: $size;
       height: $size;
       text-align: center;
@@ -114,11 +114,11 @@
   }
 }
 
-.#{$button-prefix}-group,
-.#{$button-prefix}-group-vertical,
-.#{$button-prefix}-group-stepper {
-  .#{$button-prefix}:focus,
-  .#{$button-prefix}:active {
+.c-btn-group,
+.c-btn-group-vertical,
+.c-btn-group-stepper {
+  .c-btn:focus,
+  .c-btn:active {
     z-index: 1;
   }
 }

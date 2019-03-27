@@ -2,7 +2,7 @@
 // Alerts -------------------------------------
 // --------------------------------------------
 
-.#{$alert-prefix} {
+.c-alert {
   @include alert-base;
 
   &-top {
@@ -12,7 +12,7 @@
     border-radius: $radius-square;
     padding: $alert-top-padding;
 
-    .#{$alert-prefix}-icon {
+    .c-alert-icon {
       padding-right: $alert-top-padding;
     }
   }

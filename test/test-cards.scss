@@ -9,7 +9,7 @@ $card-prefix   : 'card';
   @include it('Given a prefix - generates base attributes for card') {
     @include assert {
       @include output {
-        .#{$card-prefix} {
+        .c-card {
           @include card();
         }
       }

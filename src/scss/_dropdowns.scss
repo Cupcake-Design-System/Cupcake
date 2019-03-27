@@ -1,5 +1,5 @@
 // Dropdown Base
-.#{$dropdown-prefix} {
+.c-dropdown {
   overflow: visible;
   position: relative;
   display: inline-block;
@@ -15,14 +15,14 @@
 
   &-list {
     @include dropdown-list;
-  
+
     > li > a,
-    .#{$dropdown-prefix}-item {
+    .c-dropdown-item {
       @include dropdown-item;
-  
+
       @include not($link-colors) {
         color: $dropdown-color;
-  
+
         &:hover {
           color: $dropdown-color-hover;
         }
@@ -34,13 +34,13 @@
 
 // Dropdown Grid Style
 @if $enable-grid-dropdown-classes == true {
-  .#{$dropdown-prefix}-grid {
+  .c-dropdown-grid {
     @include dropdown-grid;
 
     width: $dropdown-min-width + 100px;
 
     li a,
-    .#{$dropdown-prefix}-item {
+    .c-dropdown-item {
       @include dropdown-grid-item;
     }
 
@@ -48,7 +48,7 @@
       width: $dropdown-min-width;
 
       li a,
-      .#{$dropdown-prefix}-item {
+      .c-dropdown-item {
         flex-basis: 50%;
       }
     }
@@ -57,7 +57,7 @@
       width: $dropdown-min-width + 100px;
 
       li a,
-      .#{$dropdown-prefix}-item {
+      .c-dropdown-item {
         flex-basis: 25%;
       }
     }

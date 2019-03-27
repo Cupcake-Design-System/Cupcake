@@ -1,8 +1,6 @@
 // --------------------------------------------
 // ALERTS & TOASTS ----------------------------
 // --------------------------------------------
-$alert-prefix               : 'c-alert' !default;
-$toast-prefix               : 'c-toast-alert' !default;
 $alert-border               : 1px solid !default;
 $alert-margin               : 0 0 $space-md 0 !default;
 $alert-padding              : $space-sm !default;
@@ -35,12 +33,12 @@ $alert-colors:
 // --------------------------------------------
 // Avatars ------------------------------------
 // --------------------------------------------
-$avatar-prefix              : 'c-avatar' !default;
 $enable-extend-avatar-colors: true !default;
 $avatar-default-size        : $global-size-md !default;
 $avatar-border-radius       : $radius-round !default;
 $avatar-font-weight         : $font-weight-semibold !default;
 $avatar-font-size           : $font-body-md !default;
+$avatar-font-family         : $font-family-sans !default;
 $avatar-line-height         : normal !default;
 $avatar-img-border          : $global-default-border !default;
 
@@ -55,8 +53,8 @@ $avatar-sizes:
 // --------------------------------------------
 // Badge --------------------------------------
 // --------------------------------------------
-$badge-prefix               : 'c-badge' !default;
 $enable-extend-badge-colors : true !default;
+$badge-font-family          : $font-family-sans !default;
 $badge-default-size         : $global-size-sm !default;
 $badge-default-padding      : $space-0 $space-sm !default;
 $badge-default-border-radius: $radius-round !default;
@@ -72,7 +70,6 @@ $badge-sm-font-size         : $font-body-xs - 1 !default;
 // --------------------------------------------
 // Buttons ------------------------------------
 // --------------------------------------------
-$button-prefix          : 'c-btn' !default;
 $enable-btn-gradients   : false !default;
 $enable-btn-border      : true !default;
 $enable-btn-white-label : false !default;
@@ -96,10 +93,6 @@ $btn-shadow             : false !default;
 $btn-shadow-focus       : 0 0 2px 1px $color-primary-7 !default;
 $btn-active-selected    : false !default;
 $btn-active-shadow      : none !default;
-
-// $btn-active-shadow      : inset 0 1px 7px rgba(27, 31, 35, 0.15) !default;
-
-
 $btn-box-width          : $global-size-md !default;
 
 $btn-box-sizes: (
@@ -166,6 +159,7 @@ $button-sizes: (
 $breadcrumb-color               : $color-primary-9 !default;
 $breadcrumb-color-active        : $color-gray-9 !default;
 $breadcrumb-font-size           : 12px !default;
+$breadcrumb-font-family         : $font-family-sans !default;
 $breadcrumb-font-weight         : $font-weight-bold !default;
 $breadcrumb-divider-size        : 8px !default;
 $breadcrumb-divider-border-width: 2px !default;
@@ -176,12 +170,12 @@ $breadcrumb-margin              : $global-size-md !default;
 // --------------------------------------------
 // CARDS --------------------------------------
 // --------------------------------------------
-$card-prefix                 : 'c-card' !default;
 $card-bg                     : $color-white !default;
 $card-text-color             : $color-gray-7 !default;
 $card-border                 : 1px solid $color-gray-2 !default;
 $card-border-radius          : $global-default-radius !default;
-$card-min-width              : 250px !default;
+$card-min-width              : 0 !default;
+$card-font-family            : $font-family-sans !default;
 $card-padding-v              : $space-md - $space-xs !default;
 $card-padding-h              : $space-md !default;
 $card-shadow                 : $shadow-xs !default;
@@ -208,9 +202,6 @@ $card-footer-line-weight     : $font-body-xl !default;
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
 $label-font-size                : 12px !default;
-$radio-prefix                   : 'c-radio' !default;
-$label-prefix                   : 'c-control' !default;
-$checkbox-prefix                : 'c-checkbox' !default;
 $checkbox-disabled-bg           : $color-gray-3 !default;
 $checkbox-disabled-color        : $color-gray-5 !default;
 $checkbox-checked-disabled-bg   : $color-gray-6 !default;
@@ -227,9 +218,9 @@ $checkbox-sizes                 : () !default;
 // --------------------------------------------
 // FORMS --------------------------------------
 // --------------------------------------------
-$control-prefix               : 'c-input' !default;
 $control-font-size            : $font-body-md !default;
 $control-color                : $color-gray-9 !default;
+$control-font-family          : $font-family-sans !default;
 $control-font-weight          : normal !default;
 $control-line-height          : 1.166667 !default;  //line height optimized for IE compatibility
 $control-placeholder-c        : $color-gray-5 !default;
@@ -286,7 +277,6 @@ $select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
 // --------------------------------------------
 // DROPDOWN -----------------------------------
 // --------------------------------------------
-$dropdown-prefix             : 'c-dropdown' !default;
 $enable-grid-dropdown-classes: true !default;
 $dropdown-min-width          : 200px !default;
 $dropdown-font               : $font-family-sans !default;
@@ -319,8 +309,8 @@ $link-colors:
 // --------------------------------------------
 // FOOTER -------------------------------------
 // --------------------------------------------
-$footer-prefix          : 'c-footer' !default;
-$footer-font-size       : 12px !default;
+$footer-font-size       : $font-body-md !default;
+$footer-font-family     : $font-family-sans !default;
 $footer-color           : $color-gray-9 !default;
 $footer-color-link      : $color-primary !default;
 $footer-background-color: $color-gray-1 !default;
@@ -333,8 +323,6 @@ $footer-border-top      : 1px solid $color-gray-3;
 // --------------------------------------------
 // SWITCHES -----------------------------------
 // --------------------------------------------
-$switch-prefix             : 'c-switch' !default;
-$switch-control-prefix     : 'c-control' !default;
 $switch-height             : $global-size-xs !default;
 $switch-radius             : $radius-round !default;
 $switch-font-size          : $font-body-xs !default;
@@ -367,6 +355,7 @@ $tabs-color-hover       : $color-primary !default;
 $tabs-color-active      : $color-primary !default;
 $tabs-color-disabled    : $color-gray-6 !default;
 $tabs-font-weight       : bold !default;
+$tabs-font-family       : $font-family-sans !default;
 $tabs-border-color      : $color-gray-2 !default;
 $tabs-bordered-radius   : $global-default-radius !default;
 $tabs-bordered-bg       : $color-gray-0 !default;
@@ -395,6 +384,7 @@ $tabs-line-height-large : 24px !default;
 $table-background           : $color-white !default;
 $table-font-size            : 12px !default;
 $table-line-height          : 16px !default;
+$table-font-family          : $font-family-sans !default;
 $table-border               : 0 !default;
 $table-border-color         : $color-gray-2 !default;
 $table-padding              : ($space-sm - 1) ($space-sm + 2) $space-sm !default;

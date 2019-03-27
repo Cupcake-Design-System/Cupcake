@@ -60,6 +60,23 @@ $font-scale: (
   )
 ) !default;
 
+// --------------------------------------------
+// Font Weights and map for generating helpers
+// --------------------------------------------
+$font-weight-heavy: 900 !default;
+$font-weight-bold: 700 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-normal: 500 !default;
+$font-weight-light: 300 !default;
+
+// This is a looped map & classes will be generated based on key/value pairs i.e. "c-text-heavy"
+$font-weight: (
+  heavy: $font-weight-heavy,
+  bold: $font-weight-bold,
+  semibold: $font-weight-semibold,
+  normal: $font-weight-normal,
+  light: $font-weight-light,
+);
 
 // --------------------------------------------
 // Spacing and map for generating helpers
@@ -101,24 +118,6 @@ $global-sizes: (
   md: $global-size-md,
   lg: $global-size-lg,
   xl: $global-size-xl,
-);
-
-// --------------------------------------------
-// Font Weights and map for generating helpers
-// --------------------------------------------
-$font-weight-heavy: 900 !default;
-$font-weight-bold: 700 !default;
-$font-weight-semibold: 600 !default;
-$font-weight-normal: 500 !default;
-$font-weight-light: 300 !default;
-
-// This is a looped map & classes will be generated based on key/value pairs i.e. "c-text-heavy"
-$font-weight: (
-  heavy: $font-weight-heavy,
-  bold: $font-weight-bold,
-  semibold: $font-weight-semibold,
-  normal: $font-weight-normal,
-  light: $font-weight-light,
 );
 
 

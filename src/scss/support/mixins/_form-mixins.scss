@@ -9,6 +9,7 @@
   font-size: $control-font-size;
   font-weight: $font-weight-bold;
   padding: $control-padding / 2 0;
+  font-family: $control-font-family;
 }
 
 
@@ -22,7 +23,6 @@
   display: block;
   resize: vertical;
   appearance: none;
-  font-family: inherit;
   color: $control-color;
   border: $control-border;
   height: $control-height;
@@ -31,6 +31,7 @@
   transition: $control-transition;
   font-weight: $control-font-weight;
   line-height: $control-line-height;
+  font-family: $control-font-family;
   padding: $space-0 $control-padding;
   border-radius: $control-border-radius;
   background-color: $control-background;
@@ -120,6 +121,7 @@
   height: $control-height;
   border: $control-border;
   font-size: $control-font-size;
+  font-family: $control-font-family;
   padding: $space-0 $control-padding;
   padding-right: $select-padding-r;
   font-weight: $control-font-weight;

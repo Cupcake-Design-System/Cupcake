@@ -2,7 +2,7 @@
 // ALERTS & TOASTS ----------------------------
 // --------------------------------------------
 
-.#{$toast-prefix} {
+.c-toast-alert {
   @include toast;
 
   @each $name, $hex in $toast-palette {

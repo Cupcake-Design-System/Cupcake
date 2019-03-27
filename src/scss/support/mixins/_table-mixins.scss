@@ -12,6 +12,7 @@
 
     tbody {
       font-size: $table-font-size;
+      font-family: $table-font-family;
     }
 
     // Table head
@@ -20,6 +21,7 @@
       vertical-align: bottom;
       color: $table-head-color;
       background: $table-head-bg;
+      font-family: $table-font-family;
       border-color: $table-head-border-color;
       border-width: $table-head-border-width;
 

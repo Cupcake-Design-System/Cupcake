@@ -2,51 +2,52 @@
 // Toast Base Mixin ---------------------------
 // --------------------------------------------
 @mixin toast($color: $color-primary) {
-  position: relative;
   display: flex;
+  position: relative;
   align-items: center;
+  word-wrap: break-word;
+  margin: $alert-margin;
+  box-shadow: $shadow-sm;
   background: $color-white;
-  color: $color-gray-9;
+  color: $alert-default-color;
+  font-size: $alert-font-size;
+  border-radius: $alert-radius;
+  font-family: $alert-font-family;
+  font-weight: $toast-font-weight;
+  border: 1px solid $color-gray-2;
   /* stylelint-disable */
   padding: 11px $alert-top-padding 11px ($alert-top-padding + $toast-left-border);
   /* stylelint-enable */
-  margin: $alert-margin;
-  font-size: $alert-font-size;
-  font-weight: $font-weight-bold;
-  border-radius: $radius-sm;
-  border: 1px solid $color-gray-2;
-  word-wrap: break-word;
-  box-shadow: $shadow-sm;
 
   i:not(.fa-times),
   &-icon {
-    display: inline-flex;
+    color: $color;
     align-items: center;
+    display: inline-flex;
     justify-content: center;
     padding-right: $alert-top-padding;
     font-size: $alert-font-size + 2;
-    color: $color;
   }
 
   // Alert Bar
   &::before {
     content: '';
-    position: absolute;
-    background: $color;
     left: 0;
     right: 0;
     bottom: 0;
     height: 100%;
+    position: absolute;
+    background: $color;
     width: $toast-left-border;
     border: darken($color, 20);
-    border-radius: $radius-sm 0 0 $radius-sm;
+    border-radius: $alert-radius 0 0 $alert-radius;
   }
 
   &-close {
     @include delete($size: 12px, $color: $color-gray-6);
 
     margin-left: auto;
-    margin-right: -(space(xs));
+    margin-right: -$space-xs;
   }
 }
 
@@ -57,12 +58,12 @@
 @mixin toast-style($color: color(primary)) {
   i:not(.fa-times),
   &-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: $alert-top-padding;
-    font-size: $alert-font-size + 2;
     color: $color;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    font-size: $alert-font-size + 2;
+    padding-right: $alert-top-padding;
   }
 
   // Alert Bar

@@ -1,7 +1,7 @@
 // --------------------------------------------
 // Form Input ---------------------------------
 // --------------------------------------------
-.#{$control-prefix} {
+.c-input {
   @include input;
 
   &-right-icon {
@@ -21,13 +21,13 @@
 // --------------------------------------------
 // Form Input Right Icon ----------------------
 // --------------------------------------------
-.#{$control-prefix}-icon {
+.c-input-icon {
   position: absolute;
   top: $control-padding;
   left: $control-padding;
   color: $control-icon-color;
 
-  .#{$control-prefix} ~ & {
+  .c-input ~ & {
     left: auto;
     right: $control-padding;
 
@@ -42,12 +42,12 @@
 // Form Input Left Icon -----------------------
 // --------------------------------------------
 @each $name, $height, $padding, $font-size in config($control-sizes) {
-  .#{$control-prefix}-icon-#{$name} {
+  .c-input-icon-#{$name} {
     font-size: $font-size;
     left: $font-size - 4;
     top: $font-size - 4;
 
-    + .#{$control-prefix}:not([multiple]) {
+    + .c-input:not([multiple]) {
       padding-left: $height;
     }
   }
@@ -57,7 +57,7 @@
 // --------------------------------------------
 // Form Input Textarea ------------------------
 // --------------------------------------------
-textarea.#{$control-prefix} {
+textarea.c-input {
   height: auto;
   padding-top: $control-padding;
 }
@@ -67,7 +67,7 @@ textarea.#{$control-prefix} {
 // Form Input Colors --------------------------
 // --------------------------------------------
 @each $name, $color, $bg in $control-colors {
-  .#{$control-prefix}-#{$name} {
+  .c-input-#{$name} {
     &,
     &:hover {
       border-color: $color;
@@ -86,7 +86,7 @@ textarea.#{$control-prefix} {
       }
     }
 
-    & ~ .#{$control-prefix}-icon {
+    & ~ .c-input-icon {
       color: $color;
     }
   }
@@ -99,7 +99,7 @@ textarea.#{$control-prefix} {
 @each $ng-state, $color in $control-ng-validation {
   .c-ng-validate.ng-dirty.#{$ng-state},
   .c-ng-validate-form .ng-dirty.#{$ng-state} {
-    @extend .#{$control-prefix}-#{$color};
+    @extend .c-input-#{$color};
   }
 }
 
@@ -108,13 +108,13 @@ textarea.#{$control-prefix} {
 // Form Input Sizes ---------------------------
 // --------------------------------------------
 @each $name, $height, $padding, $font-size in config($control-sizes) {
-  .#{$control-prefix}-#{$name} {
+  .c-input-#{$name} {
     font-size: $font-size;
     height: $height;
     padding: $padding;
   }
 
-  .#{$control-prefix}-label-#{$name} {
+  .c-input-label-#{$name} {
     font-size: $font-size;
   }
 }
@@ -123,7 +123,7 @@ textarea.#{$control-prefix} {
 // --------------------------------------------
 // Form Input Addons --------------------------
 // --------------------------------------------
-.#{$control-prefix}-addon {
+.c-input-addon {
   display: flex;
   align-items: center; // vertically align all child elements
   border: $control-border;
@@ -178,7 +178,7 @@ textarea.#{$control-prefix} {
 
   &:disabled,
   &-disabled {
-    .#{$control-prefix} {
+    .c-input {
       @include input-disabled;
     }
   }
@@ -200,7 +200,7 @@ textarea.#{$control-prefix} {
   transition: $control-hint-transition;
 
   &-static,
-  .#{$control-prefix}:focus ~ & {
+  .c-input:focus ~ & {
     transform: scale(.9);
     opacity: 1;
   }
@@ -216,12 +216,12 @@ textarea.#{$control-prefix} {
 // --------------------------------------------
 // Form Input Group & Group Stacked -----------
 // --------------------------------------------
-.#{$control-prefix}-group {
+.c-input-group {
   display: flex;
 
   .c-btn,
-  .#{$control-prefix}-addon,
-  .#{$control-prefix}-container {
+  .c-input-addon,
+  .c-input-container {
     &:not(:first-child) {
        /* stylelint-disable */
       margin-left: -1px;
@@ -229,7 +229,7 @@ textarea.#{$control-prefix} {
     }
   }
 
-  .#{$control-prefix}-container {
+  .c-input-container {
     z-index: 1;
 
     &:hover,
@@ -260,49 +260,49 @@ textarea.#{$control-prefix} {
     }
   }
 
-  .#{$control-prefix}-container {
+  .c-input-container {
     flex: 1 0 auto;
 
     &-fixed {
       flex: 0 1 auto;
     }
 
-    // .#{$control-prefix} {
+    // .c-input {
     //   height: 100%;
     // }
 
-    &:first-child .#{$control-prefix} {
+    &:first-child .c-input {
       border-top-right-radius: $radius-0;
       border-bottom-right-radius: $radius-0;
     }
 
-    &:last-child .#{$control-prefix} {
+    &:last-child .c-input {
       border-top-left-radius: $radius-0;
       border-bottom-left-radius: $radius-0;
     }
 
-    &:not(:first-child):not(:last-child) .#{$control-prefix} {
+    &:not(:first-child):not(:last-child) .c-input {
       border-radius: $radius-0;
     }
   }
 }
 
-.#{$control-prefix}-group-stacked {
+.c-input-group-stacked {
   display: flex;
   flex-wrap: wrap;
 
   .c-btn,
-  .#{$control-prefix}-addon,
-  .#{$control-prefix}-container {
+  .c-input-addon,
+  .c-input-container {
     &:not(:first-child) {
-      margin-left: $space-0; // reset margin from .#{$control-prefix}-group
+      margin-left: $space-0; // reset margin from .c-input-group
        /* stylelint-disable */
       margin-top: -1px;
        /* stylelint-enable */
     }
   }
 
-  .#{$control-prefix}-container,
+  .c-input-container,
   .c-btn {
     flex: 0 0 100%;
     max-width: 100%;
@@ -323,16 +323,16 @@ textarea.#{$control-prefix} {
     }
   }
 
-  .#{$control-prefix}-container {
-    &:not(:first-child):not(:last-child) .#{$control-prefix} {
+  .c-input-container {
+    &:not(:first-child):not(:last-child) .c-input {
       border-radius: $radius-0;
     }
 
-    &:first-child .#{$control-prefix} {
+    &:first-child .c-input {
       border-radius: $control-border-radius $control-border-radius $radius-0 $radius-0;
     }
 
-    &:last-child .#{$control-prefix} {
+    &:last-child .c-input {
       border-radius: $radius-0 $radius-0 $control-border-radius $control-border-radius;
     }
   }
@@ -350,8 +350,8 @@ textarea.#{$control-prefix} {
 // --------------------------------------------
 // Form Results -------------------------------
 // --------------------------------------------
-.#{$control-prefix}-results {
-  .#{$control-prefix} {
+.c-input-results {
+  .c-input {
     border-bottom-left-radius: $radius-0;
     border-bottom-right-radius: $radius-0;
   }
@@ -388,14 +388,14 @@ textarea.#{$control-prefix} {
   flex: 0 0 auto;
   align-items: center;
 
-  .#{$control-prefix}-label {
+  .c-input-label {
     width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .#{$control-prefix} {
+  .c-input {
     width: auto;
     display: flex;
     vertical-align: middle;
