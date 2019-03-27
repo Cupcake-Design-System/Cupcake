@@ -424,19 +424,19 @@ $docs-spacer-xxl: space(xl) + space(md);
   }
 }
 
-::-webkit-scrollbar {
-  width: .25em;
-  height: .25em;
+// ::-webkit-scrollbar {
+//   width: .25em;
+//   height: .25em;
 
-  &-track {
-    background-color: $color-gray-0;
-  }
+//   &-track {
+//     background-color: $color-gray-0;
+//   }
 
-  &-thumb {
-    background-color: $color-gray-4;
-    outline: none;
-  }
-}
+//   &-thumb {
+//     background-color: $color-gray-4;
+//     outline: none;
+//   }
+// }
 
 .docs-wrap,
 .docs-wrap .snippet {
@@ -575,3 +575,82 @@ hr {
   color: white;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
+
+.heading-all {
+  @include font-header();
+}
+
+.h1 {
+  @include font-header(xxl);
+}
+
+.h2 {
+  @include font-header(xl);
+}
+
+.h3 {
+  @include font-header(lg);
+}
+
+.h4 {
+  @include font-header(md);
+}
+
+.h5 {
+  @include font-header(sm);
+}
+
+.h6 {
+  @include font-header(xs);
+}
+
+.p-all {
+  @include font-body();
+}
+
+.p1 {
+  @include font-body(xxl);
+}
+
+.p2 {
+  @include font-body(xl);
+}
+
+.p3 {
+  @include font-body(lg);
+}
+
+.p4 {
+  @include font-body(md);
+}
+
+.p5 {
+  @include font-body(sm);
+}
+
+.p6 {
+  @include font-body(xs);
+}
+
+
+.xl-text {
+  // Output font-size and line-height only
+  @include font-body(xl, $size-only: true);
+}
+
+.body-heading {
+  // Output font family and weight settings only
+  @include f-header;
+}
+
+.body-text {
+  // Output font family and weight settings only
+  @include f-body;
+}
+
+.functionExample {
+  font-size: font-size(header, xl);
+  line-height: line-height(header, xl);
+  font-weight: font-weight(heavy);
+}
+

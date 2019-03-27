@@ -6,19 +6,19 @@
   $color: $alert-default-color,
   $icon: $alert-primary-icon-color
 ) {
-  position: relative;
+  color: $color;
   display: flex;
-  align-items: flex-start;
   text-align: left;
+  position: relative;
+  background-color: $bg;
+  border: $alert-border;
   margin: $alert-margin;
   padding: $alert-padding;
-  background-color: $bg;
-  color: $color;
-  border: $alert-border;
+  align-items: flex-start;
+  font-size: $alert-font-size;
   border-radius: $alert-radius;
   font-family: $alert-font-family;
   font-weight: $alert-font-weight;
-  font-size: $alert-font-size;
   line-height: $alert-line-height;
 
   &-close {
@@ -29,20 +29,20 @@
   }
 
   &-title {
-    font-weight: $font-weight-bold;
+    font-weight: $alert-title-font-weight;
   }
 
   &-content {
     flex: 1;
-    line-height: $alert-line-height;
     margin-right: $space-xs;
+    line-height: $alert-line-height;
   }
 
   &-icon {
-    align-self: stretch;
-    padding-right: $alert-padding;
-    font-size: $alert-icon-width;
     color: $icon;
+    align-self: stretch;
+    font-size: $alert-icon-width;
+    padding-right: $alert-padding;
     line-height: $alert-line-height;
   }
 }
@@ -61,11 +61,87 @@
     border-color: $color;
   }
 
-  .#{$alert-prefix}-close {
+  .c-alert-close {
     @include delete-color($color);
   }
 
-  .#{$alert-prefix}-icon {
+  .c-alert-icon {
     color: $color;
+  }
+}
+
+
+// --------------------------------------------
+// Toast Base Mixin ---------------------------
+// --------------------------------------------
+@mixin toast($color: $color-primary) {
+  display: flex;
+  position: relative;
+  align-items: center;
+  word-wrap: break-word;
+  margin: $alert-margin;
+  box-shadow: $shadow-sm;
+  background: $color-white;
+  color: $alert-default-color;
+  font-size: $alert-font-size;
+  border-radius: $alert-radius;
+  font-family: $alert-font-family;
+  font-weight: $toast-font-weight;
+  border: 1px solid $color-gray-2;
+  /* stylelint-disable */
+  padding: 11px $alert-top-padding 11px ($alert-top-padding + $toast-left-border);
+  /* stylelint-enable */
+
+  i:not(.fa-times),
+  &-icon {
+    color: $color;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    padding-right: $alert-top-padding;
+    font-size: $alert-font-size + 2;
+  }
+
+  // Alert Bar
+  &::before {
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    background: $color;
+    width: $toast-left-border;
+    border: darken($color, 20);
+    border-radius: $alert-radius 0 0 $alert-radius;
+  }
+
+  &-close {
+    @include delete($size: 12px, $color: $color-gray-6);
+
+    margin-left: auto;
+    margin-right: -$space-xs;
+  }
+}
+
+
+// --------------------------------------------
+// Toast Style Mixin --------------------------
+// --------------------------------------------
+@mixin toast-style($color: color(primary)) {
+  i:not(.fa-times),
+  &-icon {
+    color: $color;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    font-size: $alert-font-size + 2;
+    padding-right: $alert-top-padding;
+  }
+
+  // Alert Bar
+  &::before {
+    background: $color;
+    border: darken($color, 20);
   }
 }

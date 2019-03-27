@@ -1,17 +1,14 @@
-// --------------------------------------------
-// Avatars ------------------------------------
-// --------------------------------------------
-
-.#{$avatar-prefix} {
+// Avatar
+.c-avatar {
   @include avatar-base();
 
   img {
-    position: relative;
-    height: 100%;
-    width: 100%;
     z-index: 0;
-    border-radius: $avatar-border-radius;
+    width: 100%;
+    height: 100%;
+    position: relative;
     border: $avatar-img-border;
+    border-radius: $avatar-border-radius;
   }
 
   &-square {
@@ -21,7 +18,7 @@
       border-radius: $radius-sm;
     }
 
-    &.#{$avatar-prefix}[data-status]::after {
+    &.c-avatar[data-status]::after {
       top: -2px;
       right: -2px;
     }
@@ -29,40 +26,40 @@
 
   &[data-status]::after {
     content: '';
-    position: absolute;
     top: 0;
     right: 0;
-    font-weight: $font-weight-normal;
+    z-index: 1;
     min-height: 8px;
     min-width: 8px;
+    position: absolute;
+    color: $color-white;
     background-clip: padding-box;
     border-radius: $radius-round;
+    font-weight: $font-weight-normal;
     /* stylelint-disable */
     box-shadow: 0 0 0 1px $color-white;
     /* stylelint-enable */
-    color: $color-white;
-    z-index: 1;
   }
 
   &[data-badge]::after {
-    position: absolute;
+    z-index: 1;
     top: 14.64%;
     right: 14.64%;
-    transform: translate(50%, -50%);
+    line-height: 1.5;
+    height: $space-md;
+    text-align: center;
+    position: absolute;
+    white-space: nowrap;
+    min-width: $space-md;
+    font-size: $font-body-xs;
+    content: attr(data-badge);
     background: $color-primary;
     border-radius: $radius-round;
-    z-index: 1;
-    content: attr(data-badge);
+    padding: $space-xxs $space-xs;
+    transform: translate(50%, -50%);
     /* stylelint-disable */
     box-shadow: 0 0 0 1px $color-white;
     /* stylelint-enable */
-    font-size: $font-body-xs;
-    height: $space-md;
-    line-height: 1.5;
-    min-width: $space-md;
-    padding: $space-xxs $space-xs;
-    text-align: center;
-    white-space: nowrap;
   }
 
   &[data-text]::before {
@@ -78,18 +75,18 @@
 
 // All default Avatar color classes
 @each $name, $hex in $theme-colors {
-  .#{$avatar-prefix}-#{$name} {
+  .c-avatar-#{$name} {
     background-color: $hex;
   }
 
-  .#{$avatar-prefix}[data-status='#{$name}']::after {
+  .c-avatar[data-status='#{$name}']::after {
     background-color: $hex;
   }
 }
 
 // All default Avatar size classes
 @each $name, $size, $font-size in config($avatar-sizes) {
-  .#{$avatar-prefix}-#{$name} {
+  .c-avatar-#{$name} {
     @include avatar-size($size, $font-size);
 
     &[data-status]::after {
@@ -102,7 +99,7 @@
 // Extended Avatar color classes
 @if $enable-extend-avatar-colors == true {
   @each $name, $hex in $extended-palette-light {
-    .#{$avatar-prefix}-#{$name} {
+    .c-avatar-#{$name} {
       background-color: $hex;
       color: $color-gray-9;
     }
@@ -110,7 +107,7 @@
 
   // Extended Avatar LIGHT color classes
   @each $name, $hex in $extended-palette {
-    .#{$avatar-prefix}-#{$name} {
+    .c-avatar-#{$name} {
       background-color: $hex;
     }
   }

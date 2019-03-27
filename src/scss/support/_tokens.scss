@@ -1,0 +1,173 @@
+// --------------------------------------------
+// Typography Global --------------------------
+// --------------------------------------------
+$font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !default;
+$font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
+
+$font-family: (
+  sans: $font-family-sans,
+  mono: $font-family-mono,
+);
+
+// Font Sizes and map for generating classes
+$font-body-xs: 10px !default;
+$font-body-sm: 11px !default;
+$font-body-md: 12px !default;
+$font-body-lg: 14px !default;
+$font-body-xl: 16px !default;
+$font-body-xxl: 18px !default;
+
+$line-height-body-xxl: 24px !default;
+$line-height-body-xl: 24px !default;
+$line-height-body-lg: 24px !default;
+$line-height-body-md: 16px !default;
+$line-height-body-sm: 16px !default;
+$line-height-body-xs: 16px !default;
+
+$font-header-xs: 12px !default;
+$font-header-sm: 14px !default;
+$font-header-md: 16px !default;
+$font-header-lg: 20px !default;
+$font-header-xl: 24px !default;
+$font-header-xxl: 36px !default;
+
+$line-height-header-xxl: 40px !default;
+$line-height-header-xl: 32px !default;
+$line-height-header-lg: 24px !default;
+$line-height-header-md: 24px !default;
+$line-height-header-sm: 24px !default;
+$line-height-header-xs: 16px !default;
+
+// This is a looped map & classes will be generated based on key/value pairs i.e. "c-header-xxl"
+$font-scale: (
+  header: (
+    xxl: (font-size: $font-header-xxl, line-height: $line-height-header-xxl),
+    xl: (font-size: $font-header-xl, line-height: $line-height-header-xl),
+    lg: (font-size: $font-header-lg, line-height: $line-height-header-lg),
+    md: (font-size: $font-header-md, line-height: $line-height-header-md),
+    sm: (font-size: $font-header-sm, line-height: $line-height-header-sm),
+    xs: (font-size: $font-header-xs, line-height: $line-height-header-xs),
+  ),
+  body: (
+    xxl: (font-size: $font-body-xxl, line-height: $line-height-body-xxl),
+    xl: (font-size: $font-body-xl, line-height: $line-height-body-xl),
+    lg: (font-size: $font-body-lg, line-height: $line-height-body-lg),
+    md: (font-size: $font-body-md, line-height: $line-height-body-md),
+    sm: (font-size: $font-body-sm, line-height: $line-height-body-sm),
+    xs: (font-size: $font-body-xs, line-height: $line-height-body-xs),
+  )
+) !default;
+
+
+// Font Weights and map for generating helpers
+$font-weight-heavy: 900 !default;
+$font-weight-bold: 700 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-normal: 500 !default;
+$font-weight-light: 300 !default;
+
+// This is a looped map & classes will be generated based on key/value pairs i.e. "c-text-heavy"
+$font-weight: (
+  heavy: $font-weight-heavy,
+  bold: $font-weight-bold,
+  semibold: $font-weight-semibold,
+  normal: $font-weight-normal,
+  light: $font-weight-light,
+);
+
+// --------------------------------------------
+// Spacing and map for generating helpers
+// Changing only $global-px-grid will adapt all space values.
+$global-px-grid: 8px !default;
+$space-0: 0 !default;
+$space-xxs: $global-px-grid / 4 !default;
+$space-xs: $global-px-grid / 2 !default;
+$space-sm: $global-px-grid !default;
+$space-md: $global-px-grid * 2 !default;
+$space-lg: $global-px-grid * 3 !default;
+$space-xl: $global-px-grid * 4 !default;
+
+// This is a looped map & classes will be generated based on key/value pairs i.e. "c-p-xxs"
+$space: (
+  0: $space-0,
+  xxs: $space-xxs,
+  xs: $space-xs,
+  sm: $space-sm,
+  md: $space-md,
+  lg: $space-lg,
+  xl: $space-xl,
+);
+
+// Global sizes and map for generating helpers
+$global-size-xs: $global-px-grid * 2 !default;
+$global-size-sm: $global-px-grid * 3 !default;
+$global-size-md: $global-px-grid * 4 !default;
+$global-size-lg: $global-px-grid * 5 !default;
+$global-size-xl: $global-px-grid * 6 !default;
+
+// This is a looped map & classes will be generated based on key/value pairs i.e. "c-shadow-sm"
+$global-sizes: (
+  xs: $global-size-xs,
+  sm: $global-size-sm,
+  md: $global-size-md,
+  lg: $global-size-lg,
+  xl: $global-size-xl,
+);
+
+
+// Radius and map for generating helpers
+$radius-0: 0 !default;
+$radius-square: 0 !default;
+$radius-sm: 2px !default;
+$radius-md: 4px !default;
+$radius-lg: 8px !default;
+$radius-round: 200px !default;
+$radius-pill: 50px !default;
+
+
+// This is a looped map & classes will be generated based on key/value pairs i.e. "c-radius-sm"
+$radius: (
+  0: $radius-0,
+  square: $radius-square,
+  sm: $radius-sm,
+  md: $radius-md,
+  lg: $radius-lg,
+  round: $radius-round,
+  pill: $radius-pill,
+);
+
+
+// Shadows and map for generating helpers
+$shadow-xs: 0 2px 4px -2px rgba(33, 37, 41, .1) !default;
+$shadow-sm: 0 4px 4px -2px rgba(33, 37, 41, .1) !default;
+$shadow-md: 0 6px 8px -2px rgba(33, 37, 41, .1) !default;
+$shadow-lg: 0 8px 8px -2px rgba(33, 37, 41, .1) !default;
+
+// This is a looped map & classes will be generated based on key/value pairs i.e. "c-shadow-sm"
+$shadow: (
+  xs: $shadow-xs,
+  sm: $shadow-sm,
+  md: $shadow-md,
+  lg: $shadow-lg
+);
+
+// --------------------------------------------
+// GLOBAL BOOLEANS & SETTINGS -----------------
+// --------------------------------------------
+$enable-reset         : true !default;
+$enable-shadow-classes: true !default;
+$enable-color-classes : true !default;
+$enable-spacer-classes: true !default;
+$enable-radius-classes: true !default;
+$white-label          : false !default;
+$backgound-prefix     : 'c-bg' !default;
+$border-prefix        : 'c-bd' !default;
+$padding-prefix       : 'c-p' !default;
+$margin-prefix        : 'c-m' !default;
+$shadow-prefix        : 'c-depth' !default;
+$radius-prefix        : 'c-radius' !default;
+$float-prefix         : 'c-pull' !default;
+
+$global-default-border: 1px solid $color-gray-4 !default;
+$global-default-radius: $radius-sm !default;
+$global-disabled-bg   : $color-gray-3 !default;

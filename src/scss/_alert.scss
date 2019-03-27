@@ -1,8 +1,5 @@
-// --------------------------------------------
-// Alerts -------------------------------------
-// --------------------------------------------
-
-.#{$alert-prefix} {
+// Alert Base
+.c-alert {
   @include alert-base;
 
   &-top {
@@ -12,14 +9,28 @@
     border-radius: $radius-square;
     padding: $alert-top-padding;
 
-    .#{$alert-prefix}-icon {
+    .c-alert-icon {
       padding-right: $alert-top-padding;
     }
   }
 
+  // Alert Color Loop
   @each $name, $bg, $color in $alert-colors {
     &-#{$name} {
       @include alert-style($bg, $color);
+    }
+  }
+}
+
+
+// Toast
+.c-toast-alert {
+  @include toast;
+
+  // Toast Color Loop
+  @each $name, $hex in $toast-palette {
+    &-#{$name} {
+      @include toast-style($hex);
     }
   }
 }

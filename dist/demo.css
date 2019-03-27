@@ -398,20 +398,6 @@
   }
 }
 
-::-webkit-scrollbar {
-  width: .25em;
-  height: .25em;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f8f9fa;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #ced4da;
-  outline: none;
-}
-
 .docs-wrap,
 .docs-wrap .snippet {
   display: flex;
@@ -547,4 +533,123 @@ hr {
   background-color: #1c7cd6;
   color: white;
   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.heading-all {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h1 {
+  font-size: 36px;
+  line-height: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h4 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h5 {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h6 {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.p-all {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.p1 {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.p2 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.p3 {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.p4 {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.p5 {
+  font-size: 11px;
+  line-height: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.p6 {
+  font-size: 10px;
+  line-height: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.xl-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.body-heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.body-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.functionExample {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 900;
 }

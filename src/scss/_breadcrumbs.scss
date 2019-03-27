@@ -1,7 +1,4 @@
-// --------------------------------------------
-// BREADCRUMBS --------------------------------
-// --------------------------------------------
-
+// Breadcrumbs
 .c-breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +9,7 @@
   background-color: transparent;
   font-size: $breadcrumb-font-size;
   font-weight: $breadcrumb-font-weight;
+  font-family: $breadcrumb-font-family;
 
   &-item {
     margin-right: $breadcrumb-margin;
@@ -54,6 +52,7 @@
   }
 }
 
+// Breadcrumbs w/ overflow
 .c-breadcrumb {
   .c-btn {
     margin-right: $breadcrumb-margin;
