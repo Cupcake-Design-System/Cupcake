@@ -4,16 +4,17 @@
 @mixin badge-base {
   display: inline-flex;
   align-items: center;
-  background: $color-black;
-  border-radius: $badge-default-border-radius;
-  color: $color-white;
-  font-size: $badge-default-font-size;
-  font-weight: $badge-default-font-weight;
-  height: $badge-default-size;
-  line-height: $badge-default-line-height;
-  padding: $badge-default-padding;
   text-decoration: none;
   vertical-align: middle;
+  color: $color-white;
+  background: $color-black;
+  height: $badge-default-size;
+  font-family: $badge-font-family;
+  padding: $badge-default-padding;
+  font-size: $badge-default-font-size;
+  font-weight: $badge-default-font-weight;
+  line-height: $badge-default-line-height;
+  border-radius: $badge-default-border-radius;
 
   &-close {
     @include close($size: 16px, $x-size: 2px);
@@ -34,11 +35,11 @@
 // Badge Size Mixin ---------------------------
 // --------------------------------------------
 @mixin badge-size(
-  $size: $badge-default-size, 
+  $size: $badge-default-size,
   $font-size: $badge-default-font-size) {
-  font-size: $font-size;
   height: $size;
   min-width: $size;
+  font-size: $font-size;
 
   i {
     font-size: $font-size;
@@ -50,6 +51,6 @@
 // Badge Style Mixin --------------------------
 // --------------------------------------------
 @mixin badge-style($bg, $color: $color-white) {
-  background-color: $bg;
   color: $color;
+  background-color: $bg;
 }

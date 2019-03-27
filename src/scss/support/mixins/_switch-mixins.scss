@@ -25,12 +25,12 @@
     overflow: hidden;
     position: absolute;
 
-    &:focus + .#{$switch-prefix}-handle {
+    &:focus + .c-switch-handle {
       border-color: $switch-on-bg;
       box-shadow: 0 0 0 .1rem rgba($switch-on-bg, .2);
     }
 
-    &:checked + .#{$switch-prefix}-handle {
+    &:checked + .c-switch-handle {
       background: $switch-on-bg;
       border-color: $switch-on-bg;
 
@@ -38,13 +38,13 @@
         left: $height;
       }
 
-      + .#{$switch-prefix}-label::after {
+      + .c-switch-label::after {
         opacity: 0;
         display: none;
       }
     }
 
-    &:disabled + .#{$switch-prefix}-handle {
+    &:disabled + .c-switch-handle {
       cursor: not-allowed;
       background: $switch-disabled;
       border-color: $switch-disabled;
@@ -56,7 +56,7 @@
       }
     }
 
-    &:checked[disabled] + .#{$switch-prefix}-handle {
+    &:checked[disabled] + .c-switch-handle {
       cursor: not-allowed;
       background: $switch-disabled-checked-bg;
       border-color: $switch-disabled-checked-bg;
@@ -101,11 +101,11 @@
     color: $switch-disabled-checked-bg;
     cursor: not-allowed;
 
-    .#{$switch-prefix} input,
-    .#{$switch-prefix}-input {
+    .c-switch input,
+    .c-switch-input {
       cursor: not-allowed;
 
-      &:checked + .#{$switch-prefix}-handle {
+      &:checked + .c-switch-handle {
         cursor: not-allowed;
         background: $switch-disabled-checked-bg;
         border-color: $switch-disabled-checked-bg;
@@ -113,7 +113,7 @@
       }
     }
 
-    .#{$switch-prefix}-handle {
+    .c-switch-handle {
       cursor: not-allowed;
       background: $switch-disabled;
       border-color: $switch-disabled;
@@ -129,13 +129,13 @@
   min-height: $height;
   min-width: $height * 2;
 
-  .#{$switch-prefix}-input {
-    &:checked + .#{$switch-prefix}-handle::before {
+  .c-switch-input {
+    &:checked + .c-switch-handle::before {
       left: $height;
     }
   }
 
-  .#{$switch-prefix}-handle {
+  .c-switch-handle {
     height: $height;
     width: $height * 2;
 
@@ -146,7 +146,7 @@
   }
 
   @if ($height >= 24px) {
-    .#{$switch-prefix}-label {
+    .c-switch-label {
       top: $space-sm;
       left: $space-sm;
       font-size: 12px;
@@ -186,14 +186,14 @@
 // Switch Color Mixin -------------------------
 // --------------------------------------------
 @mixin switch-color($color: black) {
-  .#{$switch-prefix} input,
-  .#{$switch-prefix}-input {
-    &:focus + .#{$switch-prefix}-handle {
+  .c-switch input,
+  .c-switch-input {
+    &:focus + .c-switch-handle {
       border-color: $color;
       box-shadow: 0 0 0 .1rem rgba($color, .2);
     }
 
-    &:checked + .#{$switch-prefix}-handle {
+    &:checked + .c-switch-handle {
       background: $color;
       border-color: $color;
     }

@@ -1,8 +1,6 @@
 // --------------------------------------------
 // ALERTS & TOASTS ----------------------------
 // --------------------------------------------
-$alert-prefix               : 'c-alert' !default;
-$toast-prefix               : 'c-toast-alert' !default;
 $alert-border               : 1px solid !default;
 $alert-margin               : 0 0 $space-md 0 !default;
 $alert-padding              : $space-sm !default;
@@ -10,15 +8,16 @@ $alert-top-padding          : $space-md !default;
 $alert-font-size            : $font-body-md !default;
 $alert-line-height          : $font-body-md + 3 !default;
 $alert-font-family          : $font-family-sans !default;
-$alert-font-weight          : 300 !default;
+$alert-font-weight          : $font-weight-normal !default;
+$alert-title-font-weight    : $font-weight-bold !default;
 $alert-primary-bg           : rgba($color-primary, .07) !default;
 $alert-default-color        : $color-gray-9 !default;
 $alert-primary-icon-color   : $color-primary !default;
 $alert-radius               : $global-default-radius !default;
-$alert-top-radius           : 0 !default;
 $alert-shadows              : $shadow-lg !default;
 $alert-icon-width           : $font-body-md !default;
 $alert-close-font-size      : $font-body-md !default;
+$toast-font-weight          : $font-weight-bold !default;
 $toast-palette              : $theme-colors !default;
 $toast-left-border          : 4px !default;
 
@@ -33,12 +32,12 @@ $alert-colors:
 // --------------------------------------------
 // Avatars ------------------------------------
 // --------------------------------------------
-$avatar-prefix              : 'c-avatar' !default;
 $enable-extend-avatar-colors: true !default;
 $avatar-default-size        : $global-size-md !default;
 $avatar-border-radius       : $radius-round !default;
 $avatar-font-weight         : $font-weight-semibold !default;
 $avatar-font-size           : $font-body-md !default;
+$avatar-font-family         : $font-family-sans !default;
 $avatar-line-height         : normal !default;
 $avatar-img-border          : $global-default-border !default;
 
@@ -53,8 +52,8 @@ $avatar-sizes:
 // --------------------------------------------
 // Badge --------------------------------------
 // --------------------------------------------
-$badge-prefix               : 'c-badge' !default;
 $enable-extend-badge-colors : true !default;
+$badge-font-family          : $font-family-sans !default;
 $badge-default-size         : $global-size-sm !default;
 $badge-default-padding      : $space-0 $space-sm !default;
 $badge-default-border-radius: $radius-round !default;
@@ -70,7 +69,6 @@ $badge-sm-font-size         : $font-body-xs - 1 !default;
 // --------------------------------------------
 // Buttons ------------------------------------
 // --------------------------------------------
-$button-prefix          : 'c-btn' !default;
 $enable-btn-gradients   : false !default;
 $enable-btn-border      : true !default;
 $enable-btn-white-label : false !default;
@@ -84,7 +82,7 @@ $btn-font-weight        : $font-weight-bold !default;
 $btn-bd                 : 1px solid transparent !default;
 $btn-radius             : $global-default-radius !default;
 $btn-default-c          : $color-gray-7 !default;
-$btn-disabled-bg        : $color-gray-3 !default;
+$btn-disabled-bg        : $global-disabled-bg !default;
 $btn-disabled-c         : $color-gray-6 !default;
 $btn-link-bd            : 1px solid $color-gray-4 !default;
 $btn-link-hover-bg      : $color-gray-0 !default;
@@ -94,10 +92,6 @@ $btn-shadow             : false !default;
 $btn-shadow-focus       : 0 0 2px 1px $color-primary-7 !default;
 $btn-active-selected    : false !default;
 $btn-active-shadow      : none !default;
-
-// $btn-active-shadow      : inset 0 1px 7px rgba(27, 31, 35, 0.15) !default;
-
-
 $btn-box-width          : $global-size-md !default;
 
 $btn-box-sizes: (
@@ -163,7 +157,8 @@ $button-sizes: (
 // --------------------------------------------
 $breadcrumb-color               : $color-primary-9 !default;
 $breadcrumb-color-active        : $color-gray-9 !default;
-$breadcrumb-font-size           : 12px !default;
+$breadcrumb-font-size           : $font-body-md !default;
+$breadcrumb-font-family         : $font-family-sans !default;
 $breadcrumb-font-weight         : $font-weight-bold !default;
 $breadcrumb-divider-size        : 8px !default;
 $breadcrumb-divider-border-width: 2px !default;
@@ -174,12 +169,12 @@ $breadcrumb-margin              : $global-size-md !default;
 // --------------------------------------------
 // CARDS --------------------------------------
 // --------------------------------------------
-$card-prefix                 : 'c-card' !default;
 $card-bg                     : $color-white !default;
 $card-text-color             : $color-gray-7 !default;
 $card-border                 : 1px solid $color-gray-2 !default;
 $card-border-radius          : $global-default-radius !default;
-$card-min-width              : 250px !default;
+$card-min-width              : 0 !default;
+$card-font-family            : $font-family-sans !default;
 $card-padding-v              : $space-md - $space-xs !default;
 $card-padding-h              : $space-md !default;
 $card-shadow                 : $shadow-xs !default;
@@ -187,14 +182,14 @@ $card-shadow-hover           : $shadow-md !default;
 $card-border-hover           : $global-default-border !default;
 $card-header-font-size       : $font-body-lg !default;
 $card-header-font-weight     : $font-weight-bold !default;
-$card-header-line-height     : 24px !default;
+$card-header-line-height     : $line-height-body-lg !default;
 $card-header-color           : $color-gray-9 !default;
 $card-header-icon-color      : $color-gray-5 !default;
 $card-header-icon-hover-color: lighten($card-header-icon-color, 10%) !default;
 $card-body-font-size         : $font-body-md !default;
 $card-title-font-size        : $font-body-xl !default;
 $card-title-font-weight      : $font-weight-bold !default;
-$card-subtitle-line-height   : 12px !default;
+$card-subtitle-line-height   : $font-body-md !default;
 $card-subtitle-font-size     : $font-body-md !default;
 $card-footer-color           : $color-primary-8 !default;
 $card-footer-hover-color     : $color-primary-6 !default;
@@ -205,11 +200,8 @@ $card-footer-line-weight     : $font-body-xl !default;
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
-$label-font-size                : 12px !default;
-$radio-prefix                   : 'c-radio' !default;
-$label-prefix                   : 'c-control' !default;
-$checkbox-prefix                : 'c-checkbox' !default;
-$checkbox-disabled-bg           : $color-gray-3 !default;
+$label-font-size                : $font-body-md !default;
+$checkbox-disabled-bg           : $global-disabled-bg !default;
 $checkbox-disabled-color        : $color-gray-5 !default;
 $checkbox-checked-disabled-bg   : $color-gray-6 !default;
 $checkbox-checked-disabled-color: $color-gray-2 !default;
@@ -225,9 +217,9 @@ $checkbox-sizes                 : () !default;
 // --------------------------------------------
 // FORMS --------------------------------------
 // --------------------------------------------
-$control-prefix               : 'c-input' !default;
 $control-font-size            : $font-body-md !default;
 $control-color                : $color-gray-9 !default;
+$control-font-family          : $font-family-sans !default;
 $control-font-weight          : normal !default;
 $control-line-height          : 1.166667 !default;  //line height optimized for IE compatibility
 $control-placeholder-c        : $color-gray-5 !default;
@@ -264,7 +256,7 @@ $control-icon-padding         : $global-size-md !default;
 $control-icon-color           : $color-gray-9 !default;
 
 $control-disabled-border      : transparent !default;
-$control-disabled-background  : $color-gray-3 !default;
+$control-disabled-background  : $global-disabled-bg !default;
 $control-hint-color           : $color-gray-6 !default;
 $control-hint-font-size       : 85% !default;
 $control-hint-transition      : all 0.2s ease !default;
@@ -284,11 +276,10 @@ $select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
 // --------------------------------------------
 // DROPDOWN -----------------------------------
 // --------------------------------------------
-$dropdown-prefix             : 'c-dropdown' !default;
 $enable-grid-dropdown-classes: true !default;
 $dropdown-min-width          : 200px !default;
 $dropdown-font               : $font-family-sans !default;
-$dropdown-font-size          : 12px !default;
+$dropdown-font-size          : $font-body-md !default;
 $dropdown-font-weight        : normal !default;
 $dropdown-bg                 : $color-white !default;
 $dropdown-bg-hover           : $color-gray-0 !default;
@@ -297,7 +288,7 @@ $dropdown-shadow             : $shadow-md !default;
 $dropdown-color              : $color-gray-9 !default;
 $dropdown-color-hover        : $color-gray-9 !default;
 $dropdown-icon-color         : $color-gray-4;
-$dropdown-icon-font-size     : 14px !default;
+$dropdown-icon-font-size     : $font-body-lg !default;
 $dropdown-icon-padding       : $space-sm;
 $dropdown-radius             : $global-default-radius !default;
 $dropdown-list-padding       : $space-xs !default;
@@ -317,14 +308,14 @@ $link-colors:
 // --------------------------------------------
 // FOOTER -------------------------------------
 // --------------------------------------------
-$footer-prefix          : 'c-footer' !default;
-$footer-font-size       : 12px !default;
+$footer-font-size       : $font-body-md !default;
+$footer-font-family     : $font-family-sans !default;
 $footer-color           : $color-gray-9 !default;
 $footer-color-link      : $color-primary !default;
 $footer-background-color: $color-gray-1 !default;
 $footer-padding         : $space-md ($space-md + $space-sm) !default;
 $footer-links-margin    : $space-0 $space-sm !default;
-$footer-height          : 48px !default;
+$footer-height          : $global-size-xl !default;
 $footer-border-top      : 1px solid $color-gray-3;
 
 
@@ -345,9 +336,9 @@ $modal-body-font-size         : $font-body-md !default;
 $modal-title-font-size        : $font-body-xl !default;
 $modal-title-color            : $color-gray-9 !default;
 $modal-title-font-weight      : $font-weight-bold !default;
-$modal-title-line-height      : 24px !default;
+$modal-title-line-height      : $line-height-body-lg !default;
 $modal-padding                : $space-lg !default;
-$modal-bg-color               : #ffffff !default;
+$modal-bg-color               : $color-white !default;
 $modal-backdrop-bg-color      : rgba(0, 0, 0, 0.75) !default;
 $modal-body-padding           : $modal-padding $modal-padding ($modal-padding / 2) !default;
 $modal-header-padding         : ($modal-padding / 3) ($modal-padding / 2) ($modal-padding / 3) $modal-padding !default;
@@ -357,10 +348,25 @@ $modal-dialog-footer-padding  : ($modal-padding / 2) 0 0 !default;
 
 
 // --------------------------------------------
+// HEADER -------------------------------------
+// --------------------------------------------
+$header-bottom-border     : $color-gray-1 !default;
+$header-bg                : #ffffff !default;
+$header-bg-hover          : rgba(0, 0, 0, 0.03) !default;
+$header-inverse-bg        : $color-gray-7 !default;
+$header-inverse-bg-hover  : rgba(0, 0, 0, 0.05) !default;
+$header-text-color        : #adb5bd !default;
+$header-inverse-text-color: #ffffff !default;
+$header-inverse-borders   : rgba(255, 255, 255, 0.1) !default;
+$header-borders           : rgba(0, 0, 0, 0.06) !default;
+$header-logo-max-width    : 120px !default;
+$header-height            : 48px !default;
+$header-logo-width        : 85px !default;
+
+
+// --------------------------------------------
 // SWITCHES -----------------------------------
 // --------------------------------------------
-$switch-prefix             : 'c-switch' !default;
-$switch-control-prefix     : 'c-control' !default;
 $switch-height             : $global-size-xs !default;
 $switch-radius             : $radius-round !default;
 $switch-font-size          : $font-body-xs !default;
@@ -372,7 +378,7 @@ $switch-on-bg              : $color-primary !default;
 $switch-shadow             : inset 0 1px 1px 0 rgba(0, 0, 0, .1) !default;
 $switch-handle             : $color-white !default;
 $switch-handle-disabled    : $color-gray-0 !default;
-$switch-disabled           : $color-gray-3 !default;
+$switch-disabled           : $global-disabled-bg !default;
 $switch-disabled-checked-bg: $color-gray-6 !default;
 
 $switch-sizes: (
@@ -385,14 +391,12 @@ $switch-colors: () !default;
 // --------------------------------------------
 // TABS ---------------------------------------
 // --------------------------------------------
-$tabs-prefix            : 'c-tabs' !default;
-$tab-item-prefix        : 'c-tab-item' !default;
-$tabs-full-width-border : true !default;
 $tabs-color             : $color-gray-7 !default;
 $tabs-color-hover       : $color-primary !default;
 $tabs-color-active      : $color-primary !default;
 $tabs-color-disabled    : $color-gray-6 !default;
 $tabs-font-weight       : bold !default;
+$tabs-font-family       : $font-family-sans !default;
 $tabs-border-color      : $color-gray-2 !default;
 $tabs-bordered-radius   : $global-default-radius !default;
 $tabs-bordered-bg       : $color-gray-0 !default;
@@ -401,26 +405,24 @@ $tabs-bordered-bg-active: $tabs-bordered-bg-hover !default;
 $tabs-hover-transition  : border-color 0.2s ease 0s !default;
 $tabs-box-shadow        : inset 0 -1px 0 0 $tabs-border-color;
 $tabs-border-bottom     : 2px !default;
-
-$tabs-font-size         : 12px !default;
-$tabs-height            : 32px !default;
+$tabs-font-size         : $font-body-md !default;
+$tabs-font-size-small   : $font-body-sm !default;
+$tabs-font-size-large   : $font-body-lg !default;
 $tabs-padding           : $space-sm $space-md !default;
-
-$tabs-font-size-small   : 11px !default;
-$tabs-height-small      : 24px !default;
 $tabs-padding-small     : $space-xs $space-sm !default;
-
-$tabs-font-size-large   : 14px !default;
-$tabs-height-large      : 40px !default;
-$tabs-line-height-large : 24px !default;
+$tabs-height            : $global-size-md !default;
+$tabs-height-small      : $global-size-sm !default;
+$tabs-height-large      : $global-size-lg !default;
+$tabs-line-height-large : $line-height-body-lg !default;
 
 
 // --------------------------------------------
 // TABLES -------------------------------------
 // --------------------------------------------
 $table-background           : $color-white !default;
-$table-font-size            : 12px !default;
+$table-font-size            : $font-body-md !default;
 $table-line-height          : 16px !default;
+$table-font-family          : $font-family-sans !default;
 $table-border               : 0 !default;
 $table-border-color         : $color-gray-2 !default;
 $table-padding              : ($space-sm - 1) ($space-sm + 2) $space-sm !default;
@@ -439,7 +441,7 @@ $table-foot-bg              : $table-head-bg !default;
 $table-foot-color           : $table-head-color !default;
 $table-padding-sm           : ($space-xs - 1) $space-sm $space-xs !default;
 $table-padding-lg           : ($space-sm + $space-xs) ($space-sm + 2) ($space-sm + ($space-xs - 1)) !default;
-$table-font-size-lg         : 14px !default;
+$table-font-size-lg         : $font-body-lg !default;
 $table-hover-bg-img         : url('data: image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1IiBoZWlnaHQ9IjIwIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxLjMyMjkxNjYgNS4yOTE2NjY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOTEuNzEpIiBmaWxsPSIjYmJjMWM5Ij4gIDxyZWN0IHk9IjI5Ni40NyIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5MS43MSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjkxLjcxIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTYuNDciIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjk0Ljg4IiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTQuMDkiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTIuNSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC44OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC4wOSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeT0iMjkyLjUiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+IDwvZz48L3N2Zz4 = ') !default;
 $table-hover-bg-img-body-pos: 2px center !default;
 $table-state-selected       : $color-primary-0 !default;
@@ -458,86 +460,12 @@ $table-states: ("selected", $table-state-selected)
 
 
 // --------------------------------------------
-// TYPOGRAPHY ---------------------------------
-// --------------------------------------------
-$text-prefix     : 'c-text' !default;
-$header-prefix   : 'c-header' !default;
-
-$header-text-sizes: (
-  xs: (
-    font-size: $font-header-xs,
-    font-weight: $font-weight-bold,
-    line-height: $font-header-xs + 4
-  ),
-  sm: (
-    font-size: $font-header-sm,
-    font-weight: $font-weight-bold,
-    line-height: $font-header-sm + 10
-  ),
-  md: (
-    font-size: $font-header-md,
-    font-weight: $font-weight-bold,
-    line-height: $font-header-md + 8
-  ),
-  lg: (
-    font-size: $font-header-lg,
-    font-weight: $font-weight-bold,
-    line-height: $font-header-lg + 4
-  ),
-  xl: (
-    font-size: $font-header-xl,
-    font-weight: $font-weight-bold,
-    line-height: $font-header-xl + 8
-  ),
-  xxl: (
-    font-size: $font-header-xxl,
-    font-weight: $font-weight-bold,
-    line-height: $font-header-xxl + 4
-  )
-) !default;
-
-
-$body-text-sizes: (
-  xs: (
-    font-size: $font-body-xs,
-    font-weight: $font-weight-normal,
-    line-height: $font-body-xs + 6
-  ),
-  sm: (
-    font-size: $font-body-sm,
-    font-weight: $font-weight-normal,
-    line-height: $font-body-xs + 6
-  ),
-  md: (
-    font-size: $font-body-md,
-    font-weight: $font-weight-normal,
-    line-height: $font-body-md + 4
-  ),
-  lg: (
-    font-size: $font-body-lg,
-    font-weight: $font-weight-normal,
-    line-height: $font-body-lg + 10
-  ),
-  xl: (
-    font-size: $font-body-xl,
-    font-weight: $font-weight-normal,
-    line-height: $font-body-xl + 8
-  ),
-  xxl: (
-    font-size: $font-body-xxl,
-    font-weight: $font-weight-normal,
-    line-height: $font-body-xxl + 6
-  )
-) !default;
-
-
-// --------------------------------------------
 // PAGINATION ---------------------------------
 // --------------------------------------------
 $pagination-item-spacing         : 2px !default;
 $pagination-item-size            : $global-size-md !default;
-$pagination-font-size            : 12px !default;
-$pagination-icon-size            : 10px !default;
+$pagination-font-size            : $font-body-md !default;
+$pagination-icon-size            : $font-body-xs !default;
 $pagination-item-border-radius   : $global-default-radius !default;
 $pagination-item-color           : $color-gray-9 !default;
 $pagination-item-current-bg      : $color-primary-0 !default;

@@ -4,8 +4,9 @@ layout: blank
 hide-snippets: true
 ---
 
-{{> typography}}
+<hr class="hr">
 
+{{> typography}}
 
 
 <div class="docs-wrap">
@@ -19,3 +20,99 @@ hide-snippets: true
   {{/each}}
 </div>
 
+<hr class="hr">
+
+<div class="docs-wrap" style="justify-content: space-between;">
+  <ul class="c-ul">
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>Integer molestie lorem at massa</li>
+    <li>Facilisis in pretium nisl aliquet</li>
+    <li>Nulla volutpat aliquam velit
+      <ul>
+        <li>Phasellus iaculis neque</li>
+        <li>Purus sodales ultricies</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+        <li>Ac tristique libero volutpat at</li>
+      </ul>
+    </li>
+    <li>Faucibus porta lacus fringilla vel</li>
+    <li>Aenean sit amet erat nunc</li>
+    <li>Eget porttitor lorem</li>
+  </ul>
+
+  <ol class="c-ol">
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>Integer molestie lorem at massa</li>
+    <li>Facilisis in pretium nisl aliquet</li>
+    <li>Nulla volutpat aliquam velit
+      <ol>
+        <li>Phasellus iaculis neque</li>
+        <li>Purus sodales ultricies</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+        <li>Ac tristique libero volutpat at</li>
+      </ol>
+    </li>
+    <li>Faucibus porta lacus fringilla vel</li>
+    <li>Aenean sit amet erat nunc</li>
+    <li>Eget porttitor lorem</li>
+  </ol>
+
+  <ol class="c-ol-unstyled">
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>Integer molestie lorem at massa</li>
+    <li>Facilisis in pretium nisl aliquet</li>
+    <li>Nulla volutpat aliquam velit
+      <ol>
+        <li>Phasellus iaculis neque</li>
+        <li>Purus sodales ultricies</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+        <li>Ac tristique libero volutpat at</li>
+      </ol>
+    </li>
+    <li>Faucibus porta lacus fringilla vel</li>
+    <li>Aenean sit amet erat nunc</li>
+    <li>Eget porttitor lorem</li>
+  </ol>
+
+</div>
+
+<hr class="hr">
+
+<h3>Functions and mixins demos</h3>
+<br>
+
+<div class="heading-all"> @include font-header();</div>
+<br>
+<div class="h1"> @include font-header(xxl);</div>
+<br>
+<div class="h2"> @include font-header(xl);</div>
+<br>
+<div class="h3"> @include font-header(lg);</div>
+<br>
+<div class="h4"> @include font-header(md);</div>
+<br>
+<div class="h5"> @include font-header(sm);</div>
+<br>
+<div class="h6"> @include font-header(xs);</div>
+<br>
+<div class="p-all">@include font-body();</div>
+<br>
+<div class="p1"> @include font-body(xxl);</div>
+<br>
+<div class="p2"> @include font-body(xl);</div>
+<br>
+<div class="p3"> @include font-body(lg);</div>
+<br>
+<div class="p4"> @include font-body(md);</div>
+<br>
+<div class="p5"> @include font-body(sm);</div>
+<br>
+<div class="p6"> @include font-body(xs);</div>
+<br>
+<div class="xl-text">@include font-body(xl, $size-only: true);</div>
+<div class="functionExample">Function example with line-height, font-weight, and font-size</div>
+<div class="body-heading">Output header font family and weight settings only</div>
+<div class="body-text">Output body font family and weight settings only</div>

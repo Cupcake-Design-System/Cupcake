@@ -1,11 +1,11 @@
 // Switch Control
-.#{$switch-prefix}.#{$switch-control-prefix} {
+.c-switch.c-control {
   @include switch-control;
 }
 
 
 // Switch Base
-.#{$switch-prefix} {
+.c-switch {
   @include switch-base;
 
   // Sizing loop
@@ -13,7 +13,7 @@
     &-#{$name} {
       @include switch-size($size);
 
-      &.#{$switch-control-prefix} {
+      &.c-control {
         @include switch-control($size);
       }
     }
