@@ -1,13 +1,13 @@
 // Header
 .c-header {
-  background-color: $header-bg;
-  border-bottom: 1px solid $header-borders;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  height: $header-height;
   width: 100%;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  height: $header-height;
+  background-color: $header-bg;
+  justify-content: space-between;
+  border-bottom: 1px solid $header-borders;
 
   &-fixed {
     position: fixed;
@@ -16,14 +16,12 @@
 
   &-item {
     &-link {
-      color: $header-text-color;
+      display: flex;
       white-space: nowrap;
       align-items: center;
-      display: flex;
       height: $header-height;
-      /* stylelint-disable */
-      padding: 0 20px;
-      /* stylelint-enable */
+      color: $header-text-color;
+      padding: $header-item-padding;
 
       &:hover {
         background: $header-bg-hover;
@@ -74,7 +72,7 @@
   .c-header-item {
     border-color: $header-inverse-borders;
 
-    & a {
+    &-link {
       color: $header-inverse-text-color;
 
       &:hover {
@@ -88,11 +86,7 @@
   &.c-tabs {
     /* stylelint-disable */
     box-shadow: inset 0 -1px 0 0 #e6edf1;
-    padding-left: 20px;
     /* stylelint-enable */
+    padding-left: $space-md;
   }
-}
-
-.c-header-logo img {
-  width: $header-logo-width;
 }
