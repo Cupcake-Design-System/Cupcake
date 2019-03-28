@@ -1,0 +1,157 @@
+// Base Media Object
+.c-media {
+  > * {
+    margin: $media-margin;
+
+    &:first-child {
+      margin-left: $space-md;
+    }
+
+    &:last-child {
+      margin-right: $space-md;
+    }
+  }
+
+  display: flex;
+  line-height: 1;
+  color: $media-color;
+  align-items: flex-start;
+  padding: $media-padding;
+
+  &-body {
+    flex: 1;
+    min-width: 1px;
+
+    > * {
+      margin-bottom: $space-0;
+    }
+  
+    .c-media > {
+      *:first-child {
+        margin-left: $space-0;
+      }
+  
+      *:last-child {
+        margin-right: $space-0;
+      }
+    }
+  }
+
+  &-middle {
+    align-items: center;
+  }
+
+  &-bottom {
+    align-items: flex-end;
+  }
+
+  &-vertical {
+    flex-direction: column;
+  }
+
+  &-title {
+    flex: 1 1 0%;
+  }
+
+  &-heading {
+    margin-top: $space-0;
+    margin-bottom: $space-0;
+  }
+
+  &-new {
+    background-color: $media-new-bg;
+  }
+}
+
+
+.c-media-action {
+  opacity: 0;
+  transition: .5s;
+  text-align: center;
+  color: $media-action-color;
+  width: $media-action-width;
+  height: $media-action-height;
+  line-height: $media-action-height;
+
+  .c-media:hover & {
+    opacity: 1;
+  }
+
+  &-visible,
+  &-visible & {
+    opacity: 1;
+  }
+}
+
+
+.c-media-block-actions {
+  display: flex;
+  transition: .5s;
+  align-items: center;
+  margin-top: $space-sm;
+  justify-content: space-between;
+}
+
+
+$media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
+
+.c-media-list {
+  list-style: none;
+  padding-left: $space-0;
+}
+
+.c-media-list {
+  > .c-media#{$media-excludes},
+  .c-media-list-body > .c-media {
+    margin-bottom: $space-0;
+  }
+
+  & ul {
+    padding-left: $space-0;
+  }
+}
+
+.c-media-list-hover {
+  > .c-media#{$media-excludes}:hover,
+  .c-media-list-body > .c-media:hover {
+    background-color: $media-hover-bg;
+    cursor: pointer;
+  }
+}
+
+.c-media-list-divided {
+  > .c-media#{$media-excludes},
+  .c-media-list-body > .c-media {
+    border-bottom: 1px solid $media-border;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.c-media-list-bordered {
+  border: 1px solid $media-border;
+}
+
+.c-media-list-striped {
+  .c-media#{$media-excludes}:nth-child(even) {
+    background-color: $media-stripe-bg;
+  }
+}
+
+.c-media-list-header {
+  border-bottom: 1px solid $media-border;
+  background-color: $media-header-bg;
+}
+
+.c-media-list-footer {
+  border-top: 1px solid $media-border;
+  background-color: $media-header-bg;
+}
+
+.c-media-list .c-media-action-visible {
+  .c-media-action {
+    opacity: 1;
+  }
+}

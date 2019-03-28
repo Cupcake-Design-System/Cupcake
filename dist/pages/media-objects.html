@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="../demo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
+
+  <script>
+    var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
+    document.write('<link media="all" rel="stylesheet" href="../' + flavor + '.css">');
+  </script>
+</head>
+
+<body class="docs-container">
+    <div class="docs-body">
+      <main class="docs-content docs-content-fullwidth">
+        <br><br><br><br>
+          
+<h3 class="c-header-md">Media Object</h3>
+
+
+<div class="c-row">
+  <div class="c-col">
+    <div class="c-media c-media-middle">
+      <label class="c-checkbox">
+        <input type="checkbox" name="radio" checked>
+        <i></i>
+      </label>
+      <span class="c-avatar c-avatar-success" data-text="SL"></span>
+      <div class="c-media-body">
+        <span class="c-text-lg c-text-bold">Have a Cupcake</span>
+      </div>
+    </div>
+  </div>
+  <div class="c-col-2">
+    <div class="c-media c-media-middle">
+      <div class="c-media-body">
+        <span class="c-text-lg c-text-bold">Have a Cupcake</span>
+      </div>
+      <label class="c-checkbox">
+        <input type="checkbox" name="radio" checked>
+        <i></i>
+      </label>
+    </div>
+  </div>
+  <div class="c-col-2">
+    <div class="c-media c-media-middle c-media-action-visible">
+      <div class="c-media-body">
+        <span class="c-text-lg c-text-bold">Item with actions</span>
+      </div>
+      <a class="c-media-action" href="#">
+        <i class="fas fa-pencil-alt"></i>
+      </a>
+      <a class="c-media-action" href="#">
+        <i class="fas fa-times"></i>
+      </a>
+    </div>
+  </div>
+  <div class="c-col-shrink">
+    <div class="c-media c-media-middle">
+      <div class="c-media-body">
+        <span class="c-text-lg c-text-bold">Item with actions on hover</span>
+      </div>
+      <a class="c-media-action" href="#">
+        <i class="fas fa-pencil-alt"></i>
+      </a>
+      <a class="c-media-action" href="#">
+        <i class="fas fa-times"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="c-row c-m-top-lg">
+
+  <div class="c-col">
+    <div class="c-media c-media-middle">
+      <span class="fa fa-phone c-text-primary-4 c-icon-xl"></span>
+      <div class="c-media-body">
+        <div class="c-text-md c-text-bold">(650) 555 - 1234</div>
+        <div class="c-text-sm c-text-muted c-p-top-xs">Mobile Number</div>
+      </div>
+    </div>
+  </div>
+  <div class="c-col">
+    <div class="c-media c-media-middle">
+      <div class="c-media-body">
+        <div class="c-text-md c-text-bold">(650) 555 - 1234</div>
+        <div class="c-text-sm c-text-muted c-p-top-xs">Mobile Number</div>
+      </div>
+      <span class="fas fa-phone c-icon-xl"></span>
+    </div>
+  </div>
+
+  <div class="c-col">
+    <div class="c-media c-media-middle c-media-action-visible">
+      <span class="c-avatar c-avatar-primary" data-text="AA"></span>
+      <div class="c-media-body">
+        <div class="c-text-md c-text-bold">Annabelle Admin</div>
+        <div class="c-text-sm c-text-muted c-p-top-xs">IR Administrator</div>
+      </div>
+      <a class="c-media-action" href="#">
+        <span class="fas fa-phone"></span>
+      </a>
+      <a class="c-media-action" href="#">
+        <span class="fas fa-envelope "></span>
+      </a>
+    </div>
+  </div>
+  <div class="c-col">
+    <div class="c-media c-media-middle">
+      <span class="c-avatar c-avatar-primary" data-text="AA"></span>
+      <div class="c-media-body">
+        <div class="c-text-md c-text-bold">Annabelle Admin</div>
+        <div class="c-text-sm c-text-muted c-p-top-xs">IR Administrator</div>
+      </div>
+      <a class="c-media-action" href="#">
+        <span class="fas fa-phone"></span>
+      </a>
+      <a class="c-media-action" href="#">
+        <span class="fas fa-envelope"></span>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="c-row c-m-top-lg">
+  <div class="c-col-4">
+    <div class="c-media c-media-new">
+      <span class="c-avatar c-avatar-success" data-text="AB">
+      </span>
+      <div class="c-media-body">
+        <div class="c-text-md c-text-bold">Item to delete
+          <time class="c-text-xs c-text-muted c-pull-right" datetime="2017-07-14 20:00">24 min ago</time>
+        </div>
+        <div class="c-text-sm c-p-top-xs">You need to update the changelog in documentation before we release the current version.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-col-4">
+    <div class="c-media c-media-middle">
+      <span class="c-avatar c-avatar-success" data-text="AB">
+      </span>
+      <div class="c-media-body">
+        <div class="c-text-md c-text-bold">Item to delete
+          <time class="c-text-xs c-text-muted c-pull-right" datetime="2017-07-14 20:00">24 min ago</time>
+        </div>
+        <div class="c-text-sm c-p-top-xs">You need to update the changelog in documentation before we release the current version.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-col-4">
+    <div class="c-media c-media-bottom">
+      <span class="c-avatar c-avatar-success" data-text="AC">
+      </span>
+      <div class="c-media-body">
+        <span class="c-media-body">Maryam Amiri</span>
+        <time class="c-pull-right c-text-xs" datetime="2017-07-14 20:00">24 min ago</time>
+        <div class="c-text-sm c-p-top-xs">You need to update the changelog in documentation before we release the current version.</div>
+        <div class="c-media-block-actions">
+          <nav class="c-text-sm">
+            <a class="c-a" href="#">Comments (2)</a>
+            <a class="c-a" href="#">likes (7)</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="c-row c-m-top-lg">
+
+  <div class="c-col-md-6 c-col-lg-3 c-m-bottom-md">
+
+    <div class="c-media-list c-media-list-bordered">
+
+      <div class="c-media">
+        <span class="c-avatar c-avatar-primary" data-text="AA"></span>
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Annabelle Admin</div>
+          <div class="c-text-sm c-text-muted c-p-top-xs">IR Administrator</div>
+        </div>
+      </div>
+
+      <div class="c-media">
+        <span class="c-avatar c-avatar-success" data-text="SL"></span>
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Siante Lisso</div>
+          <div class="c-text-sm c-text-muted c-p-top-xs">Managing Director</div>
+        </div>
+      </div>
+
+      <div class="c-media">
+        <span class="c-avatar c-avatar-danger" data-text="MB"></span>
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Martin Board</div>
+          <div class="c-text-sm c-text-muted c-p-top-xs">Managing Director &amp; Board member</div>
+        </div>
+      </div>
+
+      <div class="c-media">
+        <span class="c-avatar c-avatar-warning" data-text="RR"></span>
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Reggie Research</div>
+          <div class="c-text-sm c-text-muted c-p-top-xs">Research Salesperson</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="c-col-md-6 c-col-lg-3 c-m-bottom-md">
+    <div class="c-card">
+
+      <div class="c-media-list c-media-list-striped">
+        <div class="c-media c-media-middle c-media-action-visible">
+          <div class="c-media-body">
+            <div class="c-text-md c-text-bold">Annabelle Admin</div>
+            <div class="c-text-sm c-text-muted c-p-top-xs">IR Administrator</div>
+          </div>
+          <a class="c-media-action c-text-success" href="#">
+            <span class="fas fa-phone"></span>
+          </a>
+          <a class="c-media-action c-text-primary" href="#">
+            <span class="fas fa-envelope"></span>
+          </a>
+        </div>
+
+        <div class="c-media c-media-middle c-media-action-visible">
+
+          <div class="c-media-body">
+            <div class="c-text-md c-text-bold">Siante Lisso</div>
+            <div class="c-text-sm c-text-muted c-p-top-xs">Managing Director</div>
+          </div>
+          <a class="c-media-action c-text-success" href="#">
+            <span class="fas fa-phone"></span>
+          </a>
+          <a class="c-media-action c-text-primary" href="#">
+            <span class="fas fa-envelope"></span>
+          </a>
+        </div>
+
+        <div class="c-media c-media-middle c-media-action-visible">
+          <div class="c-media-body">
+            <div class="c-text-md c-text-bold">Martin Board</div>
+            <div class="c-text-sm c-text-muted c-p-top-xs">Managing Director</div>
+          </div>
+          <a class="c-media-action c-text-success" href="#">
+            <span class="fas fa-phone"></span>
+          </a>
+          <a class="c-media-action c-text-primary" href="#">
+            <span class="fas fa-envelope"></span>
+          </a>
+        </div>
+
+        <div class="c-media c-media-middle c-media-action-visible">
+          <div class="c-media-body">
+            <div class="c-text-md c-text-bold">Reggie Research</div>
+            <div class="c-text-sm c-text-muted c-p-top-xs">Research Salesperson</div>
+          </div>
+          <a class="c-media-action c-text-success" href="#">
+            <span class="fas fa-phone"></span>
+          </a>
+          <a class="c-media-action c-text-primary" href="#">
+            <span class="fas fa-envelope"></span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="c-col-md-6 c-col-lg-3 c-m-bottom-md">
+    <div class="c-card">
+
+      <div class="c-media-list c-media-list-divided c-media-list-hover">
+
+        <header class="c-media-list-header">
+          <div class="c-media">
+            <div class="c-text-md c-text-bold">Media Header w/ actions on hover</div>
+          </div>
+        </header>
+        <div class="c-media-list-body">
+          <div class="c-media c-media-middle">
+            <span class="c-avatar c-avatar-primary" data-text="AA"></span>
+            <div class="c-media-body">
+              <div class="c-text-md c-text-bold">Annabelle Admin</div>
+              <div class="c-text-sm c-text-muted c-p-top-xs">IR Administrator</div>
+            </div>
+            <a class="c-media-action c-text-success" href="#">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a class="c-media-action c-text-danger" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+
+          <div class="c-media c-media-middle">
+            <span class="c-avatar c-avatar-success" data-text="SL"></span>
+            <div class="c-media-body">
+              <div class="c-text-md c-text-bold">Siante Lisso</div>
+              <div class="c-text-sm c-text-muted c-p-top-xs">Managing Director</div>
+            </div>
+            <a class="c-media-action c-text-success" href="#">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a class="c-media-action c-text-danger" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+
+          <div class="c-media c-media-middle">
+            <span class="c-avatar c-avatar-danger" data-text="MB"></span>
+            <div class="c-media-body">
+              <div class="c-text-md c-text-bold">Martin Board</div>
+              <div class="c-text-sm c-text-muted c-p-top-xs">Managing Director</div>
+            </div>
+            <a class="c-media-action c-text-success" href="#">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a class="c-media-action c-text-danger" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+
+          <div class="c-media c-media-middle">
+            <span class="c-avatar c-avatar-warning" data-text="RR"></span>
+            <div class="c-media-body">
+              <div class="c-text-md c-text-bold">Reggie Research</div>
+              <div class="c-text-sm c-text-muted c-p-top-xs">Research Salesperson</div>
+            </div>
+            <a class="c-media-action c-text-success" href="#">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a class="c-media-action c-text-danger" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-col-md-6 c-col-lg-3 c-m-bottom-md">
+    <div class="c-card">
+
+      <div class="c-media-list c-media-list-divided c-media-list-hover c-media-action-visible">
+
+        <header class="c-media-list-header">
+          <div class="c-media">
+            <div class="c-text-md c-text-bold">Media Header w/ actions</div>
+          </div>
+        </header>
+        <div class="c-media-list-body">
+          <div class="c-media c-media-middle">
+            <span class="c-avatar c-avatar-primary" data-text="AA"></span>
+            <div class="c-media-body">
+              <div class="c-text-md c-text-bold">Annabelle Admin</div>
+              <div class="c-text-sm c-text-muted c-p-top-xs">IR Administrator</div>
+            </div>
+            <a class="c-media-action c-text-success" href="#">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a class="c-media-action c-text-danger" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+
+          <div class="c-media c-media-middle">
+            <span class="c-avatar c-avatar-success" data-text="SL"></span>
+            <div class="c-media-body">
+              <div class="c-text-md c-text-bold">Siante Lisso</div>
+              <div class="c-text-sm c-text-muted c-p-top-xs">Managing Director</div>
+            </div>
+            <a class="c-media-action c-text-success" href="#">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a class="c-media-action c-text-danger" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+
+          <div class="c-media c-media-middle">
+            <span class="c-avatar c-avatar-danger" data-text="MB"></span>
+            <div class="c-media-body">
+              <div class="c-text-md c-text-bold">Martin Board</div>
+              <div class="c-text-sm c-text-muted c-p-top-xs">Managing Director</div>
+            </div>
+            <a class="c-media-action c-text-success" href="#">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a class="c-media-action c-text-danger" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+
+          <div class="c-media c-media-middle">
+            <span class="c-avatar c-avatar-warning" data-text="RR"></span>
+            <div class="c-media-body">
+              <div class="c-text-md c-text-bold">Reggie Research</div>
+              <div class="c-text-sm c-text-muted c-p-top-xs">Research Salesperson</div>
+            </div>
+            <a class="c-media-action c-text-success" href="#">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a class="c-media-action c-text-danger" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+        </div>
+        <footer class="c-media-list-footer">
+          <div class="c-media">
+            <div class="c-text-md c-text-bold">Media footer</div>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="c-row c-m-top-lg">
+  <div class="c-col-md-6 c-col-lg-3 c-m-bottom-md">
+    <div class="c-card">
+
+      <div class="c-media-list c-media-list-divided">
+
+        <div class="c-media-list-body">
+          <div class="c-media c-media-middle">
+            <span class="c-avatar c-avatar-primary" data-text="DS">
+              <img src="https://unsplash.it/200?image=815">
+            </span>
+            <div class="c-media-body">
+              <div class="c-text-lg c-text-bold">Delfina Sanford</div>
+            </div>
+            <a class="c-media-action" href="#">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a class="c-media-action" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+
+          <div class="c-media c-media-middle">
+            <span class="c-avatar c-avatar-primary" data-text="DS">
+              <img src="https://unsplash.it/200?image=1005">
+            </span>
+            <div class="c-media-body">
+              <div class="c-text-lg c-text-bold">Luigi Graham</div>
+            </div>
+            <a class="c-media-action" href="#">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a class="c-media-action" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+
+          <div class="c-media c-media-middle">
+            <span class="c-avatar c-avatar-primary" data-text="DS">
+              <img src="https://unsplash.it/200?image=403">
+            </span>
+            <div class="c-media-body">
+              <div class="c-text-lg c-text-bold">Clinton Usman</div>
+            </div>
+            <a class="c-media-action" href="#">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a class="c-media-action" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+
+          <div class="c-media c-media-middle">
+            <span class="c-avatar c-avatar-primary" data-text="DS">
+              <img src="https://unsplash.it/200?image=1027">
+            </span>
+            <div class="c-media-body">
+              <div class="c-text-lg c-text-bold">Natalia Satterfield</div>
+            </div>
+            <a class="c-media-action" href="#">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a class="c-media-action" href="#">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-col-md-6 c-col-lg-3 c-m-bottom-md">
+
+    <div class="c-media-list c-media-list-bordered c-media-list-divided">
+
+      <div class="c-media c-media-middle">
+        <span class="c-avatar c-avatar-primary" data-text="AA"></span>
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Justin Fisher</div>
+          <div class="c-text-sm c-text-primary">justinfisher@company.com</div>
+        </div>
+        <a class="c-media-action c-media-action-visible c-text-sm" href="#">
+          <i class="fas fa-ellipsis-h"></i>
+        </a>
+      </div>
+
+      <div class="c-media c-media-middle">
+        <span class="c-avatar c-avatar-primary" data-text="AA"></span>
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Elvera Muller</div>
+          <div class="c-text-sm c-text-primary">elveramuller@company.com</div>
+        </div>
+        <a class="c-media-action c-media-action-visible c-text-sm" href="#">
+          <i class="fas fa-ellipsis-h"></i>
+        </a>
+      </div>
+
+      <div class="c-media c-media-middle">
+        <span class="c-avatar c-avatar-primary" data-text="AA"></span>
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Genoveva Leannon</div>
+          <div class="c-text-sm c-text-primary">genovevaleannon@company.com</div>
+        </div>
+        <a class="c-media-action c-media-action-visible c-text-sm" href="#">
+          <i class="fas fa-ellipsis-h"></i>
+        </a>
+      </div>
+
+      <div class="c-media c-media-middle">
+        <span class="c-avatar c-avatar-primary" data-text="AA"></span>
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Karine Simonis</div>
+          <div class="c-text-sm c-text-primary">karinesimonis@company.com</div>
+        </div>
+        <a class="c-media-action c-media-action-visible c-text-sm" href="#">
+          <i class="fas fa-ellipsis-h"></i>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="c-col-md-6 c-col-lg-3 c-m-bottom-md">
+
+    <div class="c-media-list c-media-list-bordered c-media-list-divided">
+
+      <div class="c-media c-media-middle">
+        <i class="fas fa-folder c-text-primary-3"></i>
+        <div class="c-media-body">
+          <div class="c-text-sm">2019 Accounting</div>
+        </div>
+        <a class="c-media-action c-media-action-visible c-text-sm" href="#">
+          <i class="fas fa-ellipsis-h"></i>
+        </a>
+      </div>
+
+      <div class="c-media c-media-middle">
+        <i class="fas fa-folder c-text-primary-3"></i>
+        <div class="c-media-body">
+          <div class="c-text-sm">2019 Human Resources</div>
+        </div>
+        <a class="c-media-action c-media-action-visible c-text-sm" href="#">
+          <i class="fas fa-ellipsis-h"></i>
+        </a>
+      </div>
+
+      <div class="c-media c-media-middle">
+        <i class="fas fa-file-alt c-text-gray-6"></i>
+        <div class="c-media-body">
+          <div class="c-text-sm">2019 Q4 Board Meeting Notes.docx</div>
+        </div>
+        <a class="c-media-action c-media-action-visible c-text-sm" href="#">
+          <i class="fas fa-ellipsis-h"></i>
+        </a>
+      </div>
+
+      <div class="c-media c-media-middle">
+          <i class="fas fa-file-alt c-text-gray-6"></i>
+          <div class="c-media-body">
+            <div class="c-text-sm">2019 Q4 Board Meeting Agenda.pdf</div>
+          </div>
+          <a class="c-media-action c-media-action-visible c-text-sm" href="#">
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </div>
+
+        <div class="c-media c-media-middle">
+            <i class="fas fa-file-alt c-text-gray-6"></i>
+            <div class="c-media-body">
+              <div class="c-text-sm">2019_Q3_Board_Meeting_Agenda.pdf</div>
+            </div>
+            <a class="c-media-action c-media-action-visible c-text-sm" href="#">
+              <i class="fas fa-ellipsis-h"></i>
+            </a>
+          </div>
+
+    </div>
+
+  </div>
+</div>
+      </main>
+    </div>
+  </body>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+  
+  $(".c-dropdown").click(function () {
+    $(this).find(".c-dropdown-list, .c-dropdown-grid").slideToggle(100);
+  });
+  
+  $(document).on("click", function (event) {
+    var $dropdownTrigger = $(".c-dropdown");
+  
+    if ($dropdownTrigger !== event.target && !$dropdownTrigger.has(event.target).length) {
+      $(".c-dropdown-list, .c-dropdown-grid").slideUp("fast");
+    }
+  });
+  });
+  
+  
+  (function( $ ) {
+    var pluginName = "xrayhtml",
+  		o = {
+  		text: {
+  			open: "Show Code Example",
+  			close: "Collapse Code Example"
+  		},
+  		classes: {
+  			button: "c-btn c-btn-sm",
+  			open: "view-source",
+  			sourcepanel: "source-panel"
+  		},
+  		initSelector: "[data-" + pluginName + "]",
+  		defaultReveal: "inline"
+  	},
+  	methods = {
+  		_create: function() {
+  			return $( this ).each(function() {
+  				var init = $( this ).data( "init." + pluginName );
+  
+  				if( init ) {
+  					return false;
+  				}
+  
+  				$( this )
+  					.data( "init." + pluginName, true )
+  					[ pluginName ]( "_init" )
+  					.trigger( "create." +  pluginName );
+  			});
+  		},
+  		_init: function() {
+  			var $self =	 $(this);
+  
+  
+  			var method = $( this ).attr( "data-" + pluginName ) || o.defaultReveal;
+  
+  			if( method === "slide" ) {
+  				$( this )[ pluginName ]( "_createButton" );
+  			}
+  
+  			$( this )
+  				.addClass( pluginName + " " + "method-" + method )
+  			[ pluginName ]( "_createSource" );
+  		},
+  		_createButton: function() {
+  			var btn = document.createElement( "a" ),
+  				txt = document.createTextNode( o.text.open ),
+  				el = $( this );
+  
+  			btn.setAttribute( "class", o.classes.button );
+  			btn.href = "#";
+  			btn.appendChild( txt );
+  
+  			$( btn )
+  				.bind( "click", function( e ) {
+  					var isOpen = el.attr( "class" ).indexOf( o.classes.open ) > -1;
+  
+  					el[ isOpen ? "removeClass" : "addClass" ]( o.classes.open );
+  					btn.innerHTML = ( isOpen ? o.text.open : o.text.close );
+  
+  					e.preventDefault();
+  
+  				})
+  				.insertAfter( el );
+  		},
+  		_createSource: function() {
+  			var el = this;
+  			var preel = document.createElement( "pre" );
+  			var codeel = document.createElement( "code" );
+  			var wrap = document.createElement( "div" );
+  			var sourcepanel = document.createElement( "div" );
+  			var code;
+  			var leadingWhiteSpace;
+  			var source;
+  
+  			// remove empty value attributes
+  			code = el.innerHTML.replace( /\=\"\"/g, '' );
+  			leadingWhiteSpace = code.match( /(^[\s]+)/ );
+  
+  			if( leadingWhiteSpace ) {
+  				code = code.replace( new RegExp( leadingWhiteSpace[ 1 ], "gmi" ), "\n" );
+  			}
+  
+  			source = document.createTextNode( code );
+  
+  			wrap.setAttribute( "class", "snippet" );
+  
+  			$( el ).wrapInner( wrap );
+  
+  			codeel.appendChild( source );
+  			preel.appendChild( codeel );
+  
+  			sourcepanel.setAttribute( "class", o.classes.sourcepanel );
+  			sourcepanel.appendChild( preel );
+  
+  			this.appendChild( sourcepanel );
+  		}
+  	};
+  
+  	// Collection method.
+  	$.fn[ pluginName ] = function( arrg, a, b, c ) {
+  		return this.each(function() {
+  
+  			// if it's a method
+  			if( arrg && typeof( arrg ) === "string" ){
+  				return $.fn[ pluginName ].prototype[ arrg ].call( this, a, b, c );
+  			}
+  
+  			// don't re-init
+  			if( $( this ).data( pluginName + "data" ) ){
+  				return $( this );
+  			}
+  
+  			// otherwise, init
+  			$( this ).data( pluginName + "active", true );
+  			$.fn[ pluginName ].prototype._create.call( this );
+  		});
+  	};
+  
+  	// add methods
+  	$.extend( $.fn[ pluginName ].prototype, methods );
+  
+  	//  auto-init
+  	var initted;
+  	function init(){
+  		if( !initted ){
+  			$( o.initSelector )[ pluginName ]();
+  			initted = true;
+  		}
+  	}
+  	// init either on beforeenhance event or domready, whichever comes first.
+  	$( document ).bind("beforeenhance", init );
+  	$( init );
+  
+  
+  }( jQuery ));
+  
+  // Add prism highlighting to code
+    $( window ).bind( "create.xrayhtml", function( e ) {
+      var prism = !!~e.target.getAttribute( "class" ).indexOf( "prism" );
+  
+      if( prism && "Prism" in window ) {
+        $( ".prism" ).find( "code" ).addClass( "language-markup" );
+        Prism.highlightAll();
+      }
+    });
+  
+  </script>
+  
+  <script>
+  $("#defaultBtn").click(function(){
+    $("#newDark").toggleClass("c-modal-visible");
+  });
+  
+  $("#close, #cancel").click(function(){
+    $("#newDark").removeClass("c-modal-visible");
+  });
+  
+  $("#largeBtn").click(function(){
+    $("#largeModal").toggleClass("c-modal-visible");
+  });
+  
+  $("#close, #cancel").click(function(){
+    $("#largeModal").removeClass("c-modal-visible");
+  });
+  
+  $("#smallBtn").click(function(){
+    $("#smallModal").toggleClass("c-modal-visible");
+  });
+  
+  $("#close, #cancel").click(function(){
+    $("#smallModal").removeClass("c-modal-visible");
+  });
+  
+  $("#centerBtn").click(function(){
+    $("#centerModal").toggleClass("c-modal-visible");
+  });
+  
+  $("#close, #cancel").click(function(){
+    $("#centerModal").removeClass("c-modal-visible");
+  });
+  
+  $("#fullscreenBtn").click(function(){
+    $("#fullscreenModal").toggleClass("c-modal-visible");
+  });
+  
+  $("#close, #cancel").click(function(){
+    $("#fullscreenModal").removeClass("c-modal-visible");
+  });
+  </script>
+<script>
+  $("#codeToggle").click(function () {
+    $(".source-panel").slideToggle();
+  });
+</script>
+</html>
