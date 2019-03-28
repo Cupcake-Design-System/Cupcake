@@ -39,8 +39,8 @@
   }
 
   &-center {
-    display: flex;
     flex-grow: 1;
+    display: flex;
     justify-content: center;
 
     .c-input-container {
