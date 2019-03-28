@@ -4062,12 +4062,12 @@ textarea.c-input {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.c-modal-backdrop.c-modal-visable {
+.c-modal-backdrop.c-modal-visible {
   opacity: 1;
   visibility: visible;
 }
 
-.c-modal-backdrop.c-modal-visable .c-modal {
+.c-modal-backdrop.c-modal-visible .c-modal {
   visibility: visible;
   transform: scale(1);
   opacity: 1;
