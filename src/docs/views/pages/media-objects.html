@@ -9,12 +9,11 @@ hide-snippets: true
 
 <div class="c-row c-bg-gray-1">
   <div class="c-col-md-3 c-p-sm">
-    <div class="c-media c-media-middle c-bg-white">
+    <div class="c-media c-media-middle">
       <label class="c-checkbox">
         <input type="checkbox" name="radio" checked>
         <i></i>
       </label>
-      <span class="c-avatar c-avatar-success" data-text="SL"></span>
       <div class="c-media-body">
         <span class="c-text-lg c-text-bold">Have a Cupcake</span>
       </div>
@@ -22,19 +21,17 @@ hide-snippets: true
   </div>
 
   <div class="c-col-md-3 c-p-sm">
-    <div class="c-media c-media-middle c-bg-white">
+    <div class="c-media c-media-middle">
+      <span class="c-avatar c-avatar-primary" data-text="AA"></span>
       <div class="c-media-body">
-        <span class="c-text-lg c-text-bold">Have a Cupcake</span>
+        <div class="c-text-md c-text-bold">Annabelle Admin</div>
+        <div class="c-text-sm c-text-muted">IR Administrator</div>
       </div>
-      <label class="c-checkbox">
-        <input type="checkbox" name="radio" checked>
-        <i></i>
-      </label>
     </div>
   </div>
 
   <div class="c-col-md-3 c-p-sm">
-    <div class="c-media c-media-middle c-bg-white c-media-action-visible">
+    <div class="c-media c-media-middle c-media-action-visible">
       <div class="c-media-body">
         <span class="c-text-lg c-text-bold">Item with actions</span>
       </div>
@@ -48,69 +45,91 @@ hide-snippets: true
   </div>
 
   <div class="c-col-md-3 c-p-sm">
-    <div class="c-media c-media-middle c-bg-white">
+    <div class="c-media c-media-middle">
       <div class="c-media-body">
-        <span class="c-text-lg c-text-bold">Item with actions on hover</span>
+        <span class="c-text-lg c-text-bold">Item with button action</span>
       </div>
-      <a class="c-media-action" href="#">
-        <i class="fas fa-pencil-alt"></i>
-      </a>
-      <a class="c-media-action" href="#">
-        <i class="fas fa-times"></i>
-      </a>
+      <button class="c-btn c-btn-success c-btn-sm">Email</button>
     </div>
   </div>
 </div>
 
 
-<div class="c-row c-bg-gray-1">
+{{> space}}
 
+
+<h3 class="c-m-bottom-sm c-text-bold">Reverse</h3>
+
+<div class="c-row c-bg-gray-1">
   <div class="c-col-md-3 c-p-sm">
-    <div class="c-media c-media-middle c-bg-white">
-      <a class="c-media-action c-media-action-visible" href="#">
-        <span class="fa fa-phone c-text-primary-4"></span>
-      </a>
+    <div class="c-media c-media-middle">
       <div class="c-media-body">
-        <div class="c-text-md c-text-bold">(650) 555 - 1234</div>
-        <div class="c-text-sm c-text-muted">Mobile Number</div>
+        <span class="c-text-lg c-text-bold">Have a Cupcake</span>
       </div>
       <label class="c-checkbox">
-        <input type="checkbox" name="radio">
+        <input type="checkbox" name="radio" checked>
         <i></i>
       </label>
     </div>
   </div>
 
   <div class="c-col-md-3 c-p-sm">
-    <div class="c-media c-media-middle c-bg-white">
-      <div class="c-media-body">
-        <div class="c-text-md c-text-bold">(650) 555 - 1234</div>
-        <div class="c-text-sm c-text-muted">Mobile Number</div>
-      </div>
-      <a class="c-media-action c-media-action-visible" href="#">
-        <span class="fas fa-phone"></span>
-      </a>
-    </div>
-  </div>
-
-  <div class="c-col-md-3 c-p-sm">
-    <div class="c-media c-media-middle c-media-action-visible c-bg-white">
-      <span class="c-avatar c-avatar-primary" data-text="AA"></span>
+    <div class="c-media c-media-middle">
       <div class="c-media-body">
         <div class="c-text-md c-text-bold">Annabelle Admin</div>
         <div class="c-text-sm c-text-muted">IR Administrator</div>
       </div>
-      <a class="c-media-action" href="#">
-        <span class="fas fa-phone"></span>
-      </a>
-      <a class="c-media-action" href="#">
-        <span class="fas fa-envelope "></span>
-      </a>
+      <span class="c-avatar c-avatar-primary" data-text="AA"></span>
     </div>
   </div>
 
   <div class="c-col-md-3 c-p-sm">
-    <div class="c-media c-media-middle c-bg-white">
+    <div class="c-media c-media-middle c-media-action-visible">
+      <a class="c-media-action" href="#">
+        <i class="fas fa-pencil-alt"></i>
+      </a>
+      <a class="c-media-action" href="#">
+        <i class="fas fa-times"></i>
+      </a>
+      <div class="c-media-body">
+        <span class="c-text-lg c-text-bold">Item with actions</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-col-md-3 c-p-sm">
+    <div class="c-media c-media-middle">
+      <button class="c-btn c-btn-success c-btn-sm">Email</button>
+      <div class="c-media-body">
+        <span class="c-text-lg c-text-bold">Item with button action</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{> space}}
+
+
+<h3 class="c-m-bottom-sm c-text-bold">Hover</h3>
+
+<div class="c-row c-bg-gray-1">
+  <div class="c-col-md-3 c-p-sm">
+    <div class="c-media c-media-middle">
+      <div class="c-media-body">
+        <span class="c-text-lg c-text-bold">Checkbox on hover</span>
+      </div>
+      <div class="c-media-action" href="#">
+        <label class="c-checkbox">
+          <input type="checkbox" name="radio">
+          <i></i>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-col-md-3 c-p-sm">
+    <div class="c-media c-media-middle">
       <span class="c-avatar c-avatar-primary" data-text="AA"></span>
       <div class="c-media-body">
         <div class="c-text-md c-text-bold">Annabelle Admin</div>
@@ -125,6 +144,90 @@ hide-snippets: true
     </div>
   </div>
 
+  <div class="c-col-md-3 c-p-sm">
+    <div class="c-media c-media-middle">
+      <div class="c-avatar c-avatar-square c-avatar-orange">
+        <i class="fab fa-amazon"></i>
+      </div>
+      <div class="c-media-body">
+        <div class="c-text-lg c-text-bold">Button on hover</div>
+      </div>
+      <div class="c-media-action" href="#">
+        <button class="c-btn c-btn-success c-btn-sm">Email</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-col-md-3 c-p-sm">
+    <div class="c-media c-media-middle">
+      <div class="c-media-body">
+        <span class="c-text-lg c-text-bold">Item with actions on hover</span>
+      </div>
+      <a class="c-media-action" href="#">
+        <i class="fas fa-pencil-alt"></i>
+      </a>
+      <a class="c-media-action" href="#">
+        <i class="fas fa-times"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+{{> space}}
+
+<h3 class="c-m-bottom-sm c-text-bold">More examples</h3>
+
+
+<div class="c-row c-bg-gray-1">
+
+  <div class="c-col-md-3 c-p-sm">
+    <div class="c-media c-media-middle">
+      <div class="c-media-body">
+        <div class="c-text-md c-text-bold">(650) 555 - 1234</div>
+        <div class="c-text-sm c-text-muted">Mobile Number</div>
+      </div>
+      <a class="c-media-action c-media-action-visible" href="#">
+          <span class="fa fa-phone c-text-primary-4"></span>
+        </a>
+    </div>
+  </div>
+
+  <div class="c-col-md-3 c-p-sm">
+    <div class="c-media c-media-middle">
+        <div class="c-avatar c-avatar-square c-avatar-cyan">
+            <i class="fab fa-dropbox"></i>
+          </div>
+      <div class="c-media-body">
+        <div class="c-text-md c-text-bold">Dropbox Rep</div>
+        <div class="c-text-sm c-text-muted">Keith McCatz</div>
+      </div>
+      <a class="c-media-action c-media-action-visible" href="#">
+        <span class="fas fa-phone"></span>
+      </a>
+      <a class="c-media-action c-media-action-visible" href="#">
+          <span class="fas fa-envelope"></span>
+        </a>
+        <a class="c-media-action c-media-action-visible" href="#">
+            <i class="fas fa-comments"></i>
+          </a>
+
+    </div>
+  </div>
+
+  <div class="c-col-md-6 c-p-sm">
+    <div class="c-media c-media-middle">
+      <span class="c-avatar c-avatar-primary" data-text="AA"></span>
+      <div class="c-media-body">
+        <div class="c-text-md c-text-bold">Annabelle Admin</div>
+        <div class="c-text-sm c-text-muted">IR Administrator</div>
+      </div>
+      <button class="c-btn c-btn-secondary c-btn-sm">Email</button>
+      <button class="c-btn c-btn-secondary c-btn-sm">Chat</button>
+      <button class="c-btn c-btn-danger c-btn-sm">Remove</button>
+    </div>
+  </div>
+
 </div>
 
 
@@ -134,7 +237,7 @@ hide-snippets: true
 
 <div class="c-row c-bg-gray-1">
   <div class="c-col-md-4 c-p-sm">
-    <div class="c-media c-bg-white">
+    <div class="c-media">
       <span class="c-avatar c-avatar-lg c-avatar-success" data-text="AC">
       </span>
       <div class="c-media-body">
@@ -152,7 +255,7 @@ hide-snippets: true
   </div>
 
   <div class="c-col-md-4 c-p-sm">
-    <div class="c-media c-media-middle c-bg-white">
+    <div class="c-media c-media-middle">
       <span class="c-avatar c-avatar-lg c-avatar-success" data-text="AC">
       </span>
       <div class="c-media-body">
@@ -172,7 +275,7 @@ hide-snippets: true
   </div>
 
   <div class="c-col-md-4 c-p-sm">
-    <div class="c-media c-media-bottom c-bg-white">
+    <div class="c-media c-media-bottom">
       <span class="c-avatar c-avatar-lg c-avatar-success" data-text="AC">
       </span>
       <div class="c-media-body">
@@ -442,11 +545,11 @@ hide-snippets: true
 
 {{> space}}
 
-<h3 class="c-m-bottom-sm c-text-bold">List styles</h3>
+<h3 class="c-m-bottom-sm c-text-bold">More List styles</h3>
 
 <div class="c-row c-bg-gray-1">
 
-  <div class="c-col-md-6 c-col-lg-3 c-p-sm">
+  <div class="c-col-md-6 c-col-lg-4 c-p-sm">
 
     <div class="c-media-list c-media-list-divided c-media-list-bordered">
 
@@ -510,7 +613,7 @@ hide-snippets: true
     </div>
   </div>
 
-  <div class="c-col-md-6 c-col-lg-3 c-p-sm">
+  <div class="c-col-md-6 c-col-lg-4 c-p-sm">
 
     <div class="c-media-list c-media-list-bordered c-media-list-divided">
 
@@ -570,7 +673,7 @@ hide-snippets: true
 
   </div>
 
-  <div class="c-col-md-6 c-col-lg-3 c-p-sm">
+  <div class="c-col-md-6 c-col-lg-4 c-p-sm">
 
     <div class="c-media-list c-media-list-bordered c-media-list-divided">
 
@@ -618,25 +721,16 @@ hide-snippets: true
 
   </div>
 
-  <div class="c-col-md-6 c-col-lg-3 c-p-sm">
-    <div class="c-media c-media-vertical c-p-md">
-      <i class="fas fa-file-archive c-text-gray-6 c-m-sm" style="font-size: 35px;"></i>
-      <p class="c-text-md c-p-vertical-xs">Here is your zip!</p>
-      <em class="c-text-sm c-text-muted c-p-bottom-sm">2 mb</em>
-      <a class="c-btn c-btn-primary c-btn-block" href="#">Download</a>
-    </div>
-  </div>
-
 </div>
 
 
 {{> space}}
 
-<h3 class="c-m-bottom-sm c-text-bold">List styles</h3>
+<h3 class="c-m-bottom-sm c-text-bold">More Examples</h3>
 
 <div class="c-row c-bg-gray-1">
 
-  <div class="c-col-md-6 c-col-lg-6 c-p-sm">
+  <div class="c-col-md-5 c-col-lg-5 c-p-sm">
     <div class="c-media-list c-media-list-bordered c-media-list-divided">
 
       <div class="c-media">
@@ -690,7 +784,7 @@ hide-snippets: true
     </div>
   </div>
 
-  <div class="c-col-md-6 c-col-lg-6 c-p-sm">
+  <div class="c-col-md-4 c-col-lg-4 c-p-sm">
 
     <div class="c-media-list c-media-list-bordered c-media-list-divided c-media-list-hover">
 
@@ -736,6 +830,16 @@ hide-snippets: true
     </div>
 
   </div>
+
+  <div class="c-col-md-3 c-col-lg-3 c-p-sm">
+      <div class="c-media c-media-vertical c-p-md">
+        <i class="fas fa-file-archive c-text-gray-6 c-m-sm" style="font-size: 35px;"></i>
+        <p class="c-text-md c-p-vertical-xs">Here is your zip!</p>
+        <em class="c-text-sm c-text-muted c-p-bottom-sm">2 mb</em>
+        <a class="c-btn c-btn-primary c-btn-block" href="#">Download</a>
+      </div>
+    </div>
+
 </div>
 
 
