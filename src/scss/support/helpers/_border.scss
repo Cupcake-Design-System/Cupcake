@@ -1,0 +1,43 @@
+// Border helpers .c-bd-{{direction}}
+$border-sides : (
+  bd        : border,
+  bd-top    : border-top,
+  bd-right  : border-right,
+  bd-bottom : border-bottom,
+  bd-left   : border-left
+);
+
+@if $enable-border-classes == true {
+  .c-bd {
+    border: $global-default-border;
+
+    // Border color helpers .c-bd-{{color}}
+    @include modifiers($color, 'border-color');
+    @include modifiers($theme-colors, 'border-color');
+
+    // Border 0 to remove
+    &-0 {
+      /* stylelint-disable */
+      border: none;
+      /* stylelint-enable */
+    }
+
+    // Border sides
+    @each $side, $prop in $border-sides {
+      &-#{$side} {
+        #{$prop}: $global-default-border;
+
+        &-0 {
+          #{$prop}: none;
+        }
+      }
+    }
+  }
+}
+
+// Radius helpers .c-radius-{{size}}
+@if $enable-radius-classes == true {
+  .c-radius {
+    @include modifiers($radius, 'border-radius');
+  }
+}

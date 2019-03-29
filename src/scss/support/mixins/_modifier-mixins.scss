@@ -39,10 +39,10 @@
         @include modifiers($value, $attribute, $prefix, $separator);
       } @else if type-of($attribute) == 'list' {
         @each $a in $attribute {
-          #{$a}: $value;
+          #{$a}: $value !important;
         }
       } @else {
-        #{$attribute}: $value;
+        #{$attribute}: $value !important;
       }
     }
   }

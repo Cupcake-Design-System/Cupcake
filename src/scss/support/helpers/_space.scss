@@ -1,0 +1,66 @@
+// Space helpers
+@mixin spacer-class-export() {
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+      // Padding helpers .c-p-{{direction}}
+      .c#{$infix}-p {
+        @include modifiers($space, ('padding'));
+      }
+
+      .c#{$infix}-p-top {
+        @include modifiers($space, ('padding-top'));
+      }
+
+      .c#{$infix}-p-bottom {
+        @include modifiers($space, ('padding-bottom'));
+      }
+
+      .c#{$infix}-p-left {
+        @include modifiers($space, ('padding-left'));
+      }
+
+      .c#{$infix}-p-right {
+        @include modifiers($space, ('padding-right'));
+      }
+
+      .c#{$infix}-p-horizontal {
+        @include modifiers($space, ('padding-left', 'padding-right'));
+      }
+
+      .c#{$infix}-p-vertical {
+        @include modifiers($space, ('padding-top', 'padding-bottom'));
+      }
+
+      // Margin helpers .c-m-{{direction}}
+      .c#{$infix}-m {
+        @include modifiers($space, ('margin'));
+      }
+
+      .c#{$infix}-m-top {
+        @include modifiers($space, ('margin-top'));
+      }
+
+      .c#{$infix}-m-bottom {
+        @include modifiers($space, ('margin-bottom'));
+      }
+
+      .c#{$infix}-m-left {
+        @include modifiers($space, ('margin-left'));
+      }
+
+      .c#{$infix}-m-right {
+        @include modifiers($space, ('margin-right'));
+      }
+
+      .c#{$infix}-h-horizontal {
+        @include modifiers($space, ('margin-left', 'margin-right'));
+      }
+
+      .c#{$infix}-m-vertical {
+        @include modifiers($space, ('margin-top', 'margin-bottom'));
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+// Display classes - and responsive variations
+@mixin hidden($breakpoint) {
+  .c-#{$breakpoint}-hidden,
+  .c-hidden-#{$breakpoint} {
+    display: none !important;
+  }
+}
+
+
+@mixin hidden-class-export {
+  @each $bp in map-keys($breakpoints) {
+    @include media-breakpoint-up($bp) {
+      $infix: breakpoint-infix($bp, $breakpoints);
+
+      .c#{$infix}-d-none {
+        display: none !important;
+      }
+
+      .c#{$infix}-d-inline {
+        display: inline !important;
+      }
+
+      .c#{$infix}-d-inline-block {
+        display: inline-block !important;
+      }
+
+      .c#{$infix}-d-block {
+        display: block !important;
+      }
+
+      .c#{$infix}-d-table {
+        display: table !important;
+      }
+
+      .c#{$infix}-d-table-cell {
+        display: table-cell !important;
+      }
+
+      .c#{$infix}-d-flex {
+        display: flex !important;
+      }
+
+      .c#{$infix}-d-inline-flex {
+        display: inline-flex !important;
+      }
+    }
+  }
+
+  .c-hidden {
+    display: none !important;
+  }
+
+  @for $i from 1 through length($breakpoints) {
+    $breakpoint: nth(map-keys($breakpoints), $i);
+    $min-width: nth(map-values($breakpoints), $i);
+    $next-index: $i + 1;
+
+    @if $next-index <= length($breakpoints) {
+      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
+
+      @media (min-width: $min-width) and (max-width: $max-width) {
+        @include hidden($breakpoint);
+      }
+    } @else {
+      @media (min-width: $min-width) {
+        @include hidden($breakpoint);
+      }
+    }
+  }
+}
