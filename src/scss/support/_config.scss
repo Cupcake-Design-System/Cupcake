@@ -346,6 +346,25 @@ $breakpoints: (
 
 
 // --------------------------------------------
+// Media Object -------------------------------
+// --------------------------------------------
+$media-padding           : $space-sm $space-0 !default;
+$media-body-padding      : $space-md !default;
+$media-margin            : $space-0 $space-sm !default;
+$media-bg                : $color-white !default;
+$media-color             : $color-gray-7 !default;
+$media-stripe-bg         : $color-gray-0 !default;
+$media-hover-bg          : $media-stripe-bg !default;
+$media-header-bg         : $color-gray-0 !default;
+$media-border            : $color-gray-2 !default;
+$media-border-radius     : $global-default-radius !default;
+$media-action-color      : $color-gray-6 !default;
+$media-action-font-size  : $font-body-md !default;
+$media-action-line-height: $line-height-body-md !default;
+$media-min-height        : 48px !default;
+
+
+// --------------------------------------------
 // MODALS -------------------------------------
 // --------------------------------------------
 $modal-z-index                : 1050 !default;

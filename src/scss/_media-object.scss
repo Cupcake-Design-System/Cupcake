@@ -1,5 +1,17 @@
+$media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
+
 // Base Media Object
 .c-media {
+  display: flex;
+  line-height: 1;
+  color: $media-color;
+  padding: $media-padding;
+  align-items: flex-start;
+  background-color: $media-bg;
+  min-height: $media-min-height;
+  font-size: $media-action-font-size;
+  border-radius: $media-border-radius;
+
   > * {
     margin: $media-margin;
 
@@ -12,12 +24,6 @@
     }
   }
 
-  display: flex;
-  line-height: 1;
-  color: $media-color;
-  align-items: flex-start;
-  padding: $media-padding;
-
   &-body {
     flex: 1;
     min-width: 1px;
@@ -25,82 +31,97 @@
     > * {
       margin-bottom: $space-0;
     }
-  
+
     .c-media > {
       *:first-child {
         margin-left: $space-0;
       }
-  
+
       *:last-child {
         margin-right: $space-0;
       }
     }
+
+    & .c-media {
+      margin-left: $space-md;
+    }
   }
 
+  // Center align vertically
   &-middle {
     align-items: center;
   }
 
+  // Align to bottom
   &-bottom {
     align-items: flex-end;
   }
 
+  // Make a vertical style
   &-vertical {
+    &.c-media > * {
+      margin: $space-0;
+    }
+
+    display: flex;
+    text-align: center;
+    align-items: center;
     flex-direction: column;
+    border: 1px solid $media-border;
   }
 
+  // Titles
   &-title {
     flex: 1 1 0%;
   }
 
+  // Heading
   &-heading {
     margin-top: $space-0;
     margin-bottom: $space-0;
   }
 
-  &-new {
-    background-color: $media-new-bg;
+  // Actions
+  &-action {
+    opacity: 0;
+    transition: .5s;
+    text-align: center;
+    color: $media-action-color;
+    font-size: $media-action-font-size;
+    line-height: $media-action-line-height;
+
+    .c-media:hover & {
+      opacity: 1;
+    }
+
+    &-visible,
+    &-visible & {
+      opacity: 1;
+    }
+  }
+
+  // Block Actions
+  &-block-actions {
+    display: flex;
+    align-items: center;
+    margin-top: $space-xs;
+    justify-content: flex-start;
   }
 }
 
-
-.c-media-action {
-  opacity: 0;
-  transition: .5s;
-  text-align: center;
-  color: $media-action-color;
-  width: $media-action-width;
-  height: $media-action-height;
-  line-height: $media-action-height;
-
-  .c-media:hover & {
-    opacity: 1;
-  }
-
-  &-visible,
-  &-visible & {
-    opacity: 1;
-  }
-}
-
-
-.c-media-block-actions {
-  display: flex;
-  transition: .5s;
-  align-items: center;
-  margin-top: $space-sm;
-  justify-content: space-between;
-}
-
-
-$media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
-
+// List Media Object
 .c-media-list {
   list-style: none;
   padding-left: $space-0;
-}
+  border-radius: $global-default-radius;
 
-.c-media-list {
+  // Expanded second level style
+  > .c-media-body {
+    background-color: $media-bg;
+    padding: $media-body-padding;
+    border-bottom: 1px solid $media-border;
+  }
+
   > .c-media#{$media-excludes},
   .c-media-list-body > .c-media {
     margin-bottom: $space-0;
@@ -109,49 +130,56 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
   & ul {
     padding-left: $space-0;
   }
-}
 
-.c-media-list-hover {
-  > .c-media#{$media-excludes}:hover,
-  .c-media-list-body > .c-media:hover {
-    background-color: $media-hover-bg;
-    cursor: pointer;
-  }
-}
-
-.c-media-list-divided {
-  > .c-media#{$media-excludes},
-  .c-media-list-body > .c-media {
-    border-bottom: 1px solid $media-border;
-
-    &:last-child {
-      border-bottom: 0;
+  // Make items hoverable
+  &-hover {
+    > .c-media#{$media-excludes}:hover,
+    .c-media-list-body > .c-media:hover {
+      background-color: $media-hover-bg;
+      cursor: pointer;
     }
   }
-}
 
-.c-media-list-bordered {
-  border: 1px solid $media-border;
-}
+  // Add dividing lines
+  &-divided {
+    > .c-media#{$media-excludes},
+    .c-media-list-body > .c-media {
+      border-bottom: 1px solid $media-border;
 
-.c-media-list-striped {
-  .c-media#{$media-excludes}:nth-child(even) {
-    background-color: $media-stripe-bg;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
   }
-}
 
-.c-media-list-header {
-  border-bottom: 1px solid $media-border;
-  background-color: $media-header-bg;
-}
+  // Add surrounding border
+  &-bordered {
+    border: 1px solid $media-border;
+  }
 
-.c-media-list-footer {
-  border-top: 1px solid $media-border;
-  background-color: $media-header-bg;
-}
+  // Striped backgrounds
+  &-striped {
+    .c-media#{$media-excludes}:nth-child(even) {
+      background-color: $media-stripe-bg;
+    }
+  }
 
-.c-media-list .c-media-action-visible {
-  .c-media-action {
-    opacity: 1;
+  // List headers
+  &-header {
+    background-color: $media-header-bg;
+    border-bottom: 1px solid $media-border;
+
+    .c-media {
+      min-height: 0;
+    }
+  }
+
+  // List Footer
+  &-footer {
+    background-color: $media-header-bg;
+
+    .c-media {
+      min-height: 0;
+    }
   }
 }
