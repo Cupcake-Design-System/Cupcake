@@ -31,7 +31,7 @@
 }
 
 @if $enable-border-classes == true {
-  @include spacer-class-export;
+  @include border-class-export;
 }
 
 @if $enable-radius-classes == true {

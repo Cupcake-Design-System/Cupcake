@@ -1,10 +1,9 @@
 // Border helpers .c-bd-{{direction}}
 $border-sides : (
-  bd        : border,
-  bd-top    : border-top,
-  bd-right  : border-right,
-  bd-bottom : border-bottom,
-  bd-left   : border-left
+  top    : border-top,
+  right  : border-right,
+  bottom : border-bottom,
+  left   : border-left
 );
 
 
