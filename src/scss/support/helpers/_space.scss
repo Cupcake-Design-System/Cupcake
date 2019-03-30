@@ -2,63 +2,63 @@
 @mixin spacer-class-export() {
   @each $breakpoint in map-keys($breakpoints) {
     @include media-breakpoint-up($breakpoint) {
-      $infix: breakpoint-infix($breakpoint, $breakpoints);
+      $bp: breakpoint-infix($breakpoint, $breakpoints);
 
       // Padding helpers .c-p-{{direction}}
-      .c#{$infix}-p {
+      .c#{$bp}-p {
         @include modifiers($space, ('padding'));
       }
 
-      .c#{$infix}-p-top {
+      .c#{$bp}-p-top {
         @include modifiers($space, ('padding-top'));
       }
 
-      .c#{$infix}-p-bottom {
+      .c#{$bp}-p-bottom {
         @include modifiers($space, ('padding-bottom'));
       }
 
-      .c#{$infix}-p-left {
+      .c#{$bp}-p-left {
         @include modifiers($space, ('padding-left'));
       }
 
-      .c#{$infix}-p-right {
+      .c#{$bp}-p-right {
         @include modifiers($space, ('padding-right'));
       }
 
-      .c#{$infix}-p-horizontal {
+      .c#{$bp}-p-horizontal {
         @include modifiers($space, ('padding-left', 'padding-right'));
       }
 
-      .c#{$infix}-p-vertical {
+      .c#{$bp}-p-vertical {
         @include modifiers($space, ('padding-top', 'padding-bottom'));
       }
 
       // Margin helpers .c-m-{{direction}}
-      .c#{$infix}-m {
+      .c#{$bp}-m {
         @include modifiers($space, ('margin'));
       }
 
-      .c#{$infix}-m-top {
+      .c#{$bp}-m-top {
         @include modifiers($space, ('margin-top'));
       }
 
-      .c#{$infix}-m-bottom {
+      .c#{$bp}-m-bottom {
         @include modifiers($space, ('margin-bottom'));
       }
 
-      .c#{$infix}-m-left {
+      .c#{$bp}-m-left {
         @include modifiers($space, ('margin-left'));
       }
 
-      .c#{$infix}-m-right {
+      .c#{$bp}-m-right {
         @include modifiers($space, ('margin-right'));
       }
 
-      .c#{$infix}-h-horizontal {
+      .c#{$bp}-h-horizontal {
         @include modifiers($space, ('margin-left', 'margin-right'));
       }
 
-      .c#{$infix}-m-vertical {
+      .c#{$bp}-m-vertical {
         @include modifiers($space, ('margin-top', 'margin-bottom'));
       }
     }

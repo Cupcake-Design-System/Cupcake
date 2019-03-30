@@ -2,18 +2,18 @@
 @mixin float-class-export {
   @each $breakpoint in map-keys($breakpoints) {
     @include media-breakpoint-up($breakpoint) {
-      $infix: breakpoint-infix($breakpoint, $breakpoints);
+      $bp: breakpoint-infix($breakpoint, $breakpoints);
 
-      .c#{$infix}-pull-left {
-        float: left;
+      .c#{$bp}-pull-left {
+        float: left !important;
       }
 
-      .c#{$infix}-pull-right {
-        float: right;
+      .c#{$bp}-pull-right {
+        float: right !important;
       }
 
-      .c#{$infix}-pull-none {
-        float: none;
+      .c#{$bp}-pull-none {
+        float: none !important;
       }
     }
   }

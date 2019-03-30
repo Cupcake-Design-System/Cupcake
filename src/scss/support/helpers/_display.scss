@@ -8,39 +8,39 @@
 
 
 @mixin hidden-class-export {
-  @each $bp in map-keys($breakpoints) {
-    @include media-breakpoint-up($bp) {
-      $infix: breakpoint-infix($bp, $breakpoints);
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $bp: breakpoint-infix($breakpoint, $breakpoints);
 
-      .c#{$infix}-d-none {
+      .c#{$bp}-d-none {
         display: none !important;
       }
 
-      .c#{$infix}-d-inline {
+      .c#{$bp}-d-inline {
         display: inline !important;
       }
 
-      .c#{$infix}-d-inline-block {
+      .c#{$bp}-d-inline-block {
         display: inline-block !important;
       }
 
-      .c#{$infix}-d-block {
+      .c#{$bp}-d-block {
         display: block !important;
       }
 
-      .c#{$infix}-d-table {
+      .c#{$bp}-d-table {
         display: table !important;
       }
 
-      .c#{$infix}-d-table-cell {
+      .c#{$bp}-d-table-cell {
         display: table-cell !important;
       }
 
-      .c#{$infix}-d-flex {
+      .c#{$bp}-d-flex {
         display: flex !important;
       }
 
-      .c#{$infix}-d-inline-flex {
+      .c#{$bp}-d-inline-flex {
         display: inline-flex !important;
       }
     }

@@ -1,5 +1,5 @@
 // Shadow helpers .c-depth-{{size}}
-@mixin spacer-class-export($name: $shadow-prefix) {
+@mixin shadow-class-export($name: 'c-depth') {
   .#{$name} {
     @include modifiers($shadow, 'box-shadow');
   }

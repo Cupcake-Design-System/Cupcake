@@ -1,5 +1,5 @@
-@mixin center-class-export {
-  .c-center {
+@mixin center-class-export($name: 'c-center') {
+  .#{$name} {
     @include center(both);
 
     &-top {

@@ -7,8 +7,9 @@ $border-sides : (
   bd-left   : border-left
 );
 
-@if $enable-border-classes == true {
-  .c-bd {
+
+@mixin border-class-export($name: 'c-bd') {
+  .#{$name} {
     border: $global-default-border;
 
     // Border color helpers .c-bd-{{color}}
@@ -36,8 +37,8 @@ $border-sides : (
 }
 
 // Radius helpers .c-radius-{{size}}
-@if $enable-radius-classes == true {
-  .c-radius {
+@mixin radius-class-export($name: 'c-radius') {
+  .#{$name} {
     @include modifiers($radius, 'border-radius');
   }
 }

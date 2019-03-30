@@ -234,15 +234,15 @@
     @include assert {
       @include output {
         .font-weight {
-          @include modifiers($font-weight, 'font-weight', '-_-_');
+          @include modifiers($font-weight, 'font-weight');
         }
       }
       @include expect {
-        .font-weight-_-_heavy {font-weight: 900 !important; }
-        .font-weight-_-_bold {font-weight: 700 !important; }
-        .font-weight-_-_semibold {font-weight: 600 !important; }
-        .font-weight-_-_normal {font-weight: 500 !important; }
-        .font-weight-_-_light {font-weight: 300 !important; }
+        .font-weight-heavy {font-weight: 900 !important; }
+        .font-weight-bold {font-weight: 700 !important; }
+        .font-weight-semibold {font-weight: 600 !important; }
+        .font-weight-normal {font-weight: 500 !important; }
+        .font-weight-light {font-weight: 300 !important; }
       }
     }
   }

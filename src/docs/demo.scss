@@ -29,8 +29,8 @@ $docs-spacer-xxl: space(xl) + space(md);
   &-content {
     flex: 1;
     padding: 0 $docs-spacer-lg;
-    margin-left: $docs-sidebar-size;
     margin-top: $docs-spacer-xxl;
+    margin-left: $docs-sidebar-size;
 
     &-fullwidth {
       margin: $docs-spacer-xxl;
@@ -40,39 +40,39 @@ $docs-spacer-xxl: space(xl) + space(md);
 
 .docs-nav {
   ul {
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none;
   }
 
-  padding: $docs-spacer-xl $docs-spacer-lg;
-  width: $docs-sidebar-size;
+  order: -1;
   color: $text;
   height: 100%;
-  background-color: $docs-sidebar-bg;
-  border-right: 1px solid $color-gray-2;
-  order: -1;
-  white-space: nowrap;
+  z-index: 1000;
   position: fixed;
   overflow-y: auto;
-  z-index: 1000;
+  white-space: nowrap;
+  width: $docs-sidebar-size;
+  background-color: $docs-sidebar-bg;
+  border-right: 1px solid $color-gray-2;
+  padding: $docs-spacer-xl $docs-spacer-lg;
 
   &-header {
     height: 160px;
-    padding: $docs-spacer-lg $docs-spacer-sm;
     border-bottom: 1px solid $color-gray-1;
+    padding: $docs-spacer-lg $docs-spacer-sm;
   }
 
   &-title {
-    margin-bottom: $docs-spacer-md;
-    margin-top: $docs-spacer-lg;
-    padding: 0 $docs-spacer-sm;
-    color: $color-gray-5;
-    font-family: $font-family-sans;
-    font-size: 10px;
-    line-height: 14px;
     letter-spacing: 1px;
+    color: $color-gray-5;
+    font-size: $font-body-xs;
     text-transform: uppercase;
+    padding: 0 $docs-spacer-sm;
+    margin-top: $docs-spacer-lg;
+    font-family: $font-family-sans;
+    margin-bottom: $docs-spacer-md;
+    line-height: $line-height-body-xs;
 
     a {
       text-decoration: none;
@@ -90,28 +90,28 @@ $docs-spacer-xxl: space(xl) + space(md);
 
   &-item {
     color: $text;
+    font-size: $font-body-lg;
     font-family: $font-family-sans;
-    font-size: 14px;
 
     a {
       color: $text;
+      display: block;
       text-decoration: none;
       padding: 0 $docs-spacer-sm;
-      line-height: 40px;
-      display: block;
+      line-height: $line-height-header-xxl;
 
       &:hover {
-        background-color: $color-gray-1;
         border-radius: radius(md);
+        background-color: $color-gray-1;
       }
     }
 
     .current {
-      background-color: $color-gray-1;
-      font-weight: bold;
       display: block;
-      border-radius: radius(sm);
+      font-weight: bold;
       color: color(primary);
+      border-radius: radius(sm);
+      background-color: $color-gray-1;
     }
   }
 }
@@ -126,61 +126,61 @@ $docs-spacer-xxl: space(xl) + space(md);
 
 .cupcake {
   color: color(primary);
-  font-family: $font-family-sans;
-  font-size: 24px;
+  font-size: $font-header-xl;
+  line-height: $font-header-xl;
   font-weight: $font-weight-bold;
-  line-height: 24px;
+  font-family: $font-family-sans;
 }
 
 
 .docs-version {
   width: 96px;
-  border: 1px solid $color-gray-1;
-  border-radius: 2px;
-  background-color: white;
   color: $text;
-  font-family: $font-family-sans;
-  font-size: 10px;
-  font-weight: $font-weight-bold;
   letter-spacing: 1px;
-  line-height: 24px;
+  font-size: $font-body-xs;
+  text-transform: uppercase;
+  border-radius: $radius-sm;
+  background-color: white;
   padding: 0 $docs-spacer-sm;
   margin-top: $docs-spacer-sm;
-  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  font-family: $font-family-sans;
+  border: 1px solid $color-gray-1;
+  line-height: $line-height-body-xxl;
 }
 
 .layer-types {
   display: flex;
+  flex-wrap: wrap;
+  padding: $docs-spacer-md;
   align-items: space-around;
   justify-content: space-around;
-  flex-wrap: wrap;
   background-color: $color-gray-1;
-  padding: $docs-spacer-md;
 
   div {
+    display: flex;
     width: 7.5rem;
     height: 7.5rem;
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
-    background-color: white;
     margin: $docs-spacer-md;
+    background-color: white;
   }
 }
 
 .space {
   display: flex;
-  background-color: $color-gray-1;
   height: $docs-spacer-lg;
+  border-radius: $radius-sm;
   margin: $docs-spacer-sm 0;
-  border-radius: radius(sm);
+  background-color: $color-gray-1;
 
   &-block-title {
     color: $text;
-    font-size: 12px;
-    font-weight: 700;
     line-height: 20px;
+    font-size: $font-body-md;
+    font-weight: $font-weight-bold;
   }
 
   * {
@@ -219,38 +219,38 @@ $docs-spacer-xxl: space(xl) + space(md);
 .color-block {
   &-title {
     color: $text;
-    text-transform: capitalize;
-    font-size: 12px;
-    font-weight: bold;
     line-height: 20px;
+    font-size: $font-body-md;
+    text-transform: capitalize;
+    font-weight: $font-weight-bold;
   }
 
   .colors {
-    height: $docs-spacer-xxl;
     width: 100%;
     display: flex;
+    height: $docs-spacer-xxl;
 
     span {
       flex: 1;
       display: block;
-      border-radius: 3px;
-      padding: $docs-spacer-sm;
-      margin-right: $docs-spacer-lg;
       color: #ffffff;
-      font-size: 11px;
-      font-weight: bold;
-      line-height: 16px;
+      font-size: $font-body-sm;
+      padding: $docs-spacer-sm;
+      border-radius: $radius-sm;
       text-transform: capitalize;
+      margin-right: $docs-spacer-lg;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-body-sm;
 
       &:last-child {
         margin-right: 0;
       }
 
       &.info {
-        font-weight: normal;
         color: $text;
         font-size: 11px;
         line-height: 16px;
+        font-weight: normal;
         padding: $docs-spacer-sm 0;
       }
     }
@@ -258,10 +258,10 @@ $docs-spacer-xxl: space(xl) + space(md);
 }
 
 .type-block {
+  width: 100%;
   display: flex;
   padding: $docs-spacer-md 0;
   justify-content: space-between;
-  width: 100%;
 
   &:not(:first-child) {
     border-bottom: 1px solid $color-gray-1;
@@ -269,10 +269,10 @@ $docs-spacer-xxl: space(xl) + space(md);
 
   &-title {
     color: $text;
-    text-transform: capitalize;
     font-size: 12px;
     font-weight: bold;
     line-height: 20px;
+    text-transform: capitalize;
   }
 
   .type {
@@ -287,10 +287,10 @@ $docs-spacer-xxl: space(xl) + space(md);
 
 
       &.info {
-        font-weight: normal;
         color: $text;
         font-size: 11px;
         line-height: 16px;
+        font-weight: normal;
         padding: $docs-spacer-sm 0;
       }
     }
@@ -328,9 +328,9 @@ $docs-spacer-xxl: space(xl) + space(md);
     margin: $docs-spacer-sm 0;
 
     a {
+      font-size: 80%;
       color: color(primary);
       padding-left: $docs-spacer-sm;
-      font-size: 80%;
 
       &:hover {
         color: color(primary, 6);
@@ -340,10 +340,10 @@ $docs-spacer-xxl: space(xl) + space(md);
 
   &-subtitle {
     height: 40px;
-    color: $text-light;
-    font-weight: normal;
     font-size: 14px;
     line-height: 20px;
+    color: $text-light;
+    font-weight: normal;
   }
 
   &-header {
@@ -353,35 +353,15 @@ $docs-spacer-xxl: space(xl) + space(md);
   }
 }
 
-.c-text-primary-9 {
-  color: $color-primary-9 !important;
-}
-
-.c-text-success-9 {
-  color: $color-success-9 !important;
-}
-
-.c-text-warning-9 {
-  color: $color-warning-9 !important;
-}
-
-.c-text-danger-9 {
-  color: $color-danger-9 !important;
-}
-
-.c-text-gray-9 {
-  color: $color-gray-9 !important;
-}
-
 .docs-menu-toggle {
   display: none;
-  position: fixed;
   z-index: 1000;
+  position: fixed;
+  padding: 8px 10px;
+  margin-top: -20px;
   color: $color-gray-6;
   background-color: $color-gray-0;
   border: 1px solid $color-gray-2;
-  padding: 8px 10px;
-  margin-top: -20px;
 
   &:hover {
     cursor: pointer;
@@ -410,12 +390,12 @@ $docs-spacer-xxl: space(xl) + space(md);
     }
 
     .docs-menu-toggle {
-      margin-left: 215px;
       border-left: 0;
-      border-top-right-radius: radius(md);
-      border-bottom-right-radius: radius(md);
+      margin-left: 215px;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+      border-top-right-radius: radius(md);
+      border-bottom-right-radius: radius(md);
     }
 
     .docs-content {
@@ -424,19 +404,6 @@ $docs-spacer-xxl: space(xl) + space(md);
   }
 }
 
-// ::-webkit-scrollbar {
-//   width: .25em;
-//   height: .25em;
-
-//   &-track {
-//     background-color: $color-gray-0;
-//   }
-
-//   &-thumb {
-//     background-color: $color-gray-4;
-//     outline: none;
-//   }
-// }
 
 .docs-wrap,
 .docs-wrap .snippet {

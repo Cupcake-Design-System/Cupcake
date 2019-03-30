@@ -15,7 +15,7 @@
 }
 
 @if $enable-shadow-classes == true {
-  @include spacer-class-export;
+  @include shadow-class-export;
 }
 
 @if $enable-cursor-classes == true {
@@ -28,4 +28,12 @@
 
 @if $enable-spacer-classes == true {
   @include spacer-class-export;
+}
+
+@if $enable-border-classes == true {
+  @include spacer-class-export;
+}
+
+@if $enable-radius-classes == true {
+  @include radius-class-export;
 }
