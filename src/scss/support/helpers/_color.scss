@@ -1,0 +1,13 @@
+@mixin color-class-export($bgName: 'c-bg', $textName: 'c-text') {
+  // BG helpers .c-bg-{{color}}
+  .#{$bgName} {
+    @include modifiers($color, 'background-color');
+    @include modifiers($theme-colors, 'background-color');
+  }
+
+  // Text helpers .c-text-colors
+  .#{$textName} {
+    @include modifiers($color, 'color');
+    @include modifiers($theme-colors, 'color');
+  }
+}

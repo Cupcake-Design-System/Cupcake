@@ -1,4 +1,24 @@
 // --------------------------------------------
+// GLOBAL BOOLEANS & SETTINGS -----------------
+// --------------------------------------------
+$enable-reset         : true !default;
+$enable-shadow-classes: true !default;
+$enable-color-classes : true !default;
+$enable-spacer-classes: true !default;
+$enable-border-classes: true !default;
+$enable-radius-classes: true !default;
+$enable-float-classes : true !default;
+$enable-flex-classes  : true !default;
+$enable-hidden-classes: true !default;
+$enable-cursor-classes: true !default;
+$enable-center-classes: true !default;
+$white-label          : false !default;
+
+$global-default-border: 1px solid $color-gray-4 !default;
+$global-default-radius: $radius-sm !default;
+$global-disabled-bg   : $color-gray-3 !default;
+
+// --------------------------------------------
 // ALERTS & TOASTS ----------------------------
 // --------------------------------------------
 $alert-border               : 1px solid !default;

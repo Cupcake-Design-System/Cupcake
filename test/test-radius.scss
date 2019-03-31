@@ -21,25 +21,25 @@ $radius-prefix: 'radius';
       }
       @include expect {
         .radius-0 {
-          border-radius: 0
-        }
-        .radius-square {
-          border-radius: 0
+          border-radius: 0 !important;
         }
         .radius-sm {
-          border-radius: 2px
+          border-radius: 2px !important;
         }
         .radius-md {
-          border-radius: 4px
+          border-radius: 4px !important;
         }
         .radius-lg {
-          border-radius: 8px
-        }
-        .radius-round {
-          border-radius: 200px
+          border-radius: 8px !important;
         }
         .radius-pill {
-          border-radius: 50px
+          border-radius: 50px !important;
+        }
+        .radius-round {
+          border-radius: 200px !important;
+        }
+        .radius-square {
+          border-radius: 0 !important;
         }
       }
     }

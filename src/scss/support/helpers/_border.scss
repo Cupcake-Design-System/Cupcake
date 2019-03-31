@@ -1,0 +1,43 @@
+// Border helpers .c-bd-{{direction}}
+$border-sides : (
+  top    : border-top,
+  right  : border-right,
+  bottom : border-bottom,
+  left   : border-left
+);
+
+
+@mixin border-class-export($name: 'c-bd') {
+  .#{$name} {
+    border: $global-default-border;
+
+    // Border color helpers .c-bd-{{color}}
+    @include modifiers($color, 'border-color');
+    @include modifiers($theme-colors, 'border-color');
+
+    // Border 0 to remove
+    &-0 {
+      /* stylelint-disable */
+      border: none;
+      /* stylelint-enable */
+    }
+
+    // Border sides
+    @each $side, $prop in $border-sides {
+      &-#{$side} {
+        #{$prop}: $global-default-border;
+
+        &-0 {
+          #{$prop}: none;
+        }
+      }
+    }
+  }
+}
+
+// Radius helpers .c-radius-{{size}}
+@mixin radius-class-export($name: 'c-radius') {
+  .#{$name} {
+    @include modifiers($radius, 'border-radius');
+  }
+}
