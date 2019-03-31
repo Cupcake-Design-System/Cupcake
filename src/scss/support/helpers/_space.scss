@@ -54,7 +54,7 @@
         @include modifiers($space, ('margin-right'));
       }
 
-      .c#{$bp}-h-horizontal {
+      .c#{$bp}-m-horizontal {
         @include modifiers($space, ('margin-left', 'margin-right'));
       }
 
