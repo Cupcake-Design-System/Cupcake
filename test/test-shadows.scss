@@ -21,16 +21,16 @@ $shadow-prefix: 'shadow';
       }
       @include expect {
         .shadow-xs {
-          box-shadow: 0 2px 4px -2px rgba(33, 37, 41, 0.1)
+          box-shadow: 0 2px 4px -2px rgba(33, 37, 41, 0.1) !important
         }
         .shadow-sm {
-          box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1)
+          box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1) !important
         }
         .shadow-md {
-          box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1)
+          box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1) !important
         }
         .shadow-lg {
-          box-shadow: 0 8px 8px -2px rgba(33, 37, 41, 0.1)
+          box-shadow: 0 8px 8px -2px rgba(33, 37, 41, 0.1) !important
         }
       }
     }

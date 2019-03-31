@@ -1,0 +1,6 @@
+// Shadow helpers .c-depth-{{size}}
+@mixin shadow-class-export($name: 'c-depth') {
+  .#{$name} {
+    @include modifiers($shadow, 'box-shadow');
+  }
+}

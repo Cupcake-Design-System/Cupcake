@@ -1,0 +1,124 @@
+// Flex classes - and responsive variations
+@mixin flex-responsive-class-export {
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $bp: breakpoint-infix($breakpoint, $breakpoints);
+
+      .c#{$bp}-flex-row {
+        flex-direction: row !important;
+      }
+
+      .c#{$bp}-flex-column {
+        flex-direction: column !important;
+      }
+
+      .c#{$bp}-flex-row-reverse {
+        flex-direction: row-reverse !important;
+      }
+
+      .c#{$bp}-flex-column-reverse {
+        flex-direction: column-reverse !important;
+      }
+
+      .c#{$bp}-flex-wrap {
+        flex-wrap: wrap !important;
+      }
+
+      .c#{$bp}-flex-nowrap {
+        flex-wrap: nowrap !important;
+      }
+
+      .c#{$bp}-flex-wrap-reverse {
+        flex-wrap: wrap-reverse !important;
+      }
+
+      .c#{$bp}-justify-start {
+        justify-content: flex-start !important;
+      }
+
+      .c#{$bp}-justify-end {
+        justify-content: flex-end !important;
+      }
+
+      .c#{$bp}-justify-center {
+        justify-content: center !important;
+      }
+
+      .c#{$bp}-justify-space-between {
+        justify-content: space-between !important;
+      }
+
+      .c#{$bp}-justify-space-around {
+        justify-content: space-around !important;
+      }
+
+      .c#{$bp}-align-top {
+        align-items: flex-start !important;
+      }
+
+      .c#{$bp}-align-bottom {
+        align-items: flex-end !important;
+      }
+
+      .c#{$bp}-align-center {
+        align-items: center !important;
+      }
+
+      .c#{$bp}-align-baseline {
+        align-items: baseline !important;
+      }
+
+      .c#{$bp}-align-stretch {
+        align-items: stretch !important;
+      }
+
+      .c#{$bp}-align-content-start {
+        align-content: flex-start !important;
+      }
+
+      .c#{$bp}-align-content-end {
+        align-content: flex-end !important;
+      }
+
+      .c#{$bp}-align-content-center {
+        align-content: center !important;
+      }
+
+      .c#{$bp}-align-content-between {
+        align-content: space-between !important;
+      }
+
+      .c#{$bp}-align-content-around {
+        align-content: space-around !important;
+      }
+
+      .c#{$bp}-align-content-stretch {
+        align-content: stretch !important;
+      }
+
+      .c#{$bp}-align-self-auto {
+        align-self: auto !important;
+      }
+
+      .c#{$bp}-align-self-top {
+        align-self: flex-start !important;
+      }
+
+      .c#{$bp}-align-self-bottom {
+        align-self: flex-end !important;
+      }
+
+      .c#{$bp}-align-self-center {
+        align-self: center !important;
+      }
+
+      .c#{$bp}-align-self-baseline {
+        align-self: baseline !important;
+      }
+
+      .c#{$bp}-align-self-stretch {
+        align-self: stretch !important;
+      }
+    }
+  }
+}
