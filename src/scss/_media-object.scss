@@ -16,11 +16,11 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
     margin: $media-margin;
 
     &:first-child {
-      margin-left: $space-md;
+      margin-left: $media-body-padding;
     }
 
     &:last-child {
-      margin-right: $space-md;
+      margin-right: $media-body-padding;
     }
   }
 
@@ -43,7 +43,7 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
     }
 
     & .c-media {
-      margin-left: $space-md;
+      margin-left: $media-body-padding;
     }
   }
 
