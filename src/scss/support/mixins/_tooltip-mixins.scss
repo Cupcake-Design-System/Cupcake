@@ -1,0 +1,66 @@
+@mixin tooltip-color($bg: $tooltip-default-bg, $color: $tooltip-default-color) {
+  &::after {
+    color: $color;
+    background: $bg;
+  }
+
+  &::before {
+    border-top-color: $bg;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  &[data-tooltip-conf*='right'] {
+    &::before {
+      border-right-color: $bg;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+    }
+  }
+
+  &[data-tooltip-conf*='bottom'] {
+    &::before {
+      border-bottom-color: $bg;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+  }
+
+  &[data-tooltip-conf*='left'] {
+    &::before {
+      border-left-color: $bg;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+@mixin arrowPosition($side) {
+  border-style: solid;
+
+  @if $side == top {
+    border-top-width: $tooltip-border-width;
+    border-left-width: $tooltip-border-width;
+    border-right-width: $tooltip-border-width;
+    border-bottom-width: 0;
+  } @else if $side == right {
+    border-left-width: 0;
+    border-top-width: $tooltip-border-width;
+    border-right-width: $tooltip-border-width;
+    border-bottom-width: $tooltip-border-width;
+  } @else if $side == bottom {
+    border-top-width: 0;
+    border-left-width: $tooltip-border-width;
+    border-right-width: $tooltip-border-width;
+    border-bottom-width: $tooltip-border-width;
+  } @else if $side == left {
+    border-right-width: 0;
+    border-top-width: $tooltip-border-width;
+    border-left-width: $tooltip-border-width;
+    border-bottom-width: $tooltip-border-width;
+  }
+}

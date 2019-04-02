@@ -1,0 +1,236 @@
+// CSS TOOLTIPS
+[data-tooltip] {
+  position: relative;
+
+  // Bubble
+  &::after {
+    content: attr(data-tooltip);
+    left: 50%;
+    opacity: 0;
+    bottom: 100%;
+    z-index: 100000;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    font-style: normal;
+    white-space: nowrap;
+    pointer-events: none;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    padding: $tooltip-padding;
+    backface-visibility: hidden;
+    max-width: $tooltip-max-width;
+    font-size: $tooltip-font-size;
+    transform: translate(-50%, 12px);
+    line-height: $tooltip-line-height;
+    border-radius: $tooltip-bd-radius;
+    transition: opacity .3s $tooltip-transition-style, transform .3s $tooltip-transition-style;
+  }
+
+  // Arrow
+  &::before {
+    @include arrowPosition(top);
+
+    content: '';
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: -2px;
+    opacity: 0;
+    z-index: 110000;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: translate(-50%, calc(-50% - 6px));
+    transition: opacity .1s $tooltip-transition-style 0s, transform .6s $tooltip-transition-style 0s;
+  }
+
+  @include tooltip-color;
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+
+    &::before {
+      transform: translate(-50%, calc(-50% - 2px));
+      transition: opacity .1s $tooltip-transition-style .1s, transform .6s $tooltip-transition-style .1s;
+    }
+
+    &::after {
+      transform: translate(-50%, -6px);
+    }
+  }
+
+  // Positions
+  &[data-tooltip-conf*='right'] {
+    &::before {
+      @include arrowPosition(right);
+
+      top: 50%;
+      left: auto;
+      right: -$tooltip-arrow-position;
+      transform: translate(calc(-50% + 7px), -50%);
+    }
+
+    &::after {
+      top: 50%;
+      left: 100%;
+      bottom: auto;
+      transform: translate(-12px, -50%);
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        transform: translate(calc(-50% + 3px), -50%);
+      }
+
+      &::after {
+        transform: translate(7px, -50%);
+      }
+    }
+  }
+
+  &[data-tooltip-conf*='bottom'] {
+    &::before {
+      @include arrowPosition(bottom);
+
+      left: 50%;
+      top: auto;
+      bottom: -$tooltip-arrow-position;
+      transform: translate(-50%, calc(-50% + 6px));
+    }
+
+    &::after {
+      left: 50%;
+      top: 100%;
+      bottom: auto;
+      transform: translate(-50%, -12px);
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        transform: translate(-50%, calc(-50% + 2px));
+      }
+
+      &::after {
+        transform: translate(-50%, 6px);
+      }
+    }
+  }
+
+  &[data-tooltip-conf*='left'] {
+    &::before {
+      @include arrowPosition(left);
+
+      top: 50%;
+      width: 0;
+      height: 0;
+      left: -2px;
+      transform: translate(calc(-50% - 8px), -50%);
+    }
+
+    &::after {
+      top: 50%;
+      left: auto;
+      right: 100%;
+      bottom: auto;
+      transform: translate(12px, -50%);
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        transform: translate(-7px, -50%);
+      }
+
+      &::before {
+        transform: translate(calc(-50% - 3px), -50%);
+      }
+    }
+  }
+
+  // Multiline
+  &[data-tooltip-conf*='multiline'] {
+    &::after {
+      min-width: 180px;
+      text-overflow: clip;
+      white-space: normal;
+      word-break: break-word;
+    }
+  }
+
+  // Delay
+  &[data-tooltip-conf*='delay'] {
+    &::before {
+      transition: opacity .2s $tooltip-transition-style 0s, transform .3s $tooltip-transition-style 0s;
+    }
+
+    &::after {
+      transition: opacity .3s $tooltip-transition-style 0s, transform .3s $tooltip-transition-style 0s;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        transition: opacity .2s $tooltip-transition-style .5s, transform .6s $tooltip-transition-style .5s;
+      }
+
+      &::after {
+        transition: opacity .3s $tooltip-transition-style .4s, transform .3s $tooltip-transition-style .4s;
+      }
+    }
+  }
+
+  // Shadow
+  &[data-tooltip-conf*='shadow'] {
+    &::after {
+      box-shadow: $tooltip-shadow;
+    }
+  }
+
+  // No Fading {
+  &[data-tooltip-conf*='no-fade'] {
+    &::before,
+    &::after {
+      transition: none;
+    }
+  }
+
+  // No Arrow {
+  &[data-tooltip-conf*='no-arrow'] {
+    &::before {
+      display: none;
+    }
+  }
+
+  // Square {
+  &[data-tooltip-conf*='square'] {
+    &::after {
+      border-radius: $radius-0;
+    }
+  }
+
+  // Types
+  &[data-tooltip-conf*='invert'] {
+    @include tooltip-color($tooltip-invert-bg, $tooltip-invert-color);
+  }
+
+  // Color loop
+  @each $name, $color in $tooltip-palette {
+    &[data-tooltip-conf*='#{$name}'] {
+      @include tooltip-color($color, $color-white);
+    }
+  }
+
+  // Hide if has no message
+  &[data-tooltip=''] {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
