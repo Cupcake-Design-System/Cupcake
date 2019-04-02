@@ -3,9 +3,9 @@
   {{#each items}}
   <div id="{{@key}}">
     <div class="docs-section-header">
-      <div class="docs-section-title">{{name}}</div>
+      <div class="c-header-lg">{{name}}</div>
       {{#if notes}}
-      <div class="docs-section-subtitle">
+      <div class="c-text-xl">
         {{{notes}}}
       </div>
       {{/if}}
@@ -17,10 +17,10 @@
   <div id="{{@key}}">
     <div class="docs-section-header">
         {{#unless hide-snippets}}
-      <div class="docs-section-title">{{name}} <a href="pages/{{@key}}.html" target="_blank">View Test Page</a></div>
+      <div class="c-header-lg c-m-bottom-xs">{{name}} <a class="c-text-primary c-text-md c-p-left-sm" href="pages/{{@key}}.html" target="_blank">View Test Page</a></div>
       {{/unless}}
       {{#if notes}}
-      <div class="docs-section-subtitle">
+      <div class="c-text-xl c-text-gray-7">
         {{{notes}}}
       </div>
       {{/if}}
