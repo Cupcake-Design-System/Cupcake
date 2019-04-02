@@ -4,6 +4,7 @@
 @mixin avatar-base($size: $avatar-default-size) {
   width: $size;
   height: $size;
+  flex-shrink: 0;
   text-align: center;
   position: relative;
   line-height: $size;
