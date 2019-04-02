@@ -17,7 +17,31 @@ $(document).on("click", function (event) {
 });
 });
 
+
 </script>
+
+
+{{#if loader}}
+<script>
+$("#fullscreenLoaderBtn").click(function(){
+  $("#fullscreenLoader").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader").click(function(){
+  $("#fullscreenLoader").removeClass("c-loader-visible");
+});
+
+$("#fullscreenLoaderBtn2").click(function(){
+  $("#fullscreenLoader2").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader2").click(function(){
+  $("#fullscreenLoader2").removeClass("c-loader-visible");
+});
+
+</script>
+{{/if}}
+
 
 {{#if modals}}
 <script>

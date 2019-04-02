@@ -366,6 +366,22 @@ $breakpoints: (
 
 
 // --------------------------------------------
+// Loaders ------------------------------------
+// --------------------------------------------
+$skeleton-bar                : linear-gradient(140deg, rgba($color-white, 0), rgba($color-white, .6) 50%, rgba($color-white, 0) 100%) !default;
+$skeleton-bar-animation      : skeletonIteration 2s infinite !default;
+$skeleton-bar-height         : 8px !default;
+$skeleton-bg-color           : $color-gray-3 !default;
+$loader-color                : $color-primary-7 !default;
+$loader-bg-color             : $color-gray-3 !default;
+$loader-size                 : 32px !default;
+$loader-full-page-size       : 48px !default;
+$loader-border-size          : 4px !default;
+$loader-full-page-border-size: 6px !default;
+$loader-animation-duration   : .71s !default;
+
+
+// --------------------------------------------
 // Media Object -------------------------------
 // --------------------------------------------
 $media-padding           : $space-sm $space-0 !default;

@@ -1,0 +1,57 @@
+---
+title: Test
+layout: blank
+loader: true
+---
+
+<button id="fullscreenLoaderBtn" class="c-btn c-btn-secondary c-m-xs">Loader Fullscreen</button>
+<button id="fullscreenLoaderBtn2" class="c-btn c-btn-secondary c-m-xs">IHS Fullscreen</button>
+
+
+<div class="c-loader-full-page-backdrop" id="fullscreenLoader">
+  <div class="c-full-page-loader"></div>
+</div>
+
+<div class="c-loader-full-page-backdrop" id="fullscreenLoader2">
+    <div class="c-ihs-loader">
+    </div>
+</div>
+
+{{> space}}
+
+
+<h3 class="c-m-bottom-sm c-text-bold">Skeleton Loader</h3>
+<div class="c-row">
+  <div class="c-col-md-4">
+    <div class="c-card">
+      <header class="c-card-header">
+        <div class="c-card-header-title">
+          Default
+        </div>
+        <div class="c-card-header-menu">
+          <a class="c-btn c-btn-box c-btn-secondary" href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
+        </div>
+      </header>
+      <div class="c-card-content">
+        <div class="c-skeleton-loading"></div>
+        <hr class="c-hr" />
+        <div class="c-skeleton-loading"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  {{> space}}
+
+
+<h3 class="c-m-bottom-sm c-text-bold">Element Loader w/backdrop</h3>
+<div class="c-row">
+  <div class="c-col-md-4">
+    <div class="c-card">
+      <div class="c-card-content c-loader-backdrop c-loader-visible">
+        <div class="c-loader"></div>
+      </div>
+    </div>
+  </div>
+</div>

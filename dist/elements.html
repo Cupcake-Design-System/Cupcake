@@ -1127,6 +1127,35 @@
 </div>
 
 
+<div class="docs-section" id="loader">
+  <div id="loader">
+    <div class="docs-section-header">
+      <div class="c-header-lg c-m-bottom-xs">Loader <a class="c-text-primary c-text-md c-p-left-sm" href="pages/loader.html" target="_blank">View Test Page</a></div>
+      <div class="c-text-xl c-text-gray-7">
+        <p>Loaders are used to indicate a transitional state where content is in the process of loading.</p>
+
+      </div>
+    </div>
+    <div class="docs-section-preview"><div class="c-row">
+	<div class="c-col-md-6">
+		<div class="c-card">
+			<div class="c-card-content c-loader-visible">
+				<div class="c-loader"></div>
+			</div>
+		</div>
+	</div>
+	<div class="c-col-md-6">
+		<div class="c-card">
+			<div class="c-card-content">
+				<div class="c-skeleton-loading"></div>
+			</div>
+		</div>
+	</div>
+</div></div>
+  </div>
+</div>
+
+
 <div class="docs-section" id="media-objects">
   <div id="media-objects">
     <div class="docs-section-header">
@@ -1417,6 +1446,7 @@
           <li class="docs-nav-item"><a href="elements.html#forms">Forms</a></li>
           <li class="docs-nav-item"><a href="elements.html#grid">Grid</a></li>
           <li class="docs-nav-item"><a href="elements.html#header">Header</a></li>
+          <li class="docs-nav-item"><a href="elements.html#loader">Loader</a></li>
           <li class="docs-nav-item"><a href="elements.html#media-objects">Media Objects</a></li>
           <li class="docs-nav-item"><a href="elements.html#modal">Modal</a></li>
           <li class="docs-nav-item"><a href="elements.html#pagination">Pagination</a></li>
@@ -1449,7 +1479,29 @@ $(document).on("click", function (event) {
 });
 });
 
+
 </script>
+
+
+<script>
+$("#fullscreenLoaderBtn").click(function(){
+  $("#fullscreenLoader").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader").click(function(){
+  $("#fullscreenLoader").removeClass("c-loader-visible");
+});
+
+$("#fullscreenLoaderBtn2").click(function(){
+  $("#fullscreenLoader2").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader2").click(function(){
+  $("#fullscreenLoader2").removeClass("c-loader-visible");
+});
+
+</script>
+
 
 <script>
 	// Some simple js heavily modified from fabricators core for the sidebar
