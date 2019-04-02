@@ -64,6 +64,7 @@
           <li class="docs-nav-item"><a href="elements.html#switch">Switch</a></li>
           <li class="docs-nav-item"><a href="elements.html#table">Table</a></li>
           <li class="docs-nav-item"><a href="elements.html#tabs">Tabs</a></li>
+          <li class="docs-nav-item"><a href="elements.html#tooltips">Tooltips</a></li>
         </ul>
       </ul>
     
@@ -90,6 +91,21 @@ $(document).on("click", function (event) {
 });
 });
 
+$("#fullscreenLoaderBtn").click(function(){
+  $("#fullscreenLoader").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader").click(function(){
+  $("#fullscreenLoader").removeClass("c-loader-visible");
+});
+
+$("#fullscreenLoaderBtn2").click(function(){
+  $("#fullscreenLoader2").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader2").click(function(){
+  $("#fullscreenLoader2").removeClass("c-loader-visible");
+});
 
 </script>
 

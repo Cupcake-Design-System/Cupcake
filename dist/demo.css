@@ -2,7 +2,7 @@
 /* ----------------------- */
 /* 🎂 Cupcake Sprinkles 🎂 */
 /* ----------------------- */
-@keyframes loader-iteration {
+@keyframes skeletonIteration {
   to {
     background-position: 300% 0;
   }

@@ -470,6 +470,25 @@ $switch-colors: () !default;
 
 
 // --------------------------------------------
+// TOOLTIPS -----------------------------------
+// --------------------------------------------
+$tooltip-max-width       : 300px !default;
+$tooltip-padding         : $space-xs $space-sm !default;
+$tooltip-font-size       : $font-body-md !default;
+$tooltip-line-height     : $line-height-body-md !default;
+$tooltip-bd-radius       : $global-default-radius !default;
+$tooltip-shadow          : $shadow-lg !default;
+$tooltip-default-bg      : $color-gray-9 !default;
+$tooltip-default-color   : $color-white !default;
+$tooltip-invert-bg       : $color-white !default;
+$tooltip-invert-color    : $color-gray-9 !default;
+$tooltip-transition-style: cubic-bezier(0.73, 0.01, 0, 1) !default;
+$tooltip-border-width    : 4px !default;
+$tooltip-arrow-position  : 6px !default;
+$tooltip-palette         : $theme-colors !default;
+
+
+// --------------------------------------------
 // TABS ---------------------------------------
 // --------------------------------------------
 $tabs-color             : $color-gray-7 !default;

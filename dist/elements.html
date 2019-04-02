@@ -1412,6 +1412,54 @@
 </div>
 
 
+<div class="docs-section" id="tooltips">
+  <div id="tooltips">
+    <div class="docs-section-header">
+      <div class="c-header-lg c-m-bottom-xs">Tooltips <a class="c-text-primary c-text-md c-p-left-sm" href="pages/tooltips.html" target="_blank">View Test Page</a></div>
+      <div class="c-text-xl c-text-gray-7">
+        <p>Tooltips provide additional information upon hover or focus. They often contain helper text that is contextual to an element.</p>
+
+      </div>
+    </div>
+    <div class="docs-section-preview"><div class="c-row">
+	<div class="c-col">
+		<span data-tooltip="Tooltip Text" class="c-btn c-btn-secondary c-m-horizontal-md">
+			Default
+		</span>
+
+		<span data-tooltip="Tooltip Text" data-tooltip-conf="invert shadow" class="c-btn c-btn-secondary c-m-horizontal-md">
+			Invert
+		</span>
+
+		<span data-tooltip="Tooltip Text" data-tooltip-conf="primary" class="c-btn c-btn-secondary c-m-horizontal-md">
+			Primary
+		</span>
+
+		<span data-tooltip="A pure CSS Tooltip. Super easy to use, No JavaScript required." data-tooltip-conf="primary multiline" class="c-btn c-btn-secondary c-m-horizontal-md">
+			Multiline
+		</span>
+
+		<span data-tooltip="Tooltip Text" data-tooltip-conf="no-fade" class="c-btn c-btn-secondary c-m-horizontal-md">
+			No Fade
+		</span>
+
+		<span data-tooltip="Tooltip Text" data-tooltip-conf="shadow" class="c-btn c-btn-secondary c-m-horizontal-md">
+			Shadow
+		</span>
+
+		<span data-tooltip="Tooltip Text" data-tooltip-conf="no-arrow" class="c-btn c-btn-secondary c-m-horizontal-md">
+			No Arrow
+		</span>
+
+		<span data-tooltip="Tooltip Text" data-tooltip-conf="square" class="c-btn c-btn-secondary c-m-horizontal-md">
+			Square
+		</span>
+	</div>
+</div></div>
+  </div>
+</div>
+
+
     </main>
     <nav class="docs-nav">
       <div class="docs-nav-header">
@@ -1453,6 +1501,7 @@
           <li class="docs-nav-item"><a href="elements.html#switch">Switch</a></li>
           <li class="docs-nav-item"><a href="elements.html#table">Table</a></li>
           <li class="docs-nav-item"><a href="elements.html#tabs">Tabs</a></li>
+          <li class="docs-nav-item"><a href="elements.html#tooltips">Tooltips</a></li>
         </ul>
       </ul>
     
@@ -1479,6 +1528,21 @@ $(document).on("click", function (event) {
 });
 });
 
+$("#fullscreenLoaderBtn").click(function(){
+  $("#fullscreenLoader").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader").click(function(){
+  $("#fullscreenLoader").removeClass("c-loader-visible");
+});
+
+$("#fullscreenLoaderBtn2").click(function(){
+  $("#fullscreenLoader2").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader2").click(function(){
+  $("#fullscreenLoader2").removeClass("c-loader-visible");
+});
 
 </script>
 
