@@ -1,0 +1,209 @@
+.c-skeleton {
+  &-loading {
+    @include skeleton-loader-mixin;
+  }
+
+  &-bar {
+    @include skeleton-bar(0, 0, $position: relative);
+
+    margin: $space-sm 0; // make it similar to text line height
+  }
+}
+
+.bg-svg {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 80 80' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' id='ihsLoader'%3E%3Cstyle%3E%0A@keyframes example %7B 0%25 %7B fill: transparent; %7D 100%25 %7B fill: %23008e89; %7D%0A%7D%0A%23ihsLoader * %7B animation-duration: 2.4s; animation-iteration-count: infinite; animation-timing-function: linear; fill: %23f1f3f5;%0A%7D %23Y %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: .1s;%0A%7D %23X %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: .2s;%0A%7D %23W %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: .3s;%0A%7D %23V %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: .4s;%0A%7D %23U %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: .5s;%0A%7D %23T %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: .6s;%0A%7D %23S %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: .7s;%0A%7D %23R %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: .8s;%0A%7D %23Q %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: .9s;%0A%7D %23P %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 1s;%0A%7D %23N %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 1.1s;%0A%7D %23M %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 1.2s;%0A%7D %23L %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 1.3s;%0A%7D %23K %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 1.4s;%0A%7D %23J %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 1.5s;%0A%7D %23I %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 1.6s;%0A%7D %23H %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 1.7s;%0A%7D %23G %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 1.8s;%0A%7D %23F %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 1.9s;%0A%7D %23E %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 2s;%0A%7D %23D %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 2.1s;%0A%7D %23C %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 2.2s;%0A%7D %23B %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 2.3s;%0A%7D %23A %7B animation-timing-function: linear; animation-name: example; fill: %23f8f9fa; animation-delay: 2.4s;%0A%7D %3C/style%3E%3Cg id='child' fill-rule='nonzero'%3E%3Cpath d='M71,14.57 C70.33,13.74 69.61,12.96 68.89,12.18 L67.89,20.74 L67.6,22.83 C67.6,22.83 67.72,23.98 67.72,24.57 C67.7267983,25.2600172 67.6732612,25.9493078 67.56,26.63 L71,14.57 Z' id='A'/%3E%3Cpath d='M65.63,17.68 C66.6931174,19.215112 67.3784071,20.9797329 67.63,22.83 L67.92,20.74 L63.34,7.46 C62.28,6.74 61.22,6.02 60.12,5.35 L64,14.13 L65.63,17.68 Z' id='B'/%3E%3Cpath d='M54,2.46 C54,2.46 52.75,2 52.21,1.84 C51.41,1.55 49.89,1.18 49.89,1.18 L60,11.85 L61.25,13.71 C63.0128027,14.6683714 64.5160176,16.0411704 65.63,17.71 L64,14.13 L54,2.46 Z' id='C'/%3E%3Cpath d='M60,11.85 L61.24,13.71 C60.87,13.51 60.49,13.33 60.11,13.17 C59.7832776,13.0352399 59.4494485,12.9183997 59.11,12.82 L56.58,11.13 L39.12,0.02 C39.12,0.02 40.46,0.02 41.38,0.02 C42.3,0.02 43.38,0.14 43.38,0.14 L60,11.85 Z' id='D'/%3E%3Cpath d='M32.78,0.57 C31.4993795,0.771023079 30.2357815,1.06853688 29,1.46 L54.05,11.18 L56.23,12.27 C57.218912,12.3330856 58.1962793,12.5178113 59.14,12.82 L56.61,11.13 L32.78,0.57 Z' id='E'/%3E%3Cpath d='M22.62,3.95 C21.29,4.54 19.23,5.78 19.23,5.78 L52,11.57 L54.45,12.27 C55.0422799,12.2199996 55.6377201,12.2199996 56.23,12.27 L54.05,11.18 L22.62,3.95 Z' id='F'/%3E%3Cpath d='M52,11.57 L54.46,12.28 C53.856879,12.320212 53.2581481,12.4105234 52.67,12.55 L50.39,12.24 L10.9,12.52 C12.15,11.17 13.73,9.8 13.73,9.8 L52,11.57 Z' id='G'/%3E%3Cpath d='M52.67,12.55 L50.39,12.24 L6.79,17.68 C6.79,17.68 5.67,19.33 4.84,20.95 L48.9,13.13 L52.67,12.55 Z' id='H'/%3E%3Cpath d='M52.67,12.55 L48.82,13.14 L1.9,27.68 C1.9,27.68 1.67,28.31 1.01,30.85 L47.34,14.35 L50.18,13.35 C50.9813537,13.0012529 51.8154781,12.7332611 52.67,12.55 Z' id='I'/%3E%3Cpath d='M50.18,13.4 L47.34,14.4 L0.06,37.74 C0.06,37.74 0,39.23 0,41.07 L46,15.8 L48.33,14.48 C48.9118471,14.0634189 49.5311815,13.7018616 50.18,13.4 Z' id='J'/%3E%3Cpath d='M48.33,14.48 L46,15.8 L0.84,48.13 C0.84,48.13 1.1,49.36 1.62,51.13 L45.84,16.79 C46.5602086,15.9095207 47.3980538,15.1322427 48.33,14.48 Z' id='K'/%3E%3Cpath d='M4.45,58.24 C4.95,59.18 5.51,60.12 6.06,61.01 L44.12,19.63 C44.4410976,18.9064226 44.833007,18.2163941 45.29,17.57 L4.45,58.24 Z' id='L'/%3E%3Cpath d='M12.67,69.12 L43.23,22.79 C43.34,22.24 43.45,21.68 43.61,21.13 L43.61,21.07 L10.4,66.79 C11.12,67.57 11.9,68.35 12.67,69.12 Z' id='M'/%3E%3Cpath d='M43.17,26.07 C43.1081253,25.6090073 43.0714043,25.1449868 43.06,24.68 L18.34,73.57 C19.17,74.12 20.06,74.57 20.95,75.12 L43.17,26.07 Z' id='N'/%3E%3Cpath d='M44,29.24 C43.8403877,28.8810795 43.7099653,28.5098776 43.61,28.13 L27.84,78.02 C28.84,78.34 29.84,78.62 30.84,78.85 L44,29.24 Z' id='P'/%3E%3Cpath d='M41.28,79.95 L45.67,32.12 C45.4661862,31.8552974 45.2791533,31.578088 45.11,31.29 L38.23,79.89 C39.17,79.95 40.67,79.95 41.28,79.95 Z' id='Q'/%3E%3Cpath d='M48,34.4 C47.78,34.24 47.56,34.02 47.33,33.85 L48.61,78.95 C49.6643117,78.7261556 50.7058168,78.4457504 51.73,78.11 L48,34.4 Z' id='R'/%3E%3Cpath d='M50.78,36.02 C50.5543135,35.8933739 50.3119398,35.7991175 50.06,35.74 L58.39,75.4 C59.39,74.9 60.23,74.4 61.11,73.84 L50.78,36.02 Z' id='S'/%3E%3Cpath d='M69.28,67.18 L54.06,36.85 C53.78,36.79 53.56,36.79 53.28,36.74 L67.22,69.3 C67.89,68.57 68.61,67.95 69.28,67.18 Z' id='T'/%3E%3Cpath d='M57.17,36.79 C56.970671,36.8395844 56.7651699,36.8597977 56.56,36.85 L73.56,61.74 C74.11,60.9 74.56,60.01 75.11,59.18 L57.17,36.79 Z' id='U'/%3E%3Cpath d='M60.34,35.95 C60.17,36.01 59.95,36.12 59.78,36.17 L78.06,52.4 C78.33,51.51 78.61,50.62 78.83,49.74 L60.34,35.95 Z' id='V'/%3E%3Cpath d='M62.67,34.57 L80,42.29 C80,41.24 80,39.85 80,39.68 L63.17,34.18 C63,34.29 62.84,34.46 62.67,34.57 Z' id='W'/%3E%3Cpath d='M78.67,29.68 L65.56,31.57 C65.3926596,31.8244259 65.205406,32.0651806 65,32.29 L79.22,32.24 C79.0945888,31.3752433 78.9108362,30.5199584 78.67,29.68 L78.67,29.68 Z' id='X'/%3E%3Cpath d='M76.33,23.07 C75.9307646,22.1782236 75.486869,21.3071202 75,20.46 L67.22,28.13 C67.0707846,28.6223457 66.8869943,29.1035421 66.67,29.57 L76.33,23.07 Z' id='Y'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.c-full-page-loader {
+  opacity: 0;
+  visibility: hidden;
+
+  @include round-loader($align: middle);
+}
+
+.c-loader-backdrop {
+  @include backdrop;
+
+  &.c-loader-visible {
+    opacity: 1;
+    visibility: visible;
+
+    .c-full-page-loader {
+      visibility: visible;
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+
+@mixin core {
+  animation-timing-function: linear;
+  animation-name: example;
+  fill: $color-gray-0;
+}
+
+@keyframes example {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: #008e89;
+  }
+}
+
+#ihsLoader * {
+  animation-duration: 2.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  fill: $color-gray-1;
+}
+
+#Y {
+  @include core;
+
+  animation-delay: .1s;
+}
+
+#X {
+  @include core;
+
+  animation-delay: .2s;
+}
+
+#W {
+  @include core;
+
+  animation-delay: .3s;
+}
+
+#V {
+  @include core;
+
+  animation-delay: .4s;
+}
+
+#U {
+  @include core;
+
+  animation-delay: .5s;
+}
+
+#T {
+  @include core;
+
+  animation-delay: .6s;
+}
+
+#S {
+  @include core;
+
+  animation-delay: .7s;
+}
+
+#R {
+  @include core;
+
+  animation-delay: .8s;
+}
+
+#Q {
+  @include core;
+
+  animation-delay: .9s;
+}
+
+#P {
+  @include core;
+
+  animation-delay: 1s;
+}
+
+#N {
+  @include core;
+
+  animation-delay: 1.1s;
+}
+
+#M {
+  @include core;
+
+  animation-delay: 1.2s;
+}
+
+#L {
+  @include core;
+
+  animation-delay: 1.3s;
+}
+
+#K {
+  @include core;
+
+  animation-delay: 1.4s;
+}
+
+#J {
+  @include core;
+
+  animation-delay: 1.5s;
+}
+
+#I {
+  @include core;
+
+  animation-delay: 1.6s;
+}
+
+#H {
+  @include core;
+
+  animation-delay: 1.7s;
+}
+
+#G {
+  @include core;
+
+  animation-delay: 1.8s;
+}
+
+#F {
+  @include core;
+
+  animation-delay: 1.9s;
+}
+
+#E {
+  @include core;
+
+  animation-delay: 2s;
+}
+
+#D {
+  @include core;
+
+  animation-delay: 2.1s;
+}
+
+#C {
+  @include core;
+
+  animation-delay: 2.2s;
+}
+
+#B {
+  @include core;
+
+  animation-delay: 2.3s;
+}
+
+#A {
+  @include core;
+
+  animation-delay: 2.4s;
+}

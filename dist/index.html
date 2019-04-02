@@ -58,6 +58,7 @@
           <li class="docs-nav-item"><a href="elements.html#forms">Forms</a></li>
           <li class="docs-nav-item"><a href="elements.html#grid">Grid</a></li>
           <li class="docs-nav-item"><a href="elements.html#header">Header</a></li>
+          <li class="docs-nav-item"><a href="elements.html#loader">Loader</a></li>
           <li class="docs-nav-item"><a href="elements.html#media-objects">Media Objects</a></li>
           <li class="docs-nav-item"><a href="elements.html#modal">Modal</a></li>
           <li class="docs-nav-item"><a href="elements.html#pagination">Pagination</a></li>
@@ -91,6 +92,21 @@ $(document).on("click", function (event) {
 });
 });
 
+$("#fullscreenLoaderBtn").click(function(){
+  $("#fullscreenLoader").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader").click(function(){
+  $("#fullscreenLoader").removeClass("c-loader-visible");
+});
+
+$("#fullscreenLoaderBtn2").click(function(){
+  $("#fullscreenLoader2").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader2").click(function(){
+  $("#fullscreenLoader2").removeClass("c-loader-visible");
+});
 
 (function( $ ) {
   var pluginName = "xrayhtml",

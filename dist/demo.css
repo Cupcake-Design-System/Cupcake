@@ -2,6 +2,12 @@
 /* ----------------------- */
 /* 🎂 Cupcake Sprinkles 🎂 */
 /* ----------------------- */
+@keyframes loader-iteration {
+  to {
+    background-position: 300% 0;
+  }
+}
+
 /* stylelint-disable */
 .docs-container {
   display: flex;
