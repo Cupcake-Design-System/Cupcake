@@ -3,18 +3,15 @@ title: Test
 layout: blank
 ---
 
-<h3>Default Switch</h3>
-<br>
 
-<div data-xrayhtml class="prism xrayhtml">
-  <label class="c-switch">
+<label class="c-switch">
     <input type="checkbox" class="c-switch-input">
     <span class="c-switch-handle"></span>
   </label>
 
   <label class="c-switch">
-      <input type="checkbox" class="c-switch-input">
-      <span class="c-switch-handle"></span>
+    <input type="checkbox" class="c-switch-input" checked>
+    <span class="c-switch-handle"></span>
   </label>
 
   <label class="c-switch">
@@ -26,18 +23,17 @@ layout: blank
     <input type="checkbox" class="c-switch-input" checked disabled>
     <span class="c-switch-handle"></span>
   </label>
-</div>
 
+  <br>
+  <br>
 
-{{> space}}
-
-
-<h3>Large Switch</h3>
-<br>
-
-<div data-xrayhtml class="prism xrayhtml">
   <label class="c-switch c-switch-lg">
     <input type="checkbox" class="c-switch-input">
+    <span class="c-switch-handle"></span>
+  </label>
+
+  <label class="c-switch c-switch-lg">
+    <input type="checkbox" class="c-switch-input" checked>
     <span class="c-switch-handle"></span>
   </label>
 
@@ -50,16 +46,63 @@ layout: blank
     <input type="checkbox" class="c-switch-input" checked disabled>
     <span class="c-switch-handle"></span>
   </label>
-</div>
 
 
-{{> space}}
+  {{> space}}
+
+  <h3>Default Switch</h3>
+  <br>
+
+  <label class="c-switch">
+    <input type="checkbox" class="c-switch-input">
+    <span class="c-switch-handle"></span>
+  </label>
+
+  <label class="c-switch">
+    <input type="checkbox" class="c-switch-input">
+    <span class="c-switch-handle"></span>
+  </label>
+
+  <label class="c-switch">
+    <input type="checkbox" class="c-switch-input" disabled>
+    <span class="c-switch-handle"></span>
+  </label>
+
+  <label class="c-switch">
+    <input type="checkbox" class="c-switch-input" checked disabled>
+    <span class="c-switch-handle"></span>
+  </label>
 
 
-<h3>Switches with Labels</h3>
-<br>
 
-<div data-xrayhtml class="prism xrayhtml">
+  {{> space}}
+
+
+  <h3>Large Switch</h3>
+  <br>
+
+  <label class="c-switch c-switch-lg">
+    <input type="checkbox" class="c-switch-input">
+    <span class="c-switch-handle"></span>
+  </label>
+
+  <label class="c-switch c-switch-lg">
+    <input type="checkbox" class="c-switch-input" disabled>
+    <span class="c-switch-handle"></span>
+  </label>
+
+  <label class="c-switch c-switch-lg">
+    <input type="checkbox" class="c-switch-input" checked disabled>
+    <span class="c-switch-handle"></span>
+  </label>
+
+
+  {{> space}}
+
+
+  <h3>Switches with Labels</h3>
+  <br>
+
   <label class="c-switch c-control">
     <input type="checkbox" class="c-switch-input">
     <span class="c-switch-handle"></span>
@@ -74,16 +117,16 @@ layout: blank
     <span class="c-switch-handle"></span>
     Large with label
   </label>
-</div>
 
 
-{{> space}}
+
+  {{> space}}
 
 
-<h3>Switches disabled with Labels</h3>
-<br>
+  <h3>Switches disabled with Labels</h3>
+  <br>
 
-<div data-xrayhtml class="prism xrayhtml">
+
   <label class="c-switch c-control">
     <input type="checkbox" class="c-switch-input" disabled>
     <span class="c-switch-handle"></span>
@@ -98,16 +141,16 @@ layout: blank
     <span class="c-switch-handle"></span>
     Large with switch disabled
   </label>
-</div>
 
 
-{{> space}}
+
+  {{> space}}
 
 
-<h3>Switches checked and disabled with normal Labels</h3>
-<br>
+  <h3>Switches checked and disabled with normal Labels</h3>
+  <br>
 
-<div data-xrayhtml class="prism xrayhtml">
+
   <label class="c-switch c-control">
     <input type="checkbox" class="c-switch-input" checked disabled>
     <span class="c-switch-handle"></span>
@@ -122,16 +165,15 @@ layout: blank
     <span class="c-switch-handle"></span>
     Large checked with switch disabled
   </label>
-</div>
 
 
-{{> space}}
+
+  {{> space}}
 
 
-<h3>Switches Checked and labels disabled</h3>
-<br>
+  <h3>Switches Checked and labels disabled</h3>
+  <br>
 
-<div data-xrayhtml class="prism xrayhtml">
 
   <label class="c-switch c-switch-disabled c-control">
     <input type="checkbox" class="c-switch-input" checked disabled>
@@ -148,16 +190,15 @@ layout: blank
     Large checked with switch and label disabled
   </label>
 
-</div>
 
 
-{{> space}}
+  {{> space}}
 
 
-<h3>Switches and labels disabled</h3>
-<br>
+  <h3>Switches and labels disabled</h3>
+  <br>
 
-<div data-xrayhtml class="prism xrayhtml">
+
   <label class="c-switch c-switch-disabled c-control">
     <input type="checkbox" class="c-switch-input" checked disabled>
     <span class="c-switch-label"></span>
@@ -174,4 +215,3 @@ layout: blank
     <span class="c-switch-handle"></span>
     Large with switch and label disabled
   </label>
-</div>

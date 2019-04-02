@@ -1,32 +1,17 @@
-
-$color-loader-indicator   : white !default;
-$degree-loader-indicator  : 140deg !default;
-$loader-indicator         : linear-gradient($degree-loader-indicator, rgba($color-loader-indicator, 0), rgba($color-loader-indicator, .6) 50%, rgba($color-loader-indicator, 0) 100%) !default;
-$loader-movement          : loader-iteration 2s infinite !default;
-
-$loader-color             : $color-primary-7 !default;
-$loader-bg-color          : $color-gray-3 !default;
-$loader-size              : 10em !default;
-$loader-height            : 20px !default;
-$loader-border-size       : 6px !default;
-$loader-animation-duration: .71s !default;
-
-
 @mixin skeleton-bar($top, $right, $left: 0, $position: absolute) {
   position: $position;
   top: $top;
   left: $left;
   right: $right;
-  height: 10px;
-  background: $loader-bg-color;
   border-radius: $radius-sm;
-  background-image: $loader-indicator;
+  height: $skeleton-bar-height;
+  background: $skeleton-bg-color;
+  background-image: $skeleton-bar;
   background-size: 70% 40px;
   background-position: -200% 0;
   background-repeat: no-repeat;
-  animation: $loader-movement;
+  animation: $skeleton-bar-animation;
 }
-
 
 @mixin skeleton-loader-mixin {
   @include skeleton-bar(0, 0, $position: relative);
@@ -58,16 +43,16 @@ $loader-animation-duration: .71s !default;
   }
 }
 
-@keyframes loader-iteration {
+@keyframes skeletonIteration {
   to {
     background-position: 300% 0;
   }
 }
 
 @mixin round-loader(
-  $size: $loader-size,
+  $size: $loader-full-page-size,
   $color: $loader-color,
-  $border-size: $loader-border-size,
+  $border-size: $loader-full-page-border-size,
   $duration: $loader-animation-duration,
   $align: null
 ) {
