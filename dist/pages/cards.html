@@ -8,7 +8,6 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="../demo.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
 
   <script>
     var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
@@ -19,45 +18,69 @@
 <body class="docs-container">
     <div class="docs-body">
       <main class="docs-content docs-content-fullwidth">
-        <button id="codeToggle" class="c-btn c-btn-primary" style="float: right;">Toggle Code Snippets</button>
-        <br><br><br><br>
           
-<div data-xrayhtml class="docs-wrap prism">
-<div class="c-card">
-    <header class="c-card-header">
-      <div class="c-card-header-title">
-        Card Header w/ Menu Buttons
-      </div>
-      <div class="c-card-header-menu">
-          <a class="c-btn c-btn-icon-secondary c-btn-icon">
-              <i class="fa fa-expand"></i>
-            </a>
-        <a class="c-btn c-btn-icon-secondary c-btn-icon">
-          <i class="fa fa-cog"></i>
-        </a>
-      </div>
-    </header>
-    <div class="c-card-content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
-      ac suscipit eros. Praesent fringilla,
-      enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
-      dignissim nulla
-      id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
-      dui,
-      et iaculis est facil isis nec.
-    </div>
+
+<strong>Card Container</strong>
+<br>
+<br>
+<div class="c-row">
+
+<div class="c-col">
+  <div class="c-card" style="height: 200px;">
+    <h3 class="c-p-left-md">Default Card Container</h3>
   </div>
-  <div class="c-card">
+</div>
+
+  <div class="c-col">
+  <div class="c-card c-card-hover" style="height: 200px;">
+    <h3 class="c-p-left-md">Default Card Hoverable</h3>
+  </div>
+</div>
+
+</div>
+
+<br>
+<hr class="c-hr">
+<br>
+<br>
+
+<strong>Card Header Titles</strong>
+<br>
+<br>
+
+<div class="c-row">
+
+  <div class="c-col-md-4">
+    <div class="c-card">
       <header class="c-card-header">
         <div class="c-card-header-title">
-          Card Header w/ Icons
+          Card Header Title
+        </div>
+      </header>
+      <div class="c-card-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
+        ac suscipit eros. Praesent fringilla,
+        enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
+        dignissim nulla
+        id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
+        dui,
+        et iaculis est facil isis nec.
+      </div>
+    </div>
+  </div>
+
+  <div class="c-col-md-4">
+    <div class="c-card">
+      <header class="c-card-header">
+        <div class="c-card-header-title">
+          Card Header Title w/ Menu Icons
         </div>
         <div class="c-card-header-menu">
-          <a class="c-card-header-menu-icon" href="#">
-            <i class="fa fa-expand" aria-hidden="true"></i>
+          <a class="c-btn c-btn-icon-secondary c-btn-icon">
+            <i class="fa fa-expand"></i>
           </a>
-          <a class="c-card-header-menu-icon" href="#">
-            <i class="fa fa-cog" aria-hidden="true"></i>
+          <a class="c-btn c-btn-icon-secondary c-btn-icon">
+            <i class="fa fa-cog"></i>
           </a>
         </div>
       </header>
@@ -71,102 +94,43 @@
         et iaculis est facil isis nec.
       </div>
     </div>
-
-</div>
-
-<br>
-<hr>
-<br>
-<br>
-<strong>Card Container</strong>
-<div data-xrayhtml class="docs-wrap prism">
-
-  <div class="c-card" style="height: 200px;">
-    <h3 class="c-p-left-md">Default Card Container</h3>
   </div>
 
-  <div class="c-card c-card-hover" style="height: 200px;">
-    <h3 class="c-p-left-md">Default Card Hoverable</h3>
-  </div>
-
-</div>
-
-<br>
-<hr>
-<br>
-<br>
-<strong>Card Header Titles</strong>
-<div data-xrayhtml class="docs-wrap prism">
-  <div class="c-card">
-    <header class="c-card-header">
-      <div class="c-card-header-title">
-        Card Header Title
+  <div class="c-col-md-4">
+    <div class="c-card">
+      <header class="c-card-header">
+        <div class="c-card-header-title">
+          Card Header Title w/ Button
+        </div>
+        <div class="c-card-header-menu">
+          <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+        </div>
+      </header>
+      <div class="c-card-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
+        ac suscipit eros. Praesent fringilla,
+        enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
+        dignissim nulla
+        id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
+        dui,
+        et iaculis est facil isis nec.
       </div>
-    </header>
-    <div class="c-card-content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
-      ac suscipit eros. Praesent fringilla,
-      enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
-      dignissim nulla
-      id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
-      dui,
-      et iaculis est facil isis nec.
-    </div>
-  </div>
-
-  <div class="c-card">
-    <header class="c-card-header">
-      <div class="c-card-header-title">
-        Card Header Title w/ Menu Icons
-      </div>
-      <div class="c-card-header-menu">
-          <a class="c-btn c-btn-icon-secondary c-btn-icon">
-              <i class="fa fa-expand"></i>
-            </a>
-        <a class="c-btn c-btn-icon-secondary c-btn-icon">
-          <i class="fa fa-cog"></i>
-        </a>
-      </div>
-    </header>
-    <div class="c-card-content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
-      ac suscipit eros. Praesent fringilla,
-      enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
-      dignissim nulla
-      id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
-      dui,
-      et iaculis est facil isis nec.
-    </div>
-  </div>
-
-  <div class="c-card">
-    <header class="c-card-header">
-      <div class="c-card-header-title">
-        Card Header Title w/ Button
-      </div>
-      <div class="c-card-header-menu">
-        <button class="c-btn c-btn-sm c-btn-primary">Button</button>
-      </div>
-    </header>
-    <div class="c-card-content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
-      ac suscipit eros. Praesent fringilla,
-      enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
-      dignissim nulla
-      id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
-      dui,
-      et iaculis est facil isis nec.
     </div>
   </div>
 
 </div>
 
 <br>
-<hr>
+<hr class="c-hr">
 <br>
 <br>
+
 <strong>Card Header with Subtitles</strong>
-<div data-xrayhtml class="docs-wrap prism">
+<br>
+<br>
+<div class="c-row">
+
+    <div class="c-col-md-4">
   <div class="c-card">
     <header class="c-card-header">
       <div class="c-card-header-title">
@@ -186,7 +150,9 @@
       et iaculis est facil isis nec.
     </div>
   </div>
+    </div>
 
+    <div class="c-col-md-4">
   <div class="c-card">
     <header class="c-card-header">
       <div class="c-card-header-title">
@@ -214,8 +180,9 @@
       et iaculis est facil isis nec.
     </div>
   </div>
+    </div>
 
-
+    <div class="c-col-md-4">
   <div class="c-card">
     <header class="c-card-header">
       <div class="c-card-header-title">
@@ -238,15 +205,22 @@
       et iaculis est facil isis nec.
     </div>
   </div>
+  </div>
 
 </div>
 
 <br>
-<hr>
+<hr class="c-hr">
 <br>
 <br>
+
 <strong>Cards with Footer</strong>
-<div data-xrayhtml class="docs-wrap prism">
+<br>
+<br>
+
+<div class="c-row">
+
+    <div class="c-col-md-4">
   <div class="c-card">
     <div class="c-card-content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
@@ -263,7 +237,9 @@
       </a>
     </div>
   </div>
+    </div>
 
+    <div class="c-col-md-4">
   <div class="c-card">
     <div class="c-card-content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
@@ -280,8 +256,9 @@
       </a>
     </div>
   </div>
+    </div>
 
-
+    <div class="c-col-md-4">
   <div class="c-card">
     <div class="c-card-content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
@@ -298,178 +275,194 @@
       </a>
     </div>
   </div>
+  </div>
 
 </div>
 
 <br>
-<hr>
+<hr class="c-hr">
 <br>
 <br>
+
 <strong>Cards with Footer Options</strong>
-<div data-xrayhtml class="docs-wrap prism">
-  <div class="c-card">
-    <div class="c-card-content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
-      ac suscipit eros. Praesent fringilla,
-      enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
-      dignissim nulla
-      id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
-      dui,
-      et iaculis est facil isis nec.
-    </div>
-    <div class="c-card-footer">
-      <button class="c-btn c-btn-sm c-btn-primary">Button</button>
-      <button class="c-btn c-btn-sm c-btn-secondary c-m-left-xs">Button</button>
-    </div>
-  </div>
-
-  <div class="c-card">
-    <div class="c-card-content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
-      ac suscipit eros. Praesent fringilla,
-      enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
-      dignissim nulla
-      id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
-      dui,
-      et iaculis est facil isis nec.
-    </div>
-    <div class="c-card-footer">
-      <div class="c-card-footer-item c-card-footer-item-center">
+<br>
+<br>
+<div class="c-row c-m-bottom-lg">
+  <div class="c-col-md-4">
+    <div class="c-card">
+      <div class="c-card-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
+        ac suscipit eros. Praesent fringilla,
+        enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
+        dignissim nulla
+        id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
+        dui,
+        et iaculis est facil isis nec.
+      </div>
+      <div class="c-card-footer">
         <button class="c-btn c-btn-sm c-btn-primary">Button</button>
         <button class="c-btn c-btn-sm c-btn-secondary c-m-left-xs">Button</button>
       </div>
     </div>
   </div>
-
-  <div class="c-card">
-    <div class="c-card-content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
-      ac suscipit eros. Praesent fringilla,
-      enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
-      dignissim nulla
-      id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
-      dui,
-      et iaculis est facil isis nec.
-    </div>
-    <div class="c-card-footer">
-      <div class="c-card-footer-item c-card-footer-item-left">
-        <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+  <div class="c-col-md-4">
+    <div class="c-card">
+      <div class="c-card-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
+        ac suscipit eros. Praesent fringilla,
+        enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
+        dignissim nulla
+        id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
+        dui,
+        et iaculis est facil isis nec.
       </div>
-      <div class="c-card-footer-item c-card-footer-item-center">
-        <button class="c-btn c-btn-sm c-btn-primary">Button</button>
-        <button class="c-btn c-btn-sm c-btn-secondary c-m-left-xs">Button</button>
-      </div>
-      <div class="c-card-footer-item c-card-footer-item-right">
-        <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+      <div class="c-card-footer">
+        <div class="c-card-footer-item c-card-footer-item-center">
+          <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+          <button class="c-btn c-btn-sm c-btn-secondary c-m-left-xs">Button</button>
+        </div>
       </div>
     </div>
   </div>
-
-
-  <div class="c-card">
-    <div class="c-card-content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
-      ac suscipit eros. Praesent fringilla,
-      enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
-      dignissim nulla
-      id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
-      dui,
-      et iaculis est facil isis nec.
-    </div>
-    <div class="c-card-footer">
-      <div class="c-card-footer-item c-card-footer-item-left">
-        <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+  <div class="c-col-md-4">
+    <div class="c-card">
+      <div class="c-card-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
+        ac suscipit eros. Praesent fringilla,
+        enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
+        dignissim nulla
+        id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
+        dui,
+        et iaculis est facil isis nec.
       </div>
-      <a class="c-card-footer-item c-card-footer-item-center" href="#">
-        Card Footer Link
-      </a>
-      <div class="c-card-footer-item c-card-footer-item-right">
-        <button class="c-btn c-btn-sm c-btn-primary">Button</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="c-card">
-    <div class="c-card-content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
-      ac suscipit eros. Praesent fringilla,
-      enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
-      dignissim nulla
-      id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
-      dui,
-      et iaculis est facil isis nec.
-    </div>
-    <div class="c-card-footer">
-      <a class="c-card-footer-item c-card-footer-item-left" href="#">
-        Card Footer Link
-      </a>
-
-      <div class="c-card-footer-item c-card-footer-item-right">
-        <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+      <div class="c-card-footer">
+        <div class="c-card-footer-item c-card-footer-item-left">
+          <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+        </div>
+        <div class="c-card-footer-item c-card-footer-item-center">
+          <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+          <button class="c-btn c-btn-sm c-btn-secondary c-m-left-xs">Button</button>
+        </div>
+        <div class="c-card-footer-item c-card-footer-item-right">
+          <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
-
-  <div class="c-card">
-    <div class="c-card-content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
-      ac suscipit eros. Praesent fringilla,
-      enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
-      dignissim nulla
-      id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
-      dui,
-      et iaculis est facil isis nec.
-    </div>
-    <div class="c-card-footer">
-      <div class="c-card-footer-item c-card-footer-item-right">
-        <button class="c-btn c-btn-sm c-btn-primary">Button</button>
-        <button class="c-btn c-btn-sm c-btn-secondary c-m-left-xs">Button</button>
+<div class="c-row">
+  <div class="c-col-md-4">
+    <div class="c-card">
+      <div class="c-card-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
+        ac suscipit eros. Praesent fringilla,
+        enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
+        dignissim nulla
+        id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
+        dui,
+        et iaculis est facil isis nec.
+      </div>
+      <div class="c-card-footer">
+        <div class="c-card-footer-item c-card-footer-item-left">
+          <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+        </div>
+        <a class="c-card-footer-item c-card-footer-item-center" href="#">
+          Card Footer Link
+        </a>
+        <div class="c-card-footer-item c-card-footer-item-right">
+          <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+        </div>
       </div>
     </div>
   </div>
+  <div class="c-col-md-4">
+    <div class="c-card">
+      <div class="c-card-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
+        ac suscipit eros. Praesent fringilla,
+        enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
+        dignissim nulla
+        id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
+        dui,
+        et iaculis est facil isis nec.
+      </div>
+      <div class="c-card-footer">
+        <a class="c-card-footer-item c-card-footer-item-left" href="#">
+          Card Footer Link
+        </a>
 
+        <div class="c-card-footer-item c-card-footer-item-right">
+          <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="c-col-md-4">
+    <div class="c-card">
+      <div class="c-card-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
+        ac suscipit eros. Praesent fringilla,
+        enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
+        dignissim nulla
+        id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
+        dui,
+        et iaculis est facil isis nec.
+      </div>
+      <div class="c-card-footer">
+        <div class="c-card-footer-item c-card-footer-item-right">
+          <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+          <button class="c-btn c-btn-sm c-btn-secondary c-m-left-xs">Button</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <br>
-<hr>
+<hr class="c-hr">
 <br>
 <br>
+
 <strong>Card fully loaded</strong>
-<div data-xrayhtml class="docs-wrap prism">
-<div class="c-card">
-  <header class="c-card-header">
-    <div class="c-card-header-title">
-      Card Header Title
+<br>
+<br>
+<div class="c-row">
+    <div class="c-col-md-5">
+  <div class="c-card">
+    <header class="c-card-header">
+      <div class="c-card-header-title">
+        Card Header Title
+      </div>
+      <div class="c-card-header-subtitle">
+        Card Header Subtitle
+      </div>
+      <div class="c-card-header-menu">
+        <button class="c-btn c-btn-primary">Button</button>
+        <a class="c-card-header-menu-icon" href="#">
+          <i class="fa fa-expand" aria-hidden="true"></i>
+        </a>
+        <a class="c-card-header-menu-icon" href="#">
+          <i class="fa fa-cog" aria-hidden="true"></i>
+        </a>
+      </div>
+    </header>
+    <div class="c-card-content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
+      ac suscipit eros. Praesent fringilla,
+      enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
+      dignissim nulla
+      id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
+      dui,
+      et iaculis est facil isis nec.
     </div>
-    <div class="c-card-header-subtitle">
-      Card Header Subtitle
-    </div>
-    <div class="c-card-header-menu">
-      <button class="c-btn c-btn-primary">Button</button>
-      <a class="c-card-header-menu-icon" href="#">
-        <i class="fa fa-expand" aria-hidden="true"></i>
+    <div class="c-card-footer">Footer if needed
+      <a class="c-card-footer-item c-card-footer-item-right" href="#">
+        Card Footer Link
       </a>
-      <a class="c-card-header-menu-icon" href="#">
-        <i class="fa fa-cog" aria-hidden="true"></i>
-      </a>
     </div>
-  </header>
-  <div class="c-card-content">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis luctus dui,
-    ac suscipit eros. Praesent fringilla,
-    enim quis placerat dignissim, turpis metus vehicula lectus, faucibus tie turpis metus et urna. Quisque
-    dignissim nulla
-    id scelerisque maximus. Praesent consectetur rhoncus mi, eget sollicitudin leo placerat in. Sed semper commodo
-    dui,
-    et iaculis est facil isis nec.
   </div>
-  <div class="c-card-footer">Footer if needed
-    <a class="c-card-footer-item c-card-footer-item-right" href="#">
-      Card Footer Link
-    </a>
   </div>
-</div>
 </div>
 
       </main>
@@ -478,7 +471,6 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
   
   <script>
     $(document).ready(function () {
@@ -496,6 +488,11 @@
   });
   });
   
+  
+  </script>
+  
+  
+  <script>
   $("#fullscreenLoaderBtn").click(function(){
     $("#fullscreenLoader").toggleClass("c-loader-visible");
   });
@@ -512,158 +509,8 @@
     $("#fullscreenLoader2").removeClass("c-loader-visible");
   });
   
-  (function( $ ) {
-    var pluginName = "xrayhtml",
-  		o = {
-  		text: {
-  			open: "Show Code Example",
-  			close: "Collapse Code Example"
-  		},
-  		classes: {
-  			button: "c-btn c-btn-sm",
-  			open: "view-source",
-  			sourcepanel: "source-panel"
-  		},
-  		initSelector: "[data-" + pluginName + "]",
-  		defaultReveal: "inline"
-  	},
-  	methods = {
-  		_create: function() {
-  			return $( this ).each(function() {
-  				var init = $( this ).data( "init." + pluginName );
-  
-  				if( init ) {
-  					return false;
-  				}
-  
-  				$( this )
-  					.data( "init." + pluginName, true )
-  					[ pluginName ]( "_init" )
-  					.trigger( "create." +  pluginName );
-  			});
-  		},
-  		_init: function() {
-  			var $self =	 $(this);
-  
-  
-  			var method = $( this ).attr( "data-" + pluginName ) || o.defaultReveal;
-  
-  			if( method === "slide" ) {
-  				$( this )[ pluginName ]( "_createButton" );
-  			}
-  
-  			$( this )
-  				.addClass( pluginName + " " + "method-" + method )
-  			[ pluginName ]( "_createSource" );
-  		},
-  		_createButton: function() {
-  			var btn = document.createElement( "a" ),
-  				txt = document.createTextNode( o.text.open ),
-  				el = $( this );
-  
-  			btn.setAttribute( "class", o.classes.button );
-  			btn.href = "#";
-  			btn.appendChild( txt );
-  
-  			$( btn )
-  				.bind( "click", function( e ) {
-  					var isOpen = el.attr( "class" ).indexOf( o.classes.open ) > -1;
-  
-  					el[ isOpen ? "removeClass" : "addClass" ]( o.classes.open );
-  					btn.innerHTML = ( isOpen ? o.text.open : o.text.close );
-  
-  					e.preventDefault();
-  
-  				})
-  				.insertAfter( el );
-  		},
-  		_createSource: function() {
-  			var el = this;
-  			var preel = document.createElement( "pre" );
-  			var codeel = document.createElement( "code" );
-  			var wrap = document.createElement( "div" );
-  			var sourcepanel = document.createElement( "div" );
-  			var code;
-  			var leadingWhiteSpace;
-  			var source;
-  
-  			// remove empty value attributes
-  			code = el.innerHTML.replace( /\=\"\"/g, '' );
-  			leadingWhiteSpace = code.match( /(^[\s]+)/ );
-  
-  			if( leadingWhiteSpace ) {
-  				code = code.replace( new RegExp( leadingWhiteSpace[ 1 ], "gmi" ), "\n" );
-  			}
-  
-  			source = document.createTextNode( code );
-  
-  			wrap.setAttribute( "class", "snippet" );
-  
-  			$( el ).wrapInner( wrap );
-  
-  			codeel.appendChild( source );
-  			preel.appendChild( codeel );
-  
-  			sourcepanel.setAttribute( "class", o.classes.sourcepanel );
-  			sourcepanel.appendChild( preel );
-  
-  			this.appendChild( sourcepanel );
-  		}
-  	};
-  
-  	// Collection method.
-  	$.fn[ pluginName ] = function( arrg, a, b, c ) {
-  		return this.each(function() {
-  
-  			// if it's a method
-  			if( arrg && typeof( arrg ) === "string" ){
-  				return $.fn[ pluginName ].prototype[ arrg ].call( this, a, b, c );
-  			}
-  
-  			// don't re-init
-  			if( $( this ).data( pluginName + "data" ) ){
-  				return $( this );
-  			}
-  
-  			// otherwise, init
-  			$( this ).data( pluginName + "active", true );
-  			$.fn[ pluginName ].prototype._create.call( this );
-  		});
-  	};
-  
-  	// add methods
-  	$.extend( $.fn[ pluginName ].prototype, methods );
-  
-  	//  auto-init
-  	var initted;
-  	function init(){
-  		if( !initted ){
-  			$( o.initSelector )[ pluginName ]();
-  			initted = true;
-  		}
-  	}
-  	// init either on beforeenhance event or domready, whichever comes first.
-  	$( document ).bind("beforeenhance", init );
-  	$( init );
-  
-  
-  }( jQuery ));
-  
-  // Add prism highlighting to code
-    $( window ).bind( "create.xrayhtml", function( e ) {
-      var prism = !!~e.target.getAttribute( "class" ).indexOf( "prism" );
-  
-      if( prism && "Prism" in window ) {
-        $( ".prism" ).find( "code" ).addClass( "language-markup" );
-        Prism.highlightAll();
-      }
-    });
-  
   </script>
   
-<script>
-  $("#codeToggle").click(function () {
-    $(".source-panel").slideToggle();
-  });
-</script>
+  
+
 </html>

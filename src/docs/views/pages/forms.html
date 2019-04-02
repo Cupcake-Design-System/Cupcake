@@ -3,24 +3,27 @@ title: Test
 layout: blank
 ---
 
-<h3>Input Colors</h3>
 
-<div data-xrayhtml class="prism xrayhtml">
+<strong>Input Colors</strong>
+<br>
+<br>
+
 {{#each form.color}}
 {{#each this}}
 <input class="c-input c-input-{{this}}" type="text" id="size-input-2" placeholder="{{this}} input">
 <br>
 {{/each}}
 {{/each}}
-</div>
+
 
 
 {{> space}}
 
 
-<h3>Input Sizes</h3>
+<strong>Input Sizes</strong>
+<br>
+<br>
 
-<div data-xrayhtml class="prism xrayhtml">
 {{#each form.size}}
 {{#each this}}
 <input class="c-input c-input-{{this}}" type="text" id="size-input-2" placeholder="Default input {{this}}">
@@ -37,23 +40,24 @@ layout: blank
 <br>
 {{/each}}
 {{/each}}
-</div>
+
 
 {{> space}}
 
 
-<h3>Select</h3>
-<div data-xrayhtml class="prism xrayhtml">
+<strong>Select</strong>
+<br>
+<br>
+
 <select class="c-input">
   <option>Default Select</option>
   <option>Option</option>
   <option>Option</option>
 </select>
-</div>
+
 
 <br>
 
-<div data-xrayhtml class="prism xrayhtml">
 <div class="c-input-container">
   <i class="c-input-icon fa fa-exclamation-circle c-text-danger"></i>
   <select class="c-input">
@@ -62,33 +66,32 @@ layout: blank
     <option>Option</option>
   </select>
 </div>
-</div>
+
 
 <br>
 
-<div data-xrayhtml class="prism xrayhtml">
 <select disabled="disabled" class="c-input">
   <option>Disabled Select</option>
   <option>Option</option>
   <option>Option</option>
 </select>
-</div>
+
 
 <br>
 
-<div data-xrayhtml class="prism xrayhtml">
 <select class="c-input c-input-error">
   <option>I`m error</option>
   <option>Option</option>
   <option>Option</option>
 </select>
-</div>
+
 
 <br>
 
-<h3>Select Sizes</h3>
+<strong>Select Sizes</strong>
+<br>
+<br>
 
-<div data-xrayhtml class="prism xrayhtml">
 {{#each form.size}}
 {{#each this}}
 <select class="c-input c-input-{{this}}">
@@ -108,20 +111,22 @@ layout: blank
 <br>
 {{/each}}
 {{/each}}
-</div>
+
 
 {{> space}}
 
 
-<h3>Input Labels</h3>
-<div data-xrayhtml class="prism xrayhtml">
+
+<strong>Input Labels</strong>
+<br>
+<br>
 <label class="c-input-label" for="size-input-2">Default Label: <sup class="c-text-danger">*</sup></label>
 <input class="c-input" type="text" id="size-input-2" placeholder="Normal input">
-</div>
+
 
 <br>
 
-<div data-xrayhtml class="prism xrayhtml">
+
 {{#each form.size}}
 {{#each this}}
 <label class="c-input-label c-input-label-{{this}}" for="size-input-2-sm">Default Label: <sup class="c-text-danger">*</sup></label>
@@ -129,37 +134,36 @@ layout: blank
 <br>
 {{/each}}
 {{/each}}
-</div>
 
 
 {{> space}}
 
 
-<h3>Hints</h3>
-<div data-xrayhtml class="prism xrayhtml">
+
+<strong>Hints</strong>
+<br>
+<br>
 <div class="c-input-container">
   <input class="c-input c-input-success" type="text" placeholder="Text input" value="$J-Money$" id="input-helper-1">
   <span class="c-hint c-hint-static c-hint-success"><i class="fa fa-check"></i> This username is silly but
     available!</span>
 </div>
-</div>
 
 <br>
 <br>
 
 
-<div data-xrayhtml class="prism xrayhtml">
 <div class="c-input-container">
   <input class="c-input c-input-error" type="text" placeholder="Click in here to see helper text" value id="input-helper-1">
   <span class="c-hint c-hint-error"><i class="fa fa-check"></i> I animate in when input is focused!</span>
 </div>
-</div>
 
 {{> space}}
 
-<h3>Input Addons</h3>
+<strong>Input Addons</strong>
+<br>
+<br>
 
-<div data-xrayhtml class="prism xrayhtml">
 <div class="c-input-group">
   <div class="c-input-addon">@</div>
   <div class="c-input-container">
@@ -204,13 +208,14 @@ layout: blank
     <input type="text" class="c-input">
   </div>
 </div>
-</div>
+
 
 {{> space}}
 
-<h3>Input Groups</h3>
+<strong>Input Groups</strong>
+<br>
+<br>
 
-<div data-xrayhtml class="prism xrayhtml">
 <div class="c-input-group">
   <button class="c-btn c-btn-primary">Action</button>
   <div class="c-input-container">
@@ -261,15 +266,15 @@ layout: blank
   <button class="c-btn c-btn-primary c-btn-lg">Action</button>
   <button class="c-btn c-btn-primary c-btn-lg c-btn-box"><i class="fa fa-caret-down"></i></button>
 </div>
-</div>
 
 
 {{> space}}
 
 
-<h4 class="c-header-xxs">Elements inline</h4>
+<strong>Elements Inline</strong>
+<br>
+<br>
 
-<div data-xrayhtml class="prism xrayhtml">
 <div class="c-m-bottom-md c-body-text">
   <span>Begin</span>
   <button class="c-btn c-btn-primary c-btn-sm">Primary Button</button>

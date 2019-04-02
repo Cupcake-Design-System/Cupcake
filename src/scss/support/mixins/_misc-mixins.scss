@@ -1,15 +1,15 @@
 // --------------------------------------------
 // Backdrop Mixin -----------------------------
 // --------------------------------------------
-@mixin backdrop {
+@mixin backdrop($position:fixed, $visibility: hidden) {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   display: flex;
-  position: fixed;
-  visibility: hidden;
   align-items: center;
+  position: $position;
+  visibility: $visibility;
   justify-content: center;
   z-index: $modal-z-index - 10;
   background-color: $modal-backdrop-bg-color;

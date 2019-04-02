@@ -8,7 +8,6 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="../demo.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
 
   <script>
     var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
@@ -19,7 +18,6 @@
 <body class="docs-container">
     <div class="docs-body">
       <main class="docs-content docs-content-fullwidth">
-        <br><br><br><br>
           
 <h3 class="c-m-bottom-sm c-text-bold">Basic Options</h3>
 
@@ -72,9 +70,10 @@
 
 
 <br>
-<hr>
+<hr class="c-hr">
 <br>
 <br>
+
 
 <h3 class="c-m-bottom-sm c-text-bold">Reverse</h3>
 
@@ -127,9 +126,10 @@
 
 
 <br>
-<hr>
+<hr class="c-hr">
 <br>
 <br>
+
 
 <h3 class="c-m-bottom-sm c-text-bold">Hover</h3>
 
@@ -195,9 +195,10 @@
 
 
 <br>
-<hr>
+<hr class="c-hr">
 <br>
 <br>
+
 <h3 class="c-m-bottom-sm c-text-bold">More examples</h3>
 
 
@@ -254,9 +255,10 @@
 
 
 <br>
-<hr>
+<hr class="c-hr">
 <br>
 <br>
+
 <h3 class="c-m-bottom-sm c-text-bold">Media top, middle, bottom</h3>
 
 <div class="c-row c-bg-gray-1">
@@ -321,9 +323,10 @@
 
 
 <br>
-<hr>
+<hr class="c-hr">
 <br>
 <br>
+
 <h3 class="c-m-bottom-sm c-text-bold">List styles</h3>
 
 <div class="c-row c-bg-gray-1">
@@ -570,9 +573,10 @@
 </div>
 
 <br>
-<hr>
+<hr class="c-hr">
 <br>
 <br>
+
 <h3 class="c-m-bottom-sm c-text-bold">More List styles</h3>
 
 <div class="c-row c-bg-gray-1">
@@ -753,9 +757,10 @@
 
 
 <br>
-<hr>
+<hr class="c-hr">
 <br>
 <br>
+
 <h3 class="c-m-bottom-sm c-text-bold">More Examples</h3>
 
 <div class="c-row c-bg-gray-1">
@@ -882,7 +887,6 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
   
   <script>
     $(document).ready(function () {
@@ -900,6 +904,11 @@
   });
   });
   
+  
+  </script>
+  
+  
+  <script>
   $("#fullscreenLoaderBtn").click(function(){
     $("#fullscreenLoader").toggleClass("c-loader-visible");
   });
@@ -916,158 +925,8 @@
     $("#fullscreenLoader2").removeClass("c-loader-visible");
   });
   
-  (function( $ ) {
-    var pluginName = "xrayhtml",
-  		o = {
-  		text: {
-  			open: "Show Code Example",
-  			close: "Collapse Code Example"
-  		},
-  		classes: {
-  			button: "c-btn c-btn-sm",
-  			open: "view-source",
-  			sourcepanel: "source-panel"
-  		},
-  		initSelector: "[data-" + pluginName + "]",
-  		defaultReveal: "inline"
-  	},
-  	methods = {
-  		_create: function() {
-  			return $( this ).each(function() {
-  				var init = $( this ).data( "init." + pluginName );
-  
-  				if( init ) {
-  					return false;
-  				}
-  
-  				$( this )
-  					.data( "init." + pluginName, true )
-  					[ pluginName ]( "_init" )
-  					.trigger( "create." +  pluginName );
-  			});
-  		},
-  		_init: function() {
-  			var $self =	 $(this);
-  
-  
-  			var method = $( this ).attr( "data-" + pluginName ) || o.defaultReveal;
-  
-  			if( method === "slide" ) {
-  				$( this )[ pluginName ]( "_createButton" );
-  			}
-  
-  			$( this )
-  				.addClass( pluginName + " " + "method-" + method )
-  			[ pluginName ]( "_createSource" );
-  		},
-  		_createButton: function() {
-  			var btn = document.createElement( "a" ),
-  				txt = document.createTextNode( o.text.open ),
-  				el = $( this );
-  
-  			btn.setAttribute( "class", o.classes.button );
-  			btn.href = "#";
-  			btn.appendChild( txt );
-  
-  			$( btn )
-  				.bind( "click", function( e ) {
-  					var isOpen = el.attr( "class" ).indexOf( o.classes.open ) > -1;
-  
-  					el[ isOpen ? "removeClass" : "addClass" ]( o.classes.open );
-  					btn.innerHTML = ( isOpen ? o.text.open : o.text.close );
-  
-  					e.preventDefault();
-  
-  				})
-  				.insertAfter( el );
-  		},
-  		_createSource: function() {
-  			var el = this;
-  			var preel = document.createElement( "pre" );
-  			var codeel = document.createElement( "code" );
-  			var wrap = document.createElement( "div" );
-  			var sourcepanel = document.createElement( "div" );
-  			var code;
-  			var leadingWhiteSpace;
-  			var source;
-  
-  			// remove empty value attributes
-  			code = el.innerHTML.replace( /\=\"\"/g, '' );
-  			leadingWhiteSpace = code.match( /(^[\s]+)/ );
-  
-  			if( leadingWhiteSpace ) {
-  				code = code.replace( new RegExp( leadingWhiteSpace[ 1 ], "gmi" ), "\n" );
-  			}
-  
-  			source = document.createTextNode( code );
-  
-  			wrap.setAttribute( "class", "snippet" );
-  
-  			$( el ).wrapInner( wrap );
-  
-  			codeel.appendChild( source );
-  			preel.appendChild( codeel );
-  
-  			sourcepanel.setAttribute( "class", o.classes.sourcepanel );
-  			sourcepanel.appendChild( preel );
-  
-  			this.appendChild( sourcepanel );
-  		}
-  	};
-  
-  	// Collection method.
-  	$.fn[ pluginName ] = function( arrg, a, b, c ) {
-  		return this.each(function() {
-  
-  			// if it's a method
-  			if( arrg && typeof( arrg ) === "string" ){
-  				return $.fn[ pluginName ].prototype[ arrg ].call( this, a, b, c );
-  			}
-  
-  			// don't re-init
-  			if( $( this ).data( pluginName + "data" ) ){
-  				return $( this );
-  			}
-  
-  			// otherwise, init
-  			$( this ).data( pluginName + "active", true );
-  			$.fn[ pluginName ].prototype._create.call( this );
-  		});
-  	};
-  
-  	// add methods
-  	$.extend( $.fn[ pluginName ].prototype, methods );
-  
-  	//  auto-init
-  	var initted;
-  	function init(){
-  		if( !initted ){
-  			$( o.initSelector )[ pluginName ]();
-  			initted = true;
-  		}
-  	}
-  	// init either on beforeenhance event or domready, whichever comes first.
-  	$( document ).bind("beforeenhance", init );
-  	$( init );
-  
-  
-  }( jQuery ));
-  
-  // Add prism highlighting to code
-    $( window ).bind( "create.xrayhtml", function( e ) {
-      var prism = !!~e.target.getAttribute( "class" ).indexOf( "prism" );
-  
-      if( prism && "Prism" in window ) {
-        $( ".prism" ).find( "code" ).addClass( "language-markup" );
-        Prism.highlightAll();
-      }
-    });
-  
   </script>
   
-<script>
-  $("#codeToggle").click(function () {
-    $(".source-panel").slideToggle();
-  });
-</script>
+  
+
 </html>
