@@ -8,7 +8,6 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="../demo.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
 
   <script>
     var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
@@ -25,20 +24,18 @@
       
 <h1 class="c-header-lg">Design Tokens</h1>
 
-<div class="docs-section-subtitle" style="font-size: 18px; line-height: 24px;">
-  <p>Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes.
-  <br>We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system for UI development.</p>
+<div class="c-text-md">
+  <p>Use in place of hard-coded values (such as hex values for color or pixel values for spacing) to maintain a scalable and consistent visual system.</p>
 </div>
 
-<br><br>
 <br><br>
 
 
 <div class="docs-section" id="colors">
   <div id="colors">
     <div class="docs-section-header">
-      <div class="docs-section-title">Colors <a href="pages/colors.html" target="_blank">View Test Page</a></div>
-      <div class="docs-section-subtitle">
+      <div class="c-header-lg c-m-bottom-xs">Colors <a class="c-text-primary c-text-md c-p-left-sm" href="pages/colors.html" target="_blank">View Test Page</a></div>
+      <div class="c-text-xl c-text-gray-7">
         <p>These are the colors used throughout Cupcake’s elements and components that help give visual context, emphasize meaning and to aesthetically style the user interface.</p>
 
       </div>
@@ -177,18 +174,28 @@
 <div class="docs-section" id="shadows">
   <div id="shadows">
     <div class="docs-section-header">
-      <div class="docs-section-title">Shadows <a href="pages/shadows.html" target="_blank">View Test Page</a></div>
-      <div class="docs-section-subtitle">
+      <div class="c-header-lg c-m-bottom-xs">Shadows <a class="c-text-primary c-text-md c-p-left-sm" href="pages/shadows.html" target="_blank">View Test Page</a></div>
+      <div class="c-text-xl c-text-gray-7">
         <p>Use depth to create hierarchy and layering</p>
 
       </div>
     </div>
-    <div class="docs-section-preview"><div class="layer-types">
-	<div class="c-depth-none">none</div>
-	<div class="c-depth-xs">xs</div>
-	<div class="c-depth-sm">sm</div>
-	<div class="c-depth-md">md</div>
-	<div class="c-depth-lg">lg</div>
+    <div class="docs-section-preview"><div class="c-row c-bg-gray-1 c-p-lg">
+	<div class="c-col">
+		<div class="c-bg-white c-text-center c-p-lg c-depth-none">none</div>
+	</div>
+	<div class="c-col">
+		<div class="c-bg-white c-text-center c-p-lg c-depth-xs">xs</div>
+	</div>
+	<div class="c-col">
+		<div class="c-bg-white c-text-center c-p-lg c-depth-sm">sm</div>
+	</div>
+	<div class="c-col">
+		<div class="c-bg-white c-text-center c-p-lg c-depth-md">md</div>
+	</div>
+	<div class="c-col">
+		<div class="c-bg-white c-text-center c-p-lg c-depth-lg">lg</div>
+	</div>
 </div></div>
   </div>
 </div>
@@ -197,8 +204,8 @@
 <div class="docs-section" id="spacing">
   <div id="spacing">
     <div class="docs-section-header">
-      <div class="docs-section-title">Spacing <a href="pages/spacing.html" target="_blank">View Test Page</a></div>
-      <div class="docs-section-subtitle">
+      <div class="c-header-lg c-m-bottom-xs">Spacing <a class="c-text-primary c-text-md c-p-left-sm" href="pages/spacing.html" target="_blank">View Test Page</a></div>
+      <div class="c-text-xl c-text-gray-7">
         <p>Spacing is used to consistently apply paddings and margins across our components. .c-p-{direction}-{value}, .c-m-{direction}-{value}</p>
 
       </div>
@@ -276,252 +283,206 @@
 <div class="docs-section" id="typography">
   <div id="typography">
     <div class="docs-section-header">
-      <div class="docs-section-title">Typography <a href="pages/typography.html" target="_blank">View Test Page</a></div>
-      <div class="docs-section-subtitle">
+      <div class="c-header-lg c-m-bottom-xs">Typography <a class="c-text-primary c-text-md c-p-left-sm" href="pages/typography.html" target="_blank">View Test Page</a></div>
+      <div class="c-text-xl c-text-gray-7">
         <p>Documentation and examples for Cupcake typography, including global settings, headings, body text and more.</p>
 
       </div>
     </div>
-    <div class="docs-section-preview"><div class="docs-section-title">01. Headers</div>
-<div class="type-block">
-	<div class="type">
-		<span class="info">.c-header-xxl</span>
+    <div class="docs-section-preview"><div class="c-row">
+	<div class="c-col-md-2">
+		<code>.c-header-xxl</code>
+	</div>
+
+	<div class="c-col-md-10">
 		<span class="c-header-xxl">The quick brown fox jumps over the lazy dog.</span>
 	</div>
-</div>
-<div class="type-block">
-	<div class="type">
-		<span class="info">.c-header-xl</span>
-		<span class="c-header-xl">The quick brown fox jumps over the lazy dog.</span>
-	</div>
-</div>
-<div class="type-block">
-	<div class="type">
-		<span class="info">.c-header-lg</span>
-		<span class="c-header-lg">The quick brown fox jumps over the lazy dog.</span>
-	</div>
-</div>
-<div class="type-block">
-	<div class="type">
-		<span class="info">.c-header-md</span>
-		<span class="c-header-md">The quick brown fox jumps over the lazy dog.</span>
-	</div>
-</div>
-<div class="type-block">
-	<div class="type">
-		<span class="info">.c-header-sm</span>
-		<span class="c-header-sm">The quick brown fox jumps over the lazy dog.</span>
-	</div>
-</div>
-<div class="type-block">
-	<div class="type">
-		<span class="info">.c-header-xs</span>
-		<span class="c-header-xs">The quick brown fox jumps over the lazy dog.</span>
-	</div>
-</div>
 
+	<br>
+	<br>
+	<br>
 
-<br><br>
-
-<div class="docs-section-title">02. Body</div>
-<div class="type-block">
-	<div class="type">
-		<span class="info">.c-text-xxl</span>
+	<div class="c-col-md-2">
+		<code>.c-text-xxl</code>
+	</div>
+	<div class="c-col-md-10">
 		<span class="c-text-xxl">The quick brown fox jumps over the lazy dog.</span>
 	</div>
 </div>
-<div class="type-block">
-	<div class="type">
-		<span class="info">.c-text-xl</span>
+<br>
+<hr class="c-hr">
+<br>
+<br>
+<div class="c-row">
+	<div class="c-col-md-2">
+		<code>.c-header-xl</code>
+	</div>
+
+	<div class="c-col-md-10">
+		<span class="c-header-xl">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="c-col-md-2">
+		<code>.c-text-xl</code>
+	</div>
+	<div class="c-col-md-10">
 		<span class="c-text-xl">The quick brown fox jumps over the lazy dog.</span>
 	</div>
 </div>
-<div class="type-block">
-	<div class="type">
-		<span class="info">.c-text-lg</span>
+<br>
+<hr class="c-hr">
+<br>
+<br>
+<div class="c-row">
+	<div class="c-col-md-2">
+		<code>.c-header-lg</code>
+	</div>
+
+	<div class="c-col-md-10">
+		<span class="c-header-lg">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="c-col-md-2">
+		<code>.c-text-lg</code>
+	</div>
+	<div class="c-col-md-10">
 		<span class="c-text-lg">The quick brown fox jumps over the lazy dog.</span>
 	</div>
 </div>
-<div class="type-block">
-	<div class="type">
-		<span class="info">.c-text-md</span>
+<br>
+<hr class="c-hr">
+<br>
+<br>
+<div class="c-row">
+	<div class="c-col-md-2">
+		<code>.c-header-md</code>
+	</div>
+
+	<div class="c-col-md-10">
+		<span class="c-header-md">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="c-col-md-2">
+		<code>.c-text-md</code>
+	</div>
+	<div class="c-col-md-10">
 		<span class="c-text-md">The quick brown fox jumps over the lazy dog.</span>
 	</div>
 </div>
-<div class="type-block">
-	<div class="type">
-		<span class="info">.c-text-sm</span>
+<br>
+<hr class="c-hr">
+<br>
+<br>
+<div class="c-row">
+	<div class="c-col-md-2">
+		<code>.c-header-sm</code>
+	</div>
+
+	<div class="c-col-md-10">
+		<span class="c-header-sm">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="c-col-md-2">
+		<code>.c-text-sm</code>
+	</div>
+	<div class="c-col-md-10">
 		<span class="c-text-sm">The quick brown fox jumps over the lazy dog.</span>
 	</div>
 </div>
-<div class="type-block">
-	<div class="type">
-		<span class="info">.c-text-xs</span>
+<br>
+<hr class="c-hr">
+<br>
+<br>
+<div class="c-row">
+	<div class="c-col-md-2">
+		<code>.c-header-xs</code>
+	</div>
+
+	<div class="c-col-md-10">
+		<span class="c-header-xs">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="c-col-md-2">
+		<code>.c-text-xs</code>
+	</div>
+	<div class="c-col-md-10">
 		<span class="c-text-xs">The quick brown fox jumps over the lazy dog.</span>
 	</div>
 </div>
+<br>
+<hr class="c-hr">
+<br>
+<br>
 
-<br><br>
 
-<!-- <div class="docs-section-title">03. Color Modifiers</div>
 
-<div class="type-block">
-  <div class="type">
-    <span class="c-text-lg">The quick brown fox jumps over the lazy dog.</span>
-    <span class="info">Generic (Gray-9)</span>
-    <br>
-    <span class="c-text-lg c-text-gray-5">The quick brown fox jumps over the lazy dog.</span>
-    <span class="info">Placeholders (Gray-5)</span>
-    <br>
-    <span class="c-text-lg c-text-success-9">The quick brown fox jumps over the lazy dog.</span>
-    <span class="info">Success (Success-9)</span>
-    <br>
-    <span class="c-text-lg c-text-white c-bg-black">The quick brown fox jumps over the lazy dog.</span>
-    <span class="info">White (Gray-9)</span>
-  </div>
-  <div class="type">
-    <span class="c-text-lg c-text-gray-7">The quick brown fox jumps over the lazy dog.</span>
-    <span class="info">Sub Generic (Gray-7)</span>
-    <br>
-    <span class="c-text-lg c-text-primary-9">The quick brown fox jumps over the lazy dog.</span>
-    <span class="info">Primary (Primary-9)</span>
-    <br>
-    <span class="c-text-lg c-text-warning-9">The quick brown fox jumps over the lazy dog.</span>
-    <span class="info">Warning (Warning-9)</span>
-  </div>
-  <div class="type">
-    <span class="c-text-lg c-text-gray-6">The quick brown fox jumps over the lazy dog.</span>
-    <span class="info">Disabled (Gray-6)</span>
-    <br>
-    <span class="c-text-lg c-text-danger-9">The quick brown fox jumps over the lazy dog.</span>
-    <span class="info">Danger (Danger-9)</span>
-    <br>
-    <span class="c-text-lg c-text-primary-9 c-text-underline">The quick brown fox jumps over the lazy dog.</span>
-    <span class="info">Primary (Primary-9)</span>
-  </div>
-</div> -->
-
-<br><br>
-
-<div class="docs-section-title">03. Type Modifiers</div>
-
-<div class="type-block type-block-2">
-	<div class="type">
+<div class="c-row">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-heavy">.c-text-heavy</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-bold">.c-text-bold</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-semibold">.c-text-semibold</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-light">.c-text-light</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-italic">.c-text-italic</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-uppercase">.c-text-uppercase</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-lowercase">.c-text-lowercase</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-capitalize">.c-text-capitalize</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-monospace">.c-text-monospace</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-underline">.c-text-underline</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-strikethrough">.c-text-strikethrough</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-primary">.c-text-primary</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-success">.c-text-success</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-warning">.c-text-warning</span>
 	</div>
-	<div class="type">
+	<div class="c-col-md-3">
 		<span class="c-text-lg c-text-danger">.c-text-danger</span>
 	</div>
 </div>
-
-<!--
-<div class="type-block">
-  <div class="type">
-    <span class="c-text-lg">The quick brown fox jumps over the lazy dog.</span>
-    <span class="info">Normal</span>
-  </div>
-  <div class="type">
-    <span class="c-text-lg c-text-italic">The quick brown fox jumps over the lazy dog.</span>
-    <span class="info">Italic</span>
-  </div>
-  <div class="type">
-      <span class="c-text-lg c-text-monospace">The quick brown fox jumps over the lazy dog.</span>
-      <span class="info">Monospace</span>
-    </div>
-</div>
-
-<br><br>
-
-<div class="docs-section-title">05. Weight</div>
-
-<div class="type-block">
-    <div class="type">
-        <span class="c-text-lg c-text-heavy">.c-text-heavy</span>
-    </div>
-    <div class="type">
-        <span class="c-text-lg c-text-bold">.c-text-bold</span>
-    </div>
-    <div class="type">
-        <span class="c-text-lg c-text-semibold">.c-text-semibold</span>
-    </div>
-    <div class="type">
-        <span class="c-text-lg">normal</span>
-    </div>
-    <div class="type">
-        <span class="c-text-lg c-text-light">.c-text-light</span>
-    </div>
-</div>
-
-<br><br>
-
-<div class="docs-section-title">06. Transforms</div>
-
-<div class="type-block">
-  <div class="type">
-    <span class="c-text-lg c-text-lowercase">.c-text-lowercase</span>
-  </div>
-  <div class="type">
-      <span class="c-text-lg c-text-uppercase">.c-text-uppercase</span>
-    </div>
-  <div class="type">
-      <span class="c-text-lg c-text-capitalize">.c-text-capitalize</span>
-    </div>
-</div>
-
-<br><br>
-
-
-<div class="docs-section-title">07. Decoration</div>
-
-<div class="type-block">
-  <div class="type">
-    <span class="c-text-lg c-text-strikethrough">.c-text-strikethrough</span>
-  </div>
-  <div class="type">
-      <span class="c-text-lg c-text-underline">.c-text-underline</span>
-    </div>
-    <div class="type">
-      </div>
-</div> -->
 
 <br><br></div>
   </div>
@@ -531,10 +492,10 @@
     </main>
     <nav class="docs-nav">
       <div class="docs-nav-header">
-        <a href="index.html">
-          <div class="cupcake">Cupcake</div>
-          <div class="ipreo">Design System</div>
-        </a>
+        <span href="index.html">
+          <div class="c-header-xl c-text-primary">Cupcake</div>
+          <div class="c-header-xl">Design System</div>
+        </span>
         <div class="docs-version">Version 2.0</div>
       </div>
     
@@ -562,17 +523,78 @@
           <li class="docs-nav-item"><a href="elements.html#forms">Forms</a></li>
           <li class="docs-nav-item"><a href="elements.html#grid">Grid</a></li>
           <li class="docs-nav-item"><a href="elements.html#header">Header</a></li>
+          <li class="docs-nav-item"><a href="elements.html#loader">Loader</a></li>
+          <li class="docs-nav-item"><a href="elements.html#media-objects">Media Objects</a></li>
           <li class="docs-nav-item"><a href="elements.html#modal">Modal</a></li>
           <li class="docs-nav-item"><a href="elements.html#pagination">Pagination</a></li>
           <li class="docs-nav-item"><a href="elements.html#switch">Switch</a></li>
           <li class="docs-nav-item"><a href="elements.html#table">Table</a></li>
           <li class="docs-nav-item"><a href="elements.html#tabs">Tabs</a></li>
+          <li class="docs-nav-item"><a href="elements.html#tooltips">Tooltips</a></li>
         </ul>
       </ul>
     
     </nav>
   </div>
 </body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+
+$(".c-dropdown").click(function () {
+  $(this).find(".c-dropdown-list, .c-dropdown-grid").slideToggle(100);
+});
+
+$(document).on("click", function (event) {
+  var $dropdownTrigger = $(".c-dropdown");
+
+  if ($dropdownTrigger !== event.target && !$dropdownTrigger.has(event.target).length) {
+    $(".c-dropdown-list, .c-dropdown-grid").slideUp("fast");
+  }
+});
+});
+
+$("#fullscreenLoaderBtn").click(function(){
+  $("#fullscreenLoader").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader").click(function(){
+  $("#fullscreenLoader").removeClass("c-loader-visible");
+});
+
+$("#fullscreenLoaderBtn2").click(function(){
+  $("#fullscreenLoader2").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader2").click(function(){
+  $("#fullscreenLoader2").removeClass("c-loader-visible");
+});
+
+</script>
+
+
+<script>
+$("#fullscreenLoaderBtn").click(function(){
+  $("#fullscreenLoader").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader").click(function(){
+  $("#fullscreenLoader").removeClass("c-loader-visible");
+});
+
+$("#fullscreenLoaderBtn2").click(function(){
+  $("#fullscreenLoader2").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader2").click(function(){
+  $("#fullscreenLoader2").removeClass("c-loader-visible");
+});
+
+</script>
+
 
 <script>
 	// Some simple js heavily modified from fabricators core for the sidebar
@@ -670,5 +692,6 @@
 	cupcake.menuToggle().setActiveItem();
 
 </script>
+
 
 </html>

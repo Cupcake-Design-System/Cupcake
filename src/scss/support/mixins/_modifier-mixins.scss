@@ -2,18 +2,13 @@
 ///
 /// Generate modifier classes based parent.
 /// Can get any value from the map, generate the classes with the style attribute.
-///
-/// @group Style Mixins
-/// @param {variable} $attribute [ ] - css attribute target
-/// @param {variable} $prefix [-] - How you seperate the parent class and generated modifiers .c-text
-/// @param {variable} $separator [-] - If you follow BEM and wish to use something like "--" to get .color-text--red
 /// @example
 ///    //Useage:
 ///    .parent {
 ///      @include modifiers(shadows, 'box-shadow');
 ///     }
 ///
-/// @example
+/// @examples
 ///   //Output:
 /// .parent-xl {
 ///   box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.1); }
@@ -32,17 +27,17 @@
 ///
 ///
 
-@mixin modifiers($map, $attribute, $prefix: '-', $separator: '-') {
+@mixin modifiers($map, $attribute) {
   @each $key, $value in $map {
-    &#{#{$prefix}#{$key}} {
+    &-#{$key} {
       @if type-of($value) == 'map' {
-        @include modifiers($value, $attribute, $prefix, $separator);
+        @include modifiers($value, $attribute);
       } @else if type-of($attribute) == 'list' {
         @each $a in $attribute {
-          #{$a}: $value;
+          #{$a}: $value !important;
         }
       } @else {
-        #{$attribute}: $value;
+        #{$attribute}: $value !important;
       }
     }
   }

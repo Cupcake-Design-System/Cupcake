@@ -14,16 +14,16 @@
       @include expect {
 
         .depth-xs {
-          box-shadow: 0 2px 4px -2px rgba(33, 37, 41, 0.1)
+          box-shadow: 0 2px 4px -2px rgba(33, 37, 41, 0.1) !important;
         }
         .depth-sm {
-          box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1)
+          box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1) !important;
         }
         .depth-md {
-          box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1)
+          box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1) !important;
         }
         .depth-lg {
-          box-shadow: 0 8px 8px -2px rgba(33, 37, 41, 0.1)
+          box-shadow: 0 8px 8px -2px rgba(33, 37, 41, 0.1) !important;
         }
       }
     }
@@ -38,154 +38,154 @@
       }
       @include expect {
         .color-danger-0 {
-          background-color: #fff5f5
+          background-color: #fff5f5 !important;
         }
         .color-danger-1 {
-          background-color: #ffe3e3
+          background-color: #ffe3e3 !important;
         }
         .color-danger-2 {
-          background-color: #ffc9c9
+          background-color: #ffc9c9 !important;
         }
         .color-danger-3 {
-          background-color: #ffa8a8
+          background-color: #ffa8a8 !important;
         }
         .color-danger-4 {
-          background-color: #ff8787
+          background-color: #ff8787 !important;
         }
         .color-danger-5 {
-          background-color: #ff6b6b
+          background-color: #ff6b6b !important;
         }
         .color-danger-6 {
-          background-color: #fa5252
+          background-color: #fa5252 !important;
         }
         .color-danger-7 {
-          background-color: #f03e3e
+          background-color: #f03e3e !important;
         }
         .color-danger-8 {
-          background-color: #e03131
+          background-color: #e03131 !important;
         }
         .color-danger-9 {
-          background-color: #c92a2a
+          background-color: #c92a2a !important;
         }
         .color-gray-0 {
-          background-color: #f8f9fa
+          background-color: #f8f9fa !important;
         }
         .color-gray-1 {
-          background-color: #f1f3f5
+          background-color: #f1f3f5 !important;
         }
         .color-gray-2 {
-          background-color: #e9ecef
+          background-color: #e9ecef !important;
         }
         .color-gray-3 {
-          background-color: #dee2e6
+          background-color: #dee2e6 !important;
         }
         .color-gray-4 {
-          background-color: #ced4da
+          background-color: #ced4da !important;
         }
         .color-gray-5 {
-          background-color: #adb5bd
+          background-color: #adb5bd !important;
         }
         .color-gray-6 {
-          background-color: #868e96
+          background-color: #868e96 !important;
         }
         .color-gray-7 {
-          background-color: #495057
+          background-color: #495057 !important;
         }
         .color-gray-8 {
-          background-color: #343a40
+          background-color: #343a40 !important;
         }
         .color-gray-9 {
-          background-color: #212529
+          background-color: #212529 !important;
         }
         .color-primary-0 {
-          background-color: #e8f7ff
+          background-color: #e8f7ff !important;
         }
         .color-primary-1 {
-          background-color: #ccedff
+          background-color: #ccedff !important;
         }
         .color-primary-2 {
-          background-color: #a3daff
+          background-color: #a3daff !important;
         }
         .color-primary-3 {
-          background-color: #72c3fc
+          background-color: #72c3fc !important;
         }
         .color-primary-4 {
-          background-color: #4dadf7
+          background-color: #4dadf7 !important;
         }
         .color-primary-5 {
-          background-color: #329af0
+          background-color: #329af0 !important;
         }
         .color-primary-6 {
-          background-color: #228ae6
+          background-color: #228ae6 !important;
         }
         .color-primary-7 {
-          background-color: #1c7cd6
+          background-color: #1c7cd6 !important;
         }
         .color-primary-8 {
-          background-color: #1b6ec2
+          background-color: #1b6ec2 !important;
         }
         .color-primary-9 {
-          background-color: #1862ab
+          background-color: #1862ab !important;
         }
         .color-success-0 {
-          background-color: #ebfbee
+          background-color: #ebfbee !important;
         }
         .color-success-1 {
-          background-color: #d3f9d8
+          background-color: #d3f9d8 !important;
         }
         .color-success-2 {
-          background-color: #b2f2bb
+          background-color: #b2f2bb !important;
         }
         .color-success-3 {
-          background-color: #8ce99a
+          background-color: #8ce99a !important;
         }
         .color-success-4 {
-          background-color: #69db7c
+          background-color: #69db7c !important;
         }
         .color-success-5 {
-          background-color: #51cf66
+          background-color: #51cf66 !important;
         }
         .color-success-6 {
-          background-color: #40c057
+          background-color: #40c057 !important;
         }
         .color-success-7 {
-          background-color: #37b24d
+          background-color: #37b24d !important;
         }
         .color-success-8 {
-          background-color: #2f9e44
+          background-color: #2f9e44 !important;
         }
         .color-success-9 {
-          background-color: #2b8a3e
+          background-color: #2b8a3e !important;
         }
         .color-warning-0 {
-          background-color: #fff9db
+          background-color: #fff9db !important;
         }
         .color-warning-1 {
-          background-color: #fff3bf
+          background-color: #fff3bf !important;
         }
         .color-warning-2 {
-          background-color: #ffec99
+          background-color: #ffec99 !important;
         }
         .color-warning-3 {
-          background-color: #ffe066
+          background-color: #ffe066 !important;
         }
         .color-warning-4 {
-          background-color: #ffd43b
+          background-color: #ffd43b !important;
         }
         .color-warning-5 {
-          background-color: #fcc419
+          background-color: #fcc419 !important;
         }
         .color-warning-6 {
-          background-color: #fab005
+          background-color: #fab005 !important;
         }
         .color-warning-7 {
-          background-color: #f59f00
+          background-color: #f59f00 !important;
         }
         .color-warning-8 {
-          background-color: #f08c00
+          background-color: #f08c00 !important;
         }
         .color-warning-9 {
-          background-color: #e67700
+          background-color: #e67700 !important;
         }
 
       }
@@ -200,13 +200,13 @@
         }
       }
       @include expect {
-        .space-0 { padding: 0; }
-        .space-xxs { padding: 2px; }
-        .space-xs { padding: 4px; }
-        .space-sm { padding: 8px; }
-        .space-md { padding: 16px; }
-        .space-lg { padding: 24px; }
-        .space-xl { padding: 32px; }
+        .space-0 { padding: 0 !important; }
+        .space-xxs { padding: 2px !important; }
+        .space-xs { padding: 4px !important; }
+        .space-sm { padding: 8px !important; }
+        .space-md { padding: 16px !important; }
+        .space-lg { padding: 24px !important; }
+        .space-xl { padding: 32px !important; }
       }
     }
   }
@@ -219,13 +219,13 @@
         }
       }
       @include expect {
-        .space-horizontal-0 { padding-left   : 0; padding-right   : 0; }
-        .space-horizontal-xxs { padding-left : 2px; padding-right : 2px; }
-        .space-horizontal-xs { padding-left  : 4px; padding-right  : 4px; }
-        .space-horizontal-sm { padding-left  : 8px; padding-right  : 8px; }
-        .space-horizontal-md { padding-left  : 16px; padding-right  : 16px; }
-        .space-horizontal-lg { padding-left  : 24px; padding-right  : 24px; }
-        .space-horizontal-xl { padding-left  : 32px; padding-right  : 32px; }
+        .space-horizontal-0 { padding-left   : 0 !important; padding-right   : 0 !important; }
+        .space-horizontal-xxs { padding-left : 2px !important; padding-right : 2px !important; }
+        .space-horizontal-xs { padding-left  : 4px !important; padding-right  : 4px !important; }
+        .space-horizontal-sm { padding-left  : 8px !important; padding-right  : 8px !important; }
+        .space-horizontal-md { padding-left  : 16px !important; padding-right  : 16px !important; }
+        .space-horizontal-lg { padding-left  : 24px !important; padding-right  : 24px !important; }
+        .space-horizontal-xl { padding-left  : 32px !important; padding-right  : 32px !important; }
       }
     }
   }
@@ -234,15 +234,15 @@
     @include assert {
       @include output {
         .font-weight {
-          @include modifiers($font-weight, 'font-weight', '-_-_');
+          @include modifiers($font-weight, 'font-weight');
         }
       }
       @include expect {
-        .font-weight-_-_heavy {font-weight: 900; }
-        .font-weight-_-_bold {font-weight: 700; }
-        .font-weight-_-_semibold {font-weight: 600; }
-        .font-weight-_-_normal {font-weight: 500; }
-        .font-weight-_-_light {font-weight: 300; }
+        .font-weight-heavy {font-weight: 900 !important; }
+        .font-weight-bold {font-weight: 700 !important; }
+        .font-weight-semibold {font-weight: 600 !important; }
+        .font-weight-normal {font-weight: 500 !important; }
+        .font-weight-light {font-weight: 300 !important; }
       }
     }
   }

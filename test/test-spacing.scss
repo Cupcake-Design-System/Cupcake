@@ -11,7 +11,7 @@
       @include output {
         $enable-spacer-classes: true;
         @if $enable-spacer-classes == true {
-          .#{$padding-prefix} {
+          .c-p {
             @include modifiers($space, 'padding');
 
             &-top {
@@ -31,7 +31,7 @@
             }
           }
 
-          .#{$margin-prefix} {
+          .c-m {
             @include modifiers($space, 'margin');
 
             &-top {
@@ -54,242 +54,242 @@
       }
       @include expect {
         .c-p-0 {
-          padding: 0
+          padding: 0 !important;
         }
         .c-p-xxs {
-          padding: 2px
+          padding: 2px !important;
         }
         .c-p-xs {
-          padding: 4px
+          padding: 4px !important;
         }
         .c-p-sm {
-          padding: 8px
+          padding: 8px !important;
         }
         .c-p-md {
-          padding: 16px
+          padding: 16px !important;
         }
         .c-p-lg {
-          padding: 24px
+          padding: 24px !important;
         }
         .c-p-xl {
-          padding: 32px
+          padding: 32px !important;
         }
         .c-p-top-0 {
-          padding-top: 0
+          padding-top: 0 !important;
         }
         .c-p-top-xxs {
-          padding-top: 2px
+          padding-top: 2px !important;
         }
         .c-p-top-xs {
-          padding-top: 4px
+          padding-top: 4px !important;
         }
         .c-p-top-sm {
-          padding-top: 8px
+          padding-top: 8px !important;
         }
         .c-p-top-md {
-          padding-top: 16px
+          padding-top: 16px !important;
         }
         .c-p-top-lg {
-          padding-top: 24px
+          padding-top: 24px !important;
         }
         .c-p-top-xl {
-          padding-top: 32px
+          padding-top: 32px !important;
         }
         .c-p-bottom-0 {
-          padding-bottom: 0
+          padding-bottom: 0 !important;
         }
         .c-p-bottom-xxs {
-          padding-bottom: 2px
+          padding-bottom: 2px !important;
         }
         .c-p-bottom-xs {
-          padding-bottom: 4px
+          padding-bottom: 4px !important;
         }
         .c-p-bottom-sm {
-          padding-bottom: 8px
+          padding-bottom: 8px !important;
         }
         .c-p-bottom-md {
-          padding-bottom: 16px
+          padding-bottom: 16px !important;
         }
         .c-p-bottom-lg {
-          padding-bottom: 24px
+          padding-bottom: 24px !important;
         }
         .c-p-bottom-xl {
-          padding-bottom: 32px
+          padding-bottom: 32px !important;
         }
         .c-p-horizontal-0 {
-          padding-left: 0;
-          padding-right: 0
+          padding-left: 0 !important;
+          padding-right: 0 !important;
         }
         .c-p-horizontal-xxs {
-          padding-left: 2px;
-          padding-right: 2px
+          padding-left: 2px !important;
+          padding-right: 2px !important;
         }
         .c-p-horizontal-xs {
-          padding-left: 4px;
-          padding-right: 4px
+          padding-left: 4px !important;
+          padding-right: 4px !important;
         }
         .c-p-horizontal-sm {
-          padding-left: 8px;
-          padding-right: 8px
+          padding-left: 8px !important;
+          padding-right: 8px !important;
         }
         .c-p-horizontal-md {
-          padding-left: 16px;
-          padding-right: 16px
+          padding-left: 16px !important;
+          padding-right: 16px !important;
         }
         .c-p-horizontal-lg {
-          padding-left: 24px;
-          padding-right: 24px
+          padding-left: 24px !important;
+          padding-right: 24px !important;
         }
         .c-p-horizontal-xl {
-          padding-left: 32px;
-          padding-right: 32px
+          padding-left: 32px !important;
+          padding-right: 32px !important;
         }
         .c-p-vertical-0 {
-          padding-top: 0;
-          padding-bottom: 0
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
         }
         .c-p-vertical-xxs {
-          padding-top: 2px;
-          padding-bottom: 2px
+          padding-top: 2px !important;
+          padding-bottom: 2px !important;
         }
         .c-p-vertical-xs {
-          padding-top: 4px;
-          padding-bottom: 4px
+          padding-top: 4px !important;
+          padding-bottom: 4px !important;
         }
         .c-p-vertical-sm {
-          padding-top: 8px;
-          padding-bottom: 8px
+          padding-top: 8px !important;
+          padding-bottom: 8px !important;
         }
         .c-p-vertical-md {
-          padding-top: 16px;
-          padding-bottom: 16px
+          padding-top: 16px !important;
+          padding-bottom: 16px !important;
         }
         .c-p-vertical-lg {
-          padding-top: 24px;
-          padding-bottom: 24px
+          padding-top: 24px !important;
+          padding-bottom: 24px !important;
         }
         .c-p-vertical-xl {
-          padding-top: 32px;
-          padding-bottom: 32px
+          padding-top: 32px !important;
+          padding-bottom: 32px !important;
         }
         .c-m-0 {
-          margin: 0
+          margin: 0 !important;
         }
         .c-m-xxs {
-          margin: 2px
+          margin: 2px !important;
         }
         .c-m-xs {
-          margin: 4px
+          margin: 4px !important;
         }
         .c-m-sm {
-          margin: 8px
+          margin: 8px !important;
         }
         .c-m-md {
-          margin: 16px
+          margin: 16px !important;
         }
         .c-m-lg {
-          margin: 24px
+          margin: 24px !important;
         }
         .c-m-xl {
-          margin: 32px
+          margin: 32px !important;
         }
         .c-m-top-0 {
-          margin-top: 0
+          margin-top: 0 !important;
         }
         .c-m-top-xxs {
-          margin-top: 2px
+          margin-top: 2px !important;
         }
         .c-m-top-xs {
-          margin-top: 4px
+          margin-top: 4px !important;
         }
         .c-m-top-sm {
-          margin-top: 8px
+          margin-top: 8px !important;
         }
         .c-m-top-md {
-          margin-top: 16px
+          margin-top: 16px !important;
         }
         .c-m-top-lg {
-          margin-top: 24px
+          margin-top: 24px !important;
         }
         .c-m-top-xl {
-          margin-top: 32px
+          margin-top: 32px !important;
         }
         .c-m-bottom-0 {
-          margin-bottom: 0
+          margin-bottom: 0 !important;
         }
         .c-m-bottom-xxs {
-          margin-bottom: 2px
+          margin-bottom: 2px !important;
         }
         .c-m-bottom-xs {
-          margin-bottom: 4px
+          margin-bottom: 4px !important;
         }
         .c-m-bottom-sm {
-          margin-bottom: 8px
+          margin-bottom: 8px !important;
         }
         .c-m-bottom-md {
-          margin-bottom: 16px
+          margin-bottom: 16px !important;
         }
         .c-m-bottom-lg {
-          margin-bottom: 24px
+          margin-bottom: 24px !important;
         }
         .c-m-bottom-xl {
-          margin-bottom: 32px
+          margin-bottom: 32px !important;
         }
         .c-m-horizontal-0 {
-          margin-left: 0;
-          margin-right: 0
+          margin-left: 0 !important;
+          margin-right: 0 !important;
         }
         .c-m-horizontal-xxs {
-          margin-left: 2px;
-          margin-right: 2px
+          margin-left: 2px !important;
+          margin-right: 2px !important;
         }
         .c-m-horizontal-xs {
-          margin-left: 4px;
-          margin-right: 4px
+          margin-left: 4px !important;
+          margin-right: 4px !important;
         }
         .c-m-horizontal-sm {
-          margin-left: 8px;
-          margin-right: 8px
+          margin-left: 8px !important;
+          margin-right: 8px !important;
         }
         .c-m-horizontal-md {
-          margin-left: 16px;
-          margin-right: 16px
+          margin-left: 16px !important;
+          margin-right: 16px !important;
         }
         .c-m-horizontal-lg {
-          margin-left: 24px;
-          margin-right: 24px
+          margin-left: 24px !important;
+          margin-right: 24px !important;
         }
         .c-m-horizontal-xl {
-          margin-left: 32px;
-          margin-right: 32px
+          margin-left: 32px !important;
+          margin-right: 32px !important;
         }
         .c-m-vertical-0 {
-          margin-top: 0;
-          margin-bottom: 0
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
         }
         .c-m-vertical-xxs {
-          margin-top: 2px;
-          margin-bottom: 2px
+          margin-top: 2px !important;
+          margin-bottom: 2px !important;
         }
         .c-m-vertical-xs {
-          margin-top: 4px;
-          margin-bottom: 4px
+          margin-top: 4px !important;
+          margin-bottom: 4px !important;
         }
         .c-m-vertical-sm {
-          margin-top: 8px;
-          margin-bottom: 8px
+          margin-top: 8px !important;
+          margin-bottom: 8px !important;
         }
         .c-m-vertical-md {
-          margin-top: 16px;
-          margin-bottom: 16px
+          margin-top: 16px !important;
+          margin-bottom: 16px !important;
         }
         .c-m-vertical-lg {
-          margin-top: 24px;
-          margin-bottom: 24px
+          margin-top: 24px !important;
+          margin-bottom: 24px !important;
         }
         .c-m-vertical-xl {
-          margin-top: 32px;
-          margin-bottom: 32px
+          margin-top: 32px !important;
+          margin-bottom: 32px !important;
         }
       }
     }

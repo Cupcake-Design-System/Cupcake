@@ -1,0 +1,21 @@
+@mixin center-class-export($name: 'c-center') {
+  .#{$name} {
+    @include center(both);
+
+    &-top {
+      @include center(top);
+    }
+
+    &-right {
+      @include center(right);
+    }
+
+    &-bottom {
+      @include center(bottom);
+    }
+
+    &-left {
+      @include center(left);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@mixin cursor-class-export {
+  .c-cursor-pointer {
+    cursor: pointer !important;
+  }
+
+  .c-cursor-grab {
+    cursor: move !important;  //IE fallback
+    cursor: grab !important;
+  }
+
+  .c-cursor-grabbing {
+    cursor: move !important;  //IE fallback
+    cursor: grabbing !important;
+  }
+
+  .c-cursor-move {
+    cursor: move !important;
+  }
+
+  .c-full-height {
+    height: 100% !important;
+  }
+
+  .c-full-width {
+    width: 100% !important;
+  }
+}

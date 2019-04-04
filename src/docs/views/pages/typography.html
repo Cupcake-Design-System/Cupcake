@@ -4,12 +4,11 @@ layout: blank
 hide-snippets: true
 ---
 
-<hr class="hr">
 
 {{> typography}}
 
 
-<div class="docs-wrap">
+<div class="c-row">
   {{#each toolkit.colors}}
   {{#each this}}
   {{#iterate 10}}
@@ -20,9 +19,10 @@ hide-snippets: true
   {{/each}}
 </div>
 
-<hr class="hr">
+<hr class="c-hr">
 
-<div class="docs-wrap" style="justify-content: space-between;">
+<div class="c-row">
+    <div class="c-col-md-4">
   <ul class="c-ul">
     <li>Lorem ipsum dolor sit amet</li>
     <li>Consectetur adipiscing elit</li>
@@ -40,7 +40,9 @@ hide-snippets: true
     <li>Aenean sit amet erat nunc</li>
     <li>Eget porttitor lorem</li>
   </ul>
+  </div>
 
+<div class="c-col-md-4">
   <ol class="c-ol">
     <li>Lorem ipsum dolor sit amet</li>
     <li>Consectetur adipiscing elit</li>
@@ -58,7 +60,9 @@ hide-snippets: true
     <li>Aenean sit amet erat nunc</li>
     <li>Eget porttitor lorem</li>
   </ol>
+  </div>
 
+  <div class="c-col-md-4">
   <ol class="c-ol-unstyled">
     <li>Lorem ipsum dolor sit amet</li>
     <li>Consectetur adipiscing elit</li>
@@ -76,10 +80,11 @@ hide-snippets: true
     <li>Aenean sit amet erat nunc</li>
     <li>Eget porttitor lorem</li>
   </ol>
+  </div>
 
 </div>
 
-<hr class="hr">
+<hr class="c-hr">
 
 <h3>Functions and mixins demos</h3>
 <br>

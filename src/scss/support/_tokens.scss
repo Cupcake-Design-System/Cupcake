@@ -117,23 +117,23 @@ $global-sizes: (
 
 // Radius and map for generating helpers
 $radius-0: 0 !default;
-$radius-square: 0 !default;
 $radius-sm: 2px !default;
 $radius-md: 4px !default;
 $radius-lg: 8px !default;
-$radius-round: 200px !default;
+$radius-square: 0 !default;
 $radius-pill: 50px !default;
+$radius-round: 200px !default;
 
 
 // This is a looped map & classes will be generated based on key/value pairs i.e. "c-radius-sm"
 $radius: (
   0: $radius-0,
-  square: $radius-square,
   sm: $radius-sm,
   md: $radius-md,
   lg: $radius-lg,
-  round: $radius-round,
   pill: $radius-pill,
+  round: $radius-round,
+  square: $radius-square,
 );
 
 
@@ -151,23 +151,3 @@ $shadow: (
   lg: $shadow-lg
 );
 
-// --------------------------------------------
-// GLOBAL BOOLEANS & SETTINGS -----------------
-// --------------------------------------------
-$enable-reset         : true !default;
-$enable-shadow-classes: true !default;
-$enable-color-classes : true !default;
-$enable-spacer-classes: true !default;
-$enable-radius-classes: true !default;
-$white-label          : false !default;
-$backgound-prefix     : 'c-bg' !default;
-$border-prefix        : 'c-bd' !default;
-$padding-prefix       : 'c-p' !default;
-$margin-prefix        : 'c-m' !default;
-$shadow-prefix        : 'c-depth' !default;
-$radius-prefix        : 'c-radius' !default;
-$float-prefix         : 'c-pull' !default;
-
-$global-default-border: 1px solid $color-gray-4 !default;
-$global-default-radius: $radius-sm !default;
-$global-disabled-bg   : $color-gray-3 !default;

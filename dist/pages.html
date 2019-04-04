@@ -93,6 +93,16 @@
 
 
 	<li>
+		<a href="pages/loader.html" class="f-item-heading" target="_blank">Loader</a>
+	</li>
+
+
+	<li>
+		<a href="pages/media-objects.html" class="f-item-heading" target="_blank">Media Objects</a>
+	</li>
+
+
+	<li>
 		<a href="pages/modal.html" class="f-item-heading" target="_blank">Modal</a>
 	</li>
 
@@ -124,6 +134,11 @@
 
 	<li>
 		<a href="pages/tabs.html" class="f-item-heading" target="_blank">Tabs</a>
+	</li>
+
+
+	<li>
+		<a href="pages/tooltips.html" class="f-item-heading" target="_blank">Tooltips</a>
 	</li>
 
 
@@ -167,11 +182,14 @@
           <li class="docs-nav-item"><a href="elements.html#forms">Forms</a></li>
           <li class="docs-nav-item"><a href="elements.html#grid">Grid</a></li>
           <li class="docs-nav-item"><a href="elements.html#header">Header</a></li>
+          <li class="docs-nav-item"><a href="elements.html#loader">Loader</a></li>
+          <li class="docs-nav-item"><a href="elements.html#media-objects">Media Objects</a></li>
           <li class="docs-nav-item"><a href="elements.html#modal">Modal</a></li>
           <li class="docs-nav-item"><a href="elements.html#pagination">Pagination</a></li>
           <li class="docs-nav-item"><a href="elements.html#switch">Switch</a></li>
           <li class="docs-nav-item"><a href="elements.html#table">Table</a></li>
           <li class="docs-nav-item"><a href="elements.html#tabs">Tabs</a></li>
+          <li class="docs-nav-item"><a href="elements.html#tooltips">Tooltips</a></li>
         </ul>
       </ul>
     
@@ -199,6 +217,21 @@ $(document).on("click", function (event) {
 });
 });
 
+$("#fullscreenLoaderBtn").click(function(){
+  $("#fullscreenLoader").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader").click(function(){
+  $("#fullscreenLoader").removeClass("c-loader-visible");
+});
+
+$("#fullscreenLoaderBtn2").click(function(){
+  $("#fullscreenLoader2").toggleClass("c-loader-visible");
+});
+
+$("#fullscreenLoader2").click(function(){
+  $("#fullscreenLoader2").removeClass("c-loader-visible");
+});
 
 (function( $ ) {
   var pluginName = "xrayhtml",

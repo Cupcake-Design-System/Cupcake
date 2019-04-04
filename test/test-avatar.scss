@@ -17,6 +17,7 @@ $avatar-prefix   : 'avi';
         .avi {
           width: 32px;
           height: 32px;
+          flex-shrink: 0;
           text-align: center;
           position: relative;
           line-height: 32px;

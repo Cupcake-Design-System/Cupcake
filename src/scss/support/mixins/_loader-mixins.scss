@@ -1,0 +1,74 @@
+@mixin skeleton-bar($top, $right, $left: 0, $position: absolute) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  border-radius: $radius-sm;
+  height: $skeleton-bar-height;
+  background: $skeleton-bg-color;
+  background-image: $skeleton-bar;
+  background-size: 70% 40px;
+  background-position: -200% 0;
+  background-repeat: no-repeat;
+  animation: $skeleton-bar-animation;
+}
+
+@mixin skeleton-loader-mixin {
+  @include skeleton-bar(0, 0, $position: relative);
+
+  margin: $space-lg 0;
+
+  &::after {
+    @include skeleton-bar(-$space-md, 5%);
+
+    content: '';
+  }
+
+  &::before {
+    @include skeleton-bar($space-md, 10%);
+
+    content: '';
+  }
+}
+
+@mixin loader-rotate-keyframes {
+  @keyframes loaderRotate {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@keyframes skeletonIteration {
+  to {
+    background-position: 300% 0;
+  }
+}
+
+@mixin round-loader(
+  $size: $loader-full-page-size,
+  $color: $loader-color,
+  $border-size: $loader-full-page-border-size,
+  $duration: $loader-animation-duration,
+  $align: null
+) {
+  width: $size;
+  height: $size;
+  border: $border-size solid $loader-bg-color;
+  border-top-color: $color;
+  border-radius: $radius-round;
+  animation: loaderRotate $duration linear infinite;
+  @if ($align == center) {
+    margin: 0 auto;
+  }
+  @if ($align == middle) {
+    top: 50%;
+    margin: -$size / 2 auto 0;
+  }
+
+  @include loader-rotate-keyframes;
+}
