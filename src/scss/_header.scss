@@ -63,10 +63,12 @@ $trans: $header-search-transition-length;
           width: $header-search-expanded-width;
           transition: width $trans cubic-bezier(0, 1.22, .66, 1.39), border-radius $trans, background $trans;
 
+          /* stylelint-disable */
           & + label {
             top: -18px;
             left: $space-sm;
           }
+          /* stylelint-enable */
         }
 
         &:not(:focus) {
