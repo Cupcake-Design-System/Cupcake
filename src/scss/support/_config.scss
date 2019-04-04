@@ -431,17 +431,19 @@ $modal-dialog-footer-padding  : ($modal-padding / 2) 0 0 !default;
 // --------------------------------------------
 // HEADER -------------------------------------
 // --------------------------------------------
-$header-bg                : $color-white !default;
-$header-bg-hover          : rgba(0, 0, 0, 0.03) !default;
-$header-borders           : rgba(0, 0, 0, 0.06) !default;
-$header-bottom-border     : $color-gray-1 !default;
-$header-item-padding      : $space-0 $space-md !default;
-$header-height            : $global-size-xl !default;
-$header-inverse-bg        : $color-gray-7 !default;
-$header-inverse-bg-hover  : rgba(0, 0, 0, 0.05) !default;
-$header-text-color        : #adb5bd !default;
-$header-inverse-text-color: $color-white !default;
-$header-inverse-borders   : rgba(255, 255, 255, 0.1) !default;
+$header-bg                      : $color-white !default;
+$header-bg-hover                : rgba(0, 0, 0, 0.03) !default;
+$header-borders                 : rgba(0, 0, 0, 0.06) !default;
+$header-bottom-border           : $color-gray-1 !default;
+$header-item-padding            : $space-0 $space-md !default;
+$header-height                  : $global-size-xl !default;
+$header-inverse-bg              : $color-gray-7 !default;
+$header-inverse-bg-hover        : rgba(0, 0, 0, 0.05) !default;
+$header-text-color              : #adb5bd !default;
+$header-inverse-text-color      : $color-white !default;
+$header-inverse-borders         : rgba(255, 255, 255, 0.1) !default;
+$header-search-transition-length: 0.6s !default;
+$header-search-expanded-width   : 300px !default;
 
 
 // --------------------------------------------

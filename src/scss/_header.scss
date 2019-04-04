@@ -1,3 +1,6 @@
+// small variable name alias for readability
+$trans: $header-search-transition-length;
+
 // Header
 .c-header {
   width: 100%;
@@ -25,6 +28,64 @@
 
       &:hover {
         background: $header-bg-hover;
+      }
+    }
+
+    .c-header-search {
+      &-container {
+        cursor: default;
+        max-height: $header-height;
+
+        &:hover {
+          cursor: default;
+          background: transparent;
+        }
+      }
+
+      &-box {
+        width: 0;
+        height: 0;
+        cursor: pointer;
+        transition: width $trans, border-radius $trans, background $trans, box-shadow $trans;
+
+        // using the sibling selector
+        & + label {
+          max-width: 0;
+          position: relative;
+        }
+
+        &:focus {
+          cursor: text;
+          top: $space-sm;
+          position: relative;
+          height: $control-height;
+          padding-left: $control-height;
+          width: $header-search-expanded-width;
+          transition: width $trans cubic-bezier(0, 1.22, .66, 1.39), border-radius $trans, background $trans;
+
+          & + label {
+            top: -18px;
+            left: $space-sm;
+          }
+        }
+
+        &:not(:focus) {
+          border: 0;
+          overflow: hidden;
+          box-shadow: none;
+          text-indent: 100%;
+          white-space: nowrap;
+        }
+      }
+
+      &-icon {
+        cursor: pointer;
+        position: relative;
+        transition: none;
+
+        &:hover {
+          color: $color-gray-9;
+        }
       }
     }
   }
@@ -79,6 +140,26 @@
         background: $header-inverse-bg-hover;
       }
     }
+
+    .c-header-search {
+      &-container {
+        cursor: default;
+
+        &:hover {
+          cursor: default;
+          background: transparent;
+        }
+      }
+
+      &-box {
+        background: rgba(0, 0, 0, 0.28);
+        color: $header-inverse-text-color;
+      }
+
+      &-icon:hover {
+        color: $color-gray-1;
+      }
+    }
   }
 }
 
@@ -90,3 +171,4 @@
     padding-left: $space-md;
   }
 }
+
