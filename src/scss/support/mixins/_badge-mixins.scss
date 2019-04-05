@@ -2,11 +2,11 @@
 // Badge Base Mixin ---------------------------
 // --------------------------------------------
 @mixin badge-base {
-  display: inline-flex;
   align-items: center;
+  color: $color-white;
+  display: inline-flex;
   text-decoration: none;
   vertical-align: middle;
-  color: $color-white;
   background: $color-black;
   height: $badge-default-size;
   font-family: $badge-font-family;
@@ -16,13 +16,23 @@
   line-height: $badge-default-line-height;
   border-radius: $badge-default-border-radius;
 
+  &:empty {
+    padding: $space-0;
+    display: inline-block;
+    vertical-align: inherit;
+    border-radius: $radius-round;
+    width: ($badge-default-size / 2);
+    height: ($badge-default-size / 2);
+  }
+
+
   &-close {
     @include close($size: 16px, $x-size: 2px);
     @include close-style($style: "bg-dark");
 
-    border-radius: $badge-default-border-radius;
     margin-left: $space-xs;
     margin-right: -$space-xs;
+    border-radius: $badge-default-border-radius;
   }
 
   i {
@@ -40,9 +50,16 @@
   height: $size;
   min-width: $size;
   font-size: $font-size;
+  line-height: $size + 1;
 
   i {
     font-size: $font-size;
+  }
+
+  &:empty {
+    width: ($size / 2);
+    height: ($size / 2);
+    min-width: 0;
   }
 }
 
