@@ -14,11 +14,11 @@
       }
       @include expect {
         .badge {
-          display: inline-flex;
           align-items: center;
+          color: #ffffff;
+          display: inline-flex;
           text-decoration: none;
           vertical-align: middle;
-          color: #ffffff;
           background: #000000;
           height: 24px;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -27,6 +27,14 @@
           font-weight: 600;
           line-height: 2;
           border-radius: 200px;
+        }
+        .badge:empty {
+          padding: 0;
+          display: inline-block;
+          vertical-align: inherit;
+          border-radius: 200px;
+          width: 12px;
+          height: 12px;
         }
         .badge-close {
           border: 0;
@@ -43,9 +51,9 @@
           vertical-align: top;
           text-decoration: none;
           transition: background-color 0.2s ease;
-          border-radius: 200px;
           margin-left: 4px;
           margin-right: -4px;
+          border-radius: 200px;
         }
         .badge-close::before {
           height: 2px;
@@ -97,9 +105,15 @@
           height: 32px;
           min-width: 32px;
           font-size: 12px;
+          line-height: 33px;
         }
         .badge i {
           font-size: 12px;
+        }
+        .badge:empty {
+          width: 16px;
+          height: 16px;
+          min-width: 0;
         }
       }
     }
