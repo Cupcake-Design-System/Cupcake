@@ -37,9 +37,9 @@
     }
 
     &-disabled {
-      opacity: .7;
       cursor: not-allowed;
-      color: $color-gray-5;
+      color: $nav-color-disabled;
+      opacity: $nav-disabled-opacity;
     }
   }
 
@@ -139,21 +139,26 @@
     }
 
     &-disabled {
-      opacity: .7;
-      color: $nav-color;
       cursor: not-allowed;
-      background-color: $color-gray-0;
+      opacity: $nav-disabled-opacity;
+      color: $nav-pill-color-disabled;
+      background-color: $nav-pill-bg-disabled;
 
       .c-nav-icon {
-        opacity: .7;
-        color: $color-gray-5;
+        opacity: $nav-disabled-opacity;
+        color: $nav-pill-color-disabled;
       }
 
       &:hover,
       &:focus {
-        color: $nav-color;
         cursor: not-allowed;
-        background-color: $color-gray-0;
+        color: $nav-pill-color-disabled;
+        background-color: $nav-pill-bg-disabled;
+
+        .c-nav-icon {
+          opacity: $nav-disabled-opacity;
+          color: $nav-pill-color-disabled;
+        }
       }
     }
   }
@@ -224,20 +229,35 @@
       &-active,
       &:hover {
         cursor: pointer;
-        background-color: $color-gray-1;
-      }
-
-      &-disabled {
-        background-color: $color-gray-0;
-        cursor: not-allowed;
-
-        &:hover {
-          background-color: $color-gray-0;
-        }
+        background-color: $nav-pill-bg-active;
       }
 
       > * {
         margin: $space-0 $nav-spacing;
+      }
+
+      &-disabled {
+        cursor: not-allowed;
+        background-color: $nav-pill-bg-disabled;
+
+        &:hover {
+          cursor: not-allowed;
+          background-color: $nav-pill-bg-disabled;
+        }
+
+        .c-nav-link {
+          cursor: not-allowed;
+          opacity: $nav-disabled-opacity;
+          color: $nav-pill-color-disabled;
+          background-color: $nav-pill-bg-disabled;
+
+          /* stylelint-disable */
+          &:hover {
+            cursor: not-allowed;
+            background-color: $nav-pill-bg-disabled;
+          }
+          /* stylelint-enable */
+        }
       }
     }
   }
