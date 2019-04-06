@@ -6,8 +6,7 @@ backstop.conf.js
 .backstop.json
 package.json
 package-lock.json
-release.json
-release-it.json
+.release-it.json
 .surgeignore
 .publish/
 changelog-template.hbs
@@ -16,3 +15,7 @@ test
 dist/pages
 dist/demo.css
 dist/*.html
+src/docs
+src/docs/*
+.travis.yml
+gulpfile.js
