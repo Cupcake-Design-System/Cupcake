@@ -83,7 +83,7 @@ $badge-default-font-size    : $font-body-sm !default;
 $badge-lg-size              : $badge-default-size + 8 !default;
 $badge-lg-font-size         : $font-body-lg - 1 !default;
 $badge-sm-size              : $badge-default-size - 8 !default;
-$badge-sm-font-size         : $font-body-xs - 1 !default;
+$badge-sm-font-size         : $font-body-xs !default;
 
 
 // --------------------------------------------
@@ -333,7 +333,7 @@ $footer-font-family     : $font-family-sans !default;
 $footer-color           : $color-gray-9 !default;
 $footer-color-link      : $color-primary !default;
 $footer-background-color: $color-gray-1 !default;
-$footer-padding         : $space-md ($space-md + $space-sm) !default;
+$footer-padding         : $space-0 ($space-md + $space-sm) !default;
 $footer-links-margin    : $space-0 $space-sm !default;
 $footer-height          : $global-size-xl !default;
 $footer-border-top      : 1px solid $color-gray-3;
@@ -426,6 +426,35 @@ $modal-header-padding         : ($modal-padding / 3) ($modal-padding / 2) ($moda
 $modal-footer-padding         : $modal-padding !default;
 $modal-dialog-padding         : 40px !default;
 $modal-dialog-footer-padding  : ($modal-padding / 2) 0 0 !default;
+
+
+// --------------------------------------------
+// NAV ---------------------------------------
+// --------------------------------------------
+$nav-height                : 32px !default;
+$nav-font-size             : 12px !default;
+$nav-color                 : $color-gray-7 !default;
+$nav-color-hover           : $color-gray-9 !default;
+$nav-color-active          : $nav-color-hover !default;
+$nav-color-disabled        : $color-gray-5 !default;
+$nav-disabled-opacity      : .7 !default;
+$nav-font-weight           : $font-weight-normal !default;
+$nav-height-small          : 24px !default;
+$nav-font-size-small       : 11px !default;
+$nav-height-large          : 40px !default;
+$nav-font-size-large       : 14px !default;
+$nav-pill-font-weight      : $font-weight-bold !default;
+$nav-pill-color            : $nav-color !default;
+$nav-pill-radius           : $global-default-radius !default;
+$nav-pill-color-hover      : $nav-color-hover !default;
+$nav-pill-color-active     : $nav-color-active !default;
+$nav-pill-color-disabled   : $nav-color !default;
+$nav-pill-bg-hover         : $color-gray-1 !default;
+$nav-pill-bg-active        : $color-gray-1 !default;
+$nav-pill-bg-disabled      : $color-gray-0 !default;
+$nav-pill-icon-opacity     : .25;
+$nav-pill-icon-color-active: $color-primary-8;
+$nav-spacing               : $space-sm !default;
 
 
 // --------------------------------------------

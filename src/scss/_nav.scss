@@ -1,0 +1,324 @@
+// Excludes variable so we don't have to type these crazy :not statements
+$nav-excludes: ':not(.c-nav-link-disabled):not(.c-nav-item-disabled)';
+
+// Nav  ---------------------------
+.c-nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: $space-0;
+  margin-bottom: $space-0;
+
+  &-item {
+    .c-nav-fullwidth & {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+
+    &:hover .c-nav-action {
+      opacity: 1;
+    }
+  }
+
+  &-link {
+    color: $nav-color;
+    align-items: center;
+    white-space: nowrap;
+    display: inline-flex;
+    line-height: $nav-height;
+    font-size: $nav-font-size;
+    font-weight: $nav-font-weight;
+    padding: $space-0 $nav-spacing;
+
+    &:hover#{$nav-excludes},
+    &:focus#{$nav-excludes} {
+      color: $nav-color-hover;
+    }
+
+    &-active {
+      color: $nav-color-active;
+    }
+
+    &-disabled {
+      cursor: not-allowed;
+      color: $nav-color-disabled;
+      opacity: $nav-disabled-opacity;
+    }
+  }
+
+  &-action {
+    opacity: 0;
+    color: $nav-color;
+    font-size: $nav-font-size;
+    margin: $space-0 ($nav-spacing / 2);
+
+    &:hover {
+      color: $nav-color-hover;
+    }
+
+    .c-nav-actions-visible & {
+      opacity: 1;
+    }
+  }
+
+  &-primary .c-nav-link#{$nav-excludes} {
+    &:hover,
+    &:focus,
+    &.active {
+      color: $color-primary;
+    }
+  }
+
+  &:not(.c-nav-pills) .c-nav-link {
+    > * {
+      margin: $space-0 ($nav-spacing / 2);
+
+      &:first-child {
+        margin-left: $space-0;
+      }
+
+      &:last-child {
+        margin-right: $space-0;
+      }
+
+      &:not(.c-badge) {
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
+
+// Pills ---------------------------
+.c-nav-pills {
+  .c-nav-icon {
+    margin-right: $nav-spacing;
+    font-size: ($nav-font-size + 4);
+    opacity: $nav-pill-icon-opacity;
+  }
+
+  // Parent item
+  .c-nav-item {
+    &:first-child {
+      margin-left: $space-0;
+    }
+
+    &:last-child {
+      margin-right: $space-0;
+    }
+
+    margin: $space-0 ($nav-spacing / 2);
+  }
+
+  // Link styles
+  .c-nav-link {
+    &:first-child {
+      margin-left: $space-0;
+    }
+
+    &:last-child {
+      margin-right: $space-0;
+    }
+
+    flex-shrink: 0;
+    align-items: center;
+    color: $nav-pill-color;
+    line-height: $nav-height;
+    font-size: $nav-font-size;
+    border-radius: $nav-pill-radius;
+    transition: background-color .2s;
+    font-weight: $nav-pill-font-weight;
+    margin: $space-0 ($nav-spacing / 2);
+    padding: $space-0 ($nav-spacing * 2);
+
+    // Hover styles
+    &:hover#{$nav-excludes},
+    &:focus#{$nav-excludes} {
+      color: $nav-pill-color-hover;
+      background-color: $nav-pill-bg-hover;
+
+      .c-nav-icon {
+        opacity: 1;
+        color: $nav-pill-icon-color-active;
+      }
+    }
+
+    // Disable styles
+    &-disabled {
+      cursor: not-allowed;
+      opacity: $nav-disabled-opacity;
+      color: $nav-pill-color-disabled;
+      background-color: $nav-pill-bg-disabled;
+
+      .c-nav-icon {
+        opacity: $nav-disabled-opacity;
+        color: $nav-pill-color-disabled;
+      }
+    }
+
+    // Active styles
+    &-active {
+      color: $nav-pill-color-active;
+      background-color: $nav-pill-bg-active;
+
+      .c-nav-icon {
+        opacity: 1;
+        color: $nav-pill-icon-color-active;
+      }
+    }
+  }
+
+  // Make it full-width
+  &.c-nav-fullwidth {
+    display: flex;
+    flex: 1 1 auto;
+
+    .c-nav-item {
+      display: flex;
+    }
+
+    .c-nav-link {
+      flex: 1 1 auto;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}
+
+
+// Vertical ---------------------------
+.c-nav-vertical {
+  flex-direction: column;
+
+  .c-nav-item {
+    display: flex;
+    align-items: center;
+    line-height: $nav-height;
+    justify-content: space-between;
+    transition: background-color .2s;
+
+    &-active .c-nav-link {
+      color: $nav-color-active;
+    }
+  }
+
+  .c-nav-link {
+    flex: 1;
+    padding: $space-0;
+  }
+
+  // Vertical pills
+  &.c-nav-pills {
+    .c-nav-item {
+      margin-left: $space-0;
+      margin-right: $space-0;
+      line-height: $nav-height;
+      border-radius: $nav-pill-radius;
+
+      + .c-nav-item {
+        margin: $space-xxs $space-0;
+      }
+
+      &:first-child {
+        margin-bottom: $space-xxs;
+      }
+
+      &:last-child {
+        margin-bottom: $space-0;
+      }
+
+      // Pill active and hover styles
+      &-active,
+      &:hover#{$nav-excludes} {
+        cursor: pointer;
+        background-color: $nav-pill-bg-active;
+      }
+
+      // Pill disabled styles
+      &-disabled {
+        cursor: not-allowed;
+        opacity: $nav-disabled-opacity;
+        color: $nav-pill-color-disabled;
+        background-color: $nav-pill-bg-disabled;
+
+        .c-nav-link {
+          cursor: not-allowed;
+          opacity: $nav-disabled-opacity;
+          color: $nav-pill-color-disabled;
+          background-color: $nav-pill-bg-disabled;
+        }
+
+        .c-nav-link:hover {
+          color: $nav-pill-color-disabled;
+          background-color: $nav-pill-bg-disabled;
+        }
+      }
+
+      > * {
+        margin: $space-0 $nav-spacing;
+      }
+    }
+  }
+}
+
+
+// Dot separated ---------------------------
+.c-nav-dot-separated .c-nav-item,
+.c-nav-dot-separated > .c-nav-link {
+  align-items: center;
+  display: inline-flex;
+  padding-right: $space-0;
+  margin-left: $space-0 !important;
+
+  &::after {
+    content: '•';
+    line-height: 1;
+    cursor: default;
+    color: $color-gray-4;
+    padding-left: inherit;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+
+  &:hover::after {
+    color: $color-gray-7;
+  }
+}
+
+
+// Sizes ---------------------------
+.c-nav {
+  &-sm {
+    .c-nav-icon {
+      font-size: ($nav-font-size-small + 1);
+    }
+
+    .c-nav-item {
+      height: $nav-height-small;
+    }
+
+    .c-nav-link {
+      padding: $space-0 $nav-spacing;
+      line-height: $nav-height-small;
+      font-size: $nav-font-size-small;
+    }
+  }
+
+  &-lg {
+    .c-nav-icon {
+      font-size: ($nav-font-size-large + 4);
+    }
+
+    .c-nav-item {
+      height: $nav-height-large;
+    }
+
+    .c-nav-link {
+      line-height: $nav-height-large;
+      font-size: $nav-font-size-large;
+      padding: $space-0 ($nav-spacing * 3);
+    }
+  }
+}

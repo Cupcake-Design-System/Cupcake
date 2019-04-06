@@ -4,10 +4,11 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  line-height: 1.4;
   color: $footer-color;
+  align-content: center;
   height: $footer-height;
   padding: $footer-padding;
+  line-height: $footer-height;
   font-size: $footer-font-size;
   justify-content: space-between;
   border-top: $footer-border-top;
@@ -16,22 +17,32 @@
 
   &-link {
     line-height: 1.4;
-    display: inline-block;
+    align-items: center;
+    display: inline-flex;
+    padding-right: $space-0;
     color: $footer-color-link;
-    text-decoration: underline;
-    margin: $footer-links-margin;
     font-size: $footer-font-size;
     background-color: transparent;
+
+    &::after {
+      content: '•';
+      cursor: default;
+      color: $color-gray-6;
+      padding-left: inherit;
+      vertical-align: middle;
+      margin: $footer-links-margin;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
 
     &:last-child {
       margin-right: $space-0;
     }
 
-    a,
-    a.c-a {
-      color: $footer-color-link;
+    .c-a {
       text-decoration: underline;
-      font-size: $footer-font-size;
     }
   }
 

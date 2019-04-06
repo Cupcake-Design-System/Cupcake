@@ -3,7 +3,25 @@ title: Test
 layout: blank
 ---
 
-
+<strong>Small Empty</strong>
+<br>
+<br>
+<div class="c-row">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-m-sm c-badge c-badge-sm c-badge-{{this}}"></div>
+  {{/each}}
+  {{/each}}
+</div>
+<div class="c-row">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-{{this}}"></div> Text</span>
+  {{/each}}
+  {{/each}}
+</div>
+<br>
+<br>
 <strong>Small</strong>
 <br>
 <br>
@@ -57,6 +75,26 @@ layout: blank
 </div>
 
 {{> space}}
+
+<strong>Default Empty</strong>
+<br>
+<br>
+<div class="c-row">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-m-sm c-badge c-badge-{{this}}"></div>
+  {{/each}}
+  {{/each}}
+</div>
+<div class="c-row">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-{{this}} c-m-right-xs"></div> Text</span>
+  {{/each}}
+  {{/each}}
+</div>
+<br>
+<br>
 
 <strong>Default</strong>
 <br>
@@ -113,6 +151,26 @@ layout: blank
 
 {{> space}}
 
+
+<strong>Large Empty</strong>
+<br>
+<br>
+<div class="c-row">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <div class="c-m-sm c-badge c-badge-lg c-badge-{{this}}"></div>
+  {{/each}}
+  {{/each}}
+</div>
+<div class="c-row">
+  {{#each color-loop.colors}}
+  {{#each this}}
+  <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-{{this}} c-m-right-xs"></div> Text</span>
+  {{/each}}
+  {{/each}}
+</div>
+<br>
+<br>
 <strong>Large</strong>
 <br>
 <br>
@@ -307,3 +365,4 @@ layout: blank
   {{/each}}
   {{/each}}
 </div>
+
