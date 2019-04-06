@@ -31,6 +31,7 @@
     "watch": "run-p watch:*",
     "release": "release-it",
     "changelog": "auto-changelog -p && git add CHANGELOG.md",
+    "beforeStage": "npm run changelog",
     "docs": "run-s build serve",
     "start": "run-p docs watch",
     "precommit": "lint-staged && npm run lint"
@@ -71,5 +72,8 @@
     "stylelint-config-standard": "^18.2.0",
     "stylelint-declaration-strict-value": "^1.1.2",
     "stylelint-scss": "^3.5.4"
+  },
+  "dependencies": {
+    "@cupcake-ds/cupcake": "^2.0.0-beta.1"
   }
 }
