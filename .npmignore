@@ -13,3 +13,6 @@ release-it.json
 changelog-template.hbs
 test
 .idea/
+dist/pages
+dist/demo.css
+dist/*.html
