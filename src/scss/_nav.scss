@@ -1,4 +1,7 @@
-// Nav general
+// Excludes variable so we don't have to type these crazy :not statements
+$nav-excludes: ':not(.c-nav-link-disabled):not(.c-nav-item-disabled)';
+
+// Nav  ---------------------------
 .c-nav {
   display: flex;
   flex-wrap: wrap;
@@ -27,8 +30,8 @@
     font-weight: $nav-font-weight;
     padding: $space-0 $nav-spacing;
 
-    &:hover:not(.c-nav-link-disabled),
-    &:focus {
+    &:hover#{$nav-excludes},
+    &:focus#{$nav-excludes} {
       color: $nav-color-hover;
     }
 
@@ -46,7 +49,7 @@
   &-action {
     opacity: 0;
     color: $nav-color;
-    font-size: inherit;
+    font-size: $nav-font-size;
     margin: $space-0 ($nav-spacing / 2);
 
     &:hover {
@@ -58,7 +61,7 @@
     }
   }
 
-  &-primary .c-nav-link:not(.c-nav-link-disabled) {
+  &-primary .c-nav-link#{$nav-excludes} {
     &:hover,
     &:focus,
     &.active {
@@ -86,7 +89,7 @@
 }
 
 
-// Pills
+// Pills ---------------------------
 .c-nav-pills {
   .c-nav-icon {
     margin-right: $nav-spacing;
@@ -94,6 +97,7 @@
     opacity: $nav-pill-icon-opacity;
   }
 
+  // Parent item
   .c-nav-item {
     &:first-child {
       margin-left: $space-0;
@@ -106,6 +110,7 @@
     margin: $space-0 ($nav-spacing / 2);
   }
 
+  // Link styles
   .c-nav-link {
     &:first-child {
       margin-left: $space-0;
@@ -120,15 +125,15 @@
     color: $nav-pill-color;
     line-height: $nav-height;
     font-size: $nav-font-size;
-    border-radius: $radius-sm;
+    border-radius: $nav-pill-radius;
     transition: background-color .2s;
     font-weight: $nav-pill-font-weight;
     margin: $space-0 ($nav-spacing / 2);
     padding: $space-0 ($nav-spacing * 2);
 
-    &:hover,
-    &:focus,
-    &-active {
+    // Hover styles
+    &:hover#{$nav-excludes},
+    &:focus#{$nav-excludes} {
       color: $nav-pill-color-hover;
       background-color: $nav-pill-bg-hover;
 
@@ -138,6 +143,7 @@
       }
     }
 
+    // Disable styles
     &-disabled {
       cursor: not-allowed;
       opacity: $nav-disabled-opacity;
@@ -148,26 +154,21 @@
         opacity: $nav-disabled-opacity;
         color: $nav-pill-color-disabled;
       }
+    }
 
-      &:hover,
-      &:focus {
-        cursor: not-allowed;
-        color: $nav-pill-color-disabled;
-        background-color: $nav-pill-bg-disabled;
+    // Active styles
+    &-active {
+      color: $nav-pill-color-active;
+      background-color: $nav-pill-bg-active;
 
-        .c-nav-icon {
-          opacity: $nav-disabled-opacity;
-          color: $nav-pill-color-disabled;
-        }
+      .c-nav-icon {
+        opacity: 1;
+        color: $nav-pill-icon-color-active;
       }
     }
   }
 
-  .c-nav-link-active {
-    color: $nav-pill-color-active;
-    background-color: $nav-pill-bg-active;
-  }
-
+  // Make it full-width
   &.c-nav-fullwidth {
     display: flex;
     flex: 1 1 auto;
@@ -185,16 +186,16 @@
 }
 
 
-// Vertical
+// Vertical ---------------------------
 .c-nav-vertical {
   flex-direction: column;
 
   .c-nav-item {
     display: flex;
     align-items: center;
-    transition: .2s linear;
     line-height: $nav-height;
     justify-content: space-between;
+    transition: background-color .2s;
 
     &-active .c-nav-link {
       color: $nav-color-active;
@@ -212,7 +213,7 @@
       margin-left: $space-0;
       margin-right: $space-0;
       line-height: $nav-height;
-      border-radius: $radius-sm;
+      border-radius: $nav-pill-radius;
 
       + .c-nav-item {
         margin: $space-xxs $space-0;
@@ -226,45 +227,42 @@
         margin-bottom: $space-0;
       }
 
+      // Pill active and hover styles
       &-active,
-      &:hover {
+      &:hover#{$nav-excludes} {
         cursor: pointer;
         background-color: $nav-pill-bg-active;
       }
 
-      > * {
-        margin: $space-0 $nav-spacing;
-      }
-
+      // Pill disabled styles
       &-disabled {
         cursor: not-allowed;
+        opacity: $nav-disabled-opacity;
+        color: $nav-pill-color-disabled;
         background-color: $nav-pill-bg-disabled;
-
-        &:hover {
-          cursor: not-allowed;
-          background-color: $nav-pill-bg-disabled;
-        }
 
         .c-nav-link {
           cursor: not-allowed;
           opacity: $nav-disabled-opacity;
           color: $nav-pill-color-disabled;
           background-color: $nav-pill-bg-disabled;
-
-          /* stylelint-disable */
-          &:hover {
-            cursor: not-allowed;
-            background-color: $nav-pill-bg-disabled;
-          }
-          /* stylelint-enable */
         }
+
+        .c-nav-link:hover {
+          color: $nav-pill-color-disabled;
+          background-color: $nav-pill-bg-disabled;
+        }
+      }
+
+      > * {
+        margin: $space-0 $nav-spacing;
       }
     }
   }
 }
 
 
-// Dot separated
+// Dot separated ---------------------------
 .c-nav-dot-separated .c-nav-item,
 .c-nav-dot-separated > .c-nav-link {
   align-items: center;
@@ -274,11 +272,10 @@
 
   &::after {
     content: '•';
-    opacity: 0.4;
+    line-height: 1;
     cursor: default;
     color: $color-gray-4;
     padding-left: inherit;
-    vertical-align: middle;
   }
 
   &:last-child::after {
@@ -290,7 +287,8 @@
   }
 }
 
-// Sizes
+
+// Sizes ---------------------------
 .c-nav {
   &-sm {
     .c-nav-icon {
