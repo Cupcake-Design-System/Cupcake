@@ -86,6 +86,11 @@ $nav-excludes: ':not(.c-nav-link-disabled):not(.c-nav-item-disabled)';
       }
     }
   }
+
+  // Supports nav in header
+  .c-header & {
+    margin: $space-0 $nav-spacing;
+  }
 }
 
 

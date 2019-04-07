@@ -466,13 +466,14 @@ $header-borders                 : rgba(0, 0, 0, 0.06) !default;
 $header-bottom-border           : $color-gray-1 !default;
 $header-item-padding            : $space-0 $space-md !default;
 $header-height                  : $global-size-xl !default;
-$header-inverse-bg              : $color-gray-7 !default;
-$header-inverse-bg-hover        : rgba(0, 0, 0, 0.05) !default;
+$header-inverse-bg              : #002b49 !default;
+$header-inverse-bg-hover        : rgba(255, 255, 255, 0.1) !default;
 $header-text-color              : #adb5bd !default;
-$header-inverse-text-color      : $color-white !default;
+$header-inverse-text-color      : rgba($color-white, .8) !default;
+$header-inverse-text-color-active  : $color-white !default;
 $header-inverse-borders         : rgba(255, 255, 255, 0.1) !default;
 $header-search-transition-length: 0.6s !default;
-$header-search-expanded-width   : 300px !default;
+$header-search-expanded-width   : 200px !default;
 
 
 // --------------------------------------------
