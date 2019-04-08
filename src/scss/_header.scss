@@ -1,6 +1,3 @@
-// small variable name alias for readability
-$trans: $header-search-transition-length;
-
 // Header
 .c-header {
   width: 100%;
@@ -30,66 +27,6 @@ $trans: $header-search-transition-length;
         background: $header-bg-hover;
       }
     }
-
-    .c-header-search {
-      &-container {
-        cursor: default;
-        max-height: $header-height;
-
-        &:hover {
-          cursor: default;
-          background: transparent;
-        }
-      }
-
-      &-box {
-        width: 0;
-        height: 0;
-        cursor: pointer;
-        transition: width $trans, border-radius $trans, background $trans, box-shadow $trans;
-
-        // using the sibling selector
-        & + label {
-          max-width: 0;
-          position: relative;
-        }
-
-        &:focus {
-          cursor: text;
-          top: $space-sm;
-          position: relative;
-          height: $control-height;
-          padding-left: $control-height;
-          width: $header-search-expanded-width;
-          transition: width $trans cubic-bezier(0, 1.22, .66, 1.39), border-radius $trans, background $trans;
-
-          /* stylelint-disable */
-          & + label {
-            top: -18px;
-            left: $space-sm;
-          }
-          /* stylelint-enable */
-        }
-
-        &:not(:focus) {
-          border: 0;
-          overflow: hidden;
-          box-shadow: none;
-          text-indent: 100%;
-          white-space: nowrap;
-        }
-      }
-
-      &-icon {
-        cursor: pointer;
-        position: relative;
-        transition: none;
-
-        &:hover {
-          color: $color-gray-9;
-        }
-      }
-    }
   }
 
   &-left {
@@ -108,7 +45,7 @@ $trans: $header-search-transition-length;
 
     .c-input-container {
       width: 100%;
-      margin: $space-0 1.5rem;
+      margin: $header-item-padding;
     }
   }
 
@@ -121,16 +58,38 @@ $trans: $header-search-transition-length;
     }
   }
 
-  .c-dropdown-list-below {
-    top: 105%;
+  .c-dropdown-list {
+    .c-dropdown-item {
+      font-weight: $font-weight-bold;
+    }
+
+    .c-dropdown-list-below {
+      top: 105%;
+    }
   }
 }
-
 
 // Header Inverse
 .c-header-inverse {
   background-color: $header-inverse-bg;
   border-color: $header-inverse-borders;
+
+  .c-input {
+    color: $header-inverse-text-color;
+    background: $header-inverse-bg-hover;
+    border-color: $header-inverse-borders;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      border-color: $color-primary;
+      color: $header-inverse-text-color-active;
+    }
+
+    &-icon {
+      color: $header-inverse-text-color;
+    }
+  }
 
   .c-header-item {
     border-color: $header-inverse-borders;
@@ -140,26 +99,6 @@ $trans: $header-search-transition-length;
 
       &:hover {
         background: $header-inverse-bg-hover;
-      }
-    }
-
-    .c-header-search {
-      &-container {
-        cursor: default;
-
-        &:hover {
-          cursor: default;
-          background: transparent;
-        }
-      }
-
-      &-box {
-        background: $header-inverse-bg-hover;
-        color: $header-inverse-text-color;
-      }
-
-      &-icon:hover {
-        color: $color-gray-1;
       }
     }
   }
@@ -184,6 +123,20 @@ $trans: $header-search-transition-length;
           opacity: 1;
           color: $header-inverse-text-color-active;
         }
+      }
+    }
+  }
+  
+  .c-dropdown-list {
+    background-color: $header-inverse-bg;
+    color: $header-inverse-text-color !important;
+
+    .c-dropdown-item {
+      color: $header-inverse-text-color !important;
+
+      &:hover {
+        background: $header-inverse-bg-hover;
+        color: $header-inverse-text-color-active !important;
       }
     }
   }

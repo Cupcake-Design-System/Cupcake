@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tokens | Colors</title>
+	<title>Tokens</title>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="../demo.css">
@@ -533,6 +533,12 @@
           <li class="docs-nav-item"><a href="elements.html#tabs">Tabs</a></li>
           <li class="docs-nav-item"><a href="elements.html#tooltips">Tooltips</a></li>
         </ul>
+    
+        <ul class="docs-nav-items">
+            <li class="docs-nav-title"><a href="experimental.html">Experimental</a></li>
+            <li class="docs-nav-item"><a href="experimental.html#animated-search">Animated Search</a></li>
+            <li class="docs-nav-item"><a href="experimental.html#responsive-nav">Responsive Nav</a></li>
+          </ul>
       </ul>
     
     </nav>
@@ -557,23 +563,20 @@ $(document).on("click", function (event) {
   }
 });
 });
+</script>
 
-$("#fullscreenLoaderBtn").click(function(){
-  $("#fullscreenLoader").toggleClass("c-loader-visible");
-});
 
-$("#fullscreenLoader").click(function(){
-  $("#fullscreenLoader").removeClass("c-loader-visible");
-});
+<script>
+  $(document).ready(function () {
+    // Check for click events on the navbar toggle
+    $(".c-nav-toggle").click(function() {
 
-$("#fullscreenLoaderBtn2").click(function(){
-  $("#fullscreenLoader2").toggleClass("c-loader-visible");
-});
+    // Toggle the active class on both the nav and the menu
+    $(".c-nav-toggle").toggleClass("c-nav-toggle-active");
+    $(".c-header").toggleClass("c-nav-active");
 
-$("#fullscreenLoader2").click(function(){
-  $("#fullscreenLoader2").removeClass("c-loader-visible");
-});
-
+    });
+  });
 </script>
 
 

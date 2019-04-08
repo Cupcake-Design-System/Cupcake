@@ -12,6 +12,7 @@ $enable-flex-classes  : true !default;
 $enable-hidden-classes: true !default;
 $enable-cursor-classes: true !default;
 $enable-center-classes: true !default;
+$enable-experimental-nav: true !default;
 $white-label          : false !default;
 
 $global-default-border: 1px solid $color-gray-4 !default;
@@ -472,8 +473,6 @@ $header-text-color              : #adb5bd !default;
 $header-inverse-text-color      : rgba($color-white, .8) !default;
 $header-inverse-text-color-active  : $color-white !default;
 $header-inverse-borders         : rgba(255, 255, 255, 0.1) !default;
-$header-search-transition-length: 0.6s !default;
-$header-search-expanded-width   : 200px !default;
 
 
 // --------------------------------------------

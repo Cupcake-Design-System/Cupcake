@@ -1,0 +1,217 @@
+// Experimental work in progress stuff subject to change/deletion
+@if $enable-experimental-nav == true {
+  // hamburger style toggle
+  .c-nav-toggle {
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+    height: $header-height;
+    width: $header-height + 1;
+    color: $header-text-color;
+    border-left: 1px solid $header-borders;
+  
+    span {
+      height: 2px;
+      width: 16px;
+      display: block;
+      position: absolute;
+      left: calc(50% - 8px);
+      transform-origin: center;
+      transition-duration: 86ms;
+      background-color: currentColor;
+      transition-timing-function: ease-out;
+      transition-property: background-color, opacity, transform;
+  
+      &:nth-child(1) {
+        top: calc(50% - 6px);
+      }
+    
+      &:nth-child(2) {
+        top: calc(50% - 1px);
+      }
+    
+      &:nth-child(3) {
+        top: calc(50% + 4px);
+      }
+    }
+  
+    &:hover {
+      background-color: $header-inverse-bg-hover;
+    }
+  
+    &-active {
+      span {
+        &:nth-child(1) {
+          transform: translateY(5px) rotate(45deg);
+        }
+  
+        &:nth-child(2) {
+          opacity: 0;
+        }
+  
+        &:nth-child(3) {
+          transform: translateY(-5px) rotate(-45deg);
+        }
+      }
+    }
+  }
+  
+  // Responsive header moves .c-nav into submenu at smaller viewports
+  @include media-breakpoint-down(md) {
+    .c-header {
+      position: relative;
+  
+      .c-nav-toggle {
+        display: block;
+      }
+  
+      .c-nav {
+        display: none;
+        padding: $nav-spacing / 2 $space-0;
+        flex-direction: column;
+        background: $header-bg;
+      }
+    }
+  }
+  
+  .c-header.c-nav-active {
+    .c-nav {
+      display: flex;
+  
+      &-link {
+        margin: $nav-spacing / 2 $nav-spacing;
+      }
+  
+      &-pills {
+        left: 0;
+        top: 100%;
+        width: 100%;
+        position: absolute;
+        margin: $space-0 + 1px $space-0 $space-0 $space-0;
+      }
+    }
+  }
+  
+  
+  .c-header.c-header-inverse {
+    .c-nav {
+      background: $header-inverse-bg;
+    }
+  
+    .c-nav-toggle {
+      color: $header-text-color;
+      border-left: 1px solid $header-borders;
+    
+      &:hover {
+        background-color: $header-bg-hover;
+      }
+    }
+  }
+
+
+  $header-search-transition-length: 0.6s !default;
+  $header-search-expanded-width   : 200px !default;
+  $trans: $header-search-transition-length;
+
+  // Animated search expanded
+  .c-header-item {
+    .c-header-search {
+      &-container {
+        cursor: default;
+        max-height: $header-height;
+
+        &:hover {
+          cursor: default;
+          background: transparent;
+        }
+
+        form {
+          display: flex;
+          position: relative;
+        }
+      }
+
+      &-box {
+        cursor: pointer;
+        width: $nav-spacing * 2;
+        transition: width $trans, border-radius $trans, background $trans, box-shadow $trans;
+
+        & + label {
+          max-width: 0;
+          position: absolute;
+          top: $nav-spacing;
+          left: $nav-spacing + 1;
+        }
+
+        &:focus {
+          cursor: text;
+          position: relative;
+          height: $control-height;
+          padding-left: $control-height;
+          width: $header-search-expanded-width;
+          transition: width $trans cubic-bezier(0, 1.22, .66, 1.39), border-radius $trans, background $trans;
+
+          & + label {
+            left: $nav-spacing;
+          }
+        }
+
+        &:not(:focus) {
+          overflow: hidden;
+          box-shadow: none;
+          text-indent: 100%;
+          white-space: nowrap;
+          border-color: $header-borders;
+        }
+
+        &:hover {
+          background: $header-bg-hover;
+        }
+      }
+
+      &-icon {
+        cursor: pointer;
+        transition: none;
+        position: relative;
+
+        &:hover {
+          color: $color-gray-9;
+        }
+      }
+    }
+  }
+
+  // Animated search inverse header styles
+  .c-header.c-header-inverse {
+    .c-header-item {
+      .c-header-search {
+        &-container {
+          cursor: default;
+
+          &:hover {
+            cursor: default;
+            background: transparent;
+          }
+        }
+
+        &-box {
+          color: $header-inverse-text-color;
+          background: transparent;
+          
+          &:not(:focus) {
+            border-color: $header-inverse-borders;
+          }
+
+          &:hover {
+            background: $header-inverse-bg-hover;
+          }
+        }
+
+        &-icon:hover {
+          color: $color-gray-1;
+        }
+      }
+    }
+  }
+}

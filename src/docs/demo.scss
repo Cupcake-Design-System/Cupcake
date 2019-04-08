@@ -279,6 +279,7 @@ $docs-spacer-xxl: space(xl) + space(md);
 
     &-content {
       margin-left: 0;
+      margin-right: 0;
     }
 
     &-nav-open {
