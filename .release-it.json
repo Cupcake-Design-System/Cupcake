@@ -1,15 +1,31 @@
 {
-    "pkgFiles": ["package.json"],
-    "buildCommand": "gulp build",
-    "changelogCommand": "auto-changelog --template changelog-template.hbs --commit-limit false -o CHANGELOG.md",
-    "dist": {
-        "baseDir": null
-    },
-    "github": {
-        "release": true,
-        "releaseName": "Release %s",
-        "preRelease": false,
-        "draft": false,
-        "tokenRef": "GITHUB_TOKEN"
-    }    
+  "pkgFiles": ["package.json"],
+  "buildCommand": "gulp build",
+  "scripts": {
+    "beforeStage": "npm run changelog",
+    "changelog": "npx auto-changelog --stdout --commit-limit false -u --template ./changelog-template.hbs --output CHANGELOG.md && git add CHANGELOG.md"
+  },
+  "beforeChangelogCommand": "npx auto-changelog --stdout --commit-limit false -u --template ./changelog-template.hbs --output CHANGELOG.md",
+  "changelogCommand": "npx auto-changelog --stdout --commit-limit false -u --template ./changelog-template.hbs --output CHANGELOG.md",
+  "safeBump": false,
+  "src": {
+      "commitMessage": "Release %s 🚀",
+      "tagAnnotation": "Release %s 🚀"
+  },
+  "dist": {
+      "baseDir": null
+  },
+  "npm": {
+    "publish": true
+  },
+  "git": {
+    "requireCleanWorkingDir": false
+  },
+  "github": {
+      "release": true,
+      "releaseName": "Release %s 🚀",
+      "preRelease": true,
+      "draft": false,
+      "tokenRef": "GITHUB_TOKEN"
+  }
 }

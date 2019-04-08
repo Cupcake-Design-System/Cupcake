@@ -1,0 +1,32 @@
+{{#each releases}}
+  {{#if href}}
+    ## Release [{{title}}]({{href}}) :rocket:
+    **{{niceDate}}**
+
+  {{else}}
+    ## {{title}}
+    **{{niceDate}}**
+
+  {{/if}}
+  {{#if merges}}
+    ### Merged
+    {{#each merges}}
+      - {{message}} **[View Merge]({{href}})**
+    {{/each}}
+
+  {{/if}}
+  {{#if fixes}}
+    ### Fixed
+    {{#each fixes}}
+      - {{commit.subject}}{{#each fixes}} **[View Fix]({{href}}){{/each}}**
+    {{/each}}
+
+  {{/if}}
+  {{#if commits}}
+    ### Commits
+    {{#each commits}}
+      - {{subject}} **[View Commit]({{href}})**
+    {{/each}}
+
+  {{/if}}
+{{/each}}

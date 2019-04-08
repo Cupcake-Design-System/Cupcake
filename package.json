@@ -1,10 +1,13 @@
 {
-  "version": "2.0.0",
-  "name": "cupcake",
+  "name": "@cupcake-ds/cupcake",
+  "version": "2.0.0-beta.1",
   "description": "Design System framework.",
   "repository": {
     "type": "git",
     "url": "https://github.com/Cupcake-Design-System/Cupcake/"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "clean": "rimraf dist/{css/*,js/*,images/*}",
@@ -17,7 +20,7 @@
     "prodcss": "run-s group min-css",
     "lint": "stylelint src/scss/ --syntax scss || true",
     "serve": "browser-sync start --server 'dist' --files \"dist/**/*, !node_modules/**/*.html\"",
-    "build:css": "run-s lint scss autoprefixer group min-css",
+    "build:css": "run-s lint scss autoprefixer",
     "build:css-docs": "run-s docs-css",
     "build:prodcss": "run-s group min-css",
     "build:html": "gulp html",
@@ -26,9 +29,10 @@
     "watch:docs": "onchange './src/docs/*.scss' -- run-s build:css-docs",
     "watch:html": "onchange 'src/docs/**/*.{html,md,json,yml}' -- run-s build:html",
     "watch": "run-p watch:*",
+    "release": "release-it",
+    "changelog": "auto-changelog -p && git add CHANGELOG.md",
     "docs": "run-s build serve",
     "start": "run-p docs watch",
-    "sassdocs": "sassdoc src/scss/ -d dist/sassdoc",
     "precommit": "lint-staged && npm run lint"
   },
   "browserslist": [
@@ -38,26 +42,34 @@
   "lint-staged": {
     "*.scss": "stylelint --syntax=scss"
   },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "changelog-template.hbs",
+    "commitLimit": false,
+    "package": true
+  },
   "devDependencies": {
     "@cupcake-ds/cupcake-sprinkles": "^0.2.3",
-    "autoprefixer": "^9.4.5",
+    "auto-changelog": "^1.12.0",
+    "autoprefixer": "^9.5.0",
     "browser-sync": "^2.26.3",
-    "clean-css-cli": "^4.2.1",
+    "clean-css-cli": "^4.3.0",
     "fabricator-assemble": "^1.2.1",
     "group-css-media-queries": "^1.4.1",
     "gulp": "^4.0.0",
-    "lint-staged": "^8.1.0",
+    "lint-staged": "^8.1.5",
     "mkdirp": "^0.5.1",
-    "mocha": "^5.2.0",
+    "mocha": "^6.0.2",
     "node-sass": "^4.11.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^5.2.0",
-    "postcss-cli": "^6.1.1",
+    "postcss-cli": "^6.1.2",
+    "release-it": "^10.4.0",
     "rimraf": "^2.6.3",
     "sass-true": "^4.0.0",
-    "stylelint": "^9.10.0",
+    "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-declaration-strict-value": "^1.1.2",
-    "stylelint-scss": "^3.5.1"
+    "stylelint-scss": "^3.5.4"
   }
 }
