@@ -215,3 +215,40 @@
     }
   }
 }
+
+// Dropdown Grid Style
+@if $enable-experimental-dropdownGrid == true {
+  .c-dropdown-grid {
+    @include dropdown-grid;
+
+    width: $dropdown-min-width + 100px;
+
+    .c-dropdown-item {
+      @include dropdown-grid-item;
+    }
+
+    &-col-2 {
+      width: $dropdown-min-width;
+
+      .c-dropdown-item {
+        flex-basis: 50%;
+      }
+    }
+
+    &-col-4 {
+      width: $dropdown-min-width + 200px;
+
+      li a,
+      .c-dropdown-item {
+        flex-basis: 25%;
+      }
+    }
+
+    &-right {
+      right: 0;
+      left: auto;
+      position: absolute;
+      min-width: $dropdown-min-width;
+    }
+  }
+}
