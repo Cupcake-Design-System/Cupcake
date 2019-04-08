@@ -8,7 +8,7 @@ before_script:
   - gem install percy-cli
 script:
   - npm run test
-  - percy snapshot --widths "1280" dist/pages/ --enable_javascript
+  - percy snapshot --widths "1280" dist/ --enable_javascript
 deploy:
   provider: surge
   project: ./dist
