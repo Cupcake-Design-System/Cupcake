@@ -23,7 +23,10 @@
 <br>
 <br>
 <br>
-<strong>List Dropdowns</strong>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <div class="c-row">
@@ -294,164 +297,6 @@
 <br>
 
 
-<strong>Grid Dropdowns</strong>
-<br>
-<br>
-<div class="c-row">
-  <div class="c-m-sm c-dropdown">
-    <button class="c-btn c-btn-secondary">
-      Grid 2 Columns
-      <i class="fas fa-caret-down" aria-hidden="true"></i>
-    </button>
-    <div class="c-dropdown-grid c-dropdown-grid-col-2" style="display: none;">
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-camera"></span>
-        Camera
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-image"></span>
-        Gallery
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-folder"></span>
-        Files
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-play"></span>
-        Video
-      </a>
-    </div>
-  </div>
-  <div class="c-m-sm c-dropdown">
-    <button class="c-btn c-btn-secondary">
-      Grid 3 Columns (default)
-      <i class="fas fa-caret-down" aria-hidden="true"></i>
-    </button>
-    <div class="c-dropdown-grid" style="display: none;">
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-camera"></span>
-        Camera
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-image"></span>
-        Gallery
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-folder"></span>
-        Files
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-play"></span>
-        Video
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-music"></span>
-        Music
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-newspaper"></span>
-        News
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-book"></span>
-        Contacts
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-download"></span>
-        Download
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-cog"></span>
-        Settings
-      </a>
-    </div>
-  </div>
-  <div class="c-m-sm c-dropdown">
-    <button class="c-btn c-btn-secondary">
-      Grid 4 Columns
-      <i class="fas fa-caret-down" aria-hidden="true"></i>
-    </button>
-    <div class="c-dropdown-grid c-dropdown-grid-col-4" style="display: none;">
-      <a class="c-dropdown-item c-dropdown-item-selected" href="#">
-        <span class="c-dropdown-icon fas fa-camera"></span>
-        Camera
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-image"></span>
-        Gallery
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-folder"></span>
-        Files
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-play"></span>
-        Video
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-newspaper"></span>
-        News
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-book"></span>
-        Contacts
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-download"></span>
-        Download
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-cog"></span>
-        Settings
-      </a>
-    </div>
-  </div>
-  <div class="c-m-sm c-dropdown">
-    <button class="c-btn c-btn-secondary">
-      Grid Right
-      <i class="fas fa-caret-down" aria-hidden="true"></i>
-    </button>
-    <div class="c-dropdown-grid c-dropdown-grid-right" style="display: none;">
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-camera"></span>
-        Camera
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-image"></span>
-        Gallery
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-folder"></span>
-        Files
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-play"></span>
-        Video
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-music"></span>
-        Music
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-newspaper"></span>
-        News
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-book"></span>
-        Contacts
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-download"></span>
-        Download
-      </a>
-      <a class="c-dropdown-item" href="#">
-        <span class="c-dropdown-icon fas fa-cog"></span>
-        Settings
-      </a>
-    </div>
-  </div>
-</div>
-
       </main>
     </div>
   </body>
@@ -474,23 +319,20 @@
     }
   });
   });
+  </script>
   
-  $("#fullscreenLoaderBtn").click(function(){
-    $("#fullscreenLoader").toggleClass("c-loader-visible");
-  });
   
-  $("#fullscreenLoader").click(function(){
-    $("#fullscreenLoader").removeClass("c-loader-visible");
-  });
+  <script>
+    $(document).ready(function () {
+      // Check for click events on the navbar toggle
+      $(".c-nav-toggle").click(function() {
   
-  $("#fullscreenLoaderBtn2").click(function(){
-    $("#fullscreenLoader2").toggleClass("c-loader-visible");
-  });
+      // Toggle the active class on both the nav and the menu
+      $(".c-nav-toggle").toggleClass("c-nav-toggle-active");
+      $(".c-header").toggleClass("c-nav-active");
   
-  $("#fullscreenLoader2").click(function(){
-    $("#fullscreenLoader2").removeClass("c-loader-visible");
-  });
-  
+      });
+    });
   </script>
   
   
