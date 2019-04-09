@@ -62,6 +62,8 @@ $avatar-font-size           : $font-body-md !default;
 $avatar-font-family         : $font-family-sans !default;
 $avatar-line-height         : normal !default;
 $avatar-img-border          : $global-default-border !default;
+$avatar-group-spacing       : $space-xs !default;
+$avatar-group-transition    : 0.35s cubic-bezier(0, 1.22, .66, 1.39) !default;
 
 // for avatar sizes this maps to name, size, font-size
 $avatar-sizes:
@@ -86,7 +88,7 @@ $badge-lg-size              : $badge-default-size + 8 !default;
 $badge-lg-font-size         : $font-body-lg - 1 !default;
 $badge-sm-size              : $badge-default-size - 8 !default;
 $badge-sm-font-size         : $font-body-xs !default;
-
+$badge-group-spacing        : $space-sm !default;
 
 // --------------------------------------------
 // Buttons ------------------------------------
@@ -153,22 +155,22 @@ $button-colors: (
 $button-sizes: (
   default: (
     font-size: $font-body-md,
-    padding: 0 $space-md,
+    padding: $space-0 $space-md,
     height: $global-size-md
   ),
   xs: (
     font-size: $font-body-xs,
-    padding: 0 $space-xs,
+    padding: $space-0 $space-xs,
     height: $global-size-xs
   ),
   sm: (
     font-size: $font-body-sm,
-    padding: 0 $space-sm,
+    padding: $space-0 $space-sm,
     height: $global-size-sm
   ),
   lg: (
     font-size: $font-body-lg,
-    padding: 0 $space-xl,
+    padding: $space-0 $space-xl,
     height: $global-size-lg
   )
 ) !default;
@@ -251,8 +253,8 @@ $control-padding              : $space-sm !default;
 $control-height               : $global-size-md !default;
 
 $control-sizes:
-  (sm, $global-size-sm, 0 $control-padding, $font-body-sm)
-  (lg, $global-size-lg, 0 $control-padding, $font-body-xl) !default;
+  (sm, $global-size-sm, $space-0 $control-padding, $font-body-sm)
+  (lg, $global-size-lg, $space-0 $control-padding, $font-body-xl) !default;
 
 $control-colors:
   ("success", $color-success, false)
