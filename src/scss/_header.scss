@@ -126,20 +126,6 @@
       }
     }
   }
-  
-  .c-dropdown-list {
-    background-color: $header-inverse-bg;
-    color: $header-inverse-text-color !important;
-
-    .c-dropdown-item {
-      color: $header-inverse-text-color !important;
-
-      &:hover {
-        background: $header-inverse-bg-hover;
-        color: $header-inverse-text-color-active !important;
-      }
-    }
-  }
 }
 
 .c-header-tabs {
