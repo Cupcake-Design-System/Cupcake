@@ -19,6 +19,7 @@ $white-label                         : false !default;
 $global-default-border               : 1px solid $color-gray-4 !default;
 $global-default-radius               : $radius-sm !default;
 $global-disabled-bg                  : $color-gray-3 !default;
+$global-backdrop-dark                : rgba(0, 0, 0, 0.75) !default;
 
 // --------------------------------------------
 // ALERTS & TOASTS ----------------------------
@@ -74,6 +75,39 @@ $avatar-sizes:
 
 
 // --------------------------------------------
+// Action Panel -------------------------------
+// --------------------------------------------
+$action-panel-padding-v              : $space-md - $space-xs !default;
+$action-panel-padding-h              : $space-md !default;
+$action-panel-header-font-size       : $font-body-lg !default;
+$action-panel-header-font-weight     : $font-weight-bold !default;
+$action-panel-header-line-height     : $line-height-body-lg !default;
+$action-panel-header-color           : $color-gray-9 !default;
+$action-panel-header-icon-color      : $color-gray-5 !default;
+$action-panel-header-icon-hover-color: lighten($action-panel-header-icon-color, 10%) !default;
+$action-panel-title-font-size        : $font-body-xl !default;
+$action-panel-title-font-weight      : $font-weight-bold !default;
+$action-panel-subtitle-line-height   : $font-body-md !default;
+$action-panel-subtitle-font-size     : $font-body-md !default;
+$action-panel-header-bg              : $color-white !default;
+$action-panel-footer-bg              : $color-white !default;
+$action-panel-footer-color           : $color-primary-8 !default;
+$action-panel-footer-hover-color     : $color-primary-6 !default;
+$action-panel-footer-font-size       : $font-body-md !default;
+$action-panel-footer-line-weight     : $font-body-xl !default;
+$action-panel-border                 : 1px solid $color-gray-2 !default;
+$action-panel-zindex                 : 999 !default;
+$action-panel-width-sm               : 220px !default;
+$action-panel-width                  : 320px !default;
+$action-panel-width-lg               : 400px !default;
+$action-panel-width-xl               : 496px !default;
+$action-panel-bg                     : $color-gray-0 !default;
+$action-panel-transition             : 0.3s ease !default;
+$action-panel-shadow                 : $shadow-lg !default;
+$action-panel-backdrop               : $global-backdrop-dark !default;
+
+
+// --------------------------------------------
 // Badge --------------------------------------
 // --------------------------------------------
 $enable-extend-badge-colors : true !default;
@@ -89,6 +123,7 @@ $badge-lg-font-size         : $font-body-lg - 1 !default;
 $badge-sm-size              : $badge-default-size - 8 !default;
 $badge-sm-font-size         : $font-body-xs !default;
 $badge-group-spacing        : $space-sm !default;
+
 
 // --------------------------------------------
 // Buttons ------------------------------------
@@ -423,7 +458,7 @@ $modal-title-font-weight      : $font-weight-bold !default;
 $modal-title-line-height      : $line-height-body-lg !default;
 $modal-padding                : $space-lg !default;
 $modal-bg-color               : $color-white !default;
-$modal-backdrop-bg-color      : rgba(0, 0, 0, 0.75) !default;
+$modal-backdrop-bg-color      : $global-backdrop-dark !default;
 $modal-body-padding           : $modal-padding $modal-padding ($modal-padding / 2) !default;
 $modal-header-padding         : ($modal-padding / 3) ($modal-padding / 2) ($modal-padding / 3) $modal-padding !default;
 $modal-footer-padding         : $modal-padding !default;
