@@ -105,3 +105,17 @@
     }
   }
 }
+
+.c-badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .c-badge {
+    margin-bottom: $badge-group-spacing;
+    
+    &:not(:last-child) {
+      margin-right: $badge-group-spacing;
+    }
+  }
+}
