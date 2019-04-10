@@ -1,0 +1,153 @@
+.c-action-panel {
+  top: 0;
+  bottom: 0;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  width: $action-panel-width;
+  right: -$action-panel-width;
+  backface-visibility: hidden;
+  z-index: $action-panel-zindex;
+  transition: $action-panel-transition;
+  border-left: $action-panel-border;
+  background-color: $action-panel-bg;
+
+  &-body {
+    flex: 1;
+  }
+
+  &-header {
+    border-bottom: $action-panel-border;
+    background-color: $action-panel-header-bg;
+    padding: $action-panel-padding-v $action-panel-padding-h;
+
+    &-title {
+      display: inline-block;
+      color: $action-panel-header-color;
+      font-size: $action-panel-header-font-size;
+      font-weight: $action-panel-header-font-weight;
+      line-height: $action-panel-header-line-height;
+    }
+
+    &-subtitle {
+      display: block;
+      font-size: $action-panel-subtitle-font-size;
+      line-height: $action-panel-subtitle-line-height;
+
+      + .c-action-panel-header-menu {
+        height: $action-panel-header-line-height + $action-panel-subtitle-line-height + ($action-panel-padding-v * 2);
+      }
+    }
+
+    &-menu {
+      top: 0;
+      float: right;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      right: $action-panel-padding-h;
+      height: $action-panel-header-line-height + ($action-panel-padding-v * 2);
+
+      > * {
+        margin: auto 12px;
+
+        &:last-child {
+          margin-right: $space-0;
+        }
+      }
+
+      .c-btn {
+        margin: auto $space-xs;
+
+        &:last-child {
+          margin-right: $space-0;
+        }
+      }
+
+      &-item {
+        padding-left: $space-xs;
+      }
+
+      &-icon {
+        font-size: $font-body-xl;
+        color: $action-panel-header-icon-color;
+
+        &:hover {
+          color: $action-panel-header-icon-hover-color;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: $action-panel-border;
+    background-color: $action-panel-footer-bg;
+    padding: $action-panel-padding-v $action-panel-padding-h;
+
+    &-link {
+      text-decoration: underline;
+      color: $action-panel-footer-color;
+      font-size: $action-panel-footer-font-size;
+      line-height: $action-panel-footer-line-weight;
+
+      &:hover {
+        color: $action-panel-footer-hover-color;
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex: 1 1 auto;
+      align-items: center;
+      font-size: $action-panel-footer-font-size;
+      line-height: $action-panel-footer-line-weight;
+
+      &-center {
+        justify-content: center;
+      }
+
+      &-right {
+        justify-content: flex-end;
+      }
+
+      &-left {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &-close {
+    @include close(28px);
+  }
+
+  // Sizing loop
+  @each $name, $size in $action-panel-sizes {
+    &-#{$name} {
+      width: $size;
+      right: -$size;
+    }
+  }
+
+  &.c-action-panel-visible {
+    right: 0;
+    box-shadow: $action-panel-shadow;
+  }
+
+  &-backdrop {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    position: fixed;
+    transition: $action-panel-transition;
+    background-color: $action-panel-backdrop;
+
+    &-transparent {
+      background-color: transparent;
+    }
+  }
+}
