@@ -431,60 +431,135 @@
     </div>
   </body>
 
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   
   <script>
-    $(document).ready(function () {
+  $(document).ready(function () {
   
-  $(".c-dropdown").click(function () {
-    $(this).find(".c-dropdown-list, .c-dropdown-grid").slideToggle(100);
-  });
+    $(".c-dropdown").click(function () {
+      $(this).find(".c-dropdown-list, .c-dropdown-grid").slideToggle(100);
+    });
   
-  $(document).on("click", function (event) {
-    var $dropdownTrigger = $(".c-dropdown");
+    $(document).on("click", function (event) {
+      var $dropdownTrigger = $(".c-dropdown");
   
     if ($dropdownTrigger !== event.target && !$dropdownTrigger.has(event.target).length) {
       $(".c-dropdown-list, .c-dropdown-grid").slideUp("fast");
-    }
-  });
-  });
-  </script>
-  
-  
-  <script>
-    $(document).ready(function () {
-      // Check for click events on the navbar toggle
-      $(".c-nav-toggle").click(function() {
-  
-      // Toggle the active class on both the nav and the menu
-      $(".c-nav-toggle").toggleClass("c-nav-toggle-active");
-      $(".c-header").toggleClass("c-nav-active");
-  
-      });
+      }
     });
+  
+    // Check for click events on the navbar toggle
+    $(".c-nav-toggle").click(function() {
+  
+    // Toggle the active class on both the nav and the menu
+      $(".c-nav-toggle").toggleClass("c-nav-toggle-active");
+     $(".c-header").toggleClass("c-nav-active");
+    });
+  
+  
+    // Laoder Stuff
+    $("#fullscreenLoaderBtn").click(function(){
+      $("#fullscreenLoader").toggleClass("c-loader-visible");
+    });
+  
+    $("#fullscreenLoader").click(function(){
+      $("#fullscreenLoader").removeClass("c-loader-visible");
+    });
+  
+    $("#fullscreenLoaderBtn2").click(function(){
+      $("#fullscreenLoader2").toggleClass("c-loader-visible");
+    });
+  
+    $("#fullscreenLoader2").click(function(){
+      $("#fullscreenLoader2").removeClass("c-loader-visible");
+    });
+  
+  
+    // Modal Stuff
+    $("#defaultBtn").click(function(){
+      $("#newDark").toggleClass("c-modal-visible");
+    });
+  
+    $("#close, #cancel").click(function(){
+      $("#newDark").removeClass("c-modal-visible");
+    });
+  
+    $("#largeBtn").click(function(){
+      $("#largeModal").toggleClass("c-modal-visible");
+    });
+  
+    $("#close, #cancel").click(function(){
+      $("#largeModal").removeClass("c-modal-visible");
+    });
+  
+    $("#smallBtn").click(function(){
+      $("#smallModal").toggleClass("c-modal-visible");
+    });
+  
+    $("#close, #cancel").click(function(){
+      $("#smallModal").removeClass("c-modal-visible");
+    });
+  
+    $("#centerBtn").click(function(){
+      $("#centerModal").toggleClass("c-modal-visible");
+    });
+  
+    $("#close, #cancel").click(function(){
+      $("#centerModal").removeClass("c-modal-visible");
+    });
+  
+    $("#fullscreenBtn").click(function(){
+      $("#fullscreenModal").toggleClass("c-modal-visible");
+    });
+  
+    $("#close, #cancel").click(function(){
+      $("#fullscreenModal").removeClass("c-modal-visible");
+    });
+  
+  
+    // Quickview Stuff
+    $(".c-action-panel-close").on("click", function () {
+      $(this).closest(".c-action-panel").toggleClass("c-action-panel-visible")
+    });
+  
+    $("#qv-basic-trigger").on("click", function () {
+      $("#qv-basic").toggleClass("c-action-panel-visible");
+      $("#backdrop-main").toggle()
+    });
+  
+    $("#backdrop-main").on("click", function () {
+      $("#backdrop-main").toggle();
+      $("#qv-basic").toggleClass("c-action-panel-visible")
+    });
+  
+    $("#qv-sm-trigger").on("click", function () {
+      $("#qv-sm").toggleClass("c-action-panel-visible")
+    });
+  
+    $("#qv-lg-trigger").on("click", function () {
+      $("#qv-lg").toggleClass("c-action-panel-visible")
+    });
+  
+    $("#qv-xl-trigger").on("click", function () {
+      $("#qv-xl").toggleClass("c-action-panel-visible")
+    });
+  
+    $("#qv-xxl-trigger").on("click", function () {
+      $("#qv-xxl").toggleClass("c-action-panel-visible")
+    });
+  
+  
+    $("#qv-backdrop-dark-trigger").on("click", function () {
+      $("#qv-backdrop-dark").toggleClass("c-action-panel-visible");
+      $("#backdrop-dark").toggle()
+    });
+  
+    $("#backdrop-dark").on("click", function () {
+      $("#backdrop-dark").toggle();
+      $("#qv-backdrop-dark").toggleClass("c-action-panel-visible")
+    });
+  });
+  
   </script>
-  
-  
-  <script>
-  $("#fullscreenLoaderBtn").click(function(){
-    $("#fullscreenLoader").toggleClass("c-loader-visible");
-  });
-  
-  $("#fullscreenLoader").click(function(){
-    $("#fullscreenLoader").removeClass("c-loader-visible");
-  });
-  
-  $("#fullscreenLoaderBtn2").click(function(){
-    $("#fullscreenLoader2").toggleClass("c-loader-visible");
-  });
-  
-  $("#fullscreenLoader2").click(function(){
-    $("#fullscreenLoader2").removeClass("c-loader-visible");
-  });
-  
-  </script>
-  
-  
 
 </html>
