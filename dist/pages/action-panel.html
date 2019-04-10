@@ -19,11 +19,10 @@
     <div class="docs-body">
       <main class="docs-content docs-content-fullwidth">
           
-
-<button class="c-btn c-btn-secondary" id="qv-basic-trigger">Toggle Default</button>
-<button class="c-btn c-btn-secondary" id="qv-sm-trigger">Toggle Small</button>
+<button class="c-btn c-btn-secondary" id="qv-sm-trigger">Toggle Default</button>
+<button class="c-btn c-btn-secondary" id="qv-basic-trigger">Toggle More Options</button>
 <button class="c-btn c-btn-secondary" id="qv-lg-trigger">Toggle Large</button>
-<button class="c-btn c-btn-secondary" id="qv-xl-trigger">Toggle X-Large</button>
+<button class="c-btn c-btn-secondary" id="qv-xl-trigger">Toggle Notifications</button>
 <button class="c-btn c-btn-secondary" id="qv-backdrop-dark-trigger">Toggle Default Dark Backdrop</button>
 
 
@@ -50,30 +49,37 @@
 
 
   <div class="c-action-panel-body">
-
+      <ul class="c-tabs c-tabs-fullwidth c-bg-white">
+          <li class="c-tab-item">
+            <a class="c-tab-item-link" href="#">Tab A</a>
+          </li>
+          <li class="c-tab-item">
+            <a class="c-tab-item-link c-tab-item-link-active" href="#">Tab B</a>
+          </li>
+          <li class="c-tab-item">
+            <a class="c-tab-item-link" href="#">Tab C</a>
+          </li>
+          <li class="c-tab-item">
+            <a class="c-tab-item-link c-tab-item-link-disabled" href="#">Tab D</a>
+          </li>
+        </ul>
   </div>
 
 
   <footer class="c-action-panel-footer">
-    <div class="c-action-panel-footer-item c-action-panel-footer-item-left">
-      <button class="c-btn c-btn-sm c-btn-primary">Button</button>
-    </div>
     <a class="c-action-panel-footer-item c-action-panel-footer-link c-action-panel-footer-item-center" href="#">
       Footer Link
     </a>
-    <div class="c-action-panel-footer-item c-action-panel-footer-item-right">
-      <button class="c-btn c-btn-sm c-btn-primary">Button</button>
-    </div>
   </footer>
 </div>
 
 
   <!-- Size small -->
-<div id="qv-sm" class="c-action-panel c-action-panel-sm">
+<div id="qv-sm" class="c-action-panel">
 
   <header class="c-action-panel-header">
     <div class="c-action-panel-header-title">
-      Card Header
+      Simple Header
     </div>
     <div class="c-action-panel-header-menu">
       <a class="c-action-panel-close"></a>
@@ -85,10 +91,10 @@
   </div>
 
   <footer class="c-action-panel-footer">
-    <button class="c-btn c-btn-secondary c-btn-block">Cancel</button>
+    <button class="c-btn c-btn-secondary">Cancel</button>
   </footer>
 </div>
-  
+
   <!-- Size large -->
 <div id="qv-lg" class="c-action-panel c-action-panel-lg">
   <header class="c-action-panel-header">
@@ -115,44 +121,75 @@
 
   <footer class="c-action-panel-footer">
     <div class="c-action-panel-footer-item c-action-panel-footer-item-left">
-      <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+      <button class="c-btn c-btn-primary">Button</button>
     </div>
     <a class="c-action-panel-footer-item c-action-panel-footer-link c-action-panel-footer-item-center" href="#">
       Footer Link
     </a>
     <div class="c-action-panel-footer-item c-action-panel-footer-item-right">
-      <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+      <button class="c-btn c-btn-primary">Button</button>
     </div>
   </footer>
 </div>
 
   <!-- Size extra large -->
-<div id="qv-xl" class="c-action-panel c-action-panel-xl">
+<div id="qv-xl" class="c-action-panel c-notifications">
   <header class="c-action-panel-header">
     <div class="c-action-panel-header-title">
-       Action Panel Header
+       Notifications
     </div>
     <div class="c-action-panel-header-menu">
-      <a class="c-action-panel-close"></a>
+      <a class="c-btn c-btn-icon-secondary c-btn-icon" href="#">
+          <i class="fa fa-cog" aria-hidden="true"></i>
+      </a>
     </div>
   </header>
 
   <div class="c-action-panel-body">
+    <div class="c-media-list c-media-list-hover">
 
+      <div class="c-media c-media-middle">
+        <div class="c-avatar c-avatar-lg c-avatar-cyan">
+          <i class="fab fa-dropbox"></i>
+        </div>
+        <div class="c-media-body">
+          <div class="c-text-md">Notification Content</div>
+          <div class="c-text-sm c-text-bold">Name/App</div>
+        </div>
+      </div>
+
+      <div class="c-media c-media-middle">
+        <div class="c-avatar c-avatar-lg c-avatar-lime">
+          <i class="fab fa-apple"></i>
+        </div>
+        <div class="c-media-body">
+          <div class="c-text-md">Notification Content</div>
+          <div class="c-text-sm c-text-bold">Name/App</div>
+        </div>
+      </div>
+
+      <div class="c-media c-media-middle c-media-read">
+        <div class="c-avatar c-avatar-lg c-avatar-orange">
+          <i class="fab fa-amazon"></i>
+        </div>
+        <div class="c-media-body">
+          <div class="c-text-md">This Notification is read</div>
+          <div class="c-text-sm c-text-bold">Name/App</div>
+        </div>
+      </div>
+
+      <div class="c-media c-media-middle">
+        <div class="c-avatar c-avatar-lg c-avatar-grape">
+          <i class="fab fa-xbox"></i>
+        </div>
+        <div class="c-media-body">
+          <div class="c-text-md">Notification Content</div>
+          <div class="c-text-sm c-text-bold">Name/App</div>
+        </div>
+      </div>
+
+    </div>
   </div>
-
-  <footer class="c-action-panel-footer">
-    <div class="c-action-panel-footer-item c-card-action-panel-item-left">
-      <button class="c-btn c-btn-sm c-btn-primary">Button</button>
-    </div>
-    <div class="c-action-panel-footer-item c-action-panel-footer-item-center">
-      <button class="c-btn c-btn-sm c-btn-primary">Button</button>
-      <button class="c-btn c-btn-sm c-btn-secondary c-m-left-xs">Button</button>
-    </div>
-    <div class="c-action-panel-footer-item c-action-panel-footer-item-right">
-      <button class="c-btn c-btn-sm c-btn-primary">Button</button>
-    </div>
-  </footer>
 
 </div>
 
@@ -182,6 +219,7 @@
 
   <!-- END Quickviews -->
   <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
       </main>
     </div>
   </body>
