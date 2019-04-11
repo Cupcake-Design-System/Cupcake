@@ -326,13 +326,20 @@ $color-extended: (
   ),
 );
 
-$theme-colors: (
+$theme-colors_BW: (
   primary: $color-primary,
   success: $color-success,
   warning: $color-warning,
   danger: $color-danger,
   black: $color-black,
   white: $color-white,
+);
+
+$theme-colors: (
+  primary: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  danger: $color-danger,
 );
 
 $extended-palette: (

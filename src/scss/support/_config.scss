@@ -100,6 +100,7 @@ $avatar-font-family         : $font-family-sans !default;
 $avatar-line-height         : normal !default;
 $avatar-img-border          : $global-default-border !default;
 $avatar-group-spacing       : $space-xs !default;
+$avatar-palette             : $theme-colors !default;
 $avatar-group-transition    : 0.35s cubic-bezier(0, 1.22, .66, 1.39) !default;
 
 // for avatar sizes this maps to name, size, font-size
@@ -126,6 +127,7 @@ $badge-lg-font-size         : $font-body-lg - 1 !default;
 $badge-sm-size              : $badge-default-size - 8 !default;
 $badge-sm-font-size         : $font-body-xs !default;
 $badge-group-spacing        : $space-sm !default;
+$badge-palette              : $theme-colors !default;
 
 
 // --------------------------------------------

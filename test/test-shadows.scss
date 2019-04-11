@@ -20,6 +20,9 @@ $shadow-prefix: 'shadow';
         }
       }
       @include expect {
+        .shadow-0 {
+          box-shadow: none !important
+        }
         .shadow-xs {
           box-shadow: 0 2px 4px -2px rgba(33, 37, 41, 0.1) !important
         }

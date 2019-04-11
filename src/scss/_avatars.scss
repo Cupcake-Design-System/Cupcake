@@ -74,7 +74,7 @@
 }
 
 // All default Avatar color classes
-@each $name, $hex in $theme-colors {
+@each $name, $hex in $avatar-palette {
   .c-avatar-#{$name} {
     background-color: $hex;
   }
@@ -117,7 +117,7 @@
   z-index: 1;
   display: flex;
   position: relative;
-    
+
   .c-avatar {
     margin-left: -$avatar-group-spacing;
     box-shadow: $space-0 $space-0 $space-0 1px $color-white;
@@ -131,15 +131,15 @@
     &:nth-of-type(2) {
       z-index: 4;
     }
-    
+
     &:nth-of-type(3) {
       z-index: 3;
     }
-    
+
     &:nth-of-type(4) {
       z-index: 2;
     }
-    
+
     &:nth-of-type(5) {
       z-index: 1;
     }
