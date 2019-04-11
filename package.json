@@ -29,7 +29,7 @@
     "watch:docs": "onchange './src/docs/*.scss' -- run-s build:css-docs",
     "watch:html": "onchange 'src/docs/**/*.{html,md,json,yml}' -- run-s build:html",
     "watch": "run-p watch:*",
-    "release": "release-it",
+    "release": "release-it --dry-run",
     "changelog": "auto-changelog -p && git add CHANGELOG.md",
     "docs": "run-s build serve",
     "start": "run-p docs watch",

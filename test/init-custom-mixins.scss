@@ -12,7 +12,9 @@
         }
       }
       @include expect {
-
+        .depth-0 {
+          box-shadow: none !important;
+        }
         .depth-xs {
           box-shadow: 0 2px 4px -2px rgba(33, 37, 41, 0.1) !important;
         }
