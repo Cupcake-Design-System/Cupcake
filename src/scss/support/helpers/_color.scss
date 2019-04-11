@@ -2,12 +2,20 @@
   // BG helpers .c-bg-{{color}}
   .#{$bgName} {
     @include modifiers($color, 'background-color');
-    @include modifiers($theme-colors, 'background-color');
+    @include modifiers($theme-colors_BW, 'background-color');
+
+    &-transparent {
+      background: transparent;
+    }
+
+    &-none {
+      background: none;
+    }
   }
 
   // Text helpers .c-text-colors
   .#{$textName} {
     @include modifiers($color, 'color');
-    @include modifiers($theme-colors, 'color');
+    @include modifiers($theme-colors_BW, 'color');
   }
 }

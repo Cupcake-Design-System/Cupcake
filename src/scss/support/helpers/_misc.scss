@@ -1,0 +1,10 @@
+// Clearfix
+.c-clearfix::after,
+.c-clearfix::before {
+  content: '';
+  display: table;
+}
+
+.c-clearfix::after {
+  clear: both;
+}

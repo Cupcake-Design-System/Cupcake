@@ -88,11 +88,8 @@
   font-family: $alert-font-family;
   font-weight: $toast-font-weight;
   border: 1px solid $color-gray-2;
-  /* stylelint-disable */
-  padding: 11px $alert-top-padding 11px ($alert-top-padding + $toast-left-border);
-  /* stylelint-enable */
+  padding: $alert-top-padding $alert-top-padding $alert-top-padding ($alert-top-padding + $toast-left-border);
 
-  i:not(.fa-times),
   &-icon {
     color: $color;
     align-items: center;
@@ -129,14 +126,8 @@
 // Toast Style Mixin --------------------------
 // --------------------------------------------
 @mixin toast-style($color: color(primary)) {
-  i:not(.fa-times),
-  &-icon {
+  .c-toast-alert-icon {
     color: $color;
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    font-size: $alert-font-size + 2;
-    padding-right: $alert-top-padding;
   }
 
   // Alert Bar

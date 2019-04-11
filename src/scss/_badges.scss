@@ -81,7 +81,7 @@
 }
 
 // All default Badge color classes
-@each $name, $hex in $theme-colors {
+@each $name, $hex in $badge-palette {
   .c-badge-#{$name} {
     @include badge-style($hex);
   }
@@ -113,7 +113,7 @@
 
   .c-badge {
     margin-bottom: $badge-group-spacing;
-    
+
     &:not(:last-child) {
       margin-right: $badge-group-spacing;
     }

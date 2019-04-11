@@ -1,6 +1,5 @@
 // Display classes - and responsive variations
 @mixin hidden($breakpoint) {
-  .c-#{$breakpoint}-hidden,
   .c-hidden-#{$breakpoint} {
     display: none !important;
   }
