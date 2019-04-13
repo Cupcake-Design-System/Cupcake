@@ -14,3 +14,8 @@
   z-index: $modal-z-index - 10;
   background-color: $modal-backdrop-bg-color;
 }
+
+
+@mixin hover {
+  &:hover { @content; }
+}

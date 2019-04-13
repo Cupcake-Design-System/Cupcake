@@ -407,3 +407,29 @@ $docs-spacer-xxl: space(xl) + space(md);
   font-weight: font-weight(heavy);
 }
 
+
+
+.settings-ctrl {
+  position: absolute;
+  top: 20%;
+  left: -35px;
+  width: 35px;
+  height: 35px;
+  background-color: #ffffff;
+  border: 1px solid #dde6e9;
+  border-right: 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 3px 0 0 3px;
+
+  > i {
+    line-height: 35px;
+    font-size: 15px;
+    color: #3a3f51;
+  }
+}
+
+#themes {
+  background-color: #ffffff;
+  border-left: 1px solid #dde6e9;
+}

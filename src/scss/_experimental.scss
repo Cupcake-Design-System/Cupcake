@@ -10,7 +10,7 @@
     width: $header-height + 1;
     color: $header-text-color;
     border-left: 1px solid $header-borders;
-  
+
     span {
       height: 2px;
       width: 16px;
@@ -22,50 +22,50 @@
       background-color: currentColor;
       transition-timing-function: ease-out;
       transition-property: background-color, opacity, transform;
-  
+
       &:nth-child(1) {
         top: calc(50% - 6px);
       }
-    
+
       &:nth-child(2) {
         top: calc(50% - 1px);
       }
-    
+
       &:nth-child(3) {
         top: calc(50% + 4px);
       }
     }
-  
+
     &:hover {
       background-color: $header-inverse-bg-hover;
     }
-  
+
     &-active {
       span {
         &:nth-child(1) {
           transform: translateY(5px) rotate(45deg);
         }
-  
+
         &:nth-child(2) {
           opacity: 0;
         }
-  
+
         &:nth-child(3) {
           transform: translateY(-5px) rotate(-45deg);
         }
       }
     }
   }
-  
+
   // Responsive header moves .c-nav into submenu at smaller viewports
   @include media-breakpoint-down(md) {
     .c-header {
       position: relative;
-  
+
       .c-nav-toggle {
         display: block;
       }
-  
+
       .c-nav {
         display: none;
         padding: $nav-spacing / 2 $space-0;
@@ -74,15 +74,15 @@
       }
     }
   }
-  
+
   .c-header.c-nav-active {
     .c-nav {
       display: flex;
-  
+
       &-link {
         margin: $nav-spacing / 2 $nav-spacing;
       }
-  
+
       &-pills {
         left: 0;
         top: 100%;
@@ -92,17 +92,17 @@
       }
     }
   }
-  
-  
+
+
   .c-header.c-header-inverse {
     .c-nav {
       background: $header-inverse-bg;
     }
-  
+
     .c-nav-toggle {
       color: $header-text-color;
       border-left: 1px solid $header-borders;
-    
+
       &:hover {
         background-color: $header-bg-hover;
       }
@@ -198,7 +198,7 @@
         &-box {
           color: $header-inverse-text-color;
           background: transparent;
-          
+
           &:not(:focus) {
             border-color: $header-inverse-borders;
           }
@@ -249,6 +249,179 @@
       left: auto;
       position: absolute;
       min-width: $dropdown-min-width;
+    }
+  }
+}
+
+// User in sidenav
+@if $enable-experimental-userNav == true {
+  .c-sidenav-user {
+    &-body {
+      text-align: center;
+      color: $color-white;
+      background: $experimental-userNav-BgImage center center no-repeat;
+      background-size: cover;
+      padding: $space-md;
+    }
+
+    &-dropdown {
+      display: flex;
+      align-items: center;
+      color: $color-white;
+      padding: $space-sm $space-md;
+      justify-content: space-between;
+      background-color: $color-primary-8;
+      transition: background-color ease-in-out 0.15s;
+
+      &:hover {
+        background-color: $color-primary-7;
+      }
+
+      &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        line-height: 1;
+        right: $space-md;
+        display: inline-block;
+        vertical-align: middle;
+        border-top: 4px solid white;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        transition: transform 0.25s ease-in-out;
+      }
+
+      &.c-d-flex::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-hidden & {
+      display: none;
+    }
+
+    .c-sidenav-menu {
+      display: none;
+    }
+  }
+}
+
+// In page header
+@if $enable-experimental-pageHeader == true {
+  .c-page-header {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    background-size: cover;
+    flex-direction: column;
+    background-color: $color-white;
+    background-position: center center;
+    border-bottom: 1px solid $color-gray-2;
+
+    .c-tabs {
+      box-shadow: none;
+    }
+
+    &-bar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: $space-md $space-lg;
+      justify-content: space-between;
+      background-color: $color-white;
+      border-bottom: $global-default-border;
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin: $space-0;
+      color: $color-gray-7;
+
+      small {
+        opacity: 0.7;
+        color: inherit;
+        display: block;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.7;
+        padding-top: $space-sm;
+      }
+    }
+
+    &-info {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: $space-md 0;
+      padding: $space-0 $space-md;
+      justify-content: space-between;
+
+      .c-page-header-left {
+        flex: 1;
+      }
+
+      .c-breadcrumb {
+        margin: $space-sm 0 0;
+      }
+    }
+
+    // Transparent
+    &-transparent {
+      border-bottom: 0;
+      background-color: transparent;
+    }
+
+    // Actions
+    &-action {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      align-items: center;
+      padding: $space-0 $space-md;
+      justify-content: space-between;
+
+      &-buttons {
+        bottom: 0;
+        right: $space-md;
+        position: absolute;
+        transform: translateY(50%);
+        z-index: 1000;
+
+        .c-btn {
+          display: inline-flex;
+          margin-left: $space-xs;
+          border-radius: $radius-round;
+        }
+      }
+    }
+
+    // Inverse
+    &-inverse {
+      background-color: $color-gray-9;
+
+      .c-page-header-info {
+        .c-page-header-title {
+          color: $color-white;
+        }
+      }
+
+      // Allow for bg colors to work
+      &[class*="c-bg-"] {
+        .c-page-header-action {
+          &.active,
+          &:hover {
+            border-bottom-color: rgba($color-white, .7);
+          }
+        }
+
+        .c-page-header-action {
+          border-bottom-color: rgba($color-white, .7);
+        }
+      }
     }
   }
 }
