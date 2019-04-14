@@ -98,36 +98,40 @@
     </div>
   </header>
 
-    <div class="page-content">
+    <main class="c-wrapper">
 
       {% body %}
 
       {{> action-panel-left}}
 
-      <div class="content-wrapper">
+      <div class="c-main-content">
 
-          <header class="c-page-header">
-              <div class="c-page-header-info">
-                <div class="c-page-header-left">
-                  <h2 class="c-page-header-title"><strong>Page</strong> header <small class="subtitle">You'll see different examples of page header</small></h2>
-                </div>
+        <header class="c-page-header">
+          <div class="c-page-header-info">
+            <div class="c-page-header-left">
+              <h2 class="c-page-header-title"><strong>Page</strong> header <small class="subtitle">You'll see different
+                  examples of page header</small></h2>
+            </div>
 
-                <div class="c-page-header-right">
-                  <h2 class="c-page-header-title c-text-right"><strong>Right</strong> header <small class="subtitle">You'll see different examples of page header</small></h2>
-                </div>
-              </div>
+            <div class="c-page-header-right">
+              <h2 class="c-page-header-title c-text-right"><strong>Right</strong> header <small class="subtitle">You'll
+                  see different examples of page header</small></h2>
+            </div>
+          </div>
 
-              <div class="c-page-header-action">
-                <ul class="c-tabs c-tabs-lg">
-                  <li class="c-tab-item"><a class="c-tab-item-link" href="#">Tab A</a></li>
-                  <li class="c-tab-item"><a class="c-tab-item-link c-tab-item-link-active" href="#">Tab B</a></li>
-                  <li class="c-tab-item"><a class="c-tab-item-link" href="#">Tab C</a></li>
-                  <li class="c-tab-item"><a class="c-tab-item-link" href="#">Tab D</a></li>
-                </ul>
-              </div>
-            </header>
+          <div class="c-page-header-action">
+            <ul class="c-tabs c-tabs-lg">
+              <li class="c-tab-item"><a class="c-tab-item-link" href="#">Tab A</a></li>
+              <li class="c-tab-item"><a class="c-tab-item-link c-tab-item-link-active" href="#">Tab B</a></li>
+              <li class="c-tab-item"><a class="c-tab-item-link" href="#">Tab C</a></li>
+              <li class="c-tab-item"><a class="c-tab-item-link" href="#">Tab D</a></li>
+            </ul>
+          </div>
+        </header>
 
-        <div class="content c-bg-gray-1">
+        <i class="icon-arrow-down"></i>
+
+        <div class="c-p-md">
 
           <div class="c-card">
             <div class="c-card-content">
@@ -236,7 +240,8 @@
       {{> action-panel-right}}
       {{> action-panel-overlay}}
       {{> sidenav-api}}
-    </div>
+
+    </main>
 
   </body>
 
@@ -256,7 +261,7 @@ $('#sidenavHideToggle').on('click', function (e) {
 $('#layoutFixedToggle').on('click', function (e) {
   e.preventDefault();
 
-  $('body').removeClass('c-layout-fixed-folded').toggleClass('c-layout-fixed');
+  $('body').removeClass().toggleClass('c-layout-fixed');
   $('#sidenavMain').removeClass('c-sidenav-folded');
 });
 
@@ -290,7 +295,7 @@ $('#fixedFoldToggle').on('click', function (e) {
 // Toggle User in sidebar
 $('#sidenavUserToggle').on('click', function (e) {
   e.preventDefault();
-  $('body').toggleClass('c-sidenav-user-hidden');
+  $('#sidenavUser').toggleClass('c-sidenav-user-hidden');
 });
 
 
@@ -341,17 +346,17 @@ var navClass = 'c-sidenav-menu',
     navItemClass = 'c-sidenav-menu-item',
     navItemOpenClass = 'c-sidenav-menu-item-open',
     navLinkClass = 'c-sidenav-menu-link',
-    navSubmenuClass = 'c-sidenav-menu-submenu-group',
+    navSubmenuClass = 'c-sidenav-submenu-group',
     navSlidingSpeed = 250;
 
     // Configure collapsible functionality
     $('.' + navClass).each(function() {
-        $(this).find('.' + navItemClass).has('.' + navSubmenuClass).children('.' + navItemClass + ' > ' + '.' + navLinkClass).not('.disabled').on('click', function (e) {
+        $(this).find('.' + navItemClass).has('.' + navSubmenuClass).children('.' + navItemClass + ' > ' + '.' + navLinkClass).on('click', function (e) {
             e.preventDefault();
 
             // Simplify stuff
             var $target = $(this),
-                $navSidebarMini = $('.c-sidenav-folded').not('.c-sidenav-mobile-main').find('.c-sidenav-main .' + navClass).children('.' + navItemClass);
+                $navSidebarMini = $('.c-sidenav-folded').find('.c-sidenav .' + navClass).children('.' + navItemClass);
 
             // Collapsible
             if($target.parent('.' + navItemClass).hasClass(navItemOpenClass)) {

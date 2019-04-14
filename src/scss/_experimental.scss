@@ -278,17 +278,9 @@
       }
 
       &::after {
-        content: '';
-        width: 0;
-        height: 0;
-        line-height: 1;
+        @include caret(down, $color: white);
+
         right: $space-md;
-        display: inline-block;
-        vertical-align: middle;
-        border-top: 4px solid white;
-        border-left: 4px solid transparent;
-        border-right: 4px solid transparent;
-        transition: transform 0.25s ease-in-out;
       }
 
       &.c-d-flex::after {
@@ -296,7 +288,7 @@
       }
     }
 
-    &-hidden & {
+    &-hidden {
       display: none;
     }
 
@@ -308,6 +300,11 @@
 
 // In page header
 @if $enable-experimental-pageHeader == true {
+
+  $page-header-bg: $color-white !default;
+  $page-header-border: 1px solid $color-gray-1 !default;
+  $page-header-padding: $space-md !default;
+
   .c-page-header {
     display: flex;
     flex-wrap: wrap;
@@ -315,9 +312,9 @@
     align-items: center;
     background-size: cover;
     flex-direction: column;
-    background-color: $color-white;
+    background-color: $page-header-bg;
     background-position: center center;
-    border-bottom: 1px solid $color-gray-2;
+    border-bottom: $page-header-border;
 
     .c-tabs {
       box-shadow: none;
@@ -327,10 +324,10 @@
       width: 100%;
       display: flex;
       align-items: center;
-      padding: $space-md $space-lg;
+      padding: $page-header-padding;
       justify-content: space-between;
-      background-color: $color-white;
-      border-bottom: $global-default-border;
+      background-color: $page-header-bg;
+      border-bottom: $page-header-border;
     }
 
     &-title {
@@ -355,8 +352,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      margin: $space-md 0;
-      padding: $space-0 $space-md;
+      padding: $page-header-padding;
       justify-content: space-between;
 
       .c-page-header-left {
@@ -381,21 +377,15 @@
       flex-wrap: wrap;
       position: relative;
       align-items: center;
-      padding: $space-0 $space-md;
       justify-content: space-between;
+      padding: $space-0 $page-header-padding;
 
       &-buttons {
         bottom: 0;
-        right: $space-md;
+        z-index: 1000;
         position: absolute;
         transform: translateY(50%);
-        z-index: 1000;
-
-        .c-btn {
-          display: inline-flex;
-          margin-left: $space-xs;
-          border-radius: $radius-round;
-        }
+        right: $page-header-padding;
       }
     }
 
@@ -421,6 +411,124 @@
         .c-page-header-action {
           border-bottom-color: rgba($color-white, .7);
         }
+      }
+    }
+  }
+
+  .fab {
+    position: relative;
+    display: inline-block;
+    z-index: 9;
+
+    > .c-btn {
+      position: relative;
+      z-index: 1;
+    }
+
+    &-fixed {
+      position: fixed;
+      right: 40px;
+      bottom: 40px;
+    }
+  }
+
+
+  .fab-buttons {
+    bottom: 40px;
+    display: flex;
+    margin: $space-0;
+    right: $space-xs;
+    list-style: none;
+    padding: $space-0;
+    position: absolute;
+    flex-direction: column-reverse;
+
+    li {
+      opacity: 0;
+      transition: .4s;
+      text-align: right;
+      padding: $space-sm $space-0;
+
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) { transform: translateY(103% * $i); }
+      }
+    }
+  }
+
+  .fab-icon-default,
+  .fab-icon-active {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transition: .5s;
+    position: absolute;
+    display: inline-block;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .fab-icon-active {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+
+  .fab > .c-btn.active {
+    .fab-icon-default {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+
+    .fab-icon-active {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    + .fab-buttons li {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+
+
+  // Directions
+  //
+  .fab-bottom .fab-buttons {
+    top: 40px;
+    flex-direction: column;
+
+    li {
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) { transform: translateY(-103% * $i); }
+      }
+    }
+  }
+
+
+  .fab-left .fab-buttons {
+    top: 0;
+    right: 40px;
+    flex-direction: row-reverse;
+
+    li {
+      padding: $space-xs;
+
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) { transform: translateX(103% * $i); }
+      }
+    }
+  }
+
+
+  .fab-right .fab-buttons {
+    top: 0;
+    left: 40px;
+    flex-direction: row;
+
+    li {
+      padding: $space-xs;
+
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) { transform: translateX(-103% * $i); }
       }
     }
   }

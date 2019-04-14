@@ -5,47 +5,46 @@ layout: sidenav
 
 <div id="sidenavMain" class="c-sidenav">
 
-    <div class="c-sidenav-user">
+  <div id="sidenavUser" class="c-sidenav-user c-sidenav-user-hidden">
 
-      <div class="c-sidenav-user-body">
-        <img class="c-radius-round" src="https://unsplash.it/200?image=433" width="80" height="80" alt="">
-        <p class="c-text-md c-p-vertical-xs">Victoria Baker</p>
-        <em class="c-text-sm c-text-muted c-p-bottom-sm">Santa Ana, CA</em>
-      </div>
-      <a href="#user-nav" class="c-sidenav-user-dropdown">
-        <span>User Navigation</span>
-      </a>
-
-      <ul class="c-sidenav-menu c-m-top-sm" id="user-nav">
-        <li class="c-sidenav-menu-item">
-          <a href="#" class="c-sidenav-menu-link">
-            <i class="c-sidenav-menu-icon fas fa-user-astronaut"></i>
-            <span>My profile</span>
-          </a>
-        </li>
-        <li class="c-sidenav-menu-item">
-          <a href="#" class="c-sidenav-menu-link">
-            <i class="c-sidenav-menu-icon fas fa-comments"></i>
-            <span>Messages</span>
-          </a>
-        </li>
-        <li class="c-sidenav-menu-item">
-          <a href="#" class="c-sidenav-menu-link">
-            <i class="c-sidenav-menu-icon fas fa-cog"></i>
-            <span>Account settings</span>
-          </a>
-        </li>
-        <li class="c-sidenav-menu-item">
-          <a href="#" class="c-sidenav-menu-link">
-            <i class="c-sidenav-menu-icon fas fa-power-off"></i>
-            <span>Logout</span>
-          </a>
-        </li>
-        <li class="c-sidenav-divider"></li>
-      </ul>
-
+    <div class="c-sidenav-user-body">
+      <img class="c-radius-round" src="https://unsplash.it/200?image=433" width="80" height="80" alt="">
+      <p class="c-text-md c-p-vertical-xs">Victoria Baker</p>
+      <em class="c-text-sm c-text-muted c-p-bottom-sm">Santa Ana, CA</em>
     </div>
+    <a href="#user-nav" class="c-sidenav-user-dropdown">
+      <span>User Navigation</span>
+    </a>
 
+    <ul class="c-sidenav-menu c-m-top-sm" id="user-nav">
+      <li class="c-sidenav-menu-item">
+        <a href="#" class="c-sidenav-menu-link">
+          <i class="c-sidenav-menu-icon fas fa-user-astronaut"></i>
+          <span>My profile</span>
+        </a>
+      </li>
+      <li class="c-sidenav-menu-item">
+        <a href="#" class="c-sidenav-menu-link">
+          <i class="c-sidenav-menu-icon fas fa-comments"></i>
+          <span>Messages</span>
+        </a>
+      </li>
+      <li class="c-sidenav-menu-item">
+        <a href="#" class="c-sidenav-menu-link">
+          <i class="c-sidenav-menu-icon fas fa-cog"></i>
+          <span>Account settings</span>
+        </a>
+      </li>
+      <li class="c-sidenav-menu-item">
+        <a href="#" class="c-sidenav-menu-link">
+          <i class="c-sidenav-menu-icon fas fa-power-off"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+      <li class="c-sidenav-divider"></li>
+    </ul>
+
+  </div>
 
   <div class="c-sidenav-body">
 
@@ -53,41 +52,44 @@ layout: sidenav
 
       <li class="c-sidenav-menu-category">
         <div>Main</div>
-        <i class="c-sidenav-menu-icon fas fa-ellipsis-h" title="Main"></i>
+        <i class="c-sidenav-menu-icon" title="Main"></i>
       </li>
 
       <li class="c-sidenav-menu-item ">
-        <a href="index.html" class="c-sidenav-menu-link c-sidenav-menu-link-active">
-          <i class="c-sidenav-menu-icon fas fa-home"></i> <span>Default Options</span>
+        <a class="c-sidenav-menu-link c-sidenav-menu-link-active">
+          <i class="c-sidenav-menu-icon fas fa-home"></i>
+          <span>Home</span>
         </a>
       </li>
 
       <li class="c-sidenav-menu-item ">
-        <a href="header-only.html" class="c-sidenav-menu-link ">
-            <i class="c-sidenav-menu-icon fas fa-window-maximize"></i> <span>Header Only Nav</span>
+        <a class="c-sidenav-menu-link ">
+            <i class="c-sidenav-menu-icon fas fa-window-maximize"></i>
+            <span>Page 2</span>
         </a>
       </li>
 
-      <li class="c-sidenav-menu-item ">
-        <a href="page-headers.html" class="c-sidenav-menu-link ">
-          <i class="c-sidenav-menu-icon fas fa-window-restore"></i> <span>Page Headers</span>
+      <li class="c-sidenav-menu-item">
+        <a class="c-sidenav-menu-link">
+          <i class="c-sidenav-menu-icon fas fa-window-restore"></i>
+          <span>Page 3</span>
         </a>
       </li>
 
-      <li class="c-sidenav-menu-item c-sidenav-menu-submenu ">
-        <a href="" class="c-sidenav-menu-link ">
+      <li class="c-sidenav-menu-item c-sidenav-submenu">
+        <a href="" class="c-sidenav-menu-link">
           <i class="c-sidenav-menu-icon fas fa-layer-group"></i> <span>Menu Levels</span>
         </a>
 
-        <ul class="c-sidenav-menu-submenu-group" data-submenu-title="Menu Levels">
-          <li class="c-sidenav-menu-item c-sidenav-menu-submenu">
+        <ul class="c-sidenav-submenu-group" data-submenu-title="Menu Levels">
+          <li class="c-sidenav-menu-item c-sidenav-submenu">
             <a href="" class="c-sidenav-menu-link ">Level 1</a>
 
-            <ul class="c-sidenav-menu-submenu-group">
-              <li class="c-sidenav-menu-item c-sidenav-menu-submenu">
+            <ul class="c-sidenav-submenu-group">
+              <li class="c-sidenav-menu-item c-sidenav-submenu">
                 <a href="" class="c-sidenav-menu-link ">Level 2</a>
 
-                <ul class="c-sidenav-menu-submenu-group">
+                <ul class="c-sidenav-submenu-group">
                   <li class="c-sidenav-menu-item">
                     <a href="" class="c-sidenav-menu-link ">Level 3</a>
                   </li>
@@ -104,13 +106,47 @@ layout: sidenav
 
     <li class="c-sidenav-menu-category">
       <div>Example Category</div>
-      <i class="c-sidenav-menu-icon fas fa-ellipsis-h" title="Menu Category"></i>
+      <i class="c-sidenav-menu-icon" title="Menu Category"></i>
     </li>
+
+    <li class="c-sidenav-menu-item ">
+        <a class="c-sidenav-menu-link">
+          <i class="c-sidenav-menu-icon fas fa-home"></i>
+          <span>Home 2</span>
+        </a>
+      </li>
+
+      <li class="c-sidenav-menu-item c-sidenav-submenu">
+        <a href="" class="c-sidenav-menu-link">
+          <i class="c-sidenav-menu-icon fas fa-layer-group"></i> <span>Menu Levels</span>
+        </a>
+
+        <ul class="c-sidenav-submenu-group" data-submenu-title="Menu Levels">
+          <li class="c-sidenav-menu-item c-sidenav-submenu">
+            <a href="" class="c-sidenav-menu-link ">Level 1</a>
+
+            <ul class="c-sidenav-submenu-group">
+              <li class="c-sidenav-menu-item c-sidenav-submenu">
+                <a href="" class="c-sidenav-menu-link ">Level 2</a>
+
+                <ul class="c-sidenav-submenu-group">
+                  <li class="c-sidenav-menu-item">
+                    <a href="" class="c-sidenav-menu-link ">Level 3</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+          </li>
+        </ul>
+
+      </li>
 
     </ul>
   </div>
 
   <div id="sidenavMainFoldToggle" class="c-sidenav-collapse">
-    <i class="c-sidenav-menu-icon fa fa-angle-left"></i>
+    <i class="c-sidenav-menu-icon"></i>
+    <!-- <i class="icon icon-arrow-right"></i> -->
   </div>
 </div>

@@ -178,3 +178,26 @@
     }
   }
 }
+
+
+// Styles to support read/unread/hover for notifications
+.c-notifications .c-media-list .c-media {
+  margin: $notification-margin;
+  box-shadow: $notification-shadow;
+
+  &:hover {
+    background: $color-white !important;
+    box-shadow: $notification-shadow-hover;
+  }
+
+  &-read {
+    box-shadow: none;
+    background: $notification-read-bg;
+    border: $notification-read-border;
+
+    &:hover {
+      box-shadow: none;
+      background: $notification-read-bg !important;
+    }
+  }
+}

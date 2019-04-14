@@ -3,6 +3,11 @@
 <script>
 $(document).ready(function () {
 
+
+$("#fab").click(function(){
+  $(this).toggleClass("active");
+});
+
   $(".c-dropdown").click(function () {
     $(this).find(".c-dropdown-list, .c-dropdown-grid").slideToggle(100);
   });
@@ -20,7 +25,7 @@ $(document).ready(function () {
 
   // Toggle the active class on both the nav and the menu
     $(".c-nav-toggle").toggleClass("c-nav-toggle-active");
-   $(".c-header").toggleClass("c-nav-active");
+    $(".c-header").toggleClass("c-nav-active");
   });
 
 
@@ -84,7 +89,7 @@ $(document).ready(function () {
   });
 
 
-  // Quickview Stuff
+  // Action Panel Stuff
   $(".c-action-panel-close").on("click", function () {
     $(this).closest(".c-action-panel").toggleClass("c-action-panel-visible")
   });

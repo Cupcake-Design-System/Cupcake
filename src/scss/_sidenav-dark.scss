@@ -1,0 +1,95 @@
+$dark-bg: #0b3a56 !default;
+$dark-foreground: $color-white !default;
+// Dark sidebar
+$sidebar-dark-bg:                        $dark-bg !default;
+$sidebar-dark-color:                     $dark-foreground !default;
+$sidebar-dark-border-color:              rgba($color-white, 0.1) !default;
+// Dark sidebar navigation styles
+$navigation-dark-color:                     rgba($dark-foreground, 0.9) !default;
+$navigation-dark-hover-bg:                  rgba($color-black, 0.15) !default;
+$navigation-dark-hover-color:               $dark-foreground !default;
+$navigation-dark-active-bg:                 #1c7cd6 !default;
+$navigation-dark-active-color:              $color-white !default;
+$navigation-dark-sub-bg:                    rgba($color-black, 0.15) !default;
+$navigation-dark-sub-active-bg:             rgba($color-black, 0.15) !default;
+$navigation-dark-sub-active-color:          $color-white !default;
+
+
+@if $enable-sideNav == true {
+  // SIDENAV DARK
+  .c-sidenav-dark {
+    border-right: transparent;
+    color: $sidebar-dark-color;
+    background-color: $sidebar-dark-bg;
+
+    // Main sidebar nav
+    .c-sidenav-menu {
+
+      // All links
+      &-link {
+        color: $navigation-dark-color;
+
+        &:hover {
+          color: $navigation-dark-hover-color;
+          background-color: $navigation-dark-hover-bg;
+        }
+      }
+
+      // Active links in submenu
+      &-item > .c-sidenav-menu-link-active {
+        color: $navigation-dark-sub-active-color;
+        background-color: $navigation-dark-sub-active-bg;
+      }
+
+      // Link in opened submenu
+      &-item-open > .c-sidenav-menu-link:not(.disabled),
+      > .c-sidenav-menu-item-expanded:not(.c-sidenav-menu-item-open) > .c-sidenav-menu-link {
+        color: $navigation-dark-hover-color;
+        background-color: $navigation-dark-hover-bg;
+
+        .c-sidenav-menu-icon {
+          color: $navigation-dark-hover-color;
+        }
+      }
+
+      // Active link in top level
+      > .c-sidenav-menu-item-open > .c-sidenav-menu-link:not(.disabled),
+      > .c-sidenav-menu-item > .c-sidenav-menu-link.active {
+        background-color: $navigation-dark-active-bg;
+        color: $navigation-dark-active-color;
+      }
+
+      // Header
+      &-category {
+        color: rgba($sidebar-dark-color, 0.5);
+      }
+
+      // Divider
+      .c-sidenav-divider {
+        background-color: $sidebar-dark-border-color;
+      }
+
+      .c-sidenav-submenu-group {
+        background-color: $navigation-dark-sub-bg;
+      }
+
+      .c-sidenav-submenu > .c-sidenav-menu-link::after {
+        border-left-color: $sidebar-dark-color;
+      }
+    }
+
+    .c-sidenav-collapse {
+      color: $sidebar-dark-color;
+      background-color: $sidebar-dark-bg;
+      border-color: darken($sidebar-dark-bg, 2);
+
+      &:hover {
+        background-color: darken($sidebar-dark-bg, 1);
+      }
+    }
+
+    &.c-sidenav-folded .c-sidenav-menu > .c-sidenav-submenu > .c-sidenav-submenu-group {
+      background-color: $sidebar-dark-bg;
+    }
+  }
+}

@@ -1,435 +1,340 @@
-// SIDENAV BASE
-.c-sidenav {
-  @include base-sidenav;
+@if $enable-sideNav == true {
+  // SIDENAV BASE
+  .c-sidenav {
+    @include base-sidenav;
 
-  &-body {
-    @include sidenav-body;
-  }
-
-  &-fullscreen {
-    width: 100%;
-  }
-
-  &-hidden {
-    left: -($sidebar-width + 2);
-    display: none;
-
-    .c-sidenav-body {
-      left: 0;
+    &-body {
+      @include sidenav-body;
     }
-  }
 
-  &-divider {
-    height: 1px;
-    margin: $space-sm 0;
-    background-color: $sidebar-divider-default-color;
-  }
-
-  &-collapse {
-    @include sidenav-collapse;
-  }
-
-  @include media-breakpoint-down(sm) {
-    position: fixed;
-    transition: none;
-    left: -($sidebar-width + 2);
-  }
-}
-
-
-// SIDENAV MENU
-.c-sidenav-menu {
-  @include sidenav-menu;
-
-  > {
-    .c-sidenav-menu-item > .c-sidenav-menu-link {
-      // font-weight: bold;
-
-      // if we need custom top level active color
-      // &-active {
-      //   background-color: #e00096;
-      //   color: #ffffff;
-      // }
+    &-fullscreen {
+      width: 100%;
     }
-  }
 
-  .c-sidenav-menu-link {
-    @include sidenav-menu-link;
-  }
-
-  .c-sidenav-menu-category {
-    color: $sidebar-category-color;
-    padding: $sidebar-category-padding;
-    margin-top: $sidebar-category-margin-top;
-
-    > .c-sidenav-menu-icon {
+    &-hidden {
+      left: -($sidebar-width + 2);
       display: none;
-    }
-  }
 
-  .c-sidenav-menu-item-open {
-    > .c-sidenav-menu-link {
-      color: $sidebar-link-open-color;
-      background-color: $sidebar-link-open-bg;
-      font-weight: bold;
-
-      .c-sidenav-menu-icon {
-        color: $sidebar-link-icon-color-active;
+      .c-sidenav-body {
+        left: 0;
       }
     }
 
-    .c-sidenav-menu-submenu-group {
-      display: block;
+    &-divider {
+      height: 1px;
+      margin: $space-sm 0;
+      background-color: $sidebar-divider-default-color;
     }
 
-    .c-sidenav-menu-submenu {
-      .c-sidenav-menu-submenu-group {
+    &-collapse {
+      @include sidenav-collapse;
+    }
+
+    @include media-breakpoint-down(sm) {
+      position: fixed;
+      transition: none;
+      left: -($sidebar-width + 2);
+    }
+  }
+
+
+  // SIDENAV MENU
+  .c-sidenav-menu {
+    @include sidenav-menu;
+
+    &:first-child {
+      margin-top: $sidebar-link-margin;
+    }
+
+    > {
+      .c-sidenav-menu-item > .c-sidenav-menu-link {
+        // font-weight: bold;
+
+        // if we need custom top level active color
+        // &-active {
+        //   background-color: #e00096;
+        //   color: #ffffff;
+        // }
+      }
+    }
+
+    .c-sidenav-menu-link {
+      @include sidenav-menu-link;
+    }
+
+    .c-sidenav-menu-category {
+      color: $sidebar-category-color;
+      padding: $sidebar-category-padding;
+
+      > .c-sidenav-menu-icon {
         display: none;
       }
     }
-  }
 
+    .c-sidenav-menu-item-open {
+      > .c-sidenav-menu-link {
+        color: $sidebar-link-open-color;
+        background-color: $sidebar-link-open-bg;
+        font-weight: bold;
 
-  &-submenu {
-    > {
-      .c-sidenav-menu-link {
-        padding-right: $space-md;
-      }
-
-      .c-sidenav-menu-link::after {
-        content: '';
-        width: 0;
-        height: 0;
-        right: $space-md;
-        position: absolute;
-        display: inline-block;
-        vertical-align: middle;
-        border-left: 4px solid black;
-        border-top: 4px solid transparent;
-        border-bottom: 4px solid transparent;
-        margin-top: $space-sm + $space-xs;
-        transition: transform 0.25s ease-in-out;
-      }
-    }
-
-    &.c-sidenav-menu-item-open > .c-sidenav-menu-link::after {
-      transform: rotate(90deg);
-    }
-
-    &-group {
-      display: none;
-      flex-wrap: wrap;
-      list-style: none;
-      padding-left: $space-0;
-      margin-bottom: $space-0;
-      background-color: $sidebar-submenu-bg;
-
-      .c-sidenav-menu-link {
-        padding-left: $sidebar-submenu-link-padding-left;
-
-        &-active {
-          color: $sidebar-submenu-link-active-color;
+        .c-sidenav-menu-icon {
+          color: $sidebar-link-icon-color-active;
         }
       }
 
-      .c-sidenav-menu-submenu-group {
-        .c-sidenav-menu-link {
-          padding-left: $sidebar-submenu-level3-padding-left;
-        }
-
-        .c-sidenav-menu-submenu-group .c-sidenav-menu-link {
-          padding-left: $sidebar-submenu-level4-padding-left;
-        }
-      }
-    }
-  }
-}
-
-
-// SIDENAV FOLDED
-.c-sidenav-folded {
-  left: 0;
-  overflow: visible;
-  width: $sidebar-folded-default-width;
-
-  .c-sidenav-body {
-    width: auto;
-    position: static;
-    overflow: visible;
-  }
-
-  .c-sidenav-user {
-    &-body {
-      display: none;
-    }
-  }
-
-  .c-sidenav-user-dropdown {
-    padding: $space-lg - $space-xs;
-
-    span {
-      display: none;
-    }
-  }
-
-  .c-sidenav-body::-webkit-scrollbar {
-    width: 0 !important;
-  }
-
-  .c-sidenav-menu {
-    > {
-      .c-sidenav-menu-item {
-        margin: $space-0;
-        position: relative;
-
-        > .c-sidenav-menu-link {
-          padding-left: $space-0;
-          padding-right: $space-0;
-          justify-content: center;
-
-          > .c-sidenav-menu-icon {
-            display: block;
-            position: static;
-            margin-left: $space-0;
-            margin-right: $space-0;
-          }
-
-          > span {
-            display: none;
-          }
-        }
+      .c-sidenav-submenu-group {
+        display: block;
       }
 
-      .c-sidenav-menu-submenu {
-        > {
-          .c-sidenav-menu-submenu-group {
-            top: 0;
-            display: none;
-            z-index: 1030;
-            position: absolute;
-            background: white;
-            border: $sidebar-border;
-            width: $sidebar-width - 10;
-            right: -($sidebar-width - 10);
-            box-shadow: 0 0.5rem 1rem rgba(#000000, .07);
-          }
-
-          .c-sidenav-menu-submenu-group[data-submenu-title]::before {
-            content: attr(data-submenu-title);
-            opacity: 0.5;
-            display: block;
-            padding: $space-md;
-            padding-bottom: $space-sm;
-          }
-
-          .c-sidenav-menu-link::after {
-            content: none;
-          }
-        }
-
-        &:hover > .c-sidenav-menu-submenu-group {
-          display: block !important;
-        }
-
-        &:focus > .c-sidenav-menu-submenu-group {
-          display: block !important;
-        }
-      }
-
-      .c-sidenav-menu-category {
-        padding: $space-0;
-        text-align: center;
-        margin-top: $space-0;
-
-        > .c-sidenav-menu-icon {
-          top: 0;
-          display: block;
-          padding: $space-md;
-          margin-top: $space-xs;
-          margin-bottom: $space-xs;
-        }
-
-        > div {
+      .c-sidenav-submenu {
+        .c-sidenav-submenu-group {
           display: none;
         }
       }
-
-      .c-sidenav-menu-item-open > .c-sidenav-menu-submenu-group {
-        display: none !important;
-      }
     }
 
-    .c-sidenav-menu-submenu-group {
-      .c-sidenav-menu-link {
-        padding-left: $space-md;
-      }
 
-      .c-sidenav-menu-submenu-group {
+    .c-sidenav-submenu {
+      > {
         .c-sidenav-menu-link {
-          padding-left: $space-xl;
+          padding-right: $space-md;
         }
 
-        /* stylelint-disable */
-        .c-sidenav-menu-submenu-group {
-          .c-sidenav-menu-link {
-            padding-left: $space-xl + $space-md;
+        .c-sidenav-menu-link::after {
+          @include caret(right);
+
+          right: $space-md;
+          position: absolute;
+          vertical-align: middle;
+          margin-top: $space-sm + $space-xs;
+        }
+      }
+
+      &.c-sidenav-menu-item-open > .c-sidenav-menu-link::after {
+        transform: rotate(90deg);
+      }
+
+      &-group {
+        display: none;
+        flex-wrap: wrap;
+        list-style: none;
+        padding-left: $space-0;
+        margin-bottom: $space-0;
+        background-color: $sidebar-submenu-bg;
+
+        .c-sidenav-menu-link {
+          padding-left: $sidebar-submenu-link-padding-left;
+
+          &-active {
+            color: $sidebar-submenu-link-active-color;
           }
-          /* stylelint-enable */
+        }
+
+        .c-sidenav-submenu-group {
+          .c-sidenav-menu-link {
+            padding-left: $sidebar-submenu-level3-padding-left;
+          }
+
+          .c-sidenav-submenu-group .c-sidenav-menu-link {
+            padding-left: $sidebar-submenu-level4-padding-left;
+          }
         }
       }
     }
   }
 
-  .c-sidenav-collapse {
+
+  // SIDENAV FOLDED
+  .c-sidenav-folded {
+    left: 0;
+    overflow: visible;
     width: $sidebar-folded-default-width;
 
-    i {
-      transform: rotate(180deg);
-    }
-  }
-}
-
-
-// SIDENAV FIXED
-.c-layout-fixed {
-  .c-sidenav:not(.c-sidenav-folded) {
-    left: 0;
-    bottom: 0;
-    display: flex;
-    overflow: auto;
-    white-space: nowrap;
-    width: $sidebar-width;
-    flex-direction: column;
-    will-change: transform;
-    position: fixed !important;
-    transition: width .1s ease;
-    backface-visibility: hidden;
-    top: $header-height !important;
-  }
-
-  .page-content {
-    margin-top: $header-height;
-    transition: margin .1s ease;
-    margin-left: $sidebar-width;
-  }
-
-  .c-header {
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    position: fixed;
-  }
-
-
-  &-folded {
-    .c-sidenav-folded {
-      position: fixed;
-      top: $header-height;
+    .c-sidenav-body {
+      width: auto;
+      position: static;
+      overflow: visible;
     }
 
-    .page-content {
-      margin-left: $sidebar-folded-default-width;
-    }
-  }
-
-  @include media-breakpoint-down(sm) {
-    .page-content {
-      margin-left: $space-0;
+    .c-sidenav-user {
+      &-body {
+        display: none;
+      }
     }
 
-    .c-sidenav {
-      top: 0;
-      margin-left: -($sidebar-width);
+    .c-sidenav-user-dropdown {
+      padding: $space-lg - $space-xs;
+
+      span {
+        display: none;
+      }
     }
-  }
-}
 
+    .c-sidenav-menu {
+      > {
+        .c-sidenav-menu-item {
+          margin: $space-0;
+          position: relative;
 
-$dark-bg: #0b3a56 !default;
-$dark-foreground: $color-white !default;
-// Dark sidebar
-$sidebar-dark-bg:                        $dark-bg !default;
-$sidebar-dark-color:                     $dark-foreground !default;
-$sidebar-dark-border-color:              rgba($color-white, 0.1) !default;
-// Dark sidebar navigation styles
-$navigation-dark-color:                     rgba($dark-foreground, 0.9) !default;
-$navigation-dark-hover-bg:                  rgba($color-black, 0.15) !default;
-$navigation-dark-hover-color:               $dark-foreground !default;
-$navigation-dark-active-bg:                 #1c7cd6 !default;
-$navigation-dark-active-color:              $color-white !default;
-$navigation-dark-sub-bg:                    rgba($color-black, 0.15) !default;
-$navigation-dark-sub-active-bg:             rgba($color-black, 0.15) !default;
-$navigation-dark-sub-active-color:          $color-white !default;
+          > .c-sidenav-menu-link {
+            padding-left: $space-0;
+            padding-right: $space-0;
+            justify-content: center;
 
+            > .c-sidenav-menu-icon {
+              display: block;
+              position: static;
+              margin-left: $space-0;
+              margin-right: $space-0;
+            }
 
-// SIDENAV DARK
-.c-sidenav-dark {
-  border-right: transparent;
-  color: $sidebar-dark-color;
-  background-color: $sidebar-dark-bg;
+            > span {
+              display: none;
+            }
+          }
+        }
 
-  // Main sidebar nav
-  .c-sidenav-menu {
+        .c-sidenav-submenu {
+          > {
+            .c-sidenav-submenu-group {
+              top: 0;
+              display: none;
+              z-index: 1030;
+              position: absolute;
+              background: white;
+              border: $sidebar-border;
+              width: $sidebar-width - 10;
+              right: -($sidebar-width - 10);
+              box-shadow: 0 0.5rem 1rem rgba(#000000, .07);
+            }
 
-    // All links
-    &-link {
-      color: $navigation-dark-color;
+            .c-sidenav-submenu-group[data-submenu-title]::before {
+              content: attr(data-submenu-title);
+              opacity: 0.5;
+              display: block;
+              padding: $space-md;
+              padding-bottom: $space-sm;
+            }
 
-      // Ignore disabled links when adding colors
-      &:not(.disabled) {
-        @include hover {
-          color: $navigation-dark-hover-color;
-          background-color: $navigation-dark-hover-bg;
+            .c-sidenav-menu-link::after {
+              content: none;
+            }
+          }
+
+          &:hover > .c-sidenav-submenu-group {
+            display: block !important;
+          }
+
+          &:focus > .c-sidenav-submenu-group {
+            display: block !important;
+          }
+        }
+
+        .c-sidenav-menu-category {
+          padding: $space-0;
+          text-align: center;
+          margin-top: $space-0;
+
+          > .c-sidenav-menu-icon {
+            @include icon-ellipsis;
+
+            padding: $space-md;
+            margin-top: $space-xs;
+            margin-bottom: $space-xs;
+          }
+
+          > div {
+            display: none;
+          }
+        }
+
+        .c-sidenav-menu-item-open > .c-sidenav-submenu-group {
+          display: none !important;
+        }
+      }
+
+      .c-sidenav-submenu-group {
+        .c-sidenav-menu-link {
+          padding-left: $space-md;
+        }
+
+        .c-sidenav-submenu-group {
+          .c-sidenav-menu-link {
+            padding-left: $space-xl;
+          }
+
+          /* stylelint-disable */
+          .c-sidenav-submenu-group {
+            .c-sidenav-menu-link {
+              padding-left: $space-xl + $space-md;
+            }
+            /* stylelint-enable */
+          }
         }
       }
     }
 
-    // Active links in submenu
-    &-item > .c-sidenav-menu-link-active {
-      color: $navigation-dark-sub-active-color;
-      background-color: $navigation-dark-sub-active-bg;
-    }
-
-    // Link in opened submenu
-    &-item-open > .c-sidenav-menu-link:not(.disabled),
-    > .c-sidenav-menu-item-expanded:not(.c-sidenav-menu-item-open) > .c-sidenav-menu-link {
-      color: $navigation-dark-hover-color;
-      background-color: $navigation-dark-hover-bg;
+    .c-sidenav-collapse {
+      width: $sidebar-folded-default-width;
 
       .c-sidenav-menu-icon {
-        color: $navigation-dark-hover-color;
+        transform: rotate(180deg);
       }
-    }
-
-    // Active link in top level
-    > .c-sidenav-menu-item-open > .c-sidenav-menu-link:not(.disabled),
-    > .c-sidenav-menu-item > .c-sidenav-menu-link.active {
-      background-color: $navigation-dark-active-bg;
-      color: $navigation-dark-active-color;
-    }
-
-    // Header
-    &-category {
-      color: rgba($sidebar-dark-color, 0.5);
-    }
-
-    // Divider
-    .c-sidenav-divider {
-      background-color: $sidebar-dark-border-color;
-    }
-
-    &-submenu-group {
-      background-color: $navigation-dark-sub-bg;
     }
   }
 
-  .c-sidenav-collapse {
-    color: $sidebar-dark-color;
-    background-color: $sidebar-dark-bg;
-    border-color: darken($sidebar-dark-bg, 2);
 
-    &:hover {
-      background-color: darken($sidebar-dark-bg, 1);
+  // SIDENAV FIXED
+  .c-layout-fixed {
+    .c-sidenav:not(.c-sidenav-folded) {
+      left: 0;
+      bottom: 0;
+      display: flex;
+      overflow: auto;
+      white-space: nowrap;
+      width: $sidebar-width;
+      flex-direction: column;
+      will-change: transform;
+      position: fixed !important;
+      transition: width .1s ease;
+      backface-visibility: hidden;
+      top: $header-height !important;
+    }
+
+    .c-wrapper {
+      margin-top: $header-height;
+      transition: margin .1s ease;
+      margin-left: $sidebar-width;
+    }
+
+    .c-header {
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      position: fixed;
+    }
+
+
+    &-folded {
+      .c-sidenav-folded {
+        position: fixed;
+        top: $header-height;
+      }
+
+      .c-wrapper {
+        margin-left: $sidebar-folded-default-width;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      .c-wrapper {
+        margin-left: $space-0;
+      }
+
+      .c-sidenav {
+        top: 0;
+        margin-left: -($sidebar-width);
+      }
     }
   }
 }

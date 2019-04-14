@@ -7,7 +7,6 @@
 
 // Core
 @import 'action-panel';
-@import 'action-panel-notifications';
 @import 'avatars';
 @import 'alert';
 @import 'badges';
@@ -30,6 +29,7 @@
 @import 'pagination';
 @import 'select';
 @import 'sidenav';
+@import 'sidenav-dark';
 @import 'switch';
 @import 'tabs';
 @import 'table';
@@ -40,24 +40,3 @@
 
 // Helpers
 @import 'helpers';
-
-.page-content {
-  display: flex;
-  flex-grow: 1;
-}
-
-// Content wrapper
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  // overflow: auto;
-}
-
-/* stylelint-disable */
-// Main content container
-.content {
-  padding: 1rem;
-  flex-grow: 1;
-}
-/* stylelint-enable */
