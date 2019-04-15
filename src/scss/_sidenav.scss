@@ -78,7 +78,7 @@
         font-weight: bold;
 
         .c-sidenav-menu-icon {
-          color: $sidebar-link-icon-color-active;
+          color: $sidebar-icon-color-active;
         }
       }
 
@@ -199,10 +199,10 @@
             .c-sidenav-submenu-group {
               top: 0;
               display: none;
-              z-index: 1030;
               position: absolute;
               background: white;
               border: $sidebar-border;
+              z-index: $sidebar-z-index;
               width: $sidebar-width - 10;
               right: -($sidebar-width - 10);
               box-shadow: 0 0.5rem 1rem rgba(#000000, .07);
@@ -310,8 +310,8 @@
     .c-header {
       top: 0;
       width: 100%;
-      z-index: 1000;
       position: fixed;
+      z-index: $header-z-index;
     }
 
 

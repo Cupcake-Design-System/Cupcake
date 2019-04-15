@@ -1,10 +1,10 @@
 // Header
 .c-header {
   width: 100%;
-  z-index: 10;
   display: flex;
   align-items: center;
   height: $header-height;
+  z-index: $header-z-index;
   background-color: $header-bg;
   justify-content: space-between;
   border-bottom: 1px solid $header-borders;

@@ -78,7 +78,7 @@ $action-panel-footer-hover-color     : $color-primary-6 !default;
 $action-panel-footer-font-size       : $font-body-md !default;
 $action-panel-footer-line-weight     : $font-body-xl !default;
 $action-panel-border                 : 1px solid $color-gray-2 !default;
-$action-panel-zindex                 : 999 !default;
+$action-panel-zindex                 : $z-action-panel !default;
 $action-panel-width-sm               : 220px !default;
 $action-panel-width                  : 320px !default;
 $action-panel-width-lg               : 400px !default;
@@ -293,6 +293,7 @@ $dropdown-bg                 : $color-white !default;
 $dropdown-bg-hover           : $color-gray-0 !default;
 $dropdown-border             : 1px solid $color-gray-2 !default;
 $dropdown-shadow             : $shadow-md !default;
+$dropdown-z-index            : $z-dropdown !default;
 $dropdown-color              : $color-gray-9 !default;
 $dropdown-color-hover        : $color-gray-9 !default;
 $dropdown-icon-color         : $color-gray-4;
@@ -383,7 +384,8 @@ $footer-background-color: $color-gray-1 !default;
 $footer-padding         : $space-0 ($space-md + $space-sm) !default;
 $footer-links-margin    : $space-0 $space-sm !default;
 $footer-height          : $global-size-xl !default;
-$footer-border-top      : 1px solid $color-gray-3;
+$footer-border-top      : 1px solid $color-gray-3 !default;
+$footer-z-index         : $z-footer !default;
 
 
 // --------------------------------------------
@@ -418,6 +420,7 @@ $breakpoints: (
 $header-bg                       : $color-white !default;
 $header-bg-hover                 : rgba(0, 0, 0, 0.03) !default;
 $header-borders                  : rgba(0, 0, 0, 0.06) !default;
+$header-z-index                  : $z-header !default;
 $header-bottom-border            : $color-gray-1 !default;
 $header-item-padding             : $space-0 $space-md !default;
 $header-height                   : $global-size-xl !default;
@@ -467,7 +470,7 @@ $media-min-height        : 48px !default;
 // --------------------------------------------
 // MODALS -------------------------------------
 // --------------------------------------------
-$modal-z-index                : 1050 !default;
+$modal-z-index                : $z-modal !default;
 $modal-sm-width               : 480px !default;
 $modal-width                  : 640px !default;
 $modal-lg-width               : 800px !default;
@@ -532,6 +535,46 @@ $notification-read-border : 1px solid $color-gray-1 !default;
 
 
 // --------------------------------------------
+// Sidebar ------------------------------------
+// --------------------------------------------
+$sidebar-width                      : 256px;
+$sidebar-folded-default-width       : 48px;
+$sidebar-font-size                  : 14px;
+$sidebar-bg-color                   : $color-white;
+$sidebar-color                      : $color-gray-8;
+$sidebar-z-index                    : $z-sidenav;
+$sidebar-border                     : 1px solid $color-gray-2;
+$sidebar-default-hover-bg           : $color-primary-0;
+$sidebar-default-active-color       : $color-primary-8;
+$sidebar-divider-default-color      : $color-gray-1;
+// Menu Links
+$sidebar-link-padding               : $space-xs $space-md !default;
+$sidebar-link-margin                : $space-xs !default;
+$sidebar-link-line-height           : $space-xl !default;
+$sidebar-link-color                 : $sidebar-color !default;
+$sidebar-link-hover-color           : $sidebar-color !default;
+$sidebar-link-hover-bg              : $sidebar-default-hover-bg !default;
+$sidebar-link-active-bg             : $sidebar-default-hover-bg !default;
+$sidebar-link-active-color          : $sidebar-color !default;
+$sidebar-link-open-bg               : $sidebar-default-hover-bg !default;
+$sidebar-link-open-color            : $sidebar-color !default;
+// Icon
+$sidebar-icon-margin                : $space-sm $space-md $space-sm 0 !default;
+$sidebar-icon-color                 : $color-gray-5 !default;
+$sidebar-icon-color-active          : $sidebar-default-active-color !default;
+$sidebar-icon-font-size             : 16px !default;
+// Category
+$sidebar-category-padding           : $space-sm $space-md !default;
+$sidebar-category-color             : $color-gray-6 !default;
+// SubMenu
+$sidebar-submenu-bg                 : $color-white !default;
+$sidebar-submenu-link-active-color  : $sidebar-default-active-color !default;
+$sidebar-submenu-link-padding-left  : 48px !default;
+$sidebar-submenu-level3-padding-left: 64px !default;
+$sidebar-submenu-level4-padding-left: 80px !default;
+
+
+// --------------------------------------------
 // SWITCHES -----------------------------------
 // --------------------------------------------
 $switch-height             : $global-size-xs !default;
@@ -564,6 +607,7 @@ $tooltip-font-size       : $font-body-md !default;
 $tooltip-line-height     : $line-height-body-md !default;
 $tooltip-bd-radius       : $global-default-radius !default;
 $tooltip-shadow          : $shadow-lg !default;
+$tooltip-z-index         : $z-tooltip !default;
 $tooltip-default-bg      : $color-gray-9 !default;
 $tooltip-default-color   : $color-white !default;
 $tooltip-invert-bg       : $color-white !default;

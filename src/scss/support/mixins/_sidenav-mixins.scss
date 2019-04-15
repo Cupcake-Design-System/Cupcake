@@ -1,50 +1,6 @@
-// --------------------------------------------
-// Sidebar ------------------------------------
-// --------------------------------------------
-$sidebar-width                  : 256px;
-$sidebar-folded-default-width   : 48px;
-$sidebar-font-size              : 14px;
-$sidebar-bg-color               : $color-white;
-$sidebar-color                  : $color-gray-8;
-$sidebar-border                 : 1px solid $color-gray-2;
-$sidebar-default-hover-bg       : $color-primary-0;
-$sidebar-default-active-color   : $color-primary-8;
-$sidebar-divider-default-color  : $color-gray-1;
-
-// Menu Links
-$sidebar-link-padding               : $space-xs $space-md !default;
-$sidebar-link-margin                : $space-xs !default;
-$sidebar-link-line-height           : $space-xl !default;
-$sidebar-link-color                 : $sidebar-color !default;
-$sidebar-link-hover-color           : $sidebar-color !default;
-$sidebar-link-hover-bg              : $sidebar-default-hover-bg !default;
-$sidebar-link-active-bg             : $sidebar-default-hover-bg !default;
-$sidebar-link-active-color          : $sidebar-color !default;
-$sidebar-link-open-bg               : $sidebar-default-hover-bg !default;
-$sidebar-link-open-color            : $sidebar-color !default;
-
-// Icon
-$sidebar-link-icon-margin           : $space-sm $space-md $space-sm 0 !default;
-$sidebar-link-icon-color            : $color-gray-5 !default;
-$sidebar-link-icon-color-active     : $sidebar-default-active-color !default;
-$sidebar-link-icon-font-size        : 16px !default;
-
-// Category
-$sidebar-category-padding           : $space-sm $space-md !default;
-$sidebar-category-color             : $color-gray-6 !default;
-
-// SubMenu
-$sidebar-submenu-bg                 : $color-white !default;
-$sidebar-submenu-link-active-color  : $sidebar-default-active-color !default;
-$sidebar-submenu-link-padding-left  : 48px !default;
-
-$sidebar-submenu-level3-padding-left: 64px !default;
-$sidebar-submenu-level4-padding-left: 80px !default;
-
 @mixin base-sidenav {
   top: 0;
   bottom: 0;
-  z-index: 1040;
   flex: 0 0 auto;
   transition: none;
   font-weight: 500;
@@ -52,6 +8,7 @@ $sidebar-submenu-level4-padding-left: 80px !default;
   width: $sidebar-width;
   color: $sidebar-color;
   box-sizing: content-box;
+  z-index: $sidebar-z-index;
   background-clip: content-box;
   border-right: $sidebar-border;
   font-size: $sidebar-font-size;
@@ -81,7 +38,7 @@ $sidebar-submenu-level4-padding-left: 80px !default;
   height: $footer-height;
   justify-content: flex-end;
   background: $color-gray-0;
-  color: $sidebar-link-icon-color;
+  color: $sidebar-icon-color;
   border-top: 1px solid $color-gray-2;
 
   > .c-sidenav-menu-icon {
@@ -119,9 +76,9 @@ $sidebar-submenu-level4-padding-left: 80px !default;
   transition: background-color ease-in-out 0.15s, color ease-in-out 0.15s;
 
   .c-sidenav-menu-icon {
-    color: $sidebar-link-icon-color;
-    margin: $sidebar-link-icon-margin;
-    font-size: $sidebar-link-icon-font-size;
+    color: $sidebar-icon-color;
+    margin: $sidebar-icon-margin;
+    font-size: $sidebar-icon-font-size;
   }
 
   &:hover {
@@ -129,7 +86,7 @@ $sidebar-submenu-level4-padding-left: 80px !default;
     background-color: $sidebar-link-hover-bg;
 
     .c-sidenav-menu-icon {
-      color: $sidebar-link-icon-color-active;
+      color: $sidebar-icon-color-active;
     }
   }
 
@@ -139,7 +96,7 @@ $sidebar-submenu-level4-padding-left: 80px !default;
     background-color: $sidebar-link-active-bg;
 
     .c-sidenav-menu-icon {
-      color: $sidebar-link-icon-color-active;
+      color: $sidebar-icon-color-active;
     }
   }
 }

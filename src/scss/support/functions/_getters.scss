@@ -119,14 +119,14 @@
 
 // Returns the z-index of the specified element.
 // @example
-//  z-index:  z-index();
-@function z-index($element, $context: $global-elements) {
-  $index: map-get($context, $element);
+//  z-index:  z();
+@function z($value: null) {
+  $fetched-value: map-get($z-index, $value);
 
-  @if $index {
-    @return $index;
+  @if type-of($fetched-value) == number {
+    @return $fetched-value;
   } @else {
-    @error 'z-index `#{$element}` in `#{$context}` not found.';
+    @error 'Z-Index `#{$value}` not found.';
   }
 }
 

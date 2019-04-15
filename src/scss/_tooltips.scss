@@ -8,7 +8,6 @@
     left: 50%;
     opacity: 0;
     bottom: 100%;
-    z-index: 100000;
     overflow: hidden;
     position: absolute;
     text-align: center;
@@ -18,6 +17,7 @@
     box-sizing: border-box;
     text-overflow: ellipsis;
     padding: $tooltip-padding;
+    z-index: $tooltip-z-index;
     backface-visibility: hidden;
     max-width: $tooltip-max-width;
     font-size: $tooltip-font-size;
@@ -37,9 +37,9 @@
     left: 50%;
     top: -2px;
     opacity: 0;
-    z-index: 110000;
     position: absolute;
     backface-visibility: hidden;
+    z-index: $tooltip-z-index + 100;
     transform: translate(-50%, calc(-50% - 6px));
     transition: opacity .1s $tooltip-transition-style 0s, transform .6s $tooltip-transition-style 0s;
   }
