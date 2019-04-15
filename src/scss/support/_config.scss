@@ -12,7 +12,11 @@ $enable-flex-classes                 : true !default;
 $enable-hidden-classes               : true !default;
 $enable-cursor-classes               : true !default;
 $enable-center-classes               : true !default;
+$enable-sideNav                      : true !default;
+$enable-experimental-pageHeader      : true !default;
 $enable-experimental-nav             : true !default;
+$enable-experimental-userNav         : true !default;
+$experimental-userNav-BgImage        : url('https://cupcake-layouts.netlify.com/dist/images/bg9.png') !default;
 $enable-experimental-dropdownGrid    : true !default;
 $white-label                         : false !default;
 

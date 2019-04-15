@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tokens</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="../demo.css">
+
+  <script>
+    var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
+    document.write('<link media="all" rel="stylesheet" href="../' + flavor + '.css">');
+  </script>
+</head>
+
+<body class="docs-container">
+  <div class="docs-body">
+    <main class="docs-content">
+        <div class="docs-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+      
+<h1 class="c-header-lg">Design Tokens</h1>
+
+<div class="c-text-xl">
+  Use in place of hard-coded values (such as hex values for color or pixel values for spacing) to maintain a scalable and consistent visual system.
+</div>
+
+<br><br>
+
+
+<div class="docs-section" id="colors">
+  <div id="colors">
+    <div class="docs-section-header">
+      <div class="c-header-lg c-m-bottom-xs">Colors <a class="c-text-primary c-text-md c-p-left-sm" href="pages/colors.html" target="_blank">View Test Page</a></div>
+      <div class="c-text-xl c-text-gray-7">
+        <p>These are the colors used throughout Cupcake’s elements and components that help give visual context, emphasize meaning and to aesthetically style the user interface.</p>
+
+      </div>
+    </div>
+    <div class="docs-section-preview"><div class="color-block">
+	<div class="color-block-title">primary</div>
+	<div class="colors">
+		<span class="c-bg-primary-8">Primary</span>
+		<span class="c-bg-primary-7">primary Light</span>
+	</div>
+	<div class="colors">
+		<span class="info">primary Button + Link + Info State</span>
+		<span class="info">primary Button Hover + Link Hover + Info State Hover</span>
+	</div>
+	<div class="colors">
+		<span class="c-bg-primary-9">primary Dark</span>
+		<span class="c-bg-primary-0 c-text-primary-9">primary Lightest</span>
+	</div>
+	<div class="colors">
+		<span class="info">primary Button Active + primary Button Line + Link Active + primary State Active + primary Text</span>
+		<span class="info">primary Background + primary State Background + Pill Background</span>
+	</div>
+</div>
+<div class="color-block">
+	<div class="color-block-title">success</div>
+	<div class="colors">
+		<span class="c-bg-success-8">Primary</span>
+		<span class="c-bg-success-7">success Light</span>
+	</div>
+	<div class="colors">
+		<span class="info">success Button + Link + Info State</span>
+		<span class="info">success Button Hover + Link Hover + Info State Hover</span>
+	</div>
+	<div class="colors">
+		<span class="c-bg-success-9">success Dark</span>
+		<span class="c-bg-success-0 c-text-success-9">success Lightest</span>
+	</div>
+	<div class="colors">
+		<span class="info">success Button Active + success Button Line + Link Active + success State Active + success Text</span>
+		<span class="info">success Background + success State Background + Pill Background</span>
+	</div>
+</div>
+<div class="color-block">
+	<div class="color-block-title">warning</div>
+	<div class="colors">
+		<span class="c-bg-warning-8">Primary</span>
+		<span class="c-bg-warning-7">warning Light</span>
+	</div>
+	<div class="colors">
+		<span class="info">warning Button + Link + Info State</span>
+		<span class="info">warning Button Hover + Link Hover + Info State Hover</span>
+	</div>
+	<div class="colors">
+		<span class="c-bg-warning-9">warning Dark</span>
+		<span class="c-bg-warning-0 c-text-warning-9">warning Lightest</span>
+	</div>
+	<div class="colors">
+		<span class="info">warning Button Active + warning Button Line + Link Active + warning State Active + warning Text</span>
+		<span class="info">warning Background + warning State Background + Pill Background</span>
+	</div>
+</div>
+<div class="color-block">
+	<div class="color-block-title">danger</div>
+	<div class="colors">
+		<span class="c-bg-danger-8">Primary</span>
+		<span class="c-bg-danger-7">danger Light</span>
+	</div>
+	<div class="colors">
+		<span class="info">danger Button + Link + Info State</span>
+		<span class="info">danger Button Hover + Link Hover + Info State Hover</span>
+	</div>
+	<div class="colors">
+		<span class="c-bg-danger-9">danger Dark</span>
+		<span class="c-bg-danger-0 c-text-danger-9">danger Lightest</span>
+	</div>
+	<div class="colors">
+		<span class="info">danger Button Active + danger Button Line + Link Active + danger State Active + danger Text</span>
+		<span class="info">danger Background + danger State Background + Pill Background</span>
+	</div>
+</div>
+
+
+
+
+<div class="color-block">
+	<div class="color-block-title">Gray</div>
+	<div class="colors">
+		<span class="c-bg-gray-9">Gray 9</span>
+		<span class="c-bg-gray-4 c-text-gray-9">Gray 4</span>
+	</div>
+	<div class="colors">
+		<span class="info">Header Text + Icon</span>
+		<span class="info">Button Disabled + Icon Disabled Secondary Button Line + Understated Icon Disabled + Card Line Hover + Dark Divider Line</span>
+	</div>
+
+	<div class="colors">
+		<span class="c-bg-gray-8">Gray 8</span>
+		<span class="c-bg-gray-3 c-text-gray-9">Gray 3</span>
+	</div>
+	<div class="colors">
+		<span class="info">Body Text</span>
+		<span class="info">Shadows + Decorative Icon</span>
+	</div>
+
+	<div class="colors">
+		<span class="c-bg-gray-7">Gray 7</span>
+		<span class="c-bg-gray-2 c-text-gray-9">Gray 2</span>
+	</div>
+	<div class="colors">
+		<span class="info">Helper Text</span>
+		<span class="info">Secondary Background Active + Card Line + Pill Background</span>
+	</div>
+
+	<div class="colors">
+		<span class="c-bg-gray-6">Gray 6</span>
+		<span class="c-bg-gray-1 c-text-gray-9">Gray 2</span>
+	</div>
+	<div class="colors">
+		<span class="info">Header Text Disabled + Body Text Disabled + Icon Disabled + Link Disabled</span>
+		<span class="info">Secondary Button + Page Background + Light Divider Line + Pill Background</span>
+	</div>
+
+	<div class="colors">
+		<span class="c-bg-gray-5">Gray 5</span>
+		<span class="c-bg-gray-0 c-text-gray-9">Gray 0</span>
+	</div>
+	<div class="colors">
+		<span class="info">Understated Icon</span>
+		<span class="info">Secondary Background Hover + Table Row Hover + Dropdown Item Hover + List Item Hover</span>
+	</div>
+</div></div>
+  </div>
+</div>
+
+
+<div class="docs-section" id="shadows">
+  <div id="shadows">
+    <div class="docs-section-header">
+      <div class="c-header-lg c-m-bottom-xs">Shadows <a class="c-text-primary c-text-md c-p-left-sm" href="pages/shadows.html" target="_blank">View Test Page</a></div>
+      <div class="c-text-xl c-text-gray-7">
+        <p>Use depth to create hierarchy and layering</p>
+
+      </div>
+    </div>
+    <div class="docs-section-preview"><div class="c-row c-bg-gray-1 c-p-lg">
+	<div class="c-col">
+		<div class="c-bg-white c-text-center c-p-lg c-depth-none">none</div>
+	</div>
+	<div class="c-col">
+		<div class="c-bg-white c-text-center c-p-lg c-depth-xs">xs</div>
+	</div>
+	<div class="c-col">
+		<div class="c-bg-white c-text-center c-p-lg c-depth-sm">sm</div>
+	</div>
+	<div class="c-col">
+		<div class="c-bg-white c-text-center c-p-lg c-depth-md">md</div>
+	</div>
+	<div class="c-col">
+		<div class="c-bg-white c-text-center c-p-lg c-depth-lg">lg</div>
+	</div>
+</div></div>
+  </div>
+</div>
+
+
+<div class="docs-section" id="spacing">
+  <div id="spacing">
+    <div class="docs-section-header">
+      <div class="c-header-lg c-m-bottom-xs">Spacing <a class="c-text-primary c-text-md c-p-left-sm" href="pages/spacing.html" target="_blank">View Test Page</a></div>
+      <div class="c-text-xl c-text-gray-7">
+        <p>Spacing is used to consistently apply paddings and margins across our components. .c-p-{direction}-{value}, .c-m-{direction}-{value}</p>
+
+      </div>
+    </div>
+    <div class="docs-section-preview"><div class="space-block-title">xxl</div>
+<div class="space">
+	<div class="xxl"></div>
+</div>
+<div class="space-block-title">xl</div>
+<div class="space">
+	<div class="xl"></div>
+</div>
+<div class="space-block-title">lg</div>
+<div class="space">
+	<div class="lg"></div>
+</div>
+<div class="space-block-title">md</div>
+<div class="space">
+	<div class="md"></div>
+</div>
+<div class="space-block-title">sm</div>
+<div class="space">
+	<div class="sm"></div>
+</div>
+<div class="space-block-title">xs</div>
+<div class="space">
+	<div class="xs"></div>
+</div>
+<div class="space-block-title">xxs</div>
+<div class="space">
+	<div class="xxs"></div>
+</div>
+
+
+<!-- 
+  <div class="space-block-title">primary-0</div>
+<div class="space">
+  <div class="#e8f7ff" style="width:#e8f7ff"></div>
+</div>
+
+  <div class="space-block-title">primary-1</div>
+<div class="space">
+  <div class="#ccedff" style="width:#ccedff"></div>
+</div>
+
+  <div class="space-block-title">primary-2</div>
+<div class="space">
+  <div class="#a3daff" style="width:#a3daff"></div>
+</div>
+
+  <div class="space-block-title">primary-3</div>
+<div class="space">
+  <div class="#72c3fc" style="width:#72c3fc"></div>
+</div>
+
+  <div class="space-block-title">primary-4</div>
+<div class="space">
+  <div class="#4dadf7" style="width:#4dadf7"></div>
+</div>
+
+  <div class="space-block-title">primary-5</div>
+<div class="space">
+  <div class="#329af0" style="width:#329af0"></div>
+</div>
+
+  <div class="space-block-title">primary-6</div>
+<div class="space">
+  <div class="#228ae6" style="width:#228ae6"></div>
+</div>
+ --></div>
+  </div>
+</div>
+
+
+<div class="docs-section" id="typography">
+  <div id="typography">
+    <div class="docs-section-header">
+      <div class="c-header-lg c-m-bottom-xs">Typography <a class="c-text-primary c-text-md c-p-left-sm" href="pages/typography.html" target="_blank">View Test Page</a></div>
+      <div class="c-text-xl c-text-gray-7">
+        <p>Documentation and examples for Cupcake typography, including global settings, headings, body text and more.</p>
+
+      </div>
+    </div>
+    <div class="docs-section-preview"><div class="c-row">
+	<div class="c-col-md-2">
+		<code>.c-header-xxl</code>
+	</div>
+
+	<div class="c-col-md-10">
+		<span class="c-header-xxl">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="c-col-md-2">
+		<code>.c-text-xxl</code>
+	</div>
+	<div class="c-col-md-10">
+		<span class="c-text-xxl">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+</div>
+<br>
+<hr class="c-hr">
+<br>
+<br>
+<div class="c-row">
+	<div class="c-col-md-2">
+		<code>.c-header-xl</code>
+	</div>
+
+	<div class="c-col-md-10">
+		<span class="c-header-xl">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="c-col-md-2">
+		<code>.c-text-xl</code>
+	</div>
+	<div class="c-col-md-10">
+		<span class="c-text-xl">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+</div>
+<br>
+<hr class="c-hr">
+<br>
+<br>
+<div class="c-row">
+	<div class="c-col-md-2">
+		<code>.c-header-lg</code>
+	</div>
+
+	<div class="c-col-md-10">
+		<span class="c-header-lg">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="c-col-md-2">
+		<code>.c-text-lg</code>
+	</div>
+	<div class="c-col-md-10">
+		<span class="c-text-lg">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+</div>
+<br>
+<hr class="c-hr">
+<br>
+<br>
+<div class="c-row">
+	<div class="c-col-md-2">
+		<code>.c-header-md</code>
+	</div>
+
+	<div class="c-col-md-10">
+		<span class="c-header-md">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="c-col-md-2">
+		<code>.c-text-md</code>
+	</div>
+	<div class="c-col-md-10">
+		<span class="c-text-md">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+</div>
+<br>
+<hr class="c-hr">
+<br>
+<br>
+<div class="c-row">
+	<div class="c-col-md-2">
+		<code>.c-header-sm</code>
+	</div>
+
+	<div class="c-col-md-10">
+		<span class="c-header-sm">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="c-col-md-2">
+		<code>.c-text-sm</code>
+	</div>
+	<div class="c-col-md-10">
+		<span class="c-text-sm">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+</div>
+<br>
+<hr class="c-hr">
+<br>
+<br>
+<div class="c-row">
+	<div class="c-col-md-2">
+		<code>.c-header-xs</code>
+	</div>
+
+	<div class="c-col-md-10">
+		<span class="c-header-xs">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="c-col-md-2">
+		<code>.c-text-xs</code>
+	</div>
+	<div class="c-col-md-10">
+		<span class="c-text-xs">The quick brown fox jumps over the lazy dog.</span>
+	</div>
+</div>
+<br>
+<hr class="c-hr">
+<br>
+<br>
+
+
+
+<div class="c-row">
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-heavy">.c-text-heavy</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-bold">.c-text-bold</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-semibold">.c-text-semibold</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-light">.c-text-light</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-italic">.c-text-italic</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-uppercase">.c-text-uppercase</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-lowercase">.c-text-lowercase</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-capitalize">.c-text-capitalize</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-monospace">.c-text-monospace</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-underline">.c-text-underline</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-strikethrough">.c-text-strikethrough</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-primary">.c-text-primary</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-success">.c-text-success</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-warning">.c-text-warning</span>
+	</div>
+	<div class="c-col-md-3">
+		<span class="c-text-lg c-text-danger">.c-text-danger</span>
+	</div>
+</div>
+
+<br><br></div>
+  </div>
+</div>
+
+
+    </main>
+    <nav class="docs-nav">
+      <div class="docs-nav-header">
+        <a href="index.html">
+          <div class="c-header-xl c-text-primary">Cupcake</div>
+        </a>
+          <div class="c-header-xl">Design System</div>
+    
+        <div class="docs-version">Version 2.0</div>
+      </div>
+    
+      <ul class="docs-nav-items">
+    
+        <ul class="docs-nav-items">
+          <li class="docs-nav-title"><a href="design-tokens.html">Design Tokens</a></li>
+          <li class="docs-nav-item"><a href="design-tokens.html#colors">Colors</a></li>
+          <li class="docs-nav-item"><a href="design-tokens.html#shadows">Shadows</a></li>
+          <li class="docs-nav-item"><a href="design-tokens.html#spacing">Spacing</a></li>
+          <li class="docs-nav-item"><a href="design-tokens.html#typography">Typography</a></li>
+        </ul>
+    
+        <ul class="docs-nav-items">
+          <li class="docs-nav-title"><a href="elements.html">Elements</a></li>
+          <li class="docs-nav-item"><a href="elements.html#action-panel">Action Panel</a></li>
+          <li class="docs-nav-item"><a href="elements.html#alerts">Alerts</a></li>
+          <li class="docs-nav-item"><a href="elements.html#avatars">Avatars</a></li>
+          <li class="docs-nav-item"><a href="elements.html#badges">Badges</a></li>
+          <li class="docs-nav-item"><a href="elements.html#breadcrumbs">Breadcrumbs</a></li>
+          <li class="docs-nav-item"><a href="elements.html#buttons">Buttons</a></li>
+          <li class="docs-nav-item"><a href="elements.html#cards">Cards</a></li>
+          <li class="docs-nav-item"><a href="elements.html#checkboxes">Checkboxes</a></li>
+          <li class="docs-nav-item"><a href="elements.html#dropdowns">Dropdowns</a></li>
+          <li class="docs-nav-item"><a href="elements.html#footer">Footer</a></li>
+          <li class="docs-nav-item"><a href="elements.html#forms">Forms</a></li>
+          <li class="docs-nav-item"><a href="elements.html#grid">Grid</a></li>
+          <li class="docs-nav-item"><a href="elements.html#header">Header</a></li>
+          <li class="docs-nav-item"><a href="elements.html#loader">Loader</a></li>
+          <li class="docs-nav-item"><a href="elements.html#media-objects">Media Objects</a></li>
+          <li class="docs-nav-item"><a href="elements.html#modal">Modal</a></li>
+          <li class="docs-nav-item"><a href="elements.html#nav">Nav</a></li>
+          <li class="docs-nav-item"><a href="elements.html#pagination">Pagination</a></li>
+          <li class="docs-nav-item"><a href="elements.html#side-nav">Side Nav</a></li>
+          <li class="docs-nav-item"><a href="elements.html#switch">Switch</a></li>
+          <li class="docs-nav-item"><a href="elements.html#table">Table</a></li>
+          <li class="docs-nav-item"><a href="elements.html#tabs">Tabs</a></li>
+          <li class="docs-nav-item"><a href="elements.html#tooltips">Tooltips</a></li>
+        </ul>
+    
+        <ul class="docs-nav-items">
+            <li class="docs-nav-title"><a href="experimental.html">Experimental</a></li>
+            <li class="docs-nav-item"><a href="experimental.html#animated-search">Animated Search</a></li>
+            <li class="docs-nav-item"><a href="experimental.html#dropdown-grid">Dropdown Grid</a></li>
+            <li class="docs-nav-item"><a href="experimental.html#in-page-header">In Page Header</a></li>
+            <li class="docs-nav-item"><a href="experimental.html#responsive-nav">Responsive Nav</a></li>
+          </ul>
+      </ul>
+    
+    </nav>
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../script.min.js"></script>
+<script>
+	// Some simple js heavily modified from fabricators core for the sidebar
+	'use strict';
+	var cupcake = window.cupcake = {};
+
+	cupcake.options = {
+		menu: false,
+		mq: '(min-width: 60em)'
+	};
+
+	// open menu by default if large screen
+	cupcake.options.menu = window.matchMedia(cupcake.options.mq).matches;
+
+	cupcake.dom = {
+		root: document.querySelector('html'),
+		primaryMenu: document.querySelector('.docs-nav'),
+		menuItems: document.querySelectorAll('.docs-nav-items li a'),
+		menuToggle: document.querySelector('.docs-menu-toggle')
+	};
+
+
+	/**
+	 * Add `current` class to active menu item
+	 */
+	cupcake.setActiveItem = function () {
+
+		/**
+		 * Match the window location with the menu item, set menu item as active
+		 */
+		var setActive = function setActive() {
+
+			// get current file and hash without first slash
+			var loc = window.location.pathname + window.location.hash;
+			var current = loc.replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
+				return (file || '') + (hash || '').split('.')[0];
+			}) || 'index.html';
+
+			// find the current section in the items array
+			for (var i = cupcake.dom.menuItems.length - 1; i >= 0; i--) {
+
+				var item = cupcake.dom.menuItems[i];
+
+				// get item href without first slash
+				var href = item.getAttribute('href').replace(/^\//g, '');
+
+				if (href === current) {
+					item.classList.add('current');
+				} else {
+					item.classList.remove('current');
+				}
+			}
+		};
+
+		window.addEventListener('hashchange', setActive);
+
+		setActive();
+
+		return cupcake;
+	};
+
+
+	cupcake.menuToggle = function () {
+
+		// shortcut menu DOM
+		var toggle = cupcake.dom.menuToggle;
+
+		// toggle classes on certain elements
+		var toggleClasses = function toggleClasses() {
+			cupcake.dom.root.classList.toggle('docs-nav-open');
+		};
+
+		// toggle classes on click
+		toggle.addEventListener('click', function () {
+			toggleClasses();
+		});
+
+		// close menu when clicking on item (for collapsed menu view)
+		var closeMenu = function closeMenu() {
+			if (!window.matchMedia(cupcake.options.mq).matches) {
+				toggleClasses();
+			}
+		};
+
+		for (var i = 0; i < cupcake.dom.menuItems.length; i++) {
+			cupcake.dom.menuItems[i].addEventListener('click', closeMenu);
+		}
+
+		return cupcake;
+	};
+
+	/**
+	 * Initialization
+	 */
+	cupcake.menuToggle().setActiveItem();
+
+</script>
+
+
+</html>

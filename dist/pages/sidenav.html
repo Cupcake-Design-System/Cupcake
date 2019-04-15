@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="../demo.css">
+
+  <script>
+    var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
+    document.write('<link media="all" rel="stylesheet" href="../' + flavor + '.css">');
+  </script>
+</head>
+
+<body class="docs-container">
+    <div class="docs-body">
+      <main class="docs-content docs-content-fullwidth">
+          
+<div id="sidenavMain" class="c-sidenav">
+
+  <div class="c-sidenav-user">
+    <div class="c-sidenav-user-body">
+      <div class="c-sidenav-user-info">
+        <img src="https://unsplash.it/200?image=433" class="c-sidenav-user-info-image" width="80" height="80" alt="">
+        <h6 class="c-sidenav-user-info-name">Victoria Baker</h6>
+        <span class="c-sidenav-user-info-location">Santa Ana, CA</span>
+      </div>
+
+      <div class="c-sidenav-user-footer">
+        <a href="#user-nav" class="c-sidenav-user-dropdown"><span>Navigation</span></a>
+      </div>
+    </div>
+
+    <ul class="c-sidenav-menu" id="user-nav">
+      <li class="c-sidenav-menu-item">
+        <a href="#" class="c-sidenav-menu-link">
+          <i class="fas fa-user-astronaut"></i>
+          <span>My profile</span>
+        </a>
+      </li>
+      <li class="c-sidenav-menu-item">
+        <a href="#" class="c-sidenav-menu-link">
+          <i class="fas fa-comments"></i>
+          <span>Messages</span>
+        </a>
+      </li>
+      <li class="c-sidenav-menu-item">
+        <a href="#" class="c-sidenav-menu-link">
+          <i class="fas fa-cog"></i>
+          <span>Account settings</span>
+        </a>
+      </li>
+      <li class="c-sidenav-menu-item">
+        <a href="#" class="c-sidenav-menu-link">
+          <i class="fas fa-power-off"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+      <li class="c-sidenav-divider"></li>
+    </ul>
+  </div>
+
+
+  <!-- Sidebar content -->
+  <div class="c-sidenav-body">
+
+
+    <ul class="c-sidenav-menu" data-nav-type="accordion">
+
+      <li class="c-sidenav-menu-category">
+        <div>Main</div>
+        <i class="fas fa-ellipsis-h" title="Main"></i>
+      </li>
+
+      <li class="c-sidenav-menu-item ">
+        <a href="index.html" class="c-sidenav-menu-link c-sidenav-menu-link-active">
+          <i class="fas fa-home"></i> <span>Default Options</span>
+        </a>
+
+
+      </li>
+      <li class="c-sidenav-menu-item ">
+        <a href="header-only.html" class="c-sidenav-menu-link ">
+          <i class="far fa-browser"></i> <span>Header Only Nav</span>
+        </a>
+
+
+      </li>
+      <li class="c-sidenav-menu-item ">
+        <a href="page-headers.html" class="c-sidenav-menu-link ">
+          <i class="fas fa-box-up"></i> <span>Page Headers</span>
+        </a>
+
+
+      </li>
+      <li class="c-sidenav-menu-item c-sidenav-menu-submenu ">
+        <a href="" class="c-sidenav-menu-link ">
+          <i class="fas fa-layer-group"></i> <span>Menu Levels</span>
+        </a>
+
+        <ul class="c-sidenav-menu-submenu-group" data-submenu-title="Menu Levels">
+          <li class="c-sidenav-menu-item c-sidenav-menu-submenu">
+            <a href="" class="c-sidenav-menu-link ">Level 1</a>
+
+            <ul class="c-sidenav-menu-submenu-group">
+              <li class="c-sidenav-menu-item c-sidenav-menu-submenu">
+                <a href="" class="c-sidenav-menu-link ">Level 2</a>
+
+                <ul class="c-sidenav-menu-submenu-group">
+                  <li class="c-sidenav-menu-item">
+                    <a href="" class="c-sidenav-menu-link ">Level 3</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+          </li>
+        </ul>
+
+      </li>
+
+    <!-- <li class="c-sidenav-divider">
+
+    <li class="c-sidenav-menu-category">
+      <div>Menu Category</div>
+      <i class="fas fa-ellipsis-h" title="Menu Category"></i>
+    </li> -->
+
+    </ul>
+  </div>
+
+  <div id="sidenavMainFoldToggle" class="c-sidenav-collapse">
+    <i class="fa fa-angle-left"></i>
+  </div>
+</div>
+
+      </main>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <script>
+  $(document).ready(function () {
+  
+    $(".c-dropdown").click(function () {
+      $(this).find(".c-dropdown-list, .c-dropdown-grid").slideToggle(100);
+    });
+  
+    $(document).on("click", function (event) {
+      var $dropdownTrigger = $(".c-dropdown");
+  
+    if ($dropdownTrigger !== event.target && !$dropdownTrigger.has(event.target).length) {
+      $(".c-dropdown-list, .c-dropdown-grid").slideUp("fast");
+      }
+    });
+  
+    // Check for click events on the navbar toggle
+    $(".c-nav-toggle").click(function() {
+  
+    // Toggle the active class on both the nav and the menu
+      $(".c-nav-toggle").toggleClass("c-nav-toggle-active");
+     $(".c-header").toggleClass("c-nav-active");
+    });
+  
+  
+    // Laoder Stuff
+    $("#fullscreenLoaderBtn").click(function(){
+      $("#fullscreenLoader").toggleClass("c-loader-visible");
+    });
+  
+    $("#fullscreenLoader").click(function(){
+      $("#fullscreenLoader").removeClass("c-loader-visible");
+    });
+  
+    $("#fullscreenLoaderBtn2").click(function(){
+      $("#fullscreenLoader2").toggleClass("c-loader-visible");
+    });
+  
+    $("#fullscreenLoader2").click(function(){
+      $("#fullscreenLoader2").removeClass("c-loader-visible");
+    });
+  
+  
+    // Modal Stuff
+    $("#defaultBtn").click(function(){
+      $("#newDark").toggleClass("c-modal-visible");
+    });
+  
+    $("#close, #cancel").click(function(){
+      $("#newDark").removeClass("c-modal-visible");
+    });
+  
+    $("#largeBtn").click(function(){
+      $("#largeModal").toggleClass("c-modal-visible");
+    });
+  
+    $("#close, #cancel").click(function(){
+      $("#largeModal").removeClass("c-modal-visible");
+    });
+  
+    $("#smallBtn").click(function(){
+      $("#smallModal").toggleClass("c-modal-visible");
+    });
+  
+    $("#close, #cancel").click(function(){
+      $("#smallModal").removeClass("c-modal-visible");
+    });
+  
+    $("#centerBtn").click(function(){
+      $("#centerModal").toggleClass("c-modal-visible");
+    });
+  
+    $("#close, #cancel").click(function(){
+      $("#centerModal").removeClass("c-modal-visible");
+    });
+  
+    $("#fullscreenBtn").click(function(){
+      $("#fullscreenModal").toggleClass("c-modal-visible");
+    });
+  
+    $("#close, #cancel").click(function(){
+      $("#fullscreenModal").removeClass("c-modal-visible");
+    });
+  
+  
+    // Quickview Stuff
+    $(".c-action-panel-close").on("click", function () {
+      $(this).closest(".c-action-panel").toggleClass("c-action-panel-visible")
+    });
+  
+    $("#qv-basic-trigger").on("click", function () {
+      $("#qv-basic").toggleClass("c-action-panel-visible");
+      $("#backdrop-main").toggle()
+    });
+  
+    $("#backdrop-main").on("click", function () {
+      $("#backdrop-main").toggle();
+      $("#qv-basic").toggleClass("c-action-panel-visible")
+    });
+  
+    $("#qv-sm-trigger").on("click", function () {
+      $("#qv-sm").toggleClass("c-action-panel-visible")
+    });
+  
+    $("#qv-lg-trigger").on("click", function () {
+      $("#qv-lg").toggleClass("c-action-panel-visible")
+    });
+  
+    $("#qv-xl-trigger").on("click", function () {
+      $("#qv-xl").toggleClass("c-action-panel-visible")
+    });
+  
+    $("#qv-xxl-trigger").on("click", function () {
+      $("#qv-xxl").toggleClass("c-action-panel-visible")
+    });
+  
+  
+    $("#qv-backdrop-dark-trigger").on("click", function () {
+      $("#qv-backdrop-dark").toggleClass("c-action-panel-visible");
+      $("#backdrop-dark").toggle()
+    });
+  
+    $("#backdrop-dark").on("click", function () {
+      $("#backdrop-dark").toggle();
+      $("#qv-backdrop-dark").toggleClass("c-action-panel-visible")
+    });
+  });
+  
+  </script>
+
+</html>

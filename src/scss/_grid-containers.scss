@@ -8,3 +8,22 @@
     @include grid-container-max-widths();
   }
 }
+
+
+// .page-content {
+//   display: flex;
+//   flex-grow: 1;
+// }
+
+.c-wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: calc(100vh - 100px); //this is footer height plus header height
+}
+
+.c-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-gray-1;
+}

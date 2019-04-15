@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="../demo.css">
+
+  <script>
+    var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
+    document.write('<link media="all" rel="stylesheet" href="../' + flavor + '.css">');
+  </script>
+</head>
+
+<body class="docs-container ">
+    <div class="docs-body">
+      <main class="docs-content docs-content-fullwidth">
+          
+
+<strong>Default</strong>
+<br>
+<br>
+<ul class="c-breadcrumb">
+  <li class="c-breadcrumb-item"><a class="c-a" href="#">Home</a></li>
+  <li class="c-breadcrumb-item"><a class="c-a" href="#">Library</a></li>
+  <li class="c-breadcrumb-item c-breadcrumb-item-active">Data</li>
+</ul>
+
+<br>
+<hr class="c-hr">
+<br>
+<br>
+
+<strong>With Overflow</strong>
+<br>
+<br>
+<ul class="c-breadcrumb">
+  <div class="c-dropdown">
+    <div class="c-btn c-btn-sm c-btn-secondary c-btn-box">
+      <i class="fa fa-ellipsis-h"></i>
+    </div>
+    <div class="c-dropdown-list c-dropdown-list-below">
+      <a class="c-dropdown-item" href="#">
+        Dashboard
+      </a>
+      <div class="c-dropdown-divider"></div>
+      <a class="c-dropdown-item" href="#">
+        Calendar
+      </a>
+      <div class="c-dropdown-divider"></div>
+      <a class="c-dropdown-item" href="#">
+        Some Board Meeting
+      </a>
+    </div>
+  </div>
+  <li class="c-breadcrumb-item"><a class="c-a" href="#">Associated Materials</a></li>
+  <li class="c-breadcrumb-item"><a class="c-a" href="#">Board Book</a></li>
+  <li class="c-breadcrumb-item c-breadcrumb-item-active">2019-Board-Book.pdf</li>
+</ul>
+
+      </main>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../script.min.js"></script>
+
+</html>

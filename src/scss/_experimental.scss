@@ -10,7 +10,7 @@
     width: $header-height + 1;
     color: $header-text-color;
     border-left: 1px solid $header-borders;
-  
+
     span {
       height: 2px;
       width: 16px;
@@ -22,50 +22,50 @@
       background-color: currentColor;
       transition-timing-function: ease-out;
       transition-property: background-color, opacity, transform;
-  
+
       &:nth-child(1) {
         top: calc(50% - 6px);
       }
-    
+
       &:nth-child(2) {
         top: calc(50% - 1px);
       }
-    
+
       &:nth-child(3) {
         top: calc(50% + 4px);
       }
     }
-  
+
     &:hover {
       background-color: $header-inverse-bg-hover;
     }
-  
+
     &-active {
       span {
         &:nth-child(1) {
           transform: translateY(5px) rotate(45deg);
         }
-  
+
         &:nth-child(2) {
           opacity: 0;
         }
-  
+
         &:nth-child(3) {
           transform: translateY(-5px) rotate(-45deg);
         }
       }
     }
   }
-  
+
   // Responsive header moves .c-nav into submenu at smaller viewports
   @include media-breakpoint-down(md) {
     .c-header {
       position: relative;
-  
+
       .c-nav-toggle {
         display: block;
       }
-  
+
       .c-nav {
         display: none;
         padding: $nav-spacing / 2 $space-0;
@@ -74,15 +74,15 @@
       }
     }
   }
-  
+
   .c-header.c-nav-active {
     .c-nav {
       display: flex;
-  
+
       &-link {
         margin: $nav-spacing / 2 $nav-spacing;
       }
-  
+
       &-pills {
         left: 0;
         top: 100%;
@@ -92,17 +92,17 @@
       }
     }
   }
-  
-  
+
+
   .c-header.c-header-inverse {
     .c-nav {
       background: $header-inverse-bg;
     }
-  
+
     .c-nav-toggle {
       color: $header-text-color;
       border-left: 1px solid $header-borders;
-    
+
       &:hover {
         background-color: $header-bg-hover;
       }
@@ -198,7 +198,7 @@
         &-box {
           color: $header-inverse-text-color;
           background: transparent;
-          
+
           &:not(:focus) {
             border-color: $header-inverse-borders;
           }
@@ -249,6 +249,287 @@
       left: auto;
       position: absolute;
       min-width: $dropdown-min-width;
+    }
+  }
+}
+
+// User in sidenav
+@if $enable-experimental-userNav == true {
+  .c-sidenav-user {
+    &-body {
+      text-align: center;
+      color: $color-white;
+      background: $experimental-userNav-BgImage center center no-repeat;
+      background-size: cover;
+      padding: $space-md;
+    }
+
+    &-dropdown {
+      display: flex;
+      align-items: center;
+      color: $color-white;
+      padding: $space-sm $space-md;
+      justify-content: space-between;
+      background-color: $color-primary-8;
+      transition: background-color ease-in-out 0.15s;
+
+      &:hover {
+        background-color: $color-primary-7;
+      }
+
+      &::after {
+        @include caret(down, $color: white);
+
+        right: $space-md;
+      }
+
+      &.c-d-flex::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-hidden {
+      display: none;
+    }
+
+    .c-sidenav-menu {
+      display: none;
+    }
+  }
+}
+
+// In page header
+@if $enable-experimental-pageHeader == true {
+
+  $page-header-bg: $color-white !default;
+  $page-header-border: 1px solid $color-gray-1 !default;
+  $page-header-padding: $space-md !default;
+
+  .c-page-header {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    background-size: cover;
+    flex-direction: column;
+    background-color: $page-header-bg;
+    background-position: center center;
+    border-bottom: $page-header-border;
+
+    .c-tabs {
+      box-shadow: none;
+    }
+
+    &-bar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: $page-header-padding;
+      justify-content: space-between;
+      background-color: $page-header-bg;
+      border-bottom: $page-header-border;
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin: $space-0;
+      color: $color-gray-7;
+
+      small {
+        opacity: 0.7;
+        color: inherit;
+        display: block;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.7;
+        padding-top: $space-sm;
+      }
+    }
+
+    &-info {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: $page-header-padding;
+      justify-content: space-between;
+
+      .c-page-header-left {
+        flex: 1;
+      }
+
+      .c-breadcrumb {
+        margin: $space-sm 0 0;
+      }
+    }
+
+    // Transparent
+    &-transparent {
+      border-bottom: 0;
+      background-color: transparent;
+    }
+
+    // Actions
+    &-action {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+      padding: $space-0 $page-header-padding;
+
+      &-buttons {
+        bottom: 0;
+        z-index: 1000;
+        position: absolute;
+        transform: translateY(50%);
+        right: $page-header-padding;
+      }
+    }
+
+    // Inverse
+    &-inverse {
+      background-color: $color-gray-9;
+
+      .c-page-header-info {
+        .c-page-header-title {
+          color: $color-white;
+        }
+      }
+
+      // Allow for bg colors to work
+      &[class*="c-bg-"] {
+        .c-page-header-action {
+          &.active,
+          &:hover {
+            border-bottom-color: rgba($color-white, .7);
+          }
+        }
+
+        .c-page-header-action {
+          border-bottom-color: rgba($color-white, .7);
+        }
+      }
+    }
+  }
+
+  .fab {
+    position: relative;
+    display: inline-block;
+    z-index: 9;
+
+    > .c-btn {
+      position: relative;
+      z-index: 1;
+    }
+
+    &-fixed {
+      position: fixed;
+      right: 40px;
+      bottom: 40px;
+    }
+  }
+
+
+  .fab-buttons {
+    bottom: 40px;
+    display: flex;
+    margin: $space-0;
+    right: $space-xs;
+    list-style: none;
+    padding: $space-0;
+    position: absolute;
+    flex-direction: column-reverse;
+
+    li {
+      opacity: 0;
+      transition: .4s;
+      text-align: right;
+      padding: $space-sm $space-0;
+
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) { transform: translateY(103% * $i); }
+      }
+    }
+  }
+
+  .fab-icon-default,
+  .fab-icon-active {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transition: .5s;
+    position: absolute;
+    display: inline-block;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .fab-icon-active {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+
+  .fab > .c-btn.active {
+    .fab-icon-default {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+
+    .fab-icon-active {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    + .fab-buttons li {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+
+
+  // Directions
+  //
+  .fab-bottom .fab-buttons {
+    top: 40px;
+    flex-direction: column;
+
+    li {
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) { transform: translateY(-103% * $i); }
+      }
+    }
+  }
+
+
+  .fab-left .fab-buttons {
+    top: 0;
+    right: 40px;
+    flex-direction: row-reverse;
+
+    li {
+      padding: $space-xs;
+
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) { transform: translateX(103% * $i); }
+      }
+    }
+  }
+
+
+  .fab-right .fab-buttons {
+    top: 0;
+    left: 40px;
+    flex-direction: row;
+
+    li {
+      padding: $space-xs;
+
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) { transform: translateX(-103% * $i); }
+      }
     }
   }
 }

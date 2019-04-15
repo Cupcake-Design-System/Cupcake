@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="../demo.css">
+
+  <script>
+    var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
+    document.write('<link media="all" rel="stylesheet" href="../' + flavor + '.css">');
+  </script>
+</head>
+
+<body class="docs-container ">
+    <div class="docs-body">
+      <main class="docs-content docs-content-fullwidth">
+          
+<h3>Default Checkbox</h3>
+
+<div data-xrayhtml class="prism xrayhtml">
+  <label class="c-checkbox">
+    <input type="checkbox" name="radio" checked>
+    <i></i>
+  </label>
+
+  <label class="c-checkbox">
+    <input type="checkbox" id="demo" name="radio" onclick="toggle(this)">
+    <i></i>
+  </label>
+
+  <label class="c-radio">
+    <input type="radio" name="radio">
+    <i></i>
+  </label>
+
+  <br>
+  <br>
+
+  <label class="c-checkbox">
+    <input type="checkbox" name="checkbox" disabled>
+    <i></i>
+  </label>
+
+  <label class="c-radio">
+    <input type="radio" name="checkbox" disabled>
+    <i></i>
+  </label>
+
+  <br>
+  <br>
+
+  <label class="c-checkbox" disabled>
+    <input type="checkbox" name="checkbox4" checked="checked" disabled="">
+    <i></i>
+  </label>
+
+  <label class="c-radio" disabled>
+    <input type="radio" name="radio6" checked="checked" disabled="">
+    <i></i>
+  </label>
+
+</div>
+
+
+<br>
+<hr class="c-hr">
+<br>
+<br>
+
+
+<h3>Switches with Labels</h3>
+
+<div data-xrayhtml class="prism xrayhtml">
+<label class="c-checkbox c-control">
+  <input type="checkbox" name="radio">
+  <i></i>
+  Default with label
+</label>
+
+<label class="c-radio c-control">
+  <input type="radio" name="radio">
+  <i></i>
+  Default with label
+</label>
+
+<br>
+<br>
+
+<label class="c-checkbox c-control">
+  <input type="checkbox" name="radio" disabled="">
+  <i></i>
+  Label w/checkbox Disabled
+</label>
+
+
+<label class="c-radio c-control">
+  <input type="radio" name="radio" disabled="">
+  <i></i>
+  Label w/checkbox Disabled
+</label>
+
+<br>
+<br>
+
+<label class="c-checkbox c-control" disabled="">
+  <input type="checkbox" name="checkbox">
+  <i></i>
+  Label & Checkbox Disabled
+</label>
+
+
+<label class="c-radio c-control" disabled="">
+  <input type="radio" name="checkbox">
+  <i></i>
+  Label & Checkbox Disabled
+</label>
+
+
+<br>
+<br>
+
+
+<label class="c-checkbox c-control">
+  <input type="checkbox" name="checkbox4" checked="checked" disabled="">
+  <i></i>
+  Label Checked & Disabled
+</label>
+
+<label class="c-radio c-control">
+  <input type="radio" name="radio" checked="" disabled="">
+  <i></i>
+  Label Checked & Disabled
+</label>
+
+
+<br>
+<br>
+
+<label class="c-checkbox c-control" disabled>
+  <input type="checkbox" name="checkbox4" checked="checked" disabled="">
+  <i></i>
+  Label Checked & Disabled
+</label>
+
+<label class="c-radio c-control" disabled>
+  <input type="radio" name="radio3" checked="checked" disabled="">
+  <i></i>
+  Label Checked & Disabled
+</label>
+
+</div>
+<br>
+<hr class="c-hr">
+<br>
+<br>
+
+
+<script>
+var checkbox = document.getElementById("demo");
+checkbox.indeterminate = true;
+
+function toggle(demo) {
+  if (demo.readOnly) demo.checked=demo.readOnly=false;
+  else if (!demo.checked) demo.readOnly=demo.indeterminate=true;
+}
+</script>
+
+      </main>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../script.min.js"></script>
+
+</html>

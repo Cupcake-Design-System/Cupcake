@@ -14,3 +14,168 @@
   z-index: $modal-z-index - 10;
   background-color: $modal-backdrop-bg-color;
 }
+
+
+@mixin caret($direction: down, $width: .3em, $color: black) {
+  width: 0;
+  height: 0;
+  content: "";
+  display: inline-block;
+
+  @if $direction == down {
+    border-top: $width solid $color;
+    border-right: $width solid transparent;
+    border-bottom: 0;
+    border-left: $width solid transparent;
+  } @else if $direction == up {
+    border-top: 0;
+    border-right: $width solid transparent;
+    border-bottom: $width solid $color;
+    border-left: $width solid transparent;
+  } @else if $direction == right {
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-left: $width solid $color;
+  }
+}
+
+
+@mixin icon-arrow($direction: down, $size: 10px) {
+  $icon-border-width: .2rem;
+
+  width: 1em;
+  height: 1em;
+  font-size: inherit;
+  font-style: normal;
+  position: relative;
+  text-indent: -9999px;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+
+  &::before {
+    border: $icon-border-width solid currentColor;
+    position: absolute;
+    border-bottom: 0;
+    border-right: 0;
+    height: $size;
+    width: $size;
+    content: "";
+    display: block;
+    left: 50%;
+    top: 50%;
+
+    @if $direction == down {
+      transform: translate(-50%, -75%) rotate(225deg);
+    }
+
+    @if $direction == left {
+      transform: translate(-25%, -50%) rotate(-45deg);
+    }
+
+    @if $direction == right {
+      transform: translate(-75%, -50%) rotate(135deg);
+    }
+
+    @if $direction == up {
+      transform: translate(-50%, -25%) rotate(45deg);
+    }
+
+    @if $direction == back {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    @if $direction == downward {
+      transform: translate(-50%, -50%) rotate(-135deg);
+    }
+
+    @if $direction == forward {
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+
+    @if $direction == upward {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @if $direction == back {
+      background: currentColor;
+      height: $icon-border-width;
+      width: .8em;
+      left: 55%;
+    }
+
+    @if $direction == forward {
+      background: currentColor;
+      height: $icon-border-width;
+      width: .8em;
+      left: 45%;
+    }
+
+    @if $direction == downward {
+      background: currentColor;
+      height: .8em;
+      width: $icon-border-width;
+      top: 45%;
+    }
+
+    @if $direction == upward {
+      background: currentColor;
+      height: .8em;
+      width: $icon-border-width;
+      top: 55%;
+    }
+  }
+}
+
+
+@mixin icon-ellipsis($direction: horizontal) {
+  $vertical: 0 -.4em, 0 .4em;
+  $horizontal: -.4em 0, .4em 0;
+
+  width: 1em;
+  height: 1em;
+  font-size: inherit;
+  font-style: normal;
+  position: relative;
+  text-indent: -9999px;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+
+  &::before {
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: .2em;
+    height: .2em;
+    display: block;
+    position: absolute;
+    background: currentColor;
+    border-radius: $radius-round;
+    transform: translate(-50%, -50%);
+
+    @if $direction == vertical {
+      box-shadow: $vertical;
+    } @else {
+      box-shadow: $horizontal;
+    }
+  }
+
+  &::after {
+    top: 50%;
+    left: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+}
