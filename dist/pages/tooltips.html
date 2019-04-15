@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="../demo.css">
+
+  <script>
+    var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
+    document.write('<link media="all" rel="stylesheet" href="../' + flavor + '.css">');
+  </script>
+</head>
+
+<body class="docs-container ">
+    <div class="docs-body">
+      <main class="docs-content docs-content-fullwidth">
+          
+
+
+<div class="c-row">
+  <div class="c-col">
+    <span class="c-header-sm c-m-right-md">Directions:</span>
+
+    <span data-tooltip="Tooltip Text" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Default
+    </span>
+
+    <span data-tooltip="Tooltip Text" data-tooltip-conf="bottom" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Down
+    </span>
+
+    <span data-tooltip="Tooltip Text" data-tooltip-conf="right" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Right
+    </span>
+
+    <span data-tooltip="Tooltip Text" data-tooltip-conf="shadow left" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Left
+    </span>
+  </div>
+</div>
+
+<hr class="c-hr">
+
+<div class="c-row">
+  <div class="c-col">
+    <span class="c-header-sm c-m-right-md">Colors:</span>
+    <span data-tooltip="Tooltip Text" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Default
+    </span>
+    <span data-tooltip="Tooltip Text" data-tooltip-conf="invert shadow" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Invert
+    </span>
+    <span data-tooltip="Tooltip Text" data-tooltip-conf="primary" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Primary
+    </span>
+    <span data-tooltip="Tooltip Text" data-tooltip-conf="success" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Success
+    </span>
+    <span data-tooltip="Tooltip Text" data-tooltip-conf="warning" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Warning
+    </span>
+    <span data-tooltip="Tooltip Text" data-tooltip-conf="danger" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Danger
+    </span>
+  </div>
+</div>
+
+<hr class="c-hr">
+
+<div class="c-row">
+  <div class="c-col">
+    <span class="c-header-sm c-m-right-md">Options:</span>
+
+    <span data-tooltip="A pure CSS Tooltip. Super easy to use, No JavaScript required."
+      data-tooltip-conf="primary multiline" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Multiline
+    </span>
+
+    <span data-tooltip="Tooltip Text" data-tooltip-conf="no-fade" class="c-btn c-btn-secondary c-m-horizontal-md">
+      No Fade
+    </span>
+
+    <span data-tooltip="Tooltip Text" data-tooltip-conf="shadow" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Shadow
+    </span>
+
+    <span data-tooltip="Tooltip Text" data-tooltip-conf="no-arrow" class="c-btn c-btn-secondary c-m-horizontal-md">
+      No Arrow
+    </span>
+
+    <span data-tooltip="Tooltip Text" data-tooltip-conf="square" class="c-btn c-btn-secondary c-m-horizontal-md">
+      Square
+    </span>
+  </div>
+
+</div>
+
+      </main>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../script.min.js"></script>
+
+</html>
