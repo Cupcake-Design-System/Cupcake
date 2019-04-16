@@ -1,0 +1,104 @@
+/* stylelint-disable */
+@-webkit-keyframes stripes {
+  0% {
+    background-position: 0 0
+  }
+  100% {
+    background-position: 50px 50px
+  }
+}
+@keyframes stripes {
+  0% {
+    background-position: 0 0
+  }
+  100% {
+    background-position: 50px 50px
+  }
+}
+
+.c-progress {
+  background-color: #f1f3f5;
+  height: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 2px
+}
+.c-progress-primary .c-progress-meter {
+  position: relative;
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: 2px;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#1f7ddd),color-stop(66%,#1b6ec2),to(#1964b0));
+  background-image: linear-gradient(to bottom,#1f7ddd,#1b6ec2 66%,#1964b0);
+  background-image: linear-gradient(to inverse-side(to) inverse-side(bottom),#1f7ddd,#1b6ec2 66%,#1964b0);
+  border: 1px solid #1861ac
+}
+.c-progress-primary .c-progress-meter-animated {
+  background: linear-gradient(135deg,#1b6ec2 25%,#155595 25%,#155595 50%,#1b6ec2 50%,#1b6ec2 75%,#155595 75%);
+  height: 2rem;
+  background-size: 3rem 3rem;
+  -webkit-animation: stripes 3s linear infinite;
+  animation: stripes 3s linear infinite;
+  border-radius: inherit
+}
+.c-progress-success .c-progress-meter {
+  position: relative;
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: 2px;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#36b64e),color-stop(66%,#2f9e44),to(#2a8e3d));
+  background-image: linear-gradient(to bottom,#36b64e,#2f9e44 66%,#2a8e3d);
+  background-image: linear-gradient(to inverse-side(to) inverse-side(bottom),#36b64e,#2f9e44 66%,#2a8e3d);
+  border: 1px solid #298a3c
+}
+.c-progress-success .c-progress-meter-animated {
+  background: linear-gradient(135deg,#2f9e44 25%,#237733 25%,#237733 50%,#2f9e44 50%,#2f9e44 75%,#237733 75%);
+  height: 2rem;
+  background-size: 3rem 3rem;
+  -webkit-animation: stripes 3s linear infinite;
+  animation: stripes 3s linear infinite;
+  border-radius: inherit
+}
+.c-progress-meter-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  position: absolute;
+  margin: 0;
+  font-size: .75rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  border-radius: 2px
+}
+.c-progress-sm {
+  height: .75rem
+}
+.c-progress-sm .c-progress-meter {
+  height: .75rem
+}
+.c-progress-sm .c-progress-meter-animated {
+  height: .75rem;
+  background-size: .75rem .75rem
+}
+.c-progress-sm .c-progress-meter-text {
+  font-size: .5rem
+}
+.c-progress-lg {
+  height: 3rem
+}
+.c-progress-lg .c-progress-meter {
+  height: 3rem
+}
+.c-progress-lg .c-progress-meter-animated {
+  height: 3rem;
+  background-size: 3rem 3rem
+}
+.c-progress-lg .c-progress-meter-text {
+  font-size: 1rem
+}
+
+/* stylelint-enable */

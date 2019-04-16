@@ -277,7 +277,7 @@ $checkbox-transition            : background 0.2s !default;
 $checkbox-icon-radius           : $global-default-radius !default;
 $checkbox-icon-bd               : 1px solid $color-gray-5 !default;
 $checkbox-shadow                : inset 0 2px 1px 0 rgba(33, 37, 41, .1) !default;
-$checkbox-palette               : $theme-colors !default;
+$checkbox-palette               : () !default;
 $checkbox-default-size          : $global-size-xs !default;
 $checkbox-sizes                 : () !default;
 

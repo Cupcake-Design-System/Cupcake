@@ -1,0 +1,96 @@
+
+/* stylelint-disable */
+$colors-legacy: (
+  primary: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  danger: $color-danger,
+);
+
+$legacy-switch-sizes: (
+  xs: 16px,
+  sm: 20px
+);
+
+$legacy-check-sizes: (
+  sm: 12px,
+  lg: 24px,
+  xl: 30px
+);
+
+
+.c-switch {
+  @each $name, $size in $legacy-switch-sizes {
+    &-#{$name} {
+      @include switch-size($size);
+    }
+  }
+  &-square {
+    .c-switch-handle,
+    .c-switch-handle::before {
+      border-radius: 2px;
+    }
+  }
+
+  &-material {
+    @include switch-base(16px);
+
+    &.c-switch-lg {
+      @include switch-size(32px);
+    }
+
+    &.c-switch-sm {
+      @include switch-size(16px);
+    }
+  }
+}
+
+
+// Sizing loop
+@each $name, $size in $legacy-check-sizes {
+  .c-checkbox,
+  .c-radio {
+    &-#{$name} {
+      @include checkbox-size($size);
+    }
+  }
+  .c-control-#{$name} {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: $size;
+    line-height: 1;
+    padding: 0 8px 0 ($size + 8px);
+  }
+}
+
+// Color loop
+@each $name, $color in $colors-legacy {
+  .c-badge-#{$name}-outline {
+    background-color: transparent;
+    border: 1px solid $color;
+    color: $color;
+  }
+
+  .c-switch-#{$name} {
+    @include switch-color($color);
+  }
+
+  .c-checkbox {
+    &-#{$name} {
+      @include checkbox-color($color);
+
+      input:indeterminate + i {
+        background-color: $color;
+      }
+    }
+  }
+
+  .c-radio {
+    &-#{$name} {
+      @include checkbox-color($color);
+    }
+  }
+}
+
+/* stylelint-enable */
