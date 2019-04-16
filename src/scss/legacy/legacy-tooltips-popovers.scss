@@ -1,52 +1,51 @@
 /* stylelint-disable */
 .c-popover,
 .c-tooltip {
-  position: absolute;
-  text-align: left;
-  max-width: 300px;
-  padding: 6px 10px;
+  z-index: 1;
   font-size: 14px;
-  font-family: Arial,Helvetica,Sans-Serif;
-  line-height: 15px;
-  color: #495057;
   background: #fff;
+  max-width: 300px;
+  text-align: left;
+  line-height: 15px;
+  position: absolute;
+  color: $color-gray-7;
   border: 1px solid #ced4da;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.2);
+  padding: $space-sm $space-md;
+  font-family: $font-family-sans;
   box-shadow: 0 0 9px 0 rgba(0,0,0,.2);
-  z-index: 1
+  border-radius: $global-default-radius;
 }
 .c-popover-top,
 .c-popover[x-placement^=top],
 .c-tooltip-top,
 .c-tooltip[x-placement^=top] {
-  margin-bottom: 10px
+  margin-bottom: $space-sm;
 }
 .c-popover-left,
 .c-popover[x-placement^=left],
 .c-tooltip-left,
 .c-tooltip[x-placement^=left] {
-  margin-right: 10px
+  margin-right: $space-sm;
 }
 .c-popover-right,
 .c-popover[x-placement^=right],
 .c-tooltip-right,
 .c-tooltip[x-placement^=right] {
-  margin-left: 10px
+  margin-left: $space-sm;
 }
 .c-popover-bottom,
 .c-popover[x-placement^=bottom],
 .c-tooltip-bottom,
 .c-tooltip[x-placement^=bottom] {
-  margin-top: 10px
+  margin-top: $space-sm;
 }
 .c-popover-arrow,
 .c-tooltip-arrow {
-  position: absolute
+  position: absolute;
 }
 .c-popover[x-out-of-boundaries],
 .c-tooltip[x-out-of-boundaries] {
-  display: none!important
+  display: none !important;
 }
 .c-popover-bottom > .c-popover-arrow,
 .c-popover-bottom > .c-popover-arrow::after,
@@ -64,10 +63,9 @@
 .c-tooltip-top > .c-popover-arrow::after,
 .c-tooltip-top > .c-tooltip-arrow,
 .c-tooltip-top > .c-tooltip-arrow::after {
-  position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
+  position: absolute;
+  transform: translateX(-50%);
 }
 .c-popover-left > .c-popover-arrow,
 .c-popover-left > .c-popover-arrow::after,
@@ -85,10 +83,9 @@
 .c-tooltip-right > .c-popover-arrow::after,
 .c-tooltip-right > .c-tooltip-arrow,
 .c-tooltip-right > .c-tooltip-arrow::after {
-  position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%)
+  position: absolute;
+  transform: translateY(-50%);
 }
 .c-popover[x-placement^=bottom] > .c-popover-arrow,
 .c-popover[x-placement^=bottom] > .c-tooltip-arrow,
@@ -98,7 +95,7 @@
 .c-tooltip[x-placement^=bottom] > .c-tooltip-arrow,
 .c-tooltip[x-placement^=top] > .c-popover-arrow,
 .c-tooltip[x-placement^=top] > .c-tooltip-arrow {
-  margin: 0 3px
+  margin: 0 3px;
 }
 .c-popover[x-placement^=bottom] > .c-popover-arrow::after,
 .c-popover[x-placement^=bottom] > .c-tooltip-arrow::after,
@@ -108,10 +105,9 @@
 .c-tooltip[x-placement^=bottom] > .c-tooltip-arrow::after,
 .c-tooltip[x-placement^=top] > .c-popover-arrow::after,
 .c-tooltip[x-placement^=top] > .c-tooltip-arrow::after {
-  position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
+  position: absolute;
+  transform: translateX(-50%);
 }
 .c-popover[x-placement^=left] > .c-popover-arrow,
 .c-popover[x-placement^=left] > .c-tooltip-arrow,
@@ -121,7 +117,7 @@
 .c-tooltip[x-placement^=left] > .c-tooltip-arrow,
 .c-tooltip[x-placement^=right] > .c-popover-arrow,
 .c-tooltip[x-placement^=right] > .c-tooltip-arrow {
-  margin: 3px 0
+  margin: 3px 0;
 }
 .c-popover[x-placement^=left] > .c-popover-arrow::after,
 .c-popover[x-placement^=left] > .c-tooltip-arrow::after,
@@ -131,10 +127,9 @@
 .c-tooltip[x-placement^=left] > .c-tooltip-arrow::after,
 .c-tooltip[x-placement^=right] > .c-popover-arrow::after,
 .c-tooltip[x-placement^=right] > .c-tooltip-arrow::after {
-  position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%)
+  position: absolute;
+  transform: translateY(-50%);
 }
 .c-popover-top > .c-popover-arrow,
 .c-popover-top > .c-tooltip-arrow,
@@ -144,15 +139,15 @@
 .c-tooltip-top > .c-tooltip-arrow,
 .c-tooltip[x-placement^=top] > .c-popover-arrow,
 .c-tooltip[x-placement^=top] > .c-tooltip-arrow {
-  bottom: -10px;
-  content: '';
-  display: block;
   width: 0;
   height: 0;
+  content: '';
+  bottom: -10px;
+  display: block;
   border: inset 10px;
-  border-color: #ced4da transparent transparent;
+  border-bottom-width: 0;
   border-top-style: solid;
-  border-bottom-width: 0
+  border-color: #ced4da transparent transparent;
 }
 .c-popover-top > .c-popover-arrow::after,
 .c-popover-top > .c-tooltip-arrow::after,
@@ -162,15 +157,15 @@
 .c-tooltip-top > .c-tooltip-arrow::after,
 .c-tooltip[x-placement^=top] > .c-popover-arrow::after,
 .c-tooltip[x-placement^=top] > .c-tooltip-arrow::after {
+  width: 0;
+  height: 0;
   bottom: 1px;
   content: '';
   display: block;
-  width: 0;
-  height: 0;
   border: inset 9px;
-  border-color: #fff transparent transparent;
+  border-bottom-width: 0;
   border-top-style: solid;
-  border-bottom-width: 0
+  border-color: #fff transparent transparent;
 }
 .c-popover-right > .c-popover-arrow,
 .c-popover-right > .c-tooltip-arrow,
@@ -180,15 +175,15 @@
 .c-tooltip-right > .c-tooltip-arrow,
 .c-tooltip[x-placement^=right] > .c-popover-arrow,
 .c-tooltip[x-placement^=right] > .c-tooltip-arrow {
+  width: 0;
+  height: 0;
   left: -10px;
   content: '';
   display: block;
-  width: 0;
-  height: 0;
   border: inset 10px;
-  border-color: transparent #ced4da transparent transparent;
+  border-left-width: 0;
   border-right-style: solid;
-  border-left-width: 0
+  border-color: transparent #ced4da transparent transparent;
 }
 .c-popover-right > .c-popover-arrow::after,
 .c-popover-right > .c-tooltip-arrow::after,
@@ -198,15 +193,15 @@
 .c-tooltip-right > .c-tooltip-arrow::after,
 .c-tooltip[x-placement^=right] > .c-popover-arrow::after,
 .c-tooltip[x-placement^=right] > .c-tooltip-arrow::after {
+  width: 0;
   left: 1px;
+  height: 0;
   content: '';
   display: block;
-  width: 0;
-  height: 0;
   border: inset 9px;
-  border-color: transparent #fff transparent transparent;
+  border-left-width: 0;
   border-right-style: solid;
-  border-left-width: 0
+  border-color: transparent #fff transparent transparent;
 }
 .c-popover-bottom > .c-popover-arrow,
 .c-popover-bottom > .c-tooltip-arrow,
@@ -216,15 +211,15 @@
 .c-tooltip-bottom > .c-tooltip-arrow,
 .c-tooltip[x-placement^=bottom] > .c-popover-arrow,
 .c-tooltip[x-placement^=bottom] > .c-tooltip-arrow {
+  width: 0;
+  height: 0;
   top: -10px;
   content: '';
   display: block;
-  width: 0;
-  height: 0;
   border: inset 10px;
-  border-color: transparent transparent #ced4da;
+  border-top-width: 0;
   border-bottom-style: solid;
-  border-top-width: 0
+  border-color: transparent transparent #ced4da;
 }
 .c-popover-bottom > .c-popover-arrow::after,
 .c-popover-bottom > .c-tooltip-arrow::after,
@@ -235,14 +230,14 @@
 .c-tooltip[x-placement^=bottom] > .c-popover-arrow::after,
 .c-tooltip[x-placement^=bottom] > .c-tooltip-arrow::after {
   top: 1px;
-  content: '';
-  display: block;
   width: 0;
   height: 0;
+  content: '';
+  display: block;
   border: inset 9px;
-  border-color: transparent transparent #fff;
+  border-top-width: 0;
   border-bottom-style: solid;
-  border-top-width: 0
+  border-color: transparent transparent #fff;
 }
 .c-popover-left > .c-popover-arrow,
 .c-popover-left > .c-tooltip-arrow,
@@ -252,15 +247,15 @@
 .c-tooltip-left > .c-tooltip-arrow,
 .c-tooltip[x-placement^=left] > .c-popover-arrow,
 .c-tooltip[x-placement^=left] > .c-tooltip-arrow {
-  right: -10px;
-  content: '';
-  display: block;
   width: 0;
   height: 0;
+  content: '';
+  right: -10px;
+  display: block;
   border: inset 10px;
-  border-color: transparent transparent transparent #ced4da;
+  border-right-width: 0;
   border-left-style: solid;
-  border-right-width: 0
+  border-color: transparent transparent transparent #ced4da;
 }
 .c-popover-left > .c-popover-arrow::after,
 .c-popover-left > .c-tooltip-arrow::after,
@@ -270,218 +265,79 @@
 .c-tooltip-left > .c-tooltip-arrow::after,
 .c-tooltip[x-placement^=left] > .c-popover-arrow::after,
 .c-tooltip[x-placement^=left] > .c-tooltip-arrow::after {
+  width: 0;
+  height: 0;
   right: 1px;
   content: '';
   display: block;
-  width: 0;
-  height: 0;
   border: inset 9px;
-  border-color: transparent transparent transparent #fff;
+  border-right-width: 0;
   border-left-style: solid;
-  border-right-width: 0
+  border-color: transparent transparent transparent #fff;
 }
-.c-popover-primary,
-.c-tooltip-primary {
-  color: #fff;
-  font-weight: 700;
-  background: #1b6ec2;
-  border: 1px solid #1b6ec2
+
+
+$colors-legacy-tooltips: (
+  primary: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  danger: $color-danger,
+);
+
+
+@each $name, $color in $colors-legacy-tooltips {
+  .c-popover-#{$name},
+  .c-tooltip-#{$name} {
+    color: #fff;
+    font-weight: 700;
+    background: $color;
+    border: 1px solid $color
+  }
+  .c-popover-#{$name}.c-popover-top > .c-popover-arrow,
+  .c-popover-#{$name}[x-placement^=top] > .c-popover-arrow,
+  .c-tooltip-#{$name}.c-popover-top > .c-popover-arrow,
+  .c-tooltip-#{$name}[x-placement^=top] > .c-popover-arrow {
+    border-color: $color transparent transparent
+  }
+  .c-popover-#{$name}.c-popover-top > .c-popover-arrow::after,
+  .c-popover-#{$name}[x-placement^=top] > .c-popover-arrow::after,
+  .c-tooltip-#{$name}.c-popover-top > .c-popover-arrow::after,
+  .c-tooltip-#{$name}[x-placement^=top] > .c-popover-arrow::after {
+    border-color: $color transparent transparent
+  }
+  .c-popover-#{$name}.c-popover-bottom > .c-popover-arrow,
+  .c-popover-#{$name}[x-placement^=bottom] > .c-popover-arrow,
+  .c-tooltip-#{$name}.c-popover-bottom > .c-popover-arrow,
+  .c-tooltip-#{$name}[x-placement^=bottom] > .c-popover-arrow {
+    border-color: transparent transparent $color
+  }
+  .c-popover-#{$name}.c-popover-bottom > .c-popover-arrow::after,
+  .c-popover-#{$name}[x-placement^=bottom] > .c-popover-arrow::after,
+  .c-tooltip-#{$name}.c-popover-bottom > .c-popover-arrow::after,
+  .c-tooltip-#{$name}[x-placement^=bottom] > .c-popover-arrow::after {
+    border-color: transparent transparent $color
+  }
+  .c-popover-#{$name}.c-popover-left > .c-popover-arrow,
+  .c-popover-#{$name}.c-popover-right > .c-popover-arrow,
+  .c-popover-#{$name}[x-placement^=left] > .c-popover-arrow,
+  .c-popover-#{$name}[x-placement^=right] > .c-popover-arrow,
+  .c-tooltip-#{$name}.c-popover-left > .c-popover-arrow,
+  .c-tooltip-#{$name}.c-popover-right > .c-popover-arrow,
+  .c-tooltip-#{$name}[x-placement^=left] > .c-popover-arrow,
+  .c-tooltip-#{$name}[x-placement^=right] > .c-popover-arrow {
+    border-color: transparent $color transparent
+  }
+  .c-popover-#{$name}.c-popover-left > .c-popover-arrow::after,
+  .c-popover-#{$name}.c-popover-right > .c-popover-arrow::after,
+  .c-popover-#{$name}[x-placement^=left] > .c-popover-arrow::after,
+  .c-popover-#{$name}[x-placement^=right] > .c-popover-arrow::after,
+  .c-tooltip-#{$name}.c-popover-left > .c-popover-arrow::after,
+  .c-tooltip-#{$name}.c-popover-right > .c-popover-arrow::after,
+  .c-tooltip-#{$name}[x-placement^=left] > .c-popover-arrow::after,
+  .c-tooltip-#{$name}[x-placement^=right] > .c-popover-arrow::after {
+    border-color: transparent $color transparent
+  }
 }
-.c-popover-primary.c-popover-top > .c-popover-arrow,
-.c-popover-primary[x-placement^=top] > .c-popover-arrow,
-.c-tooltip-primary.c-popover-top > .c-popover-arrow,
-.c-tooltip-primary[x-placement^=top] > .c-popover-arrow {
-  border-color: #1b6ec2 transparent transparent
-}
-.c-popover-primary.c-popover-top > .c-popover-arrow::after,
-.c-popover-primary[x-placement^=top] > .c-popover-arrow::after,
-.c-tooltip-primary.c-popover-top > .c-popover-arrow::after,
-.c-tooltip-primary[x-placement^=top] > .c-popover-arrow::after {
-  border-color: #1b6ec2 transparent transparent
-}
-.c-popover-primary.c-popover-bottom > .c-popover-arrow,
-.c-popover-primary[x-placement^=bottom] > .c-popover-arrow,
-.c-tooltip-primary.c-popover-bottom > .c-popover-arrow,
-.c-tooltip-primary[x-placement^=bottom] > .c-popover-arrow {
-  border-color: transparent transparent #1b6ec2
-}
-.c-popover-primary.c-popover-bottom > .c-popover-arrow::after,
-.c-popover-primary[x-placement^=bottom] > .c-popover-arrow::after,
-.c-tooltip-primary.c-popover-bottom > .c-popover-arrow::after,
-.c-tooltip-primary[x-placement^=bottom] > .c-popover-arrow::after {
-  border-color: transparent transparent #1b6ec2
-}
-.c-popover-primary.c-popover-left > .c-popover-arrow,
-.c-popover-primary.c-popover-right > .c-popover-arrow,
-.c-popover-primary[x-placement^=left] > .c-popover-arrow,
-.c-popover-primary[x-placement^=right] > .c-popover-arrow,
-.c-tooltip-primary.c-popover-left > .c-popover-arrow,
-.c-tooltip-primary.c-popover-right > .c-popover-arrow,
-.c-tooltip-primary[x-placement^=left] > .c-popover-arrow,
-.c-tooltip-primary[x-placement^=right] > .c-popover-arrow {
-  border-color: transparent #1b6ec2 transparent
-}
-.c-popover-primary.c-popover-left > .c-popover-arrow::after,
-.c-popover-primary.c-popover-right > .c-popover-arrow::after,
-.c-popover-primary[x-placement^=left] > .c-popover-arrow::after,
-.c-popover-primary[x-placement^=right] > .c-popover-arrow::after,
-.c-tooltip-primary.c-popover-left > .c-popover-arrow::after,
-.c-tooltip-primary.c-popover-right > .c-popover-arrow::after,
-.c-tooltip-primary[x-placement^=left] > .c-popover-arrow::after,
-.c-tooltip-primary[x-placement^=right] > .c-popover-arrow::after {
-  border-color: transparent #1b6ec2 transparent
-}
-.c-popover-success,
-.c-tooltip-success {
-  color: #fff;
-  font-weight: 700;
-  background: #2f9e44;
-  border: 1px solid #2f9e44
-}
-.c-popover-success.c-popover-top > .c-popover-arrow,
-.c-popover-success[x-placement^=top] > .c-popover-arrow,
-.c-tooltip-success.c-popover-top > .c-popover-arrow,
-.c-tooltip-success[x-placement^=top] > .c-popover-arrow {
-  border-color: #2f9e44 transparent transparent
-}
-.c-popover-success.c-popover-top > .c-popover-arrow::after,
-.c-popover-success[x-placement^=top] > .c-popover-arrow::after,
-.c-tooltip-success.c-popover-top > .c-popover-arrow::after,
-.c-tooltip-success[x-placement^=top] > .c-popover-arrow::after {
-  border-color: #2f9e44 transparent transparent
-}
-.c-popover-success.c-popover-bottom > .c-popover-arrow,
-.c-popover-success[x-placement^=bottom] > .c-popover-arrow,
-.c-tooltip-success.c-popover-bottom > .c-popover-arrow,
-.c-tooltip-success[x-placement^=bottom] > .c-popover-arrow {
-  border-color: transparent transparent #2f9e44
-}
-.c-popover-success.c-popover-bottom > .c-popover-arrow::after,
-.c-popover-success[x-placement^=bottom] > .c-popover-arrow::after,
-.c-tooltip-success.c-popover-bottom > .c-popover-arrow::after,
-.c-tooltip-success[x-placement^=bottom] > .c-popover-arrow::after {
-  border-color: transparent transparent #2f9e44
-}
-.c-popover-success.c-popover-left > .c-popover-arrow,
-.c-popover-success.c-popover-right > .c-popover-arrow,
-.c-popover-success[x-placement^=left] > .c-popover-arrow,
-.c-popover-success[x-placement^=right] > .c-popover-arrow,
-.c-tooltip-success.c-popover-left > .c-popover-arrow,
-.c-tooltip-success.c-popover-right > .c-popover-arrow,
-.c-tooltip-success[x-placement^=left] > .c-popover-arrow,
-.c-tooltip-success[x-placement^=right] > .c-popover-arrow {
-  border-color: transparent #2f9e44 transparent
-}
-.c-popover-success.c-popover-left > .c-popover-arrow::after,
-.c-popover-success.c-popover-right > .c-popover-arrow::after,
-.c-popover-success[x-placement^=left] > .c-popover-arrow::after,
-.c-popover-success[x-placement^=right] > .c-popover-arrow::after,
-.c-tooltip-success.c-popover-left > .c-popover-arrow::after,
-.c-tooltip-success.c-popover-right > .c-popover-arrow::after,
-.c-tooltip-success[x-placement^=left] > .c-popover-arrow::after,
-.c-tooltip-success[x-placement^=right] > .c-popover-arrow::after {
-  border-color: transparent #2f9e44 transparent
-}
-.c-popover-warning,
-.c-tooltip-warning {
-  color: #fff;
-  font-weight: 700;
-  background: #e8590c;
-  border: 1px solid #e8590c
-}
-.c-popover-warning.c-popover-top > .c-popover-arrow,
-.c-popover-warning[x-placement^=top] > .c-popover-arrow,
-.c-tooltip-warning.c-popover-top > .c-popover-arrow,
-.c-tooltip-warning[x-placement^=top] > .c-popover-arrow {
-  border-color: #e8590c transparent transparent
-}
-.c-popover-warning.c-popover-top > .c-popover-arrow::after,
-.c-popover-warning[x-placement^=top] > .c-popover-arrow::after,
-.c-tooltip-warning.c-popover-top > .c-popover-arrow::after,
-.c-tooltip-warning[x-placement^=top] > .c-popover-arrow::after {
-  border-color: #e8590c transparent transparent
-}
-.c-popover-warning.c-popover-bottom > .c-popover-arrow,
-.c-popover-warning[x-placement^=bottom] > .c-popover-arrow,
-.c-tooltip-warning.c-popover-bottom > .c-popover-arrow,
-.c-tooltip-warning[x-placement^=bottom] > .c-popover-arrow {
-  border-color: transparent transparent #e8590c
-}
-.c-popover-warning.c-popover-bottom > .c-popover-arrow::after,
-.c-popover-warning[x-placement^=bottom] > .c-popover-arrow::after,
-.c-tooltip-warning.c-popover-bottom > .c-popover-arrow::after,
-.c-tooltip-warning[x-placement^=bottom] > .c-popover-arrow::after {
-  border-color: transparent transparent #e8590c
-}
-.c-popover-warning.c-popover-left > .c-popover-arrow,
-.c-popover-warning.c-popover-right > .c-popover-arrow,
-.c-popover-warning[x-placement^=left] > .c-popover-arrow,
-.c-popover-warning[x-placement^=right] > .c-popover-arrow,
-.c-tooltip-warning.c-popover-left > .c-popover-arrow,
-.c-tooltip-warning.c-popover-right > .c-popover-arrow,
-.c-tooltip-warning[x-placement^=left] > .c-popover-arrow,
-.c-tooltip-warning[x-placement^=right] > .c-popover-arrow {
-  border-color: transparent #e8590c transparent
-}
-.c-popover-warning.c-popover-left > .c-popover-arrow::after,
-.c-popover-warning.c-popover-right > .c-popover-arrow::after,
-.c-popover-warning[x-placement^=left] > .c-popover-arrow::after,
-.c-popover-warning[x-placement^=right] > .c-popover-arrow::after,
-.c-tooltip-warning.c-popover-left > .c-popover-arrow::after,
-.c-tooltip-warning.c-popover-right > .c-popover-arrow::after,
-.c-tooltip-warning[x-placement^=left] > .c-popover-arrow::after,
-.c-tooltip-warning[x-placement^=right] > .c-popover-arrow::after {
-  border-color: transparent #e8590c transparent
-}
-.c-popover-danger,
-.c-tooltip-danger {
-  color: #fff;
-  font-weight: 700;
-  background: #e03131;
-  border: 1px solid #e03131
-}
-.c-popover-danger.c-popover-top > .c-popover-arrow,
-.c-popover-danger[x-placement^=top] > .c-popover-arrow,
-.c-tooltip-danger.c-popover-top > .c-popover-arrow,
-.c-tooltip-danger[x-placement^=top] > .c-popover-arrow {
-  border-color: #e03131 transparent transparent
-}
-.c-popover-danger.c-popover-top > .c-popover-arrow::after,
-.c-popover-danger[x-placement^=top] > .c-popover-arrow::after,
-.c-tooltip-danger.c-popover-top > .c-popover-arrow::after,
-.c-tooltip-danger[x-placement^=top] > .c-popover-arrow::after {
-  border-color: #e03131 transparent transparent
-}
-.c-popover-danger.c-popover-bottom > .c-popover-arrow,
-.c-popover-danger[x-placement^=bottom] > .c-popover-arrow,
-.c-tooltip-danger.c-popover-bottom > .c-popover-arrow,
-.c-tooltip-danger[x-placement^=bottom] > .c-popover-arrow {
-  border-color: transparent transparent #e03131
-}
-.c-popover-danger.c-popover-bottom > .c-popover-arrow::after,
-.c-popover-danger[x-placement^=bottom] > .c-popover-arrow::after,
-.c-tooltip-danger.c-popover-bottom > .c-popover-arrow::after,
-.c-tooltip-danger[x-placement^=bottom] > .c-popover-arrow::after {
-  border-color: transparent transparent #e03131
-}
-.c-popover-danger.c-popover-left > .c-popover-arrow,
-.c-popover-danger.c-popover-right > .c-popover-arrow,
-.c-popover-danger[x-placement^=left] > .c-popover-arrow,
-.c-popover-danger[x-placement^=right] > .c-popover-arrow,
-.c-tooltip-danger.c-popover-left > .c-popover-arrow,
-.c-tooltip-danger.c-popover-right > .c-popover-arrow,
-.c-tooltip-danger[x-placement^=left] > .c-popover-arrow,
-.c-tooltip-danger[x-placement^=right] > .c-popover-arrow {
-  border-color: transparent #e03131 transparent
-}
-.c-popover-danger.c-popover-left > .c-popover-arrow::after,
-.c-popover-danger.c-popover-right > .c-popover-arrow::after,
-.c-popover-danger[x-placement^=left] > .c-popover-arrow::after,
-.c-popover-danger[x-placement^=right] > .c-popover-arrow::after,
-.c-tooltip-danger.c-popover-left > .c-popover-arrow::after,
-.c-tooltip-danger.c-popover-right > .c-popover-arrow::after,
-.c-tooltip-danger[x-placement^=left] > .c-popover-arrow::after,
-.c-tooltip-danger[x-placement^=right] > .c-popover-arrow::after {
-  border-color: transparent #e03131 transparent
-}
+
+
 /* stylelint-enable */

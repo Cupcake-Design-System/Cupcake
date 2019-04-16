@@ -1,50 +1,38 @@
 /* stylelint-disable */
-.c-card-primary {
-  background-color: #1b6ec2;
-  border-color: #1b6ec2;
-  color: #fff
-}
+$colors-legacy-cards: (
+  primary: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  danger: $color-danger,
+);
 
-.c-card-success {
-  background-color: #2f9e44;
-  border-color: #2f9e44;
-  color: #fff
-}
-
-.c-card-danger {
-  background-color: #e03131;
-  border-color: #e03131;
-  color: #fff
+@each $name, $color in $colors-legacy-cards {
+  .c-card-#{$name} {
+    color: #fff;
+    border-color: $color;
+    background-color: $color;
+  }
 }
 
 .c-card-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column
 }
 .c-card-group .c-card {
-  margin-bottom: 15px
+  margin-bottom: 16px
 }
 @media (min-width:576px) {
   .c-card-group {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    margin-right: -15px;
-    margin-left: -15px
+    margin-right: -16px;
+    margin-left: -16px
   }
   .c-card-group .c-card {
-
     display: flex;
     flex: 1 0 0%;
     flex-direction: column;
-    margin-right: 15px;
-    margin-left: 15px
+    margin-right: 16px;
+    margin-left: 16px
   }
 }
 .c-card-group-collapsed {
@@ -55,23 +43,18 @@
   border-radius: 0
 }
 .c-card-group-collapsed > .c-card:first-child {
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px
+  border-top-left-radius: $global-default-radius;
+  border-bottom-left-radius: $global-default-radius
 }
 .c-card-group-collapsed > .c-card:last-child {
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px
+  border-top-right-radius: $global-default-radius;
+  border-bottom-right-radius: $global-default-radius
 }
 @media (min-width:576px) {
   .c-card-group-collapsed {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap
   }
   .c-card-group-collapsed > .c-card {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 0%;
     flex: 1 0 0%;
     margin-bottom: 0
   }
@@ -81,21 +64,16 @@
   }
 }
 .c-card-deck {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -16px;
+  margin-left: -16px;
   padding: 10px
 }
 .c-card-deck .c-card {
   height: 350px;
   max-width: 100%;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   margin-bottom: 10px;
   overflow: hidden;
@@ -107,7 +85,6 @@
     padding-right: 0
   }
   .c-card-deck .c-card {
-    -webkit-transform-origin: top left;
     transform-origin: top left
   }
 }
@@ -116,8 +93,6 @@
     padding: 20px
   }
   .c-card-deck .c-card {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%
   }
@@ -127,8 +102,6 @@
     padding: 20px
   }
   .c-card-deck .c-card {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 calc(50% - 5px);
     flex: 0 0 calc(50% - 5px);
     max-width: calc(50% - 5px)
   }
@@ -141,8 +114,6 @@
     padding: 20px
   }
   .c-card-deck .c-card {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 calc(33.333% - 6.667px);
     flex: 0 0 calc(33.333% - 6.667px);
     max-width: calc(33.333% - 6.667px)
   }
@@ -160,8 +131,6 @@
     padding: 20px
   }
   .c-card-deck .c-card {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 calc(25% - 7.5px);
     flex: 0 0 calc(25% - 7.5px);
     max-width: calc(25% - 7.5px)
   }

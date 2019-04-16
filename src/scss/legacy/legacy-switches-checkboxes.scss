@@ -1,6 +1,6 @@
 
 /* stylelint-disable */
-$colors-legacy: (
+$colors-legacy-switchBadgeCheckboxes: (
   primary: $color-primary,
   success: $color-success,
   warning: $color-warning,
@@ -55,21 +55,21 @@ $legacy-check-sizes: (
     }
   }
   .c-control-#{$name} {
-    display: inline-block;
-    position: relative;
+    line-height: 1;
     cursor: pointer;
     font-size: $size;
-    line-height: 1;
+    position: relative;
+    display: inline-block;
     padding: 0 8px 0 ($size + 8px);
   }
 }
 
 // Color loop
-@each $name, $color in $colors-legacy {
+@each $name, $color in $colors-legacy-switchBadgeCheckboxes {
   .c-badge-#{$name}-outline {
-    background-color: transparent;
-    border: 1px solid $color;
     color: $color;
+    border: 1px solid $color;
+    background-color: transparent;
   }
 
   .c-switch-#{$name} {

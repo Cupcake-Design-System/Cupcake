@@ -1,225 +1,95 @@
 
 /* stylelint-disable */
-.c-btn-primary-outline {
-  border: 1px solid #1b6ec2;
-  background-color: transparent;
-  color: #1b6ec2;
-  box-shadow: none
-}
-.c-btn-primary-outline.c-btn-outline-active {
-  text-decoration: none;
-  background-color: rgba(0,0,0,0);
-  border-color: #12487f;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3)
-}
-.c-btn-primary-outline.c-btn-outline-active:focus {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3),0 0 2px 1px #4dadf7
-}
-.c-btn-primary-outline:not(:disabled):hover {
-  background-color: #1b6ec2;
-  color: #fff;
-  border-color: #1b6ec2
-}
-.c-btn-primary-outline:not(:disabled).c-btn-active,
-.c-btn-primary-outline:not(:disabled):active {
-  text-decoration: none;
-  background-color: #2c6eb1;
-  border-color: #12487f;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
-  color: #fff
-}
-.c-btn-primary-outline:not(:disabled).c-btn-active:focus,
-.c-btn-primary-outline:not(:disabled):active:focus {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3),0 0 2px 1px #4dadf7
-}
-.c-btn-default-outline,
-.c-btn-secondary-outline {
-  border: 1px solid #495057;
-  background-color: transparent;
-  color: #495057;
-  box-shadow: none
-}
-.c-btn-default-outline.c-btn-outline-active,
-.c-btn-secondary-outline.c-btn-outline-active {
-  text-decoration: none;
-  background-color: rgba(0,0,0,0);
-  border-color: #262a2d;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3)
-}
-.c-btn-default-outline.c-btn-outline-active:focus,
-.c-btn-secondary-outline.c-btn-outline-active:focus {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3),0 0 2px 1px #4dadf7
-}
-.c-btn-default-outline:not(:disabled):hover,
-.c-btn-secondary-outline:not(:disabled):hover {
-  background-color: #495057;
-  color: #fff;
-  border-color: #495057
-}
-.c-btn-default-outline:not(:disabled).c-btn-active,
-.c-btn-default-outline:not(:disabled):active,
-.c-btn-secondary-outline:not(:disabled).c-btn-active,
-.c-btn-secondary-outline:not(:disabled):active {
-  text-decoration: none;
-  background-color: #505050;
-  border-color: #262a2d;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
-  color: #fff
-}
-.c-btn-default-outline:not(:disabled).c-btn-active:focus,
-.c-btn-default-outline:not(:disabled):active:focus,
-.c-btn-secondary-outline:not(:disabled).c-btn-active:focus,
-.c-btn-secondary-outline:not(:disabled):active:focus {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3),0 0 2px 1px #4dadf7
+$colors-legacy-btns: (
+  primary: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  danger: $color-danger,
+  default: #495057
+);
+
+
+@each $name, $color in $colors-legacy-btns {
+  .c-btn-#{$name}-outline {
+    color: $color;
+    box-shadow: none;
+    border: 1px solid $color;
+    background-color: transparent;
+  }
+  .c-btn-#{$name}-outline.c-btn-outline-active {
+    text-decoration: none;
+    border-color: darken($color, 2);
+    background-color: rgba(0,0,0,0);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.3)
+  }
+  .c-btn-#{$name}-outline.c-btn-outline-active:focus {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.3),0 0 2px 1px #4dadf7
+  }
+  .c-btn-#{$name}-outline:not(:disabled):hover {
+    color: #fff;
+    border-color: $color;
+    background-color: $color;
+  }
+  .c-btn-#{$name}-outline:not(:disabled).c-btn-active,
+  .c-btn-#{$name}-outline:not(:disabled):active {
+    color: #fff;
+    text-decoration: none;
+    border-color: darken($color, 2);
+    background-color: darken($color, 1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
+  }
+  .c-btn-#{$name}-outline:not(:disabled).c-btn-active:focus,
+  .c-btn-#{$name}-outline:not(:disabled):active:focus {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.3),0 0 2px 1px #4dadf7
+  }
 }
 
-.c-btn-success-outline {
-  border: 1px solid #2f9e44;
-  background-color: transparent;
-  color: #2f9e44;
-  -webkit-box-shadow: none;
-  box-shadow: none
-}
-.c-btn-success-outline.c-btn-outline-active {
-  text-decoration: none;
-  background-color: rgba(0,0,0,0);
-  border-color: #1d632b;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3)
-}
-.c-btn-success-outline.c-btn-outline-active:focus {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3),0 0 2px 1px #4dadf7
-}
-.c-btn-success-outline:not(:disabled):hover {
-  background-color: #2f9e44;
-  color: #fff;
-  border-color: #2f9e44
-}
-.c-btn-success-outline:not(:disabled).c-btn-active,
-.c-btn-success-outline:not(:disabled):active {
-  text-decoration: none;
-  background-color: #3e8f4e;
-  border-color: #1d632b;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
-  color: #fff
-}
-.c-btn-success-outline:not(:disabled).c-btn-active:focus,
-.c-btn-success-outline:not(:disabled):active:focus {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3),0 0 2px 1px #4dadf7
-}
-.c-btn-warning-outline {
-  border: 1px solid #e8590c;
-  background-color: transparent;
-  color: #e8590c;
-  box-shadow: none
-}
-.c-btn-warning-outline.c-btn-outline-active {
-  text-decoration: none;
-  background-color: rgba(0,0,0,0);
-  border-color: #9f3d08;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3)
-}
-.c-btn-warning-outline.c-btn-outline-active:focus {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3),0 0 2px 1px #4dadf7
-}
-.c-btn-warning-outline:not(:disabled):hover {
-  background-color: #e8590c;
-  color: #fff;
-  border-color: #e8590c
-}
-.c-btn-warning-outline:not(:disabled).c-btn-active,
-.c-btn-warning-outline:not(:disabled):active {
-  text-decoration: none;
-  background-color: #d65e1e;
-  border-color: #9f3d08;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
-  color: #fff
-}
-.c-btn-warning-outline:not(:disabled).c-btn-active:focus,
-.c-btn-warning-outline:not(:disabled):active:focus {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3),0 0 2px 1px #4dadf7
-}
-.c-btn-danger-outline {
-  border: 1px solid #e03131;
-  background-color: transparent;
-  color: #e03131;
-  box-shadow: none
-}
-.c-btn-danger-outline.c-btn-outline-active {
-  text-decoration: none;
-  background-color: rgba(0,0,0,0);
-  border-color: #ab1a1a;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3)
-}
-.c-btn-danger-outline.c-btn-outline-active:focus {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3),0 0 2px 1px #4dadf7
-}
-.c-btn-danger-outline:not(:disabled):hover {
-  background-color: #e03131;
-  color: #fff;
-  border-color: #e03131
-}
-.c-btn-danger-outline:not(:disabled).c-btn-active,
-.c-btn-danger-outline:not(:disabled):active {
-  text-decoration: none;
-  background-color: #ce4343;
-  border-color: #ab1a1a;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
-  color: #fff
-}
-.c-btn-danger-outline:not(:disabled).c-btn-active:focus,
-.c-btn-danger-outline:not(:disabled):active:focus {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.3),0 0 2px 1px #4dadf7
-}
 
 .c-btn-group-stepper {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex
 }
 .c-btn-group-stepper .c-btn {
-  position: relative;
   float: left;
+  border-radius: 0;
+  position: relative;
   border-right-width: 1px;
-  border-radius: 0
 }
 .c-btn-group-stepper .c-btn-box,
 .c-btn-group-stepper .c-btn-circle {
-  height: 30px;
-  width: 30px;
-  text-align: center;
+  padding: 0;
+  width: 32px;
+  height: 32px;
   font-size: 16px;
-  padding: 0
+  text-align: center;
 }
 .c-btn-group-stepper-lg .c-btn {
   font-size: 14px
 }
 .c-btn-group-stepper-lg .c-btn-box,
 .c-btn-group-stepper-lg .c-btn-circle {
-  height: 50px;
-  width: 50px;
-  text-align: center;
+  padding: 0;
+  width: 48px;
+  height: 48px;
   font-size: 16px;
-  padding: 0
+  text-align: center;
 }
 
 .c-file-upload {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  border-radius: 6px;
-  border: 2px dashed #1b6ec2;
-  background: rgba(27,110,194,.09);
-  padding: .5rem 1rem;
-  color: #1b6ec2;
+  display: flex;
   font-weight: 700;
-  font-size: .8rem
+  font-size: .8rem;
+  border-radius: 6px;
+  align-items: center;
+  flex-direction: row;
+  padding: .5rem 1rem;
+  color: $color-primary;
+  justify-content: center;
+  background: rgba(27,110,194,.09);
+  border: 2px dashed $color-primary;
 }
 .c-file-upload .c-btn {
-  margin-left: .5rem
+  margin-left: .5rem;
 }
 
 /* stylelint-enable */
