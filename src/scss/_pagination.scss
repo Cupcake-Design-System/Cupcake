@@ -37,8 +37,10 @@
 
   &-next {
     &.c-pagination-link {
+      position: relative;
+      margin-right: $space-md + $space-sm;
       color: $pagination-next-color;
-      margin-left: $pagination-item-spacing * 10;
+      padding-left: $space-md;
 
       &:hover {
         background: transparent;
@@ -50,12 +52,40 @@
       margin-left: $pagination-item-spacing * 4;
       font-size: $pagination-icon-size;
     }
+
+    &::before {
+      border: 2px solid currentColor;
+      border-bottom: 0;
+      border-right: 0;
+      height: 6px;
+      width: 6px;
+      transform: translate(-50%, -50%) rotate(135deg);
+      content: "";
+      display: block;
+      right: -($space-md + $space-sm);
+      position: absolute;
+      top: 50%;
+    }
+
+    &::after {
+      background: currentColor;
+      height: 2px;
+      width: 8px;
+      transform: translate(-50%, -50%);
+      content: "";
+      display: block;
+      right: -($space-md + $space-sm);
+      position: absolute;
+      top: 50%;
+    }
   }
 
   &-previous {
     &.c-pagination-link {
       color: $pagination-previous-color;
-      margin-right: $pagination-item-spacing * 10;
+      position: relative;
+      margin-right: $space-md;
+      padding-left: $space-md + $space-sm;
 
       &:hover {
         background: transparent;
@@ -66,6 +96,32 @@
     i {
       margin-right: $pagination-item-spacing * 4;
       font-size: $pagination-icon-size;
+    }
+
+    &::before {
+      top: 50%;
+      left: 8px;
+      width: 6px;
+      height: 6px;
+      content: "";
+      display: block;
+      position: absolute;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      border: 2px solid currentColor;
+      border-bottom: 0;
+      border-right: 0;
+    }
+
+    &::after {
+      top: 50%;
+      left: 8px;
+      content: "";
+      width: 8px;
+      height: 2px;
+      display: block;
+      position: absolute;
+      background: currentColor;
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -82,5 +138,10 @@
       }
     }
   }
-}
 
+  &-ellipsis::after {
+    content: '\2026';
+    padding: $space-0;
+    color: $pagination-item-color;
+  }
+}
