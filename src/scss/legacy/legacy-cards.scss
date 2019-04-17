@@ -16,68 +16,77 @@ $colors-legacy-cards: (
 
 .c-card-group {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+
+  .c-card {
+    margin-bottom: $gutter;
+  }
+
+  &-collapsed {
+    display: flex;
+    flex-direction: column;
+
+    > .c-card {
+      border-radius: 0;
+
+      &:first-child {
+        border-top-left-radius: $global-default-radius;
+        border-bottom-left-radius: $global-default-radius;
+      }
+
+      &:last-child {
+        border-top-right-radius: $global-default-radius;
+        border-bottom-right-radius: $global-default-radius;
+      }
+    }
+  }
 }
-.c-card-group .c-card {
-  margin-bottom: 16px
-}
+
 @media (min-width:576px) {
   .c-card-group {
     flex-flow: row wrap;
-    margin-right: -16px;
-    margin-left: -16px
-  }
-  .c-card-group .c-card {
-    display: flex;
-    flex: 1 0 0%;
-    flex-direction: column;
-    margin-right: 16px;
-    margin-left: 16px
-  }
-}
-.c-card-group-collapsed {
-  display: flex;
-  flex-direction: column
-}
-.c-card-group-collapsed > .c-card {
-  border-radius: 0
-}
-.c-card-group-collapsed > .c-card:first-child {
-  border-top-left-radius: $global-default-radius;
-  border-bottom-left-radius: $global-default-radius
-}
-.c-card-group-collapsed > .c-card:last-child {
-  border-top-right-radius: $global-default-radius;
-  border-bottom-right-radius: $global-default-radius
-}
-@media (min-width:576px) {
-  .c-card-group-collapsed {
-    flex-flow: row wrap
-  }
-  .c-card-group-collapsed > .c-card {
-    flex: 1 0 0%;
-    margin-bottom: 0
-  }
-  .c-card-group-collapsed > .c-card + .c-card {
-    margin-left: 0;
-    border-left: 0
+    margin-right: -$gutter;
+    margin-left: -$gutter;
+
+    .c-card {
+      display: flex;
+      flex: 1 0 0%;
+      flex-direction: column;
+      margin-right: $gutter;
+      margin-left: $gutter;
+    }
+
+    &-collapsed {
+      flex-flow: row wrap;
+
+      > .c-card {
+        flex: 1 0 0%;
+        margin-bottom: 0;
+
+        + .c-card {
+          margin-left: 0;
+          border-left: 0;
+        }
+      }
+    }
   }
 }
+
 .c-card-deck {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  margin-right: -16px;
-  margin-left: -16px;
-  padding: 10px
+  margin-right: -$gutter;
+  margin-left: -$gutter;
+  padding: $gutter;
 }
 .c-card-deck .c-card {
   height: 350px;
   max-width: 100%;
   flex: 0 0 100%;
-  margin-bottom: 10px;
+  margin-bottom: $gutter;
   overflow: hidden;
-  position: relative
+  position: relative;
 }
 @media (max-width:575px) {
   .c-card-deck {
@@ -85,12 +94,12 @@ $colors-legacy-cards: (
     padding-right: 0
   }
   .c-card-deck .c-card {
-    transform-origin: top left
+    transform-origin: top left;
   }
 }
 @media (min-width:768px) {
   .c-card-deck {
-    padding: 20px
+    padding: 20px;
   }
   .c-card-deck .c-card {
     flex: 0 0 100%;

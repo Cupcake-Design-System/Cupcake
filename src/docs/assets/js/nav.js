@@ -1,6 +1,9 @@
 
 $(document).ready(function () {
 
+  $('a[href="#"]').click(function(e) {
+    e.preventDefault ? e.preventDefault() : e.returnValue = false;
+  });
 
   // Check for click events on the navbar toggle
   $(".c-nav-toggle").click(function() {

@@ -15,7 +15,7 @@ $legacy-switch-sizes: (
 $legacy-check-sizes: (
   sm: 12px,
   lg: 24px,
-  xl: 30px
+  xl: 33px
 );
 
 
@@ -89,6 +89,10 @@ $legacy-check-sizes: (
   .c-radio {
     &-#{$name} {
       @include checkbox-color($color);
+    }
+
+    input:checked + i.c-bg-#{$name}::before {
+      background-color: $color;
     }
   }
 }

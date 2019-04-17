@@ -104,8 +104,8 @@ $avatar-font-family         : $font-family-sans !default;
 $avatar-line-height         : normal !default;
 $avatar-img-border          : $global-default-border !default;
 $avatar-group-spacing       : $space-xs !default;
-$avatar-palette             : $theme-colors !default;
 $avatar-group-transition    : 0.35s cubic-bezier(0, 1.22, .66, 1.39) !default;
+$avatar-palette             : $theme-colors !default;
 
 // for avatar sizes this maps to name, size, font-size
 $avatar-sizes:
@@ -269,6 +269,7 @@ $card-footer-line-weight     : $font-body-xl !default;
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
 $label-font-size                : $font-body-md !default;
+$checkbox-empty-bg              : $color-white !default;
 $checkbox-disabled-bg           : $global-disabled-bg !default;
 $checkbox-disabled-color        : $color-gray-5 !default;
 $checkbox-checked-disabled-bg   : $color-gray-6 !default;
