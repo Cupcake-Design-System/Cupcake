@@ -1,6 +1,5 @@
 // Footer
 .c-footer {
-  z-index: 2;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -8,6 +7,7 @@
   align-content: center;
   height: $footer-height;
   padding: $footer-padding;
+  z-index: $footer-z-index;
   line-height: $footer-height;
   font-size: $footer-font-size;
   justify-content: space-between;

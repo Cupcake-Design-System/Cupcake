@@ -5,13 +5,13 @@
   top: 0;
   left: 0;
   display: none;
-  z-index: 1000;
   position: absolute;
   list-style-type: none;
   box-sizing: border-box;
   color: $dropdown-color;
   border: $dropdown-border;
   background: $dropdown-bg;
+  z-index: $dropdown-z-index;
   font-family: $dropdown-font;
   box-shadow: $dropdown-shadow;
   margin: $dropdown-list-margin;
@@ -116,7 +116,6 @@
 @mixin dropdown-grid {
   top: 110%;
   float: left;
-  z-index: 1000;
   display: flex;
   flex-wrap: wrap;
   text-align: left;
@@ -124,6 +123,7 @@
   position: absolute;
   color: $dropdown-color;
   border: $dropdown-border;
+  z-index: $dropdown-z-index;
   background-clip: padding-box;
   box-shadow: $dropdown-shadow;
   background-color: $dropdown-bg;

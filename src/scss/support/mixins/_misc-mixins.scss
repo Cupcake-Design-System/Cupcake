@@ -9,9 +9,9 @@
   display: flex;
   align-items: center;
   position: $position;
+  z-index: $z-overlay;
   visibility: $visibility;
   justify-content: center;
-  z-index: $modal-z-index - 10;
   background-color: $modal-backdrop-bg-color;
 }
 

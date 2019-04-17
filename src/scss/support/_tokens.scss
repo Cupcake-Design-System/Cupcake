@@ -152,3 +152,25 @@ $shadow: (
   lg: $shadow-lg
 );
 
+
+$z-index: (
+  modal       : 2000,
+  action-panel: 1900,
+  overlay     : 1800,
+  alert       : 1750,
+  dropdown    : 1700,
+  tooltip     : 1650,
+  header      : 1600,
+  sidenav     : 1600,
+  footer      : 1500
+);
+
+$z-modal       : z(modal) !default;
+$z-action-panel: z(action-panel) !default;
+$z-overlay     : z(overlay) !default;
+$z-alert       : z(alert) !default;
+$z-dropdown    : z(dropdown) !default;
+$z-tooltip     : z(tooltip) !default;
+$z-header      : z(header) !default;
+$z-sidenav     : z(sidenav) !default;
+$z-footer      : z(footer) !default;
