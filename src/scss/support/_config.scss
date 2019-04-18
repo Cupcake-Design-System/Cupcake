@@ -33,9 +33,11 @@ $alert-margin               : 0 0 $space-md 0 !default;
 $alert-padding              : $space-sm !default;
 $alert-top-padding          : $space-md !default;
 $alert-font-size            : $font-body-md !default;
-$alert-line-height          : $font-body-md + 3 !default;
+$alert-line-height          : $line-height-body-sm !default;
 $alert-font-family          : $font-family-sans !default;
 $alert-font-weight          : $font-weight-normal !default;
+$alert-title-font-size      : $font-body-md !default;
+$alert-title-line-height    : $line-height-body-lg - 5 !default;
 $alert-title-font-weight    : $font-weight-bold !default;
 $alert-primary-bg           : rgba($color-primary, .07) !default;
 $alert-default-color        : $color-gray-9 !default;
@@ -43,6 +45,7 @@ $alert-primary-icon-color   : $color-primary !default;
 $alert-radius               : $global-default-radius !default;
 $alert-shadows              : $shadow-lg !default;
 $alert-icon-width           : $font-body-md !default;
+$alert-top-icon-size        : $font-body-xl !default;
 $alert-close-font-size      : $font-body-md !default;
 $toast-font-weight          : $font-weight-bold !default;
 $toast-palette              : $theme-colors !default;
@@ -102,7 +105,7 @@ $avatar-font-weight         : $font-weight-semibold !default;
 $avatar-font-size           : $font-body-md !default;
 $avatar-font-family         : $font-family-sans !default;
 $avatar-line-height         : normal !default;
-$avatar-img-border          : $global-default-border !default;
+$avatar-img-border          : none !default;
 $avatar-group-spacing       : $space-xs !default;
 $avatar-group-transition    : 0.35s cubic-bezier(0, 1.22, .66, 1.39) !default;
 $avatar-palette             : $theme-colors !default;
@@ -131,8 +134,12 @@ $badge-lg-font-size         : $font-body-lg - 1 !default;
 $badge-sm-size              : $badge-default-size - 8 !default;
 $badge-sm-font-size         : $font-body-xs !default;
 $badge-group-spacing        : $space-sm !default;
-$badge-palette              : $theme-colors !default;
-
+$badge-palette: (
+  primary: $color-primary-9,
+  success: $color-success-9,
+  warning: $color-warning-9,
+  danger: $color-danger-9,
+);
 
 // --------------------------------------------
 // Buttons ------------------------------------
@@ -661,7 +668,7 @@ $table-row-hover            : $color-gray-1 !default;
 $table-row-stripe-hover     : $table-row-hover !default;
 $table-stripe               : 'even' !default;
 $table-stripe-bg            : $color-gray-0 !default;
-$table-head-color           : $color-gray-7 !default;
+$table-head-color           : $color-gray-9 !default;
 $table-head-font-weight     : $font-weight-bold !default;
 $table-head-border-color    : $color-gray-3 !default;
 $table-head-border-width    : 1px 0 !default;

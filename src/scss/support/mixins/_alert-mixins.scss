@@ -29,6 +29,8 @@
   }
 
   &-title {
+    font-size: $alert-title-font-size;
+    line-height: $alert-title-line-height;
     font-weight: $alert-title-font-weight;
   }
 
