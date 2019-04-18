@@ -29,6 +29,14 @@
     cursor: pointer;
     position: absolute;
 
+    &[type="radio"] + i {
+      &,
+      &::before {
+        border-radius: radius(round);
+        background: $checkbox-empty-bg;
+      }
+    }
+
     &:checked + i::before {
       border-width: 0;
       background-color: $color-primary;
@@ -36,13 +44,6 @@
 
     &:checked + span .active {
       display: inherit;
-    }
-
-    &[type="radio"] + i {
-      &,
-      &::before {
-        border-radius: radius(round);
-      }
     }
 
     &[type="checkbox"]:checked + i::after {
@@ -104,7 +105,7 @@
     height: $size;
     position: absolute;
     box-shadow: $checkbox-shadow;
-    background-color: $color-white;
+    background-color: $checkbox-empty-bg;
     border-radius: $checkbox-icon-radius;
 
     &::before {
@@ -114,6 +115,7 @@
       height: $size;
       position: absolute;
       border: $checkbox-icon-bd;
+      background: $checkbox-empty-bg;
       transition: $checkbox-transition;
       border-radius: $checkbox-icon-radius;
     }

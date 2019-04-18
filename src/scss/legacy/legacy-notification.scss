@@ -1,0 +1,93 @@
+/* stylelint-disable */
+.c-notification {
+  right: 0;
+  bottom: 0;
+  top: 50px;
+  width: 415px;
+  border-top: 0;
+  position: fixed;
+  background: #fff;
+  transition: all .2s ease;
+  border: 1px solid #e6e6e6;
+  transform: translateX(415px);
+}
+.c-notification-header {
+  display: flex;
+  padding: 14px 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+}
+.c-notification-body {
+  right: 0;
+  bottom: 0;
+  top: 43px;
+  width: 100%;
+  overflow-y: scroll;
+  position: absolute;
+}
+.c-notification-open {
+  transform: translateX(0);
+}
+.c-notification-filter {
+  font-weight: 600;
+  font-size: .75rem;
+}
+.c-notification-info {
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: .25rem;
+  list-style-type: none;
+}
+.c-notification-settings {
+  color: #333;
+  font-size: .75rem;
+}
+.c-notification-item {
+  display: flex;
+  padding: 20px;
+  position: relative;
+  font-size: .6875rem;
+  background-color: #fff;
+  color: rgba(51,51,51,.8);
+  border-bottom: 1px solid #e6e6e6;
+}
+.c-notification-item:hover {
+  background-color: rgba(249,149,0,.2);
+}
+.c-notification-item:last-child {
+  border-bottom: 0;
+}
+.c-notification-item-unread {
+  background-color: rgba(51,51,51,.05);
+}
+.c-notification-item-left {
+  margin-top: 3px;
+  padding-right: 1rem;
+}
+.c-notification-author {
+  color: #097fd7;
+  font-weight: 700;
+  font-size: .6875rem;
+}
+.c-notification-date {
+  color: #333;
+}
+.c-notification-date::before {
+  color: #333;
+  content: "•";
+  padding: 0 .25rem;
+  font-size: .6875rem;
+}
+.c-notification-time {
+  font-style: italic;
+  color: rgba(51,51,51,.6);
+}
+.c-notification-time::before {
+  color: #333;
+  content: "•";
+  padding: 0 .25rem;
+  font-size: .6875rem;
+}
+
+/* stylelint-enable */

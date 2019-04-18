@@ -1,0 +1,36 @@
+// Cupcake master file
+//
+// Imports all cupcake files in their intended order for easy mass-inclusion.
+// Should you need specific files, you can easily use separate `@import`s.
+@import 'support/support';
+@import 'legacy/legacy-buttons';
+@import 'legacy/legacy-cards';
+@import 'legacy/legacy-notify';
+@import 'legacy/legacy-notification';
+@import 'legacy/legacy-progress';
+@import 'legacy/legacy-tooltips-popovers';
+@import 'legacy/legacy-switches-checkboxes';
+
+
+/* stylelint-disable */
+
+.c-icon {
+  font-size: 14px
+}
+
+.c-icon-xs {
+  font-size: 10px
+}
+.c-icon-sm {
+  font-size: 12px
+}
+.c-icon-md {
+  font-size: 14px
+}
+.c-icon-lg {
+  font-size: 16px
+}
+.c-icon-xl {
+  font-size: 18px
+}
+/* stylelint-enable */

@@ -21,11 +21,8 @@
   &-sm {
     @include badge-size($badge-sm-size, $badge-sm-font-size);
 
-    padding: $space-0 $space-xs;
+    padding: $space-0 ($space-sm - 2);
 
-    i {
-      padding-right: $space-xs;
-    }
 
     .c-avatar {
       @include avatar-size($badge-sm-size);
@@ -36,7 +33,7 @@
 
     .c-badge-close {
       margin-left: $space-xs;
-      margin-right: -($space-xs);
+      margin-right: -($space-sm - 2);
     }
   }
 

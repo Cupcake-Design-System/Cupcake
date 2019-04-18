@@ -1,0 +1,160 @@
+/* stylelint-disable */
+$colors-legacy-cards: (
+  primary: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  danger: $color-danger,
+);
+
+@each $name, $color in $colors-legacy-cards {
+  .c-card-#{$name} {
+    color: #fff;
+    border-color: $color;
+    background-color: $color;
+  }
+}
+
+.c-card-group {
+  display: flex;
+  flex-direction: column;
+
+  .c-card {
+    margin-bottom: $gutter;
+  }
+
+  &-collapsed {
+    display: flex;
+    flex-direction: column;
+
+    > .c-card {
+      border-radius: 0;
+
+      &:first-child {
+        border-top-left-radius: $global-default-radius;
+        border-bottom-left-radius: $global-default-radius;
+      }
+
+      &:last-child {
+        border-top-right-radius: $global-default-radius;
+        border-bottom-right-radius: $global-default-radius;
+      }
+    }
+  }
+}
+
+@media (min-width:576px) {
+  .c-card-group {
+    flex-flow: row wrap;
+    margin-right: -$gutter;
+    margin-left: -$gutter;
+
+    .c-card {
+      display: flex;
+      flex: 1 0 0%;
+      flex-direction: column;
+      margin-right: $gutter;
+      margin-left: $gutter;
+    }
+
+    &-collapsed {
+      flex-flow: row wrap;
+
+      > .c-card {
+        flex: 1 0 0%;
+        margin-bottom: 0;
+
+        + .c-card {
+          margin-left: 0;
+          border-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.c-card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-right: -$gutter;
+  margin-left: -$gutter;
+  padding: $gutter;
+}
+.c-card-deck .c-card {
+  height: 350px;
+  max-width: 100%;
+  flex: 0 0 100%;
+  margin-bottom: $gutter;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width:575px) {
+  .c-card-deck {
+    padding-left: 0;
+    padding-right: 0
+  }
+  .c-card-deck .c-card {
+    transform-origin: top left;
+  }
+}
+@media (min-width:768px) {
+  .c-card-deck {
+    padding: 20px;
+  }
+  .c-card-deck .c-card {
+    flex: 0 0 100%;
+    max-width: 100%
+  }
+}
+@media (min-width:992px) {
+  .c-card-deck {
+    padding: 20px
+  }
+  .c-card-deck .c-card {
+    flex: 0 0 calc(50% - 5px);
+    max-width: calc(50% - 5px)
+  }
+  .c-card-deck .c-card:nth-child(2n+1) {
+    margin-right: 10px
+  }
+}
+@media (min-width:1440px) {
+  .c-card-deck {
+    padding: 20px
+  }
+  .c-card-deck .c-card {
+    flex: 0 0 calc(33.333% - 6.667px);
+    max-width: calc(33.333% - 6.667px)
+  }
+  .c-card-deck .c-card:nth-child(even),
+  .c-card-deck .c-card:nth-child(odd) {
+    margin-left: 0;
+    margin-right: 0
+  }
+  .c-card-deck .c-card:nth-child(3n+2) {
+    margin: 0 10px
+  }
+}
+@media (min-width:2110px) {
+  .c-card-deck {
+    padding: 20px
+  }
+  .c-card-deck .c-card {
+    flex: 0 0 calc(25% - 7.5px);
+    max-width: calc(25% - 7.5px)
+  }
+  .c-card-deck .c-card:nth-child(even),
+  .c-card-deck .c-card:nth-child(odd) {
+    margin-left: 0;
+    margin-right: 0
+  }
+  .c-card-deck .c-card:nth-child(4n+2) {
+    margin-left: 10px;
+    margin-right: 5px
+  }
+  .c-card-deck .c-card:nth-child(4n+3) {
+    margin-left: 5px;
+    margin-right: 10px
+  }
+}
+/* stylelint-enable */
