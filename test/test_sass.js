@@ -19,6 +19,12 @@ sassTrue.runSass({file: buttons}, describe, it);
 const cards = path.join(__dirname, 'test-cards.scss');
 sassTrue.runSass({file: cards}, describe, it);
 
+const checkboxes = path.join(__dirname, 'test-checkbox.scss');
+sassTrue.runSass({file: checkboxes}, describe, it);
+
+const radio = path.join(__dirname, 'test-radio.scss');
+sassTrue.runSass({file: radio}, describe, it);
+
 const switches = path.join(__dirname, 'test-switches.scss');
 sassTrue.runSass({file: switches}, describe, it);
 

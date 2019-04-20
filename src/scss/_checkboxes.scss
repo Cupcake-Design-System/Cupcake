@@ -1,74 +1,37 @@
-// Control
-.c-control {
-  @include label-control;
-}
-
 // Checkbox
 .c-checkbox {
-  @include checkbox;
+  @include check(check);
 
-  input:indeterminate + i {
-    background: $color-primary;
-    border-radius: $checkbox-icon-radius;
+  // Color loop
+  @each $name, $color in $checkbox-palette {
+    &.c-checkbox-#{$name} {
+      @include check-color($color, check);
+    }
+  }
 
-    &::before {
-      top: 48%;
-      left: 18%;
-      width: 10px;
-      content: "";
-      height: 2px;
-      position: absolute;
-      border-color: $color-white;
+  // Sizing loop
+  @each $name, $size in $checkbox-sizes {
+    &.c-checkbox-#{$name} {
+      @include check-size($size, $type: check);
     }
   }
 }
 
 // Radios
 .c-radio {
-  @include checkbox;
+  @include check(radio);
 
-  input:disabled:checked {
-    + i {
-      &::before {
-        background: $checkbox-checked-disabled-bg;
-      }
-
-      &::after {
-        background: $checkbox-checked-disabled-color;
-      }
-    }
-  }
-}
-
-// Sizing loop
-@each $name, $size in $checkbox-sizes {
-  .c-checkbox,
-  .c-radio {
-    &-#{$name} {
-      @include checkbox-size($size);
-
-      + .c-control {
-        @include label-control($size);
-      }
-    }
-  }
-}
-
-// Color loop
-@each $name, $color in $checkbox-palette {
-  .c-checkbox {
-    &-#{$name} {
-      @include checkbox-color($color);
-
-      input:indeterminate + i {
-        background-color: $color;
-      }
+  // Color loop
+  @each $name, $color in $checkbox-palette {
+    &.c-radio-#{$name} {
+      @include check-color($color, radio);
     }
   }
 
-  .c-radio {
-    &-#{$name} {
-      @include checkbox-color($color);
+  // Sizing loop
+  @each $name, $size in $checkbox-sizes {
+    &.c-radio-#{$name} {
+      @include check-size($size, $type: radio);
     }
   }
 }

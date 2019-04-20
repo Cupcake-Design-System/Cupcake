@@ -48,12 +48,14 @@ $legacy-check-sizes: (
 
 // Sizing loop
 @each $name, $size in $legacy-check-sizes {
-  .c-checkbox,
-  .c-radio {
-    &-#{$name} {
-      @include checkbox-size($size);
-    }
+  .c-checkbox.c-checkbox-#{$name} {
+    @include check-size($size, $type: check);
   }
+
+  .c-radio.c-radio-#{$name} {
+    @include check-size($size, $type: radio);
+  }
+
   .c-control-#{$name} {
     line-height: 1;
     cursor: pointer;
@@ -63,6 +65,7 @@ $legacy-check-sizes: (
     padding: 0 8px 0 ($size + 8px);
   }
 }
+
 
 // Color loop
 @each $name, $color in $colors-legacy-switchBadgeCheckboxes {
@@ -76,24 +79,12 @@ $legacy-check-sizes: (
     @include switch-color($color);
   }
 
-  .c-checkbox {
-    &-#{$name} {
-      @include checkbox-color($color);
-
-      input:indeterminate + i {
-        background-color: $color;
-      }
-    }
+  .c-radio.c-radio-#{$name} {
+    @include check-color($color, radio);
   }
 
-  .c-radio {
-    &-#{$name} {
-      @include checkbox-color($color);
-    }
-
-    input:checked + i.c-bg-#{$name}::before {
-      background-color: $color;
-    }
+  .c-checkbox.c-checkbox-#{$name} {
+    @include check-color($color, check);
   }
 }
 
