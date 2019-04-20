@@ -19,14 +19,14 @@ $switch-test-sizes: (
 
         .c-switch {
           position: relative;
-          min-height: 16px;
+          height: 16px;
           display: inline-block;
           min-width: 32px;
           vertical-align: middle;
+          line-height: 15px;
         }
 
-        .c-switch input,
-        .c-switch-input {
+        .c-switch input {
           top: 0;
           left: 0;
           opacity: 0;
@@ -34,52 +34,44 @@ $switch-test-sizes: (
           position: absolute;
         }
 
-        .c-switch input:focus + .c-switch-handle,
-        .c-switch-input:focus + .c-switch-handle {
+        .c-switch input:focus + .c-switch-handle {
           border-color: #1b6ec2;
           box-shadow: 0 0 0 0.1rem rgba(27, 110, 194, 0.2);
         }
 
-        .c-switch input:checked + .c-switch-handle,
-        .c-switch-input:checked + .c-switch-handle {
+        .c-switch input:checked + .c-switch-handle {
           background: #1b6ec2;
           border-color: #1b6ec2;
         }
 
-        .c-switch input:checked + .c-switch-handle::before,
-        .c-switch-input:checked + .c-switch-handle::before {
+        .c-switch input:checked + .c-switch-handle::before {
           left: 16px;
         }
 
-        .c-switch input:checked + .c-switch-handle + .c-switch-label::after,
-        .c-switch-input:checked + .c-switch-handle + .c-switch-label::after {
+        .c-switch input:checked + .c-switch-handle + .c-switch-label::after {
           opacity: 0;
           display: none;
         }
 
-        .c-switch input:disabled + .c-switch-handle,
-        .c-switch-input:disabled + .c-switch-handle {
+        .c-switch input:disabled + .c-switch-handle {
           cursor: not-allowed;
           background: #dee2e6;
           border-color: #dee2e6;
           box-shadow: none;
         }
 
-        .c-switch input:disabled + .c-switch-handle::before,
-        .c-switch-input:disabled + .c-switch-handle::before {
+        .c-switch input:disabled + .c-switch-handle::before {
           box-shadow: none;
           background: #f8f9fa;
         }
 
-        .c-switch input:checked[disabled] + .c-switch-handle,
-        .c-switch-input:checked[disabled] + .c-switch-handle {
+        .c-switch input:checked[disabled] + .c-switch-handle {
           cursor: not-allowed;
           background: #868e96;
           border-color: #868e96;
         }
 
-        .c-switch input:checked[disabled] + .c-switch-handle::before,
-        .c-switch-input:checked[disabled] + .c-switch-handle::before {
+        .c-switch input:checked[disabled] + .c-switch-handle::before {
           box-shadow: none;
           background: #f8f9fa;
         }
@@ -113,18 +105,27 @@ $switch-test-sizes: (
           transition: background .2s, border .2s, box-shadow .2s, color .2s, left .2s;
         }
 
+        .c-switch-label {
+           padding-left: 40px;
+           line-height: 16px;
+           font-size: 12px;
+           cursor: pointer;
+         }
+
+        .c-switch-label:empty {
+          padding-left: 0;
+        }
+
         .c-switch-disabled {
           color: #868e96;
           cursor: not-allowed;
         }
 
-        .c-switch-disabled .c-switch input,
-        .c-switch-disabled .c-switch-input {
+        .c-switch-disabled .c-switch input {
           cursor: not-allowed;
         }
 
-        .c-switch-disabled .c-switch input:checked + .c-switch-handle,
-        .c-switch-disabled .c-switch-input:checked + .c-switch-handle {
+        .c-switch-disabled .c-switch input:checked + .c-switch-handle {
           cursor: not-allowed;
           background: #868e96;
           border-color: #868e96;
@@ -156,7 +157,7 @@ $switch-test-sizes: (
           min-width: 64px;
         }
 
-        .c-switch-crazy .c-switch-input:checked + .c-switch-handle::before {
+        .c-switch-crazy input:checked + .c-switch-handle::before {
           left: 32px;
         }
 
@@ -171,9 +172,20 @@ $switch-test-sizes: (
         }
 
         .c-switch-crazy .c-switch-label {
-          top: 8px;
-          left: 8px;
-          font-size: 12px;
+          padding-left: 72px;
+          line-height: 32px;
+          font-size: 28px;
+        }
+
+        .c-switch-crazy .c-switch-label:empty {
+          padding-left: 0;
+        }
+
+        .c-switch-crazy .c-switch-label::after,
+        .c-switch-crazy .c-switch-label::before  {
+          line-height: 1;
+          top: 11px;
+          font-size: 10px;
           height: inherit;
           cursor: pointer;
           box-shadow: none;
@@ -181,26 +193,21 @@ $switch-test-sizes: (
           border-radius: inherit;
           text-transform: uppercase;
           transition: 0.25s ease-out;
-        }
-
-        .c-switch-crazy .c-switch-label::after,
-        .c-switch-crazy .c-switch-label::before {
-          line-height: 1;
-          transition: 0.25s ease-out;
+          font-weight: 600;
         }
 
         .c-switch-crazy .c-switch-label::before {
           opacity: 1;
           content: attr(data-on);
-          margin-right: 4px;
           color: #ffffff;
+          left: 8px;
         }
 
         .c-switch-crazy .c-switch-label::after {
           opacity: 1;
-          margin-left: 4px;
           content: attr(data-off);
           color: #495057;
+          left: 36px;
         }
       }
     }

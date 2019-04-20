@@ -1,24 +1,15 @@
 // --------------------------------------------
-// Switch Control Mixin -----------------------
-// --------------------------------------------
-@mixin switch-control($size: $switch-height) {
-  line-height: $size;
-  font-size: $size - 4;
-  padding: $space-0 $space-sm $space-0 ($size * 2 + 8);
-}
-
-// --------------------------------------------
 // Switch Base Mixin --------------------------
 // --------------------------------------------
 @mixin switch-base($height: $switch-height) {
   position: relative;
-  min-height: $height;
+  height: $height;
   display: inline-block;
   min-width: $height * 2;
   vertical-align: middle;
+  line-height: $height - 1;
 
-  input,
-  &-input {
+  input {
     top: 0;
     left: 0;
     opacity: 0;
@@ -97,12 +88,22 @@
     }
   }
 
+  &-label {
+    padding-left: $height * 2 + $space-sm;
+    line-height: 16px;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:empty {
+      padding-left: $space-0;
+    }
+  }
+
   &-disabled {
     color: $switch-disabled-checked-bg;
     cursor: not-allowed;
 
-    .c-switch input,
-    .c-switch-input {
+    .c-switch input {
       cursor: not-allowed;
 
       &:checked + .c-switch-handle {
@@ -129,7 +130,7 @@
   min-height: $height;
   min-width: $height * 2;
 
-  .c-switch-input {
+  input {
     &:checked + .c-switch-handle::before {
       left: $height;
     }
@@ -145,37 +146,45 @@
     }
   }
 
+  .c-switch-label {
+    padding-left: $height * 2 + $space-sm;
+    line-height: $height;
+    font-size: $height - 4;
+
+    &:empty {
+      padding-left: $space-0;
+    }
+  }
+
   @if ($height >= 24px) {
     .c-switch-label {
-      top: $space-sm;
-      left: $space-sm;
-      font-size: 12px;
-      height: inherit;
-      cursor: pointer;
-      box-shadow: none;
-      position: absolute;
-      border-radius: inherit;
-      text-transform: uppercase;
-      transition: 0.25s ease-out;
-
       &::after,
       &::before {
         line-height: 1;
+        top: 11px;
+        font-size: 10px;
+        height: inherit;
+        cursor: pointer;
+        box-shadow: none;
+        position: absolute;
+        border-radius: inherit;
+        text-transform: uppercase;
         transition: 0.25s ease-out;
+        font-weight: 600;
       }
 
       &::before {
         opacity: 1;
         content: attr(data-on);
-        margin-right: $space-xs;
         color: $switch-label-on;
+        left: $space-sm;
       }
 
       &::after {
         opacity: 1;
-        margin-left: $space-xs;
         content: attr(data-off);
         color: $switch-label-off;
+        left: 36px;
       }
     }
   }
@@ -186,8 +195,7 @@
 // Switch Color Mixin -------------------------
 // --------------------------------------------
 @mixin switch-color($color: black) {
-  .c-switch input,
-  .c-switch-input {
+  input {
     &:focus + .c-switch-handle {
       border-color: $color;
       box-shadow: 0 0 0 .1rem rgba($color, .2);
