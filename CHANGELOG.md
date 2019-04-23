@@ -1,5 +1,28 @@
-## Release [2.0.0-beta.1](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.1...2.0.0-beta.1) :rocket:
+## Release [2.0.0-beta.2](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.1...2.0.0-beta.2) :rocket:
+**23 April 2019**
+
+### Merged
+- Chore(switch refactor) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/101)**
+- updated checks and radios **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/100)**
+- Feature(legacy shim) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/99)**
+- Feature(add sidenav) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/97)**
+- Chore(update matching class api) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/96)**
+- Feature(action panel) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/95)**
+- Chore(header updates) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/94)**
+- adds group class for badges and avatars **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/93)**
+- Chore  header updates **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/88)**
+- release fixes **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/91)**
+
+### Commits
+- kill dist in master **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/eec518982cfbdf8f1430febe01d07bfd79a0c4df)**
+- chore(z-index-refactor) **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/8a36772ac6463b1c1edd9510bc575b3b5d675896)**
+- Update .travis.yml **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/63046f0501fbb07808e0cd808be036de1a5cda4a)**
+
+## Release [2.0.0-beta.1](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.0...2.0.0-beta.1) :rocket:
 **6 April 2019**
+
+### Commits
+- Release 2.0.0-beta.1 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/4ab5c5d68a0b2a9dc1a90bc104b69fa29098818e)**
 
 ## 2.0.0-beta.0
 **6 April 2019**
