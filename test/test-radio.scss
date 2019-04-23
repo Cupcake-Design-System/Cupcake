@@ -1,0 +1,175 @@
+// stylelint-disable
+@import '../node_modules/sass-true/sass/true';
+@import '../src/scss/support/support';
+
+
+@include describe('Test output for radio mixins') {
+
+  @include it('Generates base attributes for an radio') {
+    @include assert {
+      @include output {
+        .c-radio {
+          @include check($type: radio);
+        }
+      }
+      @include expect {
+        .c-radio {
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          height: 16px;
+          transition: background 0.2s;
+          min-width: 16px;
+          line-height: 15px;
+        }
+
+        .c-radio[disabled] label {
+          cursor: not-allowed;
+          color: #adb5bd;
+        }
+
+        .c-radio input {
+          left: 0;
+          opacity: 0;
+          z-index: 1;
+          bottom: -1px;
+          cursor: pointer;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          border-radius: 200px;
+        }
+
+        .c-radio input:checked + label::after,
+        .c-radio input:checked[disabled] + label::after {
+          content: ' ';
+          position: absolute;
+          color: #ffffff;
+          top: 4px;
+          left: 4px;
+          width: 8px;
+          height: 8px;
+          display: table;
+          border-radius: 200px;
+          background-color: #ffffff;
+        }
+
+        .c-radio input:checked + label::before {
+          border-color: #1b6ec2;
+          background-color: #1b6ec2;
+        }
+
+        .c-radio input[disabled] + label::before {
+          cursor: not-allowed;
+          border: #dee2e6;
+          background: #dee2e6;
+        }
+
+        .c-radio input:checked[disabled] + label::before {
+          cursor: not-allowed;
+          border: #868e96;
+          background: #868e96;
+        }
+
+        .c-radio input:checked[disabled] + label::after {
+          color: #e9ecef;
+          background: #e9ecef;
+        }
+
+        .c-radio label {
+          cursor: pointer;
+          display: inherit;
+          position: relative;
+          font-size: 12px;
+          font-weight: 400;
+        }
+
+        .c-radio label::before {
+          left: 0;
+          content: "\a0";
+          position: relative;
+          border: 1px solid #adb5bd;
+          display: inline-block;
+          margin-right: 8px;
+          width: 16px;
+          height: 16px;
+          background: #ffffff;
+          transition: background 0.2s;
+          border-radius: 50px;
+        }
+
+        .c-radio label:empty::before {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @include it('Given an argument - outputs alternative COLOR') {
+    @include assert {
+      @include output {
+        .c-radio-primary {
+          @include check-color(purple, radio);
+        }
+      }
+      @include expect {
+        .c-radio-primary input:checked + label::before {
+          border-color: purple;
+          background-color: purple;
+        }
+
+        .c-radio-primary input:checked + label::after {
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+
+  @include it('Given an argument - outputs alternative SIZE') {
+    @include assert {
+      @include output {
+        .c-radio-xl {
+          @include check-size(33px, radio);
+        }
+      }
+      @include expect {
+        .c-radio-xl {
+          height: 33px;
+          min-width: 33px;
+          line-height: 32px;
+        }
+
+        .c-radio-xl input {
+          width: 33px;
+          height: 33px;
+        }
+
+        .c-radio-xl input:checked + label::after,
+        .c-radio-xl input:checked[disabled] + label::after {
+          top: 8px;
+          left: 8px;
+          width: 17px;
+          height: 17px;
+        }
+
+        .c-radio-xl label {
+          font-size: 29px;
+        }
+
+        .c-radio-xl label:empty::before {
+          margin-right: 0;
+        }
+
+        .c-radio-xl label::before {
+          width: 33px;
+          height: 33px;
+          margin-right: 11px;
+        }
+      }
+    }
+  }
+
+}
+
+
+@include report;
