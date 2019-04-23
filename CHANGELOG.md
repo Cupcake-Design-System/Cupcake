@@ -1,3 +1,6 @@
+## Release [2.0.0-beta.3](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.2...2.0.0-beta.3) :rocket:
+**23 April 2019**
+
 ## Release [2.0.0-beta.2](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.1...2.0.0-beta.2) :rocket:
 **23 April 2019**
 
@@ -16,6 +19,7 @@
 ### Commits
 - kill dist in master **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/eec518982cfbdf8f1430febe01d07bfd79a0c4df)**
 - chore(z-index-refactor) **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/8a36772ac6463b1c1edd9510bc575b3b5d675896)**
+- Release 2.0.0-beta.2 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/6faa7aadfd3157c50eb4e0a01992ad492adff08b)**
 - Update .travis.yml **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/63046f0501fbb07808e0cd808be036de1a5cda4a)**
 
 ## Release [2.0.0-beta.1](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.0...2.0.0-beta.1) :rocket:
