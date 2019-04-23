@@ -1,24 +1,15 @@
 // --------------------------------------------
-// Switch Control Mixin -----------------------
-// --------------------------------------------
-@mixin switch-control($size: $switch-height) {
-  line-height: $size;
-  font-size: $size - 4;
-  padding: $space-0 $space-sm $space-0 ($size * 2 + 8);
-}
-
-// --------------------------------------------
 // Switch Base Mixin --------------------------
 // --------------------------------------------
 @mixin switch-base($height: $switch-height) {
+  height: $height;
   position: relative;
-  min-height: $height;
   display: inline-block;
   min-width: $height * 2;
   vertical-align: middle;
+  line-height: $height - 1;
 
-  input,
-  &-input {
+  input {
     top: 0;
     left: 0;
     opacity: 0;
@@ -45,10 +36,10 @@
     }
 
     &:disabled + .c-switch-handle {
+      box-shadow: none;
       cursor: not-allowed;
       background: $switch-disabled;
       border-color: $switch-disabled;
-      box-shadow: none;
 
       &::before {
         box-shadow: none;
@@ -75,11 +66,11 @@
     width: $height * 2;
     position: absolute;
     display: inline-block;
+    box-shadow: $switch-shadow;
     background: $switch-off-bg;
     background-clip: padding-box;
-    border: $global-default-border;
     border-radius: $switch-radius;
-    box-shadow: $switch-shadow;
+    border: $global-default-border;
     transition: background .2s, border .2s, box-shadow .2s, color .2s;
 
     &::before {
@@ -97,19 +88,33 @@
     }
   }
 
-  &-disabled {
-    color: $switch-disabled-checked-bg;
-    cursor: not-allowed;
+  &-label {
+    cursor: pointer;
+    font-size: $switch-font-size;
+    line-height: $switch-font-size + 4;
+    padding-left: $height * 2 + $space-sm;
 
-    .c-switch input,
-    .c-switch-input {
+    &:empty {
+      padding-left: $space-0;
+    }
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+    color: $switch-disabled-checked-bg;
+
+    .c-switch-label {
+      cursor: not-allowed;
+    }
+
+    .c-switch input {
       cursor: not-allowed;
 
       &:checked + .c-switch-handle {
+        box-shadow: none;
         cursor: not-allowed;
         background: $switch-disabled-checked-bg;
         border-color: $switch-disabled-checked-bg;
-        box-shadow: none;
       }
     }
 
@@ -129,7 +134,7 @@
   min-height: $height;
   min-width: $height * 2;
 
-  .c-switch-input {
+  input {
     &:checked + .c-switch-handle::before {
       left: $height;
     }
@@ -145,35 +150,43 @@
     }
   }
 
+  .c-switch-label {
+    padding-left: $height * 2 + $space-sm;
+    line-height: $height;
+    font-size: $height - 4;
+
+    &:empty {
+      padding-left: $space-0;
+    }
+  }
+
   @if ($height >= 24px) {
     .c-switch-label {
-      top: $space-sm;
-      left: $space-sm;
-      font-size: 12px;
-      height: inherit;
-      cursor: pointer;
-      box-shadow: none;
-      position: absolute;
-      border-radius: inherit;
-      text-transform: uppercase;
-      transition: 0.25s ease-out;
-
       &::after,
       &::before {
         line-height: 1;
+        top: 11px;
+        font-size: 10px;
+        height: inherit;
+        cursor: pointer;
+        font-weight: 600;
+        box-shadow: none;
+        position: absolute;
+        border-radius: inherit;
+        text-transform: uppercase;
         transition: 0.25s ease-out;
       }
 
       &::before {
         opacity: 1;
+        left: $space-sm;
         content: attr(data-on);
-        margin-right: $space-xs;
         color: $switch-label-on;
       }
 
       &::after {
         opacity: 1;
-        margin-left: $space-xs;
+        left: 36px;
         content: attr(data-off);
         color: $switch-label-off;
       }
@@ -186,8 +199,7 @@
 // Switch Color Mixin -------------------------
 // --------------------------------------------
 @mixin switch-color($color: black) {
-  .c-switch input,
-  .c-switch-input {
+  input {
     &:focus + .c-switch-handle {
       border-color: $color;
       box-shadow: 0 0 0 .1rem rgba($color, .2);

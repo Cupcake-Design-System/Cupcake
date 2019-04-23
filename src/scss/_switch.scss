@@ -1,9 +1,3 @@
-// Switch Control
-.c-switch.c-control {
-  @include switch-control;
-}
-
-
 // Switch Base
 .c-switch {
   @include switch-base;
@@ -12,17 +6,12 @@
   @each $name, $size in $switch-sizes {
     &-#{$name} {
       @include switch-size($size);
-
-      &.c-control {
-        @include switch-control($size);
-      }
     }
   }
 
-
   // Color loop
   @each $name, $color in $switch-colors {
-    &-#{$name} {
+    &.c-switch-#{$name} {
       @include switch-color($color);
     }
   }
