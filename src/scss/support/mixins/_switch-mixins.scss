@@ -2,8 +2,8 @@
 // Switch Base Mixin --------------------------
 // --------------------------------------------
 @mixin switch-base($height: $switch-height) {
-  position: relative;
   height: $height;
+  position: relative;
   display: inline-block;
   min-width: $height * 2;
   vertical-align: middle;
@@ -36,10 +36,10 @@
     }
 
     &:disabled + .c-switch-handle {
+      box-shadow: none;
       cursor: not-allowed;
       background: $switch-disabled;
       border-color: $switch-disabled;
-      box-shadow: none;
 
       &::before {
         box-shadow: none;
@@ -66,11 +66,11 @@
     width: $height * 2;
     position: absolute;
     display: inline-block;
+    box-shadow: $switch-shadow;
     background: $switch-off-bg;
     background-clip: padding-box;
-    border: $global-default-border;
     border-radius: $switch-radius;
-    box-shadow: $switch-shadow;
+    border: $global-default-border;
     transition: background .2s, border .2s, box-shadow .2s, color .2s;
 
     &::before {
@@ -89,10 +89,10 @@
   }
 
   &-label {
-    padding-left: $height * 2 + $space-sm;
-    line-height: 16px;
-    font-size: 12px;
     cursor: pointer;
+    font-size: $switch-font-size;
+    line-height: $switch-font-size + 4;
+    padding-left: $height * 2 + $space-sm;
 
     &:empty {
       padding-left: $space-0;
@@ -100,17 +100,21 @@
   }
 
   &-disabled {
-    color: $switch-disabled-checked-bg;
     cursor: not-allowed;
+    color: $switch-disabled-checked-bg;
+
+    .c-switch-label {
+      cursor: not-allowed;
+    }
 
     .c-switch input {
       cursor: not-allowed;
 
       &:checked + .c-switch-handle {
+        box-shadow: none;
         cursor: not-allowed;
         background: $switch-disabled-checked-bg;
         border-color: $switch-disabled-checked-bg;
-        box-shadow: none;
       }
     }
 
@@ -165,26 +169,26 @@
         font-size: 10px;
         height: inherit;
         cursor: pointer;
+        font-weight: 600;
         box-shadow: none;
         position: absolute;
         border-radius: inherit;
         text-transform: uppercase;
         transition: 0.25s ease-out;
-        font-weight: 600;
       }
 
       &::before {
         opacity: 1;
+        left: $space-sm;
         content: attr(data-on);
         color: $switch-label-on;
-        left: $space-sm;
       }
 
       &::after {
         opacity: 1;
+        left: 36px;
         content: attr(data-off);
         color: $switch-label-off;
-        left: 36px;
       }
     }
   }

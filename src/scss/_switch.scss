@@ -2,10 +2,6 @@
 .c-switch {
   @include switch-base;
 
-  &.c-switch-success {
-    @include switch-color($color-success);
-  }
-
   // Sizing loop
   @each $name, $size in $switch-sizes {
     &-#{$name} {
@@ -15,7 +11,7 @@
 
   // Color loop
   @each $name, $color in $switch-colors {
-    &-#{$name} {
+    &.c-switch-#{$name} {
       @include switch-color($color);
     }
   }

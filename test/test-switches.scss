@@ -18,8 +18,8 @@ $switch-test-sizes: (
       @include expect {
 
         .c-switch {
-          position: relative;
           height: 16px;
+          position: relative;
           display: inline-block;
           min-width: 32px;
           vertical-align: middle;
@@ -54,10 +54,10 @@ $switch-test-sizes: (
         }
 
         .c-switch input:disabled + .c-switch-handle {
+          box-shadow: none;
           cursor: not-allowed;
           background: #dee2e6;
           border-color: #dee2e6;
-          box-shadow: none;
         }
 
         .c-switch input:disabled + .c-switch-handle::before {
@@ -83,11 +83,11 @@ $switch-test-sizes: (
           width: 32px;
           position: absolute;
           display: inline-block;
+          box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
           background: #f8f9fa;
           background-clip: padding-box;
-          border: 1px solid #ced4da;
           border-radius: 200px;
-          box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+          border: 1px solid #ced4da;
           transition: background .2s, border .2s, box-shadow .2s, color .2s;
         }
 
@@ -106,10 +106,10 @@ $switch-test-sizes: (
         }
 
         .c-switch-label {
-           padding-left: 40px;
-           line-height: 16px;
-           font-size: 12px;
            cursor: pointer;
+           font-size: 12px;
+           line-height: 16px;
+           padding-left: 40px;
          }
 
         .c-switch-label:empty {
@@ -117,7 +117,11 @@ $switch-test-sizes: (
         }
 
         .c-switch-disabled {
+          cursor: not-allowed;
           color: #868e96;
+        }
+
+        .c-switch-disabled .c-switch-label {
           cursor: not-allowed;
         }
 
@@ -126,10 +130,10 @@ $switch-test-sizes: (
         }
 
         .c-switch-disabled .c-switch input:checked + .c-switch-handle {
+          box-shadow: none;
           cursor: not-allowed;
           background: #868e96;
           border-color: #868e96;
-          box-shadow: none;
         }
 
         .c-switch-disabled .c-switch-handle {
@@ -188,26 +192,26 @@ $switch-test-sizes: (
           font-size: 10px;
           height: inherit;
           cursor: pointer;
+          font-weight: 600;
           box-shadow: none;
           position: absolute;
           border-radius: inherit;
           text-transform: uppercase;
           transition: 0.25s ease-out;
-          font-weight: 600;
         }
 
         .c-switch-crazy .c-switch-label::before {
           opacity: 1;
+          left: 8px;
           content: attr(data-on);
           color: #ffffff;
-          left: 8px;
         }
 
         .c-switch-crazy .c-switch-label::after {
           opacity: 1;
+          left: 36px;
           content: attr(data-off);
           color: #495057;
-          left: 36px;
         }
       }
     }
