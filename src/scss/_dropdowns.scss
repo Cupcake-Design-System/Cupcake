@@ -16,6 +16,22 @@
   &-list {
     @include dropdown-list;
 
+    .c-dropdown-heading {
+      display: block;
+      text-decoration: none;
+      color: $dropdown-color;
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+      font-size: $dropdown-font-size;
+      padding: $dropdown-item-padding;
+    }
+
+    .c-dropdown-icon {
+      color: $dropdown-icon-color;
+      font-size: $dropdown-icon-font-size;
+      padding-right: $dropdown-icon-padding;
+    }
+
     .c-dropdown-item {
       @include dropdown-item;
 

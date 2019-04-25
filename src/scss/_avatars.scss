@@ -3,16 +3,12 @@
   @include avatar-base();
 
   img {
-    $avi-img-box-shadow: 0 0 0 1px $color-white;
-
     z-index: 0;
     width: 100%;
     height: 100%;
     position: relative;
     border: $avatar-img-border;
     border-radius: $avatar-border-radius;
-    background: $color-primary;
-    box-shadow: $avi-img-box-shadow;
   }
 
   &-square {
@@ -29,51 +25,37 @@
   }
 
   &[data-status]::after {
+    $status-shadow: 0 0 0 1px $color-white;
+
     content: '';
     top: 0;
     right: 0;
     z-index: 1;
-    min-height: 8px;
-    min-width: 8px;
+    width: 8px;
+    height: 8px;
     position: absolute;
     color: $color-white;
+    box-shadow: $status-shadow;
     background-clip: padding-box;
     border-radius: $radius-round;
     font-weight: $font-weight-semibold;
-    /* stylelint-disable */
-    box-shadow: 0 0 0 1px $color-white;
-    /* stylelint-enable */
   }
 
   &[data-badge]::after {
     z-index: 1;
-    top: 14.64%;
-    right: 14.64%;
-    line-height: 1.5;
-    height: $space-md;
-    text-align: center;
-    position: absolute;
+    font-size: 0;
     white-space: nowrap;
-    min-width: $space-md;
-    font-size: $font-body-xs;
     content: attr(data-badge);
-    background: $color-primary;
-    border-radius: $radius-round;
-    padding: $space-xxs $space-xs;
-    transform: translate(50%, -50%);
-    /* stylelint-disable */
-    box-shadow: 0 0 0 1px $color-white;
-    /* stylelint-enable */
   }
 
   &[data-text]::before {
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    position: absolute;
     color: currentColor;
     content: attr(data-text);
-    position: absolute;
-    left: 50%;
-    top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
   }
 }
 
@@ -94,8 +76,8 @@
     @include avatar-size($size, $font-size);
 
     &[data-status]::after {
-      min-height: round($size / 4);
-      min-width: round($size / 4);
+      height: round($size / 4);
+      width: round($size / 4);
     }
   }
 }
@@ -150,8 +132,20 @@
   }
 
   &:hover {
+    cursor: pointer;
+
     .c-avatar:not(:first-of-type) {
       margin-left: $avatar-group-spacing;
     }
   }
 }
+
+
+.c-avatar-xl[data-badge]::after {
+  font-size: $font-body-lg;
+  width: $space-md + $space-xs;
+  padding: $space-xxs $space-xs;
+  height: $space-md + $space-xs;
+  line-height: $line-height-body-md;
+}
+
