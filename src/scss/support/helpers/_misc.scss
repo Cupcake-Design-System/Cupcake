@@ -1,10 +1,11 @@
-// Clearfix
-.c-clearfix::after,
-.c-clearfix::before {
-  content: '';
-  display: table;
-}
+@mixin misc-class-export() {
+  .c-clearfix::after,
+  .c-clearfix::before {
+    content: '';
+    display: table;
+  }
 
-.c-clearfix::after {
-  clear: both;
+  .c-clearfix::after {
+    clear: both;
+  }
 }
