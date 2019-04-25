@@ -1,5 +1,14 @@
+## Release [2.0.0-beta.4](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.3...2.0.0-beta.4) :rocket:
+**25 April 2019**
+
+### Commits
+- chore(regression fixes) **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/6213797e3159fed8372d7a53e5a332b957ad4336)**
+
 ## Release [2.0.0-beta.3](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.2...2.0.0-beta.3) :rocket:
 **23 April 2019**
+
+### Commits
+- Release 2.0.0-beta.3 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/21a0c9f19cf7f3313601c05d9048a8a57e17b529)**
 
 ## Release [2.0.0-beta.2](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.1...2.0.0-beta.2) :rocket:
 **23 April 2019**
