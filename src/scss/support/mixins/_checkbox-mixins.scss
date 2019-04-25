@@ -84,15 +84,15 @@
 
     &[disabled] + label::before {
       cursor: not-allowed;
-      border: $checkbox-bg-disabled;
       background: $checkbox-bg-disabled;
+      border-color: $checkbox-bg-disabled;
     }
 
     &:checked[disabled] {
       + label::before {
         cursor: not-allowed;
-        border: $checkbox-bg-checked-disabled;
         background: $checkbox-bg-checked-disabled;
+        border-color: $checkbox-bg-checked-disabled;
       }
 
       + label::after {

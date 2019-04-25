@@ -5,20 +5,21 @@
   width: $size;
   height: $size;
   flex-shrink: 0;
+  box-shadow: none;
   text-align: center;
   position: relative;
-  line-height: $size;
   color: $color-white;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   vertical-align: middle;
-  background: $color-primary;
+  justify-content: center;
+  background: $color-gray-7;
   font-size: $avatar-font-size;
   font-weight: $avatar-font-weight;
   font-family: $avatar-font-family;
   border-radius: $avatar-border-radius;
 
   i {
-    line-height: $size;
     font-size: $size / 2;
   }
 }
@@ -32,11 +33,9 @@
   font-size: $font-size;
   height: $size;
   width: $size;
-  line-height: $size;
 
   i {
     font-size: $size / 2;
-    line-height: $size;
   }
 }
 

@@ -61,14 +61,14 @@
 
         .c-radio input[disabled] + label::before {
           cursor: not-allowed;
-          border: #dee2e6;
           background: #dee2e6;
+          border-color: #dee2e6;
         }
 
         .c-radio input:checked[disabled] + label::before {
           cursor: not-allowed;
-          border: #868e96;
           background: #868e96;
+          border-color: #868e96;
         }
 
         .c-radio input:checked[disabled] + label::after {
