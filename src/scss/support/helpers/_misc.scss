@@ -8,4 +8,24 @@
   .c-clearfix::after {
     clear: both;
   }
+
+  .c-icon-xs {
+    font-size: $font-body-xs + 2;
+  }
+
+  .c-icon-sm {
+    font-size: $font-body-sm + 2;
+  }
+
+  .c-icon-md {
+    font-size: $font-body-md + 2;
+  }
+
+  .c-icon-lg {
+    font-size: $font-body-lg + 2;
+  }
+
+  .c-icon-xl {
+    font-size: $font-body-xl + 2;
+  }
 }

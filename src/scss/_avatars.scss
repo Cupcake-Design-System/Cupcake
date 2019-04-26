@@ -31,8 +31,8 @@
     top: 0;
     right: 0;
     z-index: 1;
-    width: 8px;
     height: 8px;
+    min-width: 8px;
     position: absolute;
     color: $color-white;
     box-shadow: $status-shadow;
@@ -77,7 +77,7 @@
 
     &[data-status]::after {
       height: round($size / 4);
-      width: round($size / 4);
+      min-width: round($size / 4);
     }
   }
 }
@@ -143,7 +143,7 @@
 
 .c-avatar-xl[data-badge]::after {
   font-size: $font-body-lg;
-  width: $space-md + $space-xs;
+  min-width: $space-md + $space-xs;
   padding: $space-xxs $space-xs;
   height: $space-md + $space-xs;
   line-height: $line-height-body-md;
