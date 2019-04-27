@@ -1,12 +1,11 @@
 ## Release [2.0.0-beta.5](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.4...2.0.0-beta.5) :rocket:
 **27 April 2019**
 
-### Merged
-- Chore(splitting experimental) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/103)**
-
 ### Commits
-- compile before release **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/c12f3f204f303665a35d604fa82807319281d208)**
-- release **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/e661598c91ba7a03850fe4a80682906967a6d4c3)**
+- splits experimental work into its own file
+- updates npm scripts
+- updates export mixins
+- updates avatar regressions
 
 ## Release [2.0.0-beta.4](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.3...2.0.0-beta.4) :rocket:
 **25 April 2019**
