@@ -1,8 +1,19 @@
+## Release [2.0.0-beta.5](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.4...2.0.0-beta.5) :rocket:
+**27 April 2019**
+
+### Merged
+- Chore(splitting experimental) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/103)**
+
+### Commits
+- compile before release **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/c12f3f204f303665a35d604fa82807319281d208)**
+- release **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/e661598c91ba7a03850fe4a80682906967a6d4c3)**
+
 ## Release [2.0.0-beta.4](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.3...2.0.0-beta.4) :rocket:
 **25 April 2019**
 
 ### Commits
 - chore(regression fixes) **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/6213797e3159fed8372d7a53e5a332b957ad4336)**
+- Release 2.0.0-beta.4 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/33b02ee2cae546a0d5a57897a582bdf458d097e9)**
 
 ## Release [2.0.0-beta.3](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.2...2.0.0-beta.3) :rocket:
 **23 April 2019**
