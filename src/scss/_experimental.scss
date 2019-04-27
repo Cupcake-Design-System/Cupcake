@@ -1,5 +1,5 @@
 // Experimental work in progress stuff subject to change/deletion
-@if $enable-experimental-nav == true {
+@mixin experimental-nav-export() {
   // hamburger style toggle
   .c-nav-toggle {
     display: none;
@@ -108,8 +108,10 @@
       }
     }
   }
+}
 
 
+@mixin experimental-headerSearch-export() {
   $header-search-transition-length: 0.6s !default;
   $header-search-expanded-width   : 200px !default;
   $trans: $header-search-transition-length;
@@ -217,7 +219,7 @@
 }
 
 // Dropdown Grid Style
-@if $enable-experimental-dropdownGrid == true {
+@mixin experimental-dropdownGrid-export() {
   .c-dropdown-grid {
     @include dropdown-grid;
 
@@ -254,7 +256,9 @@
 }
 
 // User in sidenav
-@if $enable-experimental-userNav == true {
+@mixin experimental-userNav-export() {
+  $experimental-userNav-BgImage: url('https://cupcake-layouts.netlify.com/dist/images/bg9.png') !default;
+
   .c-sidenav-user {
     &-body {
       text-align: center;
@@ -299,7 +303,7 @@
 }
 
 // In page header
-@if $enable-experimental-pageHeader == true {
+@mixin experimental-pageHeader-export() {
 
   $page-header-bg: $color-white !default;
   $page-header-border: 1px solid $color-gray-1 !default;

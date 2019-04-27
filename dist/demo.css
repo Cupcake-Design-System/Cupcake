@@ -1,23 +1,7 @@
 @charset "UTF-8";
-/* ----------------------- */
-/* 🎂 Cupcake Sprinkles 🎂 */
-/* ----------------------- */
-@keyframes skeletonIteration {
-  to {
-    background-position: 300% 0;
-  }
-}
-
-.c-clearfix::after,
-.c-clearfix::before {
-  content: '';
-  display: table;
-}
-
-.c-clearfix::after {
-  clear: both;
-}
-
+/* --------------------------- */
+/* 🎂 Cupcake Design System 🎂 */
+/* --------------------------- */
 /* stylelint-disable */
 .docs-container {
   display: flex;
