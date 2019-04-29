@@ -5,6 +5,7 @@ colors:
     - warning
     - danger
     - cyan
+    - blue
     - grape
     - indigo
     - lime
@@ -17,6 +18,7 @@ colors:
     - warning-light
     - danger-light
     - cyan-light
+    - blue-light
     - grape-light
     - indigo-light
     - lime-light

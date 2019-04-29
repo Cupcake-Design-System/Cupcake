@@ -2,23 +2,48 @@
 /* 🎂 Cupcake Design System 🎂 */
 /* --------------------------- */
 
-$color-primary: #1b6ec2 !default;
+// $color-primary: #1b6ec2 !default;
+$color-primary: #008a8e !default;
 $color-success: #2f9e44 !default;
 $color-warning: #f08c00 !default;
 $color-danger: #e03131 !default;
 $color-black: #000000 !default;
 $color-white: #ffffff !default;
 
-$color-primary-0: #e8f7ff !default;
-$color-primary-1: #ccedff !default;
-$color-primary-2: #a3daff !default;
-$color-primary-3: #72c3fc !default;
-$color-primary-4: #4dadf7 !default;
-$color-primary-5: #329af0 !default;
-$color-primary-6: #228ae6 !default;
-$color-primary-7: #1c7cd6 !default;
-$color-primary-8: $color-primary !default;
-$color-primary-9: #1862ab !default;
+// $color-primary-0: #e8f7ff !default;
+// $color-primary-1: #ccedff !default;
+// $color-primary-2: #a3daff !default;
+// $color-primary-3: #72c3fc !default;
+// $color-primary-4: #4dadf7 !default;
+// $color-primary-5: #329af0 !default;
+// $color-primary-6: #228ae6 !default;
+// $color-primary-7: #1c7cd6 !default;
+// $color-primary-8: $color-primary !default;
+// $color-primary-9: #1862ab !default;
+
+
+$color-primary-0: #def5f5 !default;
+$color-primary-1: #afe6e6 !default;
+$color-primary-2: #7cd6d7 !default;
+$color-primary-3: #49c5c9 !default;
+$color-primary-4: #21bac0 !default;
+$color-primary-5: #00aeb8 !default;
+$color-primary-6: #009ea7 !default;
+$color-primary-7: #008a8e !default;
+$color-primary-8: #007778 !default;
+$color-primary-9: #055350 !default;
+
+$color-blue-0: #e8f7ff !default;
+$color-blue-1: #ccedff !default;
+$color-blue-2: #a3daff !default;
+$color-blue-3: #72c3fc !default;
+$color-blue-4: #4dadf7 !default;
+$color-blue-5: #329af0 !default;
+$color-blue-6: #228ae6 !default;
+$color-blue-7: #1c7cd6 !default;
+$color-blue-8: #1b6ec2 !default;
+$color-blue-9: #1862ab !default;
+
 
 $color-success-0: #ebfbee !default;
 $color-success-1: #d3f9d8 !default;
@@ -234,6 +259,19 @@ $color-extended: (
     9: $color-cyan-9
   ),
 
+  'blue': (
+    0: $color-blue-0,
+    1: $color-blue-1,
+    2: $color-blue-2,
+    3: $color-blue-3,
+    4: $color-blue-4,
+    5: $color-blue-5,
+    6: $color-blue-6,
+    7: $color-blue-7,
+    8: $color-blue-8,
+    9: $color-blue-9
+  ),
+
   'grape': (
     0: $color-grape-0,
     1: $color-grape-1,
@@ -345,6 +383,7 @@ $theme-colors: (
 $extended-palette: (
   dark: $color-gray-9,
   cyan: $color-cyan-9,
+  blue: $color-blue-9,
   grape: $color-grape-9,
   indigo: $color-indigo-9,
   lime: $color-lime-9,
@@ -361,6 +400,7 @@ $extended-palette-light: (
   warning-light: $color-warning-1,
   danger-light: $color-danger-1,
   cyan-light: $color-cyan-1,
+  blue-light: $color-blue-1,
   grape-light: $color-grape-1,
   indigo-light: $color-indigo-1,
   lime-light: $color-lime-1,

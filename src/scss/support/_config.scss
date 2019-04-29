@@ -130,7 +130,7 @@ $badge-sm-size              : $badge-default-size - 8 !default;
 $badge-sm-font-size         : $font-body-xs !default;
 $badge-group-spacing        : $space-sm !default;
 $badge-palette: (
-  primary: $color-primary-9,
+  primary: $color-primary-8,
   success: $color-success-9,
   warning: $color-warning-9,
   danger: $color-danger-9,
@@ -173,9 +173,9 @@ $btn-box-sizes: (
 $button-colors: (
   primary: (
     bg: $color-primary,
-    bg-hover: $color-primary-7,
-    bg-active: $color-primary-9,
-    border: $color-primary-9
+    bg-hover: $color-primary-6,
+    bg-active: $color-primary-8,
+    border: $color-primary-8
   ),
   success: (
     bg: $color-success,
