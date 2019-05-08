@@ -35,7 +35,7 @@
   border-radius: 2px;
   background-color: white;
   padding: 0 8px;
-  margin-top: 8px;
+  margin: 8px 0;
   font-weight: 700;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   border: 1px solid #f1f3f5;
@@ -301,6 +301,81 @@
   background-color: #1c7cd6;
   color: white;
   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.docs-flavor-switch {
+  position: relative;
+}
+
+.docs-flavor-list {
+  left: 0;
+  top: 38px;
+  opacity: 0;
+  width: 100%;
+  z-index: 1001;
+  padding-left: 0;
+  list-style: none;
+  position: absolute;
+  visibility: hidden;
+  background: white;
+  border-radius: 2px;
+  border: 1px solid #e9ecef;
+  transition: opacity 0.15s linear, top 0.15s linear;
+}
+
+.docs-flavor-list-item a {
+  display: flex;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  overflow: hidden;
+  line-height: 20px;
+  margin: 8px;
+  padding: 8px;
+  white-space: nowrap;
+  color: #343a40;
+  text-overflow: ellipsis;
+  transition: background-color 0.25s linear;
+}
+
+.docs-flavor-list-item a:hover {
+  background-color: #f1f3f5;
+  color: #343a40;
+}
+
+.docs-flavor-button {
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+  min-height: 32px;
+  line-height: 20px;
+  color: #343a40;
+  display: inline-block;
+  border-radius: 2px;
+  background-color: #f1f3f5;
+  border: 1px solid #ced4da;
+  transition: background-color 0.2s linear;
+  padding: 4px 34px 4px 8px;
+}
+
+.docs-flavor-button:hover {
+  background-color: #f8f9fa;
+}
+
+.docs-flavor-button::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #343a40;
+}
+
+.is-open > .docs-flavor-list {
+  opacity: 1;
+  visibility: visible;
 }
 
 .heading-all {
