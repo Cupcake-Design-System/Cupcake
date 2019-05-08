@@ -273,10 +273,6 @@ $(function () {
 * Flavor Switch
 *************************************************/
 
-/************************************************
-* Flavor Dropdown
-*************************************************/
-
 var $html = $('html');
 
 $html.on('click.ui.dropdown', '.docs-flavor-switch', function(e) {
