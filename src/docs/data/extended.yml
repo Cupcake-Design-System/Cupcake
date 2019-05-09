@@ -10,6 +10,17 @@ colors:
       - "#1098ad"
       - "#0c8599"
       - "#0b7285"
+    blue:
+      - "#e8f7ff"
+      - "#ccedff"
+      - "#a3daff"
+      - "#72c3fc"
+      - "#4dadf7"
+      - "#329af0"
+      - "#228ae6"
+      - "#1c7cd6"
+      - "#1b6ec2"
+      - "#1862ab"
     grape:
       - "#f8f0fc"
       - "#f3d9fa"

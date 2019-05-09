@@ -9,9 +9,16 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="../demo.css">
 
+
   <script>
-    var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
-    document.write('<link media="all" rel="stylesheet" href="../' + flavor + '.css">');
+    var themeSettings =  (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+    var themeName = themeSettings.themeName || '';
+    if (themeName) {
+      document.write('<link rel="stylesheet" id="theme-style" href="../' + themeName + '.css">');
+    }
+    else {
+      document.write('<link rel="stylesheet" id="theme-style" href="../cupcake.css">');
+    }
   </script>
 
 <link rel="stylesheet" href="../cupcake-shim.css">
@@ -21,6 +28,25 @@
 <body class="docs-container ">
     <div class="docs-body">
       <main class="docs-content docs-content-fullwidth">
+          <div id="customize-menu" class="docs-flavor-switch c-d-none c-sm-d-block c-m-top-lg" style="width: 250px;">
+              <input type="hidden" name="Framework" id="Framework" class="docs-flavor-switch-input">
+              <span class="docs-flavor-button docs-flavor-switch-current">Select A Flavor</span>
+              <ul id="styleOptions" title="switch styling" class="docs-flavor-list">
+                <li class="docs-flavor-list-item" data-dropdown-value="default">
+                  <a href="#" class="flavor" data-theme="cupcake">Default</a>
+                </li>
+                <li class="docs-flavor-list-item" data-dropdown-value="mint">
+                  <a href="#" class="flavor" data-theme="cupcake-mint">Mint</a>
+                </li>
+              </ul>
+            </div>
+
+          <br>
+          <hr class="c-hr">
+          <br>
+          <br>
+
+
           
 <strong>Badge Group</strong>
 <br>
@@ -46,6 +72,7 @@
   <div class="c-badge c-badge-sm c-badge-warning"></div>
   <div class="c-badge c-badge-sm c-badge-danger"></div>
   <div class="c-badge c-badge-sm c-badge-cyan"></div>
+  <div class="c-badge c-badge-sm c-badge-blue"></div>
   <div class="c-badge c-badge-sm c-badge-grape"></div>
   <div class="c-badge c-badge-sm c-badge-indigo"></div>
   <div class="c-badge c-badge-sm c-badge-lime"></div>
@@ -58,6 +85,7 @@
   <div class="c-badge c-badge-sm c-badge-warning-light"></div>
   <div class="c-badge c-badge-sm c-badge-danger-light"></div>
   <div class="c-badge c-badge-sm c-badge-cyan-light"></div>
+  <div class="c-badge c-badge-sm c-badge-blue-light"></div>
   <div class="c-badge c-badge-sm c-badge-grape-light"></div>
   <div class="c-badge c-badge-sm c-badge-indigo-light"></div>
   <div class="c-badge c-badge-sm c-badge-lime-light"></div>
@@ -72,6 +100,7 @@
   <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-warning"></div> Text</span>
   <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-danger"></div> Text</span>
   <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-cyan"></div> Text</span>
+  <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-blue"></div> Text</span>
   <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-grape"></div> Text</span>
   <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-indigo"></div> Text</span>
   <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-lime"></div> Text</span>
@@ -84,6 +113,7 @@
   <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-warning-light"></div> Text</span>
   <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-danger-light"></div> Text</span>
   <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-cyan-light"></div> Text</span>
+  <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-blue-light"></div> Text</span>
   <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-grape-light"></div> Text</span>
   <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-indigo-light"></div> Text</span>
   <span class="c-text-sm c-m-sm"><div class="c-badge c-badge-sm c-badge-lime-light"></div> Text</span>
@@ -103,6 +133,7 @@
   <div class="c-badge c-badge-sm c-badge-warning">Value</div>
   <div class="c-badge c-badge-sm c-badge-danger">Value</div>
   <div class="c-badge c-badge-sm c-badge-cyan">Value</div>
+  <div class="c-badge c-badge-sm c-badge-blue">Value</div>
   <div class="c-badge c-badge-sm c-badge-grape">Value</div>
   <div class="c-badge c-badge-sm c-badge-indigo">Value</div>
   <div class="c-badge c-badge-sm c-badge-lime">Value</div>
@@ -115,6 +146,7 @@
   <div class="c-badge c-badge-sm c-badge-warning-light">Value</div>
   <div class="c-badge c-badge-sm c-badge-danger-light">Value</div>
   <div class="c-badge c-badge-sm c-badge-cyan-light">Value</div>
+  <div class="c-badge c-badge-sm c-badge-blue-light">Value</div>
   <div class="c-badge c-badge-sm c-badge-grape-light">Value</div>
   <div class="c-badge c-badge-sm c-badge-indigo-light">Value</div>
   <div class="c-badge c-badge-sm c-badge-lime-light">Value</div>
@@ -142,6 +174,9 @@
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-sm c-badge-cyan">Value
+    <a href="#" class="c-badge-close"></a>
+  </div>
+  <div class="c-badge c-badge-sm c-badge-blue">Value
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-sm c-badge-grape">Value
@@ -180,6 +215,9 @@
   <div class="c-badge c-badge-sm c-badge-cyan-light">Value
     <a href="#" class="c-badge-close"></a>
   </div>
+  <div class="c-badge c-badge-sm c-badge-blue-light">Value
+    <a href="#" class="c-badge-close"></a>
+  </div>
   <div class="c-badge c-badge-sm c-badge-grape-light">Value
     <a href="#" class="c-badge-close"></a>
   </div>
@@ -214,6 +252,7 @@
   <div class="c-badge c-badge-square c-badge-sm c-badge-warning">Value</div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-danger">Value</div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-cyan">Value</div>
+  <div class="c-badge c-badge-square c-badge-sm c-badge-blue">Value</div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-grape">Value</div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-indigo">Value</div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-lime">Value</div>
@@ -226,6 +265,7 @@
   <div class="c-badge c-badge-square c-badge-sm c-badge-warning-light">Value</div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-danger-light">Value</div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-cyan-light">Value</div>
+  <div class="c-badge c-badge-square c-badge-sm c-badge-blue-light">Value</div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-grape-light">Value</div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-indigo-light">Value</div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-lime-light">Value</div>
@@ -251,6 +291,8 @@
     <a href="#" class="c-badge-close"></a></div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-cyan">Value
     <a href="#" class="c-badge-close"></a></div>
+  <div class="c-badge c-badge-square c-badge-sm c-badge-blue">Value
+    <a href="#" class="c-badge-close"></a></div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-grape">Value
     <a href="#" class="c-badge-close"></a></div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-indigo">Value
@@ -274,6 +316,8 @@
   <div class="c-badge c-badge-square c-badge-sm c-badge-danger-light">Value
     <a href="#" class="c-badge-close"></a></div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-cyan-light">Value
+    <a href="#" class="c-badge-close"></a></div>
+  <div class="c-badge c-badge-square c-badge-sm c-badge-blue-light">Value
     <a href="#" class="c-badge-close"></a></div>
   <div class="c-badge c-badge-square c-badge-sm c-badge-grape-light">Value
     <a href="#" class="c-badge-close"></a></div>
@@ -305,6 +349,7 @@
   <div class="c-badge c-badge-warning"></div>
   <div class="c-badge c-badge-danger"></div>
   <div class="c-badge c-badge-cyan"></div>
+  <div class="c-badge c-badge-blue"></div>
   <div class="c-badge c-badge-grape"></div>
   <div class="c-badge c-badge-indigo"></div>
   <div class="c-badge c-badge-lime"></div>
@@ -317,6 +362,7 @@
   <div class="c-badge c-badge-warning-light"></div>
   <div class="c-badge c-badge-danger-light"></div>
   <div class="c-badge c-badge-cyan-light"></div>
+  <div class="c-badge c-badge-blue-light"></div>
   <div class="c-badge c-badge-grape-light"></div>
   <div class="c-badge c-badge-indigo-light"></div>
   <div class="c-badge c-badge-lime-light"></div>
@@ -331,6 +377,7 @@
   <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-warning c-m-right-xs"></div> Text</span>
   <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-danger c-m-right-xs"></div> Text</span>
   <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-cyan c-m-right-xs"></div> Text</span>
+  <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-blue c-m-right-xs"></div> Text</span>
   <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-grape c-m-right-xs"></div> Text</span>
   <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-indigo c-m-right-xs"></div> Text</span>
   <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-lime c-m-right-xs"></div> Text</span>
@@ -343,6 +390,7 @@
   <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-warning-light c-m-right-xs"></div> Text</span>
   <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-danger-light c-m-right-xs"></div> Text</span>
   <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-cyan-light c-m-right-xs"></div> Text</span>
+  <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-blue-light c-m-right-xs"></div> Text</span>
   <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-grape-light c-m-right-xs"></div> Text</span>
   <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-indigo-light c-m-right-xs"></div> Text</span>
   <span class="c-text-lg c-m-sm"><div class="c-badge c-badge-lime-light c-m-right-xs"></div> Text</span>
@@ -363,6 +411,7 @@
   <div class="c-badge c-badge-warning">Value</div>
   <div class="c-badge c-badge-danger">Value</div>
   <div class="c-badge c-badge-cyan">Value</div>
+  <div class="c-badge c-badge-blue">Value</div>
   <div class="c-badge c-badge-grape">Value</div>
   <div class="c-badge c-badge-indigo">Value</div>
   <div class="c-badge c-badge-lime">Value</div>
@@ -375,6 +424,7 @@
   <div class="c-badge c-badge-warning-light">Value</div>
   <div class="c-badge c-badge-danger-light">Value</div>
   <div class="c-badge c-badge-cyan-light">Value</div>
+  <div class="c-badge c-badge-blue-light">Value</div>
   <div class="c-badge c-badge-grape-light">Value</div>
   <div class="c-badge c-badge-indigo-light">Value</div>
   <div class="c-badge c-badge-lime-light">Value</div>
@@ -402,6 +452,9 @@
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-cyan">Value
+    <a href="#" class="c-badge-close"></a>
+  </div>
+  <div class="c-badge c-badge-blue">Value
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-grape">Value
@@ -440,6 +493,9 @@
   <div class="c-badge c-badge-cyan-light">Value
     <a href="#" class="c-badge-close"></a>
   </div>
+  <div class="c-badge c-badge-blue-light">Value
+    <a href="#" class="c-badge-close"></a>
+  </div>
   <div class="c-badge c-badge-grape-light">Value
     <a href="#" class="c-badge-close"></a>
   </div>
@@ -474,6 +530,7 @@
   <div class="c-badge c-badge-square c-badge-warning">Value</div>
   <div class="c-badge c-badge-square c-badge-danger">Value</div>
   <div class="c-badge c-badge-square c-badge-cyan">Value</div>
+  <div class="c-badge c-badge-square c-badge-blue">Value</div>
   <div class="c-badge c-badge-square c-badge-grape">Value</div>
   <div class="c-badge c-badge-square c-badge-indigo">Value</div>
   <div class="c-badge c-badge-square c-badge-lime">Value</div>
@@ -486,6 +543,7 @@
   <div class="c-badge c-badge-square c-badge-warning-light">Value</div>
   <div class="c-badge c-badge-square c-badge-danger-light">Value</div>
   <div class="c-badge c-badge-square c-badge-cyan-light">Value</div>
+  <div class="c-badge c-badge-square c-badge-blue-light">Value</div>
   <div class="c-badge c-badge-square c-badge-grape-light">Value</div>
   <div class="c-badge c-badge-square c-badge-indigo-light">Value</div>
   <div class="c-badge c-badge-square c-badge-lime-light">Value</div>
@@ -514,6 +572,9 @@
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-square c-badge-cyan">Value
+    <a href="#" class="c-badge-close"></a>
+  </div>
+  <div class="c-badge c-badge-square c-badge-blue">Value
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-square c-badge-grape">Value
@@ -550,6 +611,9 @@
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-square c-badge-cyan-light">Value
+    <a href="#" class="c-badge-close"></a>
+  </div>
+  <div class="c-badge c-badge-square c-badge-blue-light">Value
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-square c-badge-grape-light">Value
@@ -590,6 +654,7 @@
   <div class="c-badge c-badge-lg c-badge-warning"></div>
   <div class="c-badge c-badge-lg c-badge-danger"></div>
   <div class="c-badge c-badge-lg c-badge-cyan"></div>
+  <div class="c-badge c-badge-lg c-badge-blue"></div>
   <div class="c-badge c-badge-lg c-badge-grape"></div>
   <div class="c-badge c-badge-lg c-badge-indigo"></div>
   <div class="c-badge c-badge-lg c-badge-lime"></div>
@@ -602,6 +667,7 @@
   <div class="c-badge c-badge-lg c-badge-warning-light"></div>
   <div class="c-badge c-badge-lg c-badge-danger-light"></div>
   <div class="c-badge c-badge-lg c-badge-cyan-light"></div>
+  <div class="c-badge c-badge-lg c-badge-blue-light"></div>
   <div class="c-badge c-badge-lg c-badge-grape-light"></div>
   <div class="c-badge c-badge-lg c-badge-indigo-light"></div>
   <div class="c-badge c-badge-lg c-badge-lime-light"></div>
@@ -616,6 +682,7 @@
   <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-warning c-m-right-xs"></div> Text</span>
   <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-danger c-m-right-xs"></div> Text</span>
   <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-cyan c-m-right-xs"></div> Text</span>
+  <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-blue c-m-right-xs"></div> Text</span>
   <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-grape c-m-right-xs"></div> Text</span>
   <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-indigo c-m-right-xs"></div> Text</span>
   <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-lime c-m-right-xs"></div> Text</span>
@@ -628,6 +695,7 @@
   <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-warning-light c-m-right-xs"></div> Text</span>
   <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-danger-light c-m-right-xs"></div> Text</span>
   <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-cyan-light c-m-right-xs"></div> Text</span>
+  <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-blue-light c-m-right-xs"></div> Text</span>
   <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-grape-light c-m-right-xs"></div> Text</span>
   <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-indigo-light c-m-right-xs"></div> Text</span>
   <span class="c-header-lg c-m-sm"><div class="c-badge c-badge-lg c-badge-lime-light c-m-right-xs"></div> Text</span>
@@ -647,6 +715,7 @@
   <div class="c-badge c-badge-lg c-badge-warning">Value</div>
   <div class="c-badge c-badge-lg c-badge-danger">Value</div>
   <div class="c-badge c-badge-lg c-badge-cyan">Value</div>
+  <div class="c-badge c-badge-lg c-badge-blue">Value</div>
   <div class="c-badge c-badge-lg c-badge-grape">Value</div>
   <div class="c-badge c-badge-lg c-badge-indigo">Value</div>
   <div class="c-badge c-badge-lg c-badge-lime">Value</div>
@@ -659,6 +728,7 @@
   <div class="c-badge c-badge-lg c-badge-warning-light">Value</div>
   <div class="c-badge c-badge-lg c-badge-danger-light">Value</div>
   <div class="c-badge c-badge-lg c-badge-cyan-light">Value</div>
+  <div class="c-badge c-badge-lg c-badge-blue-light">Value</div>
   <div class="c-badge c-badge-lg c-badge-grape-light">Value</div>
   <div class="c-badge c-badge-lg c-badge-indigo-light">Value</div>
   <div class="c-badge c-badge-lg c-badge-lime-light">Value</div>
@@ -686,6 +756,9 @@
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-lg c-badge-cyan">Value
+    <a href="#" class="c-badge-close"></a>
+  </div>
+  <div class="c-badge c-badge-lg c-badge-blue">Value
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-lg c-badge-grape">Value
@@ -724,6 +797,9 @@
   <div class="c-badge c-badge-lg c-badge-cyan-light">Value
     <a href="#" class="c-badge-close"></a>
   </div>
+  <div class="c-badge c-badge-lg c-badge-blue-light">Value
+    <a href="#" class="c-badge-close"></a>
+  </div>
   <div class="c-badge c-badge-lg c-badge-grape-light">Value
     <a href="#" class="c-badge-close"></a>
   </div>
@@ -758,6 +834,7 @@
   <div class="c-badge c-badge-lg c-badge-square c-badge-warning">Value</div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-danger">Value</div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-cyan">Value</div>
+  <div class="c-badge c-badge-lg c-badge-square c-badge-blue">Value</div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-grape">Value</div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-indigo">Value</div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-lime">Value</div>
@@ -770,6 +847,7 @@
   <div class="c-badge c-badge-lg c-badge-square c-badge-warning-light">Value</div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-danger-light">Value</div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-cyan-light">Value</div>
+  <div class="c-badge c-badge-lg c-badge-square c-badge-blue-light">Value</div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-grape-light">Value</div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-indigo-light">Value</div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-lime-light">Value</div>
@@ -798,6 +876,9 @@
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-cyan">Value
+    <a href="#" class="c-badge-close"></a>
+  </div>
+  <div class="c-badge c-badge-lg c-badge-square c-badge-blue">Value
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-grape">Value
@@ -834,6 +915,9 @@
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-cyan-light">Value
+    <a href="#" class="c-badge-close"></a>
+  </div>
+  <div class="c-badge c-badge-lg c-badge-square c-badge-blue-light">Value
     <a href="#" class="c-badge-close"></a>
   </div>
   <div class="c-badge c-badge-lg c-badge-square c-badge-grape-light">Value
@@ -985,6 +1069,7 @@
   <div class="c-m-sm c-badge c-badge-sm c-badge-warning">A</div>
   <div class="c-m-sm c-badge c-badge-sm c-badge-danger">A</div>
   <div class="c-m-sm c-badge c-badge-sm c-badge-cyan">A</div>
+  <div class="c-m-sm c-badge c-badge-sm c-badge-blue">A</div>
   <div class="c-m-sm c-badge c-badge-sm c-badge-grape">A</div>
   <div class="c-m-sm c-badge c-badge-sm c-badge-indigo">A</div>
   <div class="c-m-sm c-badge c-badge-sm c-badge-lime">A</div>
@@ -997,6 +1082,7 @@
   <div class="c-m-sm c-badge c-badge-sm c-badge-warning-light">A</div>
   <div class="c-m-sm c-badge c-badge-sm c-badge-danger-light">A</div>
   <div class="c-m-sm c-badge c-badge-sm c-badge-cyan-light">A</div>
+  <div class="c-m-sm c-badge c-badge-sm c-badge-blue-light">A</div>
   <div class="c-m-sm c-badge c-badge-sm c-badge-grape-light">A</div>
   <div class="c-m-sm c-badge c-badge-sm c-badge-indigo-light">A</div>
   <div class="c-m-sm c-badge c-badge-sm c-badge-lime-light">A</div>
@@ -1017,6 +1103,7 @@
   <div class="c-m-sm c-badge c-badge-warning">A</div>
   <div class="c-m-sm c-badge c-badge-danger">A</div>
   <div class="c-m-sm c-badge c-badge-cyan">A</div>
+  <div class="c-m-sm c-badge c-badge-blue">A</div>
   <div class="c-m-sm c-badge c-badge-grape">A</div>
   <div class="c-m-sm c-badge c-badge-indigo">A</div>
   <div class="c-m-sm c-badge c-badge-lime">A</div>
@@ -1029,6 +1116,7 @@
   <div class="c-m-sm c-badge c-badge-warning-light">A</div>
   <div class="c-m-sm c-badge c-badge-danger-light">A</div>
   <div class="c-m-sm c-badge c-badge-cyan-light">A</div>
+  <div class="c-m-sm c-badge c-badge-blue-light">A</div>
   <div class="c-m-sm c-badge c-badge-grape-light">A</div>
   <div class="c-m-sm c-badge c-badge-indigo-light">A</div>
   <div class="c-m-sm c-badge c-badge-lime-light">A</div>
@@ -1049,6 +1137,7 @@
   <div class="c-m-sm c-badge c-badge-lg c-badge-warning">A</div>
   <div class="c-m-sm c-badge c-badge-lg c-badge-danger">A</div>
   <div class="c-m-sm c-badge c-badge-lg c-badge-cyan">A</div>
+  <div class="c-m-sm c-badge c-badge-lg c-badge-blue">A</div>
   <div class="c-m-sm c-badge c-badge-lg c-badge-grape">A</div>
   <div class="c-m-sm c-badge c-badge-lg c-badge-indigo">A</div>
   <div class="c-m-sm c-badge c-badge-lg c-badge-lime">A</div>
@@ -1061,6 +1150,7 @@
   <div class="c-m-sm c-badge c-badge-lg c-badge-warning-light">A</div>
   <div class="c-m-sm c-badge c-badge-lg c-badge-danger-light">A</div>
   <div class="c-m-sm c-badge c-badge-lg c-badge-cyan-light">A</div>
+  <div class="c-m-sm c-badge c-badge-lg c-badge-blue-light">A</div>
   <div class="c-m-sm c-badge c-badge-lg c-badge-grape-light">A</div>
   <div class="c-m-sm c-badge c-badge-lg c-badge-indigo-light">A</div>
   <div class="c-m-sm c-badge c-badge-lg c-badge-lime-light">A</div>

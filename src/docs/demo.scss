@@ -46,7 +46,7 @@ $docs-spacer-xxl: space(xl) + space(md);
     border-radius: $radius-sm;
     background-color: white;
     padding: 0 $docs-spacer-sm;
-    margin-top: $docs-spacer-sm;
+    margin: $docs-spacer-sm 0;
     font-weight: $font-weight-bold;
     font-family: $font-family-sans;
     border: 1px solid $color-gray-1;
@@ -326,6 +326,85 @@ $docs-spacer-xxl: space(xl) + space(md);
     border: 1px solid rgba(0, 0, 0, 0.2);
   }
 }
+
+
+
+.docs-flavor-switch {
+  position: relative;
+}
+
+.docs-flavor-list {
+  left: 0;
+  top: 38px;
+  opacity: 0;
+  width: 100%;
+  z-index: 1001;
+  padding-left: 0;
+  list-style: none;
+  position: absolute;
+  visibility: hidden;
+  background: white;
+  border-radius: $radius-sm;
+  border: 1px solid $color-gray-2;
+  transition: opacity 0.15s linear, top 0.15s linear;
+
+  &-item a {
+    display: flex;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    overflow: hidden;
+    line-height: 20px;
+    margin: $space-sm;
+    padding: $space-sm;
+    white-space: nowrap;
+    color: $color-gray-8;
+    text-overflow: ellipsis;
+    transition: background-color 0.25s linear;
+
+    &:hover {
+      background-color: $color-gray-1;
+      color: $color-gray-8;
+    }
+  }
+}
+
+
+.docs-flavor-button {
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+  min-height: 32px;
+  line-height: 20px;
+  color: $color-gray-8;
+  display: inline-block;
+  border-radius: $radius-sm;
+  background-color: $color-gray-1;
+  border: 1px solid $color-gray-4;
+  transition: background-color 0.2s linear;
+  padding: $space-xs 34px $space-xs $space-sm;
+
+  &:hover {
+    background-color: $color-gray-0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: $color-gray-8;
+  }
+}
+
+.is-open > .docs-flavor-list {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 
 

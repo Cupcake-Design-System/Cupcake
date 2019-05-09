@@ -5,6 +5,22 @@
 <body class="docs-container {{bodyClass}}">
     <div class="docs-body">
       <main class="docs-content docs-content-fullwidth">
+          <div id="customize-menu" class="docs-flavor-switch c-d-none c-sm-d-block c-m-top-lg" style="width: 250px;">
+              <input type="hidden" name="Framework" id="Framework" class="docs-flavor-switch-input">
+              <span class="docs-flavor-button docs-flavor-switch-current">Select A Flavor</span>
+              <ul id="styleOptions" title="switch styling" class="docs-flavor-list">
+                <li class="docs-flavor-list-item" data-dropdown-value="default">
+                  <a href="#" class="flavor" data-theme="cupcake">Default</a>
+                </li>
+                <li class="docs-flavor-list-item" data-dropdown-value="mint">
+                  <a href="#" class="flavor" data-theme="cupcake-mint">Mint</a>
+                </li>
+              </ul>
+            </div>
+
+          {{> space}}
+
+
           {% body %}
       </main>
     </div>

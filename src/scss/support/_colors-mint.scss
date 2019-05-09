@@ -1,18 +1,18 @@
 $color-black: #000000 !default;
 $color-white: #ffffff !default;
 
-$color-primary-0: #e8f7ff !default;
-$color-primary-1: #ccedff !default;
-$color-primary-2: #a3daff !default;
-$color-primary-3: #72c3fc !default;
-$color-primary-4: #4dadf7 !default;
-$color-primary-5: #329af0 !default;
-$color-primary-6: #228ae6 !default;
-$color-primary-7: #1c7cd6 !default;
-$color-primary-8: #1b6ec2 !default;
-$color-primary-9: #1862ab !default;
+$color-primary-0: #def5f5 !default;
+$color-primary-1: #afe6e6 !default;
+$color-primary-2: #7cd6d7 !default;
+$color-primary-3: #49c5c9 !default;
+$color-primary-4: #21bac0 !default;
+$color-primary-5: #00aeb8 !default;
+$color-primary-6: #009ea7 !default;
+$color-primary-7: #008a8e !default;
+$color-primary-8: #007778 !default;
+$color-primary-9: #055350 !default;
 
-$color-primary: $color-primary-8 !default;
+$color-primary: $color-primary-7 !default;
 
 
 $color-success-0: #ebfbee !default;
@@ -26,7 +26,7 @@ $color-success-7: #37b24d !default;
 $color-success-8: #2f9e44 !default;
 $color-success-9: #2b8a3e !default;
 
-$color-success:  $color-success-8 !default;
+$color-success: $color-success-8 !default;
 
 
 $color-warning-0: #fff9db !default;
@@ -37,10 +37,10 @@ $color-warning-4: #ffd43b !default;
 $color-warning-5: #fcc419 !default;
 $color-warning-6: #fab005 !default;
 $color-warning-7: #f59f00 !default;
-$color-warning-8: #f08c00 !default;
+$color-warning-8:  #f08c00 !default;
 $color-warning-9: #e67700 !default;
 
-$color-warning:  $color-warning-8 !default;
+$color-warning: $color-warning-8 !default;
 
 
 $color-danger-0: #fff5f5 !default;
@@ -78,6 +78,7 @@ $color-blue-6: #228ae6 !default;
 $color-blue-7: #1c7cd6 !default;
 $color-blue-8: #1b6ec2 !default;
 $color-blue-9: #1862ab !default;
+
 
 $color-cyan-0: #e3fafc !default;
 $color-cyan-1: #c5f6fa !default;
