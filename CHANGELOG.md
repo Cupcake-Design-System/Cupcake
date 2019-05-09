@@ -1,11 +1,22 @@
+## Release [2.0.0-beta.6](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.5...2.0.0-beta.6) :rocket:
+**9 May 2019**
+
+### Merged
+- Feature(mint flavor) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/104)**
+
+### Commits
+- Update CHANGELOG.md **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/7cb528b219bc828e4dc21500dc65fcd45e0ef6d3)**
+
 ## Release [2.0.0-beta.5](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.4...2.0.0-beta.5) :rocket:
 **27 April 2019**
 
+### Merged
+- Chore(splitting experimental) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/103)**
+
 ### Commits
-- splits experimental work into its own file
-- updates npm scripts
-- updates export mixins
-- updates avatar regressions
+- compile before release **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/c12f3f204f303665a35d604fa82807319281d208)**
+- Release 2.0.0-beta.5 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/400bc7a0d5dc14daa779eed5fc1cb614d007ebb4)**
+- release **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/e661598c91ba7a03850fe4a80682906967a6d4c3)**
 
 ## Release [2.0.0-beta.4](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.3...2.0.0-beta.4) :rocket:
 **25 April 2019**
