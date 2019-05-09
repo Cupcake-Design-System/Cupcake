@@ -33,9 +33,6 @@ var themeSettings = getThemeSettings();
 var $app = $('#docs-app');
 var $styleLink = $('#theme-style');
 var $customizeMenu = $('#customize-menu');
-
-
-// Color switcher
 var $customizeMenuDropdown = $customizeMenu.find('.flavor');
 
 
@@ -78,7 +75,6 @@ function setThemeState() {
 }
 
 
-
 // Update theme controls based on options
 function setThemeControlsState() {
   // set color switcher
@@ -90,6 +86,35 @@ function setThemeControlsState() {
     }
   });
 }
+
+
+// $(function () {
+//   /************************************************
+//   * Flavor Switch
+//   *************************************************/
+
+//   var selectElement = $("select");
+//   selectElement.change(function() {
+//       $("select option:selected").each(function() {
+//           switchTheme($(this).val());
+//       })
+//   });
+
+//   themeKey = "cupcake";
+
+//   function switchTheme(themeName) {
+//       var name = "cupcake";
+//       if (themeName == null) {
+//           var storedName = localStorage.getItem(themeKey);
+//           if (storedName != null)
+//               name = storedName;
+//       } else {
+//           name = themeName;
+//           localStorage.setItem(themeKey, name);
+//       }
+//       $('#theme-style').attr('href', '../' + name + ".css");
+//   }
+// }(jQuery));
 
 
 

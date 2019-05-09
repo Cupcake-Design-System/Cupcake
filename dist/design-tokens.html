@@ -9,27 +9,23 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="../demo.css">
 
-  <script>
-    var flavor = location.search.replace(/(^\?)/g, '') || 'cupcake';
-    document.write('<link media="all" rel="stylesheet" href="../' + flavor + '.css">');
-  </script>
 
-<script>
-  var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
-    {};
-  var themeName = themeSettings.themeName || '';
-  if (themeName) {
-    document.write('<link rel="stylesheet" id="theme-style" href="../' + themeName + '.css">');
-  } else {
-    document.write('<link rel="stylesheet" id="theme-style" href="../cupcake.css">');
-  }
-</script>
+  <script>
+    var themeSettings =  (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+    var themeName = themeSettings.themeName || '';
+    if (themeName) {
+      document.write('<link rel="stylesheet" id="theme-style" href="../' + themeName + '.css">');
+    }
+    else {
+      document.write('<link rel="stylesheet" id="theme-style" href="../cupcake.css">');
+    }
+  </script>
 
 <link rel="stylesheet" href="../cupcake-shim.css">
 <link rel="stylesheet" href="../experimental.css">
 </head>
 
-<body class="docs-container">
+<body id="docs-app" class="docs-container">
   <div class="docs-body">
     <main class="docs-content">
         <div class="docs-menu-toggle">
@@ -503,6 +499,7 @@
 </div>
 
 
+
     </main>
     <nav class="docs-nav">
       <div class="docs-nav-header">
@@ -513,18 +510,19 @@
     
         <div class="docs-version">Version 2.0</div>
     
-        <div id="customize-menu" class="docs-flavor-switch c-d-none c-sm-d-block c-m-top-lg">
-            <input type="hidden" name="Framework" id="Framework" class="docs-flavor-switch-input">
+        <div id="customize-menu" class="docs-flavor-switch c-dropdown c-d-none c-sm-d-block c-m-top-lg">
+            <input type="hidden" class="docs-flavor-switch-input">
             <span class="docs-flavor-button docs-flavor-switch-current">Select A Flavor</span>
-            <ul id="styleOptions" title="switch styling" class="docs-flavor-list">
+            <ul id="styleOptions" class="c-dropdown-list c-dropdown-list-below" style="min-width: 160px;">
               <li class="docs-flavor-list-item" data-dropdown-value="default">
-                <a href="#" class="flavor" data-theme="cupcake">Default</a>
+                <a href="#" class="c-dropdown-item flavor" data-theme="cupcake">Default</a>
               </li>
               <li class="docs-flavor-list-item" data-dropdown-value="mint">
-                <a href="#" class="flavor" data-theme="cupcake-mint">Mint</a>
+                <a href="#" class="c-dropdown-item flavor" data-theme="cupcake-mint">Mint</a>
               </li>
             </ul>
           </div>
+    
       </div>
     
       <ul class="docs-nav-items">
