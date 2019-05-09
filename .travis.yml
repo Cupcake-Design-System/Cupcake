@@ -8,7 +8,7 @@ before_script:
   - gem install percy-cli
 script:
   - npm run test
-  - if [ "$BRANCH" == "master" ]; then percy snapshot --widths "1280" dist/ --enable_javascript; fi
+  - percy snapshot --widths "1280" dist/ --enable_javascript
 deploy:
   provider: surge
   project: ./dist
