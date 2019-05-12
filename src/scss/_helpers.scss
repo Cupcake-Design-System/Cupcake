@@ -38,4 +38,30 @@
   @include radius-class-export;
 }
 
+.c-icon {
+  &-xs {
+    font-size: $font-body-xs + 2;
+  }
+
+  &-sm {
+    font-size: $font-body-md + 4;
+  }
+
+  &-md {
+    font-size: $font-body-md * 2;
+  }
+
+  &-lg {
+    font-size: $font-body-xl * 2;
+  }
+
+  &-xl {
+    font-size: $font-body-xl * 3;
+  }
+
+  &-xxl {
+    font-size: $font-body-xxl * 4;
+  }
+}
+
 @include misc-class-export;

@@ -58,23 +58,6 @@ function htmlTask(done) {
 }
 
 
-// Browser Tasks
-// ------------------
-function reloadTask(done) {
-  browserSync.reload();
-  done();
-}
-
-function serveTask(done) {
-  browserSync.init({
-    server: {
-      baseDir: files.distPath
-    }
-  });
-  done();
-}
-
-
 // Scss Tasks
 // ------------------
 function scssTask() {
@@ -86,7 +69,8 @@ function scssTask() {
   .pipe(autoprefixer('last 2 versions'))
   .pipe(addHeader(metaHeader))
   .pipe(sourcemaps.write('./maps/'))
-  .pipe(gulp.dest(files.distPath));
+  .pipe(gulp.dest(files.distPath))
+  .pipe(browserSync.reload({ stream: true }));
 }
 
 
@@ -123,10 +107,26 @@ function jsTask() {
 }
 
 
+// Browser Tasks
+// ------------------
+function reloadTask(done) {
+  browserSync.reload();
+  done();
+}
+
+function serveTask(done) {
+  browserSync.init({
+    server: {
+      baseDir: files.distPath
+    }
+  });
+  done();
+}
+
 // Watch Tasks
 // ------------------
 function watchTask() {
-  gulp.watch(files.scssPath + '**/*.scss', gulp.series(scssTask, reloadTask));
+  gulp.watch([files.scssPath + '**/*.scss', files.scssPath + '*.scss'], scssTask);
   gulp.watch(files.scssDocsPath, gulp.series(scssDocsTask, reloadTask));
   gulp.watch(files.jsPath, gulp.series(jsTask, reloadTask));
   gulp.watch(files.htmlPath, gulp.series(htmlTask, reloadTask));

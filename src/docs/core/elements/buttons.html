@@ -3,7 +3,7 @@ title: Buttons
 notes: Buttons trigger interactions throughout the experience.
 ---
 
-{{#each btn.color}}
+{{#each toolkit.btn-colors}}
 {{#each this}}
 <button class="c-btn c-btn-{{this}}">Button</button>
 <button class="c-btn c-btn-link c-btn-link-{{this}}">Button Link</button>
@@ -19,13 +19,13 @@ notes: Buttons trigger interactions throughout the experience.
 
 <br><br>
 
-{{#each btn.color}}
+{{#each toolkit.btn-colors}}
 {{#each this}}
 <div class="c-btn c-btn-{{this}} c-btn-circle"><i class="fa fa-download"></i></div>
 {{/each}}
 {{/each}}
 
-{{#each btn.color}}
+{{#each toolkit.btn-colors}}
 {{#each this}}
 <div class="c-btn c-btn-{{this}} c-btn-box"><i class="fa fa-download"></i></div>
 {{/each}}
@@ -40,4 +40,3 @@ notes: Buttons trigger interactions throughout the experience.
 </div>
 
 <br><br>
-

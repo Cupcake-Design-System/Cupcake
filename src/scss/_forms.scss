@@ -82,16 +82,6 @@ textarea.c-input {
   }
 }
 
-
-// Form Input Colors (NG specific)
-@each $ng-state, $color in $control-ng-validation {
-  .c-ng-validate.ng-dirty.#{$ng-state},
-  .c-ng-validate-form .ng-dirty.#{$ng-state} {
-    @extend .c-input-#{$color};
-  }
-}
-
-
 // Form Input Sizes
 @each $name, $height, $padding, $font-size in config($control-sizes) {
   .c-input-#{$name} {
@@ -356,5 +346,15 @@ textarea.c-input {
   .c-hint {
     margin: $space-0;
     position: relative;
+  }
+}
+
+// Form Input Colors (NG specific)
+@if $enable-NGform-colors == true {
+  @each $ng-state, $color in $control-ng-validation {
+    .c-ng-validate.ng-dirty.#{$ng-state},
+    .c-ng-validate-form .ng-dirty.#{$ng-state} {
+      @extend .c-input-#{$color};
+    }
   }
 }
