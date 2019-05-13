@@ -3,12 +3,14 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/cupcake-design-system/cupcake/badge)](https://www.codefactor.io/repository/github/cupcake-design-system/cupcake)
 [![Travis (.org)](https://img.shields.io/travis/Cupcake-Design-System/Cupcake.svg)](https://travis-ci.org/Cupcake-Design-System/Cupcake)
 ![David](https://img.shields.io/david/Cupcake-Design-System/Cupcake.svg)
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg)](https://github.com/Cupcake-Design-System/Cupcake)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/00ab3d48-03ee-40f5-b448-10efe6c7ff7d/deploy-status)](https://app.netlify.com/sites/cupcake/deploys)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Cupcake/Cupcake-2)
 
 # Cupcake 2.0 
 
 This repository includes everything you need to build, customize, test, and deploy Cupcake.
+
+[View the docs page for Cupcake](https://cupcake-design-system.github.io)
 
 ## Table of Contents
 
@@ -42,19 +44,11 @@ This starter also features a number of great software (in the words of their cre
 
 ## Installation
 
-### Install Babel
-
-[Install Babel globally](https://babeljs.io/docs/usage/cli/#installation).
-
-```
-npm install --global babel-cli
-```
-
 ### Install Gulp
 [Install Gulp globally](http://gulpjs.com/).
 
 ```
-npm install --global gulp-cli
+npm install gulp-cli -g
 ```
 
 ## Getting started
