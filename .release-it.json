@@ -20,12 +20,5 @@
   },
   "git": {
     "requireCleanWorkingDir": false
-  },
-  "github": {
-      "release": true,
-      "releaseName": "Release %s 🚀",
-      "preRelease": true,
-      "draft": false,
-      "tokenRef": "GITHUB_TOKEN"
   }
 }

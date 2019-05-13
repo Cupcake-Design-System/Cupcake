@@ -1,3 +1,6 @@
+## Release [2.0.0-beta.8](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.7...2.0.0-beta.8) :rocket:
+**13 May 2019**
+
 ## Release [2.0.0-beta.7](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.6...2.0.0-beta.7) :rocket:
 **13 May 2019**
 
@@ -5,6 +8,7 @@
 - FInal cleanup **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/105)**
 
 ### Commits
+- Release 2.0.0-beta.7 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/3af0c684052c382c50c779a0ebecaa9f63d22db2)**
 - add jstask to build **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/40e4153cd8f1c128e865e3ab095fb8241d1b93b0)**
 
 ## Release [2.0.0-beta.6](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.5...2.0.0-beta.6) :rocket:
