@@ -1,3 +1,12 @@
+## Release [2.0.0-beta.7](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.6...2.0.0-beta.7) :rocket:
+**13 May 2019**
+
+### Merged
+- FInal cleanup **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/105)**
+
+### Commits
+- add jstask to build **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/40e4153cd8f1c128e865e3ab095fb8241d1b93b0)**
+
 ## Release [2.0.0-beta.6](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.5...2.0.0-beta.6) :rocket:
 **9 May 2019**
 
@@ -5,6 +14,7 @@
 - Feature(mint flavor) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/104)**
 
 ### Commits
+- Release 2.0.0-beta.6 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/32d1ce6524b9a2caabfbe6adb7d56a0bd60e74b8)**
 - Update CHANGELOG.md **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/7cb528b219bc828e4dc21500dc65fcd45e0ef6d3)**
 
 ## Release [2.0.0-beta.5](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.4...2.0.0-beta.5) :rocket:
