@@ -4,9 +4,9 @@
 [![Travis (.org)](https://img.shields.io/travis/Cupcake-Design-System/Cupcake.svg)](https://travis-ci.org/Cupcake-Design-System/Cupcake)
 ![David](https://img.shields.io/david/Cupcake-Design-System/Cupcake.svg)
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg)](https://github.com/Cupcake-Design-System/Cupcake)
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Cupcake/Cupcake-2)
 
-
-# Cupcake 2.0 UNDER DEVELOPMENT
+# Cupcake 2.0 
 
 This repository includes everything you need to build, customize, test, and deploy Cupcake.
 
@@ -24,10 +24,8 @@ This starter also features a number of great software (in the words of their cre
 - [Gulp](http://gulpjs.com/) - a task automation tool.
 - [Browsersync](https://www.browsersync.io/) - time-saving synchronised browser testing, keep multiple browsers & devices in sync when editing files.
 - [Sass](http://sass-lang.com/) - CSS with superpowers.
-- [SassDoc](http://sassdoc.com/) - Automated sass code docs.
-- [PostCSS](https://github.com/postcss/postcss) - a tool for transforming styles with JS plugins.
 - [Autoprefixer](https://github.com/postcss/autoprefixer) - adding vendor prefixes by the rules of [Can I Use](http://caniuse.com/).
-- [csso](https://github.com/css/csso) - a CSS minifier with structural optimizations.
+- [clean-css](https://github.com/jakubpawlowicz/clean-css) - Fast and efficient CSS optimizer for node.js and the Web.
 - [Stylelint](http://stylelint.io/) - a mighty, modern CSS linter
 
 ### Html
@@ -93,28 +91,7 @@ Task name          | Description
 `default`          | will start all tasks required by project in dev mode: initial build, watch files, run server with livereload
 `build`            | builds all content and assets from `src` to `dist`.
 `dev`              | builds your project without optimization.
-`docs`             | builds sassdocs.
 `test`             | runs sass unit tests.
-
-### Core tasks
-Task name          | Description                                                      
-:------------------|:----------------------------------
-`styles`           | compile all scss from `src/styles` to `dist/assets/styles` folder. 
-`scripts`          | compile all js from `src/scripts` to `dist/assets/scripts` folder. 
-`html`             | compile all hbs files to html files.
-
-### Assets related tasks
-Task name          | Description                                                      
-:------------------|:----------------------------------
-`copy`             | copy files from `src/assets` path to `dist/assets` path.
-
-### Dev tasks
-Task name          | Description                                                      
-:------------------|:----------------------------------
-`clean`            | remove `dist` folder.
-`server`           | start a BrowserSync instance.
-`settings`         | generate a variables file.
-`watch`            | watchs for changes in `src/` path and rebuilds parts of the site as necessary.
 
 
 All available tasks are placed in a folder `tasks`. 
@@ -131,8 +108,6 @@ Everything's ready to get started right away:
 - compiles & builds everything
 - minifies & compresses everything
 
-## Configuration
-Global variables and site metadata can be found inside `config.js`. Your can make some modification in the file.
 
 ## Directory Structure
 
@@ -143,24 +118,37 @@ The rest of the folders and files only exist to make your life easier, and shoul
 Below you can find full details about significant files and folders.
 
 ```bash
-├── README.md               # Readme file
-├── package.json            # Dependencies for node.js
-├── .gitignore              # Git ignore rules
-├── gulpfile.babel.js       # The Gulp task manager configuration
-├── /tasks/                 # Gulp tasks definitions
-├── /dist/                  # Minified, optimized and compiled files
-│   ├── /assets/            # Assets folder
-│   │   ├── /maps/          # SourceMaps for CSS files
-│   │   ├── /scripts/       # JS files
-│   │   ├── /fonts/         # Fonts folder
-│   │   └── /images/        # Images files
-│   └── *.html              # Rendered and compiled HTMLs from hbs
-└── /html/                   # The source code of the html
-    ├── /views/             # Html folder
-    │   ├── /layouts/       # Handlebars layouts
-            └── /includes/  # Handlebars partials that are included / extended
-    │   └──  /pages/        # Handlebars pages, one per page on the site
-    └── /data/              # Metadata associated with the site.
+├── README.md                 # Readme file
+├── package.json              # Dependencies for node.js
+├── .gitignore                # Git ignore rules
+├── gulpfile.js               # The Gulp task manager configuration
+├── /dist                     # Minified, optimized and compiled files
+│   ├── /maps/                # SourceMaps for CSS files
+│   ├── /pages/               # Rendered and compiled HTML pages
+│   ├── /cupcake.css          # Main cupcake CSS file
+│   ├── /cupcake-shim.css     # Cupcake shim CSS file for legacy compat.
+│   ├── /cupcake-mint.css     # Main cupcake mint flavor css file
+│   ├── /cupcake.min.css      # Main cupcake CSS file minified
+│   ├── /cupcake-shim.min.css # Shim file minified
+│   ├── /cupcake-mint.min.css # Mint file minified
+│   └── *.html                # Rendered and compiled HTML
+└── /src                      # The source code of the html
+    ├── /docs                 # Html folder
+        ├── /assets           # demo js for docs site and style
+        ├── /core             # Handlebars layouts
+            ├── /elements     # Element HTML - these are surfaced first
+            ├── /experimental # Experimental HTML
+            └── /tokens       # Tokens HTML 
+        ├── /data             # Metadata associated with the site.      
+        ├── /views            # Handlebars Views
+            ├── /layouts      # Handlebars layouts
+            ├── /pages        # Demo pages with extended html examples
+            └── *.html        # Landing pages             
+        └── /demo.scss        # Styling for docs page
+    └── /scss                 # Html folder
+        ├── /support          # Supporting scss files
+        └── *.scss            # Element scss files
+    └── /test                 # Tests folder    
 ```
 
 ## Running tests
