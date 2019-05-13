@@ -127,6 +127,51 @@ layout: blank
 
   {{> space}}
 
+  {{> space}}
+
+
+  <h3>Additional Options</h3>
+  <br>
+
+
+{{#each toolkit.colors}}
+{{#each this}}
+<div class="c-radio c-radio-{{this}} c-m-sm">
+  <input type="radio" id="radio5" name="radio3" checked="checked">
+  <label for="radio5"></label>
+</div>
+{{/each}}
+{{#each this}}
+<div class="c-checkbox c-checkbox-{{this}} c-m-sm">
+  <input type="checkbox" id="checkbox5" name="checkbox4" checked="checked">
+  <label for="checkbox5"></label>
+</div>
+{{/each}}
+{{/each}}
+
+
+
+<div class="c-checkbox c-checkbox-lg c-m-sm">
+  <input type="checkbox" id="checkbox5" name="checkbox4" checked="checked">
+  <label for="checkbox5">Large</label>
+</div>
+
+<div class="c-checkbox c-checkbox-xl c-m-sm">
+  <input type="checkbox" id="checkbox5" name="checkbox4" checked="checked">
+  <label for="checkbox5">Extra Large</label>
+</div>
+
+<div class="c-radio c-radio-lg c-m-sm">
+  <input type="radio" id="radio5" name="radio3" checked="checked">
+  <label for="radio5">Large</label>
+</div>
+
+<div class="c-radio c-radio-xl c-m-sm">
+    <input type="radio" id="radio5" name="radio3" checked="checked">
+    <label for="radio5">Extra Large</label>
+  </div>
+
+
 <script>
 var checkbox = document.getElementById("demo");
 checkbox.indeterminate = true;

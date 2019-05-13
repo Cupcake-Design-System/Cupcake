@@ -2,7 +2,7 @@
 /* ----------------------- */
 /* 🎂 CUPCAKE 🎂 */
 /* pkg name: @cupcake-ds/cupcake */
-/* version: 2.0.0-beta.5 */
+/* version: 2.0.0-beta.6 */
 /* file name: experimental.css */
 /* ----------------------- */
 
@@ -49,7 +49,7 @@
 }
 
 .c-nav-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.07);
 }
 
 .c-nav-toggle-active span:nth-child(1) {
@@ -192,7 +192,7 @@
 }
 
 .c-header.c-header-inverse .c-header-item .c-header-search-box {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   background: transparent;
 }
 
@@ -201,7 +201,7 @@
 }
 
 .c-header.c-header-inverse .c-header-item .c-header-search-box:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .c-header.c-header-inverse .c-header-item .c-header-search-icon:hover {

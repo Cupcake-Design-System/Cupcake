@@ -1,6 +1,12 @@
 // --------------------------------------------
 // TYPOGRAPHY ---------------------------------
 // --------------------------------------------
+.c-body-text {
+  @include font-body(md);
+
+  color: $global-text-color;
+}
+
 .c-text {
   @each $key, $font-size in config($font-scale, body) {
     &-#{$key} {
@@ -104,7 +110,7 @@
   }
 }
 
-hr.c-hr {
+.c-hr {
   height: 0;
   clear: both;
   border-top: 0;

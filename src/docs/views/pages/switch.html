@@ -130,14 +130,10 @@ layout: blank
   <label class="c-switch">
     <input type="checkbox" disabled>
     <span class="c-switch-handle"></span>
-
+    <label class="c-switch-label">Default with switch disabled</label>
   </label>
 
-  <label class="c-switch c-switch-success c-switch-lg">
-      <input type="checkbox" checked="">
-      <span class="c-switch-handle"></span>
-      <label class="c-switch-label" data-on="On" data-off="Off">Default with switch disabled</label>
-  </label>
+
 
 
   <br>
@@ -220,3 +216,29 @@ layout: blank
     <span class="c-switch-handle"></span>
     <label class="c-switch-label">Large with switch and label disabled</label>
   </label>
+
+
+  {{> space}}
+
+
+  <h3>Additional Options</h3>
+  <br>
+
+<div class="c-row">
+  {{#each toolkit.colors}}
+  {{#each this}}
+  <label class="c-switch c-switch-{{this}} c-m-sm">
+      <input type="checkbox" checked="">
+      <span class="c-switch-handle"></span>
+      <label class="c-switch-label"></label>
+  </label>
+  {{/each}}
+  {{#each this}}
+  <label class="c-switch c-switch-{{this}} c-switch-lg c-m-sm">
+      <input type="checkbox" checked="">
+      <span class="c-switch-handle"></span>
+      <label class="c-switch-label" data-on="On" data-off="Off"></label>
+  </label>
+  {{/each}}
+  {{/each}}
+</div>

@@ -1,13 +1,642 @@
-// Cupcake master file
+// Cupcake legacy shim
 //
-// Imports all cupcake files in their intended order for easy mass-inclusion.
-// Should you need specific files, you can easily use separate `@import`s.
-@import 'support/support';
-@import 'legacy/legacy-buttons';
-@import 'legacy/legacy-cards';
-@import 'legacy/legacy-notify';
-@import 'legacy/legacy-notification';
-@import 'legacy/legacy-progress';
-@import 'legacy/legacy-tooltips-popovers';
-@import 'legacy/legacy-switches-checkboxes';
 
+@import 'support/support';
+
+/* stylelint-disable */
+$colors-legacy: (
+  primary: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  danger: $color-danger,
+);
+
+@each $name, $color in $colors-legacy {
+  .c-card-#{$name} {
+    color: #fff;
+    border-color: $color;
+    background-color: $color;
+  }
+
+  .c-badge-#{$name}-outline {
+    color: $color;
+    border: 1px solid $color;
+    background-color: transparent;
+  }
+}
+
+.c-card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-right: -$gutter;
+  margin-left: -$gutter;
+  padding: $gutter;
+
+  .c-card {
+    height: 350px;
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: $gutter;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+@media (max-width:575px) {
+  .c-card-deck {
+    padding-left: 0;
+    padding-right: 0;
+
+    .c-card {
+    transform-origin: top left;
+    }
+  }
+}
+
+@media (min-width:768px) {
+  .c-card-deck {
+    padding: 20px;
+    .c-card {
+      flex: 0 0 100%;
+      max-width: 100%
+    }
+  }
+}
+
+@media (min-width:992px) {
+  .c-card-deck {
+    padding: 20px;
+
+    .c-card {
+      flex: 0 0 calc(50% - 5px);
+      max-width: calc(50% - 5px);
+
+      &:nth-child(2n+1) {
+        margin-right: 10px
+      }
+    }
+  }
+}
+
+@media (min-width:1440px) {
+  .c-card-deck {
+    padding: 20px;
+    .c-card {
+      flex: 0 0 calc(33.333% - 6.667px);
+      max-width: calc(33.333% - 6.667px);
+
+      &:nth-child(even),
+      &:nth-child(odd) {
+        margin-left: 0;
+        margin-right: 0
+      }
+
+      &:nth-child(3n+2) {
+        margin: 0 10px
+      }
+    }
+  }
+}
+
+@media (min-width:2110px) {
+  .c-card-deck {
+    padding: 20px;
+
+    .c-card {
+      flex: 0 0 calc(25% - 7.5px);
+      max-width: calc(25% - 7.5px);
+
+      &:nth-child(even),
+      &:nth-child(odd) {
+        margin-left: 0;
+        margin-right: 0
+      }
+
+      &:nth-child(4n+2) {
+        margin-left: 10px;
+        margin-right: 5px
+      }
+
+      &:nth-child(4n+3) {
+        margin-left: 5px;
+        margin-right: 10px
+      }
+    }
+  }
+}
+
+
+// Old Notification and logs style
+.c-notification {
+  right: 0;
+  bottom: 0;
+  top: 50px;
+  width: 415px;
+  border-top: 0;
+  position: fixed;
+  background: #fff;
+  transition: all .2s ease;
+  border: 1px solid #e6e6e6;
+  transform: translateX(415px);
+
+  &-header {
+    display: flex;
+    padding: 14px 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  &-body {
+    right: 0;
+    bottom: 0;
+    top: 43px;
+    width: 100%;
+    overflow-y: scroll;
+    position: absolute;
+  }
+
+  &-open {
+    transform: translateX(0);
+  }
+
+  &-filter {
+    font-weight: 600;
+    font-size: .75rem;
+  }
+
+  &-info {
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: .25rem;
+    list-style-type: none;
+  }
+
+  &-settings {
+    color: #333;
+    font-size: .75rem;
+  }
+
+  &-item {
+    display: flex;
+    padding: 20px;
+    position: relative;
+    font-size: .6875rem;
+    background-color: #fff;
+    color: rgba(51, 51, 51, .8);
+    border-bottom: 1px solid #e6e6e6;
+
+    &:hover {
+      background-color: rgba(249, 149, 0, .2);
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &-unread {
+      background-color: rgba(51, 51, 51, .05);
+    }
+
+    &-left {
+      margin-top: 3px;
+      padding-right: 1rem;
+    }
+  }
+
+  &-author {
+    color: #097fd7;
+    font-weight: 700;
+    font-size: .6875rem;
+  }
+
+  &-date {
+    color: #333;
+
+    &::before {
+      color: #333;
+      content: "•";
+      padding: 0 .25rem;
+      font-size: .6875rem;
+    }
+  }
+
+  &-time {
+    font-style: italic;
+    color: rgba(51, 51, 51, .6);
+
+    &::before {
+      color: #333;
+      content: "•";
+      padding: 0 .25rem;
+      font-size: .6875rem;
+    }
+  }
+}
+
+.c-notify-logs {
+  width: 25vw;
+  z-index: 99999;
+  position: fixed;
+  min-width: 390px;
+
+  .c-alert,
+  .c-toast-alert {
+    opacity: 0;
+    position: relative;
+    pointer-events: none;
+    transition: all .4s cubic-bezier(.25, .8, .25, 1);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, .3), 0 10px 50px rgba(0, 0, 0, .12);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .c-alert.show,
+    .c-toast-alert.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &.top {
+    top: $space-md;
+  }
+
+  &.bottom {
+    bottom: $space-md;
+  }
+
+  &.left {
+    left: $space-md;
+
+    .c-alert,
+    .c-toast-alert {
+      transform: translateX(calc(-110% + $space-md));
+    }
+
+    .c-alert.show,
+    .c-toast-alert.show {
+      transform: translateX(0);
+    }
+  }
+
+  &.right {
+    right: $space-md;
+
+    .c-alert,
+    .c-toast-alert {
+      transform: translateX(calc(110% + $space-md));
+    }
+
+    .c-alert.show,
+    .c-toast-alert.show {
+      transform: translateX(0);
+    }
+  }
+}
+
+// Old Popover and tooltips style
+.c-popover,
+.c-tooltip {
+  z-index: 1;
+  font-size: 14px;
+  background: #fff;
+  max-width: 300px;
+  text-align: left;
+  line-height: 15px;
+  position: absolute;
+  color: $color-gray-7;
+  border: 1px solid #ced4da;
+  padding: $space-sm $space-md;
+  font-family: $font-family-sans;
+  box-shadow: 0 0 9px 0 rgba(0,0,0,.2);
+  border-radius: $global-default-radius;
+}
+.c-popover-top,
+.c-popover[x-placement^=top],
+.c-tooltip-top,
+.c-tooltip[x-placement^=top] {
+  margin-bottom: $space-sm;
+}
+.c-popover-left,
+.c-popover[x-placement^=left],
+.c-tooltip-left,
+.c-tooltip[x-placement^=left] {
+  margin-right: $space-sm;
+}
+.c-popover-right,
+.c-popover[x-placement^=right],
+.c-tooltip-right,
+.c-tooltip[x-placement^=right] {
+  margin-left: $space-sm;
+}
+.c-popover-bottom,
+.c-popover[x-placement^=bottom],
+.c-tooltip-bottom,
+.c-tooltip[x-placement^=bottom] {
+  margin-top: $space-sm;
+}
+.c-popover-arrow,
+.c-tooltip-arrow {
+  position: absolute;
+}
+.c-popover[x-out-of-boundaries],
+.c-tooltip[x-out-of-boundaries] {
+  display: none !important;
+}
+.c-popover-bottom > .c-popover-arrow,
+.c-popover-bottom > .c-popover-arrow::after,
+.c-popover-bottom > .c-tooltip-arrow,
+.c-popover-bottom > .c-tooltip-arrow::after,
+.c-popover-top > .c-popover-arrow,
+.c-popover-top > .c-popover-arrow::after,
+.c-popover-top > .c-tooltip-arrow,
+.c-popover-top > .c-tooltip-arrow::after,
+.c-tooltip-bottom > .c-popover-arrow,
+.c-tooltip-bottom > .c-popover-arrow::after,
+.c-tooltip-bottom > .c-tooltip-arrow,
+.c-tooltip-bottom > .c-tooltip-arrow::after,
+.c-tooltip-top > .c-popover-arrow,
+.c-tooltip-top > .c-popover-arrow::after,
+.c-tooltip-top > .c-tooltip-arrow,
+.c-tooltip-top > .c-tooltip-arrow::after {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+.c-popover-left > .c-popover-arrow,
+.c-popover-left > .c-popover-arrow::after,
+.c-popover-left > .c-tooltip-arrow,
+.c-popover-left > .c-tooltip-arrow::after,
+.c-popover-right > .c-popover-arrow,
+.c-popover-right > .c-popover-arrow::after,
+.c-popover-right > .c-tooltip-arrow,
+.c-popover-right > .c-tooltip-arrow::after,
+.c-tooltip-left > .c-popover-arrow,
+.c-tooltip-left > .c-popover-arrow::after,
+.c-tooltip-left > .c-tooltip-arrow,
+.c-tooltip-left > .c-tooltip-arrow::after,
+.c-tooltip-right > .c-popover-arrow,
+.c-tooltip-right > .c-popover-arrow::after,
+.c-tooltip-right > .c-tooltip-arrow,
+.c-tooltip-right > .c-tooltip-arrow::after {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.c-popover[x-placement^=bottom] > .c-popover-arrow,
+.c-popover[x-placement^=bottom] > .c-tooltip-arrow,
+.c-popover[x-placement^=top] > .c-popover-arrow,
+.c-popover[x-placement^=top] > .c-tooltip-arrow,
+.c-tooltip[x-placement^=bottom] > .c-popover-arrow,
+.c-tooltip[x-placement^=bottom] > .c-tooltip-arrow,
+.c-tooltip[x-placement^=top] > .c-popover-arrow,
+.c-tooltip[x-placement^=top] > .c-tooltip-arrow {
+  margin: 0 3px;
+}
+.c-popover[x-placement^=bottom] > .c-popover-arrow::after,
+.c-popover[x-placement^=bottom] > .c-tooltip-arrow::after,
+.c-popover[x-placement^=top] > .c-popover-arrow::after,
+.c-popover[x-placement^=top] > .c-tooltip-arrow::after,
+.c-tooltip[x-placement^=bottom] > .c-popover-arrow::after,
+.c-tooltip[x-placement^=bottom] > .c-tooltip-arrow::after,
+.c-tooltip[x-placement^=top] > .c-popover-arrow::after,
+.c-tooltip[x-placement^=top] > .c-tooltip-arrow::after {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+.c-popover[x-placement^=left] > .c-popover-arrow,
+.c-popover[x-placement^=left] > .c-tooltip-arrow,
+.c-popover[x-placement^=right] > .c-popover-arrow,
+.c-popover[x-placement^=right] > .c-tooltip-arrow,
+.c-tooltip[x-placement^=left] > .c-popover-arrow,
+.c-tooltip[x-placement^=left] > .c-tooltip-arrow,
+.c-tooltip[x-placement^=right] > .c-popover-arrow,
+.c-tooltip[x-placement^=right] > .c-tooltip-arrow {
+  margin: 3px 0;
+}
+.c-popover[x-placement^=left] > .c-popover-arrow::after,
+.c-popover[x-placement^=left] > .c-tooltip-arrow::after,
+.c-popover[x-placement^=right] > .c-popover-arrow::after,
+.c-popover[x-placement^=right] > .c-tooltip-arrow::after,
+.c-tooltip[x-placement^=left] > .c-popover-arrow::after,
+.c-tooltip[x-placement^=left] > .c-tooltip-arrow::after,
+.c-tooltip[x-placement^=right] > .c-popover-arrow::after,
+.c-tooltip[x-placement^=right] > .c-tooltip-arrow::after {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.c-popover-top > .c-popover-arrow,
+.c-popover-top > .c-tooltip-arrow,
+.c-popover[x-placement^=top] > .c-popover-arrow,
+.c-popover[x-placement^=top] > .c-tooltip-arrow,
+.c-tooltip-top > .c-popover-arrow,
+.c-tooltip-top > .c-tooltip-arrow,
+.c-tooltip[x-placement^=top] > .c-popover-arrow,
+.c-tooltip[x-placement^=top] > .c-tooltip-arrow {
+  width: 0;
+  height: 0;
+  content: '';
+  bottom: -10px;
+  display: block;
+  border: inset 10px;
+  border-bottom-width: 0;
+  border-top-style: solid;
+  border-color: #ced4da transparent transparent;
+}
+.c-popover-top > .c-popover-arrow::after,
+.c-popover-top > .c-tooltip-arrow::after,
+.c-popover[x-placement^=top] > .c-popover-arrow::after,
+.c-popover[x-placement^=top] > .c-tooltip-arrow::after,
+.c-tooltip-top > .c-popover-arrow::after,
+.c-tooltip-top > .c-tooltip-arrow::after,
+.c-tooltip[x-placement^=top] > .c-popover-arrow::after,
+.c-tooltip[x-placement^=top] > .c-tooltip-arrow::after {
+  width: 0;
+  height: 0;
+  bottom: 1px;
+  content: '';
+  display: block;
+  border: inset 9px;
+  border-bottom-width: 0;
+  border-top-style: solid;
+  border-color: #fff transparent transparent;
+}
+.c-popover-right > .c-popover-arrow,
+.c-popover-right > .c-tooltip-arrow,
+.c-popover[x-placement^=right] > .c-popover-arrow,
+.c-popover[x-placement^=right] > .c-tooltip-arrow,
+.c-tooltip-right > .c-popover-arrow,
+.c-tooltip-right > .c-tooltip-arrow,
+.c-tooltip[x-placement^=right] > .c-popover-arrow,
+.c-tooltip[x-placement^=right] > .c-tooltip-arrow {
+  width: 0;
+  height: 0;
+  left: -10px;
+  content: '';
+  display: block;
+  border: inset 10px;
+  border-left-width: 0;
+  border-right-style: solid;
+  border-color: transparent #ced4da transparent transparent;
+}
+.c-popover-right > .c-popover-arrow::after,
+.c-popover-right > .c-tooltip-arrow::after,
+.c-popover[x-placement^=right] > .c-popover-arrow::after,
+.c-popover[x-placement^=right] > .c-tooltip-arrow::after,
+.c-tooltip-right > .c-popover-arrow::after,
+.c-tooltip-right > .c-tooltip-arrow::after,
+.c-tooltip[x-placement^=right] > .c-popover-arrow::after,
+.c-tooltip[x-placement^=right] > .c-tooltip-arrow::after {
+  width: 0;
+  left: 1px;
+  height: 0;
+  content: '';
+  display: block;
+  border: inset 9px;
+  border-left-width: 0;
+  border-right-style: solid;
+  border-color: transparent #fff transparent transparent;
+}
+.c-popover-bottom > .c-popover-arrow,
+.c-popover-bottom > .c-tooltip-arrow,
+.c-popover[x-placement^=bottom] > .c-popover-arrow,
+.c-popover[x-placement^=bottom] > .c-tooltip-arrow,
+.c-tooltip-bottom > .c-popover-arrow,
+.c-tooltip-bottom > .c-tooltip-arrow,
+.c-tooltip[x-placement^=bottom] > .c-popover-arrow,
+.c-tooltip[x-placement^=bottom] > .c-tooltip-arrow {
+  width: 0;
+  height: 0;
+  top: -10px;
+  content: '';
+  display: block;
+  border: inset 10px;
+  border-top-width: 0;
+  border-bottom-style: solid;
+  border-color: transparent transparent #ced4da;
+}
+.c-popover-bottom > .c-popover-arrow::after,
+.c-popover-bottom > .c-tooltip-arrow::after,
+.c-popover[x-placement^=bottom] > .c-popover-arrow::after,
+.c-popover[x-placement^=bottom] > .c-tooltip-arrow::after,
+.c-tooltip-bottom > .c-popover-arrow::after,
+.c-tooltip-bottom > .c-tooltip-arrow::after,
+.c-tooltip[x-placement^=bottom] > .c-popover-arrow::after,
+.c-tooltip[x-placement^=bottom] > .c-tooltip-arrow::after {
+  top: 1px;
+  width: 0;
+  height: 0;
+  content: '';
+  display: block;
+  border: inset 9px;
+  border-top-width: 0;
+  border-bottom-style: solid;
+  border-color: transparent transparent #fff;
+}
+.c-popover-left > .c-popover-arrow,
+.c-popover-left > .c-tooltip-arrow,
+.c-popover[x-placement^=left] > .c-popover-arrow,
+.c-popover[x-placement^=left] > .c-tooltip-arrow,
+.c-tooltip-left > .c-popover-arrow,
+.c-tooltip-left > .c-tooltip-arrow,
+.c-tooltip[x-placement^=left] > .c-popover-arrow,
+.c-tooltip[x-placement^=left] > .c-tooltip-arrow {
+  width: 0;
+  height: 0;
+  content: '';
+  right: -10px;
+  display: block;
+  border: inset 10px;
+  border-right-width: 0;
+  border-left-style: solid;
+  border-color: transparent transparent transparent #ced4da;
+}
+.c-popover-left > .c-popover-arrow::after,
+.c-popover-left > .c-tooltip-arrow::after,
+.c-popover[x-placement^=left] > .c-popover-arrow::after,
+.c-popover[x-placement^=left] > .c-tooltip-arrow::after,
+.c-tooltip-left > .c-popover-arrow::after,
+.c-tooltip-left > .c-tooltip-arrow::after,
+.c-tooltip[x-placement^=left] > .c-popover-arrow::after,
+.c-tooltip[x-placement^=left] > .c-tooltip-arrow::after {
+  width: 0;
+  height: 0;
+  right: 1px;
+  content: '';
+  display: block;
+  border: inset 9px;
+  border-right-width: 0;
+  border-left-style: solid;
+  border-color: transparent transparent transparent #fff;
+}
+
+
+$colors-legacy-tooltips: (
+  primary: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  danger: $color-danger,
+);
+
+
+@each $name, $color in $colors-legacy-tooltips {
+  .c-popover-#{$name},
+  .c-tooltip-#{$name} {
+    color: #fff;
+    font-weight: 700;
+    background: $color;
+    border: 1px solid $color
+  }
+  .c-popover-#{$name}.c-popover-top > .c-popover-arrow,
+  .c-popover-#{$name}[x-placement^=top] > .c-popover-arrow,
+  .c-tooltip-#{$name}.c-popover-top > .c-popover-arrow,
+  .c-tooltip-#{$name}[x-placement^=top] > .c-popover-arrow {
+    border-color: $color transparent transparent
+  }
+  .c-popover-#{$name}.c-popover-top > .c-popover-arrow::after,
+  .c-popover-#{$name}[x-placement^=top] > .c-popover-arrow::after,
+  .c-tooltip-#{$name}.c-popover-top > .c-popover-arrow::after,
+  .c-tooltip-#{$name}[x-placement^=top] > .c-popover-arrow::after {
+    border-color: $color transparent transparent
+  }
+  .c-popover-#{$name}.c-popover-bottom > .c-popover-arrow,
+  .c-popover-#{$name}[x-placement^=bottom] > .c-popover-arrow,
+  .c-tooltip-#{$name}.c-popover-bottom > .c-popover-arrow,
+  .c-tooltip-#{$name}[x-placement^=bottom] > .c-popover-arrow {
+    border-color: transparent transparent $color
+  }
+  .c-popover-#{$name}.c-popover-bottom > .c-popover-arrow::after,
+  .c-popover-#{$name}[x-placement^=bottom] > .c-popover-arrow::after,
+  .c-tooltip-#{$name}.c-popover-bottom > .c-popover-arrow::after,
+  .c-tooltip-#{$name}[x-placement^=bottom] > .c-popover-arrow::after {
+    border-color: transparent transparent $color
+  }
+  .c-popover-#{$name}.c-popover-left > .c-popover-arrow,
+  .c-popover-#{$name}.c-popover-right > .c-popover-arrow,
+  .c-popover-#{$name}[x-placement^=left] > .c-popover-arrow,
+  .c-popover-#{$name}[x-placement^=right] > .c-popover-arrow,
+  .c-tooltip-#{$name}.c-popover-left > .c-popover-arrow,
+  .c-tooltip-#{$name}.c-popover-right > .c-popover-arrow,
+  .c-tooltip-#{$name}[x-placement^=left] > .c-popover-arrow,
+  .c-tooltip-#{$name}[x-placement^=right] > .c-popover-arrow {
+    border-color: transparent $color transparent
+  }
+  .c-popover-#{$name}.c-popover-left > .c-popover-arrow::after,
+  .c-popover-#{$name}.c-popover-right > .c-popover-arrow::after,
+  .c-popover-#{$name}[x-placement^=left] > .c-popover-arrow::after,
+  .c-popover-#{$name}[x-placement^=right] > .c-popover-arrow::after,
+  .c-tooltip-#{$name}.c-popover-left > .c-popover-arrow::after,
+  .c-tooltip-#{$name}.c-popover-right > .c-popover-arrow::after,
+  .c-tooltip-#{$name}[x-placement^=left] > .c-popover-arrow::after,
+  .c-tooltip-#{$name}[x-placement^=right] > .c-popover-arrow::after {
+    border-color: transparent $color transparent
+  }
+}
+
+
+/* stylelint-enable */

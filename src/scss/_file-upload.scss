@@ -1,0 +1,19 @@
+// File Upload
+.c-file-upload {
+  width: 100%;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  flex-direction: row;
+  color: $color-primary;
+  justify-content: center;
+  border-radius: $radius-md;
+  padding: $space-sm $space-md;
+  font-weight: $font-weight-bold;
+  border: 2px dashed $color-primary;
+  background: rgba($color-primary-0, .8);
+
+  .c-btn {
+    margin-left: $space-sm;
+  }
+}

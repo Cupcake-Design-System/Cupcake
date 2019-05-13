@@ -110,6 +110,11 @@
       @include btn-outline($hex);
     }
   }
+
+  .c-btn-default-outline,
+  .c-btn-secondary-outline {
+    @include btn-outline($color-gray-7);
+  }
 }
 
 @if $enable-circle-buttons == true {
@@ -175,3 +180,10 @@
   width: 100%;
   text-align: center;
 }
+
+
+// Backwards compatible alias to c-btn-default
+.c-btn-default {
+  @extend .c-btn-secondary;
+}
+
