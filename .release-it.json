@@ -1,5 +1,4 @@
 {
-  "pkgFiles": ["package.json"],
   "buildCommand": "gulp build",
   "scripts": {
     "beforeStage": "npm run changelog",
@@ -20,5 +19,12 @@
   },
   "git": {
     "requireCleanWorkingDir": false
+  },
+  "github": {
+    "release": true,
+    "releaseName": "Release %s 🚀",
+    "preRelease": true,
+    "draft": false,
+    "tokenRef": "GITHUB_TOKEN"
   }
 }
