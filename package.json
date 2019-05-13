@@ -1,6 +1,6 @@
 {
   "name": "@cupcake-ds/cupcake",
-  "version": "2.0.0-beta.8",
+  "version": "2.0.0-beta.9",
   "description": "Design System framework.",
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
     "test": "mocha test",
     "lint": "stylelint src/scss/ --syntax scss || true",
     "build": "run-s lint && gulp prod",
-    "release": "release-it --dry-run",
+    "release": "npm run build && release-it",
     "changelog": "auto-changelog -p && git add CHANGELOG.md",
     "start": "gulp",
     "precommit": "lint-staged && npm run lint"

@@ -1,5 +1,11 @@
+## Release [2.0.0-beta.9](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.8...2.0.0-beta.9) :rocket:
+**13 May 2019**
+
 ## Release [2.0.0-beta.8](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.7...2.0.0-beta.8) :rocket:
 **13 May 2019**
+
+### Commits
+- Release 2.0.0-beta.8 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/238e094fe8102f5ce503517427b90cdc34ff873e)**
 
 ## Release [2.0.0-beta.7](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.6...2.0.0-beta.7) :rocket:
 **13 May 2019**
