@@ -1,6 +1,7 @@
 {
-  "buildCommand": "gulp prod",
+  "buildCommand": "npm run build",
   "scripts": {
+    "beforeStart": "npm run build",
     "beforeStage": "npm run changelog",
     "changelog": "npx auto-changelog --stdout --commit-limit false -u --template ./changelog-template.hbs --output CHANGELOG.md && git add CHANGELOG.md"
   },
