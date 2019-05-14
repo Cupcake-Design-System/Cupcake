@@ -1,49 +1,148 @@
 // --------------------------------------------
 // GLOBAL BOOLEANS & SETTINGS -----------------
 // --------------------------------------------
-$enable-reset                        : true !default;
-$enable-shadow-classes               : true !default;
-$enable-color-classes                : true !default;
-$enable-spacer-classes               : true !default;
-$enable-border-classes               : true !default;
-$enable-radius-classes               : true !default;
-$enable-float-classes                : true !default;
-$enable-flex-classes                 : true !default;
-$enable-hidden-classes               : true !default;
-$enable-cursor-classes               : true !default;
-$enable-center-classes               : true !default;
-$enable-sideNav                      : true !default;
-$white-label                         : false !default;
+$theme: () !default;
+$theme: map-merge(
+  (
+    'reset':          true,
+    'shadow-classes': true,
+    'color-classes': true,
+    'spacer-classes': true,
+    'border-classes': true,
+    'radius-classes': true,
+    'float-classes': true,
+    'flex-classes': true,
+    'hidden-classes': true,
+    'cursor-classes': true,
+    'center-classes': true,
+    'enable-sideNav': true,
+    'white-label': false,
+    'border': 1px solid color(gray, 4),
+    'border-light': 1px solid color(gray, 2),
+    'border-dark': 1px solid color(gray, 5),
+    'radius': radius(sm),
+    'disabled-bg': color(gray, 3),
+    'disabled-text': color(gray, 5),
+    'text-color': color(gray, 7),
+    'font': $font-family-sans,
+    'font-mono': $font-family-mono,
+    'light': color(white),
+    'backdrop-dark': rgba(0, 0, 0, 0.75),
+    'size-xs': $global-size-xs,
+    'size-sm': $global-size-sm,
+    'size-md': $global-size-md,
+    'size-lg': $global-size-lg,
+    'size-xl': $global-size-xl
+  ),
+  $theme
+);
 
-$global-default-border               : 1px solid $color-gray-4 !default;
-$global-default-radius               : $radius-sm !default;
-$global-disabled-bg                  : $color-gray-3 !default;
-$global-text-color                   : $color-gray-7 !default;
-$global-backdrop-dark                : rgba(0, 0, 0, 0.75) !default;
+$enable-reset                        : theme(reset) !default;
+$enable-shadow-classes               : theme(shadow-classes) !default;
+$enable-color-classes                : theme(color-classes) !default;
+$enable-spacer-classes               : theme(spacer-classes) !default;
+$enable-border-classes               : theme(border-classes) !default;
+$enable-radius-classes               : theme(radius-classes) !default;
+$enable-float-classes                : theme(float-classes) !default;
+$enable-flex-classes                 : theme(flex-classes) !default;
+$enable-hidden-classes               : theme(hidden-classes) !default;
+$enable-cursor-classes               : theme(cursor-classes) !default;
+$enable-center-classes               : theme(center-classes) !default;
+$enable-sideNav                      : theme(enable-sideNav) !default;
+$white-label                         : theme(white-label) !default;
+
+
+// --------------------------------------------
+// TYPOGRAPHY ---------------------------------
+// --------------------------------------------
+
+$font-body: () !default;
+$font-body: map-merge(
+  (
+    "xs": (
+      "font-size": $font-size-0,
+      "line-height": $line-height-xs
+    ),
+    "sm": (
+      "font-size": $font-size-1,
+      "line-height": $line-height-xs
+    ),
+    "md": (
+      "font-size": $font-size-2,
+      "line-height": $line-height-xs
+    ),
+    "lg": (
+      "font-size": $font-size-3,
+      "line-height": $line-height-sm
+    ),
+    "xl": (
+      "font-size": $font-size-4,
+      "line-height": $line-height-sm
+    ),
+    "xxl": (
+      "font-size": $font-size-5,
+      "line-height": $line-height-sm
+    ),
+  ),
+  $font-body
+);
+
+
+$font-header: () !default;
+$font-header: map-merge(
+  (
+    "xs": (
+      "font-size": $font-size-2,
+      "line-height": $line-height-xs
+    ),
+    "sm": (
+      "font-size": $font-size-3,
+      "line-height": $line-height-sm
+    ),
+    "md": (
+      "font-size": $font-size-4,
+      "line-height": $line-height-sm
+    ),
+    "lg": (
+      "font-size": $font-size-6,
+      "line-height": $line-height-sm
+    ),
+    "xl": (
+      "font-size": $font-size-7,
+      "line-height": $line-height-lg
+    ),
+    "xxl": (
+      "font-size": $font-size-8,
+      "line-height": $line-height-lg
+    ),
+  ),
+  $font-header
+);
+
 
 // --------------------------------------------
 // ALERTS & TOASTS ----------------------------
 // --------------------------------------------
 $alert-border               : 1px solid !default;
-$alert-margin               : 0 0 $space-md 0 !default;
-$alert-padding              : $space-sm !default;
-$alert-top-padding          : $space-md !default;
-$alert-font-size            : $font-body-md !default;
-$alert-line-height          : $line-height-body-sm !default;
-$alert-font-family          : $font-family-sans !default;
-$alert-font-weight          : $font-weight-normal !default;
-$alert-title-font-size      : $font-body-md !default;
-$alert-title-line-height    : $line-height-body-lg - 5 !default;
-$alert-title-font-weight    : $font-weight-bold !default;
-$alert-primary-bg           : rgba($color-primary, .07) !default;
-$alert-default-color        : $color-gray-9 !default;
-$alert-primary-icon-color   : $color-primary !default;
-$alert-radius               : $global-default-radius !default;
-$alert-shadows              : $shadow-lg !default;
-$alert-icon-width           : $font-body-md !default;
-$alert-top-icon-size        : $font-body-xl !default;
-$alert-close-font-size      : $font-body-md !default;
-$toast-font-weight          : $font-weight-bold !default;
+$alert-font-family          : theme(font) !default;
+$alert-radius               : theme(radius) !default;
+$alert-margin               : 0 0 space(md) 0 !default;
+$alert-padding              : space(sm) !default;
+$alert-top-padding          : space(md) !default;
+$alert-font-size            : font-size(body, md) !default;
+$alert-line-height          : line-height(body, sm) !default;
+$alert-font-weight          : font-weight(normal) !default;
+$alert-title-font-size      : font-size(body, md) !default;
+$alert-title-line-height    : line-height(body, lg) - 5 !default;
+$alert-title-font-weight    : font-weight(bold) !default;
+$alert-primary-bg           : rgba(color(primary), .07) !default;
+$alert-default-color        : color(gray, 9) !default;
+$alert-primary-icon-color   : color(primary) !default;
+$alert-shadows              : shadow(lg) !default;
+$alert-icon-width           : font-size(body, md) !default;
+$alert-top-icon-size        : font-size(body, xl) !default;
+$alert-close-font-size      : font-size(body, md) !default;
+$toast-font-weight          : font-weight(bold) !default;
 $toast-left-border          : 4px !default;
 
 // for alerts this maps to name, bg-color, text/border color
@@ -51,20 +150,20 @@ $alert-colors: () !default;
 $alert-colors: map-merge(
   (
     "primary": (
-      "color": $color-primary,
-      "bg": $color-primary-0
+      "color": color(primary),
+      "bg": color(primary, 0)
     ),
     "success": (
-      "color": $color-success,
-      "bg": $color-success-0
+      "color": color(success),
+      "bg": color(success, 0)
     ),
     "warning": (
-      "color": $color-warning,
-      "bg": $color-warning-0
+      "color": color(warning),
+      "bg": color(warning, 0)
     ),
     "danger": (
-      "color": $color-danger,
-      "bg": $color-danger-0
+      "color": color(danger),
+      "bg": color(danger, 0)
     ),
   ),
   $alert-colors
@@ -73,33 +172,33 @@ $alert-colors: map-merge(
 // --------------------------------------------
 // Action Panel -------------------------------
 // --------------------------------------------
-$action-panel-padding-v              : $space-md - $space-xs !default;
-$action-panel-padding-h              : $space-md !default;
-$action-panel-header-font-size       : $font-body-lg !default;
-$action-panel-header-font-weight     : $font-weight-bold !default;
-$action-panel-header-line-height     : $line-height-body-lg !default;
-$action-panel-header-color           : $color-gray-9 !default;
-$action-panel-header-icon-color      : $color-gray-5 !default;
+$action-panel-padding-v              : space(md) - space(xs) !default;
+$action-panel-padding-h              : space(md) !default;
+$action-panel-header-font-size       : font-size(body, lg) !default;
+$action-panel-header-font-weight     : font-weight(bold) !default;
+$action-panel-header-line-height     : line-height(body, lg) !default;
+$action-panel-header-color           : color(gray, 9) !default;
+$action-panel-header-icon-color      : color(gray, 5) !default;
 $action-panel-header-icon-hover-color: lighten($action-panel-header-icon-color, 10%) !default;
-$action-panel-title-font-size        : $font-body-xl !default;
-$action-panel-title-font-weight      : $font-weight-bold !default;
-$action-panel-subtitle-line-height   : $font-body-md !default;
-$action-panel-subtitle-font-size     : $font-body-md !default;
-$action-panel-header-bg              : $color-white !default;
-$action-panel-footer-bg              : $color-white !default;
-$action-panel-footer-color           : $color-primary-8 !default;
-$action-panel-footer-hover-color     : $color-primary-6 !default;
-$action-panel-footer-font-size       : $font-body-md !default;
-$action-panel-footer-line-weight     : $font-body-xl !default;
-$action-panel-border                 : 1px solid $color-gray-2 !default;
-$action-panel-zindex                 : $z-action-panel !default;
+$action-panel-title-font-size        : font-size(body, xl) !default;
+$action-panel-title-font-weight      : font-weight(bold) !default;
+$action-panel-subtitle-line-height   : font-size(body, md) !default;
+$action-panel-subtitle-font-size     : font-size(body, md) !default;
+$action-panel-header-bg              : theme(light) !default;
+$action-panel-footer-bg              : theme(light) !default;
+$action-panel-footer-color           : color(primary, 8) !default;
+$action-panel-footer-hover-color     : color(primary, 6) !default;
+$action-panel-footer-font-size       : font-size(body, md) !default;
+$action-panel-footer-line-weight     : font-size(body, xl) !default;
+$action-panel-border                 : theme(border-light) !default;
+$action-panel-zindex                 : z(action-panel) !default;
 $action-panel-width-sm               : 220px !default;
 $action-panel-width                  : 320px !default;
 $action-panel-width-lg               : 400px !default;
-$action-panel-bg                     : $color-gray-0 !default;
+$action-panel-bg                     : color(gray, 0) !default;
 $action-panel-transition             : 0.3s ease !default;
-$action-panel-shadow                 : $shadow-lg !default;
-$action-panel-backdrop               : $global-backdrop-dark !default;
+$action-panel-shadow                 : shadow(lg) !default;
+$action-panel-backdrop               : theme(backdrop-dark) !default;
 
 $action-panel-sizes                  : () !default;
 $action-panel-sizes                  : map-merge(
@@ -114,14 +213,14 @@ $action-panel-sizes                  : map-merge(
 // Avatars ------------------------------------
 // --------------------------------------------
 $enable-extend-avatar-colors: true !default;
-$avatar-default-size        : $global-size-md !default;
-$avatar-border-radius       : $radius-round !default;
-$avatar-font-weight         : $font-weight-semibold !default;
-$avatar-font-size           : $font-body-md !default;
-$avatar-font-family         : $font-family-sans !default;
+$avatar-default-size        : theme(size-md) !default;
+$avatar-border-radius       : radius(round) !default;
+$avatar-font-weight         : font-weight(semibold) !default;
+$avatar-font-size           : font-size(body, md) !default;
+$avatar-font-family         : theme(font) !default;
 $avatar-line-height         : normal !default;
 $avatar-img-border          : none !default;
-$avatar-group-spacing       : $space-xs !default;
+$avatar-group-spacing       : space(xs) !default;
 $avatar-group-transition    : 0.35s cubic-bezier(0, 1.22, .66, 1.39) !default;
 
 // for avatar sizes this maps to name, size, font-size
@@ -130,19 +229,19 @@ $avatar-sizes: map-merge(
   (
     "xs": (
       "size": $avatar-default-size / 2,
-      "font-size": $font-body-xs
+      "font-size": font-size(body, xs)
     ),
     "sm": (
       "size": $avatar-default-size - 8,
-      "font-size": $font-body-sm
+      "font-size": font-size(body, sm)
     ),
     "lg": (
       "size": $avatar-default-size + 8,
-      "font-size": $font-body-lg
+      "font-size": font-size(body, lg)
     ),
     "xl": (
       "size": ($avatar-default-size + 8) * 2,
-      "font-size": $font-body-md * 2
+      "font-size": font-size(body, md) * 2
     ),
   ),
   $avatar-sizes
@@ -152,18 +251,18 @@ $avatar-sizes: map-merge(
 // Badge --------------------------------------
 // --------------------------------------------
 $enable-extend-badge-colors : true !default;
-$badge-font-family          : $font-family-sans !default;
-$badge-default-size         : $global-size-sm !default;
-$badge-default-padding      : $space-0 $space-sm !default;
-$badge-default-border-radius: $radius-round !default;
-$badge-default-font-weight  : $font-weight-semibold !default;
+$badge-default-size         : theme(size-sm) !default;
+$badge-font-family          : theme(font) !default;
+$badge-default-padding      : space(0) space(sm) !default;
+$badge-default-border-radius: radius(round) !default;
+$badge-default-font-weight  : font-weight(semibold) !default;
 $badge-default-line-height  : 2 !default;
-$badge-default-font-size    : $font-body-sm !default;
+$badge-default-font-size    : font-size(body, sm) !default;
 $badge-lg-size              : $badge-default-size + 8 !default;
-$badge-lg-font-size         : $font-body-lg - 1 !default;
+$badge-lg-font-size         : font-size(body, lg) - 1 !default;
 $badge-sm-size              : $badge-default-size - 8 !default;
-$badge-sm-font-size         : $font-body-xs !default;
-$badge-group-spacing        : $space-sm !default;
+$badge-sm-font-size         : font-size(body, xs) !default;
+$badge-group-spacing        : space(sm) !default;
 
 
 // --------------------------------------------
@@ -177,29 +276,29 @@ $enable-outline-buttons : true !default;
 $enable-pill-buttons    : false !default;
 $enable-square-buttons  : false !default;
 
-$btn-font-family        : $font-family-sans !default;
-$btn-font-weight        : $font-weight-bold !default;
+$btn-font-family        : theme(font) !default;
+$btn-font-weight        : font-weight(bold) !default;
 $btn-bd                 : 1px solid transparent !default;
-$btn-radius             : $global-default-radius !default;
-$btn-default-c          : $color-gray-7 !default;
-$btn-disabled-bg        : $global-disabled-bg !default;
-$btn-disabled-c         : $color-gray-6 !default;
-$btn-link-bd            : 1px solid $color-gray-4 !default;
-$btn-link-hover-bg      : $color-gray-0 !default;
-$btn-disabled-bd        : 1px solid $color-gray-3 !default;
+$btn-radius             : theme(radius) !default;
+$btn-disabled-bg        : theme(disabled-bg) !default;
+$btn-default-c          : theme(text-color) !default;
+$btn-disabled-c         : color(gray, 6) !default;
+$btn-link-bd            : 1px solid color(gray, 4) !default;
+$btn-link-hover-bg      : color(gray, 0) !default;
+$btn-disabled-bd        : 1px solid color(gray, 3) !default;
 $btn-disabled-bd-colored: false !default;
 $btn-shadow             : false !default;
-$btn-shadow-focus       : 0 0 2px 1px $color-primary-7 !default;
+$btn-shadow-focus       : 0 0 2px 1px color(primary, 7) !default;
 $btn-active-selected    : false !default;
 $btn-active-shadow      : none !default;
-$btn-box-width          : $global-size-md !default;
+$btn-box-width          : theme(size-md) !default;
 
 $btn-box-sizes: () !default;
 $btn-box-sizes: map-merge(
   (
-    xs: $global-size-xs,
-    sm: $global-size-sm,
-    lg: $global-size-lg,
+    xs: theme(size-xs),
+    sm: theme(size-sm),
+    lg: theme(size-lg),
   ),
   $btn-box-sizes
 );
@@ -208,29 +307,29 @@ $button-colors: () !default;
 $button-colors: map-merge(
   (
     primary: (
-      bg: $color-primary,
-      bg-hover: $color-primary-7,
-      bg-active: $color-primary-9,
-      border: $color-primary-9
+      bg: color(primary),
+      bg-hover: color(primary, 7),
+      bg-active: color(primary, 9),
+      border: color(primary, 9)
     ),
     success: (
-      bg: $color-success,
-      bg-hover: $color-success-7,
-      bg-active: $color-success-9,
-      border: $color-success-9
+      bg: color(success),
+      bg-hover: color(success, 7),
+      bg-active: color(success, 9),
+      border: color(success, 9)
     ),
     danger: (
-      bg: $color-danger,
-      bg-hover: $color-danger-7,
-      bg-active: $color-danger-9,
-      border: $color-danger-9
+      bg: color(danger),
+      bg-hover: color(danger, 7),
+      bg-active: color(danger, 9),
+      border: color(danger, 9)
     ),
     secondary: (
-      bg: $color-gray-1,
-      bg-hover: $color-gray-0,
-      bg-active: $color-gray-2,
-      border: $color-gray-4,
-      color: $color-gray-8
+      bg: color(gray, 1),
+      bg-hover: color(gray, 0),
+      bg-active: color(gray, 2),
+      border: color(gray, 4),
+      color: color(gray, 8)
     )
   ),
   $button-colors
@@ -240,24 +339,24 @@ $button-sizes: () !default;
 $button-sizes:  map-merge(
   (
     default: (
-      font-size: $font-body-md,
-      padding: $space-0 $space-md,
-      height: $global-size-md
+      font-size: font-size(body, md),
+      padding: space(0) space(md),
+      height: theme(size-md)
     ),
     xs: (
-      font-size: $font-body-xs,
-      padding: $space-0 $space-xs,
-      height: $global-size-xs
+      font-size: font-size(body, xs),
+      padding: space(0) space(xs),
+      height: theme(size-xs)
     ),
     sm: (
-      font-size: $font-body-sm,
-      padding: $space-0 $space-sm,
-      height: $global-size-sm
+      font-size: font-size(body, sm),
+      padding: space(0) space(sm),
+      height: theme(size-sm)
     ),
     lg: (
-      font-size: $font-body-lg,
-      padding: $space-0 $space-xl,
-      height: $global-size-lg
+      font-size: font-size(body, lg),
+      padding: space(0) space(xl),
+      height: theme(size-lg)
     )
   ),
   $button-sizes
@@ -267,69 +366,124 @@ $button-sizes:  map-merge(
 // --------------------------------------------
 // BREADCRUMBS --------------------------------
 // --------------------------------------------
-$breadcrumb-color               : $color-primary-9 !default;
-$breadcrumb-color-active        : $color-gray-9 !default;
-$breadcrumb-font-size           : $font-body-md !default;
-$breadcrumb-font-family         : $font-family-sans !default;
-$breadcrumb-font-weight         : $font-weight-bold !default;
+$breadcrumb-color               : color(primary, 9) !default;
+$breadcrumb-color-active        : color(gray, 9) !default;
+$breadcrumb-font-size           : font-size(body, md) !default;
+$breadcrumb-font-family         : theme(font) !default;
+$breadcrumb-font-weight         : font-weight(bold) !default;
 $breadcrumb-divider-size        : 8px !default;
 $breadcrumb-divider-border-width: 2px !default;
-$breadcrumb-divider-color       : $color-gray-3 !default;
-$breadcrumb-margin              : $global-size-md !default;
+$breadcrumb-divider-color       : color(gray, 3) !default;
+$breadcrumb-margin              : theme(size-md) !default;
 
 
 // --------------------------------------------
 // CARDS --------------------------------------
 // --------------------------------------------
-$card-bg                     : $color-white !default;
-$card-text-color             : $color-gray-7 !default;
-$card-border                 : 1px solid $color-gray-2 !default;
-$card-border-radius          : $global-default-radius !default;
+$card-bg                     : theme(light) !default;
+$card-text-color             : theme(text-color) !default;
+$card-border                 : theme(border-light) !default;
+$card-border-radius          : radius(lg) !default;
+$card-border-hover           : theme(border) !default;
 $card-min-width              : 0 !default;
-$card-font-family            : $font-family-sans !default;
-$card-padding-v              : $space-md - $space-xs !default;
-$card-padding-h              : $space-md !default;
-$card-shadow                 : $shadow-xs !default;
-$card-shadow-hover           : $shadow-md !default;
-$card-border-hover           : $global-default-border !default;
-$card-header-font-size       : $font-body-lg !default;
-$card-header-font-weight     : $font-weight-bold !default;
-$card-header-line-height     : $line-height-body-lg !default;
-$card-header-color           : $color-gray-9 !default;
-$card-header-icon-color      : $color-gray-5 !default;
+$card-font-family            : theme(font) !default;
+$card-padding-v              : space(md) - space(xs) !default;
+$card-padding-h              : space(md) !default;
+$card-shadow                 : shadow(xs) !default;
+$card-shadow-hover           : shadow(md) !default;
+$card-header-font-size       : font-size(body, lg) !default;
+$card-header-font-weight     : font-weight(bold) !default;
+$card-header-line-height     : line-height(body, lg) !default;
+$card-header-color           : color(gray, 9) !default;
+$card-header-icon-color      : color(gray, 5) !default;
 $card-header-icon-hover-color: lighten($card-header-icon-color, 10%) !default;
-$card-body-font-size         : $font-body-md !default;
-$card-title-font-size        : $font-body-xl !default;
-$card-title-font-weight      : $font-weight-bold !default;
-$card-subtitle-line-height   : $font-body-md !default;
-$card-subtitle-font-size     : $font-body-md !default;
-$card-footer-color           : $color-primary-8 !default;
-$card-footer-hover-color     : $color-primary-6 !default;
-$card-footer-font-size       : $font-body-md !default;
-$card-footer-line-weight     : $font-body-xl !default;
+$card-body-font-size         : font-size(body, md) !default;
+$card-title-font-size        : font-size(body, xl) !default;
+$card-title-font-weight      : font-weight(bold) !default;
+$card-subtitle-line-height   : font-size(body, md) !default;
+$card-subtitle-font-size     : font-size(body, md) !default;
+$card-footer-color           : color(primary, 8) !default;
+$card-footer-hover-color     : color(primary, 6) !default;
+$card-footer-font-size       : font-size(body, md) !default;
+$card-footer-line-weight     : font-size(body, xl) !default;
+
+
+// --------------------------------------------
+// COLORS ------------------------------
+// --------------------------------------------
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primary': color(primary),
+    'success': color(success),
+    'warning': color(warning),
+    'danger': color(danger),
+  ),
+  $theme-colors
+);
+
+
+$extended-palette: () !default;
+$extended-palette: map-merge(
+  (
+    'dark'  : color(gray, 9),
+    'cyan'  : color-extended(cyan, 9),
+    'blue'  : color-extended(blue, 9),
+    'grape' : color-extended(grape, 9),
+    'indigo': color-extended(indigo, 9),
+    'lime'  : color-extended(lime, 9),
+    'orange': color-extended(orange, 9),
+    'pink'  : color-extended(pink, 9),
+    'teal'  : color-extended(teal, 9),
+    'violet': color-extended(violet, 9),
+  ),
+  $extended-palette
+);
+
+
+$extended-palette-light: () !default;
+$extended-palette-light: map-merge(
+  (
+    'secondary'    : color(gray, 1),
+    'primary-light': color(primary, 1),
+    'success-light': color(success, 1),
+    'warning-light': color(warning, 1),
+    'danger-light' : color(danger, 1),
+    'cyan-light'   : color-extended(cyan, 1),
+    'blue-light'   : color-extended(blue, 1),
+    'grape-light'  : color-extended(grape, 1),
+    'indigo-light' : color-extended(indigo, 1),
+    'lime-light'   : color-extended(lime, 1),
+    'orange-light' : color-extended(orange, 1),
+    'pink-light'   : color-extended(pink, 1),
+    'teal-light'   : color-extended(teal, 1),
+    'violet-light' : color-extended(violet, 1),
+  ),
+  $extended-palette-light
+);
 
 
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
-$checkbox-label-font-size       : $font-body-md !default;
-$checkbox-label-font-weight     : $font-weight-normal !default;
-$checkbox-label-disabled-color  : $color-gray-5 !default;
-$checkbox-bg-empty              : $color-white !default;
-$checkbox-bg-checked            : $color-primary !default;
-$checkbox-bg-checked-disabled   : $color-gray-6 !default;
-$checkbox-bg-disabled           : $global-disabled-bg !default;
-$checkbox-bd                    : 1px solid $color-gray-5 !default;
-$checkbox-radius                : $global-default-radius !default;
+$checkbox-label-font-size       : font-size(body, md) !default;
+$checkbox-label-font-weight     : font-weight(normal) !default;
+$checkbox-label-disabled-color  : theme(disabled-text) !default;
+$checkbox-bg-empty              : theme(light) !default;
+$checkbox-bg-checked            : color(primary) !default;
+$checkbox-bg-checked-disabled   : color(gray, 6) !default;
+$checkbox-bg-disabled           : theme(disabled-bg) !default;
+$checkbox-bd                    : theme(border-dark) !default;
+$checkbox-radius                : theme(radius) !default;
 $checkbox-transition            : background 0.2s !default;
-$checkbox-checked-color-disabled: $color-gray-2 !default;
-$checkbox-default-size          : $global-size-xs !default;
+$checkbox-checked-color-disabled: color(gray, 2) !default;
+$checkbox-default-size          : theme(size-xs) !default;
 
 $checkbox-sizes: () !default;
 $checkbox-sizes: map-merge(
   (
-    lg: 24px,
-    xl: 32px
+    lg: theme(size-sm),
+    xl: theme(size-md)
   ),
   $btn-box-sizes
 );
@@ -337,27 +491,27 @@ $checkbox-sizes: map-merge(
 // --------------------------------------------
 // DROPDOWN -----------------------------------
 // --------------------------------------------
+$dropdown-radius             : theme(radius) !default;
 $dropdown-min-width          : 200px !default;
-$dropdown-font               : $font-family-sans !default;
-$dropdown-font-size          : $font-body-md !default;
-$dropdown-font-weight        : $font-weight-normal !default;
-$dropdown-bg                 : $color-white !default;
-$dropdown-bg-hover           : $color-gray-0 !default;
-$dropdown-border             : 1px solid $color-gray-2 !default;
-$dropdown-shadow             : $shadow-md !default;
-$dropdown-z-index            : $z-dropdown !default;
-$dropdown-color              : $color-gray-9 !default;
-$dropdown-color-hover        : $color-gray-9 !default;
-$dropdown-icon-color         : $color-gray-4;
-$dropdown-icon-font-size     : $font-body-lg !default;
-$dropdown-icon-padding       : $space-sm;
-$dropdown-radius             : $global-default-radius !default;
-$dropdown-list-padding       : $space-xs !default;
+$dropdown-font               : theme(font) !default;
+$dropdown-font-size          : font-size(body, md) !default;
+$dropdown-font-weight        : font-weight(normal) !default;
+$dropdown-bg                 : theme(light) !default;
+$dropdown-bg-hover           : color(gray, 0) !default;
+$dropdown-border             : theme(border-light) !default;
+$dropdown-shadow             : shadow(md) !default;
+$dropdown-z-index            : z(dropdown) !default;
+$dropdown-color              : color(gray, 9) !default;
+$dropdown-color-hover        : color(gray, 9) !default;
+$dropdown-icon-color         : color(gray, 4);
+$dropdown-icon-font-size     : font-size(body, lg) !default;
+$dropdown-icon-padding       : space(sm);
+$dropdown-list-padding       : space(xs) !default;
 $dropdown-list-margin        : 0 !default;
-$dropdown-item-padding       : $space-sm ($space-xs + $space-sm) !default;
-$dropdown-grid-padding       : $space-sm !default; //IF EXPERIMENTAL GRID ENABLED
-$dropdown-selected-color     : $color-primary-8 !default;
-$dropdown-selected-bg        : $color-primary-0 !default;
+$dropdown-item-padding       : space(sm) (space(xs) + space(sm)) !default;
+$dropdown-grid-padding       : space(sm) !default; //IF EXPERIMENTAL GRID ENABLED
+$dropdown-selected-color     : color(primary, 8) !default;
+$dropdown-selected-bg        : color(primary, 0) !default;
 $link-colors:
   '[class*="primary"]',
   '[class*="success"]',
@@ -369,28 +523,28 @@ $link-colors:
 // --------------------------------------------
 // FORMS --------------------------------------
 // --------------------------------------------
-$control-font-size            : $font-body-md !default;
-$control-color                : $color-gray-9 !default;
-$control-font-family          : $font-family-sans !default;
+$control-font-size            : font-size(body, md) !default;
+$control-color                : color(gray, 9) !default;
+$control-font-family          : theme(font) !default;
 $control-font-weight          : normal !default;
 $control-line-height          : 1.166667 !default;  //line height optimized for IE compatibility
-$control-placeholder-c        : $color-gray-5 !default;
+$control-placeholder-c        : color(gray, 5) !default;
 $control-placeholder-hover-c  : $control-placeholder-c !default;
-$control-background           : white !default;
-$control-padding              : $space-sm !default;
-$control-height               : $global-size-md !default;
+$control-background           : theme(light) !default;
+$control-padding              : space(sm) !default;
+$control-height               : theme(size-md) !default;
 $control-sizes: () !default;
 $control-sizes: map-merge(
   (
     "sm": (
-      "height": $global-size-sm,
-      "font-size": $font-body-sm,
-      "padding": $space-0 $control-padding
+      "height": theme(size-sm),
+      "font-size": font-size(body, sm),
+      "padding": space(0) $control-padding
     ),
     "lg": (
-      "height": $global-size-lg,
-      "font-size": $font-body-xl,
-      "padding": $space-0 $control-padding
+      "height": theme(size-lg),
+      "font-size": font-size(body, xl),
+      "padding": space(0) $control-padding
     ),
   ),
   $control-sizes
@@ -403,51 +557,51 @@ $control-ng-validation:
   ("ng-valid", "success")
   ("ng-invalid", "error") !default;
 
-$control-border               : 1px solid $color-gray-5 !default;
-$control-border-radius        : $global-default-radius !default;
+$control-border               : theme(border-dark) !default;
+$control-border-radius        : theme(radius) !default;
 $control-shadow               : inset 0 2px 2px 0 rgba(33, 37, 41, .1) !default;
 $control-focused-shadow       : inset 0 1px 2px 0 rgba(33, 37, 41, 0.08) !default;
 $control-shadow-disabled      : none !default;
 $control-transition           : border-color 0.1s ease-in !default;
-$control-hover                : $color-primary !default;
-$control-hover-border         : $color-gray-6 !default;
-$control-active               : $color-primary !default;
-$control-active-border        : $color-primary !default;
+$control-hover                : color(primary) !default;
+$control-hover-border         : color(gray, 6) !default;
+$control-active               : color(primary) !default;
+$control-active-border        : color(primary) !default;
 
-$control-icon-padding         : $global-size-md !default;
-$control-icon-color           : $color-gray-9 !default;
+$control-icon-padding         : theme(size-md) !default;
+$control-icon-color           : color(gray, 9) !default;
 
 $control-disabled-border      : transparent !default;
-$control-disabled-background  : $global-disabled-bg !default;
-$control-hint-color           : $color-gray-6 !default;
+$control-disabled-background  : theme(disabled-bg) !default;
+$control-hint-color           : color(gray, 6) !default;
 $control-hint-font-size       : 85% !default;
 $control-hint-transition      : all 0.2s ease !default;
 
-$control-addon-background     : $color-gray-0 !default;
+$control-addon-background     : color(gray, 0) !default;
 $control-element-padding      : $control-padding * 2 0 !default;
 $control-element-label-padding: 0 0 $control-padding 0 !default;
 
-$select-padding-r             : $global-size-sm !default;
+$select-padding-r             : theme(size-sm) !default;
 $select-bg-img                : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC") !default;
 $select-bg-img-disabled       : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAABGdBTUEAALGPC/xhBQAAAK9JREFUOBHlkj0OgzAMRmNxMcTQoVdhZGRoGDp27FU6MCA4WeovUhA/tkNmIlkkwe8Nzuecsd6f7wtltLhK+wmQiDxX3Tyebhp/i9QrChKcAEtyEhzhnGQn0GBLsgpysCaJgquwJKFSOEnwDSH47fmuewwRcTXzrg2HhzhUnPGZs84OqrVG6R5w37U+5qBUkmCI1yRelWzhnQCHnOQInwSWRIJFgSTRYPSaC0+Mspr+0vx1PtB1wpUAAAAASUVORK5CYII=") !default;
 $select-bg-pos                : no-repeat right 8px center !default;
 $select-box-shadow            : none !default;
-$select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
+$select-box-shadow-focus      : 0 0 1px 2px rgba(color(primary, 4), .5) !default;
 
 
 // --------------------------------------------
 // FOOTER -------------------------------------
 // --------------------------------------------
-$footer-font-size       : $font-body-md !default;
-$footer-font-family     : $font-family-sans !default;
-$footer-color           : $color-gray-9 !default;
-$footer-color-link      : $color-primary !default;
-$footer-background-color: $color-gray-1 !default;
-$footer-padding         : $space-0 ($space-md + $space-sm) !default;
-$footer-links-margin    : $space-0 $space-sm !default;
-$footer-height          : $global-size-xl !default;
-$footer-border-top      : 1px solid $color-gray-3 !default;
-$footer-z-index         : $z-footer !default;
+$footer-font-size       : font-size(body, md) !default;
+$footer-font-family     : theme(font) !default;
+$footer-color           : color(gray, 9) !default;
+$footer-color-link      : color(primary) !default;
+$footer-background-color: color(gray, 1) !default;
+$footer-padding         : space(0) (space(md) + space(sm)) !default;
+$footer-links-margin    : space(0) space(sm) !default;
+$footer-height          : theme(size-xl) !default;
+$footer-border-top      : theme(border-light) !default;
+$footer-z-index         : z(footer) !default;
 
 
 // --------------------------------------------
@@ -479,31 +633,31 @@ $breakpoints: (
 // --------------------------------------------
 // HEADER -------------------------------------
 // --------------------------------------------
-$header-bg                       : $color-white !default;
+$header-bg                       : theme(light) !default;
 $header-bg-hover                 : rgba(0, 0, 0, 0.03) !default;
 $header-borders                  : rgba(0, 0, 0, 0.06) !default;
-$header-z-index                  : $z-header !default;
-$header-bottom-border            : $color-gray-1 !default;
-$header-item-padding             : $space-0 $space-md !default;
-$header-height                   : $global-size-xl !default;
+$header-z-index                  : z(header) !default;
+$header-bottom-border            : color(gray, 1) !default;
+$header-item-padding             : space(0) space(md) !default;
+$header-height                   : theme(size-xl) !default;
 $header-inverse-bg               : #002b49 !default;
 $header-inverse-bg-hover         : rgba(255, 255, 255, 0.07) !default;
-$header-text-color               : $color-gray-6 !default;
-$header-inverse-text-color       : rgba($color-white, .9) !default;
-$header-inverse-text-color-active: $color-white !default;
+$header-text-color               : color(gray, 6) !default;
+$header-inverse-text-color       : rgba(white, .9) !default;
+$header-inverse-text-color-active: theme(light) !default;
 $header-inverse-borders          : rgba(255, 255, 255, 0.1) !default;
 
 
 // --------------------------------------------
 // Loaders ------------------------------------
 // --------------------------------------------
-$skeleton-bar                : linear-gradient(140deg, rgba($color-white, 0), rgba($color-white, .6) 50%, rgba($color-white, 0) 100%) !default;
+$skeleton-bar                : linear-gradient(140deg, rgba(white, 0), rgba(white, .6) 50%, rgba(white, 0) 100%) !default;
 $skeleton-bar-animation      : skeletonIteration 2s infinite !default;
-$skeleton-bar-height         : 8px !default;
-$skeleton-bg-color           : $color-gray-3 !default;
-$loader-color                : $color-primary-7 !default;
-$loader-bg-color             : $color-gray-3 !default;
-$loader-size                 : 32px !default;
+$skeleton-bar-height         : theme(size-xs) / 2 !default;
+$skeleton-bg-color           : color(gray, 3) !default;
+$loader-color                : color(primary) !default;
+$loader-bg-color             : color(gray, 3) !default;
+$loader-size                 : theme(size-md) !default;
 $loader-full-page-size       : 48px !default;
 $loader-border-size          : 4px !default;
 $loader-full-page-border-size: 6px !default;
@@ -513,40 +667,40 @@ $loader-animation-duration   : .71s !default;
 // --------------------------------------------
 // Media Object -------------------------------
 // --------------------------------------------
-$media-padding           : $space-sm $space-0 !default;
-$media-body-padding      : $space-md !default;
-$media-margin            : $space-0 $space-sm !default;
-$media-bg                : $color-white !default;
-$media-color             : $color-gray-7 !default;
-$media-stripe-bg         : $color-gray-0 !default;
+$media-padding           : space(sm) space(0) !default;
+$media-body-padding      : space(md) !default;
+$media-margin            : space(0) space(sm) !default;
+$media-bg                : theme(light) !default;
+$media-color             : theme(text-color) !default;
+$media-stripe-bg         : color(gray, 0) !default;
 $media-hover-bg          : $media-stripe-bg !default;
-$media-header-bg         : $color-gray-0 !default;
-$media-border            : $color-gray-2 !default;
-$media-border-radius     : $global-default-radius !default;
-$media-action-color      : $color-gray-6 !default;
-$media-action-font-size  : $font-body-md !default;
-$media-action-line-height: $line-height-body-md !default;
+$media-header-bg         : color(gray, 0) !default;
+$media-border            : theme(border-light) !default;
+$media-border-radius     : theme(radius) !default;
+$media-action-color      : color(gray, 6) !default;
+$media-action-font-size  : font-size(body, md) !default;
+$media-action-line-height: line-height(body, md) !default;
 $media-min-height        : 48px !default;
 
 
 // --------------------------------------------
 // MODALS -------------------------------------
 // --------------------------------------------
-$modal-z-index                : $z-modal !default;
-$modal-border-radius          : $global-default-radius !default;
-$modal-shadow                 : $shadow-lg !default;
-$modal-border                 : 1px solid $color-gray-2 !default;
-$modal-close-color            : $color-gray-6 !default;
-$modal-close-size             : 32px !default;
-$modal-body-color             : $color-gray-7 !default;
-$modal-body-font-size         : $font-body-md !default;
-$modal-title-font-size        : $font-body-xl !default;
-$modal-title-color            : $color-gray-9 !default;
-$modal-title-font-weight      : $font-weight-bold !default;
-$modal-title-line-height      : $line-height-body-lg !default;
-$modal-padding                : $space-lg !default;
-$modal-bg-color               : $color-white !default;
-$modal-backdrop-bg-color      : $global-backdrop-dark !default;
+$modal-z-index                : z(modal) !default;
+$modal-border-radius          : theme(radius) !default;
+$modal-shadow                 : shadow(lg) !default;
+$modal-border                 : theme(border-light) !default;
+$modal-close-color            : color(gray, 6) !default;
+$modal-close-size             : theme(size-md) !default;
+$modal-body-color             : theme(text-color) !default;
+$modal-body-font-size         : font-size(body, md) !default;
+$modal-title-font-size        : font-size(body, xl) !default;
+$modal-title-color            : color(gray, 9) !default;
+$modal-title-font-weight      : font-weight(bold) !default;
+$modal-title-line-height      : line-height(body, lg) !default;
+$modal-padding                : space(lg) !default;
+$modal-bg-color               : theme(light) !default;
+$modal-backdrop-bg-color      : theme(backdrop-dark) !default;
 $modal-body-padding           : $modal-padding $modal-padding ($modal-padding / 2) !default;
 $modal-header-padding         : ($modal-padding / 3) ($modal-padding / 2) ($modal-padding / 3) $modal-padding !default;
 $modal-footer-padding         : $modal-padding !default;
@@ -567,40 +721,53 @@ $modal-widths: map-merge(
 // --------------------------------------------
 // NAV ---------------------------------------
 // --------------------------------------------
-$nav-height                : 32px !default;
+$nav-height                : theme(size-md) !default;
 $nav-font-size             : 12px !default;
-$nav-color                 : $color-gray-7 !default;
-$nav-color-hover           : $color-gray-9 !default;
+$nav-color                 : theme(text-color) !default;
+$nav-color-hover           : color(gray, 9) !default;
 $nav-color-active          : $nav-color-hover !default;
-$nav-color-disabled        : $color-gray-5 !default;
+$nav-color-disabled        : theme(disabled-text) !default;
 $nav-disabled-opacity      : .7 !default;
-$nav-font-weight           : $font-weight-normal !default;
-$nav-height-small          : 24px !default;
-$nav-font-size-small       : 11px !default;
-$nav-height-large          : 40px !default;
-$nav-font-size-large       : 14px !default;
-$nav-pill-font-weight      : $font-weight-bold !default;
+$nav-font-weight           : font-weight(normal) !default;
+$nav-pill-font-weight      : font-weight(bold) !default;
 $nav-pill-color            : $nav-color !default;
-$nav-pill-radius           : $global-default-radius !default;
+$nav-pill-radius           : theme(radius) !default;
 $nav-pill-color-hover      : $nav-color-hover !default;
 $nav-pill-color-active     : $nav-color-active !default;
 $nav-pill-color-disabled   : $nav-color !default;
-$nav-pill-bg-hover         : $color-gray-1 !default;
-$nav-pill-bg-active        : $color-gray-1 !default;
-$nav-pill-bg-disabled      : $color-gray-0 !default;
+$nav-pill-bg-hover         : color(gray, 1) !default;
+$nav-pill-bg-active        : color(gray, 1) !default;
+$nav-pill-bg-disabled      : color(gray, 0) !default;
 $nav-pill-icon-opacity     : .25;
-$nav-pill-icon-color-active: $color-primary-8;
-$nav-spacing               : $space-sm !default;
+$nav-pill-icon-color-active: color(primary, 8);
+$nav-spacing               : space(sm) !default;
+
+$nav-sizes: () !default;
+$nav-sizes: map-merge(
+  (
+    "sm": (
+      "font-size": 11px,
+      "height": theme(size-sm),
+      "padding": $space-0 $nav-spacing
+    ),
+    "lg": (
+      "font-size": 14px,
+      "height": 40px,
+      "padding": $space-0 ($nav-spacing * 3)
+    ),
+  ),
+  $nav-sizes
+);
 
 
 // --------------------------------------------
 // NOTIFICATIONS ------------------------------
 // --------------------------------------------
-$notification-margin      : $space-sm !default;
-$notification-shadow      : $shadow-xs !default;
-$notification-shadow-hover: $shadow-sm !default;
-$notification-read-bg     : $color-gray-0 !default;
-$notification-read-border : 1px solid $color-gray-1 !default;
+$notification-margin      : space(sm) !default;
+$notification-shadow      : shadow(xs) !default;
+$notification-shadow-hover: shadow(sm) !default;
+$notification-read-bg     : color(gray, 0) !default;
+$notification-read-border : 1px solid color(gray, 1) !default;
 
 
 // --------------------------------------------
@@ -609,17 +776,17 @@ $notification-read-border : 1px solid $color-gray-1 !default;
 $sidebar-width                      : 256px;
 $sidebar-folded-default-width       : 48px;
 $sidebar-font-size                  : 14px;
-$sidebar-bg-color                   : $color-white;
-$sidebar-color                      : $color-gray-8;
-$sidebar-z-index                    : $z-sidenav;
-$sidebar-border                     : 1px solid $color-gray-2;
-$sidebar-default-hover-bg           : $color-primary-0;
-$sidebar-default-active-color       : $color-primary-8;
-$sidebar-divider-default-color      : $color-gray-1;
+$sidebar-bg-color                   : theme(light);
+$sidebar-color                      : color(gray, 8);
+$sidebar-z-index                    : z(sidenav);
+$sidebar-border                     : theme(border-light);
+$sidebar-default-hover-bg           : color(primary, 0);
+$sidebar-default-active-color       : color(primary, 8);
+$sidebar-divider-default-color      : color(gray, 1);
 // Menu Links
-$sidebar-link-padding               : $space-xs $space-md !default;
-$sidebar-link-margin                : $space-xs !default;
-$sidebar-link-line-height           : $space-xl !default;
+$sidebar-link-padding               : space(xs) space(md) !default;
+$sidebar-link-margin                : space(xs) !default;
+$sidebar-link-line-height           : space(xl) !default;
 $sidebar-link-color                 : $sidebar-color !default;
 $sidebar-link-hover-color           : $sidebar-color !default;
 $sidebar-link-hover-bg              : $sidebar-default-hover-bg !default;
@@ -628,15 +795,15 @@ $sidebar-link-active-color          : $sidebar-color !default;
 $sidebar-link-open-bg               : $sidebar-default-hover-bg !default;
 $sidebar-link-open-color            : $sidebar-color !default;
 // Icon
-$sidebar-icon-margin                : $space-sm $space-md $space-sm 0 !default;
-$sidebar-icon-color                 : $color-gray-5 !default;
+$sidebar-icon-margin                : space(sm) space(md) space(sm) 0 !default;
+$sidebar-icon-color                 : color(gray, 5) !default;
 $sidebar-icon-color-active          : $sidebar-default-active-color !default;
 $sidebar-icon-font-size             : 16px !default;
 // Category
-$sidebar-category-padding           : $space-sm $space-md !default;
-$sidebar-category-color             : $color-gray-6 !default;
+$sidebar-category-padding           : space(sm) space(md) !default;
+$sidebar-category-color             : color(gray, 6) !default;
 // SubMenu
-$sidebar-submenu-bg                 : $color-white !default;
+$sidebar-submenu-bg                 : theme(light) !default;
 $sidebar-submenu-link-active-color  : $sidebar-default-active-color !default;
 $sidebar-submenu-link-padding-left  : 48px !default;
 $sidebar-submenu-level3-padding-left: 64px !default;
@@ -646,24 +813,24 @@ $sidebar-submenu-level4-padding-left: 80px !default;
 // --------------------------------------------
 // SWITCHES -----------------------------------
 // --------------------------------------------
-$switch-height             : $global-size-xs !default;
-$switch-radius             : $radius-round !default;
-$switch-font-size          : $font-body-md !default;
-$switch-border             : $global-default-border;
-$switch-label-off          : $color-gray-7 !default;
-$switch-label-on           : $color-white !default;
-$switch-off-bg             : $color-gray-0 !default;
-$switch-on-bg              : $color-primary !default;
+$switch-height             : theme(size-xs) !default;
+$switch-radius             : radius(round) !default;
+$switch-font-size          : font-size(body, md) !default;
+$switch-border             : theme(border);
+$switch-label-off          : theme(text-color) !default;
+$switch-label-on           : theme(light) !default;
+$switch-off-bg             : color(gray, 0) !default;
+$switch-on-bg              : color(primary) !default;
 $switch-shadow             : inset 0 1px 1px 0 rgba(0, 0, 0, .1) !default;
-$switch-handle             : $color-white !default;
-$switch-handle-disabled    : $color-gray-0 !default;
-$switch-disabled           : $global-disabled-bg !default;
-$switch-disabled-checked-bg: $color-gray-6 !default;
+$switch-handle             : theme(light) !default;
+$switch-handle-disabled    : color(gray, 0) !default;
+$switch-disabled           : theme(disabled-bg) !default;
+$switch-disabled-checked-bg: color(gray, 6) !default;
 
 $switch-sizes: () !default;
 $switch-sizes: map-merge(
   (
-    lg: $global-size-md
+    lg: theme(size-md)
   ),
   $switch-sizes
 );
@@ -673,16 +840,16 @@ $switch-sizes: map-merge(
 // TOOLTIPS -----------------------------------
 // --------------------------------------------
 $tooltip-max-width       : 300px !default;
-$tooltip-padding         : $space-xs $space-sm !default;
-$tooltip-font-size       : $font-body-md !default;
-$tooltip-line-height     : $line-height-body-md !default;
-$tooltip-bd-radius       : $global-default-radius !default;
-$tooltip-shadow          : $shadow-lg !default;
-$tooltip-z-index         : $z-tooltip !default;
-$tooltip-default-bg      : $color-gray-9 !default;
-$tooltip-default-color   : $color-white !default;
-$tooltip-invert-bg       : $color-white !default;
-$tooltip-invert-color    : $color-gray-9 !default;
+$tooltip-padding         : space(xs) space(sm) !default;
+$tooltip-font-size       : font-size(body, md) !default;
+$tooltip-line-height     : line-height(body, md) !default;
+$tooltip-bd-radius       : theme(radius) !default;
+$tooltip-shadow          : shadow(lg) !default;
+$tooltip-z-index         : z(tooltip) !default;
+$tooltip-default-bg      : color(gray, 9) !default;
+$tooltip-default-color   : theme(light) !default;
+$tooltip-invert-bg       : theme(light) !default;
+$tooltip-invert-color    : color(gray, 9) !default;
 $tooltip-transition-style: cubic-bezier(0.73, 0.01, 0, 1) !default;
 $tooltip-border-width    : 4px !default;
 $tooltip-arrow-position  : 6px !default;
@@ -691,38 +858,38 @@ $tooltip-arrow-position  : 6px !default;
 // --------------------------------------------
 // TABS ---------------------------------------
 // --------------------------------------------
-$tabs-color             : $color-gray-7 !default;
-$tabs-color-hover       : $color-primary !default;
-$tabs-color-active      : $color-primary !default;
-$tabs-color-disabled    : $color-gray-6 !default;
-$tabs-font-family       : $font-family-sans !default;
-$tabs-font-size         : $font-body-md !default;
+$tabs-color             : theme(text-color) !default;
+$tabs-bordered-radius   : theme(radius) !default;
+$tabs-height            : theme(size-md) !default;
+$tabs-font-family       : theme(font) !default;
+$tabs-color-hover       : color(primary) !default;
+$tabs-color-active      : color(primary) !default;
+$tabs-color-disabled    : color(gray, 6) !default;
+$tabs-font-size         : font-size(body, md) !default;
 $tabs-font-weight       : bold !default;
-$tabs-padding           : $space-sm $space-md !default;
-$tabs-height            : $global-size-md !default;
-$tabs-border-color      : $color-gray-2 !default;
-$tabs-bordered-radius   : $global-default-radius !default;
-$tabs-bordered-bg       : $color-gray-0 !default;
-$tabs-bordered-bg-hover : $color-white !default;
+$tabs-padding           : space(sm) space(md) !default;
+$tabs-border            : theme(border-light) !default;
+$tabs-bordered-bg       : color(gray, 0) !default;
+$tabs-bordered-bg-hover : theme(light) !default;
 $tabs-bordered-bg-active: $tabs-bordered-bg-hover !default;
 $tabs-hover-transition  : border-color 0.2s ease 0s !default;
-$tabs-box-shadow        : inset 0 -1px 0 0 $tabs-border-color;
+$tabs-box-shadow        : inset 0 -1px 0 0 color(gray, 2);
 $tabs-border-bottom     : 2px !default;
 
 $tabs-sizes: () !default;
 $tabs-sizes: map-merge(
   (
     "sm": (
-      "height": $global-size-sm,
-      "font-size": $font-body-sm,
-      "line-height": $line-height-body-sm,
-      "padding": $space-xs $space-sm
+      "height": theme(size-sm),
+      "font-size": font-size(body, sm),
+      "line-height": line-height(body, sm),
+      "padding": space(xs) space(sm)
     ),
     "lg": (
-      "height": $global-size-lg,
-      "font-size": $font-body-lg,
-      "line-height": $line-height-body-lg,
-      "padding": $space-sm $space-md
+      "height": theme(size-lg),
+      "font-size": font-size(body, lg),
+      "line-height": line-height(body, lg),
+      "padding": space(sm) space(md)
     ),
   ),
   $tabs-sizes
@@ -731,40 +898,40 @@ $tabs-sizes: map-merge(
 // --------------------------------------------
 // TABLES -------------------------------------
 // --------------------------------------------
-$table-background           : $color-white !default;
-$table-font-size            : $font-body-md !default;
+$table-background           : theme(light) !default;
+$table-font-family          : theme(font) !default;
+$table-font-size            : font-size(body, md) !default;
 $table-line-height          : 16px !default;
-$table-font-family          : $font-family-sans !default;
 $table-border               : 0 !default;
-$table-border-color         : $color-gray-2 !default;
-$table-padding              : ($space-sm - 1) ($space-sm + 2) $space-sm !default;
-$table-row-hover            : $color-gray-1 !default;
+$table-border-color         : color(gray, 2) !default;
+$table-padding              : (space(sm) - 1) (space(sm) + 2) space(sm) !default;
+$table-row-hover            : color(gray, 1) !default;
 $table-row-stripe-hover     : $table-row-hover !default;
 $table-stripe               : 'even' !default;
-$table-stripe-bg            : $color-gray-0 !default;
-$table-head-color           : $color-gray-9 !default;
-$table-head-font-weight     : $font-weight-bold !default;
-$table-head-border-color    : $color-gray-3 !default;
+$table-stripe-bg            : color(gray, 0) !default;
+$table-head-color           : color(gray, 9) !default;
+$table-head-font-weight     : font-weight(bold) !default;
+$table-head-border-color    : color(gray, 3) !default;
 $table-head-border-width    : 1px 0 !default;
 $table-head-border-vertical : 1px solid $table-head-border-color !default;
-$table-head-bg              : $color-gray-0 !default;
-$table-head-cell-hover      : $color-gray-2 !default;
+$table-head-bg              : color(gray, 0) !default;
+$table-head-cell-hover      : color(gray, 2) !default;
 $table-foot-bg              : $table-head-bg !default;
 $table-foot-color           : $table-head-color !default;
-$table-padding-sm           : ($space-xs - 1) $space-sm $space-xs !default;
-$table-padding-lg           : ($space-sm + $space-xs) ($space-sm + 2) ($space-sm + ($space-xs - 1)) !default;
-$table-font-size-lg         : $font-body-lg !default;
+$table-padding-sm           : (space(xs) - 1) space(sm) space(xs) !default;
+$table-padding-lg           : (space(sm) + space(xs)) (space(sm) + 2) (space(sm) + (space(xs) - 1)) !default;
+$table-font-size-lg         : font-size(body, lg) !default;
 $table-hover-bg-img         : url('data: image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1IiBoZWlnaHQ9IjIwIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxLjMyMjkxNjYgNS4yOTE2NjY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOTEuNzEpIiBmaWxsPSIjYmJjMWM5Ij4gIDxyZWN0IHk9IjI5Ni40NyIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5MS43MSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjkxLjcxIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTYuNDciIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjk0Ljg4IiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTQuMDkiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTIuNSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC44OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC4wOSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeT0iMjkyLjUiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+IDwvZz48L3N2Zz4 = ') !default;
 $table-hover-bg-img-body-pos: 2px center !default;
 
 $table-states: () !default;
 $table-states: map-merge(
   (
-    "selected": $color-primary-0,
-    "starred": $color-warning-0,
-    "success": $color-success-0,
-    "warning": $color-warning-0,
-    "danger": $color-danger-0
+    "selected": color(primary, 0),
+    "starred": color(warning, 0),
+    "success": color(success, 0),
+    "warning": color(warning, 0),
+    "danger": color(danger, 0)
   ),
   $table-states
 );
@@ -774,13 +941,14 @@ $table-states: map-merge(
 // PAGINATION ---------------------------------
 // --------------------------------------------
 $pagination-item-spacing         : 2px !default;
-$pagination-item-size            : $global-size-md !default;
-$pagination-font-size            : $font-body-md !default;
-$pagination-icon-size            : $font-body-xs !default;
-$pagination-item-border-radius   : $global-default-radius !default;
-$pagination-item-color           : $color-gray-9 !default;
-$pagination-item-current-bg      : $color-primary-0 !default;
-$pagination-item-current-color   : $color-primary-9 !default;
-$pagination-next-color           : $color-primary-9 !default;
-$pagination-previous-color       : $color-gray-6 !default;
-$pagination-bg-disabled          : $color-gray-1 !default;
+$pagination-item-size            : theme(size-md) !default;
+$pagination-item-border-radius   : theme(radius) !default;
+$pagination-font-size            : font-size(body, md) !default;
+$pagination-icon-size            : font-size(body, xs) !default;
+$pagination-item-color           : color(gray, 9) !default;
+$pagination-item-current-bg      : color(primary, 0) !default;
+$pagination-item-current-color   : color(primary, 9) !default;
+$pagination-next-color           : color(primary, 9) !default;
+$pagination-previous-color       : color(gray, 6) !default;
+$pagination-bg-disabled          : color(gray, 1) !default;
+

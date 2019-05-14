@@ -1,16 +1,43 @@
 // Cupcake Mint
-$color-primary-0: #def5f5 !default;
-$color-primary-1: #afe6e6 !default;
-$color-primary-2: #7cd6d7 !default;
-$color-primary-3: #49c5c9 !default;
-$color-primary-4: #21bac0 !default;
-$color-primary-5: #00aeb8 !default;
-$color-primary-6: #009ea7 !default;
-$color-primary-7: #008a8e !default;
-$color-primary-8: #007778 !default;
-$color-primary-9: #055350 !default;
-$color-primary: $color-primary-8;
+$avatar-sizes:(
+  "xxl": (
+    "size": 180px,
+    "font-size": 54px
+  )
+);
 
+$color-primary-0: #def5f5;
+$color-primary-1: #afe6e6;
+$color-primary-2: #7cd6d7;
+$color-primary-3: #49c5c9;
+$color-primary-4: #21bac0;
+$color-primary-5: #00aeb8;
+$color-primary-6: #009ea7;
+$color-primary-7: #008a8e;
+$color-primary-8: #007778;
+$color-primary-9: #055350;
+
+$radius-lg    : 18px;
+
+$radius:(
+  'xl': 200px,
+);
+
+
+$alert-colors:(
+  "primary": (
+    "color": blue,
+    "bg": violet
+  )
+);
+// $theme: (
+//   'border': 1px solid black,
+//   'radius': 0,
+//   'disabled-bg': blue,
+//   'text-color': black,
+//   'font': Arial,
+//   'light': light-gray,
+// );
 
 // Cupcake Core
 @import 'cupcake';

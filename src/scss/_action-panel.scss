@@ -75,7 +75,7 @@
       }
 
       &-icon {
-        font-size: $font-body-xl;
+        font-size: font-size(body, xl);
         color: $action-panel-header-icon-color;
 
         &:hover {

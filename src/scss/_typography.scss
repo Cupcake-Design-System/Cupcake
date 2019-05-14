@@ -4,13 +4,17 @@
 .c-body-text {
   @include font-body(md);
 
-  color: $global-text-color;
+  color: theme(text-color);
 }
 
 .c-text {
-  @each $key, $font-size in config($font-scale, body) {
-    &-#{$key} {
-      @include font-body($key);
+  // All default size classes
+  @each $name, $data in $font-body {
+    $font-size: map-get($data, font-size);
+    $line-height: map-get($data, line-height);
+
+    &-#{$name} {
+      @include font-body($font-size, $line-height);
     }
   }
 
@@ -95,9 +99,13 @@
 }
 
 
-@each $key, $font-size in config($font-scale, header) {
-  .c-header-#{$key} {
-    @include font-header($key);
+// All default size classes
+@each $name, $data in $font-header {
+  $font-size: map-get($data, font-size);
+  $line-height: map-get($data, line-height);
+
+  .c-header-#{$name} {
+    @include font-header($font-size, $line-height);
   }
 }
 

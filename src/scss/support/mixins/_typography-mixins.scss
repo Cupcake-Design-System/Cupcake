@@ -24,7 +24,7 @@
 
 // Header family and weight properties.
 @mixin f-header {
-  font-family: $font-family-sans;
+  font-family: theme(font);
   font-weight: $font-weight-bold;
 }
 
@@ -36,8 +36,8 @@
 //
 //  Output font-size and line-height only
 //  @include font-header(lg, $size-only: true);
-@mixin font-header($size: xl, $size-only: false) {
-  @include font-size(font-size(header, $size), line-height(header, $size));
+@mixin font-header($font-size: md, $line-height: md, $size-only: false) {
+  @include font-size($font-size, $line-height);
 
   @if $size-only == false {
     @include f-header;
@@ -47,7 +47,7 @@
 
 // Body family property.
 @mixin f-body {
-  font-family: $font-family-sans;
+  font-family: theme(font);
   font-weight: $font-weight-normal;
 }
 
@@ -59,8 +59,8 @@
 //
 //  Output font-size and line-height only
 //    @include font-body(sm, $size-only: true);
-@mixin font-body($size: xl, $size-only: false) {
-  @include font-size(font-size(body, $size), line-height(body, $size));
+@mixin font-body($font-size: md, $line-height: md, $size-only: false) {
+  @include font-size($font-size, $line-height);
 
   @if $size-only == false {
     @include f-body;
@@ -88,8 +88,8 @@
   cursor: pointer;
   color: $color-primary;
   text-decoration: none;
-  font-size: $font-body-md;
-  line-height: $line-height-body-xs;
+  font-size: font-size(body, md);
+  line-height: $line-height-sm;
 
   &-hover,
   &:hover {

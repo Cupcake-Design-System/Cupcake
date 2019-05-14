@@ -894,7 +894,7 @@ th {
   min-width: 20px;
   padding: 2px 4px;
   height: 20px;
-  line-height: 16px;
+  line-height: 24px;
 }
 
 .c-alert {
@@ -2516,7 +2516,7 @@ th {
   background-clip: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 12px;
-  border-radius: 2px;
+  border-radius: 8px;
   -webkit-transition: all .1s ease-in-out 0s;
   transition: all .1s ease-in-out 0s;
 }
@@ -2531,7 +2531,7 @@ th {
 .c-card-header {
   border-bottom: 1px solid #e9ecef;
   padding: 12px 16px;
-  border-radius: 2px 2px 0 0;
+  border-radius: 8px 8px 0 0;
 }
 
 .c-card-header-title {
@@ -2614,7 +2614,7 @@ th {
           align-items: center;
   border-top: 1px solid #e9ecef;
   padding: 12px 16px;
-  border-radius: 0 0 2px 2px;
+  border-radius: 0 0 8px 8px;
 }
 
 .c-card-footer a:not(.c-btn), .c-card-footer-link {
@@ -2689,13 +2689,13 @@ th {
 }
 
 .c-card-group-collapsed > .c-card:first-child {
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .c-card-group-collapsed > .c-card:last-child {
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 @media (min-width: 576px) {
@@ -3463,7 +3463,7 @@ th {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   padding: 0 8px;
   border-radius: 2px;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .c-input::-ms-clear {
@@ -3996,7 +3996,7 @@ textarea.c-input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid #e9ecef;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   background-color: #f1f3f5;
 }
@@ -6430,7 +6430,7 @@ textarea.c-input {
   width: 32px;
   height: 32px;
   border: 4px solid #dee2e6;
-  border-top-color: #1c7cd6;
+  border-top-color: #1b6ec2;
   border-radius: 50px;
   -webkit-animation: loaderRotate 0.71s linear infinite;
           animation: loaderRotate 0.71s linear infinite;
@@ -6500,7 +6500,7 @@ textarea.c-input {
   width: 48px;
   height: 48px;
   border: 6px solid #dee2e6;
-  border-top-color: #1c7cd6;
+  border-top-color: #1b6ec2;
   border-radius: 50px;
   -webkit-animation: loaderRotate 0.71s linear infinite;
           animation: loaderRotate 0.71s linear infinite;
@@ -7282,7 +7282,7 @@ textarea.c-input {
 }
 
 .c-nav-sm .c-nav-icon {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .c-nav-sm .c-nav-item {
@@ -7290,9 +7290,9 @@ textarea.c-input {
 }
 
 .c-nav-sm .c-nav-link {
-  padding: 0 8px;
   line-height: 24px;
   font-size: 11px;
+  padding: 0 8px;
 }
 
 .c-nav-lg .c-nav-icon {
@@ -8552,7 +8552,7 @@ select.c-input-error:not([multiple]) option {
 .c-tabs-lg .c-tab-item-link {
   height: 40px;
   font-size: 14px;
-  line-height: 24px;
+  padding: 8px 16px;
 }
 
 .c-tabs-lg.c-tabs-bordered .c-tab-item {
@@ -8796,36 +8796,15 @@ table.c-table .c-table-row-cell-draggable:hover {
 }
 
 .c-body-text {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: md;
+  line-height: md;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #495057;
 }
 
-.c-text-xxl {
-  font-size: 18px;
-  line-height: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-}
-
-.c-text-xl {
-  font-size: 16px;
-  line-height: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-}
-
-.c-text-lg {
-  font-size: 14px;
-  line-height: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-}
-
-.c-text-md {
-  font-size: 12px;
+.c-text-xs {
+  font-size: 10px;
   line-height: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -8838,9 +8817,30 @@ table.c-table .c-table-row-cell-draggable:hover {
   font-weight: 400;
 }
 
-.c-text-xs {
-  font-size: 10px;
+.c-text-md {
+  font-size: 12px;
   line-height: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.c-text-lg {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.c-text-xl {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.c-text-xxl {
+  font-size: 18px;
+  line-height: 24px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
@@ -8989,22 +8989,15 @@ table.c-table .c-table-row-cell-draggable:hover {
   }
 }
 
-.c-header-xxl {
-  font-size: 36px;
-  line-height: 40px;
+.c-header-xs {
+  font-size: 12px;
+  line-height: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
-.c-header-xl {
-  font-size: 24px;
-  line-height: 32px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-}
-
-.c-header-lg {
-  font-size: 20px;
+.c-header-sm {
+  font-size: 14px;
   line-height: 24px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -9017,16 +9010,23 @@ table.c-table .c-table-row-cell-draggable:hover {
   font-weight: 700;
 }
 
-.c-header-sm {
-  font-size: 14px;
+.c-header-lg {
+  font-size: 20px;
   line-height: 24px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
-.c-header-xs {
-  font-size: 12px;
-  line-height: 16px;
+.c-header-xl {
+  font-size: 24px;
+  line-height: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.c-header-xxl {
+  font-size: 36px;
+  line-height: 40px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
@@ -9037,7 +9037,7 @@ table.c-table .c-table-row-cell-draggable:hover {
   color: #1b6ec2;
   text-decoration: none;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 24px;
 }
 
 .c-a-hover, .c-a:hover,
@@ -9091,8 +9091,8 @@ table.c-table .c-table-row-cell-draggable:hover {
 }
 
 ol.c-ol {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: lg;
+  line-height: md;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0;
@@ -9112,8 +9112,8 @@ ol.c-ol li ol {
 }
 
 ul.c-ul {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: lg;
+  line-height: md;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0;
@@ -9139,8 +9139,8 @@ ul.c-ul-unstyled,
 ul.c-ul-unstyled li,
 ol.c-ol-unstyled,
 ol.c-ol-unstyled li {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: lg;
+  line-height: md;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0;
@@ -9799,12 +9799,12 @@ ol.c-ol-unstyled ol {
   background-color: #e03131 !important;
 }
 
-.c-bg-black {
-  background-color: #000000 !important;
+.c-bg-white {
+  background: #ffffff;
 }
 
-.c-bg-white {
-  background-color: #ffffff !important;
+.c-bg-black {
+  background: #000000;
 }
 
 .c-bg-transparent {
@@ -10031,12 +10031,12 @@ ol.c-ol-unstyled ol {
   color: #e03131 !important;
 }
 
-.c-text-black {
-  color: #000000 !important;
+.c-text-white {
+  color: #ffffff;
 }
 
-.c-text-white {
-  color: #ffffff !important;
+.c-text-black {
+  color: #000000;
 }
 
 .c-flex-row {

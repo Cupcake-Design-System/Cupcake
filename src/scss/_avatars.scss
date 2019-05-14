@@ -145,10 +145,10 @@
 
 
 .c-avatar-xl[data-badge]::after {
-  font-size: $font-body-lg;
+  font-size: font-size(body, lg);
   min-width: $space-md + $space-xs;
   padding: $space-xxs $space-xs;
   height: $space-md + $space-xs;
-  line-height: $line-height-body-md;
+  line-height: $line-height-sm;
 }
 

@@ -294,36 +294,29 @@ $nav-excludes: ':not(.c-nav-link-disabled):not(.c-nav-item-disabled)';
 
 
 // Sizes ---------------------------
-.c-nav {
-  &-sm {
-    .c-nav-icon {
-      font-size: ($nav-font-size-small + 1);
-    }
-
-    .c-nav-item {
-      height: $nav-height-small;
-    }
-
-    .c-nav-link {
-      padding: $space-0 $nav-spacing;
-      line-height: $nav-height-small;
-      font-size: $nav-font-size-small;
-    }
+@mixin nav-size($font-size, $height, $padding) {
+  .c-nav-icon {
+    font-size: $font-size + 4;
   }
 
-  &-lg {
-    .c-nav-icon {
-      font-size: ($nav-font-size-large + 4);
-    }
+  .c-nav-item {
+    height: $height;
+  }
 
-    .c-nav-item {
-      height: $nav-height-large;
-    }
+  .c-nav-link {
+    line-height: $height;
+    font-size: $font-size;
+    padding: $padding;
+  }
+}
 
-    .c-nav-link {
-      line-height: $nav-height-large;
-      font-size: $nav-font-size-large;
-      padding: $space-0 ($nav-spacing * 3);
-    }
+// All default size classes
+@each $name, $data in $nav-sizes {
+  $height: map-get($data, height);
+  $font-size: map-get($data, font-size);
+  $padding: map-get($data, padding);
+
+  .c-nav-#{$name} {
+    @include nav-size($font-size, $height, $padding);
   }
 }

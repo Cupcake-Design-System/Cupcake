@@ -12,8 +12,6 @@ $color-primary-7: #1c7cd6 !default;
 $color-primary-8: #1b6ec2 !default;
 $color-primary-9: #1862ab !default;
 
-$color-primary: $color-primary-8 !default;
-
 
 $color-success-0: #ebfbee !default;
 $color-success-1: #d3f9d8 !default;
@@ -25,8 +23,6 @@ $color-success-6: #40c057 !default;
 $color-success-7: #37b24d !default;
 $color-success-8: #2f9e44 !default;
 $color-success-9: #2b8a3e !default;
-
-$color-success:  $color-success-8 !default;
 
 
 $color-warning-0: #fff9db !default;
@@ -40,8 +36,6 @@ $color-warning-7: #f59f00 !default;
 $color-warning-8: #f08c00 !default;
 $color-warning-9: #e67700 !default;
 
-$color-warning:  $color-warning-8 !default;
-
 
 $color-danger-0: #fff5f5 !default;
 $color-danger-1: #ffe3e3 !default;
@@ -53,8 +47,6 @@ $color-danger-6: #fa5252 !default;
 $color-danger-7: #f03e3e !default;
 $color-danger-8: #e03131 !default;
 $color-danger-9: #c92a2a !default;
-
-$color-danger: $color-danger-8 !default;
 
 
 $color-gray-0: #f8f9fa !default;
@@ -234,6 +226,10 @@ $color: map-merge(
   $color
 );
 
+$color-danger: color(danger, 8) !default;
+$color-warning:  color(warning, 8) !default;
+$color-success:  color(success, 8) !default;
+$color-primary: color(primary, 8) !default;
 
 $color-extended: () !default;
 $color-extended: map-merge(

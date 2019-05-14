@@ -40,27 +40,27 @@
 
 .c-icon {
   &-xs {
-    font-size: $font-body-xs + 2;
+    font-size: $font-size-0 + 2;
   }
 
   &-sm {
-    font-size: $font-body-md + 4;
+    font-size: font-size(body, md) + 4;
   }
 
   &-md {
-    font-size: $font-body-md * 2;
+    font-size: font-size(body, md) * 2;
   }
 
   &-lg {
-    font-size: $font-body-xl * 2;
+    font-size: font-size(body, xl) * 2;
   }
 
   &-xl {
-    font-size: $font-body-xl * 3;
+    font-size: font-size(body, xl) * 3;
   }
 
   &-xxl {
-    font-size: $font-body-xxl * 4;
+    font-size: font-size(body, xxl) * 4;
   }
 }
 

@@ -41,7 +41,7 @@ $docs-spacer-xxl: space(xl) + space(md);
     width: 96px;
     color: $text;
     letter-spacing: 1px;
-    font-size: $font-body-xs;
+    font-size: $font-size-0;
     text-transform: uppercase;
     border-radius: $radius-sm;
     background-color: white;
@@ -127,7 +127,7 @@ $docs-spacer-xxl: space(xl) + space(md);
   &-title {
     letter-spacing: 1px;
     color: $color-gray-5;
-    font-size: $font-body-xs;
+    font-size: $font-size-0;
     text-transform: uppercase;
     padding: 0 $docs-spacer-sm;
     margin-top: $docs-spacer-lg;
@@ -187,7 +187,7 @@ $docs-spacer-xxl: space(xl) + space(md);
   &-block-title {
     color: $text;
     line-height: 20px;
-    font-size: $font-body-md;
+    font-size: font-size(body, md);
     font-weight: $font-weight-bold;
   }
 
@@ -228,7 +228,7 @@ $docs-spacer-xxl: space(xl) + space(md);
   &-title {
     color: $text;
     line-height: 20px;
-    font-size: $font-body-md;
+    font-size: font-size(body, md);
     text-transform: capitalize;
     font-weight: $font-weight-bold;
   }

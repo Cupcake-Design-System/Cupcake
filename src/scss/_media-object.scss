@@ -67,7 +67,7 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
     text-align: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid $media-border;
+    border: $media-border;
   }
 
   // Titles
@@ -113,13 +113,13 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
 .c-media-list {
   list-style: none;
   padding-left: $space-0;
-  border-radius: $global-default-radius;
+  border-radius: theme(radius);
 
   // Expanded second level style
   > .c-media-body {
     background-color: $media-bg;
     padding: $media-body-padding;
-    border-bottom: 1px solid $media-border;
+    border-bottom: $media-border;
   }
 
   > .c-media#{$media-excludes},
@@ -144,7 +144,7 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
   &-divided {
     > .c-media#{$media-excludes},
     .c-media-list-body > .c-media {
-      border-bottom: 1px solid $media-border;
+      border-bottom: $media-border;
 
       &:last-child {
         border-bottom: 0;
@@ -154,7 +154,7 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
 
   // Add surrounding border
   &-bordered {
-    border: 1px solid $media-border;
+    border: $media-border;
   }
 
   // Striped backgrounds
@@ -167,7 +167,7 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
   // List headers
   &-header {
     background-color: $media-header-bg;
-    border-bottom: 1px solid $media-border;
+    border-bottom: $media-border;
 
     .c-media {
       min-height: 0;

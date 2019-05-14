@@ -70,7 +70,7 @@
     background: $switch-off-bg;
     background-clip: padding-box;
     border-radius: $switch-radius;
-    border: $global-default-border;
+    border: theme(border);
     transition: background .2s, border .2s, box-shadow .2s, color .2s;
 
     &::before {

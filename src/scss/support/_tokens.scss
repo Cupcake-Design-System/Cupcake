@@ -1,158 +1,47 @@
 @import 'colors';
 
 // --------------------------------------------
-// Colors Global ------------------------------
-// --------------------------------------------
-$theme-colors_BW: () !default;
-$theme-colors_BW: map-merge(
-  (
-    'primary': $color-primary,
-    'success': $color-success,
-    'warning': $color-warning,
-    'danger': $color-danger,
-    'black': $color-black,
-    'white': $color-white,
-  ),
-  $theme-colors_BW
-);
-
-
-$theme-colors: () !default;
-$theme-colors: map-merge(
-  (
-    'primary': $color-primary,
-    'success': $color-success,
-    'warning': $color-warning,
-    'danger': $color-danger,
-  ),
-  $theme-colors
-);
-
-
-$extended-palette: () !default;
-$extended-palette: map-merge(
-  (
-    'dark'  : $color-gray-9,
-    'cyan'  : $color-cyan-9,
-    'blue'  : $color-blue-9,
-    'grape' : $color-grape-9,
-    'indigo': $color-indigo-9,
-    'lime'  : $color-lime-9,
-    'orange': $color-orange-9,
-    'pink'  : $color-pink-9,
-    'teal'  : $color-teal-9,
-    'violet': $color-violet-9,
-  ),
-  $extended-palette
-);
-
-
-$extended-palette-light: () !default;
-$extended-palette-light: map-merge(
-  (
-    'secondary'    : $color-gray-1,
-    'primary-light': $color-primary-1,
-    'success-light': $color-success-1,
-    'warning-light': $color-warning-1,
-    'danger-light' : $color-danger-1,
-    'cyan-light'   : $color-cyan-1,
-    'blue-light'   : $color-blue-1,
-    'grape-light'  : $color-grape-1,
-    'indigo-light' : $color-indigo-1,
-    'lime-light'   : $color-lime-1,
-    'orange-light' : $color-orange-1,
-    'pink-light'   : $color-pink-1,
-    'teal-light'   : $color-teal-1,
-    'violet-light' : $color-violet-1,
-  ),
-  $extended-palette-light
-);
-
-// --------------------------------------------
 // Typography Global --------------------------
 // --------------------------------------------
 $font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !default;
 $font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
 
-$font-family: () !default;
-$font-family: map-merge(
-  (
-    'sans': $font-family-sans,
-    'mono': $font-family-mono,
-  ),
-  $font-family
-);
+$font-size-0: 10px !default;
+$font-size-1: 11px !default;
+$font-size-2: 12px !default;
+$font-size-3: 14px !default;
+$font-size-4: 16px !default;
+$font-size-5: 18px !default;
+$font-size-6: 20px !default;
+$font-size-7: 24px !default;
+$font-size-8: 36px !default;
+
+$line-height-xs: 16px !default;
+$line-height-sm: 24px !default;
+$line-height-md: 32px !default;
+$line-height-lg: 40px !default;
 
 
-// Font Sizes and map for generating classes
-$font-body-xs: 10px !default;
-$font-body-sm: 11px !default;
-$font-body-md: 12px !default;
-$font-body-lg: 14px !default;
-$font-body-xl: 16px !default;
-$font-body-xxl: 18px !default;
-
-$line-height-body-xxl: 24px !default;
-$line-height-body-xl: 24px !default;
-$line-height-body-lg: 24px !default;
-$line-height-body-md: 16px !default;
-$line-height-body-sm: 16px !default;
-$line-height-body-xs: 16px !default;
-
-$font-header-xs: 12px !default;
-$font-header-sm: 14px !default;
-$font-header-md: 16px !default;
-$font-header-lg: 20px !default;
-$font-header-xl: 24px !default;
-$font-header-xxl: 36px !default;
-
-$line-height-header-xxl: 40px !default;
-$line-height-header-xl: 32px !default;
-$line-height-header-lg: 24px !default;
-$line-height-header-md: 24px !default;
-$line-height-header-sm: 24px !default;
-$line-height-header-xs: 16px !default;
-
-// This is a looped map & classes will be generated based on key/value pairs i.e. "c-header-xxl"
-$font-scale: (
-  header: (
-    'xxl': (font-size: $font-header-xxl, line-height: $line-height-header-xxl),
-    'xl': (font-size: $font-header-xl, line-height: $line-height-header-xl),
-    'lg': (font-size: $font-header-lg, line-height: $line-height-header-lg),
-    'md': (font-size: $font-header-md, line-height: $line-height-header-md),
-    'sm': (font-size: $font-header-sm, line-height: $line-height-header-sm),
-    'xs': (font-size: $font-header-xs, line-height: $line-height-header-xs),
-  ),
-  body: (
-    'xxl': (font-size: $font-body-xxl, line-height: $line-height-body-xxl),
-    'xl': (font-size: $font-body-xl, line-height: $line-height-body-xl),
-    'lg': (font-size: $font-body-lg, line-height: $line-height-body-lg),
-    'md': (font-size: $font-body-md, line-height: $line-height-body-md),
-    'sm': (font-size: $font-body-sm, line-height: $line-height-body-sm),
-    'xs': (font-size: $font-body-xs, line-height: $line-height-body-xs),
-  )
-) !default;
+// Font Weights and map for generating helpers
+$font-weight-heavy: 900 !default;
+$font-weight-bold: 700 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-normal: 400 !default;
+$font-weight-light: 300 !default;
 
 
 // This is a looped map & classes will be generated based on key/value pairs i.e. "c-text-heavy"
 $font-weight: () !default;
 $font-weight: map-merge(
   (
-    'heavy': 900,
-    'bold': 700,
-    'semibold': 600,
-    'normal': 400,
-    'light': 300,
+    'heavy': $font-weight-heavy,
+    'bold': $font-weight-bold,
+    'semibold': $font-weight-semibold,
+    'normal': $font-weight-normal,
+    'light': $font-weight-light,
   ),
   $font-weight
 );
-
-// Font Weights and map for generating helpers
-$font-weight-heavy: font-weight(heavy) !default;
-$font-weight-bold: font-weight(bold) !default;
-$font-weight-semibold: font-weight(semibold) !default;
-$font-weight-normal: font-weight(normal) !default;
-$font-weight-light: font-weight(light) !default;
 
 // --------------------------------------------
 // Spacing and map for generating helpers
@@ -245,29 +134,29 @@ $shadow: map-merge(
   $shadow
 );
 
+$z-modal       : 2000 !default;
+$z-action-panel: 1900 !default;
+$z-overlay     : 1800 !default;
+$z-alert       : 1750 !default;
+$z-dropdown    : 1700 !default;
+$z-tooltip     : 1650 !default;
+$z-header      : 1600 !default;
+$z-sidenav     : 1600 !default;
+$z-footer      : 1500 !default;
 
 $z-index: () !default;
 $z-index: map-merge(
   (
-    'modal'       : 2000,
-    'action-panel': 1900,
-    'overlay'     : 1800,
-    'alert'       : 1750,
-    'dropdown'    : 1700,
-    'tooltip'     : 1650,
-    'header'      : 1600,
-    'sidenav'     : 1600,
-    'footer'      : 1500
+    'modal'       : $z-modal,
+    'action-panel': $z-action-panel,
+    'overlay'     : $z-overlay,
+    'alert'       : $z-alert,
+    'dropdown'    : $z-dropdown,
+    'tooltip'     : $z-tooltip,
+    'header'      : $z-header,
+    'sidenav'     : $z-sidenav,
+    'footer'      :$z-footer,
   ),
   $z-index
 );
 
-$z-modal       : z(modal) !default;
-$z-action-panel: z(action-panel) !default;
-$z-overlay     : z(overlay) !default;
-$z-alert       : z(alert) !default;
-$z-dropdown    : z(dropdown) !default;
-$z-tooltip     : z(tooltip) !default;
-$z-header      : z(header) !default;
-$z-sidenav     : z(sidenav) !default;
-$z-footer      : z(footer) !default;
