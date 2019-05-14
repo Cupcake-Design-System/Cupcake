@@ -153,33 +153,24 @@
 }
 
 
-// TABS SMALL
-.c-tabs-sm {
-  height: $tabs-height-small;
+// All default size classes
+@each $name, $data in $tabs-sizes {
+  $height: map-get($data, height);
+  $font-size: map-get($data, font-size);
+  $line-height: map-get($data, line-height);
+  $padding: map-get($data, padding);
 
-  .c-tab-item-link {
-    height: $tabs-height-small;
-    font-size: $tabs-font-size-small;
-    padding: $tabs-padding-small;
-  }
+  .c-tabs-#{$name} {
+    height: $height;
 
-  &.c-tabs-bordered .c-tab-item {
-    height: $tabs-height-small;
-  }
-}
+    .c-tab-item-link {
+      height: $height;
+      font-size: $font-size;
+      padding: $padding;
+    }
 
-
-// TABS LARGE
-.c-tabs-lg {
-  height: $tabs-height-large;
-
-  .c-tab-item-link {
-    height: $tabs-height-large;
-    font-size: $tabs-font-size-large;
-    line-height: $tabs-line-height-large;
-  }
-
-  &.c-tabs-bordered .c-tab-item {
-    height: $tabs-height-large;
+    &.c-tabs-bordered .c-tab-item {
+      height: $height;
+    }
   }
 }

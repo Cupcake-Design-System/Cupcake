@@ -695,8 +695,11 @@ $tabs-color             : $color-gray-7 !default;
 $tabs-color-hover       : $color-primary !default;
 $tabs-color-active      : $color-primary !default;
 $tabs-color-disabled    : $color-gray-6 !default;
-$tabs-font-weight       : bold !default;
 $tabs-font-family       : $font-family-sans !default;
+$tabs-font-size         : $font-body-md !default;
+$tabs-font-weight       : bold !default;
+$tabs-padding           : $space-sm $space-md !default;
+$tabs-height            : $global-size-md !default;
 $tabs-border-color      : $color-gray-2 !default;
 $tabs-bordered-radius   : $global-default-radius !default;
 $tabs-bordered-bg       : $color-gray-0 !default;
@@ -705,16 +708,25 @@ $tabs-bordered-bg-active: $tabs-bordered-bg-hover !default;
 $tabs-hover-transition  : border-color 0.2s ease 0s !default;
 $tabs-box-shadow        : inset 0 -1px 0 0 $tabs-border-color;
 $tabs-border-bottom     : 2px !default;
-$tabs-font-size         : $font-body-md !default;
-$tabs-font-size-small   : $font-body-sm !default;
-$tabs-font-size-large   : $font-body-lg !default;
-$tabs-padding           : $space-sm $space-md !default;
-$tabs-padding-small     : $space-xs $space-sm !default;
-$tabs-height            : $global-size-md !default;
-$tabs-height-small      : $global-size-sm !default;
-$tabs-height-large      : $global-size-lg !default;
-$tabs-line-height-large : $line-height-body-lg !default;
 
+$tabs-sizes: () !default;
+$tabs-sizes: map-merge(
+  (
+    "sm": (
+      "height": $global-size-sm,
+      "font-size": $font-body-sm,
+      "line-height": $line-height-body-sm,
+      "padding": $space-xs $space-sm
+    ),
+    "lg": (
+      "height": $global-size-lg,
+      "font-size": $font-body-lg,
+      "line-height": $line-height-body-lg,
+      "padding": $space-sm $space-md
+    ),
+  ),
+  $tabs-sizes
+);
 
 // --------------------------------------------
 // TABLES -------------------------------------
