@@ -2,7 +2,7 @@
 /* ----------------------- */
 /* 🎂 CUPCAKE 🎂 */
 /* pkg name: @cupcake-ds/cupcake */
-/* version: 2.0.0-beta.11 */
+/* version: 2.0.0-beta.12 */
 /* file name: cupcake.css */
 /* ----------------------- */
 
@@ -579,7 +579,7 @@ th {
   font-size: 12px;
   font-weight: 600;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  border-radius: 200px;
+  border-radius: 50px;
 }
 
 .c-avatar i {
@@ -592,7 +592,7 @@ th {
   height: 100%;
   position: relative;
   border: none;
-  border-radius: 200px;
+  border-radius: 50px;
 }
 
 .c-avatar-square {
@@ -620,7 +620,7 @@ th {
   -webkit-box-shadow: 0 0 0 1px #ffffff;
           box-shadow: 0 0 0 1px #ffffff;
   background-clip: padding-box;
-  border-radius: 200px;
+  border-radius: 50px;
   font-weight: 600;
 }
 
@@ -1213,14 +1213,14 @@ th {
   font-size: 11px;
   font-weight: 600;
   line-height: 2;
-  border-radius: 200px;
+  border-radius: 50px;
 }
 
 .c-badge:empty {
   padding: 0;
   display: inline-block;
   vertical-align: inherit;
-  border-radius: 200px;
+  border-radius: 50px;
   width: 12px;
   height: 12px;
 }
@@ -1246,7 +1246,7 @@ th {
   transition: background-color 0.2s ease;
   margin-left: 4px;
   margin-right: -4px;
-  border-radius: 200px;
+  border-radius: 50px;
 }
 
 .c-badge-close::before {
@@ -1418,17 +1418,17 @@ th {
 
 .c-badge-success {
   color: #ffffff;
-  background-color: #2b8a3e;
+  background-color: #2f9e44;
 }
 
 .c-badge-warning {
   color: #ffffff;
-  background-color: #e67700;
+  background-color: #f08c00;
 }
 
 .c-badge-danger {
   color: #ffffff;
-  background-color: #c92a2a;
+  background-color: #e03131;
 }
 
 .c-badge-secondary {
@@ -2241,7 +2241,7 @@ th {
 }
 
 .c-btn-circle {
-  border-radius: 200px;
+  border-radius: 50px;
 }
 
 .c-btn-icon,
@@ -2889,26 +2889,28 @@ th {
 }
 
 .c-checkbox.c-checkbox-lg {
-  height: 24px;
-  min-width: 24px;
-  line-height: 23px;
+  height: 40px;
+  min-width: 40px;
+  line-height: 39px;
 }
 
 .c-checkbox.c-checkbox-lg input {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
 }
 
 .c-checkbox.c-checkbox-lg input:checked + label::after,
 .c-checkbox.c-checkbox-lg input:checked[disabled] + label::after {
-  top: 4px;
-  left: 8px;
-  width: 8px;
-  height: 14px;
+  top: 7px;
+  left: 13px;
+  width: 13px;
+  height: 22px;
+  border-right: 3px solid;
+  border-bottom: 3px solid;
 }
 
 .c-checkbox.c-checkbox-lg label {
-  font-size: 20px;
+  font-size: 36px;
 }
 
 .c-checkbox.c-checkbox-lg label:empty::before {
@@ -2916,9 +2918,9 @@ th {
 }
 
 .c-checkbox.c-checkbox-lg label::before {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
+  width: 40px;
+  height: 40px;
+  margin-right: 13px;
 }
 
 .c-checkbox.c-checkbox-xl {
@@ -2956,6 +2958,72 @@ th {
   margin-right: 11px;
 }
 
+.c-checkbox.c-checkbox-xs {
+  height: 16px;
+  min-width: 16px;
+  line-height: 15px;
+}
+
+.c-checkbox.c-checkbox-xs input {
+  width: 16px;
+  height: 16px;
+}
+
+.c-checkbox.c-checkbox-xs input:checked + label::after,
+.c-checkbox.c-checkbox-xs input:checked[disabled] + label::after {
+  top: 3px;
+  left: 5px;
+  width: 5px;
+  height: 10px;
+}
+
+.c-checkbox.c-checkbox-xs label {
+  font-size: 12px;
+}
+
+.c-checkbox.c-checkbox-xs label:empty::before {
+  margin-right: 0;
+}
+
+.c-checkbox.c-checkbox-xs label::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.c-checkbox.c-checkbox-sm {
+  height: 24px;
+  min-width: 24px;
+  line-height: 23px;
+}
+
+.c-checkbox.c-checkbox-sm input {
+  width: 24px;
+  height: 24px;
+}
+
+.c-checkbox.c-checkbox-sm input:checked + label::after,
+.c-checkbox.c-checkbox-sm input:checked[disabled] + label::after {
+  top: 4px;
+  left: 8px;
+  width: 8px;
+  height: 14px;
+}
+
+.c-checkbox.c-checkbox-sm label {
+  font-size: 20px;
+}
+
+.c-checkbox.c-checkbox-sm label:empty::before {
+  margin-right: 0;
+}
+
+.c-checkbox.c-checkbox-sm label::before {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
 .c-radio {
   position: relative;
   display: inline-block;
@@ -2981,7 +3049,7 @@ th {
   position: absolute;
   width: 16px;
   height: 16px;
-  border-radius: 200px;
+  border-radius: 50px;
 }
 
 .c-radio input:checked + label::after,
@@ -2994,7 +3062,7 @@ th {
   width: 8px;
   height: 8px;
   display: table;
-  border-radius: 200px;
+  border-radius: 50px;
   background-color: #ffffff;
 }
 
@@ -3040,7 +3108,7 @@ th {
   background: #ffffff;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
-  border-radius: 50px;
+  border-radius: 200px;
 }
 
 .c-radio label:empty::before {
@@ -3084,26 +3152,26 @@ th {
 }
 
 .c-radio.c-radio-lg {
-  height: 24px;
-  min-width: 24px;
-  line-height: 23px;
+  height: 40px;
+  min-width: 40px;
+  line-height: 39px;
 }
 
 .c-radio.c-radio-lg input {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
 }
 
 .c-radio.c-radio-lg input:checked + label::after,
 .c-radio.c-radio-lg input:checked[disabled] + label::after {
-  top: 6px;
-  left: 6px;
-  width: 12px;
-  height: 12px;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .c-radio.c-radio-lg label {
-  font-size: 20px;
+  font-size: 36px;
 }
 
 .c-radio.c-radio-lg label:empty::before {
@@ -3111,9 +3179,9 @@ th {
 }
 
 .c-radio.c-radio-lg label::before {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
+  width: 40px;
+  height: 40px;
+  margin-right: 13px;
 }
 
 .c-radio.c-radio-xl {
@@ -3147,6 +3215,72 @@ th {
   width: 32px;
   height: 32px;
   margin-right: 11px;
+}
+
+.c-radio.c-radio-xs {
+  height: 16px;
+  min-width: 16px;
+  line-height: 15px;
+}
+
+.c-radio.c-radio-xs input {
+  width: 16px;
+  height: 16px;
+}
+
+.c-radio.c-radio-xs input:checked + label::after,
+.c-radio.c-radio-xs input:checked[disabled] + label::after {
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+}
+
+.c-radio.c-radio-xs label {
+  font-size: 12px;
+}
+
+.c-radio.c-radio-xs label:empty::before {
+  margin-right: 0;
+}
+
+.c-radio.c-radio-xs label::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.c-radio.c-radio-sm {
+  height: 24px;
+  min-width: 24px;
+  line-height: 23px;
+}
+
+.c-radio.c-radio-sm input {
+  width: 24px;
+  height: 24px;
+}
+
+.c-radio.c-radio-sm input:checked + label::after,
+.c-radio.c-radio-sm input:checked[disabled] + label::after {
+  top: 6px;
+  left: 6px;
+  width: 12px;
+  height: 12px;
+}
+
+.c-radio.c-radio-sm label {
+  font-size: 20px;
+}
+
+.c-radio.c-radio-sm label:empty::before {
+  margin-right: 0;
+}
+
+.c-radio.c-radio-sm label::before {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
 
 .c-dropdown {
@@ -3487,6 +3621,18 @@ textarea.c-input {
   padding-top: 8px;
 }
 
+.c-input-primary, .c-input-primary:hover {
+  border-color: #1b6ec2;
+}
+
+.c-input-primary:focus {
+  border-color: #1b6ec2;
+}
+
+.c-input-primary ~ .c-input-icon {
+  color: #1b6ec2;
+}
+
 .c-input-success, .c-input-success:hover {
   border-color: #2f9e44;
 }
@@ -3509,18 +3655,6 @@ textarea.c-input {
 
 .c-input-warning ~ .c-input-icon {
   color: #f08c00;
-}
-
-.c-input-error, .c-input-error:hover {
-  border-color: #e03131;
-}
-
-.c-input-error:focus {
-  border-color: #1b6ec2;
-}
-
-.c-input-error ~ .c-input-icon {
-  color: #e03131;
 }
 
 .c-input-danger, .c-input-danger:hover {
@@ -3646,16 +3780,16 @@ textarea.c-input {
   opacity: 1;
 }
 
+.c-hint-primary {
+  color: #1b6ec2;
+}
+
 .c-hint-success {
   color: #2f9e44;
 }
 
 .c-hint-warning {
   color: #f08c00;
-}
-
-.c-hint-error {
-  color: #e03131;
 }
 
 .c-hint-danger {
@@ -6297,7 +6431,7 @@ textarea.c-input {
   height: 32px;
   border: 4px solid #dee2e6;
   border-top-color: #1c7cd6;
-  border-radius: 200px;
+  border-radius: 50px;
   -webkit-animation: loaderRotate 0.71s linear infinite;
           animation: loaderRotate 0.71s linear infinite;
   margin: 0 auto;
@@ -6367,7 +6501,7 @@ textarea.c-input {
   height: 48px;
   border: 6px solid #dee2e6;
   border-top-color: #1c7cd6;
-  border-radius: 200px;
+  border-radius: 50px;
   -webkit-animation: loaderRotate 0.71s linear infinite;
           animation: loaderRotate 0.71s linear infinite;
   top: 50%;
@@ -6450,12 +6584,12 @@ textarea.c-input {
   max-width: 640px;
 }
 
-.c-modal-lg {
-  max-width: 800px;
-}
-
 .c-modal-sm {
   max-width: 480px;
+}
+
+.c-modal-lg {
+  max-width: 800px;
 }
 
 .c-modal-content {
@@ -7819,7 +7953,7 @@ select.c-input-error:not([multiple]) option {
   display: block;
   position: absolute;
   background: currentColor;
-  border-radius: 200px;
+  border-radius: 50px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-box-shadow: -0.4em 0, 0.4em 0;
@@ -8069,7 +8203,7 @@ select.c-input-error:not([multiple]) option {
           box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   background: #f8f9fa;
   background-clip: padding-box;
-  border-radius: 200px;
+  border-radius: 50px;
   border: 1px solid #ced4da;
   -webkit-transition: background .2s, border .2s, color .2s, -webkit-box-shadow .2s;
   transition: background .2s, border .2s, color .2s, -webkit-box-shadow .2s;
@@ -8086,7 +8220,7 @@ select.c-input-error:not([multiple]) option {
   width: 14px;
   height: 14px;
   background: #ffffff;
-  border-radius: 200px;
+  border-radius: 50px;
   -webkit-box-shadow: 1px 1px 4px 0 rgba(33, 37, 41, 0.4);
           box-shadow: 1px 1px 4px 0 rgba(33, 37, 41, 0.4);
   -webkit-transition: background .2s, border .2s, color .2s, left .2s, -webkit-box-shadow .2s;
@@ -13461,11 +13595,11 @@ ol.c-ol-unstyled ol {
 }
 
 .c-radius-pill {
-  border-radius: 50px !important;
+  border-radius: 200px !important;
 }
 
 .c-radius-round {
-  border-radius: 200px !important;
+  border-radius: 50px !important;
 }
 
 .c-radius-square {

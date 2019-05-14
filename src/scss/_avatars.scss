@@ -60,7 +60,7 @@
 }
 
 // All default Avatar color classes
-@each $name, $hex in $avatar-palette {
+@each $name, $hex in $theme-colors {
   .c-avatar-#{$name} {
     background-color: $hex;
   }
@@ -71,7 +71,10 @@
 }
 
 // All default Avatar size classes
-@each $name, $size, $font-size in config($avatar-sizes) {
+@each $name, $data in $avatar-sizes {
+  $size: map-get($data, size);
+  $font-size: map-get($data, font-size);
+
   .c-avatar-#{$name} {
     @include avatar-size($size, $font-size);
 

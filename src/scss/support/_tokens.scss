@@ -1,13 +1,88 @@
+@import 'colors';
+
+// --------------------------------------------
+// Colors Global ------------------------------
+// --------------------------------------------
+$theme-colors_BW: () !default;
+$theme-colors_BW: map-merge(
+  (
+    'primary': $color-primary,
+    'success': $color-success,
+    'warning': $color-warning,
+    'danger': $color-danger,
+    'black': $color-black,
+    'white': $color-white,
+  ),
+  $theme-colors_BW
+);
+
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primary': $color-primary,
+    'success': $color-success,
+    'warning': $color-warning,
+    'danger': $color-danger,
+  ),
+  $theme-colors
+);
+
+
+$extended-palette: () !default;
+$extended-palette: map-merge(
+  (
+    'dark'  : $color-gray-9,
+    'cyan'  : $color-cyan-9,
+    'blue'  : $color-blue-9,
+    'grape' : $color-grape-9,
+    'indigo': $color-indigo-9,
+    'lime'  : $color-lime-9,
+    'orange': $color-orange-9,
+    'pink'  : $color-pink-9,
+    'teal'  : $color-teal-9,
+    'violet': $color-violet-9,
+  ),
+  $extended-palette
+);
+
+
+$extended-palette-light: () !default;
+$extended-palette-light: map-merge(
+  (
+    'secondary'    : $color-gray-1,
+    'primary-light': $color-primary-1,
+    'success-light': $color-success-1,
+    'warning-light': $color-warning-1,
+    'danger-light' : $color-danger-1,
+    'cyan-light'   : $color-cyan-1,
+    'blue-light'   : $color-blue-1,
+    'grape-light'  : $color-grape-1,
+    'indigo-light' : $color-indigo-1,
+    'lime-light'   : $color-lime-1,
+    'orange-light' : $color-orange-1,
+    'pink-light'   : $color-pink-1,
+    'teal-light'   : $color-teal-1,
+    'violet-light' : $color-violet-1,
+  ),
+  $extended-palette-light
+);
+
 // --------------------------------------------
 // Typography Global --------------------------
 // --------------------------------------------
 $font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !default;
 $font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
 
-$font-family: (
-  sans: $font-family-sans,
-  mono: $font-family-mono,
+$font-family: () !default;
+$font-family: map-merge(
+  (
+    'sans': $font-family-sans,
+    'mono': $font-family-mono,
+  ),
+  $font-family
 );
+
 
 // Font Sizes and map for generating classes
 $font-body-xs: 10px !default;
@@ -41,39 +116,43 @@ $line-height-header-xs: 16px !default;
 // This is a looped map & classes will be generated based on key/value pairs i.e. "c-header-xxl"
 $font-scale: (
   header: (
-    xxl: (font-size: $font-header-xxl, line-height: $line-height-header-xxl),
-    xl: (font-size: $font-header-xl, line-height: $line-height-header-xl),
-    lg: (font-size: $font-header-lg, line-height: $line-height-header-lg),
-    md: (font-size: $font-header-md, line-height: $line-height-header-md),
-    sm: (font-size: $font-header-sm, line-height: $line-height-header-sm),
-    xs: (font-size: $font-header-xs, line-height: $line-height-header-xs),
+    'xxl': (font-size: $font-header-xxl, line-height: $line-height-header-xxl),
+    'xl': (font-size: $font-header-xl, line-height: $line-height-header-xl),
+    'lg': (font-size: $font-header-lg, line-height: $line-height-header-lg),
+    'md': (font-size: $font-header-md, line-height: $line-height-header-md),
+    'sm': (font-size: $font-header-sm, line-height: $line-height-header-sm),
+    'xs': (font-size: $font-header-xs, line-height: $line-height-header-xs),
   ),
   body: (
-    xxl: (font-size: $font-body-xxl, line-height: $line-height-body-xxl),
-    xl: (font-size: $font-body-xl, line-height: $line-height-body-xl),
-    lg: (font-size: $font-body-lg, line-height: $line-height-body-lg),
-    md: (font-size: $font-body-md, line-height: $line-height-body-md),
-    sm: (font-size: $font-body-sm, line-height: $line-height-body-sm),
-    xs: (font-size: $font-body-xs, line-height: $line-height-body-xs),
+    'xxl': (font-size: $font-body-xxl, line-height: $line-height-body-xxl),
+    'xl': (font-size: $font-body-xl, line-height: $line-height-body-xl),
+    'lg': (font-size: $font-body-lg, line-height: $line-height-body-lg),
+    'md': (font-size: $font-body-md, line-height: $line-height-body-md),
+    'sm': (font-size: $font-body-sm, line-height: $line-height-body-sm),
+    'xs': (font-size: $font-body-xs, line-height: $line-height-body-xs),
   )
 ) !default;
 
 
-// Font Weights and map for generating helpers
-$font-weight-heavy: 900 !default;
-$font-weight-bold: 700 !default;
-$font-weight-semibold: 600 !default;
-$font-weight-normal: 400 !default;
-$font-weight-light: 300 !default;
-
 // This is a looped map & classes will be generated based on key/value pairs i.e. "c-text-heavy"
-$font-weight: (
-  heavy: $font-weight-heavy,
-  bold: $font-weight-bold,
-  semibold: $font-weight-semibold,
-  normal: $font-weight-normal,
-  light: $font-weight-light,
+$font-weight: () !default;
+$font-weight: map-merge(
+  (
+    'heavy': 900,
+    'bold': 700,
+    'semibold': 600,
+    'normal': 400,
+    'light': 300,
+  ),
+  $font-weight
 );
+
+// Font Weights and map for generating helpers
+$font-weight-heavy: font-weight(heavy) !default;
+$font-weight-bold: font-weight(bold) !default;
+$font-weight-semibold: font-weight(semibold) !default;
+$font-weight-normal: font-weight(normal) !default;
+$font-weight-light: font-weight(light) !default;
 
 // --------------------------------------------
 // Spacing and map for generating helpers
@@ -88,14 +167,18 @@ $space-lg: $global-px-grid * 3 !default;
 $space-xl: $global-px-grid * 4 !default;
 
 // This is a looped map & classes will be generated based on key/value pairs i.e. "c-p-xxs"
-$space: (
-  0: $space-0,
-  xxs: $space-xxs,
-  xs: $space-xs,
-  sm: $space-sm,
-  md: $space-md,
-  lg: $space-lg,
-  xl: $space-xl,
+$space: () !default;
+$space: map-merge(
+  (
+    0: $space-0,
+    'xxs': $space-xxs,
+    'xs': $space-xs,
+    'sm': $space-sm,
+    'md': $space-md,
+    'lg': $space-lg,
+    'xl': $space-xl,
+  ),
+  $space
 );
 
 // Global sizes and map for generating helpers
@@ -106,63 +189,77 @@ $global-size-lg: $global-px-grid * 5 !default;
 $global-size-xl: $global-px-grid * 6 !default;
 
 // This is a looped map & classes will be generated based on key/value pairs i.e. "c-shadow-sm"
-$global-sizes: (
-  xs: $global-size-xs,
-  sm: $global-size-sm,
-  md: $global-size-md,
-  lg: $global-size-lg,
-  xl: $global-size-xl,
+$global-sizes: () !default;
+$global-sizes: map-merge(
+  (
+    'xs': $global-size-xs,
+    'sm': $global-size-sm,
+    'md': $global-size-md,
+    'lg': $global-size-lg,
+    'xl': $global-size-xl,
+  ),
+  $global-sizes
 );
-
 
 // Radius and map for generating helpers
-$radius-0: 0 !default;
-$radius-sm: 2px !default;
-$radius-md: 4px !default;
-$radius-lg: 8px !default;
+$radius-0     : 0 !default;
+$radius-sm    : 2px !default;
+$radius-md    : 4px !default;
+$radius-lg    : 8px !default;
 $radius-square: 0 !default;
-$radius-pill: 50px !default;
-$radius-round: 200px !default;
-
+$radius-pill  : 200px !default;
+$radius-round : 50px !default;
 
 // This is a looped map & classes will be generated based on key/value pairs i.e. "c-radius-sm"
-$radius: (
-  0: $radius-0,
-  sm: $radius-sm,
-  md: $radius-md,
-  lg: $radius-lg,
-  pill: $radius-pill,
-  round: $radius-round,
-  square: $radius-square,
+$radius: () !default;
+$radius: map-merge(
+  (
+    0: $radius-0,
+    'sm': $radius-sm,
+    'md': $radius-md,
+    'lg': $radius-lg,
+    'pill': $radius-pill,
+    'round': $radius-round,
+    'square': $radius-square,
+  ),
+  $radius
 );
 
-
 // Shadows and map for generating helpers
+$shadow-0: none !default;
 $shadow-xs: 0 2px 4px -2px rgba(33, 37, 41, .1) !default;
 $shadow-sm: 0 4px 4px -2px rgba(33, 37, 41, .1) !default;
 $shadow-md: 0 6px 8px -2px rgba(33, 37, 41, .1) !default;
 $shadow-lg: 0 8px 8px -2px rgba(33, 37, 41, .1) !default;
 
 // This is a looped map & classes will be generated based on key/value pairs i.e. "c-shadow-sm"
-$shadow: (
-  0: none,
-  xs: $shadow-xs,
-  sm: $shadow-sm,
-  md: $shadow-md,
-  lg: $shadow-lg
+$shadow: () !default;
+$shadow: map-merge(
+  (
+    0: $shadow-0,
+    'xs': $shadow-xs,
+    'sm': $shadow-sm,
+    'md': $shadow-md,
+    'lg': $shadow-lg
+  ),
+  $shadow
 );
 
 
-$z-index: (
-  modal       : 2000,
-  action-panel: 1900,
-  overlay     : 1800,
-  alert       : 1750,
-  dropdown    : 1700,
-  tooltip     : 1650,
-  header      : 1600,
-  sidenav     : 1600,
-  footer      : 1500
+$z-index: () !default;
+$z-index: map-merge(
+  (
+    'modal'       : 2000,
+    'action-panel': 1900,
+    'overlay'     : 1800,
+    'alert'       : 1750,
+    'dropdown'    : 1700,
+    'tooltip'     : 1650,
+    'header'      : 1600,
+    'sidenav'     : 1600,
+    'footer'      : 1500
+  ),
+  $z-index
 );
 
 $z-modal       : z(modal) !default;

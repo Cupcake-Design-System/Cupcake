@@ -5,7 +5,11 @@ select.c-input:not([multiple]) {
 
 
 // Select sizes
-@each $name, $height, $padding, $font-size in config($control-sizes) {
+@each $name, $data in $control-sizes {
+  $height: map-get($data, height);
+  $padding: map-get($data, padding);
+  $font-size: map-get($data, font-size);
+
   select.c-input:not([multiple]).c-input-#{$name} {
     height: $height;
     padding-right: $select-padding-r;

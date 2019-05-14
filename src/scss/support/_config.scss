@@ -44,16 +44,31 @@ $alert-icon-width           : $font-body-md !default;
 $alert-top-icon-size        : $font-body-xl !default;
 $alert-close-font-size      : $font-body-md !default;
 $toast-font-weight          : $font-weight-bold !default;
-$toast-palette              : $theme-colors !default;
 $toast-left-border          : 4px !default;
 
 // for alerts this maps to name, bg-color, text/border color
-$alert-colors:
-  (primary, $color-primary-0, $color-primary)
-  (success, $color-success-0, $color-success)
-  (warning, $color-warning-0, $color-warning)
-  (danger, $color-danger-0, $color-danger) !default;
-
+$alert-colors: () !default;
+$alert-colors: map-merge(
+  (
+    "primary": (
+      "color": $color-primary,
+      "bg": $color-primary-0
+    ),
+    "success": (
+      "color": $color-success,
+      "bg": $color-success-0
+    ),
+    "warning": (
+      "color": $color-warning,
+      "bg": $color-warning-0
+    ),
+    "danger": (
+      "color": $color-danger,
+      "bg": $color-danger-0
+    ),
+  ),
+  $alert-colors
+);
 
 // --------------------------------------------
 // Action Panel -------------------------------
@@ -86,9 +101,13 @@ $action-panel-transition             : 0.3s ease !default;
 $action-panel-shadow                 : $shadow-lg !default;
 $action-panel-backdrop               : $global-backdrop-dark !default;
 
-$action-panel-sizes: (
-  lg: 400px
-) !default;
+$action-panel-sizes                  : () !default;
+$action-panel-sizes                  : map-merge(
+  (
+    lg: 400px
+  ),
+  $action-panel-sizes
+);
 
 
 // --------------------------------------------
@@ -104,15 +123,30 @@ $avatar-line-height         : normal !default;
 $avatar-img-border          : none !default;
 $avatar-group-spacing       : $space-xs !default;
 $avatar-group-transition    : 0.35s cubic-bezier(0, 1.22, .66, 1.39) !default;
-$avatar-palette             : $theme-colors !default;
 
 // for avatar sizes this maps to name, size, font-size
-$avatar-sizes:
-  (xs, $avatar-default-size / 2, $font-body-xs)
-  (sm, $avatar-default-size - 8, $font-body-sm)
-  (lg, $avatar-default-size + 8, $font-body-lg)
-  (xl, ($avatar-default-size + 8) * 2, $font-body-md * 2) !default;
-
+$avatar-sizes: () !default;
+$avatar-sizes: map-merge(
+  (
+    "xs": (
+      "size": $avatar-default-size / 2,
+      "font-size": $font-body-xs
+    ),
+    "sm": (
+      "size": $avatar-default-size - 8,
+      "font-size": $font-body-sm
+    ),
+    "lg": (
+      "size": $avatar-default-size + 8,
+      "font-size": $font-body-lg
+    ),
+    "xl": (
+      "size": ($avatar-default-size + 8) * 2,
+      "font-size": $font-body-md * 2
+    ),
+  ),
+  $avatar-sizes
+);
 
 // --------------------------------------------
 // Badge --------------------------------------
@@ -130,12 +164,7 @@ $badge-lg-font-size         : $font-body-lg - 1 !default;
 $badge-sm-size              : $badge-default-size - 8 !default;
 $badge-sm-font-size         : $font-body-xs !default;
 $badge-group-spacing        : $space-sm !default;
-$badge-palette: (
-  primary: $color-primary-8,
-  success: $color-success-9,
-  warning: $color-warning-9,
-  danger: $color-danger-9,
-);
+
 
 // --------------------------------------------
 // Buttons ------------------------------------
@@ -165,62 +194,74 @@ $btn-active-selected    : false !default;
 $btn-active-shadow      : none !default;
 $btn-box-width          : $global-size-md !default;
 
-$btn-box-sizes: (
-  xs: $global-size-xs,
-  sm: $global-size-sm,
-  lg: $global-size-lg,
-) !default;
+$btn-box-sizes: () !default;
+$btn-box-sizes: map-merge(
+  (
+    xs: $global-size-xs,
+    sm: $global-size-sm,
+    lg: $global-size-lg,
+  ),
+  $btn-box-sizes
+);
 
-$button-colors: (
-  primary: (
-    bg: $color-primary,
-    bg-hover: $color-primary-7,
-    bg-active: $color-primary-9,
-    border: $color-primary-9
+$button-colors: () !default;
+$button-colors: map-merge(
+  (
+    primary: (
+      bg: $color-primary,
+      bg-hover: $color-primary-7,
+      bg-active: $color-primary-9,
+      border: $color-primary-9
+    ),
+    success: (
+      bg: $color-success,
+      bg-hover: $color-success-7,
+      bg-active: $color-success-9,
+      border: $color-success-9
+    ),
+    danger: (
+      bg: $color-danger,
+      bg-hover: $color-danger-7,
+      bg-active: $color-danger-9,
+      border: $color-danger-9
+    ),
+    secondary: (
+      bg: $color-gray-1,
+      bg-hover: $color-gray-0,
+      bg-active: $color-gray-2,
+      border: $color-gray-4,
+      color: $color-gray-8
+    )
   ),
-  success: (
-    bg: $color-success,
-    bg-hover: $color-success-7,
-    bg-active: $color-success-9,
-    border: $color-success-9
-  ),
-  danger: (
-    bg: $color-danger,
-    bg-hover: $color-danger-7,
-    bg-active: $color-danger-9,
-    border: $color-danger-9
-  ),
-  secondary: (
-    bg: $color-gray-1,
-    bg-hover: $color-gray-0,
-    bg-active: $color-gray-2,
-    border: $color-gray-4,
-    color: $color-gray-8
-  )
-) !default;
+  $button-colors
+);
 
-$button-sizes: (
-  default: (
-    font-size: $font-body-md,
-    padding: $space-0 $space-md,
-    height: $global-size-md
+$button-sizes: () !default;
+$button-sizes:  map-merge(
+  (
+    default: (
+      font-size: $font-body-md,
+      padding: $space-0 $space-md,
+      height: $global-size-md
+    ),
+    xs: (
+      font-size: $font-body-xs,
+      padding: $space-0 $space-xs,
+      height: $global-size-xs
+    ),
+    sm: (
+      font-size: $font-body-sm,
+      padding: $space-0 $space-sm,
+      height: $global-size-sm
+    ),
+    lg: (
+      font-size: $font-body-lg,
+      padding: $space-0 $space-xl,
+      height: $global-size-lg
+    )
   ),
-  xs: (
-    font-size: $font-body-xs,
-    padding: $space-0 $space-xs,
-    height: $global-size-xs
-  ),
-  sm: (
-    font-size: $font-body-sm,
-    padding: $space-0 $space-sm,
-    height: $global-size-sm
-  ),
-  lg: (
-    font-size: $font-body-lg,
-    padding: $space-0 $space-xl,
-    height: $global-size-lg
-  )
-) !default;
+  $button-sizes
+);
 
 
 // --------------------------------------------
@@ -283,12 +324,15 @@ $checkbox-radius                : $global-default-radius !default;
 $checkbox-transition            : background 0.2s !default;
 $checkbox-checked-color-disabled: $color-gray-2 !default;
 $checkbox-default-size          : $global-size-xs !default;
-$checkbox-palette               : $theme-colors !default;
 
-$checkbox-sizes: (
-  lg: 24px,
-  xl: 32px
-) !default;
+$checkbox-sizes: () !default;
+$checkbox-sizes: map-merge(
+  (
+    lg: 24px,
+    xl: 32px
+  ),
+  $btn-box-sizes
+);
 
 // --------------------------------------------
 // DROPDOWN -----------------------------------
@@ -335,16 +379,23 @@ $control-placeholder-hover-c  : $control-placeholder-c !default;
 $control-background           : white !default;
 $control-padding              : $space-sm !default;
 $control-height               : $global-size-md !default;
+$control-sizes: () !default;
+$control-sizes: map-merge(
+  (
+    "sm": (
+      "height": $global-size-sm,
+      "font-size": $font-body-sm,
+      "padding": $space-0 $control-padding
+    ),
+    "lg": (
+      "height": $global-size-lg,
+      "font-size": $font-body-xl,
+      "padding": $space-0 $control-padding
+    ),
+  ),
+  $control-sizes
+);
 
-$control-sizes:
-  (sm, $global-size-sm, $space-0 $control-padding, $font-body-sm)
-  (lg, $global-size-lg, $space-0 $control-padding, $font-body-xl) !default;
-
-$control-colors:
-  ("success", $color-success, false)
-  ("warning", $color-warning, false)
-  ("error", $color-danger, false)
-  ("danger", $color-danger, false) !default;
 
 // Form Input Colors (NG specific) DISABLED CURRENTLY
 $enable-NGform-colors: false !default;
@@ -482,9 +533,6 @@ $media-min-height        : 48px !default;
 // MODALS -------------------------------------
 // --------------------------------------------
 $modal-z-index                : $z-modal !default;
-$modal-sm-width               : 480px !default;
-$modal-width                  : 640px !default;
-$modal-lg-width               : 800px !default;
 $modal-border-radius          : $global-default-radius !default;
 $modal-shadow                 : $shadow-lg !default;
 $modal-border                 : 1px solid $color-gray-2 !default;
@@ -504,6 +552,16 @@ $modal-header-padding         : ($modal-padding / 3) ($modal-padding / 2) ($moda
 $modal-footer-padding         : $modal-padding !default;
 $modal-dialog-padding         : 40px !default;
 $modal-dialog-footer-padding  : ($modal-padding / 2) 0 0 !default;
+$modal-width                  : 640px !default;
+
+$modal-widths: () !default;
+$modal-widths: map-merge(
+  (
+    sm: 480px,
+    lg: 800px
+  ),
+  $modal-widths
+);
 
 
 // --------------------------------------------
@@ -602,11 +660,13 @@ $switch-handle-disabled    : $color-gray-0 !default;
 $switch-disabled           : $global-disabled-bg !default;
 $switch-disabled-checked-bg: $color-gray-6 !default;
 
-$switch-sizes: (
-  lg: $global-size-md
-) !default;
-
-$switch-colors: $theme-colors !default;
+$switch-sizes: () !default;
+$switch-sizes: map-merge(
+  (
+    lg: $global-size-md
+  ),
+  $switch-sizes
+);
 
 
 // --------------------------------------------
@@ -626,7 +686,6 @@ $tooltip-invert-color    : $color-gray-9 !default;
 $tooltip-transition-style: cubic-bezier(0.73, 0.01, 0, 1) !default;
 $tooltip-border-width    : 4px !default;
 $tooltip-arrow-position  : 6px !default;
-$tooltip-palette         : $theme-colors !default;
 
 
 // --------------------------------------------
@@ -685,19 +744,18 @@ $table-padding-lg           : ($space-sm + $space-xs) ($space-sm + 2) ($space-sm
 $table-font-size-lg         : $font-body-lg !default;
 $table-hover-bg-img         : url('data: image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1IiBoZWlnaHQ9IjIwIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxLjMyMjkxNjYgNS4yOTE2NjY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOTEuNzEpIiBmaWxsPSIjYmJjMWM5Ij4gIDxyZWN0IHk9IjI5Ni40NyIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5MS43MSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjkxLjcxIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTYuNDciIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjk0Ljg4IiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTQuMDkiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTIuNSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC44OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC4wOSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeT0iMjkyLjUiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+IDwvZz48L3N2Zz4 = ') !default;
 $table-hover-bg-img-body-pos: 2px center !default;
-$table-state-selected       : $color-primary-0 !default;
-$table-state-starred        : $color-warning-0 !default;
-$table-state-success        : $color-success-0 !default;
-$table-state-warning        : $color-warning-0 !default;
-$table-state-danger         : $color-danger-0 !default;
 
-// $table-states:
-$table-states:
-  ("selected", $table-state-selected)
-  ("starred", $table-state-starred)
-  ("success", $table-state-success)
-  ("warning", $table-state-warning)
-  ("danger", $table-state-danger) !default;
+$table-states: () !default;
+$table-states: map-merge(
+  (
+    "selected": $color-primary-0,
+    "starred": $color-warning-0,
+    "success": $color-success-0,
+    "warning": $color-warning-0,
+    "danger": $color-danger-0
+  ),
+  $table-states
+);
 
 
 // --------------------------------------------

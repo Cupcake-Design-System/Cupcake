@@ -109,10 +109,10 @@
 @function shadow($value: sm) {
   $fetched-value: map-get($shadow, $value);
 
-  @if type-of($fetched-value) == list {
+  @if type-of($fetched-value) != null {
     @return $fetched-value;
   } @else {
-    @error 'Shadow variant `#{$depth}` not found.';
+    @error 'Shadow variant not found.';
   }
 }
 
@@ -159,6 +159,8 @@
     @return config($color-extended, 'cyan', $range);
   } @else if $value == grape {
     @return config($color-extended, 'grape', $range);
+  } @else if $value == blue {
+    @return config($color-extended, 'blue', $range);
   } @else if $value == indigo {
     @return config($color-extended, 'indigo', $range);
   } @else if $value == teal {
