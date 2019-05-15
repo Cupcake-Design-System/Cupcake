@@ -1,7 +1,6 @@
 // stylelint-disable
 @import '../node_modules/sass-true/sass/true';
-@import '../src/scss/support/support';
-@import '../src/scss/helpers';
+@import '../src/scss/cupcake';
 
 
 
@@ -33,10 +32,10 @@ $radius-prefix: 'radius';
           border-radius: 8px !important;
         }
         .radius-pill {
-          border-radius: 50px !important;
+          border-radius: 200px !important;
         }
         .radius-round {
-          border-radius: 200px !important;
+          border-radius: 50px !important;
         }
         .radius-square {
           border-radius: 0 !important;

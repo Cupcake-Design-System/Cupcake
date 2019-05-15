@@ -12,9 +12,9 @@ $alert-title-line-height: map-get($alert-config, 'title-line-height') !default;
 $alert-title-font-weight: map-get($alert-config, 'title-font-weight') !default;
 $alert-background       : map-get($alert-config, 'background') !default;
 $alert-color            : map-get($alert-config, 'color') !default;
-$alert-icon-color       : map-get($alert-config, 'background') !default;
+$alert-icon-color       : map-get($alert-config, 'icon-color') !default;
 $alert-shadows          : map-get($alert-config, 'shadows') !default;
-$alert-icon-width       : map-get($alert-config, 'icon-width') !default;
+$alert-icon-font-size       : map-get($alert-config, 'icon-font-size') !default;
 $alert-top-icon-size    : map-get($alert-config, 'top-icon-size') !default;
 $alert-close-font-size  : map-get($alert-config, 'close-font-size') !default;
 

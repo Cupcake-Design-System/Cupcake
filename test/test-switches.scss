@@ -1,6 +1,6 @@
 // stylelint-disable
 @import '../node_modules/sass-true/sass/true';
-@import '../src/scss/support/support';
+@import '../src/scss/cupcake';
 
 $switch-test-sizes: (
   crazy: 32px
@@ -86,7 +86,7 @@ $switch-test-sizes: (
           box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
           background: #f8f9fa;
           background-clip: padding-box;
-          border-radius: 200px;
+          border-radius: 50px;
           border: 1px solid #ced4da;
           transition: background .2s, border .2s, box-shadow .2s, color .2s;
         }
@@ -100,7 +100,7 @@ $switch-test-sizes: (
           width: 14px;
           height: 14px;
           background: #ffffff;
-          border-radius: 200px;
+          border-radius: 50px;
           box-shadow: 1px 1px 4px 0 rgba(33, 37, 41, 0.4);
           transition: background .2s, border .2s, box-shadow .2s, color .2s, left .2s;
         }
