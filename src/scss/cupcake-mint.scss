@@ -47,27 +47,27 @@ $color-primary-9: #055350;
 //   'gradients': true,
 //   'white-label': true,
 //   'circle': false,
-// ) !default;
+// );
 
 $alert-config: (
   'radius': 20px,
   'title-font-size': 50px,
-) !default;
+);
 
 
 $badge-config: (
   'lg-size': 90px,
-) !default;
+);
 
 $badge-sm-size: 45px;
 
 $card-config: (
   'bg': green,
-) !default;
+);
 
 $checkbox-config: (
   'bd': 1px solid green,
-) !default;
+);
 
 $checkbox-bg-empty: pink;
 
@@ -75,11 +75,32 @@ $pagination-item-current-bg: orange;
 
 $pagination-config: (
   'font-size': 20px,
-) !default;
+);
 
 $switch-config: (
   'height': 50px,
-) !default;
+);
+
+// $sidebar-config:(
+//   'bg-color'                   : #343a40,
+//   'border'                     : #343a40,
+//   'submenu-bg'                 : #343a40,
+//   'color'                      : white,
+//   'default-hover-bg'           : lighten(#343a40, 5),
+//   'divider-default-color'      : lighten(#343a40, 8),
+//   'link-color'                 : white,
+//   'link-hover-color'           : white,
+//   'link-hover-bg'              : lighten(#343a40, 5),
+//   'link-active-bg'             : lighten(#343a40, 5),
+//   'link-active-color'          : white,
+//   'link-open-bg'               : lighten(#343a40, 5),
+//   'link-open-color'            : white,
+//   'icon-color'                 : white,
+//   'category-color'             : white,
+//   'collapse-bg'                : #343a40,
+//   'collapse-bg-hover'          : lighten(#343a40, 5),
+//   'collapse-bd'                : lighten(#343a40, 5),
+// );
 
 // Cupcake Core
 @import 'cupcake';

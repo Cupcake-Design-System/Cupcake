@@ -1,3 +1,29 @@
+$table-background           : map-get($table-config, 'background') !default;
+$table-font-family          : map-get($table-config, 'font-family') !default;
+$table-font-size            : map-get($table-config, 'font-size') !default;
+$table-line-height          : map-get($table-config, 'line-height') !default;
+$table-border               : map-get($table-config, 'border') !default;
+$table-border-color         : map-get($table-config, 'border-color') !default;
+$table-padding              : map-get($table-config, 'padding') !default;
+$table-row-hover            : map-get($table-config, 'row-hover') !default;
+$table-row-stripe-hover     : map-get($table-config, 'row-stripe-hover') !default;
+$table-stripe               : map-get($table-config, 'stripe') !default;
+$table-stripe-bg            : map-get($table-config, 'stripe-bg') !default;
+$table-head-color           : map-get($table-config, 'head-color') !default;
+$table-head-font-weight     : map-get($table-config, 'head-font-weight') !default;
+$table-head-border-color    : map-get($table-config, 'head-border-color') !default;
+$table-head-border-width    : map-get($table-config, 'head-border-width') !default;
+$table-head-border-vertical : map-get($table-config, 'head-border-vertical') !default;
+$table-head-bg              : map-get($table-config, 'head-bg') !default;
+$table-head-cell-hover      : map-get($table-config, 'head-cell-hover') !default;
+$table-foot-bg              : map-get($table-config, 'foot-bg') !default;
+$table-foot-color           : map-get($table-config, 'foot-color') !default;
+$table-padding-sm           : map-get($table-config, 'padding-sm') !default;
+$table-padding-lg           : map-get($table-config, 'padding-lg') !default;
+$table-font-size-lg         : map-get($table-config, 'font-size-lg') !default;
+$table-hover-bg-img         : map-get($table-config, 'hover-bg-img') !default;
+$table-hover-bg-img-body-pos: map-get($table-config, 'hover-bg-img-body-pos') !default;
+
 // Table
 table {
   &.c-table {

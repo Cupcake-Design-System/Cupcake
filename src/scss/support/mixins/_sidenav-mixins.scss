@@ -12,7 +12,7 @@
   background-clip: content-box;
   border-right: $sidebar-border;
   font-size: $sidebar-font-size;
-  background-color: $sidebar-bg-color;
+  background-color: $sidebar-bg;
 }
 
 @mixin sidenav-body {
@@ -37,9 +37,9 @@
   width: $sidebar-width;
   height: $footer-height;
   justify-content: flex-end;
-  background: $color-gray-0;
   color: $sidebar-icon-color;
-  border-top: 1px solid $color-gray-2;
+  background: $sidebar-collapse-bg;
+  border-top: 1px solid $sidebar-collapse-bd;
 
   > .c-sidenav-menu-icon {
     @include icon-arrow(left);
@@ -48,7 +48,7 @@
   }
 
   &:hover {
-    background-color: $color-gray-1;
+    background-color: $sidebar-collapse-bg-hover;
   }
 }
 

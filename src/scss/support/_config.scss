@@ -851,41 +851,46 @@ $notification-config: map-merge(
 // --------------------------------------------
 // Sidebar ------------------------------------
 // --------------------------------------------
-$sidebar-bg-color                   : theme(light) !default;
-$sidebar-border                     : theme(border-light) !default;
-$sidebar-submenu-bg                 : theme(light) !default;
-$sidebar-width                      : 256px !default;
-$sidebar-folded-default-width       : 48px !default;
-$sidebar-font-size                  : $font-size-3 !default;
-$sidebar-color                      : $color-gray-8 !default;
-$sidebar-z-index                    : $z-sidenav !default;
-$sidebar-default-hover-bg           : $color-primary-0 !default;
-$sidebar-default-active-color       : $color-primary-8 !default;
-$sidebar-divider-default-color      : $color-gray-1 !default;
-// Menu Links
-$sidebar-link-padding               : $space-xs $space-md !default;
-$sidebar-link-margin                : $space-xs !default;
-$sidebar-link-line-height           : $space-xl !default;
-$sidebar-link-color                 : $sidebar-color !default;
-$sidebar-link-hover-color           : $sidebar-color !default;
-$sidebar-link-hover-bg              : $sidebar-default-hover-bg !default;
-$sidebar-link-active-bg             : $sidebar-default-hover-bg !default;
-$sidebar-link-active-color          : $sidebar-color !default;
-$sidebar-link-open-bg               : $sidebar-default-hover-bg !default;
-$sidebar-link-open-color            : $sidebar-color !default;
-// Icon
-$sidebar-icon-margin                : $space-sm $space-md $space-sm 0 !default;
-$sidebar-icon-color                 : $color-gray-5 !default;
-$sidebar-icon-color-active          : $sidebar-default-active-color !default;
-$sidebar-icon-font-size             : $font-size-4 !default;
-// Category
-$sidebar-category-padding           : $space-sm $space-md !default;
-$sidebar-category-color             : $color-gray-6 !default;
-// SubMenu
-$sidebar-submenu-link-active-color  : $sidebar-default-active-color !default;
-$sidebar-submenu-link-padding-left  : 48px !default;
-$sidebar-submenu-level3-padding-left: 64px !default;
-$sidebar-submenu-level4-padding-left: 80px !default;
+$sidebar-config: () !default;
+$sidebar-config: map-merge(
+  (
+    'bg'                         : theme(light),
+    'border'                     : theme(border-light),
+    'submenu-bg'                 : theme(light),
+    'width'                      : 256px,
+    'folded-default-width'       : 48px,
+    'font-size'                  : $font-size-3,
+    'color'                      : $color-gray-8,
+    'z-index'                    : $z-sidenav,
+    'default-hover-bg'           : $color-primary-0,
+    'default-active-color'       : $color-primary-8,
+    'divider-default-color'      : $color-gray-1,
+    'link-padding'               : $space-xs $space-md,
+    'link-margin'                : $space-xs,
+    'link-line-height'           : $space-xl,
+    'link-color'                 : $color-gray-8,
+    'link-hover-color'           : $color-gray-8,
+    'link-hover-bg'              : $color-primary-0,
+    'link-active-bg'             : $color-primary-0,
+    'link-active-color'          : $color-gray-8,
+    'link-open-bg'               : $color-primary-0,
+    'link-open-color'            : $color-gray-8,
+    'icon-margin'                : $space-sm $space-md $space-sm 0,
+    'icon-color'                 : $color-gray-5,
+    'icon-color-active'          : $color-primary-8,
+    'icon-font-size'             : $font-size-4,
+    'category-padding'           : $space-sm $space-md,
+    'category-color'             : $color-gray-6,
+    'collapse-bg'                : $color-gray-0,
+    'collapse-bg-hover'          : $color-gray-1,
+    'collapse-bd'                : $color-gray-2,
+    'submenu-link-active-color'  : $color-primary-8,
+    'submenu-link-padding-left'  : 48px,
+    'submenu-level3-padding-left': 64px,
+    'submenu-level4-padding-left': 80px,
+  ),
+  $sidebar-config
+);
 
 
 // --------------------------------------------
@@ -995,31 +1000,37 @@ $tabs-sizes: map-merge(
 // --------------------------------------------
 // TABLES -------------------------------------
 // --------------------------------------------
-$table-background           : theme(light) !default;
-$table-font-family          : theme(font) !default;
-$table-font-size            : $font-size-2 !default;
-$table-line-height          : $line-height-xs !default;
-$table-border               : 0 !default;
-$table-border-color         : $color-gray-2 !default;
-$table-padding              : ($space-sm - 1) ($space-sm + 2) $space-sm !default;
-$table-row-hover            : $color-gray-1 !default;
-$table-row-stripe-hover     : $table-row-hover !default;
-$table-stripe               : 'even' !default;
-$table-stripe-bg            : $color-gray-0 !default;
-$table-head-color           : $color-gray-9 !default;
-$table-head-font-weight     : $font-weight-bold !default;
-$table-head-border-color    : $color-gray-3 !default;
-$table-head-border-width    : 1px 0 !default;
-$table-head-border-vertical : 1px solid $table-head-border-color !default;
-$table-head-bg              : $color-gray-0 !default;
-$table-head-cell-hover      : $color-gray-2 !default;
-$table-foot-bg              : $table-head-bg !default;
-$table-foot-color           : $table-head-color !default;
-$table-padding-sm           : ($space-xs - 1) $space-sm $space-xs !default;
-$table-padding-lg           : ($space-sm + $space-xs) ($space-sm + 2) ($space-sm + ($space-xs - 1)) !default;
-$table-font-size-lg         : $font-size-3 !default;
-$table-hover-bg-img         : url('data: image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1IiBoZWlnaHQ9IjIwIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxLjMyMjkxNjYgNS4yOTE2NjY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOTEuNzEpIiBmaWxsPSIjYmJjMWM5Ij4gIDxyZWN0IHk9IjI5Ni40NyIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5MS43MSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjkxLjcxIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTYuNDciIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjk0Ljg4IiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTQuMDkiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTIuNSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC44OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC4wOSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeT0iMjkyLjUiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+IDwvZz48L3N2Zz4 = ') !default;
-$table-hover-bg-img-body-pos: 2px center !default;
+$table-config: () !default;
+$table-config: map-merge(
+  (
+    'background'           : theme(light),
+    'font-family'          : theme(font),
+    'font-size'            : $font-size-2,
+    'font-size-lg'         : $font-size-3,
+    'line-height'          : $line-height-xs,
+    'border'               : 0,
+    'border-color'         : $color-gray-2,
+    'padding'              : ($space-sm - 1) ($space-sm + 2) $space-sm,
+    'row-hover'            : $color-gray-1,
+    'row-stripe-hover'     : $color-gray-1,
+    'stripe'               : 'even',
+    'stripe-bg'            : $color-gray-0,
+    'head-bg'              : $color-gray-0,
+    'head-cell-hover'      : $color-gray-2,
+    'head-color'           : $color-gray-9,
+    'head-font-weight'     : $font-weight-bold,
+    'head-border-color'    : $color-gray-3,
+    'head-border-width'    : 1px 0,
+    'head-border-vertical' : 1px solid $color-gray-3,
+    'foot-bg'              : theme(light),
+    'foot-color'           : $color-gray-9,
+    'padding-sm'           : ($space-xs - 1) $space-sm $space-xs,
+    'padding-lg'           : ($space-sm + $space-xs) ($space-sm + 2) ($space-sm + ($space-xs - 1)),
+    'hover-bg-img'         : url('data: image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1IiBoZWlnaHQ9IjIwIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxLjMyMjkxNjYgNS4yOTE2NjY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOTEuNzEpIiBmaWxsPSIjYmJjMWM5Ij4gIDxyZWN0IHk9IjI5Ni40NyIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5MS43MSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjkxLjcxIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTYuNDciIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjk0Ljg4IiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTQuMDkiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTIuNSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC44OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC4wOSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeT0iMjkyLjUiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+IDwvZz48L3N2Zz4 = '),
+    'hover-bg-img-body-pos': 2px center,
+  ),
+  $table-config
+);
 
 $table-states: () !default;
 $table-states: map-merge(
