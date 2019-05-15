@@ -1,3 +1,25 @@
+$modal-border-radius          : map-get($modal-config, 'border-radius') !default;
+$modal-border                 : map-get($modal-config, 'border') !default;
+$modal-close-size             : map-get($modal-config, 'close-size') !default;
+$modal-body-color             : map-get($modal-config, 'body-color') !default;
+$modal-bg-color               : map-get($modal-config, 'bg-color') !default;
+$modal-backdrop-bg-color      : map-get($modal-config, 'backdrop-bg-color') !default;
+$modal-z-index                : map-get($modal-config, 'z-index') !default;
+$modal-shadow                 : map-get($modal-config, 'shadow') !default;
+$modal-close-color            : map-get($modal-config, 'close-color') !default;
+$modal-body-font-size         : map-get($modal-config, 'body-font-size') !default;
+$modal-title-font-size        : map-get($modal-config, 'title-font-size') !default;
+$modal-title-color            : map-get($modal-config, 'title-color') !default;
+$modal-title-font-weight      : map-get($modal-config, 'title-font-weight') !default;
+$modal-title-line-height      : map-get($modal-config, 'title-line-height') !default;
+$modal-padding                : map-get($modal-config, 'padding') !default;
+$modal-body-padding           : map-get($modal-config, 'body-padding') !default;
+$modal-header-padding         : map-get($modal-config, 'header-padding') !default;
+$modal-footer-padding         : map-get($modal-config, 'footer-padding') !default;
+$modal-dialog-padding         : map-get($modal-config, 'dialog-padding') !default;
+$modal-dialog-footer-padding  : map-get($modal-config, 'dialog-footer-padding') !default;
+$modal-width                  : map-get($modal-config, 'width') !default;
+
 // Base Modal
 .c-modal {
   top: 0;

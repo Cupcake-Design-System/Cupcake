@@ -1,3 +1,17 @@
+$switch-height             : map-get($switch-config, 'height') !default;
+$switch-radius             : map-get($switch-config, 'radius') !default;
+$switch-border             : map-get($switch-config, 'border') !default;
+$switch-label-off          : map-get($switch-config, 'label-off') !default;
+$switch-label-on           : map-get($switch-config, 'label-on') !default;
+$switch-handle             : map-get($switch-config, 'handle') !default;
+$switch-disabled           : map-get($switch-config, 'disabled') !default;
+$switch-font-size          : map-get($switch-config, 'font-size') !default;
+$switch-off-bg             : map-get($switch-config, 'off-bg') !default;
+$switch-on-bg              : map-get($switch-config, 'on-bg') !default;
+$switch-shadow             : map-get($switch-config, 'shadow') !default;
+$switch-handle-disabled    : map-get($switch-config, 'handle-disabled') !default;
+$switch-disabled-checked-bg: map-get($switch-config, 'disabled-checked-bg') !default;
+
 // Switch Base
 .c-switch {
   @include switch-base;

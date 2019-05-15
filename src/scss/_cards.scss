@@ -1,3 +1,30 @@
+$card-bg                     : map-get($card-config, 'bg') !default;
+$card-text-color             : map-get($card-config, 'text-color') !default;
+$card-border                 : map-get($card-config, 'border') !default;
+$card-border-hover           : map-get($card-config, 'border-hover') !default;
+$card-font-family            : map-get($card-config, 'font-family') !default;
+$card-min-width              : map-get($card-config, 'min-width') !default;
+$card-border-radius          : map-get($card-config, 'border-radius') !default;
+$card-padding-v              : map-get($card-config, 'padding-v') !default;
+$card-padding-h              : map-get($card-config, 'padding-h') !default;
+$card-shadow                 : map-get($card-config, 'shadow') !default;
+$card-shadow-hover           : map-get($card-config, 'shadow-hover') !default;
+$card-header-font-size       : map-get($card-config, 'header-font-size') !default;
+$card-header-font-weight     : map-get($card-config, 'header-font-weight') !default;
+$card-header-line-height     : map-get($card-config, 'header-line-height') !default;
+$card-header-color           : map-get($card-config, 'header-color') !default;
+$card-header-icon-color      : map-get($card-config, 'header-icon-color') !default;
+$card-header-icon-hover-color: map-get($card-config, 'header-icon-hover-color') !default;
+$card-body-font-size         : map-get($card-config, 'body-font-size') !default;
+$card-title-font-size        : map-get($card-config, 'title-font-size') !default;
+$card-title-font-weight      : map-get($card-config, 'title-font-weight') !default;
+$card-subtitle-line-height   : map-get($card-config, 'subtitle-line-height') !default;
+$card-subtitle-font-size     : map-get($card-config, 'subtitle-font-size') !default;
+$card-footer-color           : map-get($card-config, 'footer-color') !default;
+$card-footer-hover-color     : map-get($card-config, 'footer-hover-color') !default;
+$card-footer-font-size       : map-get($card-config, 'footer-font-size') !default;
+$card-footer-line-weight     : map-get($card-config, 'footer-line-weight') !default;
+
 // Cards
 .c-card {
   @include card;

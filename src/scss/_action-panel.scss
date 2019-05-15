@@ -1,3 +1,29 @@
+$action-panel-header-bg              : map-get($action-panel-config, 'header-bg') !default;
+$action-panel-footer-bg              : map-get($action-panel-config, 'footer-bg') !default;
+$action-panel-backdrop               : map-get($action-panel-config, 'backdrop') !default;
+$action-panel-border                 : map-get($action-panel-config, 'border') !default;
+$action-panel-padding-v              : map-get($action-panel-config, 'padding-v') !default;
+$action-panel-padding-h              : map-get($action-panel-config, 'padding-h') !default;
+$action-panel-header-font-size       : map-get($action-panel-config, 'header-font-size') !default;
+$action-panel-header-font-weight     : map-get($action-panel-config, 'header-font-weight') !default;
+$action-panel-header-line-height     : map-get($action-panel-config, 'header-line-height') !default;
+$action-panel-header-color           : map-get($action-panel-config, 'header-color') !default;
+$action-panel-header-icon-color      : map-get($action-panel-config, 'header-icon-color') !default;
+$action-panel-header-icon-hover-color: map-get($action-panel-config, 'header-icon-hover-color') !default;
+$action-panel-title-font-size        : map-get($action-panel-config, 'title-font-size') !default;
+$action-panel-title-font-weight      : map-get($action-panel-config, 'title-font-weight') !default;
+$action-panel-subtitle-line-height   : map-get($action-panel-config, 'subtitle-line-height') !default;
+$action-panel-subtitle-font-size     : map-get($action-panel-config, 'subtitle-font-size') !default;
+$action-panel-footer-color           : map-get($action-panel-config, 'footer-color') !default;
+$action-panel-footer-hover-color     : map-get($action-panel-config, 'footer-hover-color') !default;
+$action-panel-footer-font-size       : map-get($action-panel-config, 'footer-font-size') !default;
+$action-panel-footer-line-weight     : map-get($action-panel-config, 'footer-line-weight') !default;
+$action-panel-zindex                 : map-get($action-panel-config, 'zindex') !default;
+$action-panel-width                  : map-get($action-panel-config, 'width') !default;
+$action-panel-bg                     : map-get($action-panel-config, 'bg') !default;
+$action-panel-transition             : map-get($action-panel-config, 'transition') !default;
+$action-panel-shadow                 : map-get($action-panel-config, 'shadow') !default;
+
 .c-action-panel {
   top: 0;
   bottom: 0;
@@ -75,7 +101,7 @@
       }
 
       &-icon {
-        font-size: font-size(body, xl);
+        font-size: $font-size-4;
         color: $action-panel-header-icon-color;
 
         &:hover {
@@ -179,6 +205,12 @@
   }
 }
 
+
+$notification-margin      : map-get($notification-config, 'margin') !default;
+$notification-shadow      : map-get($notification-config, 'shadow') !default;
+$notification-shadow-hover: map-get($notification-config, 'shadow-hover') !default;
+$notification-read-bg     : map-get($notification-config, 'read-bg') !default;
+$notification-read-border : map-get($notification-config, 'read-border') !default;
 
 // Styles to support read/unread/hover for notifications
 .c-notifications .c-media-list .c-media {

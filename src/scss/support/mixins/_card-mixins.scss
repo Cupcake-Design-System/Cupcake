@@ -77,7 +77,7 @@
     }
 
     &-icon {
-      font-size: font-size(body, xl);
+      font-size: $font-size-4;
       color: $card-header-icon-color;
 
       &:hover {

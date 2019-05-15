@@ -1,3 +1,18 @@
+$badge-default-size         : map-get($badge-config, 'default-size') !default;
+$badge-font-family          : map-get($badge-config, 'font-family') !default;
+$enable-extend-badge-colors : map-get($badge-config, 'extend-colors') !default;
+$badge-default-padding      : map-get($badge-config, 'padding') !default;
+$badge-default-border-radius: map-get($badge-config, 'border-radius') !default;
+$badge-default-font-weight  : map-get($badge-config, 'font-weight') !default;
+$badge-default-line-height  : map-get($badge-config, 'line-height') !default;
+$badge-default-font-size    : map-get($badge-config, 'font-size') !default;
+$badge-lg-size              : map-get($badge-config, 'large-size') !default;
+$badge-lg-font-size         : map-get($badge-config, 'large-font-size') !default;
+$badge-sm-size              : map-get($badge-config, 'small-size') !default;
+$badge-sm-font-size         : map-get($badge-config, 'small-font-size') !default;
+$badge-group-spacing        : map-get($badge-config, 'group-spacing') !default;
+
+
 // Badge
 .c-badge {
   @include badge-base();

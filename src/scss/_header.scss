@@ -1,3 +1,17 @@
+$header-bg                       : map-get($header-config, 'bg') !default;
+$header-height                   : map-get($header-config, 'height') !default;
+$header-inverse-text-color-active: map-get($header-config, 'inverse-text-color-active') !default;
+$header-bg-hover                 : map-get($header-config, 'bg-hover') !default;
+$header-borders                  : map-get($header-config, 'borders') !default;
+$header-z-index                  : map-get($header-config, 'z-index') !default;
+$header-bottom-border            : map-get($header-config, 'bottom-border') !default;
+$header-item-padding             : map-get($header-config, 'item-padding') !default;
+$header-inverse-bg               : map-get($header-config, 'inverse-bg') !default;
+$header-inverse-bg-hover         : map-get($header-config, 'inverse-bg-hover') !default;
+$header-text-color               : map-get($header-config, 'text-color') !default;
+$header-inverse-text-color       : map-get($header-config, 'inverse-text-color') !default;
+$header-inverse-borders          : map-get($header-config, 'inverse-borders') !default;
+
 // Header
 .c-header {
   width: 100%;

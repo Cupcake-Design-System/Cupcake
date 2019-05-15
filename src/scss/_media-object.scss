@@ -1,3 +1,19 @@
+$media-bg                : map-get($media-config, 'bg') !default;
+$media-color             : map-get($media-config, 'color') !default;
+$media-border            : map-get($media-config, 'border') !default;
+$media-border-radius     : map-get($media-config, 'border-radius') !default;
+$media-padding           : map-get($media-config, 'padding') !default;
+$media-body-padding      : map-get($media-config, 'body-padding') !default;
+$media-margin            : map-get($media-config, 'margin') !default;
+$media-stripe-bg         : map-get($media-config, 'stripe-bg') !default;
+$media-hover-bg          : map-get($media-config, 'hover-bg') !default;
+$media-header-bg         : map-get($media-config, 'header-bg') !default;
+$media-action-color      : map-get($media-config, 'action-color') !default;
+$media-action-font-size  : map-get($media-config, 'action-font-size') !default;
+$media-action-line-height: map-get($media-config, 'action-line-height') !default;
+$media-min-height        : map-get($media-config, 'min-height') !default;
+
+
 $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
 
 // Base Media Object

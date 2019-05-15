@@ -1,3 +1,24 @@
+$nav-height                : map-get($nav-config, 'height') !default;
+$nav-color                 : map-get($nav-config, 'color') !default;
+$nav-color-disabled        : map-get($nav-config, 'color-disabled') !default;
+$nav-pill-radius           : map-get($nav-config, 'pill-radius') !default;
+$nav-font-size             : map-get($nav-config, 'font-size') !default;
+$nav-color-hover           : map-get($nav-config, 'color-hover') !default;
+$nav-color-active          : map-get($nav-config, 'color-active') !default;
+$nav-disabled-opacity      : map-get($nav-config, 'disabled-opacity') !default;
+$nav-font-weight           : map-get($nav-config, 'font-weight') !default;
+$nav-pill-font-weight      : map-get($nav-config, 'pill-font-weight') !default;
+$nav-pill-color            : map-get($nav-config, 'pill-color') !default;
+$nav-pill-color-hover      : map-get($nav-config, 'pill-color-hover') !default;
+$nav-pill-color-active     : map-get($nav-config, 'pill-color-active') !default;
+$nav-pill-color-disabled   : map-get($nav-config, 'pill-color-disabled') !default;
+$nav-pill-bg-hover         : map-get($nav-config, 'pill-bg-hover') !default;
+$nav-pill-bg-active        : map-get($nav-config, 'pill-bg-active') !default;
+$nav-pill-bg-disabled      : map-get($nav-config, 'pill-bg-disabled') !default;
+$nav-pill-icon-opacity     : map-get($nav-config, 'pill-icon-opacity') !default;
+$nav-pill-icon-color-active: map-get($nav-config, 'pill-icon-color-active') !default;
+$nav-spacing               : map-get($nav-config, 'spacing') !default;
+
 // Excludes variable so we don't have to type these crazy :not statements
 $nav-excludes: ':not(.c-nav-link-disabled):not(.c-nav-item-disabled)';
 

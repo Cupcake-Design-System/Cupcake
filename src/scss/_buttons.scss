@@ -1,3 +1,26 @@
+$enable-btn-gradients   : map-get($button-config, 'gradients') !default;
+$enable-btn-border      : map-get($button-config, 'border') !default;
+$enable-btn-white-label : map-get($button-config, 'size') !default;
+$enable-circle-buttons  : map-get($button-config, 'circle') !default;
+$enable-outline-buttons : map-get($button-config, 'outline') !default;
+$enable-pill-buttons    : map-get($button-config, 'pill') !default;
+$enable-square-buttons  : map-get($button-config, 'square') !default;
+
+$btn-font-family        : map-get($button-config, 'font-family') !default;
+$btn-radius             : map-get($button-config, 'radius') !default;
+$btn-disabled-bg        : map-get($button-config, 'disabled-bg') !default;
+$btn-default-c          : map-get($button-config, 'default-c') !default;
+$btn-box-width          : map-get($button-config, 'box-width') !default;
+$btn-link-bd            : map-get($button-config, 'link-bd') !default;
+$btn-disabled-bd        : map-get($button-config, 'disabled-bd') !default;
+$btn-font-weight        : map-get($button-config, 'font-weight') !default;
+$btn-bd                 : map-get($button-config, 'bd') !default;
+$btn-disabled-c         : map-get($button-config, 'disabled-c') !default;
+$btn-link-hover-bg      : map-get($button-config, 'link-hover-bg') !default;
+$btn-shadow             : map-get($button-config, 'shadow') !default;
+$btn-shadow-focus       : map-get($button-config, 'shadow-focus') !default;
+$btn-active-shadow      : map-get($button-config, 'active-shadow') !default;
+
 // Buttons
 .c-btn {
   @include btn-base;
@@ -16,10 +39,6 @@
   &.c-btn-disabled,
   &[disabled] {
     @include btn-disabled;
-  }
-
-  @if $btn-active-selected {
-    @include btn-active-selected;
   }
 
   // Button color loop
@@ -119,19 +138,19 @@
 
 @if $enable-circle-buttons == true {
   .c-btn-circle {
-    border-radius: radius(round);
+    border-radius: $radius-round;
   }
 }
 
 @if $enable-square-buttons == true {
   .c-btn-square {
-    border-radius: radius(none);
+    border-radius: $radius-0;
   }
 }
 
 @if $enable-pill-buttons == true {
   .c-btn-pill {
-    border-radius: radius(pill);
+    border-radius: $radius-pill;
   }
 }
 
@@ -141,8 +160,8 @@
 .c-btn-circle,
 .c-btn-box {
   width: $btn-box-width;
-  padding-left: space(0);
-  padding-right: space(0);
+  padding-left: $space-0;
+  padding-right: $space-0;
   text-align: center;
 
   @each $name, $size in $btn-box-sizes {
@@ -155,13 +174,13 @@
 .c-btn-icon {
   background: transparent;
   border: 1px solid transparent;
-  color: color(gray, 5);
+  color: $color-gray-5;
   transition: all 0.3s ease 0s;
 
   &:hover {
-    color: color(primary, 7);
-    background-color: color(gray, 1);
-    border: 1px solid color(gray, 4);
+    color: $color-primary-7;
+    background-color: $color-gray-1;
+    border: 1px solid $color-gray-4;
   }
 
   // All default color classes

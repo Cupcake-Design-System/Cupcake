@@ -1,3 +1,23 @@
+$alert-border           : map-get($alert-config, 'border') !default;
+$alert-margin           : map-get($alert-config, 'margin') !default;
+$alert-padding          : map-get($alert-config, 'padding') !default;
+$alert-top-padding      : map-get($alert-config, 'top-padding') !default;
+$alert-font-size        : map-get($alert-config, 'font-size') !default;
+$alert-radius           : map-get($alert-config, 'radius') !default;
+$alert-font-family      : map-get($alert-config, 'font') !default;
+$alert-font-weight      : map-get($alert-config, 'font-weight') !default;
+$alert-line-height      : map-get($alert-config, 'line-height') !default;
+$alert-title-font-size  : map-get($alert-config, 'title-font-size') !default;
+$alert-title-line-height: map-get($alert-config, 'title-line-height') !default;
+$alert-title-font-weight: map-get($alert-config, 'title-font-weight') !default;
+$alert-background       : map-get($alert-config, 'background') !default;
+$alert-color            : map-get($alert-config, 'color') !default;
+$alert-icon-color       : map-get($alert-config, 'background') !default;
+$alert-shadows          : map-get($alert-config, 'shadows') !default;
+$alert-icon-width       : map-get($alert-config, 'icon-width') !default;
+$alert-top-icon-size    : map-get($alert-config, 'top-icon-size') !default;
+$alert-close-font-size  : map-get($alert-config, 'close-font-size') !default;
+
 // Alert Base
 .c-alert {
   @include alert-base;

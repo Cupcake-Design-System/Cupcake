@@ -1,3 +1,40 @@
+$control-font-family          : map-get($form-config, 'font-family') !default;
+$control-background           : map-get($form-config, 'background') !default;
+$control-height               : map-get($form-config, 'height') !default;
+$control-font-size            : map-get($form-config, 'font-size') !default;
+$control-color                : map-get($form-config, 'color') !default;
+$control-font-weight          : map-get($form-config, 'font-weight') !default;
+$control-line-height          : map-get($form-config, 'line-height') !default;
+$control-placeholder-c        : map-get($form-config, 'placeholder-c') !default;
+$control-placeholder-hover-c  : map-get($form-config, 'placeholder-hover-c') !default;
+$control-padding              : map-get($form-config, 'padding') !default;
+$control-border               : map-get($form-config, 'border') !default;
+$control-border-radius        : map-get($form-config, 'border-radius') !default;
+$control-icon-padding         : map-get($form-config, 'icon-padding') !default;
+$control-disabled-background  : map-get($form-config, 'disabled-background') !default;
+$control-shadow               : map-get($form-config, 'shadow') !default;
+$control-focused-shadow       : map-get($form-config, 'focused-shadow') !default;
+$control-shadow-disabled      : map-get($form-config, 'shadow-disabled') !default;
+$control-transition           : map-get($form-config, 'transition') !default;
+$control-hover                : map-get($form-config, 'hover') !default;
+$control-hover-border         : map-get($form-config, 'hover-border') !default;
+$control-active               : map-get($form-config, 'active') !default;
+$control-active-border        : map-get($form-config, 'active-border') !default;
+$control-icon-color           : map-get($form-config, 'icon-color') !default;
+$control-disabled-border      : map-get($form-config, 'disabled-border') !default;
+$control-hint-color           : map-get($form-config, 'hint-color') !default;
+$control-hint-font-size       : map-get($form-config, 'hint-font-size') !default;
+$control-hint-transition      : map-get($form-config, 'hint-transition') !default;
+$control-addon-background     : map-get($form-config, 'addon-background') !default;
+$control-element-padding      : map-get($form-config, 'element-padding') !default;
+$control-element-label-padding: map-get($form-config, 'element-label-padding') !default;
+$select-padding-r             : map-get($form-config, 'select-padding-r') !default;
+$select-bg-img                : map-get($form-config, 'select-bg-img') !default;
+$select-bg-img-disabled       : map-get($form-config, 'select-bg-img-disabled') !default;
+$select-bg-pos                : map-get($form-config, 'select-bg-pos') !default;
+$select-box-shadow            : map-get($form-config, 'select-box-shadow') !default;
+$select-box-shadow-focus      : map-get($form-config, 'select-box-shadow-focus') !default;
+
 // Form Inputs
 .c-input {
   @include input;

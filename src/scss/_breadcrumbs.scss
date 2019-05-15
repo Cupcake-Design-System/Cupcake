@@ -1,3 +1,13 @@
+$breadcrumb-font-family         : map-get($breadcrumb-config, 'font-family') !default;
+$breadcrumb-margin              : map-get($breadcrumb-config, 'margin') !default;
+$breadcrumb-color               : map-get($breadcrumb-config, 'color') !default;
+$breadcrumb-color-active        : map-get($breadcrumb-config, 'color-active') !default;
+$breadcrumb-font-size           : map-get($breadcrumb-config, 'font-size') !default;
+$breadcrumb-font-weight         : map-get($breadcrumb-config, 'font-weight') !default;
+$breadcrumb-divider-size        : map-get($breadcrumb-config, 'divider-size') !default;
+$breadcrumb-divider-border-width: map-get($breadcrumb-config, 'divider-border-width') !default;
+$breadcrumb-divider-color       : map-get($breadcrumb-config, 'divider-color') !default;
+
 // Breadcrumbs
 .c-breadcrumb {
   display: flex;

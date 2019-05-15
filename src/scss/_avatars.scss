@@ -1,3 +1,15 @@
+$avatar-default-size        : map-get($avatar-config, 'default-size') !default;
+$avatar-font-family         : map-get($avatar-config, 'font-family') !default;
+$avatar-border-radius       : map-get($avatar-config, 'border-radius') !default;
+$enable-extended-avatar-colors     : map-get($avatar-config, 'extend-colors') !default;
+$avatar-font-weight         : map-get($avatar-config, 'font-weight') !default;
+$avatar-font-size           : map-get($avatar-config, 'font-size') !default;
+$avatar-line-height         : map-get($avatar-config, 'line-height') !default;
+$avatar-img-border          : map-get($avatar-config, 'img-border') !default;
+$avatar-group-spacing       : map-get($avatar-config, 'group-spacing') !default;
+$avatar-group-transition    : map-get($avatar-config, 'group-transition') !default;
+
+
 // Avatar
 .c-avatar {
   @include avatar-base();
@@ -86,7 +98,7 @@
 }
 
 // Extended Avatar color classes
-@if $enable-extend-avatar-colors == true {
+@if $enable-extended-avatar-colors == true {
   @each $name, $hex in $extended-palette-light {
     .c-avatar-#{$name} {
       background-color: $hex;
@@ -145,7 +157,7 @@
 
 
 .c-avatar-xl[data-badge]::after {
-  font-size: font-size(body, lg);
+  font-size: $font-size-3;
   min-width: $space-md + $space-xs;
   padding: $space-xxs $space-xs;
   height: $space-md + $space-xs;

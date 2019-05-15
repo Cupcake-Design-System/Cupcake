@@ -1,3 +1,15 @@
+$skeleton-bar-height         : map-get($loader-config, 'skeleton-bar-height') !default;
+$skeleton-bar                : map-get($loader-config, 'skeleton-bar') !default;
+$skeleton-bar-animation      : map-get($loader-config, 'skeleton-bar-animation') !default;
+$skeleton-bg-color           : map-get($loader-config, 'skeleton-bg-color') !default;
+$loader-size                 : map-get($loader-config, 'size') !default;
+$loader-color                : map-get($loader-config, 'color') !default;
+$loader-bg-color             : map-get($loader-config, 'bg-color') !default;
+$loader-full-page-size       : map-get($loader-config, 'full-page-size') !default;
+$loader-border-size          : map-get($loader-config, 'border-size') !default;
+$loader-full-page-border-size: map-get($loader-config, 'full-page-border-size') !default;
+$loader-animation-duration   : map-get($loader-config, 'animation-duration') !default;
+
 // Skeleton style loader
 .c-skeleton {
   &-loading {

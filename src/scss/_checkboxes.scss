@@ -1,3 +1,16 @@
+$checkbox-bd                    : map-get($checkbox-config, 'bd') !default;
+$checkbox-radius                : map-get($checkbox-config, 'radius') !default;
+$checkbox-default-size          : map-get($checkbox-config, 'default-size') !default;
+$checkbox-label-font-size       : map-get($checkbox-config, 'label-font-size') !default;
+$checkbox-label-font-weight     : map-get($checkbox-config, 'label-font-weight') !default;
+$checkbox-label-disabled-color  : map-get($checkbox-config, 'label-disabled-color') !default;
+$checkbox-bg-empty              : map-get($checkbox-config, 'bg-empty') !default;
+$checkbox-bg-disabled           : map-get($checkbox-config, 'bg-disabled') !default;
+$checkbox-bg-checked            : map-get($checkbox-config, 'bg-checked') !default;
+$checkbox-bg-checked-disabled   : map-get($checkbox-config, 'bg-checked-disabled') !default;
+$checkbox-transition            : map-get($checkbox-config, 'transition') !default;
+$checkbox-checked-color-disabled: map-get($checkbox-config, 'checked-color-disabled') !default;
+
 // Checkbox
 .c-checkbox {
   @include check(check);

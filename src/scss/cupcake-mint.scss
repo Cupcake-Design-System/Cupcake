@@ -1,11 +1,4 @@
 // Cupcake Mint
-$avatar-sizes:(
-  "xxl": (
-    "size": 180px,
-    "font-size": 54px
-  )
-);
-
 $color-primary-0: #def5f5;
 $color-primary-1: #afe6e6;
 $color-primary-2: #7cd6d7;
@@ -17,27 +10,76 @@ $color-primary-7: #008a8e;
 $color-primary-8: #007778;
 $color-primary-9: #055350;
 
-$radius-lg    : 18px;
+// $radius-lg    : 28px;
 
-$radius:(
-  'xl': 200px,
-);
+// $radius:(
+//   'xl': 200px,
+// );
 
+// $theme-colors:(
+//   'purple': purple
+// );
 
-$alert-colors:(
-  "primary": (
-    "color": blue,
-    "bg": violet
-  )
-);
+// $avatar-sizes:(
+//   "xxl": (
+//     "size": 180px,
+//     "font-size": 54px
+//   )
+// );
+
+// $alert-colors:(
+//   "primary": (
+//     "color": blue,
+//     "bg": violet
+//   )
+// );
+
 // $theme: (
 //   'border': 1px solid black,
 //   'radius': 0,
 //   'disabled-bg': blue,
 //   'text-color': black,
 //   'font': Arial,
-//   'light': light-gray,
+//   'light': lightgray,
 // );
+
+// $button-config: (
+//   'gradients': true,
+//   'white-label': true,
+//   'circle': false,
+// ) !default;
+
+$alert-config: (
+  'radius': 20px,
+  'title-font-size': 50px,
+) !default;
+
+
+$badge-config: (
+  'lg-size': 90px,
+) !default;
+
+$badge-sm-size: 45px;
+
+$card-config: (
+  'bg': green,
+) !default;
+
+$checkbox-config: (
+  'bd': 1px solid green,
+) !default;
+
+$checkbox-bg-empty: pink;
+
+$pagination-item-current-bg: orange;
+
+$pagination-config: (
+  'font-size': 20px,
+) !default;
+
+$switch-config: (
+  'height': 50px,
+) !default;
 
 // Cupcake Core
 @import 'cupcake';
