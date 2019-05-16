@@ -1,34 +1,3 @@
-// --------------------------------------------
-// Buttons ------------------------------------
-// --------------------------------------------
-@function button($value: null) {
-  $fetched-value: map-get($button-config, $value);
-
-  @return $fetched-value;
-}
-
-$enable-btn-gradients                : button('gradients') !default;
-$enable-btn-border                   : button('border') !default;
-$enable-btn-white-label              : button('size') !default;
-$enable-circle-buttons               : button('circle') !default;
-$enable-outline-buttons              : button('outline') !default;
-$enable-pill-buttons                 : button('pill') !default;
-$enable-square-buttons               : button('square') !default;
-$btn-font-family                     : button('font-family') !default;
-$btn-radius                          : button('radius') !default;
-$btn-disabled-bg                     : button('disabled-bg') !default;
-$btn-default-c                       : button('default-c') !default;
-$btn-box-width                       : button('box-width') !default;
-$btn-link-bd                         : button('link-bd') !default;
-$btn-disabled-bd                     : button('disabled-bd') !default;
-$btn-font-weight                     : button('font-weight') !default;
-$btn-bd                              : button('bd') !default;
-$btn-disabled-c                      : button('disabled-c') !default;
-$btn-link-hover-bg                   : button('link-hover-bg') !default;
-$btn-shadow                          : button('shadow') !default;
-$btn-shadow-focus                    : button('shadow-focus') !default;
-$btn-active-shadow                   : button('active-shadow') !default;
-
 // Buttons
 .c-btn {
   @include btn-base;

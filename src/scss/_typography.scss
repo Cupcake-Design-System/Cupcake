@@ -4,7 +4,7 @@
 .c-body-text {
   @include font-body(md);
 
-  color: $theme-text-color;
+  color: $global-text-color;
 }
 
 .c-text {

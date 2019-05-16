@@ -1,23 +1,3 @@
-// --------------------------------------------
-// Breadcrumb --------------------------------------
-// --------------------------------------------
-@function breadcrumb($value: null) {
-  $fetched-value: map-get($breadcrumb-config, $value);
-
-  @return $fetched-value;
-}
-
-$breadcrumb-font-family              : breadcrumb('font-family') !default;
-$breadcrumb-margin                   : breadcrumb('margin') !default;
-$breadcrumb-color                    : breadcrumb('color') !default;
-$breadcrumb-color-active             : breadcrumb('color-active') !default;
-$breadcrumb-font-size                : breadcrumb('font-size') !default;
-$breadcrumb-font-weight              : breadcrumb('font-weight') !default;
-$breadcrumb-divider-size             : breadcrumb('divider-size') !default;
-$breadcrumb-divider-border-width     : breadcrumb('divider-border-width') !default;
-$breadcrumb-divider-color            : breadcrumb('divider-color') !default;
-
-
 // Breadcrumbs
 .c-breadcrumb {
   display: flex;

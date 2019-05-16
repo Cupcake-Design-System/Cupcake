@@ -1,28 +1,3 @@
-// --------------------------------------------
-// Media --------------------------------------
-// --------------------------------------------
-@function media($value: null) {
-  $fetched-value: map-get($media-config, $value);
-
-  @return $fetched-value;
-}
-
-
-$media-bg                            : media('bg') !default;
-$media-color                         : media('color') !default;
-$media-border                        : media('border') !default;
-$media-border-radius                 : media('border-radius') !default;
-$media-padding                       : media('padding') !default;
-$media-body-padding                  : media('body-padding') !default;
-$media-margin                        : media('margin') !default;
-$media-stripe-bg                     : media('stripe-bg') !default;
-$media-hover-bg                      : media('hover-bg') !default;
-$media-header-bg                     : media('header-bg') !default;
-$media-action-color                  : media('action-color') !default;
-$media-action-font-size              : media('action-font-size') !default;
-$media-action-line-height            : media('action-line-height') !default;
-$media-min-height                    : media('min-height') !default;
-
 $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
 
 // Base Media Object
@@ -138,7 +113,7 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
 .c-media-list {
   list-style: none;
   padding-left: $space-0;
-  border-radius: $theme-radius;
+  border-radius: $global-radius;
 
   // Expanded second level style
   > .c-media-body {

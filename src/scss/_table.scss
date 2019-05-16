@@ -1,38 +1,3 @@
-// --------------------------------------------
-// Table --------------------------------------
-// --------------------------------------------
-@function table($value: null) {
-  $fetched-value: map-get($table-config, $value);
-
-  @return $fetched-value;
-}
-
-$table-background                    : table('background') !default;
-$table-font-family                   : table('font-family') !default;
-$table-font-size                     : table('font-size') !default;
-$table-line-height                   : table('line-height') !default;
-$table-border                        : table('border') !default;
-$table-border-color                  : table('border-color') !default;
-$table-padding                       : table('padding') !default;
-$table-row-hover                     : table('row-hover') !default;
-$table-row-stripe-hover              : table('row-stripe-hover') !default;
-$table-stripe                        : table('stripe') !default;
-$table-stripe-bg                     : table('stripe-bg') !default;
-$table-head-color                    : table('head-color') !default;
-$table-head-font-weight              : table('head-font-weight') !default;
-$table-head-border-color             : table('head-border-color') !default;
-$table-head-border-width             : table('head-border-width') !default;
-$table-head-border-vertical          : table('head-border-vertical') !default;
-$table-head-bg                       : table('head-bg') !default;
-$table-head-cell-hover               : table('head-cell-hover') !default;
-$table-foot-bg                       : table('foot-bg') !default;
-$table-foot-color                    : table('foot-color') !default;
-$table-padding-sm                    : table('padding-sm') !default;
-$table-padding-lg                    : table('padding-lg') !default;
-$table-font-size-lg                  : table('font-size-lg') !default;
-$table-hover-bg-img                  : table('hover-bg-img') !default;
-$table-hover-bg-img-body-pos         : table('hover-bg-img-body-pos') !default;
-
 // Table
 table {
   &.c-table {

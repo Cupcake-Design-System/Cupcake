@@ -1,25 +1,3 @@
-// --------------------------------------------
-// Footer -------------------------------------
-// --------------------------------------------
-@function footer($value: null) {
-  $fetched-value: map-get($footer-config, $value);
-
-  @return $fetched-value;
-}
-
-
-$footer-font-family                  : footer('font-family') !default;
-$footer-height                       : footer('height') !default;
-$footer-border-top                   : footer('border-top') !default;
-$footer-font-size                    : footer('font-size') !default;
-$footer-color                        : footer('color') !default;
-$footer-color-link                   : footer('color-link') !default;
-$footer-background-color             : footer('background-color') !default;
-$footer-padding                      : footer('padding') !default;
-$footer-links-margin                 : footer('links-margin') !default;
-$footer-z-index                      : footer('z-index') !default;
-
-
 // Footer
 .c-footer {
   width: 100%;

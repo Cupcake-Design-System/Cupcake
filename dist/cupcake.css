@@ -546,7 +546,7 @@ th {
   -webkit-box-shadow: none;
           box-shadow: none;
   background: #f8f9fa;
-  border: 1px solid #f1f3f5;
+  border: 1px solid #e9ecef;
 }
 
 .c-notifications .c-media-list .c-media-read:hover {
@@ -6537,7 +6537,7 @@ textarea.c-input {
 .c-modal-title {
   width: 100%;
   margin: 0;
-  color: #212529;
+  color: #495057;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;

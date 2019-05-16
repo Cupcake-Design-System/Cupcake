@@ -1,26 +1,3 @@
-// --------------------------------------------
-// Pagination ---------------------------------
-// --------------------------------------------
-@function pagination($value: null) {
-  $fetched-value: map-get($pagination-config, $value);
-
-  @return $fetched-value;
-}
-
-
-$pagination-item-size                : pagination('item-size') !default;
-$pagination-item-border-radius       : pagination('item-border-radius') !default;
-$pagination-item-spacing             : pagination('item-spacing') !default;
-$pagination-font-size                : pagination('font-size') !default;
-$pagination-icon-size                : pagination('icon-size') !default;
-$pagination-item-color               : pagination('item-color') !default;
-$pagination-item-current-bg          : pagination('item-current-bg') !default;
-$pagination-item-current-color       : pagination('item-current-color') !default;
-$pagination-next-color               : pagination('next-color') !default;
-$pagination-previous-color           : pagination('previous-color') !default;
-$pagination-bg-disabled              : pagination('bg-disabled') !default;
-
-
 // Base pagination
 .c-pagination {
   display: flex;

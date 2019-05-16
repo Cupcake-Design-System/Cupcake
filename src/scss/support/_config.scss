@@ -15,27 +15,18 @@ $enable-center-classes: true !default;
 $enable-sideNav       : true !default;
 $white-label          : false !default;
 
-
-$theme-border              : 1px solid $color-gray-4 !default;
-$theme-border-light        : 1px solid $color-gray-2 !default;
-$theme-border-dark         : 1px solid $color-gray-5 !default;
-$theme-radius              : $radius-sm !default;
-$theme-disabled-bg         : $color-gray-3 !default;
-$theme-disabled-text       : $color-gray-5 !default;
-$theme-text-color          : $color-gray-7 !default;
-$theme-font                : $font-family-sans !default;
-$theme-backdrop-dark       : rgba(0, 0, 0, 0.75) !default;
-$theme-size-xs             : $global-size-xs !default;
-$theme-size-sm             : $global-size-sm !default;
-$theme-size-md             : $global-size-md !default;
-$theme-size-lg             : $global-size-lg !default;
-$theme-size-xl             : $global-size-xl !default;
-$theme-sidebar-bg          : $color-white !default;
-$theme-sidebar-border      : 1px solid $color-gray-2 !default;
-$theme-sidebar-bg-hover    : $color-primary-0 !default;
-$theme-sidebar-color-active: $color-primary-8 !default;
-$theme-sidebar-color       : $color-gray-8 !default;
-
+$global-font              : $font-family-sans !default;
+$global-text-color        : $color-gray-7 !default;
+$global-text-color-light  : $color-gray-6 !default;
+$global-text-color-dark   : $color-gray-9 !default;
+$global-text-color-lighter: $color-gray-5 !default;
+$global-bg-disabled       : $color-gray-3 !default;
+$global-backdrop-dark     : rgba(0, 0, 0, 0.75) !default;
+$global-radius            : $radius-sm !default;
+$global-border-size       : 1px solid !default;
+$global-border-color      : $color-gray-4 !default;
+$global-border-color-light: $color-gray-2 !default;
+$global-border-color-dark : $color-gray-5 !default;
 
 // --------------------------------------------
 // TYPOGRAPHY ---------------------------------
@@ -110,24 +101,24 @@ $font-header: map-merge(
 $alert-config: () !default;
 $alert-config: map-merge(
   (
-    'font': $theme-font,
-    'radius': $theme-radius,
-    'border': 1px solid,
-    'padding': $space-sm,
-    'shadows': $shadow-lg,
-    'color': $color-gray-9,
-    'top-padding': $space-md,
-    'font-size': $font-size-2,
-    'margin': 0 0 $space-md 0,
-    'icon-font-size': $font-size-2,
-    'icon-color': $color-primary,
-    'top-icon-size': $font-size-4,
-    'line-height': $line-height-xs,
-    'close-font-size': $font-size-2,
-    'title-font-size': $font-size-2,
-    'font-weight': $font-weight-normal,
+    'font'             : $global-font,
+    'radius'           : $global-radius,
+    'border'           : $global-border-size,
+    'padding'          : $space-sm,
+    'shadows'          : $shadow-lg,
+    'color'            : $global-text-color-dark,
+    'top-padding'      : $space-md,
+    'font-size'        : $font-size-2,
+    'margin'           : 0 0 $space-md 0,
+    'icon-font-size'   : $font-size-2,
+    'icon-color'       : $color-primary,
+    'top-icon-size'    : $font-size-4,
+    'line-height'      : $line-height-xs,
+    'close-font-size'  : $font-size-2,
+    'title-font-size'  : $font-size-2,
+    'font-weight'      : $font-weight-normal,
     'title-font-weight': $font-weight-bold,
-    'background': rgba($color-primary, .07),
+    'background'       : rgba($color-primary, .07),
     'title-line-height': $line-height-sm - 5,
   ),
   $alert-config
@@ -168,16 +159,16 @@ $action-panel-config: map-merge(
   (
     'header-bg'              : $color-white,
     'footer-bg'              : $color-white,
-    'backdrop'               : $theme-backdrop-dark,
-    'border'                 : $theme-border-light,
+    'backdrop'               : $global-backdrop-dark,
+    'border'                 : $global-border-size $global-border-color-light,
     'padding-v'              : $space-md - $space-xs,
     'padding-h'              : $space-md,
     'header-font-size'       : $font-size-3,
     'header-font-weight'     : $font-weight-bold,
     'header-line-height'     : $line-height-sm,
-    'header-color'           : $color-gray-9,
-    'header-icon-color'      : $color-gray-5,
-    'header-icon-hover-color': lighten($color-gray-5, 10%),
+    'header-color'           : $global-text-color-dark,
+    'header-icon-color'      : $global-text-color-lighter,
+    'header-icon-hover-color': lighten($global-text-color-lighter, 10%),
     'title-font-size'        : $font-size-4,
     'title-font-weight'      : $font-weight-bold,
     'subtitle-line-height'   : $font-size-2,
@@ -212,8 +203,8 @@ $avatar-config: () !default;
 $avatar-config: map-merge(
   (
     'extend-colors'       : true,
-    'font-family'         : $theme-font,
-    'default-size'        : $theme-size-md,
+    'font-family'         : $global-font,
+    'default-size'        : $global-size-md,
     'img-border'          : none,
     'line-height'         : normal,
     'group-spacing'       : $space-xs,
@@ -257,19 +248,19 @@ $avatar-sizes: map-merge(
 $badge-config: () !default;
 $badge-config: map-merge(
   (
-    'extend-colors': true,
-    'font-family': $theme-font,
-    'default-size': $theme-size-sm,
-    'large-size' : $theme-size-sm + 8,
-    'small-size' : $theme-size-sm - 8,
-    'padding' : $space-0 $space-sm,
-    'border-radius': $radius-round,
-    'font-weight': $font-weight-semibold,
-    'line-height': 2,
-    'font-size': $font-size-1,
+    'extend-colors'  : true,
+    'font-family'    : $global-font,
+    'default-size'   : $global-size-sm,
+    'large-size'     : $global-size-sm + 8,
+    'small-size'     : $global-size-sm - 8,
+    'padding'        : $space-0 $space-sm,
+    'border-radius'  : $radius-round,
+    'font-weight'    : $font-weight-semibold,
+    'line-height'    : 2,
+    'font-size'      : $font-size-1,
     'large-font-size': $font-size-3 - 1,
     'small-font-size': $font-size-0,
-    'group-spacing' : $space-sm,
+    'group-spacing'  : $space-sm,
   ),
   $badge-config
 );
@@ -288,16 +279,16 @@ $button-config: map-merge(
     'outline'      : true,
     'pill'         : false,
     'square'       : false,
-    'font-family'  : $theme-font,
-    'radius'       : $theme-radius,
-    'disabled-bg'  : $theme-disabled-bg,
-    'default-c'    : $theme-text-color,
-    'box-width'    : $theme-size-md,
-    'link-bd'      : $theme-border,
-    'disabled-bd'  : $theme-border-light,
+    'font-family'  : $global-font,
+    'radius'       : $global-radius,
+    'disabled-bg'  : $global-bg-disabled,
+    'default-c'    : $global-text-color,
+    'box-width'    : $global-size-md,
+    'link-bd'      : $global-border-size $global-border-color,
+    'disabled-bd'  : $global-border-size $global-border-color-light,
     'font-weight'  : $font-weight-bold,
-    'bd'           : 1px solid transparent,
-    'disabled-c'   : $color-gray-6,
+    'bd'           : $global-border-size transparent,
+    'disabled-c'   : $global-text-color-light,
     'link-hover-bg': $color-gray-0,
     'shadow'       : false,
     'shadow-focus' : 0 0 2px 1px $color-primary-7,
@@ -310,9 +301,9 @@ $button-config: map-merge(
 $btn-box-sizes: () !default;
 $btn-box-sizes: map-merge(
   (
-    xs: $theme-size-xs,
-    sm: $theme-size-sm,
-    lg: $theme-size-lg,
+    xs: $global-size-xs,
+    sm: $global-size-sm,
+    lg: $global-size-lg,
   ),
   $btn-box-sizes
 );
@@ -355,22 +346,22 @@ $button-sizes:  map-merge(
     default: (
       font-size: $font-size-2,
       padding: $space-0 $space-md,
-      height: $theme-size-md
+      height: $global-size-md
     ),
     xs: (
       font-size: $font-size-0,
       padding: $space-0 $space-xs,
-      height: $theme-size-xs
+      height: $global-size-xs
     ),
     sm: (
       font-size: $font-size-1,
       padding: $space-0 $space-sm,
-      height: $theme-size-sm
+      height: $global-size-sm
     ),
     lg: (
       font-size: $font-size-3,
       padding: $space-0 $space-xl,
-      height: $theme-size-lg
+      height: $global-size-lg
     )
   ),
   $button-sizes
@@ -383,10 +374,10 @@ $button-sizes:  map-merge(
 $breadcrumb-config: () !default;
 $breadcrumb-config: map-merge(
   (
-    'font-family'         : $theme-font,
-    'margin'              : $theme-size-md,
+    'font-family'         : $global-font,
+    'margin'              : $space-xl,
     'color'               : $color-primary-9,
-    'color-active'        : $color-gray-9,
+    'color-active'        : $global-text-color-dark,
     'font-size'           : $font-size-2,
     'font-weight'         : $font-weight-bold,
     'divider-size'        : 8px,
@@ -404,11 +395,11 @@ $card-config: () !default;
 $card-config: map-merge(
   (
     'bg'                     : $color-white,
-    'text-color'             : $theme-text-color,
-    'border'                 : $theme-border-light,
-    'border-hover'           : $theme-border,
-    'font-family'            : $theme-font,
-    'border-radius'          : $theme-radius,
+    'text-color'             : $global-text-color,
+    'border'                 : $global-border-size $global-border-color-light,
+    'border-hover'           : $global-border-size $global-border-color,
+    'font-family'            : $global-font,
+    'border-radius'          : $global-radius,
     'min-width'              : 0,
     'padding-v'              : $space-md - $space-xs,
     'padding-h'              : $space-md,
@@ -417,9 +408,9 @@ $card-config: map-merge(
     'header-font-size'       : $font-size-3,
     'header-font-weight'     : $font-weight-bold,
     'header-line-height'     : $line-height-sm,
-    'header-color'           : $color-gray-9,
-    'header-icon-color'      : $color-gray-5,
-    'header-icon-hover-color': lighten($color-gray-5, 10%),
+    'header-color'           : $global-text-color-dark,
+    'header-icon-color'      : $global-text-color-lighter,
+    'header-icon-hover-color': lighten($global-text-color-lighter, 10%),
     'body-font-size'         : $font-size-2,
     'title-font-size'        : $font-size-4,
     'title-font-weight'      : $font-weight-bold,
@@ -495,17 +486,17 @@ $extended-palette-light: map-merge(
 $checkbox-config: () !default;
 $checkbox-config: map-merge(
   (
-    'radius': $theme-radius,
-    'bd': $theme-border-dark,
-    'bg-empty': $color-white,
-    'default-size': $theme-size-xs,
-    'bg-disabled': $theme-disabled-bg,
-    'label-disabled-color': $theme-disabled-text,
-    'label-font-size': $font-size-2,
-    'label-font-weight': $font-weight-normal,
-    'bg-checked': $color-primary,
-    'bg-checked-disabled': $color-gray-6,
-    'transition': background 0.2s,
+    'radius'              : $global-radius,
+    'bd'                  : $global-border-size $global-border-color-dark,
+    'bg-empty'            : $color-white,
+    'default-size'        : $global-size-xs,
+    'bg-disabled'         : $global-bg-disabled,
+    'label-disabled-color': $global-text-color-lighter,
+    'label-font-size'     : $font-size-2,
+    'label-font-weight'   : $font-weight-normal,
+    'bg-checked'          : $color-primary,
+    'bg-checked-disabled' : $global-text-color-light,
+    'transition'          : background 0.2s,
     'checked-color-disabled': $color-gray-2,
   ),
   $checkbox-config
@@ -514,8 +505,8 @@ $checkbox-config: map-merge(
 $checkbox-sizes: () !default;
 $checkbox-sizes: map-merge(
   (
-    lg: $theme-size-sm,
-    xl: $theme-size-md
+    lg: $global-size-sm,
+    xl: $global-size-md
   ),
   $checkbox-sizes
 );
@@ -526,18 +517,18 @@ $checkbox-sizes: map-merge(
 $dropdown-config: () !default;
 $dropdown-config: map-merge(
   (
-    'radius'             : $theme-radius,
-    'font'               : $theme-font,
+    'radius'             : $global-radius,
+    'font'               : $global-font,
     'bg'                 : $color-white,
-    'border'             : $theme-border-light,
+    'border'             : $global-border-size $global-border-color-light,
     'min-width'          : 200px,
     'font-size'          : $font-size-2,
     'font-weight'        : $font-weight-normal,
     'bg-hover'           : $color-gray-0,
     'shadow'             : $shadow-md,
     'z-index'            : $z-dropdown,
-    'color'              : $color-gray-9,
-    'color-hover'        : $color-gray-9,
+    'color'              : $global-text-color-dark,
+    'color-hover'        : $global-text-color-dark,
     'icon-color'         : $color-gray-4,
     'icon-font-size'     : $font-size-3,
     'icon-padding'       : $space-sm,
@@ -557,20 +548,20 @@ $dropdown-config: map-merge(
 $form-config: () !default;
 $form-config: map-merge(
   (
-    'font-family'            : $theme-font,
+    'font-family'            : $global-font,
     'background'             : $color-white,
-    'height'                 : $theme-size-md,
-    'border'                 : $theme-border-dark,
-    'border-radius'          : $theme-radius,
-    'icon-padding'           : $theme-size-md,
-    'disabled-background'    : $theme-disabled-bg,
-    'select-padding-r'       : $theme-size-sm,
+    'height'                 : $global-size-md,
+    'border'                 : $global-border-size $global-border-color-dark,
+    'border-radius'          : $global-radius,
+    'icon-padding'           : $space-xl,
+    'disabled-background'    : $global-bg-disabled,
+    'select-padding-r'       : $space-lg,
     'font-size'              : $font-size-2,
-    'color'                  : $color-gray-9,
+    'color'                  : $global-text-color-dark,
     'font-weight'            : $font-weight-normal,
     'line-height'            : 1.166667,  //line height optimized for IE compatibility
-    'placeholder-c'          : $color-gray-5,
-    'placeholder-hover-c'    : $color-gray-5,
+    'placeholder-c'          : $global-text-color-lighter,
+    'placeholder-hover-c'    : $global-text-color-lighter,
     'padding'                : $space-sm,
     'shadow'                 : inset 0 2px 2px 0 rgba(33, 37, 41, .1),
     'focused-shadow'         : inset 0 1px 2px 0 rgba(33, 37, 41, 0.08),
@@ -580,9 +571,9 @@ $form-config: map-merge(
     'hover-border'           : $color-gray-6,
     'active'                 : $color-primary,
     'active-border'          : $color-primary,
-    'icon-color'             : $color-gray-9,
+    'icon-color'             : $global-text-color-dark,
     'disabled-border'        : transparent,
-    'hint-color'             : $color-gray-6,
+    'hint-color'             : $global-text-color-light,
     'hint-font-size'         : 85%,
     'hint-transition'        : all 0.2s ease,
     'addon-background'       : $color-gray-0,
@@ -601,12 +592,12 @@ $control-sizes: () !default;
 $control-sizes: map-merge(
   (
     "sm": (
-      "height": $theme-size-sm,
+      "height": $global-size-sm,
       "font-size": $font-size-1,
       "padding": $space-0 $space-sm
     ),
     "lg": (
-      "height": $theme-size-lg,
+      "height": $global-size-lg,
       "font-size": $font-size-4,
       "padding": $space-0 $space-sm
     ),
@@ -628,11 +619,11 @@ $control-ng-validation:
 $footer-config: () !default;
 $footer-config: map-merge(
   (
-    'font-family'     : $theme-font,
+    'font-family'     : $global-font,
     'height'          : 48px,
-    'border-top'      : $theme-border-light,
+    'border-top'      : $global-border-size $global-border-color-light,
     'font-size'       : $font-size-2,
-    'color'           : $color-gray-9,
+    'color'           : $global-text-color-dark,
     'color-link'      : $color-primary,
     'background-color': $color-gray-1,
     'padding'         : $space-0 ($space-md + $space-sm),
@@ -685,7 +676,7 @@ $header-config: map-merge(
     'item-padding'             : $space-0 $space-md,
     'inverse-bg'               : #002b49,
     'inverse-bg-hover'         : rgba(255, 255, 255, 0.07),
-    'text-color'               : $color-gray-6,
+    'text-color'               : $global-text-color-light,
     'inverse-text-color'       : rgba(white, .9),
     'inverse-borders'          : rgba(255, 255, 255, 0.1),
   ),
@@ -699,11 +690,11 @@ $header-config: map-merge(
 $loader-config: () !default;
 $loader-config: map-merge(
   (
-    'skeleton-bar-height'   : $theme-size-xs / 2,
+    'skeleton-bar-height'   : $global-size-xs / 2,
     'skeleton-bar'          : linear-gradient(140deg, rgba(white, 0), rgba(white, .6) 50%, rgba(white, 0) 100%),
     'skeleton-bar-animation': skeletonIteration 2s infinite,
     'skeleton-bg-color'     : $color-gray-3,
-    'size'                  : $theme-size-md,
+    'size'                  : $global-size-md,
     'color'                 : $color-primary,
     'bg-color'              : $color-gray-3,
     'full-page-size'        : 48px,
@@ -722,16 +713,16 @@ $media-config: () !default;
 $media-config: map-merge(
   (
     'bg'                : $color-white,
-    'color'             : $theme-text-color,
-    'border'            : $theme-border-light,
-    'border-radius'     : $theme-radius,
+    'color'             : $global-text-color,
+    'border'            : $global-border-size $global-border-color-light,
+    'border-radius'     : $global-radius,
     'padding'           : $space-sm $space-0,
     'body-padding'      : $space-md,
     'margin'            : $space-0 $space-sm,
     'stripe-bg'         : $color-gray-0,
     'hover-bg'          : $color-gray-0,
     'header-bg'         : $color-gray-0,
-    'action-color'      : $color-gray-6,
+    'action-color'      : $global-text-color-light,
     'action-font-size'  : $font-size-2,
     'action-line-height': $line-height-xs,
     'min-height'        : 48px,
@@ -745,18 +736,18 @@ $media-config: map-merge(
 $modal-config: () !default;
 $modal-config: map-merge(
   (
-    'border-radius'          : $theme-radius,
-    'border'                 : $theme-border-light,
-    'close-size'             : $theme-size-md,
-    'body-color'             : $theme-text-color,
+    'border-radius'          : $global-radius,
+    'border'                 : $global-border-size $global-border-color-light,
+    'close-size'             : $global-size-md,
+    'body-color'             : $global-text-color,
     'bg-color'               : $color-white,
-    'backdrop-bg-color'      : $theme-backdrop-dark,
+    'backdrop-bg-color'      : $global-backdrop-dark,
     'z-index'                : $z-modal,
     'shadow'                 : $shadow-lg,
-    'close-color'            : $color-gray-6,
+    'close-color'            : $global-text-color-light,
     'body-font-size'         : $font-size-2,
     'title-font-size'        : $font-size-4,
-    'title-color'            : $color-gray-9,
+    'title-color'            : $global-text-color,
     'title-font-weight'      : $font-weight-bold,
     'title-line-height'      : $line-height-sm,
     'padding'                : $space-lg,
@@ -786,20 +777,20 @@ $modal-widths: map-merge(
 $nav-config: () !default;
 $nav-config: map-merge(
   (
-    'height'                : $theme-size-md,
-    'color'                 : $theme-text-color,
-    'color-disabled'        : $theme-disabled-text,
-    'pill-radius'           : $theme-radius,
-    'pill-color'            : $theme-text-color,
-    'pill-color-disabled'   : $theme-text-color,
+    'height'                : $global-size-md,
+    'color'                 : $global-text-color,
+    'color-disabled'        : $global-text-color-lighter,
+    'pill-radius'           : $global-radius,
+    'pill-color'            : $global-text-color,
+    'pill-color-disabled'   : $global-text-color,
     'font-size'             : $font-size-2,
-    'color-hover'           : $color-gray-9,
-    'color-active'          : $color-gray-9,
+    'color-hover'           : $global-text-color-dark,
+    'color-active'          : $global-text-color-dark,
     'disabled-opacity'      : .7,
     'font-weight'           : $font-weight-normal,
     'pill-font-weight'      : $font-weight-bold,
-    'pill-color-hover'      : $color-gray-9,
-    'pill-color-active'     : $color-gray-9,
+    'pill-color-hover'      : $global-text-color-dark,
+    'pill-color-active'     : $global-text-color-dark,
     'pill-bg-hover'         : $color-gray-1,
     'pill-bg-active'        : $color-gray-1,
     'pill-bg-disabled'      : $color-gray-0,
@@ -816,12 +807,12 @@ $nav-sizes: map-merge(
   (
     "sm": (
       "font-size": $font-size-1,
-      "height": $theme-size-sm,
+      "height": $global-size-sm,
       "padding": $space-0 $space-sm
     ),
     "lg": (
       "font-size": $font-size-3,
-      "height": 40px,
+      "height": $global-size-lg,
       "padding": $space-0 ($space-sm * 3)
     ),
   ),
@@ -839,7 +830,7 @@ $notification-config: map-merge(
     'shadow'      : $shadow-xs,
     'shadow-hover': $shadow-sm,
     'read-bg'     : $color-gray-0,
-    'read-border' : 1px solid $color-gray-1,
+    'read-border' : $global-border-size $global-border-color-light,
   ),
   $notification-config
 );
@@ -848,11 +839,19 @@ $notification-config: map-merge(
 // --------------------------------------------
 // Sidebar ------------------------------------
 // --------------------------------------------
+
+// Variable shortcuts to avoid repitition
+$_sidebar-bg          : $color-white;
+$_sidebar-border      : $global-border-size $global-border-color-light;
+$_sidebar-bg-hover    : $color-primary-0;
+$_sidebar-color-active: $color-primary-8;
+$_sidebar-color       : $color-gray-8;
+
 $sidebar-config: () !default;
 $sidebar-config: map-merge(
   (
     'width'                      : 256px,
-    'folded-default-width'       : 48px,
+    'folded-width'               : 48px,
     'font-size'                  : $font-size-3,
     'z-index'                    : $z-sidenav,
     'link-padding'               : $space-xs $space-md,
@@ -864,37 +863,31 @@ $sidebar-config: map-merge(
     'submenu-link-padding-left'  : 48px,
     'submenu-level3-padding-left': 64px,
     'submenu-level4-padding-left': 80px,
+    'bg'                         : $_sidebar-bg,
+    'bg-hover'                   : $_sidebar-bg-hover,
+    'border'                     : $_sidebar-border,
+    'submenu-bg'                 : $_sidebar-bg,
+    'color'                      : $_sidebar-color,
+    'color-active'               : $_sidebar-color-active,
+    'link-color'                 : $_sidebar-color,
+    'link-hover-color'           : $_sidebar-color,
+    'link-active-color'          : $_sidebar-color,
+    'link-open-color'            : $_sidebar-color,
+    'divider-color'              : $color-gray-1,
+    'link-hover-bg'              : $_sidebar-bg-hover,
+    'link-active-bg'             : $_sidebar-bg-hover,
+    'link-open-bg'               : $_sidebar-bg-hover,
+    'icon-color'                 : $global-text-color-lighter,
+    'icon-color-active'          : $_sidebar-color-active,
+    'category-color'             : $global-text-color-light,
+    'collapse-bg'                : $color-gray-0,
+    'collapse-bg-hover'          : $color-gray-1,
+    'collapse-bd'                : $color-gray-2,
+    'submenu-link-active-color'  : $_sidebar-color-active,
   ),
   $sidebar-config
 );
 
-$sidebar-theme: () !default;
-$sidebar-theme: map-merge(
-  (
-    'bg'                         : $theme-sidebar-bg,
-    'bg-hover'                   : $theme-sidebar-bg-hover,
-    'border'                     : $theme-sidebar-border,
-    'submenu-bg'                 : $theme-sidebar-bg,
-    'color'                      : $theme-sidebar-color,
-    'color-active'               : $theme-sidebar-color-active,
-    'link-color'                 : $theme-sidebar-color,
-    'link-hover-color'           : $theme-sidebar-color,
-    'link-active-color'          : $theme-sidebar-color,
-    'link-open-color'            : $theme-sidebar-color,
-    'divider-default-color'      : $color-gray-1,
-    'link-hover-bg'              : $theme-sidebar-bg-hover,
-    'link-active-bg'             : $theme-sidebar-bg-hover,
-    'link-open-bg'               : $theme-sidebar-bg-hover,
-    'icon-color'                 : $color-gray-5,
-    'icon-color-active'          : $theme-sidebar-color-active,
-    'category-color'             : $color-gray-6,
-    'collapse-bg'                : $color-gray-0,
-    'collapse-bg-hover'          : $color-gray-1,
-    'collapse-bd'                : $color-gray-2,
-    'submenu-link-active-color'  : $theme-sidebar-color-active,
-  ),
-  $sidebar-theme
-);
 
 // --------------------------------------------
 // SWITCHES -----------------------------------
@@ -902,19 +895,19 @@ $sidebar-theme: map-merge(
 $switch-config: () !default;
 $switch-config: map-merge(
   (
-    'height'             : $theme-size-xs,
+    'height'             : $global-size-xs,
     'radius'             : $radius-round,
-    'border'             : $theme-border,
-    'label-off'          : $theme-text-color,
+    'border'             : $global-border-size $global-border-color,
+    'label-off'          : $global-text-color,
     'label-on'           : $color-white,
     'handle'             : $color-white,
-    'disabled'           : $theme-disabled-bg,
+    'disabled'           : $global-bg-disabled,
     'font-size'          : $font-size-2,
     'off-bg'             : $color-gray-0,
     'on-bg'              : $color-primary,
     'shadow'             : inset 0 1px 1px 0 rgba(0, 0, 0, .1),
     'handle-disabled'    : $color-gray-0,
-    'disabled-checked-bg': $color-gray-6,
+    'disabled-checked-bg': $global-text-color-light,
   ),
   $switch-config
 );
@@ -922,7 +915,7 @@ $switch-config: map-merge(
 $switch-sizes: () !default;
 $switch-sizes: map-merge(
   (
-    lg: $theme-size-md
+    lg: $global-size-md
   ),
   $switch-sizes
 );
@@ -934,7 +927,7 @@ $switch-sizes: map-merge(
 $tooltip-config: () !default;
 $tooltip-config: map-merge(
   (
-    'bd-radius'       : $theme-radius,
+    'bd-radius'       : $global-radius,
     'default-color'   : $color-white,
     'invert-bg'       : $color-white,
     'max-width'       : 300px,
@@ -959,22 +952,22 @@ $tooltip-config: map-merge(
 $tabs-config: () !default;
 $tabs-config: map-merge(
   (
-    'color'             : $theme-text-color,
-    'bordered-radius'   : $theme-radius,
-    'height'            : $theme-size-md,
-    'font-family'       : $theme-font,
-    'border'            : $theme-border-light,
+    'color'             : $global-text-color,
+    'bordered-radius'   : $global-radius,
+    'height'            : $global-size-md,
+    'font-family'       : $global-font,
+    'border'            : $global-border-size $global-border-color-light,
     'bordered-bg-hover' : $color-white,
     'bordered-bg-active': $color-white,
     'color-hover'       : $color-primary,
     'color-active'      : $color-primary,
-    'color-disabled'    : $color-gray-6,
+    'color-disabled'    : $global-text-color-light,
     'font-size'         : $font-size-2,
     'font-weight'       : bold,
     'padding'           : $space-sm $space-md,
     'bordered-bg'       : $color-gray-0,
     'hover-transition'  : border-color 0.2s ease 0s,
-    'box-shadow'        : inset 0 -1px 0 0 $color-gray-2,
+    'box-shadow'        : inset 0 -1px 0 0 $global-border-color-light,
     'border-bottom'     : 2px,
   ),
   $tabs-config
@@ -985,13 +978,13 @@ $tabs-sizes: () !default;
 $tabs-sizes: map-merge(
   (
     "sm": (
-      "height": $theme-size-sm,
+      "height": $global-size-sm,
       "font-size": $font-size-1,
       "line-height": $line-height-xs,
       "padding": $space-xs $space-sm
     ),
     "lg": (
-      "height": $theme-size-lg,
+      "height": $global-size-lg,
       "font-size": $font-size-3,
       "line-height": $line-height-sm,
       "padding": $space-sm $space-md
@@ -1007,12 +1000,12 @@ $table-config: () !default;
 $table-config: map-merge(
   (
     'background'           : $color-white,
-    'font-family'          : $theme-font,
+    'font-family'          : $global-font,
     'font-size'            : $font-size-2,
     'font-size-lg'         : $font-size-3,
     'line-height'          : $line-height-xs,
     'border'               : 0,
-    'border-color'         : $color-gray-2,
+    'border-color'         : $global-border-color-light,
     'padding'              : ($space-sm - 1) ($space-sm + 2) $space-sm,
     'row-hover'            : $color-gray-1,
     'row-stripe-hover'     : $color-gray-1,
@@ -1020,13 +1013,13 @@ $table-config: map-merge(
     'stripe-bg'            : $color-gray-0,
     'head-bg'              : $color-gray-0,
     'head-cell-hover'      : $color-gray-2,
-    'head-color'           : $color-gray-9,
+    'head-color'           : $global-text-color-dark,
     'head-font-weight'     : $font-weight-bold,
     'head-border-color'    : $color-gray-3,
     'head-border-width'    : 1px 0,
     'head-border-vertical' : 1px solid $color-gray-3,
     'foot-bg'              : $color-white,
-    'foot-color'           : $color-gray-9,
+    'foot-color'           : $global-text-color-dark,
     'padding-sm'           : ($space-xs - 1) $space-sm $space-xs,
     'padding-lg'           : ($space-sm + $space-xs) ($space-sm + 2) ($space-sm + ($space-xs - 1)),
     'hover-bg-img'         : url('data: image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1IiBoZWlnaHQ9IjIwIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxLjMyMjkxNjYgNS4yOTE2NjY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOTEuNzEpIiBmaWxsPSIjYmJjMWM5Ij4gIDxyZWN0IHk9IjI5Ni40NyIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5MS43MSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjkxLjcxIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTYuNDciIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjk0Ljg4IiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTQuMDkiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTIuNSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC44OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC4wOSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeT0iMjkyLjUiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+IDwvZz48L3N2Zz4 = '),
@@ -1054,16 +1047,16 @@ $table-states: map-merge(
 $pagination-config: () !default;
 $pagination-config: map-merge(
   (
-    'item-size'            : $theme-size-md,
-    'item-border-radius'   : $theme-radius,
+    'item-size'            : $global-size-md,
+    'item-border-radius'   : $global-radius,
     'item-spacing'         : 2px,
     'font-size'            : $font-size-2,
     'icon-size'            : $font-size-0,
-    'item-color'           : $color-gray-9,
+    'item-color'           : $global-text-color-dark,
     'item-current-bg'      : $color-primary-0,
     'item-current-color'   : $color-primary-9,
     'next-color'           : $color-primary-9,
-    'previous-color'       : $color-gray-6,
+    'previous-color'       : $global-text-color-light,
     'bg-disabled'          : $color-gray-1,
   ),
   $pagination-config

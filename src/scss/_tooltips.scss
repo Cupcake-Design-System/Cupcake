@@ -1,28 +1,3 @@
-// --------------------------------------------
-// Tooltip ------------------------------------
-// --------------------------------------------
-@function tooltip($value: null) {
-  $fetched-value: map-get($tooltip-config, $value);
-
-  @return $fetched-value;
-}
-
-$tooltip-bd-radius                   : tooltip('bd-radius') !default;
-$tooltip-default-color               : tooltip('default-color') !default;
-$tooltip-invert-bg                   : tooltip('invert-bg') !default;
-$tooltip-max-width                   : tooltip('max-width') !default;
-$tooltip-padding                     : tooltip('padding') !default;
-$tooltip-font-size                   : tooltip('font-size') !default;
-$tooltip-line-height                 : tooltip('line-height') !default;
-$tooltip-shadow                      : tooltip('shadow') !default;
-$tooltip-z-index                     : tooltip('z-index') !default;
-$tooltip-default-bg                  : tooltip('default-bg') !default;
-$tooltip-invert-color                : tooltip('invert-color') !default;
-$tooltip-transition-style            : tooltip('transition-style') !default;
-$tooltip-border-width                : tooltip('border-width') !default;
-$tooltip-arrow-position              : tooltip('arrow-position') !default;
-
-
 // CSS TOOLTIPS
 [data-tooltip] {
   position: relative;

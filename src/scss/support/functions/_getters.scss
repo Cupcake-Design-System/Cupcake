@@ -95,8 +95,8 @@
   }
 }
 // Returns the theme value.
-@function theme($value: null) {
-  $fetched-value: map-get($theme, $value);
+@function global($value: null) {
+  $fetched-value: map-get($global-config, $value);
 
   @return $fetched-value;
 }

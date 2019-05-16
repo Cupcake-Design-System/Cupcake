@@ -1,32 +1,3 @@
-// --------------------------------------------
-// Tabs ---------------------------------------
-// --------------------------------------------
-@function tabs($value: null) {
-  $fetched-value: map-get($tabs-config, $value);
-
-  @return $fetched-value;
-}
-
-
-$tabs-color                          : tabs('color') !default;
-$tabs-bordered-radius                : tabs('bordered-radius') !default;
-$tabs-height                         : tabs('height') !default;
-$tabs-font-family                    : tabs('font-family') !default;
-$tabs-border                         : tabs('border') !default;
-$tabs-bordered-bg-hover              : tabs('bordered-bg-hover') !default;
-$tabs-color-hover                    : tabs('color-hover') !default;
-$tabs-color-active                   : tabs('color-active') !default;
-$tabs-color-disabled                 : tabs('color-disabled') !default;
-$tabs-font-size                      : tabs('font-size') !default;
-$tabs-font-weight                    : tabs('font-weight') !default;
-$tabs-padding                        : tabs('padding') !default;
-$tabs-bordered-bg                    : tabs('bordered-bg') !default;
-$tabs-bordered-bg-active             : tabs('bordered-bg-active') !default;
-$tabs-hover-transition               : tabs('hover-transition') !default;
-$tabs-box-shadow                     : tabs('box-shadow') !default;
-$tabs-border-bottom                  : tabs('border-bottom') !default;
-
-
 // TABS
 .c-tabs {
   display: flex;

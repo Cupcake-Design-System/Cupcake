@@ -1,27 +1,3 @@
-// --------------------------------------------
-// Badge --------------------------------------
-// --------------------------------------------
-@function badge($value: null) {
-  $fetched-value: map-get($badge-config, $value);
-
-  @return $fetched-value;
-}
-
-$badge-default-size                  : badge('default-size') !default;
-$badge-font-family                   : badge('font-family') !default;
-$enable-extend-badge-colors          : badge('extend-colors') !default;
-$badge-default-padding               : badge('padding') !default;
-$badge-default-border-radius         : badge('border-radius') !default;
-$badge-default-font-weight           : badge('font-weight') !default;
-$badge-default-line-height           : badge('line-height') !default;
-$badge-default-font-size             : badge('font-size') !default;
-$badge-lg-size                       : badge('large-size') !default;
-$badge-lg-font-size                  : badge('large-font-size') !default;
-$badge-sm-size                       : badge('small-size') !default;
-$badge-sm-font-size                  : badge('small-font-size') !default;
-$badge-group-spacing                 : badge('group-spacing') !default;
-
-
 // Badge
 .c-badge {
   @include badge-base();

@@ -1,38 +1,3 @@
-// --------------------------------------------
-// Action Panel -------------------------------
-// --------------------------------------------
-@function action-panel($value: null) {
-  $fetched-value: map-get($action-panel-config, $value);
-
-  @return $fetched-value;
-}
-
-$action-panel-header-bg              : action-panel('header-bg') !default;
-$action-panel-footer-bg              : action-panel('footer-bg') !default;
-$action-panel-backdrop               : action-panel('backdrop') !default;
-$action-panel-border                 : action-panel('border') !default;
-$action-panel-padding-v              : action-panel('padding-v') !default;
-$action-panel-padding-h              : action-panel('padding-h') !default;
-$action-panel-header-font-size       : action-panel('header-font-size') !default;
-$action-panel-header-font-weight     : action-panel('header-font-weight') !default;
-$action-panel-header-line-height     : action-panel('header-line-height') !default;
-$action-panel-header-color           : action-panel('header-color') !default;
-$action-panel-header-icon-color      : action-panel('header-icon-color') !default;
-$action-panel-header-icon-hover-color: action-panel('header-icon-hover-color') !default;
-$action-panel-title-font-size        : action-panel('title-font-size') !default;
-$action-panel-title-font-weight      : action-panel('title-font-weight') !default;
-$action-panel-subtitle-line-height   : action-panel('subtitle-line-height') !default;
-$action-panel-subtitle-font-size     : action-panel('subtitle-font-size') !default;
-$action-panel-footer-color           : action-panel('footer-color') !default;
-$action-panel-footer-hover-color     : action-panel('footer-hover-color') !default;
-$action-panel-footer-font-size       : action-panel('footer-font-size') !default;
-$action-panel-footer-line-weight     : action-panel('footer-line-weight') !default;
-$action-panel-zindex                 : action-panel('zindex') !default;
-$action-panel-width                  : action-panel('width') !default;
-$action-panel-bg                     : action-panel('bg') !default;
-$action-panel-transition             : action-panel('transition') !default;
-$action-panel-shadow                 : action-panel('shadow') !default;
-
 .c-action-panel {
   top: 0;
   bottom: 0;

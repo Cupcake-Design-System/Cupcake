@@ -1,25 +1,3 @@
-// --------------------------------------------
-// Loader -------------------------------------
-// --------------------------------------------
-@function loader($value: null) {
-  $fetched-value: map-get($loader-config, $value);
-
-  @return $fetched-value;
-}
-
-$skeleton-bar-height                 : loader('skeleton-bar-height') !default;
-$skeleton-bar                        : loader('skeleton-bar') !default;
-$skeleton-bar-animation              : loader('skeleton-bar-animation') !default;
-$skeleton-bg-color                   : loader('skeleton-bg-color') !default;
-$loader-size                         : loader('size') !default;
-$loader-color                        : loader('color') !default;
-$loader-bg-color                     : loader('bg-color') !default;
-$loader-full-page-size               : loader('full-page-size') !default;
-$loader-border-size                  : loader('border-size') !default;
-$loader-full-page-border-size        : loader('full-page-border-size') !default;
-$loader-animation-duration           : loader('animation-duration') !default;
-
-
 // Skeleton style loader
 .c-skeleton {
   &-loading {

@@ -1,35 +1,3 @@
-// --------------------------------------------
-// Nav ----------------------------------------
-// --------------------------------------------
-@function nav($value: null) {
-  $fetched-value: map-get($nav-config, $value);
-
-  @return $fetched-value;
-}
-
-
-$nav-height                          : nav('height') !default;
-$nav-color                           : nav('color') !default;
-$nav-color-disabled                  : nav('color-disabled') !default;
-$nav-pill-radius                     : nav('pill-radius') !default;
-$nav-font-size                       : nav('font-size') !default;
-$nav-color-hover                     : nav('color-hover') !default;
-$nav-color-active                    : nav('color-active') !default;
-$nav-disabled-opacity                : nav('disabled-opacity') !default;
-$nav-font-weight                     : nav('font-weight') !default;
-$nav-pill-font-weight                : nav('pill-font-weight') !default;
-$nav-pill-color                      : nav('pill-color') !default;
-$nav-pill-color-hover                : nav('pill-color-hover') !default;
-$nav-pill-color-active               : nav('pill-color-active') !default;
-$nav-pill-color-disabled             : nav('pill-color-disabled') !default;
-$nav-pill-bg-hover                   : nav('pill-bg-hover') !default;
-$nav-pill-bg-active                  : nav('pill-bg-active') !default;
-$nav-pill-bg-disabled                : nav('pill-bg-disabled') !default;
-$nav-pill-icon-opacity               : nav('pill-icon-opacity') !default;
-$nav-pill-icon-color-active          : nav('pill-icon-color-active') !default;
-$nav-spacing                         : nav('spacing') !default;
-
-
 // Excludes variable so we don't have to type these crazy :not statements
 $nav-excludes: ':not(.c-nav-link-disabled):not(.c-nav-item-disabled)';
 

@@ -1,28 +1,3 @@
-// --------------------------------------------
-// Switch -------------------------------------
-// --------------------------------------------
-@function switch($value: null) {
-  $fetched-value: map-get($switch-config, $value);
-
-  @return $fetched-value;
-}
-
-
-$switch-height                       : switch('height') !default;
-$switch-radius                       : switch('radius') !default;
-$switch-border                       : switch('border') !default;
-$switch-label-off                    : switch('label-off') !default;
-$switch-label-on                     : switch('label-on') !default;
-$switch-handle                       : switch('handle') !default;
-$switch-disabled                     : switch('disabled') !default;
-$switch-font-size                    : switch('font-size') !default;
-$switch-off-bg                       : switch('off-bg') !default;
-$switch-on-bg                        : switch('on-bg') !default;
-$switch-shadow                       : switch('shadow') !default;
-$switch-handle-disabled              : switch('handle-disabled') !default;
-$switch-disabled-checked-bg          : switch('disabled-checked-bg') !default;
-
-
 // Switch Base
 .c-switch {
   @include switch-base;

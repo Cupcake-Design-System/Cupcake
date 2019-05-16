@@ -1,27 +1,3 @@
-// --------------------------------------------
-// Header -------------------------------------
-// --------------------------------------------
-@function header($value: null) {
-  $fetched-value: map-get($header-config, $value);
-
-  @return $fetched-value;
-}
-
-
-$header-bg                           : header('bg') !default;
-$header-height                       : header('height') !default;
-$header-inverse-text-color-active    : header('inverse-text-color-active') !default;
-$header-bg-hover                     : header('bg-hover') !default;
-$header-borders                      : header('borders') !default;
-$header-z-index                      : header('z-index') !default;
-$header-bottom-border                : header('bottom-border') !default;
-$header-item-padding                 : header('item-padding') !default;
-$header-inverse-bg                   : header('inverse-bg') !default;
-$header-inverse-bg-hover             : header('inverse-bg-hover') !default;
-$header-text-color                   : header('text-color') !default;
-$header-inverse-text-color           : header('inverse-text-color') !default;
-$header-inverse-borders              : header('inverse-borders') !default;
-
 // Header
 .c-header {
   width: 100%;

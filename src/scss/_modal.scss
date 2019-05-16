@@ -1,35 +1,3 @@
-// --------------------------------------------
-// Modal --------------------------------------
-// --------------------------------------------
-@function modal($value: null) {
-  $fetched-value: map-get($modal-config, $value);
-
-  @return $fetched-value;
-}
-
-$modal-border-radius                 : modal('border-radius') !default;
-$modal-border                        : modal('border') !default;
-$modal-close-size                    : modal('close-size') !default;
-$modal-body-color                    : modal('body-color') !default;
-$modal-bg-color                      : modal('bg-color') !default;
-$modal-backdrop-bg-color             : modal('backdrop-bg-color') !default;
-$modal-z-index                       : modal('z-index') !default;
-$modal-shadow                        : modal('shadow') !default;
-$modal-close-color                   : modal('close-color') !default;
-$modal-body-font-size                : modal('body-font-size') !default;
-$modal-title-font-size               : modal('title-font-size') !default;
-$modal-title-color                   : modal('title-color') !default;
-$modal-title-font-weight             : modal('title-font-weight') !default;
-$modal-title-line-height             : modal('title-line-height') !default;
-$modal-padding                       : modal('padding') !default;
-$modal-body-padding                  : modal('body-padding') !default;
-$modal-header-padding                : modal('header-padding') !default;
-$modal-footer-padding                : modal('footer-padding') !default;
-$modal-dialog-padding                : modal('dialog-padding') !default;
-$modal-dialog-footer-padding         : modal('dialog-footer-padding') !default;
-$modal-width                         : modal('width') !default;
-
-
 // Base Modal
 .c-modal {
   top: 0;

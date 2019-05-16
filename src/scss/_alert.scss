@@ -1,33 +1,3 @@
-// --------------------------------------------
-// Alert --------------------------------------
-// --------------------------------------------
-@function alert($value: null) {
-  $fetched-value: map-get($alert-config, $value);
-
-  @return $fetched-value;
-}
-
-$alert-border                        : alert('border') !default;
-$alert-margin                        : alert('margin') !default;
-$alert-padding                       : alert('padding') !default;
-$alert-top-padding                   : alert('top-padding') !default;
-$alert-font-size                     : alert('font-size') !default;
-$alert-radius                        : alert('radius') !default;
-$alert-font-family                   : alert('font') !default;
-$alert-font-weight                   : alert('font-weight') !default;
-$alert-line-height                   : alert('line-height') !default;
-$alert-title-font-size               : alert('title-font-size') !default;
-$alert-title-line-height             : alert('title-line-height') !default;
-$alert-title-font-weight             : alert('title-font-weight') !default;
-$alert-background                    : alert('background') !default;
-$alert-color                         : alert('color') !default;
-$alert-icon-color                    : alert('icon-color') !default;
-$alert-shadows                       : alert('shadows') !default;
-$alert-icon-font-size                : alert('icon-font-size') !default;
-$alert-top-icon-size                 : alert('top-icon-size') !default;
-$alert-close-font-size               : alert('close-font-size') !default;
-
-
 // Alert Base
 .c-alert {
   @include alert-base;
