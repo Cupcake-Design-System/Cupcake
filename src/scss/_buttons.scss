@@ -1,25 +1,33 @@
-$enable-btn-gradients   : map-get($button-config, 'gradients') !default;
-$enable-btn-border      : map-get($button-config, 'border') !default;
-$enable-btn-white-label : map-get($button-config, 'size') !default;
-$enable-circle-buttons  : map-get($button-config, 'circle') !default;
-$enable-outline-buttons : map-get($button-config, 'outline') !default;
-$enable-pill-buttons    : map-get($button-config, 'pill') !default;
-$enable-square-buttons  : map-get($button-config, 'square') !default;
+// --------------------------------------------
+// Buttons ------------------------------------
+// --------------------------------------------
+@function button($value: null) {
+  $fetched-value: map-get($button-config, $value);
 
-$btn-font-family        : map-get($button-config, 'font-family') !default;
-$btn-radius             : map-get($button-config, 'radius') !default;
-$btn-disabled-bg        : map-get($button-config, 'disabled-bg') !default;
-$btn-default-c          : map-get($button-config, 'default-c') !default;
-$btn-box-width          : map-get($button-config, 'box-width') !default;
-$btn-link-bd            : map-get($button-config, 'link-bd') !default;
-$btn-disabled-bd        : map-get($button-config, 'disabled-bd') !default;
-$btn-font-weight        : map-get($button-config, 'font-weight') !default;
-$btn-bd                 : map-get($button-config, 'bd') !default;
-$btn-disabled-c         : map-get($button-config, 'disabled-c') !default;
-$btn-link-hover-bg      : map-get($button-config, 'link-hover-bg') !default;
-$btn-shadow             : map-get($button-config, 'shadow') !default;
-$btn-shadow-focus       : map-get($button-config, 'shadow-focus') !default;
-$btn-active-shadow      : map-get($button-config, 'active-shadow') !default;
+  @return $fetched-value;
+}
+
+$enable-btn-gradients                : button('gradients') !default;
+$enable-btn-border                   : button('border') !default;
+$enable-btn-white-label              : button('size') !default;
+$enable-circle-buttons               : button('circle') !default;
+$enable-outline-buttons              : button('outline') !default;
+$enable-pill-buttons                 : button('pill') !default;
+$enable-square-buttons               : button('square') !default;
+$btn-font-family                     : button('font-family') !default;
+$btn-radius                          : button('radius') !default;
+$btn-disabled-bg                     : button('disabled-bg') !default;
+$btn-default-c                       : button('default-c') !default;
+$btn-box-width                       : button('box-width') !default;
+$btn-link-bd                         : button('link-bd') !default;
+$btn-disabled-bd                     : button('disabled-bd') !default;
+$btn-font-weight                     : button('font-weight') !default;
+$btn-bd                              : button('bd') !default;
+$btn-disabled-c                      : button('disabled-c') !default;
+$btn-link-hover-bg                   : button('link-hover-bg') !default;
+$btn-shadow                          : button('shadow') !default;
+$btn-shadow-focus                    : button('shadow-focus') !default;
+$btn-active-shadow                   : button('active-shadow') !default;
 
 // Buttons
 .c-btn {

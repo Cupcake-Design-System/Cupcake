@@ -101,6 +101,14 @@
   @return $fetched-value;
 }
 
+// Returns the app-config value.
+@function app-config($value: null) {
+  $fetched-value: map-get($app-config, $value);
+
+  @return $fetched-value;
+}
+
+
 // Returns the font family for a given definition.
 // @example
 //  font-family:  font(sans);

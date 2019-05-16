@@ -1,13 +1,24 @@
-$footer-font-family     : map-get($footer-config, 'font-family') !default;
-$footer-height          : map-get($footer-config, 'height') !default;
-$footer-border-top      : map-get($footer-config, 'border-top') !default;
-$footer-font-size       : map-get($footer-config, 'font-size') !default;
-$footer-color           : map-get($footer-config, 'color') !default;
-$footer-color-link      : map-get($footer-config, 'color-link') !default;
-$footer-background-color: map-get($footer-config, 'background-color') !default;
-$footer-padding         : map-get($footer-config, 'padding') !default;
-$footer-links-margin    : map-get($footer-config, 'links-margin') !default;
-$footer-z-index         : map-get($footer-config, 'z-index') !default;
+// --------------------------------------------
+// Footer -------------------------------------
+// --------------------------------------------
+@function footer($value: null) {
+  $fetched-value: map-get($footer-config, $value);
+
+  @return $fetched-value;
+}
+
+
+$footer-font-family                  : footer('font-family') !default;
+$footer-height                       : footer('height') !default;
+$footer-border-top                   : footer('border-top') !default;
+$footer-font-size                    : footer('font-size') !default;
+$footer-color                        : footer('color') !default;
+$footer-color-link                   : footer('color-link') !default;
+$footer-background-color             : footer('background-color') !default;
+$footer-padding                      : footer('padding') !default;
+$footer-links-margin                 : footer('links-margin') !default;
+$footer-z-index                      : footer('z-index') !default;
+
 
 // Footer
 .c-footer {

@@ -1,17 +1,27 @@
-$tooltip-bd-radius       : map-get($tooltip-config, 'bd-radius') !default;
-$tooltip-default-color   : map-get($tooltip-config, 'default-color') !default;
-$tooltip-invert-bg       : map-get($tooltip-config, 'invert-bg') !default;
-$tooltip-max-width       : map-get($tooltip-config, 'max-width') !default;
-$tooltip-padding         : map-get($tooltip-config, 'padding') !default;
-$tooltip-font-size       : map-get($tooltip-config, 'font-size') !default;
-$tooltip-line-height     : map-get($tooltip-config, 'line-height') !default;
-$tooltip-shadow          : map-get($tooltip-config, 'shadow') !default;
-$tooltip-z-index         : map-get($tooltip-config, 'z-index') !default;
-$tooltip-default-bg      : map-get($tooltip-config, 'default-bg') !default;
-$tooltip-invert-color    : map-get($tooltip-config, 'invert-color') !default;
-$tooltip-transition-style: map-get($tooltip-config, 'transition-style') !default;
-$tooltip-border-width    : map-get($tooltip-config, 'border-width') !default;
-$tooltip-arrow-position  : map-get($tooltip-config, 'arrow-position') !default;
+// --------------------------------------------
+// Tooltip ------------------------------------
+// --------------------------------------------
+@function tooltip($value: null) {
+  $fetched-value: map-get($tooltip-config, $value);
+
+  @return $fetched-value;
+}
+
+$tooltip-bd-radius                   : tooltip('bd-radius') !default;
+$tooltip-default-color               : tooltip('default-color') !default;
+$tooltip-invert-bg                   : tooltip('invert-bg') !default;
+$tooltip-max-width                   : tooltip('max-width') !default;
+$tooltip-padding                     : tooltip('padding') !default;
+$tooltip-font-size                   : tooltip('font-size') !default;
+$tooltip-line-height                 : tooltip('line-height') !default;
+$tooltip-shadow                      : tooltip('shadow') !default;
+$tooltip-z-index                     : tooltip('z-index') !default;
+$tooltip-default-bg                  : tooltip('default-bg') !default;
+$tooltip-invert-color                : tooltip('invert-color') !default;
+$tooltip-transition-style            : tooltip('transition-style') !default;
+$tooltip-border-width                : tooltip('border-width') !default;
+$tooltip-arrow-position              : tooltip('arrow-position') !default;
+
 
 // CSS TOOLTIPS
 [data-tooltip] {

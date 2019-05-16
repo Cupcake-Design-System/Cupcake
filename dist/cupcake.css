@@ -7460,6 +7460,7 @@ select.c-input-error:not([multiple]) option {
   background-clip: content-box;
   border-right: 1px solid #e9ecef;
   font-size: 14px;
+  background-color: #ffffff;
 }
 
 .c-sidenav-body {
@@ -7758,6 +7759,7 @@ select.c-input-error:not([multiple]) option {
   top: 0;
   display: none;
   position: absolute;
+  background: #ffffff;
   border: 1px solid #e9ecef;
   z-index: 1600;
   width: 246px;

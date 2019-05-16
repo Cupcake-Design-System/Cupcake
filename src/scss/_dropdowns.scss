@@ -1,24 +1,33 @@
-$dropdown-radius             : map-get($dropdown-config, 'radius') !default;
-$dropdown-font               : map-get($dropdown-config, 'font') !default;
-$dropdown-bg                 : map-get($dropdown-config, 'bg') !default;
-$dropdown-border             : map-get($dropdown-config, 'border') !default;
-$dropdown-min-width          : map-get($dropdown-config, 'min-width') !default;
-$dropdown-font-size          : map-get($dropdown-config, 'font-size') !default;
-$dropdown-font-weight        : map-get($dropdown-config, 'font-weight') !default;
-$dropdown-bg-hover           : map-get($dropdown-config, 'bg-hover') !default;
-$dropdown-shadow             : map-get($dropdown-config, 'shadow') !default;
-$dropdown-z-index            : map-get($dropdown-config, 'z-index') !default;
-$dropdown-color              : map-get($dropdown-config, 'color') !default;
-$dropdown-color-hover        : map-get($dropdown-config, 'color-hover') !default;
-$dropdown-icon-color         : map-get($dropdown-config, 'icon-color') !default;
-$dropdown-icon-font-size     : map-get($dropdown-config, 'icon-font-size') !default;
-$dropdown-icon-padding       : map-get($dropdown-config, 'icon-padding') !default;
-$dropdown-list-padding       : map-get($dropdown-config, 'list-padding') !default;
-$dropdown-list-margin        : map-get($dropdown-config, 'list-margin') !default;
-$dropdown-item-padding       : map-get($dropdown-config, 'item-padding') !default;
-$dropdown-grid-padding       : map-get($dropdown-config, 'grid-padding') !default;
-$dropdown-selected-color     : map-get($dropdown-config, 'selected-color') !default;
-$dropdown-selected-bg        : map-get($dropdown-config, 'selected-bg') !default;
+// --------------------------------------------
+// Dropdown -----------------------------------
+// --------------------------------------------
+@function dropdown($value: null) {
+  $fetched-value: map-get($dropdown-config, $value);
+
+  @return $fetched-value;
+}
+
+$dropdown-radius                     : dropdown('radius') !default;
+$dropdown-font                       : dropdown('font') !default;
+$dropdown-bg                         : dropdown('bg') !default;
+$dropdown-border                     : dropdown('border') !default;
+$dropdown-min-width                  : dropdown('min-width') !default;
+$dropdown-font-size                  : dropdown('font-size') !default;
+$dropdown-font-weight                : dropdown('font-weight') !default;
+$dropdown-bg-hover                   : dropdown('bg-hover') !default;
+$dropdown-shadow                     : dropdown('shadow') !default;
+$dropdown-z-index                    : dropdown('z-index') !default;
+$dropdown-color                      : dropdown('color') !default;
+$dropdown-color-hover                : dropdown('color-hover') !default;
+$dropdown-icon-color                 : dropdown('icon-color') !default;
+$dropdown-icon-font-size             : dropdown('icon-font-size') !default;
+$dropdown-icon-padding               : dropdown('icon-padding') !default;
+$dropdown-list-padding               : dropdown('list-padding') !default;
+$dropdown-list-margin                : dropdown('list-margin') !default;
+$dropdown-item-padding               : dropdown('item-padding') !default;
+$dropdown-grid-padding               : dropdown('grid-padding') !default;
+$dropdown-selected-color             : dropdown('selected-color') !default;
+$dropdown-selected-bg                : dropdown('selected-bg') !default;
 
 $link-colors:
   '[class*="primary"]',

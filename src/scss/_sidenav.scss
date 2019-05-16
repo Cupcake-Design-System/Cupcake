@@ -1,47 +1,60 @@
-$sidebar-bg                   : map-get($sidebar-config, 'bg-color') !default;
-$sidebar-border                     : map-get($sidebar-config, 'border') !default;
-$sidebar-submenu-bg                 : map-get($sidebar-config, 'submenu-bg') !default;
+// Config
 $sidebar-width                      : map-get($sidebar-config, 'width') !default;
 $sidebar-folded-default-width       : map-get($sidebar-config, 'folded-default-width') !default;
 $sidebar-font-size                  : map-get($sidebar-config, 'font-size') !default;
-$sidebar-color                      : map-get($sidebar-config, 'color') !default;
 $sidebar-z-index                    : map-get($sidebar-config, 'z-index') !default;
-$sidebar-default-hover-bg           : map-get($sidebar-config, 'default-hover-bg') !default;
-$sidebar-default-active-color       : map-get($sidebar-config, 'default-active-color') !default;
-$sidebar-divider-default-color      : map-get($sidebar-config, 'divider-default-color') !default;
 
 // Menu Links
 $sidebar-link-padding               : map-get($sidebar-config, 'link-padding') !default;
 $sidebar-link-margin                : map-get($sidebar-config, 'link-margin') !default;
 $sidebar-link-line-height           : map-get($sidebar-config, 'link-line-height') !default;
-$sidebar-link-color                 : map-get($sidebar-config, 'link-color') !default;
-$sidebar-link-hover-color           : map-get($sidebar-config, 'link-hover-color') !default;
-$sidebar-link-hover-bg              : map-get($sidebar-config, 'link-hover-bg') !default;
-$sidebar-link-active-bg             : map-get($sidebar-config, 'link-active-bg') !default;
-$sidebar-link-active-color          : map-get($sidebar-config, 'link-active-color') !default;
-$sidebar-link-open-bg               : map-get($sidebar-config, 'link-open-bg') !default;
-$sidebar-link-open-color            : map-get($sidebar-config, 'link-open-color') !default;
 
 // Icon
 $sidebar-icon-margin                : map-get($sidebar-config, 'icon-margin') !default;
-$sidebar-icon-color                 : map-get($sidebar-config, 'icon-color') !default;
-$sidebar-icon-color-active          : map-get($sidebar-config, 'icon-color-active') !default;
 $sidebar-icon-font-size             : map-get($sidebar-config, 'icon-font-size') !default;
-
-// Collapse
-$sidebar-collapse-bg                : map-get($sidebar-config, 'collapse-bg') !default;
-$sidebar-collapse-bg-hover          : map-get($sidebar-config, 'collapse-bg-hover') !default;
-$sidebar-collapse-bd                : map-get($sidebar-config, 'collapse-bd') !default;
 
 // Category
 $sidebar-category-padding           : map-get($sidebar-config, 'category-padding') !default;
-$sidebar-category-color             : map-get($sidebar-config, 'category-color') !default;
 
 // SubMenu
-$sidebar-submenu-link-active-color  : map-get($sidebar-config, 'submenu-link-active-color') !default;
 $sidebar-submenu-link-padding-left  : map-get($sidebar-config, 'submenu-link-padding-left') !default;
 $sidebar-submenu-level3-padding-left: map-get($sidebar-config, 'submenu-level3-padding-left') !default;
 $sidebar-submenu-level4-padding-left: map-get($sidebar-config, 'submenu-level4-padding-left') !default;
+
+
+// THEME
+$sidebar-bg                         : map-get($sidebar-theme, 'bg') !default;
+$sidebar-bg-hover                   : map-get($sidebar-theme, 'bg-hover') !default;
+$sidebar-border                     : map-get($sidebar-theme, 'border') !default;
+$sidebar-color                      : map-get($sidebar-theme, 'color') !default;
+$sidebar-submenu-bg                 : map-get($sidebar-theme, 'submenu-bg') !default;
+$sidebar-color-active               : map-get($sidebar-theme, 'color-active') !default;
+$sidebar-divider-default-color      : map-get($sidebar-theme, 'divider-default-color') !default;
+
+// Menu Links
+$sidebar-link-color                 : map-get($sidebar-theme, 'link-color') !default;
+$sidebar-link-hover-color           : map-get($sidebar-theme, 'link-hover-color') !default;
+$sidebar-link-hover-bg              : map-get($sidebar-theme, 'link-hover-bg') !default;
+$sidebar-link-active-bg             : map-get($sidebar-theme, 'link-active-bg') !default;
+$sidebar-link-active-color          : map-get($sidebar-theme, 'link-active-color') !default;
+$sidebar-link-open-bg               : map-get($sidebar-theme, 'link-open-bg') !default;
+$sidebar-link-open-color            : map-get($sidebar-theme, 'link-open-color') !default;
+
+// Icon
+$sidebar-icon-color                 : map-get($sidebar-theme, 'icon-color') !default;
+$sidebar-icon-color-active          : map-get($sidebar-theme, 'icon-color-active') !default;
+
+// Collapse
+$sidebar-collapse-bg                : map-get($sidebar-theme, 'collapse-bg') !default;
+$sidebar-collapse-bg-hover          : map-get($sidebar-theme, 'collapse-bg-hover') !default;
+$sidebar-collapse-bd                : map-get($sidebar-theme, 'collapse-bd') !default;
+
+// Category
+$sidebar-category-color             : map-get($sidebar-theme, 'category-color') !default;
+
+// SubMenu
+$sidebar-submenu-link-active-color  : map-get($sidebar-theme, 'submenu-link-active-color') !default;
+
 
 @if $enable-sideNav == true {
   // SIDENAV BASE

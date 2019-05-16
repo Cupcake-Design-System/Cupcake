@@ -1,16 +1,27 @@
-$switch-height             : map-get($switch-config, 'height') !default;
-$switch-radius             : map-get($switch-config, 'radius') !default;
-$switch-border             : map-get($switch-config, 'border') !default;
-$switch-label-off          : map-get($switch-config, 'label-off') !default;
-$switch-label-on           : map-get($switch-config, 'label-on') !default;
-$switch-handle             : map-get($switch-config, 'handle') !default;
-$switch-disabled           : map-get($switch-config, 'disabled') !default;
-$switch-font-size          : map-get($switch-config, 'font-size') !default;
-$switch-off-bg             : map-get($switch-config, 'off-bg') !default;
-$switch-on-bg              : map-get($switch-config, 'on-bg') !default;
-$switch-shadow             : map-get($switch-config, 'shadow') !default;
-$switch-handle-disabled    : map-get($switch-config, 'handle-disabled') !default;
-$switch-disabled-checked-bg: map-get($switch-config, 'disabled-checked-bg') !default;
+// --------------------------------------------
+// Switch -------------------------------------
+// --------------------------------------------
+@function switch($value: null) {
+  $fetched-value: map-get($switch-config, $value);
+
+  @return $fetched-value;
+}
+
+
+$switch-height                       : switch('height') !default;
+$switch-radius                       : switch('radius') !default;
+$switch-border                       : switch('border') !default;
+$switch-label-off                    : switch('label-off') !default;
+$switch-label-on                     : switch('label-on') !default;
+$switch-handle                       : switch('handle') !default;
+$switch-disabled                     : switch('disabled') !default;
+$switch-font-size                    : switch('font-size') !default;
+$switch-off-bg                       : switch('off-bg') !default;
+$switch-on-bg                        : switch('on-bg') !default;
+$switch-shadow                       : switch('shadow') !default;
+$switch-handle-disabled              : switch('handle-disabled') !default;
+$switch-disabled-checked-bg          : switch('disabled-checked-bg') !default;
+
 
 // Switch Base
 .c-switch {

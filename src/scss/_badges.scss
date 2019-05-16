@@ -1,16 +1,25 @@
-$badge-default-size         : map-get($badge-config, 'default-size') !default;
-$badge-font-family          : map-get($badge-config, 'font-family') !default;
-$enable-extend-badge-colors : map-get($badge-config, 'extend-colors') !default;
-$badge-default-padding      : map-get($badge-config, 'padding') !default;
-$badge-default-border-radius: map-get($badge-config, 'border-radius') !default;
-$badge-default-font-weight  : map-get($badge-config, 'font-weight') !default;
-$badge-default-line-height  : map-get($badge-config, 'line-height') !default;
-$badge-default-font-size    : map-get($badge-config, 'font-size') !default;
-$badge-lg-size              : map-get($badge-config, 'large-size') !default;
-$badge-lg-font-size         : map-get($badge-config, 'large-font-size') !default;
-$badge-sm-size              : map-get($badge-config, 'small-size') !default;
-$badge-sm-font-size         : map-get($badge-config, 'small-font-size') !default;
-$badge-group-spacing        : map-get($badge-config, 'group-spacing') !default;
+// --------------------------------------------
+// Badge --------------------------------------
+// --------------------------------------------
+@function badge($value: null) {
+  $fetched-value: map-get($badge-config, $value);
+
+  @return $fetched-value;
+}
+
+$badge-default-size                  : badge('default-size') !default;
+$badge-font-family                   : badge('font-family') !default;
+$enable-extend-badge-colors          : badge('extend-colors') !default;
+$badge-default-padding               : badge('padding') !default;
+$badge-default-border-radius         : badge('border-radius') !default;
+$badge-default-font-weight           : badge('font-weight') !default;
+$badge-default-line-height           : badge('line-height') !default;
+$badge-default-font-size             : badge('font-size') !default;
+$badge-lg-size                       : badge('large-size') !default;
+$badge-lg-font-size                  : badge('large-font-size') !default;
+$badge-sm-size                       : badge('small-size') !default;
+$badge-sm-font-size                  : badge('small-font-size') !default;
+$badge-group-spacing                 : badge('group-spacing') !default;
 
 
 // Badge

@@ -1,29 +1,39 @@
-$card-bg                     : map-get($card-config, 'bg') !default;
-$card-text-color             : map-get($card-config, 'text-color') !default;
-$card-border                 : map-get($card-config, 'border') !default;
-$card-border-hover           : map-get($card-config, 'border-hover') !default;
-$card-font-family            : map-get($card-config, 'font-family') !default;
-$card-min-width              : map-get($card-config, 'min-width') !default;
-$card-border-radius          : map-get($card-config, 'border-radius') !default;
-$card-padding-v              : map-get($card-config, 'padding-v') !default;
-$card-padding-h              : map-get($card-config, 'padding-h') !default;
-$card-shadow                 : map-get($card-config, 'shadow') !default;
-$card-shadow-hover           : map-get($card-config, 'shadow-hover') !default;
-$card-header-font-size       : map-get($card-config, 'header-font-size') !default;
-$card-header-font-weight     : map-get($card-config, 'header-font-weight') !default;
-$card-header-line-height     : map-get($card-config, 'header-line-height') !default;
-$card-header-color           : map-get($card-config, 'header-color') !default;
-$card-header-icon-color      : map-get($card-config, 'header-icon-color') !default;
-$card-header-icon-hover-color: map-get($card-config, 'header-icon-hover-color') !default;
-$card-body-font-size         : map-get($card-config, 'body-font-size') !default;
-$card-title-font-size        : map-get($card-config, 'title-font-size') !default;
-$card-title-font-weight      : map-get($card-config, 'title-font-weight') !default;
-$card-subtitle-line-height   : map-get($card-config, 'subtitle-line-height') !default;
-$card-subtitle-font-size     : map-get($card-config, 'subtitle-font-size') !default;
-$card-footer-color           : map-get($card-config, 'footer-color') !default;
-$card-footer-hover-color     : map-get($card-config, 'footer-hover-color') !default;
-$card-footer-font-size       : map-get($card-config, 'footer-font-size') !default;
-$card-footer-line-weight     : map-get($card-config, 'footer-line-weight') !default;
+// --------------------------------------------
+// Cards --------------------------------------
+// --------------------------------------------
+@function card($value: null) {
+  $fetched-value: map-get($card-config, $value);
+
+  @return $fetched-value;
+}
+
+$card-bg                             : card('bg') !default;
+$card-text-color                     : card('text-color') !default;
+$card-border                         : card('border') !default;
+$card-border-hover                   : card('border-hover') !default;
+$card-font-family                    : card('font-family') !default;
+$card-min-width                      : card('min-width') !default;
+$card-border-radius                  : card('border-radius') !default;
+$card-padding-v                      : card('padding-v') !default;
+$card-padding-h                      : card('padding-h') !default;
+$card-shadow                         : card('shadow') !default;
+$card-shadow-hover                   : card('shadow-hover') !default;
+$card-header-font-size               : card('header-font-size') !default;
+$card-header-font-weight             : card('header-font-weight') !default;
+$card-header-line-height             : card('header-line-height') !default;
+$card-header-color                   : card('header-color') !default;
+$card-header-icon-color              : card('header-icon-color') !default;
+$card-header-icon-hover-color        : card('header-icon-hover-color') !default;
+$card-body-font-size                 : card('body-font-size') !default;
+$card-title-font-size                : card('title-font-size') !default;
+$card-title-font-weight              : card('title-font-weight') !default;
+$card-subtitle-line-height           : card('subtitle-line-height') !default;
+$card-subtitle-font-size             : card('subtitle-font-size') !default;
+$card-footer-color                   : card('footer-color') !default;
+$card-footer-hover-color             : card('footer-hover-color') !default;
+$card-footer-font-size               : card('footer-font-size') !default;
+$card-footer-line-weight             : card('footer-line-weight') !default;
+
 
 // Cards
 .c-card {

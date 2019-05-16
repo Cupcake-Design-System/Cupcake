@@ -1,0 +1,37 @@
+
+$sidebar-width                       : sidebar('width') !default;
+$sidebar-folded-default-width        : sidebar('folded-default-width') !default;
+$sidebar-font-size                   : sidebar('font-size') !default;
+$sidebar-z-index                     : sidebar('z-index') !default;
+$sidebar-link-padding                : sidebar('link-padding') !default;
+$sidebar-link-margin                 : sidebar('link-margin') !default;
+$sidebar-link-line-height            : sidebar('link-line-height') !default;
+$sidebar-icon-margin                 : sidebar('icon-margin') !default;
+$sidebar-icon-font-size              : sidebar('icon-font-size') !default;
+$sidebar-category-padding            : sidebar('category-padding') !default;
+$sidebar-submenu-link-padding-left   : sidebar('submenu-link-padding-left') !default;
+$sidebar-submenu-level3-padding-left : sidebar('submenu-level3-padding-left') !default;
+$sidebar-submenu-level4-padding-left : sidebar('submenu-level4-padding-left') !default;
+
+// THEME
+$sidebar-bg                          : sidebar('bg') !default;
+$sidebar-bg-hover                    : sidebar('bg-hover') !default;
+$sidebar-border                      : sidebar('border') !default;
+$sidebar-color                       : sidebar('color') !default;
+$sidebar-submenu-bg                  : sidebar('submenu-bg') !default;
+$sidebar-color-active                : sidebar('color-active') !default;
+$sidebar-divider-default-color       : sidebar('divider-default-color') !default;
+$sidebar-link-color                  : sidebar('link-color') !default;
+$sidebar-link-hover-color            : sidebar('link-hover-color') !default;
+$sidebar-link-hover-bg               : sidebar('link-hover-bg') !default;
+$sidebar-link-active-bg              : sidebar('link-active-bg') !default;
+$sidebar-link-active-color           : sidebar('link-active-color') !default;
+$sidebar-link-open-bg                : sidebar('link-open-bg') !default;
+$sidebar-link-open-color             : sidebar('link-open-color') !default;
+$sidebar-icon-color                  : sidebar('icon-color') !default;
+$sidebar-icon-color-active           : sidebar('icon-color-active') !default;
+$sidebar-collapse-bg                 : sidebar('collapse-bg') !default;
+$sidebar-collapse-bg-hover           : sidebar('collapse-bg-hover') !default;
+$sidebar-collapse-bd                 : sidebar('collapse-bd') !default;
+$sidebar-category-color              : sidebar('category-color') !default;
+$sidebar-submenu-link-active-color   : sidebar('submenu-link-active-color') !default;

@@ -1,14 +1,22 @@
-$avatar-default-size        : map-get($avatar-config, 'default-size') !default;
-$avatar-font-family         : map-get($avatar-config, 'font-family') !default;
-$avatar-border-radius       : map-get($avatar-config, 'border-radius') !default;
-$enable-extended-avatar-colors     : map-get($avatar-config, 'extend-colors') !default;
-$avatar-font-weight         : map-get($avatar-config, 'font-weight') !default;
-$avatar-font-size           : map-get($avatar-config, 'font-size') !default;
-$avatar-line-height         : map-get($avatar-config, 'line-height') !default;
-$avatar-img-border          : map-get($avatar-config, 'img-border') !default;
-$avatar-group-spacing       : map-get($avatar-config, 'group-spacing') !default;
-$avatar-group-transition    : map-get($avatar-config, 'group-transition') !default;
+// --------------------------------------------
+// Avatar -------------------------------------
+// --------------------------------------------
+@function avatar($value: null) {
+  $fetched-value: map-get($avatar-config, $value);
 
+  @return $fetched-value;
+}
+
+$avatar-default-size                 : avatar('default-size') !default;
+$avatar-font-family                  : avatar('font-family') !default;
+$avatar-border-radius                : avatar('border-radius') !default;
+$enable-extended-avatar-colors       : avatar('extend-colors') !default;
+$avatar-font-weight                  : avatar('font-weight') !default;
+$avatar-font-size                    : avatar('font-size') !default;
+$avatar-line-height                  : avatar('line-height') !default;
+$avatar-img-border                   : avatar('img-border') !default;
+$avatar-group-spacing                : avatar('group-spacing') !default;
+$avatar-group-transition             : avatar('group-transition') !default;
 
 // Avatar
 .c-avatar {

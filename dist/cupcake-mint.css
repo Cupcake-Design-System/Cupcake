@@ -312,13 +312,13 @@ th {
 
 .c-action-panel-header {
   border-bottom: 1px solid #e9ecef;
-  background-color: #ffffff;
+  background-color: #007778;
   padding: 12px 16px;
 }
 
 .c-action-panel-header-title {
   display: inline-block;
-  color: #212529;
+  color: white;
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
@@ -7460,6 +7460,7 @@ select.c-input-error:not([multiple]) option {
   background-clip: content-box;
   border-right: 1px solid #e9ecef;
   font-size: 14px;
+  background-color: #ffffff;
 }
 
 .c-sidenav-body {
@@ -7758,6 +7759,7 @@ select.c-input-error:not([multiple]) option {
   top: 0;
   display: none;
   position: absolute;
+  background: #ffffff;
   border: 1px solid #e9ecef;
   z-index: 1600;
   width: 246px;

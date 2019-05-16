@@ -10,6 +10,8 @@ $color-primary-7: #008a8e;
 $color-primary-8: #007778;
 $color-primary-9: #055350;
 
+$color-primary: #007778;
+
 // $radius-lg    : 28px;
 
 // $radius:(
@@ -55,6 +57,12 @@ $alert-config: (
 );
 
 
+$action-panel-config: (
+  'header-bg': $color-primary,
+  'header-color': white,
+);
+
+
 $badge-config: (
   'lg-size': 90px,
 );
@@ -81,26 +89,6 @@ $switch-config: (
   'height': 50px,
 );
 
-// $sidebar-config:(
-//   'bg-color'                   : #343a40,
-//   'border'                     : #343a40,
-//   'submenu-bg'                 : #343a40,
-//   'color'                      : white,
-//   'default-hover-bg'           : lighten(#343a40, 5),
-//   'divider-default-color'      : lighten(#343a40, 8),
-//   'link-color'                 : white,
-//   'link-hover-color'           : white,
-//   'link-hover-bg'              : lighten(#343a40, 5),
-//   'link-active-bg'             : lighten(#343a40, 5),
-//   'link-active-color'          : white,
-//   'link-open-bg'               : lighten(#343a40, 5),
-//   'link-open-color'            : white,
-//   'icon-color'                 : white,
-//   'category-color'             : white,
-//   'collapse-bg'                : #343a40,
-//   'collapse-bg-hover'          : lighten(#343a40, 5),
-//   'collapse-bd'                : lighten(#343a40, 5),
-// );
 
 // Cupcake Core
 @import 'cupcake';

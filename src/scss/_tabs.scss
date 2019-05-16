@@ -1,20 +1,31 @@
-$tabs-color             : map-get($tabs-config, 'color') !default;
-$tabs-bordered-radius   : map-get($tabs-config, 'bordered-radius') !default;
-$tabs-height            : map-get($tabs-config, 'height') !default;
-$tabs-font-family       : map-get($tabs-config, 'font-family') !default;
-$tabs-border            : map-get($tabs-config, 'border') !default;
-$tabs-bordered-bg-hover : map-get($tabs-config, 'bordered-bg-hover') !default;
-$tabs-color-hover       : map-get($tabs-config, 'color-hover') !default;
-$tabs-color-active      : map-get($tabs-config, 'color-active') !default;
-$tabs-color-disabled    : map-get($tabs-config, 'color-disabled') !default;
-$tabs-font-size         : map-get($tabs-config, 'font-size') !default;
-$tabs-font-weight       : map-get($tabs-config, 'font-weight') !default;
-$tabs-padding           : map-get($tabs-config, 'padding') !default;
-$tabs-bordered-bg       : map-get($tabs-config, 'bordered-bg') !default;
-$tabs-bordered-bg-active: map-get($tabs-config, 'bordered-bg-active') !default;
-$tabs-hover-transition  : map-get($tabs-config, 'hover-transition') !default;
-$tabs-box-shadow        : map-get($tabs-config, 'box-shadow') !default;
-$tabs-border-bottom     : map-get($tabs-config, 'border-bottom') !default;
+// --------------------------------------------
+// Tabs ---------------------------------------
+// --------------------------------------------
+@function tabs($value: null) {
+  $fetched-value: map-get($tabs-config, $value);
+
+  @return $fetched-value;
+}
+
+
+$tabs-color                          : tabs('color') !default;
+$tabs-bordered-radius                : tabs('bordered-radius') !default;
+$tabs-height                         : tabs('height') !default;
+$tabs-font-family                    : tabs('font-family') !default;
+$tabs-border                         : tabs('border') !default;
+$tabs-bordered-bg-hover              : tabs('bordered-bg-hover') !default;
+$tabs-color-hover                    : tabs('color-hover') !default;
+$tabs-color-active                   : tabs('color-active') !default;
+$tabs-color-disabled                 : tabs('color-disabled') !default;
+$tabs-font-size                      : tabs('font-size') !default;
+$tabs-font-weight                    : tabs('font-weight') !default;
+$tabs-padding                        : tabs('padding') !default;
+$tabs-bordered-bg                    : tabs('bordered-bg') !default;
+$tabs-bordered-bg-active             : tabs('bordered-bg-active') !default;
+$tabs-hover-transition               : tabs('hover-transition') !default;
+$tabs-box-shadow                     : tabs('box-shadow') !default;
+$tabs-border-bottom                  : tabs('border-bottom') !default;
+
 
 // TABS
 .c-tabs {
