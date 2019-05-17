@@ -44,6 +44,16 @@
   }
 }
 
+@mixin header($value: md, $size-only: false) {
+  $line-height: config($font-header, $value, 'line-height');
+  $font-size: config($font-header, $value, 'font-size');
+
+  @include font-size($font-size, $line-height);
+
+  @if $size-only == false {
+    @include f-header;
+  }
+}
 
 // Body family property.
 @mixin f-body {
@@ -60,6 +70,17 @@
 //  Output font-size and line-height only
 //    @include font-body(sm, $size-only: true);
 @mixin font-body($font-size: md, $line-height: md, $size-only: false) {
+  @include font-size($font-size, $line-height);
+
+  @if $size-only == false {
+    @include f-body;
+  }
+}
+
+@mixin body($value: md, $size-only: false) {
+  $line-height: config($font-body, $value, 'line-height');
+  $font-size: config($font-body, $value, 'font-size');
+
   @include font-size($font-size, $line-height);
 
   @if $size-only == false {

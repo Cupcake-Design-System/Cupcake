@@ -60,12 +60,6 @@
   }
 }
 
-@function lh($value: sm) {
-  $fetched-line-height: map-get($line-height, $value);
-
-  @return $fetched-line-height;
-}
-
 
 // Returns the line height for a given range.
 // @example
@@ -94,6 +88,7 @@
     @error 'Font Size `#{value}` not found.';
   }
 }
+
 // Returns the theme value.
 @function global($value: null) {
   $fetched-value: map-get($global-config, $value);

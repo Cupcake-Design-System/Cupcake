@@ -894,7 +894,7 @@ th {
   min-width: 20px;
   padding: 2px 4px;
   height: 20px;
-  line-height: 24px;
+  line-height: 16px;
 }
 
 .c-alert {
@@ -3394,15 +3394,15 @@ textarea.c-input {
   color: #f08c00;
 }
 
-.c-input-danger, .c-input-danger:hover {
+.c-input-danger, .c-input-error, .c-input-danger:hover, .c-input-error:hover {
   border-color: #e03131;
 }
 
-.c-input-danger:focus {
+.c-input-danger:focus, .c-input-error:focus {
   border-color: #1b6ec2;
 }
 
-.c-input-danger ~ .c-input-icon {
+.c-input-danger ~ .c-input-icon, .c-input-error ~ .c-input-icon {
   color: #e03131;
 }
 
@@ -8759,7 +8759,7 @@ table.c-table .c-table-row-cell-draggable:hover {
 
 .c-header-xl {
   font-size: 24px;
-  line-height: 40px;
+  line-height: 32px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }

@@ -77,6 +77,11 @@ textarea.c-input {
   }
 }
 
+// map to danger class for backwards compatibility
+.c-input-error {
+  @extend .c-input-danger;
+}
+
 // Form Input Sizes
 @each $name, $data in $control-sizes {
   $height: map-get($data, height);

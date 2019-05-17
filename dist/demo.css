@@ -255,7 +255,7 @@
   text-transform: capitalize;
   margin-right: 24px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 16px;
 }
 
 .color-block .colors span:last-child {
@@ -403,106 +403,106 @@
 }
 
 .heading-all {
-  font-size: md;
-  line-height: md;
+  font-size: 16px;
+  line-height: 24px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .h1 {
-  font-size: xxl;
-  line-height: md;
+  font-size: 36px;
+  line-height: 40px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .h2 {
-  font-size: xl;
-  line-height: md;
+  font-size: 24px;
+  line-height: 32px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .h3 {
-  font-size: lg;
-  line-height: md;
+  font-size: 20px;
+  line-height: 24px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .h4 {
-  font-size: md;
-  line-height: md;
+  font-size: 16px;
+  line-height: 24px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .h5 {
-  font-size: sm;
-  line-height: md;
+  font-size: 14px;
+  line-height: 24px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .h6 {
-  font-size: xs;
-  line-height: md;
+  font-size: 12px;
+  line-height: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .p-all {
-  font-size: md;
-  line-height: md;
+  font-size: 12px;
+  line-height: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .p1 {
-  font-size: xxl;
-  line-height: md;
+  font-size: 18px;
+  line-height: 24px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .p2 {
-  font-size: xl;
-  line-height: md;
+  font-size: 16px;
+  line-height: 24px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .p3 {
-  font-size: lg;
-  line-height: md;
+  font-size: 14px;
+  line-height: 24px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .p4 {
-  font-size: md;
-  line-height: md;
+  font-size: 12px;
+  line-height: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .p5 {
-  font-size: sm;
-  line-height: md;
+  font-size: 11px;
+  line-height: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .p6 {
-  font-size: xs;
-  line-height: md;
+  font-size: 10px;
+  line-height: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .xl-text {
-  font-size: xl;
-  line-height: md;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .body-heading {
@@ -517,7 +517,7 @@
 
 .functionExample {
   font-size: 24px;
-  line-height: 40px;
+  line-height: 24px;
   font-weight: 900;
 }
 
