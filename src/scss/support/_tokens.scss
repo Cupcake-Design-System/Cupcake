@@ -1,5 +1,20 @@
 @import 'colors';
 
+// Changing $global-px-grid will adapt all space values and $global-sizes.
+$global-px-grid: 8px !default;
+
+// Global sizes are sizes based on our 8px grid - all element
+// Used by avatars, badges, buttons, checkboxes, forms,
+// switches, tabs, nav, media, pagination
+// !CHANGE CAREFULLY!
+$global-size-xs: $global-px-grid * 2 !default; // 16px
+$global-size-sm: $global-px-grid * 3 !default; // 24px
+$global-size-md: $global-px-grid * 4 !default; // 32px
+$global-size-lg: $global-px-grid * 5 !default; // 40px
+$global-size-xl: $global-px-grid * 6 !default; // 48px
+// !CHANGE CAREFULLY!
+
+
 // --------------------------------------------
 // Typography Global --------------------------
 // --------------------------------------------
@@ -45,8 +60,6 @@ $font-weight: map-merge(
 
 // --------------------------------------------
 // Spacing and map for generating helpers
-// Changing only $global-px-grid will adapt all space values.
-$global-px-grid: 8px !default;
 $space-0: 0 !default;
 $space-xxs: $global-px-grid / 4 !default;
 $space-xs: $global-px-grid / 2 !default;
@@ -70,25 +83,6 @@ $space: map-merge(
   $space
 );
 
-// Global sizes and map for generating helpers
-$global-size-xs: $global-px-grid * 2 !default;
-$global-size-sm: $global-px-grid * 3 !default;
-$global-size-md: $global-px-grid * 4 !default;
-$global-size-lg: $global-px-grid * 5 !default;
-$global-size-xl: $global-px-grid * 6 !default;
-
-// This is a looped map & classes will be generated based on key/value pairs i.e. "c-shadow-sm"
-$global-sizes: () !default;
-$global-sizes: map-merge(
-  (
-    'xs': $global-size-xs,
-    'sm': $global-size-sm,
-    'md': $global-size-md,
-    'lg': $global-size-lg,
-    'xl': $global-size-xl,
-  ),
-  $global-sizes
-);
 
 // Radius and map for generating helpers
 $radius-0     : 0 !default;
@@ -160,3 +154,65 @@ $z-index: map-merge(
   $z-index
 );
 
+// --------------------------------------------
+// COLORS -------------------------------------
+// --------------------------------------------
+// Set the BASE theme color palette.
+// This map is looped - adding key/value pairs will generate more classes
+// Used by alerts, avatars, badges, buttons, checkboxes, forms,
+// switches, tooltips, borders, bg and text helpers!
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primary': $color-primary,
+    'success': $color-success,
+    'warning': $color-warning,
+    'danger': $color-danger,
+  ),
+  $theme-colors
+);
+
+// Set the EXTENDED theme color palette.
+// This map is looped - adding key/value pairs will generate more classes
+// Used by avatars, and badges
+$extended-palette: () !default;
+$extended-palette: map-merge(
+  (
+    'dark'  : $color-gray-9,
+    'cyan'  : $color-cyan-9,
+    'blue'  : $color-blue-9,
+    'grape' : $color-grape-9,
+    'indigo': $color-indigo-9,
+    'lime'  : $color-lime-9,
+    'orange': $color-orange-9,
+    'pink'  : $color-pink-9,
+    'teal'  : $color-teal-9,
+    'violet': $color-violet-9,
+  ),
+  $extended-palette
+);
+
+
+// Set the EXTENDED LIGHT theme color palette.
+// This map is looped - adding key/value pairs will generate more classes
+// Used by avatars, and badges
+$extended-palette-light: () !default;
+$extended-palette-light: map-merge(
+  (
+    'secondary'    : $color-gray-1,
+    'primary-light': $color-primary-1,
+    'success-light': $color-success-1,
+    'warning-light': $color-warning-1,
+    'danger-light' : $color-danger-1,
+    'cyan-light'   : $color-cyan-1,
+    'blue-light'   : $color-blue-1,
+    'grape-light'  : $color-grape-1,
+    'indigo-light' : $color-indigo-1,
+    'lime-light'   : $color-lime-1,
+    'orange-light' : $color-orange-1,
+    'pink-light'   : $color-pink-1,
+    'teal-light'   : $color-teal-1,
+    'violet-light' : $color-violet-1,
+  ),
+  $extended-palette-light
+);

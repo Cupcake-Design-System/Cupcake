@@ -1,0 +1,11 @@
+// Toast
+.c-toast-alert {
+  @include toast;
+
+  // Toast Color Loop
+  @each $name, $hex in $theme-colors {
+    &-#{$name} {
+      @include toast-style($hex);
+    }
+  }
+}

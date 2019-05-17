@@ -1,0 +1,65 @@
+// --------------------------------------------
+// Toast Base Mixin ---------------------------
+// --------------------------------------------
+@mixin toast($color: $color-primary) {
+  display: flex;
+  position: relative;
+  align-items: center;
+  color: $toast-color;
+  margin: $toast-margin;
+  word-wrap: break-word;
+  border: $toast-border;
+  padding: $toast-padding;
+  font-family: $toast-font;
+  box-shadow: $toast-shadow;
+  font-size: $toast-font-size;
+  border-radius: $toast-radius;
+  background: $toast-background;
+  font-weight: $toast-font-weight;
+
+  &-icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    color: $toast-icon-color;
+    font-size: $toast-icon-font-size;
+    padding-right: $toast-icon-padding-right;
+  }
+
+  // Alert Bar
+  &::before {
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    background: $toast-left-border-bg;
+    width: $toast-left-border-width;
+    border: $toast-left-border-color;
+    border-radius: $toast-radius;
+  }
+
+  &-close {
+    @include delete($size: $toast-close-size, $color: $toast-close-color);
+
+    margin-left: auto;
+    margin-right: -$space-xs;
+  }
+}
+
+
+// --------------------------------------------
+// Toast Style Mixin --------------------------
+// --------------------------------------------
+@mixin toast-style($color: color(primary)) {
+  .c-toast-alert-icon {
+    color: $color;
+  }
+
+  // Alert Bar
+  &::before {
+    background: $color;
+    border: darken($color, 20);
+  }
+}

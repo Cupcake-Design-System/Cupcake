@@ -15,22 +15,35 @@ $enable-center-classes: true !default;
 $enable-sideNav       : true !default;
 $white-label          : false !default;
 
-$global-font              : $font-family-sans !default;
-$global-text-color        : $color-gray-7 !default;
-$global-text-color-light  : $color-gray-6 !default;
-$global-text-color-dark   : $color-gray-9 !default;
-$global-text-color-lighter: $color-gray-5 !default;
-$global-bg-disabled       : $color-gray-3 !default;
-$global-backdrop-dark     : rgba(0, 0, 0, 0.75) !default;
-$global-radius            : $radius-sm !default;
-$global-border-size       : 1px solid !default;
-$global-border-color      : $color-gray-4 !default;
-$global-border-color-light: $color-gray-2 !default;
-$global-border-color-dark : $color-gray-5 !default;
+// Defining the high-level stuff used throughout
+$global-font                : $font-family-sans !default;
+$global-text-color          : $color-gray-7 !default;
+$global-text-color-light    : $color-gray-6 !default;
+$global-text-color-dark     : $color-gray-9 !default;
+$global-text-color-lighter  : $color-gray-5 !default;
+$global-bg-disabled         : $color-gray-3 !default;
+$global-backdrop-dark       : rgba(0, 0, 0, 0.75) !default;
+$global-radius              : $radius-sm !default;
+$global-border-size         : 1px solid !default;
+$global-border-color        : $color-gray-4 !default;
+$global-border-color-light  : $color-gray-2 !default;
+$global-border-color-dark   : $color-gray-5 !default;
+
+$global-sidebar-width       : 256px !default;
+$global-sidebar-width-folded: 48px !default;
+$global-footer-height       : 48px !default;
+$global-header-height       : 48px !default;
+
+// Only applies if $enable-reset is true
+$body-font-size           : $font-size-4 !default;
+$body-font-color          : $global-text-color-dark !default;
 
 // --------------------------------------------
 // TYPOGRAPHY ---------------------------------
 // --------------------------------------------
+
+// Set the defaults for .c-text-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
 $font-body: () !default;
 $font-body: map-merge(
   (
@@ -63,6 +76,8 @@ $font-body: map-merge(
 );
 
 
+// Set the defaults for .c-header-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
 $font-header: () !default;
 $font-header: map-merge(
   (
@@ -104,9 +119,9 @@ $alert-config: map-merge(
     'font'             : $global-font,
     'radius'           : $global-radius,
     'border'           : $global-border-size,
+    'color'            : $global-text-color-dark,
     'padding'          : $space-sm,
     'shadows'          : $shadow-lg,
-    'color'            : $global-text-color-dark,
     'top-padding'      : $space-md,
     'font-size'        : $font-size-2,
     'margin'           : 0 0 $space-md 0,
@@ -124,10 +139,9 @@ $alert-config: map-merge(
   $alert-config
 );
 
-$toast-font-weight          : $font-weight-bold !default;
-$toast-left-border          : 4px !default;
-
-// for alerts this maps to name, bg-color, text/border color
+// Set the default styles for alerts - .c-alert-{{color}}.
+// This map is looped - adding key/value pairs will generate more classes
+// this maps to name, bg-color, text/border color
 $alert-colors: () !default;
 $alert-colors: map-merge(
   (
@@ -149,6 +163,32 @@ $alert-colors: map-merge(
     ),
   ),
   $alert-colors
+);
+
+
+$toast-config: () !default;
+$toast-config: map-merge(
+  (
+    'margin'            : 0 0 $space-md 0,
+    'border'            : $global-border-size $global-border-color-light,
+    'shadow'            : $shadow-sm,
+    'background'        : $color-white,
+    'color'             : $global-text-color-dark,
+    'font-size'         : $font-size-2,
+    'radius'            : $global-radius,
+    'font'              : $global-font,
+    'font-weight'       : $font-weight-bold,
+    'padding'           : $space-md $space-md $space-md ($space-md + 4px),
+    'icon-color'        : $color-primary,
+    'icon-padding-right': $space-md,
+    'icon-font-size'    : $font-size-2 + 2,
+    'left-border-bg'    : $color-primary,
+    'left-border-width' : 4px,
+    'left-border-color' : darken($color-primary, 20),
+    'close-size'        : 12px,
+    'close-color'       : $color-gray-6,
+  ),
+  $toast-config
 );
 
 // --------------------------------------------
@@ -187,6 +227,9 @@ $action-panel-config: map-merge(
 );
 
 
+// Set the default sizes for action panels - .c-action-panel-lg.
+// This map is looped - adding key/value pairs will generate more classes
+// this maps to name, width
 $action-panel-sizes: () !default;
 $action-panel-sizes: map-merge(
   (
@@ -217,24 +260,26 @@ $avatar-config: map-merge(
 );
 
 
-// for avatar sizes this maps to name, size, font-size
+// Set the default sizes for avatars - .c-avatar-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
+// this maps to name, size, font-size
 $avatar-sizes: () !default;
 $avatar-sizes: map-merge(
   (
     "xs": (
-      "size": map-get($avatar-config, 'default-size') / 2,
+      "size": $global-size-xs,
       "font-size": $font-size-0
     ),
     "sm": (
-      "size": map-get($avatar-config, 'default-size') - 8,
+      "size": $global-size-sm,
       "font-size": $font-size-1
     ),
     "lg": (
-      "size": map-get($avatar-config, 'default-size') + 8,
+      "size": $global-size-lg,
       "font-size": $font-size-3
     ),
     "xl": (
-      "size": (map-get($avatar-config, 'default-size') + 8) * 2,
+      "size": $global-size-lg * 2,
       "font-size": $font-size-2 * 2
     ),
   ),
@@ -251,8 +296,8 @@ $badge-config: map-merge(
     'extend-colors'  : true,
     'font-family'    : $global-font,
     'default-size'   : $global-size-sm,
-    'large-size'     : $global-size-sm + 8,
-    'small-size'     : $global-size-sm - 8,
+    'large-size'     : $global-size-md,
+    'small-size'     : $global-size-xs,
     'padding'        : $space-0 $space-sm,
     'border-radius'  : $radius-round,
     'font-weight'    : $font-weight-semibold,
@@ -297,7 +342,8 @@ $button-config: map-merge(
   $button-config
 );
 
-
+// Set the default sizes for button boxes - .c-btn-box-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
 $btn-box-sizes: () !default;
 $btn-box-sizes: map-merge(
   (
@@ -308,6 +354,8 @@ $btn-box-sizes: map-merge(
   $btn-box-sizes
 );
 
+// Set the default styles for buttons - .c-btn-{{color}}.
+// This map is looped - adding key/value pairs will generate more classes
 $button-colors: () !default;
 $button-colors: map-merge(
   (
@@ -340,6 +388,8 @@ $button-colors: map-merge(
   $button-colors
 );
 
+// Set the default sizes for buttons - .c-btn-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
 $button-sizes: () !default;
 $button-sizes:  map-merge(
   (
@@ -380,9 +430,9 @@ $breadcrumb-config: map-merge(
     'color-active'        : $global-text-color-dark,
     'font-size'           : $font-size-2,
     'font-weight'         : $font-weight-bold,
+    'divider-color'       : $color-gray-3,
     'divider-size'        : 8px,
     'divider-border-width': 2px,
-    'divider-color'       : $color-gray-3,
   ),
   $breadcrumb-config
 );
@@ -424,84 +474,30 @@ $card-config: map-merge(
   $card-config
 );
 
-
-// --------------------------------------------
-// COLORS ------------------------------
-// --------------------------------------------
-$theme-colors: () !default;
-$theme-colors: map-merge(
-  (
-    'primary': $color-primary,
-    'success': $color-success,
-    'warning': $color-warning,
-    'danger': $color-danger,
-  ),
-  $theme-colors
-);
-
-
-$extended-palette: () !default;
-$extended-palette: map-merge(
-  (
-    'dark'  : $color-gray-9,
-    'cyan'  : $color-cyan-9,
-    'blue'  : $color-blue-9,
-    'grape' : $color-grape-9,
-    'indigo': $color-indigo-9,
-    'lime'  : $color-lime-9,
-    'orange': $color-orange-9,
-    'pink'  : $color-pink-9,
-    'teal'  : $color-teal-9,
-    'violet': $color-violet-9,
-  ),
-  $extended-palette
-);
-
-
-$extended-palette-light: () !default;
-$extended-palette-light: map-merge(
-  (
-    'secondary'    : $color-gray-1,
-    'primary-light': $color-primary-1,
-    'success-light': $color-success-1,
-    'warning-light': $color-warning-1,
-    'danger-light' : $color-danger-1,
-    'cyan-light'   : $color-cyan-1,
-    'blue-light'   : $color-blue-1,
-    'grape-light'  : $color-grape-1,
-    'indigo-light' : $color-indigo-1,
-    'lime-light'   : $color-lime-1,
-    'orange-light' : $color-orange-1,
-    'pink-light'   : $color-pink-1,
-    'teal-light'   : $color-teal-1,
-    'violet-light' : $color-violet-1,
-  ),
-  $extended-palette-light
-);
-
-
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
 $checkbox-config: () !default;
 $checkbox-config: map-merge(
   (
-    'radius'              : $global-radius,
-    'bd'                  : $global-border-size $global-border-color-dark,
-    'bg-empty'            : $color-white,
-    'default-size'        : $global-size-xs,
-    'bg-disabled'         : $global-bg-disabled,
-    'label-disabled-color': $global-text-color-lighter,
-    'label-font-size'     : $font-size-2,
-    'label-font-weight'   : $font-weight-normal,
-    'bg-checked'          : $color-primary,
-    'bg-checked-disabled' : $global-text-color-light,
-    'transition'          : background 0.2s,
+    'radius'                : $global-radius,
+    'bd'                    : $global-border-size $global-border-color-dark,
+    'bg-empty'              : $color-white,
+    'default-size'          : $global-size-xs,
+    'bg-disabled'           : $global-bg-disabled,
+    'label-disabled-color'  : $global-text-color-lighter,
+    'label-font-size'       : $font-size-2,
+    'label-font-weight'     : $font-weight-normal,
+    'bg-checked'            : $color-primary,
+    'bg-checked-disabled'   : $global-text-color-light,
+    'transition'            : background 0.2s,
     'checked-color-disabled': $color-gray-2,
   ),
   $checkbox-config
 );
 
+// Set the checkbox sizes for checkboxes - .c-checkbox-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
 $checkbox-sizes: () !default;
 $checkbox-sizes: map-merge(
   (
@@ -588,6 +584,8 @@ $form-config: map-merge(
   $form-config
 );
 
+// Set the default sizes for forms - .c-input-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
 $control-sizes: () !default;
 $control-sizes: map-merge(
   (
@@ -620,7 +618,7 @@ $footer-config: () !default;
 $footer-config: map-merge(
   (
     'font-family'     : $global-font,
-    'height'          : 48px,
+    'height'          : $global-footer-height,
     'border-top'      : $global-border-size $global-border-color-light,
     'font-size'       : $font-size-2,
     'color'           : $global-text-color-dark,
@@ -667,7 +665,7 @@ $header-config: () !default;
 $header-config: map-merge(
   (
     'bg'                       : $color-white,
-    'height'                   : 48px,
+    'height'                   : $global-header-height,
     'inverse-text-color-active': $color-white,
     'bg-hover'                 : rgba(0, 0, 0, 0.03),
     'borders'                  : rgba(0, 0, 0, 0.06),
@@ -725,7 +723,7 @@ $media-config: map-merge(
     'action-color'      : $global-text-color-light,
     'action-font-size'  : $font-size-2,
     'action-line-height': $line-height-xs,
-    'min-height'        : 48px,
+    'min-height'        : $global-size-xl,
   ),
   $media-config
 );
@@ -761,6 +759,8 @@ $modal-config: map-merge(
   $modal-config
 );
 
+// Set the default sizes for modal - .c-modal-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
 $modal-widths: () !default;
 $modal-widths: map-merge(
   (
@@ -802,6 +802,8 @@ $nav-config: map-merge(
 );
 
 
+// Set the default sizes for nav - .c-nav-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
 $nav-sizes: () !default;
 $nav-sizes: map-merge(
   (
@@ -850,8 +852,8 @@ $_sidebar-color       : $color-gray-8;
 $sidebar-config: () !default;
 $sidebar-config: map-merge(
   (
-    'width'                      : 256px,
-    'folded-width'               : 48px,
+    'width'                      : $global-sidebar-width,
+    'width-folded'               : $global-sidebar-width-folded,
     'font-size'                  : $font-size-3,
     'z-index'                    : $z-sidenav,
     'link-padding'               : $space-xs $space-md,
@@ -912,6 +914,8 @@ $switch-config: map-merge(
   $switch-config
 );
 
+// Set the default sizes for switches - .c-switch-lg.
+// This map is looped - adding key/value pairs will generate more classes
 $switch-sizes: () !default;
 $switch-sizes: map-merge(
   (
@@ -963,7 +967,7 @@ $tabs-config: map-merge(
     'color-active'      : $color-primary,
     'color-disabled'    : $global-text-color-light,
     'font-size'         : $font-size-2,
-    'font-weight'       : bold,
+    'font-weight'       : $font-weight-bold,
     'padding'           : $space-sm $space-md,
     'bordered-bg'       : $color-gray-0,
     'hover-transition'  : border-color 0.2s ease 0s,
@@ -974,6 +978,8 @@ $tabs-config: map-merge(
 );
 
 
+// Set the default sizes for tabs - .c-tab-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
 $tabs-sizes: () !default;
 $tabs-sizes: map-merge(
   (
@@ -1028,6 +1034,8 @@ $table-config: map-merge(
   $table-config
 );
 
+// Set the default styles for table states.
+// This map is looped - adding key/value pairs will generate more classes
 $table-states: () !default;
 $table-states: map-merge(
   (

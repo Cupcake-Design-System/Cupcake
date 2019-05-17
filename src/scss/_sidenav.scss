@@ -149,7 +149,7 @@
   .c-sidenav-folded {
     left: 0;
     overflow: visible;
-    width: $sidebar-folded-width;
+    width: $sidebar-width-folded;
 
     .c-sidenav-body {
       width: auto;
@@ -276,7 +276,7 @@
     }
 
     .c-sidenav-collapse {
-      width: $sidebar-folded-width;
+      width: $sidebar-width-folded;
 
       .c-sidenav-menu-icon {
         transform: rotate(180deg);
@@ -323,7 +323,7 @@
       }
 
       .c-wrapper {
-        margin-left: $sidebar-folded-width;
+        margin-left: $sidebar-width-folded;
       }
     }
 

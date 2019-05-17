@@ -572,6 +572,35 @@ $tabs-border-bottom                  : tabs('border-bottom') !default;
 
 
 // --------------------------------------------
+// Toast ------------------------------------
+// --------------------------------------------
+@function toast($value: null) {
+  $fetched-value: map-get($toast-config, $value);
+
+  @return $fetched-value;
+}
+
+$toast-margin             : toast('margin') !default;
+$toast-border             : toast('border') !default;
+$toast-shadow             : toast('shadow') !default;
+$toast-background         : toast('background') !default;
+$toast-color              : toast('color') !default;
+$toast-font-size          : toast('font-size') !default;
+$toast-radius             : toast('radius') !default;
+$toast-font               : toast('font') !default;
+$toast-font-weight        : toast('font-weight') !default;
+$toast-padding            : toast('padding') !default;
+$toast-icon-color         : toast('icon-color') !default;
+$toast-icon-padding-right : toast('icon-padding-right') !default;
+$toast-icon-font-size     : toast('icon-font-size') !default;
+$toast-left-border-bg     : toast('left-border-bg') !default;
+$toast-left-border-width  : toast('left-border-width') !default;
+$toast-left-border-color  : toast('left-border-color') !default;
+$toast-close-size         : toast('close-size') !default;
+$toast-close-color        : toast('close-color') !default;
+
+
+// --------------------------------------------
 // Tooltip ------------------------------------
 // --------------------------------------------
 @function tooltip($value: null) {
@@ -606,7 +635,7 @@ $tooltip-arrow-position              : tooltip('arrow-position') !default;
 }
 
 $sidebar-width                      : sidebar('width') !default;
-$sidebar-folded-width               : sidebar('folded-width') !default;
+$sidebar-width-folded               : sidebar('width-folded') !default;
 $sidebar-font-size                  : sidebar('font-size') !default;
 $sidebar-z-index                    : sidebar('z-index') !default;
 $sidebar-bg                         : sidebar('bg') !default;
