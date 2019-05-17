@@ -3,7 +3,7 @@
   @include badge-base();
 
   .c-avatar { // support avatar in badges
-    @include avatar-size($badge-default-size);
+    @include avatar-size($badge-size);
 
     margin-right: $space-sm;
     margin-left: -($space-sm);
@@ -85,7 +85,7 @@
 }
 
 // Extended Badge color classes
-@if $enable-extend-badge-colors == true {
+@if $enable-extended-badge-colors == true {
   @each $name, $hex in $extended-palette-light {
     .c-badge-#{$name} {
       @include badge-style($hex, $color-gray-9);

@@ -14,7 +14,7 @@
   vertical-align: baseline;
   border-radius: $btn-radius;
   font-weight: $btn-font-weight;
-  font-family: $btn-font-family;
+  font-family: $btn-font;
   transition: background-color 0.1s ease-in;
 
   @if $btn-shadow {
