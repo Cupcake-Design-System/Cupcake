@@ -41,7 +41,6 @@ $body-font-color          : $global-text-color-dark !default;
 // --------------------------------------------
 // TYPOGRAPHY ---------------------------------
 // --------------------------------------------
-
 // Set the defaults for .c-text-{{size}}.
 // This map is looped - adding key/value pairs will generate more classes
 $font-body: () !default;
@@ -205,16 +204,16 @@ $action-panel-sizes: map-merge(
 // --------------------------------------------
 // Avatars ------------------------------------
 // --------------------------------------------
-$enable-extended-avatar-colors       : true !default;
-$avatar-font-family         : $global-font !default;
-$avatar-default-size        : $global-size-md !default;
-$avatar-img-border          : none !default;
-$avatar-line-height         : normal !default;
-$avatar-group-spacing       : $space-xs !default;
-$avatar-border-radius       : $radius-pill !default;
-$avatar-font-size           : $font-size-2 !default;
-$avatar-font-weight         : $font-weight-semibold !default;
-$avatar-group-transition    : 0.35s cubic-bezier(0, 1.22, .66, 1.39) !default;
+$enable-extended-avatar-colors: true !default;
+$avatar-font-family           : $global-font !default;
+$avatar-default-size          : $global-size-md !default;
+$avatar-img-border            : none !default;
+$avatar-line-height           : normal !default;
+$avatar-group-spacing         : $space-xs !default;
+$avatar-border-radius         : $radius-pill !default;
+$avatar-font-size             : $font-size-2 !default;
+$avatar-font-weight           : $font-weight-semibold !default;
+$avatar-group-transition      : 0.35s cubic-bezier(0, 1.22, .66, 1.39) !default;
 
 
 // Set the default sizes for avatars - .c-avatar-{{size}}.
@@ -247,45 +246,45 @@ $avatar-sizes: map-merge(
 // --------------------------------------------
 // Badge --------------------------------------
 // --------------------------------------------
-$enable-extended-badge-colors  : true !default;
-$badge-font    : $global-font !default;
-$badge-size   : $global-size-sm !default;
-$badge-lg-size     : $global-size-md !default;
-$badge-sm-size     : $global-size-xs !default;
-$badge-padding        : $space-0 $space-sm !default;
-$badge-border-radius  : $radius-round !default;
-$badge-font-weight    : $font-weight-semibold !default;
-$badge-line-height    : 2 !default;
-$badge-font-size      : $font-size-1 !default;
-$badge-lg-font-size: $font-size-3 - 1 !default;
-$badge-sm-font-size: $font-size-0 !default;
-$badge-group-spacing  : $space-sm !default;
+$enable-extended-badge-colors: true !default;
+$badge-font                  : $global-font !default;
+$badge-size                  : $global-size-sm !default;
+$badge-lg-size               : $global-size-md !default;
+$badge-sm-size               : $global-size-xs !default;
+$badge-padding               : $space-0 $space-sm !default;
+$badge-border-radius         : $radius-round !default;
+$badge-font-weight           : $font-weight-semibold !default;
+$badge-line-height           : 2 !default;
+$badge-font-size             : $font-size-1 !default;
+$badge-lg-font-size          : $font-size-3 - 1 !default;
+$badge-sm-font-size          : $font-size-0 !default;
+$badge-group-spacing         : $space-sm !default;
 
 
 // --------------------------------------------
 // Buttons ------------------------------------
 // --------------------------------------------
-$enable-btn-gradients    : false !default;
-$enable-btn-border       : true !default;
-$enable-btn-white-label  : false !default;
-$enable-btn-circle       : true !default;
-$enable-btn-outline      : true !default;
-$enable-btn-pill         : false !default;
-$enable-btn-square       : false !default;
-$btn-font  : $global-font !default;
-$btn-radius       : $global-radius !default;
-$btn-disabled-bg  : $global-bg-disabled !default;
-$btn-default-c    : $global-text-color !default;
-$btn-box-width    : $global-size-md !default;
-$btn-link-bd      : $global-border-size $global-border-color !default;
-$btn-disabled-bd  : $global-border-size $global-border-color-light !default;
-$btn-font-weight  : $font-weight-bold !default;
-$btn-bd           : $global-border-size transparent !default;
-$btn-disabled-c   : $global-text-color-light !default;
-$btn-link-hover-bg : $color-gray-0 !default;
-$btn-shadow       : false !default;
-$btn-shadow-focus : 0 0 2px 1px $color-primary-7 !default;
-$btn-active-shadow: none !default;
+$enable-btn-gradients  : false !default;
+$enable-btn-border     : true !default;
+$enable-btn-white-label: false !default;
+$enable-btn-circle     : true !default;
+$enable-btn-outline    : true !default;
+$enable-btn-pill       : false !default;
+$enable-btn-square     : false !default;
+$btn-font              : $global-font !default;
+$btn-radius            : $global-radius !default;
+$btn-disabled-bg       : $global-bg-disabled !default;
+$btn-default-c         : $global-text-color !default;
+$btn-box-width         : $global-size-md !default;
+$btn-link-bd           : $global-border-size $global-border-color !default;
+$btn-disabled-bd       : $global-border-size $global-border-color-light !default;
+$btn-font-weight       : $font-weight-bold !default;
+$btn-bd                : $global-border-size transparent !default;
+$btn-disabled-c        : $global-text-color-light !default;
+$btn-link-hover-bg     : $color-gray-0 !default;
+$btn-shadow            : false !default;
+$btn-shadow-focus      : 0 0 2px 1px $color-primary-7 !default;
+$btn-active-shadow     : none !default;
 
 // Set the default sizes for button boxes - .c-btn-box-{{size}}.
 // This map is looped - adding key/value pairs will generate more classes
@@ -367,8 +366,8 @@ $button-sizes:  map-merge(
 // BREADCRUMBS --------------------------------
 // --------------------------------------------
 $breadcrumb-font-family         : $global-font !default;
-$breadcrumb-margin             : $space-xl !default;
-$breadcrumb-color             : $color-primary-9 !default;
+$breadcrumb-margin              : $space-xl !default;
+$breadcrumb-color               : $color-primary-9 !default;
 $breadcrumb-color-active        : $global-text-color-dark !default;
 $breadcrumb-font-size           : $font-size-2 !default;
 $breadcrumb-font-weight         : $font-weight-bold !default;
@@ -407,6 +406,7 @@ $card-footer-hover-color     : $color-primary-6 !default;
 $card-footer-font-size       : $font-size-2 !default;
 $card-footer-line-weight     : $font-size-4 !default;
 
+
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
@@ -433,6 +433,7 @@ $checkbox-sizes: map-merge(
   ),
   $checkbox-sizes
 );
+
 
 // --------------------------------------------
 // DROPDOWN -----------------------------------
@@ -469,42 +470,42 @@ $link-colors:
 // --------------------------------------------
 // FORMS --------------------------------------
 // --------------------------------------------
-$control-font-family            : $global-font !default;
-$control-background             : $color-white !default;
-$control-height                 : $global-size-md !default;
-$control-border                 : $global-border-size $global-border-color-dark !default;
-$control-border-radius          : $global-radius !default;
-$control-icon-padding           : $space-xl !default;
-$control-disabled-background    : $global-bg-disabled !default;
-$control-font-size              : $font-size-2 !default;
-$control-color                  : $global-text-color-dark !default;
-$control-font-weight            : $font-weight-normal !default;
-$control-line-height            : 1.166667 !default; //line height optimized for IE compatibilit
-$control-placeholder-c          : $global-text-color-lighter !default;
-$control-placeholder-hover-c    : $global-text-color-lighter !default;
-$control-padding                : $space-sm !default;
-$control-shadow                 : inset 0 2px 2px 0 rgba(33, 37, 41, .1) !default;
-$control-focused-shadow         : inset 0 1px 2px 0 rgba(33, 37, 41, 0.08) !default;
-$control-shadow-disabled        : none !default;
-$control-transition             : border-color 0.1s ease-in !default;
-$control-hover                  : $color-primary !default;
-$control-hover-border           : $color-gray-6 !default;
-$control-active                 : $color-primary !default;
-$control-active-border          : $color-primary !default;
-$control-icon-color             : $global-text-color-dark !default;
-$control-disabled-border        : transparent !default;
-$control-hint-color             : $global-text-color-light !default;
-$control-hint-font-size         : 85% !default;
-$control-hint-transition        : all 0.2s ease !default;
-$control-addon-background       : $color-gray-0 !default;
-$control-element-padding        : $space-sm * 2 0 !default;
-$control-element-label-padding  : 0 0 $space-sm 0 !default;
-$select-padding-r       : $space-lg !default;
-$select-bg-img          : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC") !default;
-$select-bg-img-disabled : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAABGdBTUEAALGPC/xhBQAAAK9JREFUOBHlkj0OgzAMRmNxMcTQoVdhZGRoGDp27FU6MCA4WeovUhA/tkNmIlkkwe8Nzuecsd6f7wtltLhK+wmQiDxX3Tyebhp/i9QrChKcAEtyEhzhnGQn0GBLsgpysCaJgquwJKFSOEnwDSH47fmuewwRcTXzrg2HhzhUnPGZs84OqrVG6R5w37U+5qBUkmCI1yRelWzhnQCHnOQInwSWRIJFgSTRYPSaC0+Mspr+0vx1PtB1wpUAAAAASUVORK5CYII = ") !default;
-$select-bg-pos          : no-repeat right 8px center !default;
-$select-box-shadow      : none !default;
-$select-box-shadow-focus: 0 0 1px 2px rgba($color-primary-4, .5) !default;
+$control-font-family          : $global-font !default;
+$control-background           : $color-white !default;
+$control-height               : $global-size-md !default;
+$control-border               : $global-border-size $global-border-color-dark !default;
+$control-border-radius        : $global-radius !default;
+$control-icon-padding         : $space-xl !default;
+$control-disabled-background  : $global-bg-disabled !default;
+$control-font-size            : $font-size-2 !default;
+$control-color                : $global-text-color-dark !default;
+$control-font-weight          : $font-weight-normal !default;
+$control-line-height          : 1.166667 !default; //line height optimized for IE compatibilit
+$control-placeholder-c        : $global-text-color-lighter !default;
+$control-placeholder-hover-c  : $global-text-color-lighter !default;
+$control-padding              : $space-sm !default;
+$control-shadow               : inset 0 2px 2px 0 rgba(33, 37, 41, .1) !default;
+$control-focused-shadow       : inset 0 1px 2px 0 rgba(33, 37, 41, 0.08) !default;
+$control-shadow-disabled      : none !default;
+$control-transition           : border-color 0.1s ease-in !default;
+$control-hover                : $color-primary !default;
+$control-hover-border         : $color-gray-6 !default;
+$control-active               : $color-primary !default;
+$control-active-border        : $color-primary !default;
+$control-icon-color           : $global-text-color-dark !default;
+$control-disabled-border      : transparent !default;
+$control-hint-color           : $global-text-color-light !default;
+$control-hint-font-size       : 85% !default;
+$control-hint-transition      : all 0.2s ease !default;
+$control-addon-background     : $color-gray-0 !default;
+$control-element-padding      : $space-sm * 2 0 !default;
+$control-element-label-padding: 0 0 $space-sm 0 !default;
+$select-padding-r             : $space-lg !default;
+$select-bg-img                : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC") !default;
+$select-bg-img-disabled       : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAABGdBTUEAALGPC/xhBQAAAK9JREFUOBHlkj0OgzAMRmNxMcTQoVdhZGRoGDp27FU6MCA4WeovUhA/tkNmIlkkwe8Nzuecsd6f7wtltLhK+wmQiDxX3Tyebhp/i9QrChKcAEtyEhzhnGQn0GBLsgpysCaJgquwJKFSOEnwDSH47fmuewwRcTXzrg2HhzhUnPGZs84OqrVG6R5w37U+5qBUkmCI1yRelWzhnQCHnOQInwSWRIJFgSTRYPSaC0+Mspr+0vx1PtB1wpUAAAAASUVORK5CYII = ") !default;
+$select-bg-pos                : no-repeat right 8px center !default;
+$select-box-shadow            : none !default;
+$select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
 
 // Set the default sizes for forms - .c-input-{{size}}.
 // This map is looped - adding key/value pairs will generate more classes
@@ -595,17 +596,18 @@ $header-inverse-borders          : rgba(255, 255, 255, 0.1) !default;
 // --------------------------------------------
 // Loaders ------------------------------------
 // --------------------------------------------
-$skeleton-bar-height   : $global-size-xs / 2 !default;
-$skeleton-bar          : linear-gradient(140deg, rgba(white, 0), rgba(white, .6) 50%, rgba(white, 0) 100%) !default;
-$skeleton-bar-animation: skeletonIteration 2s infinite !default;
-$skeleton-bg-color     : $color-gray-3 !default;
-$loader-size                  : $global-size-md !default;
-$loader-color                 : $color-primary !default;
-$loader-bg-color              : $color-gray-3 !default;
-$loader-full-page-size        : 48px !default;
-$loader-border-size           : 4px !default;
-$loader-full-page-border-size : 6px !default;
-$loader-animation-duration    : .71s !default;
+$skeleton-bar-height         : $global-size-xs / 2 !default;
+$skeleton-bar                : linear-gradient(140deg, rgba(white, 0), rgba(white, .6) 50%, rgba(white, 0) 100%) !default;
+$skeleton-bar-animation      : skeletonIteration 2s infinite !default;
+$skeleton-bg-color           : $color-gray-3 !default;
+$loader-size                 : $global-size-md !default;
+$loader-color                : $color-primary !default;
+$loader-bg-color             : $color-gray-3 !default;
+$loader-full-page-size       : 48px !default;
+$loader-border-size          : 4px !default;
+$loader-full-page-border-size: 6px !default;
+$loader-animation-duration   : .71s !default;
+
 
 // --------------------------------------------
 // Media Object -------------------------------
@@ -624,6 +626,7 @@ $media-action-color      : $global-text-color-light !default;
 $media-action-font-size  : $font-size-2 !default;
 $media-action-line-height: $line-height-xs !default;
 $media-min-height        : $global-size-xl !default;
+
 
 // --------------------------------------------
 // MODALS -------------------------------------
@@ -720,15 +723,11 @@ $notification-read-border : $global-border-size $global-border-color-light !defa
 // --------------------------------------------
 // Sidebar ------------------------------------
 // --------------------------------------------
-
-// Variable shortcuts to avoid repetition
-$_sidebar-bg          : $color-white;
-$_sidebar-border      : $global-border-size $global-border-color-light;
-$_sidebar-bg-hover    : $color-primary-0;
-$_sidebar-color-active: $color-primary-8;
-$_sidebar-color       : $color-gray-8;
-
-$sidebar-width                     : $global-sidebar-width !default;
+$sidebar-bg                         : $color-white !default;
+$sidebar-bg-hover                   : $color-primary-0 !default;
+$sidebar-color                      : $color-gray-8 !default;
+$sidebar-border                     : $global-border-size $global-border-color-light !default;
+$sidebar-width                      : $global-sidebar-width !default;
 $sidebar-width-folded               : $global-sidebar-width-folded !default;
 $sidebar-font-size                  : $font-size-3 !default;
 $sidebar-z-index                    : $z-sidenav !default;
@@ -741,27 +740,24 @@ $sidebar-category-padding           : $space-sm $space-md !default;
 $sidebar-submenu-link-padding-left  : 48px !default;
 $sidebar-submenu-level3-padding-left: 64px !default;
 $sidebar-submenu-level4-padding-left: 80px !default;
-$sidebar-bg                         : $_sidebar-bg !default;
-$sidebar-bg-hover                   : $_sidebar-bg-hover !default;
-$sidebar-border                     : $_sidebar-border !default;
-$sidebar-submenu-bg                 : $_sidebar-bg !default;
-$sidebar-color                      : $_sidebar-color !default;
-$sidebar-color-active               : $_sidebar-color-active !default;
-$sidebar-link-color                 : $_sidebar-color !default;
-$sidebar-link-hover-color           : $_sidebar-color !default;
-$sidebar-link-active-color          : $_sidebar-color !default;
-$sidebar-link-open-color            : $_sidebar-color !default;
+
+$sidebar-submenu-bg                 : $sidebar-bg !default;
+$sidebar-color-active               : $color-primary-8 !default;
+$sidebar-link-color                 : $sidebar-color !default;
+$sidebar-link-hover-color           : $sidebar-color !default;
+$sidebar-link-active-color          : $sidebar-color !default;
+$sidebar-link-open-color            : $sidebar-color !default;
 $sidebar-divider-color              : $color-gray-1 !default;
-$sidebar-link-hover-bg              : $_sidebar-bg-hover !default;
-$sidebar-link-active-bg             : $_sidebar-bg-hover !default;
-$sidebar-link-open-bg               : $_sidebar-bg-hover !default;
+$sidebar-link-hover-bg              : $sidebar-bg-hover !default;
+$sidebar-link-active-bg             : $sidebar-bg-hover !default;
+$sidebar-link-open-bg               : $sidebar-bg-hover !default;
 $sidebar-icon-color                 : $global-text-color-lighter !default;
-$sidebar-icon-color-active          : $_sidebar-color-active !default;
+$sidebar-icon-color-active          : $sidebar-color-active !default;
 $sidebar-category-color             : $global-text-color-light !default;
 $sidebar-collapse-bg                : $color-gray-0 !default;
 $sidebar-collapse-bg-hover          : $color-gray-1 !default;
 $sidebar-collapse-bd                : $color-gray-2 !default;
-$sidebar-submenu-link-active-color  : $_sidebar-color-active !default;
+$sidebar-submenu-link-active-color  : $sidebar-color-active !default;
 
 
 // --------------------------------------------
@@ -791,6 +787,7 @@ $switch-sizes: map-merge(
   ),
   $switch-sizes
 );
+
 
 // --------------------------------------------
 // TOAST --------------------------------------
@@ -833,6 +830,7 @@ $tooltip-transition-style: cubic-bezier(0.73, 0.01, 0, 1) !default;
 $tooltip-border-width    : 4px !default;
 $tooltip-arrow-position  : 6px !default;
 
+
 // --------------------------------------------
 // TABS ---------------------------------------
 // --------------------------------------------
@@ -874,6 +872,7 @@ $tabs-sizes: map-merge(
   ),
   $tabs-sizes
 );
+
 
 // --------------------------------------------
 // TABLES -------------------------------------
