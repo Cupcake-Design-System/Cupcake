@@ -1,6 +1,6 @@
 // stylelint-disable
 @import '../node_modules/sass-true/sass/true';
-@import '../src/scss/support/support';
+@import '../src/scss/cupcake';
 
 
 @include describe('Test output for radio mixins') {
@@ -37,7 +37,7 @@
           position: absolute;
           width: 16px;
           height: 16px;
-          border-radius: 200px;
+          border-radius: 50px;
         }
 
         .c-radio input:checked + label::after,
@@ -50,7 +50,7 @@
           width: 8px;
           height: 8px;
           display: table;
-          border-radius: 200px;
+          border-radius: 50px;
           background-color: #ffffff;
         }
 
@@ -95,7 +95,7 @@
           height: 16px;
           background: #ffffff;
           transition: background 0.2s;
-          border-radius: 50px;
+          border-radius: 200px;
         }
 
         .c-radio label:empty::before {

@@ -94,7 +94,7 @@
 // TABS BORDERED
 .c-tabs-bordered {
   background-color: $tabs-bordered-bg;
-  border: 1px solid $tabs-border-color;
+  border: $tabs-border;
   border-radius: $tabs-bordered-radius;
   border-bottom: 0;
 
@@ -106,13 +106,13 @@
       transition: none;
       height: $tabs-height;
       border-bottom: 1px solid $color-white;
-      border-right: 1px solid $tabs-border-color;
+      border-right: $tabs-border;
 
       &:hover:not(.c-tab-item-link-disabled) {
         box-shadow: none;
         color: $tabs-color-hover;
         background: $tabs-bordered-bg-hover;
-        border-bottom: 2px solid $tabs-border-color;
+        border-bottom: 2px solid $color-gray-2;
       }
 
       &-active {
@@ -121,7 +121,7 @@
         background: $tabs-bordered-bg-active;
 
         &:hover {
-          border-bottom: 1px solid $tabs-border-color !important;
+          border-bottom: $tabs-border !important;
         }
       }
     }
@@ -129,7 +129,7 @@
 
   &.c-tabs-right {
     .c-tab-item-link {
-      border-left: 1px solid $tabs-border-color;
+      border-left: $tabs-border;
     }
 
     .c-tab-item-link:last-child {
@@ -141,7 +141,7 @@
 
   &.c-tabs-center {
     .c-tab-item-link:first-child {
-      border-left: 1px solid $tabs-border-color;
+      border-left: $tabs-border;
     }
 
     .c-tab-item-link:last-child {
@@ -153,33 +153,24 @@
 }
 
 
-// TABS SMALL
-.c-tabs-sm {
-  height: $tabs-height-small;
+// All default size classes
+@each $name, $data in $tabs-sizes {
+  $height: map-get($data, height);
+  $font-size: map-get($data, font-size);
+  $line-height: map-get($data, line-height);
+  $padding: map-get($data, padding);
 
-  .c-tab-item-link {
-    height: $tabs-height-small;
-    font-size: $tabs-font-size-small;
-    padding: $tabs-padding-small;
-  }
+  .c-tabs-#{$name} {
+    height: $height;
 
-  &.c-tabs-bordered .c-tab-item {
-    height: $tabs-height-small;
-  }
-}
+    .c-tab-item-link {
+      height: $height;
+      font-size: $font-size;
+      padding: $padding;
+    }
 
-
-// TABS LARGE
-.c-tabs-lg {
-  height: $tabs-height-large;
-
-  .c-tab-item-link {
-    height: $tabs-height-large;
-    font-size: $tabs-font-size-large;
-    line-height: $tabs-line-height-large;
-  }
-
-  &.c-tabs-bordered .c-tab-item {
-    height: $tabs-height-large;
+    &.c-tabs-bordered .c-tab-item {
+      height: $height;
+    }
   }
 }

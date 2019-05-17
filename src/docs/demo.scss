@@ -41,7 +41,7 @@ $docs-spacer-xxl: space(xl) + space(md);
     width: 96px;
     color: $text;
     letter-spacing: 1px;
-    font-size: $font-body-xs;
+    font-size: $font-size-0;
     text-transform: uppercase;
     border-radius: $radius-sm;
     background-color: white;
@@ -50,7 +50,7 @@ $docs-spacer-xxl: space(xl) + space(md);
     font-weight: $font-weight-bold;
     font-family: $font-family-sans;
     border: 1px solid $color-gray-1;
-    line-height: $line-height-body-xxl;
+    line-height: $line-height-sm;
   }
 
   &-section {
@@ -127,13 +127,13 @@ $docs-spacer-xxl: space(xl) + space(md);
   &-title {
     letter-spacing: 1px;
     color: $color-gray-5;
-    font-size: $font-body-xs;
+    font-size: $font-size-0;
     text-transform: uppercase;
     padding: 0 $docs-spacer-sm;
     margin-top: $docs-spacer-lg;
     font-family: $font-family-sans;
     margin-bottom: $docs-spacer-md;
-    line-height: $line-height-body-xs;
+    line-height: $line-height-xs;
 
     a {
       text-decoration: none;
@@ -151,7 +151,7 @@ $docs-spacer-xxl: space(xl) + space(md);
 
   &-item {
     color: $text;
-    font-size: $font-body-lg;
+    font-size: $font-size-3;
     font-family: $font-family-sans;
 
     a {
@@ -159,7 +159,7 @@ $docs-spacer-xxl: space(xl) + space(md);
       display: block;
       text-decoration: none;
       padding: 0 $docs-spacer-sm;
-      line-height: $line-height-header-xxl;
+      line-height: $line-height-lg;
 
       &:hover {
         border-radius: radius(md);
@@ -187,7 +187,7 @@ $docs-spacer-xxl: space(xl) + space(md);
   &-block-title {
     color: $text;
     line-height: 20px;
-    font-size: $font-body-md;
+    font-size: $font-size-2;
     font-weight: $font-weight-bold;
   }
 
@@ -228,7 +228,7 @@ $docs-spacer-xxl: space(xl) + space(md);
   &-title {
     color: $text;
     line-height: 20px;
-    font-size: $font-body-md;
+    font-size: $font-size-2;
     text-transform: capitalize;
     font-weight: $font-weight-bold;
   }
@@ -242,13 +242,13 @@ $docs-spacer-xxl: space(xl) + space(md);
       flex: 1;
       display: block;
       color: #ffffff;
-      font-size: $font-body-sm;
+      font-size: $font-size-1;
       padding: $docs-spacer-sm;
       border-radius: $radius-sm;
       text-transform: capitalize;
       margin-right: $docs-spacer-lg;
       font-weight: $font-weight-bold;
-      line-height: $line-height-body-sm;
+      line-height: $line-height-xs;
 
       &:last-child {
         margin-right: 0;
@@ -409,65 +409,65 @@ $docs-spacer-xxl: space(xl) + space(md);
 
 
 .heading-all {
-  @include font-header();
+  @include header();
 }
 
 .h1 {
-  @include font-header(xxl);
+  @include header(xxl);
 }
 
 .h2 {
-  @include font-header(xl);
+  @include header(xl);
 }
 
 .h3 {
-  @include font-header(lg);
+  @include header(lg);
 }
 
 .h4 {
-  @include font-header(md);
+  @include header(md);
 }
 
 .h5 {
-  @include font-header(sm);
+  @include header(sm);
 }
 
 .h6 {
-  @include font-header(xs);
+  @include header(xs);
 }
 
 .p-all {
-  @include font-body();
+  @include body();
 }
 
 .p1 {
-  @include font-body(xxl);
+  @include body(xxl);
 }
 
 .p2 {
-  @include font-body(xl);
+  @include body(xl);
 }
 
 .p3 {
-  @include font-body(lg);
+  @include body(lg);
 }
 
 .p4 {
-  @include font-body(md);
+  @include body(md);
 }
 
 .p5 {
-  @include font-body(sm);
+  @include body(sm);
 }
 
 .p6 {
-  @include font-body(xs);
+  @include body(xs);
 }
 
 
 .xl-text {
   // Output font-size and line-height only
-  @include font-body(xl, $size-only: true);
+  @include body(xl, $size-only: true);
 }
 
 .body-heading {
@@ -482,7 +482,7 @@ $docs-spacer-xxl: space(xl) + space(md);
 
 .functionExample {
   font-size: font-size(header, xl);
-  line-height: line-height(header, xl);
+  line-height: line-height(header, sm);
   font-weight: font-weight(heavy);
 }
 

@@ -12,7 +12,7 @@
   z-index: $z-overlay;
   visibility: $visibility;
   justify-content: center;
-  background-color: $modal-backdrop-bg-color;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 

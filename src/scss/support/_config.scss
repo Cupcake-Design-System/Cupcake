@@ -1,350 +1,608 @@
 // --------------------------------------------
 // GLOBAL BOOLEANS & SETTINGS -----------------
 // --------------------------------------------
-$enable-reset                        : true !default;
-$enable-shadow-classes               : true !default;
-$enable-color-classes                : true !default;
-$enable-spacer-classes               : true !default;
-$enable-border-classes               : true !default;
-$enable-radius-classes               : true !default;
-$enable-float-classes                : true !default;
-$enable-flex-classes                 : true !default;
-$enable-hidden-classes               : true !default;
-$enable-cursor-classes               : true !default;
-$enable-center-classes               : true !default;
-$enable-sideNav                      : true !default;
-$white-label                         : false !default;
+$enable-reset         : true !default;
+$enable-shadow-classes: true !default;
+$enable-color-classes : true !default;
+$enable-spacer-classes: true !default;
+$enable-border-classes: true !default;
+$enable-radius-classes: true !default;
+$enable-float-classes : true !default;
+$enable-flex-classes  : true !default;
+$enable-hidden-classes: true !default;
+$enable-cursor-classes: true !default;
+$enable-center-classes: true !default;
+$enable-sideNav       : true !default;
+$white-label          : false !default;
 
-$global-default-border               : 1px solid $color-gray-4 !default;
-$global-default-radius               : $radius-sm !default;
-$global-disabled-bg                  : $color-gray-3 !default;
-$global-text-color                   : $color-gray-7 !default;
-$global-backdrop-dark                : rgba(0, 0, 0, 0.75) !default;
+// Defining the high-level stuff used throughout
+$global-font                : $font-family-sans !default;
+$global-text-color          : $color-gray-7 !default;
+$global-text-color-light    : $color-gray-6 !default;
+$global-text-color-dark     : $color-gray-9 !default;
+$global-text-color-lighter  : $color-gray-5 !default;
+$global-bg-disabled         : $color-gray-3 !default;
+$global-backdrop-dark       : rgba(0, 0, 0, 0.75) !default;
+$global-radius              : $radius-sm !default;
+$global-border-size         : 1px solid !default;
+$global-border-color        : $color-gray-4 !default;
+$global-border-color-light  : $color-gray-2 !default;
+$global-border-color-dark   : $color-gray-5 !default;
+
+$global-sidebar-width       : 256px !default;
+$global-sidebar-width-folded: 48px !default;
+$global-footer-height       : 48px !default;
+$global-header-height       : 48px !default;
+
+// Only applies if $enable-reset is true
+$body-font-size           : $font-size-4 !default;
+$body-font-color          : $global-text-color-dark !default;
+
+// --------------------------------------------
+// TYPOGRAPHY ---------------------------------
+// --------------------------------------------
+
+// Set the defaults for .c-text-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
+$font-body: () !default;
+$font-body: map-merge(
+  (
+    "xs": (
+      "font-size": $font-size-0,
+      "line-height": $line-height-xs
+    ),
+    "sm": (
+      "font-size": $font-size-1,
+      "line-height": $line-height-xs
+    ),
+    "md": (
+      "font-size": $font-size-2,
+      "line-height": $line-height-xs
+    ),
+    "lg": (
+      "font-size": $font-size-3,
+      "line-height": $line-height-sm
+    ),
+    "xl": (
+      "font-size": $font-size-4,
+      "line-height": $line-height-sm
+    ),
+    "xxl": (
+      "font-size": $font-size-5,
+      "line-height": $line-height-sm
+    ),
+  ),
+  $font-body
+);
+
+
+// Set the defaults for .c-header-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
+$font-header: () !default;
+$font-header: map-merge(
+  (
+    "xs": (
+      "font-size": $font-size-2,
+      "line-height": $line-height-xs
+    ),
+    "sm": (
+      "font-size": $font-size-3,
+      "line-height": $line-height-sm
+    ),
+    "md": (
+      "font-size": $font-size-4,
+      "line-height": $line-height-sm
+    ),
+    "lg": (
+      "font-size": $font-size-6,
+      "line-height": $line-height-sm
+    ),
+    "xl": (
+      "font-size": $font-size-7,
+      "line-height": $line-height-md
+    ),
+    "xxl": (
+      "font-size": $font-size-8,
+      "line-height": $line-height-lg
+    ),
+  ),
+  $font-header
+);
+
 
 // --------------------------------------------
 // ALERTS & TOASTS ----------------------------
 // --------------------------------------------
-$alert-border               : 1px solid !default;
-$alert-margin               : 0 0 $space-md 0 !default;
-$alert-padding              : $space-sm !default;
-$alert-top-padding          : $space-md !default;
-$alert-font-size            : $font-body-md !default;
-$alert-line-height          : $line-height-body-sm !default;
-$alert-font-family          : $font-family-sans !default;
-$alert-font-weight          : $font-weight-normal !default;
-$alert-title-font-size      : $font-body-md !default;
-$alert-title-line-height    : $line-height-body-lg - 5 !default;
-$alert-title-font-weight    : $font-weight-bold !default;
-$alert-primary-bg           : rgba($color-primary, .07) !default;
-$alert-default-color        : $color-gray-9 !default;
-$alert-primary-icon-color   : $color-primary !default;
-$alert-radius               : $global-default-radius !default;
-$alert-shadows              : $shadow-lg !default;
-$alert-icon-width           : $font-body-md !default;
-$alert-top-icon-size        : $font-body-xl !default;
-$alert-close-font-size      : $font-body-md !default;
-$toast-font-weight          : $font-weight-bold !default;
-$toast-palette              : $theme-colors !default;
-$toast-left-border          : 4px !default;
+$alert-config: () !default;
+$alert-config: map-merge(
+  (
+    'font'             : $global-font,
+    'radius'           : $global-radius,
+    'border'           : $global-border-size,
+    'color'            : $global-text-color-dark,
+    'padding'          : $space-sm,
+    'shadows'          : $shadow-lg,
+    'top-padding'      : $space-md,
+    'font-size'        : $font-size-2,
+    'margin'           : 0 0 $space-md 0,
+    'icon-font-size'   : $font-size-2,
+    'icon-color'       : $color-primary,
+    'top-icon-size'    : $font-size-4,
+    'line-height'      : $line-height-xs,
+    'close-font-size'  : $font-size-2,
+    'title-font-size'  : $font-size-2,
+    'font-weight'      : $font-weight-normal,
+    'title-font-weight': $font-weight-bold,
+    'background'       : rgba($color-primary, .07),
+    'title-line-height': $line-height-sm - 5,
+  ),
+  $alert-config
+);
 
-// for alerts this maps to name, bg-color, text/border color
-$alert-colors:
-  (primary, $color-primary-0, $color-primary)
-  (success, $color-success-0, $color-success)
-  (warning, $color-warning-0, $color-warning)
-  (danger, $color-danger-0, $color-danger) !default;
+// Set the default styles for alerts - .c-alert-{{color}}.
+// This map is looped - adding key/value pairs will generate more classes
+// this maps to name, bg-color, text/border color
+$alert-colors: () !default;
+$alert-colors: map-merge(
+  (
+    "primary": (
+      "color": $color-primary,
+      "bg": $color-primary-0
+    ),
+    "success": (
+      "color": $color-success,
+      "bg": $color-success-0
+    ),
+    "warning": (
+      "color": $color-warning,
+      "bg": $color-warning-0
+    ),
+    "danger": (
+      "color": $color-danger,
+      "bg": $color-danger-0
+    ),
+  ),
+  $alert-colors
+);
 
+
+$toast-config: () !default;
+$toast-config: map-merge(
+  (
+    'margin'            : 0 0 $space-md 0,
+    'border'            : $global-border-size $global-border-color-light,
+    'shadow'            : $shadow-sm,
+    'background'        : $color-white,
+    'color'             : $global-text-color-dark,
+    'font-size'         : $font-size-2,
+    'radius'            : $global-radius,
+    'font'              : $global-font,
+    'font-weight'       : $font-weight-bold,
+    'padding'           : $space-md $space-md $space-md ($space-md + 4px),
+    'icon-color'        : $color-primary,
+    'icon-padding-right': $space-md,
+    'icon-font-size'    : $font-size-2 + 2,
+    'left-border-bg'    : $color-primary,
+    'left-border-width' : 4px,
+    'left-border-color' : darken($color-primary, 20),
+    'close-size'        : 12px,
+    'close-color'       : $color-gray-6,
+  ),
+  $toast-config
+);
 
 // --------------------------------------------
 // Action Panel -------------------------------
 // --------------------------------------------
-$action-panel-padding-v              : $space-md - $space-xs !default;
-$action-panel-padding-h              : $space-md !default;
-$action-panel-header-font-size       : $font-body-lg !default;
-$action-panel-header-font-weight     : $font-weight-bold !default;
-$action-panel-header-line-height     : $line-height-body-lg !default;
-$action-panel-header-color           : $color-gray-9 !default;
-$action-panel-header-icon-color      : $color-gray-5 !default;
-$action-panel-header-icon-hover-color: lighten($action-panel-header-icon-color, 10%) !default;
-$action-panel-title-font-size        : $font-body-xl !default;
-$action-panel-title-font-weight      : $font-weight-bold !default;
-$action-panel-subtitle-line-height   : $font-body-md !default;
-$action-panel-subtitle-font-size     : $font-body-md !default;
-$action-panel-header-bg              : $color-white !default;
-$action-panel-footer-bg              : $color-white !default;
-$action-panel-footer-color           : $color-primary-8 !default;
-$action-panel-footer-hover-color     : $color-primary-6 !default;
-$action-panel-footer-font-size       : $font-body-md !default;
-$action-panel-footer-line-weight     : $font-body-xl !default;
-$action-panel-border                 : 1px solid $color-gray-2 !default;
-$action-panel-zindex                 : $z-action-panel !default;
-$action-panel-width-sm               : 220px !default;
-$action-panel-width                  : 320px !default;
-$action-panel-width-lg               : 400px !default;
-$action-panel-bg                     : $color-gray-0 !default;
-$action-panel-transition             : 0.3s ease !default;
-$action-panel-shadow                 : $shadow-lg !default;
-$action-panel-backdrop               : $global-backdrop-dark !default;
+$action-panel-config: () !default;
+$action-panel-config: map-merge(
+  (
+    'header-bg'              : $color-white,
+    'footer-bg'              : $color-white,
+    'backdrop'               : $global-backdrop-dark,
+    'border'                 : $global-border-size $global-border-color-light,
+    'padding-v'              : $space-md - $space-xs,
+    'padding-h'              : $space-md,
+    'header-font-size'       : $font-size-3,
+    'header-font-weight'     : $font-weight-bold,
+    'header-line-height'     : $line-height-sm,
+    'header-color'           : $global-text-color-dark,
+    'header-icon-color'      : $global-text-color-lighter,
+    'header-icon-hover-color': lighten($global-text-color-lighter, 10%),
+    'title-font-size'        : $font-size-4,
+    'title-font-weight'      : $font-weight-bold,
+    'subtitle-line-height'   : $font-size-2,
+    'subtitle-font-size'     : $font-size-2,
+    'footer-color'           : $color-primary-8,
+    'footer-hover-color'     : $color-primary-6,
+    'footer-font-size'       : $font-size-2,
+    'footer-line-weight'     : $font-size-4,
+    'zindex'                 : $z-action-panel,
+    'width'                  : 320px,
+    'bg'                     : $color-gray-0,
+    'transition'             : 0.3s ease,
+    'shadow'                 : $shadow-lg,
+  ),
+  $action-panel-config
+);
 
-$action-panel-sizes: (
-  lg: 400px
-) !default;
+
+// Set the default sizes for action panels - .c-action-panel-lg.
+// This map is looped - adding key/value pairs will generate more classes
+// this maps to name, width
+$action-panel-sizes: () !default;
+$action-panel-sizes: map-merge(
+  (
+    lg: 400px
+  ),
+  $action-panel-sizes
+);
 
 
 // --------------------------------------------
 // Avatars ------------------------------------
 // --------------------------------------------
-$enable-extend-avatar-colors: true !default;
-$avatar-default-size        : $global-size-md !default;
-$avatar-border-radius       : $radius-round !default;
-$avatar-font-weight         : $font-weight-semibold !default;
-$avatar-font-size           : $font-body-md !default;
-$avatar-font-family         : $font-family-sans !default;
-$avatar-line-height         : normal !default;
-$avatar-img-border          : none !default;
-$avatar-group-spacing       : $space-xs !default;
-$avatar-group-transition    : 0.35s cubic-bezier(0, 1.22, .66, 1.39) !default;
-$avatar-palette             : $theme-colors !default;
+$avatar-config: () !default;
+$avatar-config: map-merge(
+  (
+    'extend-colors'       : true,
+    'font-family'         : $global-font,
+    'default-size'        : $global-size-md,
+    'img-border'          : none,
+    'line-height'         : normal,
+    'group-spacing'       : $space-xs,
+    'border-radius'       : $radius-pill,
+    'font-size'           : $font-size-2,
+    'font-weight'         : $font-weight-semibold,
+    'group-transition'    : 0.35s cubic-bezier(0, 1.22, .66, 1.39),
+  ),
+  $avatar-config
+);
 
-// for avatar sizes this maps to name, size, font-size
-$avatar-sizes:
-  (xs, $avatar-default-size / 2, $font-body-xs)
-  (sm, $avatar-default-size - 8, $font-body-sm)
-  (lg, $avatar-default-size + 8, $font-body-lg)
-  (xl, ($avatar-default-size + 8) * 2, $font-body-md * 2) !default;
+
+// Set the default sizes for avatars - .c-avatar-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
+// this maps to name, size, font-size
+$avatar-sizes: () !default;
+$avatar-sizes: map-merge(
+  (
+    "xs": (
+      "size": $global-size-xs,
+      "font-size": $font-size-0
+    ),
+    "sm": (
+      "size": $global-size-sm,
+      "font-size": $font-size-1
+    ),
+    "lg": (
+      "size": $global-size-lg,
+      "font-size": $font-size-3
+    ),
+    "xl": (
+      "size": $global-size-lg * 2,
+      "font-size": $font-size-2 * 2
+    ),
+  ),
+  $avatar-sizes
+);
 
 
 // --------------------------------------------
 // Badge --------------------------------------
 // --------------------------------------------
-$enable-extend-badge-colors : true !default;
-$badge-font-family          : $font-family-sans !default;
-$badge-default-size         : $global-size-sm !default;
-$badge-default-padding      : $space-0 $space-sm !default;
-$badge-default-border-radius: $radius-round !default;
-$badge-default-font-weight  : $font-weight-semibold !default;
-$badge-default-line-height  : 2 !default;
-$badge-default-font-size    : $font-body-sm !default;
-$badge-lg-size              : $badge-default-size + 8 !default;
-$badge-lg-font-size         : $font-body-lg - 1 !default;
-$badge-sm-size              : $badge-default-size - 8 !default;
-$badge-sm-font-size         : $font-body-xs !default;
-$badge-group-spacing        : $space-sm !default;
-$badge-palette: (
-  primary: $color-primary-8,
-  success: $color-success-9,
-  warning: $color-warning-9,
-  danger: $color-danger-9,
+$badge-config: () !default;
+$badge-config: map-merge(
+  (
+    'extend-colors'  : true,
+    'font-family'    : $global-font,
+    'default-size'   : $global-size-sm,
+    'large-size'     : $global-size-md,
+    'small-size'     : $global-size-xs,
+    'padding'        : $space-0 $space-sm,
+    'border-radius'  : $radius-round,
+    'font-weight'    : $font-weight-semibold,
+    'line-height'    : 2,
+    'font-size'      : $font-size-1,
+    'large-font-size': $font-size-3 - 1,
+    'small-font-size': $font-size-0,
+    'group-spacing'  : $space-sm,
+  ),
+  $badge-config
 );
+
 
 // --------------------------------------------
 // Buttons ------------------------------------
 // --------------------------------------------
-$enable-btn-gradients   : false !default;
-$enable-btn-border      : true !default;
-$enable-btn-white-label : false !default;
-$enable-circle-buttons  : true !default;
-$enable-outline-buttons : true !default;
-$enable-pill-buttons    : false !default;
-$enable-square-buttons  : false !default;
+$button-config: () !default;
+$button-config: map-merge(
+  (
+    'gradients'    : false,
+    'border'       : true,
+    'white-label'  : false,
+    'circle'       : true,
+    'outline'      : true,
+    'pill'         : false,
+    'square'       : false,
+    'font-family'  : $global-font,
+    'radius'       : $global-radius,
+    'disabled-bg'  : $global-bg-disabled,
+    'default-c'    : $global-text-color,
+    'box-width'    : $global-size-md,
+    'link-bd'      : $global-border-size $global-border-color,
+    'disabled-bd'  : $global-border-size $global-border-color-light,
+    'font-weight'  : $font-weight-bold,
+    'bd'           : $global-border-size transparent,
+    'disabled-c'   : $global-text-color-light,
+    'link-hover-bg': $color-gray-0,
+    'shadow'       : false,
+    'shadow-focus' : 0 0 2px 1px $color-primary-7,
+    'active-shadow': none,
+  ),
+  $button-config
+);
 
-$btn-font-family        : $font-family-sans !default;
-$btn-font-weight        : $font-weight-bold !default;
-$btn-bd                 : 1px solid transparent !default;
-$btn-radius             : $global-default-radius !default;
-$btn-default-c          : $color-gray-7 !default;
-$btn-disabled-bg        : $global-disabled-bg !default;
-$btn-disabled-c         : $color-gray-6 !default;
-$btn-link-bd            : 1px solid $color-gray-4 !default;
-$btn-link-hover-bg      : $color-gray-0 !default;
-$btn-disabled-bd        : 1px solid $color-gray-3 !default;
-$btn-disabled-bd-colored: false !default;
-$btn-shadow             : false !default;
-$btn-shadow-focus       : 0 0 2px 1px $color-primary-7 !default;
-$btn-active-selected    : false !default;
-$btn-active-shadow      : none !default;
-$btn-box-width          : $global-size-md !default;
+// Set the default sizes for button boxes - .c-btn-box-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
+$btn-box-sizes: () !default;
+$btn-box-sizes: map-merge(
+  (
+    xs: $global-size-xs,
+    sm: $global-size-sm,
+    lg: $global-size-lg,
+  ),
+  $btn-box-sizes
+);
 
-$btn-box-sizes: (
-  xs: $global-size-xs,
-  sm: $global-size-sm,
-  lg: $global-size-lg,
-) !default;
+// Set the default styles for buttons - .c-btn-{{color}}.
+// This map is looped - adding key/value pairs will generate more classes
+$button-colors: () !default;
+$button-colors: map-merge(
+  (
+    primary: (
+      bg: $color-primary,
+      bg-hover: $color-primary-7,
+      bg-active: $color-primary-9,
+      border: $color-primary-9,
+    ),
+    success: (
+      bg: $color-success,
+      bg-hover: $color-success-7,
+      bg-active: $color-success-9,
+      border: $color-success-9,
+    ),
+    danger: (
+      bg: $color-danger,
+      bg-hover: $color-danger-7,
+      bg-active: $color-danger-9,
+      border: $color-danger-9,
+    ),
+    secondary: (
+      bg: $color-gray-1,
+      bg-hover: $color-gray-0,
+      bg-active: $color-gray-2,
+      border: $color-gray-4,
+      color: $color-gray-8
+    )
+  ),
+  $button-colors
+);
 
-$button-colors: (
-  primary: (
-    bg: $color-primary,
-    bg-hover: $color-primary-7,
-    bg-active: $color-primary-9,
-    border: $color-primary-9
+// Set the default sizes for buttons - .c-btn-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
+$button-sizes: () !default;
+$button-sizes:  map-merge(
+  (
+    default: (
+      font-size: $font-size-2,
+      padding: $space-0 $space-md,
+      height: $global-size-md
+    ),
+    xs: (
+      font-size: $font-size-0,
+      padding: $space-0 $space-xs,
+      height: $global-size-xs
+    ),
+    sm: (
+      font-size: $font-size-1,
+      padding: $space-0 $space-sm,
+      height: $global-size-sm
+    ),
+    lg: (
+      font-size: $font-size-3,
+      padding: $space-0 $space-xl,
+      height: $global-size-lg
+    )
   ),
-  success: (
-    bg: $color-success,
-    bg-hover: $color-success-7,
-    bg-active: $color-success-9,
-    border: $color-success-9
-  ),
-  danger: (
-    bg: $color-danger,
-    bg-hover: $color-danger-7,
-    bg-active: $color-danger-9,
-    border: $color-danger-9
-  ),
-  secondary: (
-    bg: $color-gray-1,
-    bg-hover: $color-gray-0,
-    bg-active: $color-gray-2,
-    border: $color-gray-4,
-    color: $color-gray-8
-  )
-) !default;
-
-$button-sizes: (
-  default: (
-    font-size: $font-body-md,
-    padding: $space-0 $space-md,
-    height: $global-size-md
-  ),
-  xs: (
-    font-size: $font-body-xs,
-    padding: $space-0 $space-xs,
-    height: $global-size-xs
-  ),
-  sm: (
-    font-size: $font-body-sm,
-    padding: $space-0 $space-sm,
-    height: $global-size-sm
-  ),
-  lg: (
-    font-size: $font-body-lg,
-    padding: $space-0 $space-xl,
-    height: $global-size-lg
-  )
-) !default;
+  $button-sizes
+);
 
 
 // --------------------------------------------
 // BREADCRUMBS --------------------------------
 // --------------------------------------------
-$breadcrumb-color               : $color-primary-9 !default;
-$breadcrumb-color-active        : $color-gray-9 !default;
-$breadcrumb-font-size           : $font-body-md !default;
-$breadcrumb-font-family         : $font-family-sans !default;
-$breadcrumb-font-weight         : $font-weight-bold !default;
-$breadcrumb-divider-size        : 8px !default;
-$breadcrumb-divider-border-width: 2px !default;
-$breadcrumb-divider-color       : $color-gray-3 !default;
-$breadcrumb-margin              : $global-size-md !default;
+$breadcrumb-config: () !default;
+$breadcrumb-config: map-merge(
+  (
+    'font-family'         : $global-font,
+    'margin'              : $space-xl,
+    'color'               : $color-primary-9,
+    'color-active'        : $global-text-color-dark,
+    'font-size'           : $font-size-2,
+    'font-weight'         : $font-weight-bold,
+    'divider-color'       : $color-gray-3,
+    'divider-size'        : 8px,
+    'divider-border-width': 2px,
+  ),
+  $breadcrumb-config
+);
 
 
 // --------------------------------------------
 // CARDS --------------------------------------
 // --------------------------------------------
-$card-bg                     : $color-white !default;
-$card-text-color             : $color-gray-7 !default;
-$card-border                 : 1px solid $color-gray-2 !default;
-$card-border-radius          : $global-default-radius !default;
-$card-min-width              : 0 !default;
-$card-font-family            : $font-family-sans !default;
-$card-padding-v              : $space-md - $space-xs !default;
-$card-padding-h              : $space-md !default;
-$card-shadow                 : $shadow-xs !default;
-$card-shadow-hover           : $shadow-md !default;
-$card-border-hover           : $global-default-border !default;
-$card-header-font-size       : $font-body-lg !default;
-$card-header-font-weight     : $font-weight-bold !default;
-$card-header-line-height     : $line-height-body-lg !default;
-$card-header-color           : $color-gray-9 !default;
-$card-header-icon-color      : $color-gray-5 !default;
-$card-header-icon-hover-color: lighten($card-header-icon-color, 10%) !default;
-$card-body-font-size         : $font-body-md !default;
-$card-title-font-size        : $font-body-xl !default;
-$card-title-font-weight      : $font-weight-bold !default;
-$card-subtitle-line-height   : $font-body-md !default;
-$card-subtitle-font-size     : $font-body-md !default;
-$card-footer-color           : $color-primary-8 !default;
-$card-footer-hover-color     : $color-primary-6 !default;
-$card-footer-font-size       : $font-body-md !default;
-$card-footer-line-weight     : $font-body-xl !default;
-
+$card-config: () !default;
+$card-config: map-merge(
+  (
+    'bg'                     : $color-white,
+    'text-color'             : $global-text-color,
+    'border'                 : $global-border-size $global-border-color-light,
+    'border-hover'           : $global-border-size $global-border-color,
+    'font-family'            : $global-font,
+    'border-radius'          : $global-radius,
+    'min-width'              : 0,
+    'padding-v'              : $space-md - $space-xs,
+    'padding-h'              : $space-md,
+    'shadow'                 : $shadow-xs,
+    'shadow-hover'           : $shadow-md,
+    'header-font-size'       : $font-size-3,
+    'header-font-weight'     : $font-weight-bold,
+    'header-line-height'     : $line-height-sm,
+    'header-color'           : $global-text-color-dark,
+    'header-icon-color'      : $global-text-color-lighter,
+    'header-icon-hover-color': lighten($global-text-color-lighter, 10%),
+    'body-font-size'         : $font-size-2,
+    'title-font-size'        : $font-size-4,
+    'title-font-weight'      : $font-weight-bold,
+    'subtitle-line-height'   : $font-size-2,
+    'subtitle-font-size'     : $font-size-2,
+    'footer-color'           : $color-primary-8,
+    'footer-hover-color'     : $color-primary-6,
+    'footer-font-size'       : $font-size-2,
+    'footer-line-weight'     : $font-size-4,
+  ),
+  $card-config
+);
 
 // --------------------------------------------
 // CHECKBOX & RADIOS --------------------------
 // --------------------------------------------
-$checkbox-label-font-size       : $font-body-md !default;
-$checkbox-label-font-weight     : $font-weight-normal !default;
-$checkbox-label-disabled-color  : $color-gray-5 !default;
-$checkbox-bg-empty              : $color-white !default;
-$checkbox-bg-checked            : $color-primary !default;
-$checkbox-bg-checked-disabled   : $color-gray-6 !default;
-$checkbox-bg-disabled           : $global-disabled-bg !default;
-$checkbox-bd                    : 1px solid $color-gray-5 !default;
-$checkbox-radius                : $global-default-radius !default;
-$checkbox-transition            : background 0.2s !default;
-$checkbox-checked-color-disabled: $color-gray-2 !default;
-$checkbox-default-size          : $global-size-xs !default;
-$checkbox-palette               : $theme-colors !default;
+$checkbox-config: () !default;
+$checkbox-config: map-merge(
+  (
+    'radius'                : $global-radius,
+    'bd'                    : $global-border-size $global-border-color-dark,
+    'bg-empty'              : $color-white,
+    'default-size'          : $global-size-xs,
+    'bg-disabled'           : $global-bg-disabled,
+    'label-disabled-color'  : $global-text-color-lighter,
+    'label-font-size'       : $font-size-2,
+    'label-font-weight'     : $font-weight-normal,
+    'bg-checked'            : $color-primary,
+    'bg-checked-disabled'   : $global-text-color-light,
+    'transition'            : background 0.2s,
+    'checked-color-disabled': $color-gray-2,
+  ),
+  $checkbox-config
+);
 
-$checkbox-sizes: (
-  lg: 24px,
-  xl: 32px
-) !default;
+// Set the checkbox sizes for checkboxes - .c-checkbox-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
+$checkbox-sizes: () !default;
+$checkbox-sizes: map-merge(
+  (
+    lg: $global-size-sm,
+    xl: $global-size-md
+  ),
+  $checkbox-sizes
+);
 
 // --------------------------------------------
 // DROPDOWN -----------------------------------
 // --------------------------------------------
-$dropdown-min-width          : 200px !default;
-$dropdown-font               : $font-family-sans !default;
-$dropdown-font-size          : $font-body-md !default;
-$dropdown-font-weight        : $font-weight-normal !default;
-$dropdown-bg                 : $color-white !default;
-$dropdown-bg-hover           : $color-gray-0 !default;
-$dropdown-border             : 1px solid $color-gray-2 !default;
-$dropdown-shadow             : $shadow-md !default;
-$dropdown-z-index            : $z-dropdown !default;
-$dropdown-color              : $color-gray-9 !default;
-$dropdown-color-hover        : $color-gray-9 !default;
-$dropdown-icon-color         : $color-gray-4;
-$dropdown-icon-font-size     : $font-body-lg !default;
-$dropdown-icon-padding       : $space-sm;
-$dropdown-radius             : $global-default-radius !default;
-$dropdown-list-padding       : $space-xs !default;
-$dropdown-list-margin        : 0 !default;
-$dropdown-item-padding       : $space-sm ($space-xs + $space-sm) !default;
-$dropdown-grid-padding       : $space-sm !default; //IF EXPERIMENTAL GRID ENABLED
-$dropdown-selected-color     : $color-primary-8 !default;
-$dropdown-selected-bg        : $color-primary-0 !default;
-$link-colors:
-  '[class*="primary"]',
-  '[class*="success"]',
-  '[class*="warning"]',
-  '[class*="danger"]',
-  '.c-text-muted';
-
+$dropdown-config: () !default;
+$dropdown-config: map-merge(
+  (
+    'radius'             : $global-radius,
+    'font'               : $global-font,
+    'bg'                 : $color-white,
+    'border'             : $global-border-size $global-border-color-light,
+    'min-width'          : 200px,
+    'font-size'          : $font-size-2,
+    'font-weight'        : $font-weight-normal,
+    'bg-hover'           : $color-gray-0,
+    'shadow'             : $shadow-md,
+    'z-index'            : $z-dropdown,
+    'color'              : $global-text-color-dark,
+    'color-hover'        : $global-text-color-dark,
+    'icon-color'         : $color-gray-4,
+    'icon-font-size'     : $font-size-3,
+    'icon-padding'       : $space-sm,
+    'list-padding'       : $space-xs,
+    'list-margin'        : 0,
+    'item-padding'       : $space-sm ($space-xs + $space-sm),
+    'grid-padding'       : $space-sm,
+    'selected-color'     : $color-primary-8,
+    'selected-bg'        : $color-primary-0,
+  ),
+  $dropdown-config
+);
 
 // --------------------------------------------
 // FORMS --------------------------------------
 // --------------------------------------------
-$control-font-size            : $font-body-md !default;
-$control-color                : $color-gray-9 !default;
-$control-font-family          : $font-family-sans !default;
-$control-font-weight          : normal !default;
-$control-line-height          : 1.166667 !default;  //line height optimized for IE compatibility
-$control-placeholder-c        : $color-gray-5 !default;
-$control-placeholder-hover-c  : $control-placeholder-c !default;
-$control-background           : white !default;
-$control-padding              : $space-sm !default;
-$control-height               : $global-size-md !default;
+$form-config: () !default;
+$form-config: map-merge(
+  (
+    'font-family'            : $global-font,
+    'background'             : $color-white,
+    'height'                 : $global-size-md,
+    'border'                 : $global-border-size $global-border-color-dark,
+    'border-radius'          : $global-radius,
+    'icon-padding'           : $space-xl,
+    'disabled-background'    : $global-bg-disabled,
+    'select-padding-r'       : $space-lg,
+    'font-size'              : $font-size-2,
+    'color'                  : $global-text-color-dark,
+    'font-weight'            : $font-weight-normal,
+    'line-height'            : 1.166667,  //line height optimized for IE compatibility
+    'placeholder-c'          : $global-text-color-lighter,
+    'placeholder-hover-c'    : $global-text-color-lighter,
+    'padding'                : $space-sm,
+    'shadow'                 : inset 0 2px 2px 0 rgba(33, 37, 41, .1),
+    'focused-shadow'         : inset 0 1px 2px 0 rgba(33, 37, 41, 0.08),
+    'shadow-disabled'        : none,
+    'transition'             : border-color 0.1s ease-in,
+    'hover'                  : $color-primary,
+    'hover-border'           : $color-gray-6,
+    'active'                 : $color-primary,
+    'active-border'          : $color-primary,
+    'icon-color'             : $global-text-color-dark,
+    'disabled-border'        : transparent,
+    'hint-color'             : $global-text-color-light,
+    'hint-font-size'         : 85%,
+    'hint-transition'        : all 0.2s ease,
+    'addon-background'       : $color-gray-0,
+    'element-padding'        : $space-sm * 2 0,
+    'element-label-padding'  : 0 0 $space-sm 0,
+    'select-bg-img'          : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC"),
+    'select-bg-img-disabled' : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAABGdBTUEAALGPC/xhBQAAAK9JREFUOBHlkj0OgzAMRmNxMcTQoVdhZGRoGDp27FU6MCA4WeovUhA/tkNmIlkkwe8Nzuecsd6f7wtltLhK+wmQiDxX3Tyebhp/i9QrChKcAEtyEhzhnGQn0GBLsgpysCaJgquwJKFSOEnwDSH47fmuewwRcTXzrg2HhzhUnPGZs84OqrVG6R5w37U+5qBUkmCI1yRelWzhnQCHnOQInwSWRIJFgSTRYPSaC0+Mspr+0vx1PtB1wpUAAAAASUVORK5CYII = "),
+    'select-bg-pos'          : no-repeat right 8px center,
+    'select-box-shadow'      : none,
+    'select-box-shadow-focus': 0 0 1px 2px rgba($color-primary-4, .5),
+  ),
+  $form-config
+);
 
-$control-sizes:
-  (sm, $global-size-sm, $space-0 $control-padding, $font-body-sm)
-  (lg, $global-size-lg, $space-0 $control-padding, $font-body-xl) !default;
+// Set the default sizes for forms - .c-input-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
+$control-sizes: () !default;
+$control-sizes: map-merge(
+  (
+    "sm": (
+      "height": $global-size-sm,
+      "font-size": $font-size-1,
+      "padding": $space-0 $space-sm
+    ),
+    "lg": (
+      "height": $global-size-lg,
+      "font-size": $font-size-4,
+      "padding": $space-0 $space-sm
+    ),
+  ),
+  $control-sizes
+);
 
-$control-colors:
-  ("success", $color-success, false)
-  ("warning", $color-warning, false)
-  ("error", $color-danger, false)
-  ("danger", $color-danger, false) !default;
 
 // Form Input Colors (NG specific) DISABLED CURRENTLY
 $enable-NGform-colors: false !default;
@@ -352,51 +610,26 @@ $control-ng-validation:
   ("ng-valid", "success")
   ("ng-invalid", "error") !default;
 
-$control-border               : 1px solid $color-gray-5 !default;
-$control-border-radius        : $global-default-radius !default;
-$control-shadow               : inset 0 2px 2px 0 rgba(33, 37, 41, .1) !default;
-$control-focused-shadow       : inset 0 1px 2px 0 rgba(33, 37, 41, 0.08) !default;
-$control-shadow-disabled      : none !default;
-$control-transition           : border-color 0.1s ease-in !default;
-$control-hover                : $color-primary !default;
-$control-hover-border         : $color-gray-6 !default;
-$control-active               : $color-primary !default;
-$control-active-border        : $color-primary !default;
-
-$control-icon-padding         : $global-size-md !default;
-$control-icon-color           : $color-gray-9 !default;
-
-$control-disabled-border      : transparent !default;
-$control-disabled-background  : $global-disabled-bg !default;
-$control-hint-color           : $color-gray-6 !default;
-$control-hint-font-size       : 85% !default;
-$control-hint-transition      : all 0.2s ease !default;
-
-$control-addon-background     : $color-gray-0 !default;
-$control-element-padding      : $control-padding * 2 0 !default;
-$control-element-label-padding: 0 0 $control-padding 0 !default;
-
-$select-padding-r             : $global-size-sm !default;
-$select-bg-img                : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC") !default;
-$select-bg-img-disabled       : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAABGdBTUEAALGPC/xhBQAAAK9JREFUOBHlkj0OgzAMRmNxMcTQoVdhZGRoGDp27FU6MCA4WeovUhA/tkNmIlkkwe8Nzuecsd6f7wtltLhK+wmQiDxX3Tyebhp/i9QrChKcAEtyEhzhnGQn0GBLsgpysCaJgquwJKFSOEnwDSH47fmuewwRcTXzrg2HhzhUnPGZs84OqrVG6R5w37U+5qBUkmCI1yRelWzhnQCHnOQInwSWRIJFgSTRYPSaC0+Mspr+0vx1PtB1wpUAAAAASUVORK5CYII=") !default;
-$select-bg-pos                : no-repeat right 8px center !default;
-$select-box-shadow            : none !default;
-$select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
-
 
 // --------------------------------------------
 // FOOTER -------------------------------------
 // --------------------------------------------
-$footer-font-size       : $font-body-md !default;
-$footer-font-family     : $font-family-sans !default;
-$footer-color           : $color-gray-9 !default;
-$footer-color-link      : $color-primary !default;
-$footer-background-color: $color-gray-1 !default;
-$footer-padding         : $space-0 ($space-md + $space-sm) !default;
-$footer-links-margin    : $space-0 $space-sm !default;
-$footer-height          : $global-size-xl !default;
-$footer-border-top      : 1px solid $color-gray-3 !default;
-$footer-z-index         : $z-footer !default;
+$footer-config: () !default;
+$footer-config: map-merge(
+  (
+    'font-family'     : $global-font,
+    'height'          : $global-footer-height,
+    'border-top'      : $global-border-size $global-border-color-light,
+    'font-size'       : $font-size-2,
+    'color'           : $global-text-color-dark,
+    'color-link'      : $color-primary,
+    'background-color': $color-gray-1,
+    'padding'         : $space-0 ($space-md + $space-sm),
+    'links-margin'    : $space-0 $space-sm,
+    'z-index'         : $z-footer,
+  ),
+  $footer-config
+);
 
 
 // --------------------------------------------
@@ -428,289 +661,411 @@ $breakpoints: (
 // --------------------------------------------
 // HEADER -------------------------------------
 // --------------------------------------------
-$header-bg                       : $color-white !default;
-$header-bg-hover                 : rgba(0, 0, 0, 0.03) !default;
-$header-borders                  : rgba(0, 0, 0, 0.06) !default;
-$header-z-index                  : $z-header !default;
-$header-bottom-border            : $color-gray-1 !default;
-$header-item-padding             : $space-0 $space-md !default;
-$header-height                   : $global-size-xl !default;
-$header-inverse-bg               : #002b49 !default;
-$header-inverse-bg-hover         : rgba(255, 255, 255, 0.07) !default;
-$header-text-color               : $color-gray-6 !default;
-$header-inverse-text-color       : rgba($color-white, .9) !default;
-$header-inverse-text-color-active: $color-white !default;
-$header-inverse-borders          : rgba(255, 255, 255, 0.1) !default;
+$header-config: () !default;
+$header-config: map-merge(
+  (
+    'bg'                       : $color-white,
+    'height'                   : $global-header-height,
+    'inverse-text-color-active': $color-white,
+    'bg-hover'                 : rgba(0, 0, 0, 0.03),
+    'borders'                  : rgba(0, 0, 0, 0.06),
+    'z-index'                  : $z-header,
+    'bottom-border'            : $color-gray-1,
+    'item-padding'             : $space-0 $space-md,
+    'inverse-bg'               : #002b49,
+    'inverse-bg-hover'         : rgba(255, 255, 255, 0.07),
+    'text-color'               : $global-text-color-light,
+    'inverse-text-color'       : rgba(white, .9),
+    'inverse-borders'          : rgba(255, 255, 255, 0.1),
+  ),
+  $header-config
+);
 
 
 // --------------------------------------------
 // Loaders ------------------------------------
 // --------------------------------------------
-$skeleton-bar                : linear-gradient(140deg, rgba($color-white, 0), rgba($color-white, .6) 50%, rgba($color-white, 0) 100%) !default;
-$skeleton-bar-animation      : skeletonIteration 2s infinite !default;
-$skeleton-bar-height         : 8px !default;
-$skeleton-bg-color           : $color-gray-3 !default;
-$loader-color                : $color-primary-7 !default;
-$loader-bg-color             : $color-gray-3 !default;
-$loader-size                 : 32px !default;
-$loader-full-page-size       : 48px !default;
-$loader-border-size          : 4px !default;
-$loader-full-page-border-size: 6px !default;
-$loader-animation-duration   : .71s !default;
+$loader-config: () !default;
+$loader-config: map-merge(
+  (
+    'skeleton-bar-height'   : $global-size-xs / 2,
+    'skeleton-bar'          : linear-gradient(140deg, rgba(white, 0), rgba(white, .6) 50%, rgba(white, 0) 100%),
+    'skeleton-bar-animation': skeletonIteration 2s infinite,
+    'skeleton-bg-color'     : $color-gray-3,
+    'size'                  : $global-size-md,
+    'color'                 : $color-primary,
+    'bg-color'              : $color-gray-3,
+    'full-page-size'        : 48px,
+    'border-size'           : 4px,
+    'full-page-border-size' : 6px,
+    'animation-duration'    : .71s,
+  ),
+  $loader-config
+);
 
 
 // --------------------------------------------
 // Media Object -------------------------------
 // --------------------------------------------
-$media-padding           : $space-sm $space-0 !default;
-$media-body-padding      : $space-md !default;
-$media-margin            : $space-0 $space-sm !default;
-$media-bg                : $color-white !default;
-$media-color             : $color-gray-7 !default;
-$media-stripe-bg         : $color-gray-0 !default;
-$media-hover-bg          : $media-stripe-bg !default;
-$media-header-bg         : $color-gray-0 !default;
-$media-border            : $color-gray-2 !default;
-$media-border-radius     : $global-default-radius !default;
-$media-action-color      : $color-gray-6 !default;
-$media-action-font-size  : $font-body-md !default;
-$media-action-line-height: $line-height-body-md !default;
-$media-min-height        : 48px !default;
-
+$media-config: () !default;
+$media-config: map-merge(
+  (
+    'bg'                : $color-white,
+    'color'             : $global-text-color,
+    'border'            : $global-border-size $global-border-color-light,
+    'border-radius'     : $global-radius,
+    'padding'           : $space-sm $space-0,
+    'body-padding'      : $space-md,
+    'margin'            : $space-0 $space-sm,
+    'stripe-bg'         : $color-gray-0,
+    'hover-bg'          : $color-gray-0,
+    'header-bg'         : $color-gray-0,
+    'action-color'      : $global-text-color-light,
+    'action-font-size'  : $font-size-2,
+    'action-line-height': $line-height-xs,
+    'min-height'        : $global-size-xl,
+  ),
+  $media-config
+);
 
 // --------------------------------------------
 // MODALS -------------------------------------
 // --------------------------------------------
-$modal-z-index                : $z-modal !default;
-$modal-sm-width               : 480px !default;
-$modal-width                  : 640px !default;
-$modal-lg-width               : 800px !default;
-$modal-border-radius          : $global-default-radius !default;
-$modal-shadow                 : $shadow-lg !default;
-$modal-border                 : 1px solid $color-gray-2 !default;
-$modal-close-color            : $color-gray-6 !default;
-$modal-close-size             : 32px !default;
-$modal-body-color             : $color-gray-7 !default;
-$modal-body-font-size         : $font-body-md !default;
-$modal-title-font-size        : $font-body-xl !default;
-$modal-title-color            : $color-gray-9 !default;
-$modal-title-font-weight      : $font-weight-bold !default;
-$modal-title-line-height      : $line-height-body-lg !default;
-$modal-padding                : $space-lg !default;
-$modal-bg-color               : $color-white !default;
-$modal-backdrop-bg-color      : $global-backdrop-dark !default;
-$modal-body-padding           : $modal-padding $modal-padding ($modal-padding / 2) !default;
-$modal-header-padding         : ($modal-padding / 3) ($modal-padding / 2) ($modal-padding / 3) $modal-padding !default;
-$modal-footer-padding         : $modal-padding !default;
-$modal-dialog-padding         : 40px !default;
-$modal-dialog-footer-padding  : ($modal-padding / 2) 0 0 !default;
+$modal-config: () !default;
+$modal-config: map-merge(
+  (
+    'border-radius'          : $global-radius,
+    'border'                 : $global-border-size $global-border-color-light,
+    'close-size'             : $global-size-md,
+    'body-color'             : $global-text-color,
+    'bg-color'               : $color-white,
+    'backdrop-bg-color'      : $global-backdrop-dark,
+    'z-index'                : $z-modal,
+    'shadow'                 : $shadow-lg,
+    'close-color'            : $global-text-color-light,
+    'body-font-size'         : $font-size-2,
+    'title-font-size'        : $font-size-4,
+    'title-color'            : $global-text-color,
+    'title-font-weight'      : $font-weight-bold,
+    'title-line-height'      : $line-height-sm,
+    'padding'                : $space-lg,
+    'body-padding'           : $space-lg $space-lg ($space-lg / 2),
+    'header-padding'         : ($space-lg / 3) ($space-lg / 2) ($space-lg / 3) $space-lg,
+    'footer-padding'         : $space-lg,
+    'dialog-padding'         : 40px,
+    'dialog-footer-padding'  : ($space-lg / 2) 0 0,
+    'width'                  : 640px,
+  ),
+  $modal-config
+);
+
+// Set the default sizes for modal - .c-modal-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
+$modal-widths: () !default;
+$modal-widths: map-merge(
+  (
+    sm: 480px,
+    lg: 800px
+  ),
+  $modal-widths
+);
 
 
 // --------------------------------------------
 // NAV ---------------------------------------
 // --------------------------------------------
-$nav-height                : 32px !default;
-$nav-font-size             : 12px !default;
-$nav-color                 : $color-gray-7 !default;
-$nav-color-hover           : $color-gray-9 !default;
-$nav-color-active          : $nav-color-hover !default;
-$nav-color-disabled        : $color-gray-5 !default;
-$nav-disabled-opacity      : .7 !default;
-$nav-font-weight           : $font-weight-normal !default;
-$nav-height-small          : 24px !default;
-$nav-font-size-small       : 11px !default;
-$nav-height-large          : 40px !default;
-$nav-font-size-large       : 14px !default;
-$nav-pill-font-weight      : $font-weight-bold !default;
-$nav-pill-color            : $nav-color !default;
-$nav-pill-radius           : $global-default-radius !default;
-$nav-pill-color-hover      : $nav-color-hover !default;
-$nav-pill-color-active     : $nav-color-active !default;
-$nav-pill-color-disabled   : $nav-color !default;
-$nav-pill-bg-hover         : $color-gray-1 !default;
-$nav-pill-bg-active        : $color-gray-1 !default;
-$nav-pill-bg-disabled      : $color-gray-0 !default;
-$nav-pill-icon-opacity     : .25;
-$nav-pill-icon-color-active: $color-primary-8;
-$nav-spacing               : $space-sm !default;
+$nav-config: () !default;
+$nav-config: map-merge(
+  (
+    'height'                : $global-size-md,
+    'color'                 : $global-text-color,
+    'color-disabled'        : $global-text-color-lighter,
+    'pill-radius'           : $global-radius,
+    'pill-color'            : $global-text-color,
+    'pill-color-disabled'   : $global-text-color,
+    'font-size'             : $font-size-2,
+    'color-hover'           : $global-text-color-dark,
+    'color-active'          : $global-text-color-dark,
+    'disabled-opacity'      : .7,
+    'font-weight'           : $font-weight-normal,
+    'pill-font-weight'      : $font-weight-bold,
+    'pill-color-hover'      : $global-text-color-dark,
+    'pill-color-active'     : $global-text-color-dark,
+    'pill-bg-hover'         : $color-gray-1,
+    'pill-bg-active'        : $color-gray-1,
+    'pill-bg-disabled'      : $color-gray-0,
+    'pill-icon-opacity'     : .25,
+    'pill-icon-color-active': $color-primary-8,
+    'spacing'               : $space-sm,
+  ),
+  $nav-config
+);
+
+
+// Set the default sizes for nav - .c-nav-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
+$nav-sizes: () !default;
+$nav-sizes: map-merge(
+  (
+    "sm": (
+      "font-size": $font-size-1,
+      "height": $global-size-sm,
+      "padding": $space-0 $space-sm
+    ),
+    "lg": (
+      "font-size": $font-size-3,
+      "height": $global-size-lg,
+      "padding": $space-0 ($space-sm * 3)
+    ),
+  ),
+  $nav-sizes
+);
 
 
 // --------------------------------------------
 // NOTIFICATIONS ------------------------------
 // --------------------------------------------
-$notification-margin      : $space-sm !default;
-$notification-shadow      : $shadow-xs !default;
-$notification-shadow-hover: $shadow-sm !default;
-$notification-read-bg     : $color-gray-0 !default;
-$notification-read-border : 1px solid $color-gray-1 !default;
+$notification-config: () !default;
+$notification-config: map-merge(
+  (
+    'margin'      : $space-sm,
+    'shadow'      : $shadow-xs,
+    'shadow-hover': $shadow-sm,
+    'read-bg'     : $color-gray-0,
+    'read-border' : $global-border-size $global-border-color-light,
+  ),
+  $notification-config
+);
 
 
 // --------------------------------------------
 // Sidebar ------------------------------------
 // --------------------------------------------
-$sidebar-width                      : 256px;
-$sidebar-folded-default-width       : 48px;
-$sidebar-font-size                  : 14px;
-$sidebar-bg-color                   : $color-white;
-$sidebar-color                      : $color-gray-8;
-$sidebar-z-index                    : $z-sidenav;
-$sidebar-border                     : 1px solid $color-gray-2;
-$sidebar-default-hover-bg           : $color-primary-0;
-$sidebar-default-active-color       : $color-primary-8;
-$sidebar-divider-default-color      : $color-gray-1;
-// Menu Links
-$sidebar-link-padding               : $space-xs $space-md !default;
-$sidebar-link-margin                : $space-xs !default;
-$sidebar-link-line-height           : $space-xl !default;
-$sidebar-link-color                 : $sidebar-color !default;
-$sidebar-link-hover-color           : $sidebar-color !default;
-$sidebar-link-hover-bg              : $sidebar-default-hover-bg !default;
-$sidebar-link-active-bg             : $sidebar-default-hover-bg !default;
-$sidebar-link-active-color          : $sidebar-color !default;
-$sidebar-link-open-bg               : $sidebar-default-hover-bg !default;
-$sidebar-link-open-color            : $sidebar-color !default;
-// Icon
-$sidebar-icon-margin                : $space-sm $space-md $space-sm 0 !default;
-$sidebar-icon-color                 : $color-gray-5 !default;
-$sidebar-icon-color-active          : $sidebar-default-active-color !default;
-$sidebar-icon-font-size             : 16px !default;
-// Category
-$sidebar-category-padding           : $space-sm $space-md !default;
-$sidebar-category-color             : $color-gray-6 !default;
-// SubMenu
-$sidebar-submenu-bg                 : $color-white !default;
-$sidebar-submenu-link-active-color  : $sidebar-default-active-color !default;
-$sidebar-submenu-link-padding-left  : 48px !default;
-$sidebar-submenu-level3-padding-left: 64px !default;
-$sidebar-submenu-level4-padding-left: 80px !default;
+
+// Variable shortcuts to avoid repitition
+$_sidebar-bg          : $color-white;
+$_sidebar-border      : $global-border-size $global-border-color-light;
+$_sidebar-bg-hover    : $color-primary-0;
+$_sidebar-color-active: $color-primary-8;
+$_sidebar-color       : $color-gray-8;
+
+$sidebar-config: () !default;
+$sidebar-config: map-merge(
+  (
+    'width'                      : $global-sidebar-width,
+    'width-folded'               : $global-sidebar-width-folded,
+    'font-size'                  : $font-size-3,
+    'z-index'                    : $z-sidenav,
+    'link-padding'               : $space-xs $space-md,
+    'link-margin'                : $space-xs,
+    'link-line-height'           : $space-xl,
+    'icon-margin'                : $space-sm $space-md $space-sm 0,
+    'icon-font-size'             : $font-size-4,
+    'category-padding'           : $space-sm $space-md,
+    'submenu-link-padding-left'  : 48px,
+    'submenu-level3-padding-left': 64px,
+    'submenu-level4-padding-left': 80px,
+    'bg'                         : $_sidebar-bg,
+    'bg-hover'                   : $_sidebar-bg-hover,
+    'border'                     : $_sidebar-border,
+    'submenu-bg'                 : $_sidebar-bg,
+    'color'                      : $_sidebar-color,
+    'color-active'               : $_sidebar-color-active,
+    'link-color'                 : $_sidebar-color,
+    'link-hover-color'           : $_sidebar-color,
+    'link-active-color'          : $_sidebar-color,
+    'link-open-color'            : $_sidebar-color,
+    'divider-color'              : $color-gray-1,
+    'link-hover-bg'              : $_sidebar-bg-hover,
+    'link-active-bg'             : $_sidebar-bg-hover,
+    'link-open-bg'               : $_sidebar-bg-hover,
+    'icon-color'                 : $global-text-color-lighter,
+    'icon-color-active'          : $_sidebar-color-active,
+    'category-color'             : $global-text-color-light,
+    'collapse-bg'                : $color-gray-0,
+    'collapse-bg-hover'          : $color-gray-1,
+    'collapse-bd'                : $color-gray-2,
+    'submenu-link-active-color'  : $_sidebar-color-active,
+  ),
+  $sidebar-config
+);
 
 
 // --------------------------------------------
 // SWITCHES -----------------------------------
 // --------------------------------------------
-$switch-height             : $global-size-xs !default;
-$switch-radius             : $radius-round !default;
-$switch-font-size          : $font-body-md !default;
-$switch-border             : $global-default-border;
-$switch-label-off          : $color-gray-7 !default;
-$switch-label-on           : $color-white !default;
-$switch-off-bg             : $color-gray-0 !default;
-$switch-on-bg              : $color-primary !default;
-$switch-shadow             : inset 0 1px 1px 0 rgba(0, 0, 0, .1) !default;
-$switch-handle             : $color-white !default;
-$switch-handle-disabled    : $color-gray-0 !default;
-$switch-disabled           : $global-disabled-bg !default;
-$switch-disabled-checked-bg: $color-gray-6 !default;
+$switch-config: () !default;
+$switch-config: map-merge(
+  (
+    'height'             : $global-size-xs,
+    'radius'             : $radius-round,
+    'border'             : $global-border-size $global-border-color,
+    'label-off'          : $global-text-color,
+    'label-on'           : $color-white,
+    'handle'             : $color-white,
+    'disabled'           : $global-bg-disabled,
+    'font-size'          : $font-size-2,
+    'off-bg'             : $color-gray-0,
+    'on-bg'              : $color-primary,
+    'shadow'             : inset 0 1px 1px 0 rgba(0, 0, 0, .1),
+    'handle-disabled'    : $color-gray-0,
+    'disabled-checked-bg': $global-text-color-light,
+  ),
+  $switch-config
+);
 
-$switch-sizes: (
-  lg: $global-size-md
-) !default;
-
-$switch-colors: $theme-colors !default;
+// Set the default sizes for switches - .c-switch-lg.
+// This map is looped - adding key/value pairs will generate more classes
+$switch-sizes: () !default;
+$switch-sizes: map-merge(
+  (
+    lg: $global-size-md
+  ),
+  $switch-sizes
+);
 
 
 // --------------------------------------------
 // TOOLTIPS -----------------------------------
 // --------------------------------------------
-$tooltip-max-width       : 300px !default;
-$tooltip-padding         : $space-xs $space-sm !default;
-$tooltip-font-size       : $font-body-md !default;
-$tooltip-line-height     : $line-height-body-md !default;
-$tooltip-bd-radius       : $global-default-radius !default;
-$tooltip-shadow          : $shadow-lg !default;
-$tooltip-z-index         : $z-tooltip !default;
-$tooltip-default-bg      : $color-gray-9 !default;
-$tooltip-default-color   : $color-white !default;
-$tooltip-invert-bg       : $color-white !default;
-$tooltip-invert-color    : $color-gray-9 !default;
-$tooltip-transition-style: cubic-bezier(0.73, 0.01, 0, 1) !default;
-$tooltip-border-width    : 4px !default;
-$tooltip-arrow-position  : 6px !default;
-$tooltip-palette         : $theme-colors !default;
+$tooltip-config: () !default;
+$tooltip-config: map-merge(
+  (
+    'bd-radius'       : $global-radius,
+    'default-color'   : $color-white,
+    'invert-bg'       : $color-white,
+    'max-width'       : 300px,
+    'padding'         : $space-xs $space-sm,
+    'font-size'       : $font-size-2,
+    'line-height'     : $line-height-xs,
+    'shadow'          : $shadow-lg,
+    'z-index'         : $z-tooltip,
+    'default-bg'      : $color-gray-9,
+    'invert-color'    : $color-gray-9,
+    'transition-style': cubic-bezier(0.73, 0.01, 0, 1),
+    'border-width'    : 4px,
+    'arrow-position'  : 6px,
+  ),
+  $tooltip-config
+);
 
 
 // --------------------------------------------
 // TABS ---------------------------------------
 // --------------------------------------------
-$tabs-color             : $color-gray-7 !default;
-$tabs-color-hover       : $color-primary !default;
-$tabs-color-active      : $color-primary !default;
-$tabs-color-disabled    : $color-gray-6 !default;
-$tabs-font-weight       : bold !default;
-$tabs-font-family       : $font-family-sans !default;
-$tabs-border-color      : $color-gray-2 !default;
-$tabs-bordered-radius   : $global-default-radius !default;
-$tabs-bordered-bg       : $color-gray-0 !default;
-$tabs-bordered-bg-hover : $color-white !default;
-$tabs-bordered-bg-active: $tabs-bordered-bg-hover !default;
-$tabs-hover-transition  : border-color 0.2s ease 0s !default;
-$tabs-box-shadow        : inset 0 -1px 0 0 $tabs-border-color;
-$tabs-border-bottom     : 2px !default;
-$tabs-font-size         : $font-body-md !default;
-$tabs-font-size-small   : $font-body-sm !default;
-$tabs-font-size-large   : $font-body-lg !default;
-$tabs-padding           : $space-sm $space-md !default;
-$tabs-padding-small     : $space-xs $space-sm !default;
-$tabs-height            : $global-size-md !default;
-$tabs-height-small      : $global-size-sm !default;
-$tabs-height-large      : $global-size-lg !default;
-$tabs-line-height-large : $line-height-body-lg !default;
+$tabs-config: () !default;
+$tabs-config: map-merge(
+  (
+    'color'             : $global-text-color,
+    'bordered-radius'   : $global-radius,
+    'height'            : $global-size-md,
+    'font-family'       : $global-font,
+    'border'            : $global-border-size $global-border-color-light,
+    'bordered-bg-hover' : $color-white,
+    'bordered-bg-active': $color-white,
+    'color-hover'       : $color-primary,
+    'color-active'      : $color-primary,
+    'color-disabled'    : $global-text-color-light,
+    'font-size'         : $font-size-2,
+    'font-weight'       : $font-weight-bold,
+    'padding'           : $space-sm $space-md,
+    'bordered-bg'       : $color-gray-0,
+    'hover-transition'  : border-color 0.2s ease 0s,
+    'box-shadow'        : inset 0 -1px 0 0 $global-border-color-light,
+    'border-bottom'     : 2px,
+  ),
+  $tabs-config
+);
 
+
+// Set the default sizes for tabs - .c-tab-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
+$tabs-sizes: () !default;
+$tabs-sizes: map-merge(
+  (
+    "sm": (
+      "height": $global-size-sm,
+      "font-size": $font-size-1,
+      "line-height": $line-height-xs,
+      "padding": $space-xs $space-sm
+    ),
+    "lg": (
+      "height": $global-size-lg,
+      "font-size": $font-size-3,
+      "line-height": $line-height-sm,
+      "padding": $space-sm $space-md
+    ),
+  ),
+  $tabs-sizes
+);
 
 // --------------------------------------------
 // TABLES -------------------------------------
 // --------------------------------------------
-$table-background           : $color-white !default;
-$table-font-size            : $font-body-md !default;
-$table-line-height          : 16px !default;
-$table-font-family          : $font-family-sans !default;
-$table-border               : 0 !default;
-$table-border-color         : $color-gray-2 !default;
-$table-padding              : ($space-sm - 1) ($space-sm + 2) $space-sm !default;
-$table-row-hover            : $color-gray-1 !default;
-$table-row-stripe-hover     : $table-row-hover !default;
-$table-stripe               : 'even' !default;
-$table-stripe-bg            : $color-gray-0 !default;
-$table-head-color           : $color-gray-9 !default;
-$table-head-font-weight     : $font-weight-bold !default;
-$table-head-border-color    : $color-gray-3 !default;
-$table-head-border-width    : 1px 0 !default;
-$table-head-border-vertical : 1px solid $table-head-border-color !default;
-$table-head-bg              : $color-gray-0 !default;
-$table-head-cell-hover      : $color-gray-2 !default;
-$table-foot-bg              : $table-head-bg !default;
-$table-foot-color           : $table-head-color !default;
-$table-padding-sm           : ($space-xs - 1) $space-sm $space-xs !default;
-$table-padding-lg           : ($space-sm + $space-xs) ($space-sm + 2) ($space-sm + ($space-xs - 1)) !default;
-$table-font-size-lg         : $font-body-lg !default;
-$table-hover-bg-img         : url('data: image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1IiBoZWlnaHQ9IjIwIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxLjMyMjkxNjYgNS4yOTE2NjY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOTEuNzEpIiBmaWxsPSIjYmJjMWM5Ij4gIDxyZWN0IHk9IjI5Ni40NyIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5MS43MSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjkxLjcxIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTYuNDciIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjk0Ljg4IiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTQuMDkiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTIuNSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC44OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC4wOSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeT0iMjkyLjUiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+IDwvZz48L3N2Zz4 = ') !default;
-$table-hover-bg-img-body-pos: 2px center !default;
-$table-state-selected       : $color-primary-0 !default;
-$table-state-starred        : $color-warning-0 !default;
-$table-state-success        : $color-success-0 !default;
-$table-state-warning        : $color-warning-0 !default;
-$table-state-danger         : $color-danger-0 !default;
+$table-config: () !default;
+$table-config: map-merge(
+  (
+    'background'           : $color-white,
+    'font-family'          : $global-font,
+    'font-size'            : $font-size-2,
+    'font-size-lg'         : $font-size-3,
+    'line-height'          : $line-height-xs,
+    'border'               : 0,
+    'border-color'         : $global-border-color-light,
+    'padding'              : ($space-sm - 1) ($space-sm + 2) $space-sm,
+    'row-hover'            : $color-gray-1,
+    'row-stripe-hover'     : $color-gray-1,
+    'stripe'               : 'even',
+    'stripe-bg'            : $color-gray-0,
+    'head-bg'              : $color-gray-0,
+    'head-cell-hover'      : $color-gray-2,
+    'head-color'           : $global-text-color-dark,
+    'head-font-weight'     : $font-weight-bold,
+    'head-border-color'    : $color-gray-3,
+    'head-border-width'    : 1px 0,
+    'head-border-vertical' : 1px solid $color-gray-3,
+    'foot-bg'              : $color-white,
+    'foot-color'           : $global-text-color-dark,
+    'padding-sm'           : ($space-xs - 1) $space-sm $space-xs,
+    'padding-lg'           : ($space-sm + $space-xs) ($space-sm + 2) ($space-sm + ($space-xs - 1)),
+    'hover-bg-img'         : url('data: image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1IiBoZWlnaHQ9IjIwIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxLjMyMjkxNjYgNS4yOTE2NjY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOTEuNzEpIiBmaWxsPSIjYmJjMWM5Ij4gIDxyZWN0IHk9IjI5Ni40NyIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5MS43MSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjkxLjcxIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTYuNDciIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjk0Ljg4IiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTQuMDkiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTIuNSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC44OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC4wOSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeT0iMjkyLjUiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+IDwvZz48L3N2Zz4 = '),
+    'hover-bg-img-body-pos': 2px center,
+  ),
+  $table-config
+);
 
-// $table-states:
-$table-states:
-  ("selected", $table-state-selected)
-  ("starred", $table-state-starred)
-  ("success", $table-state-success)
-  ("warning", $table-state-warning)
-  ("danger", $table-state-danger) !default;
+// Set the default styles for table states.
+// This map is looped - adding key/value pairs will generate more classes
+$table-states: () !default;
+$table-states: map-merge(
+  (
+    "selected": $color-primary-0,
+    "starred": $color-warning-0,
+    "success": $color-success-0,
+    "warning": $color-warning-0,
+    "danger": $color-danger-0
+  ),
+  $table-states
+);
 
 
 // --------------------------------------------
 // PAGINATION ---------------------------------
 // --------------------------------------------
-$pagination-item-spacing         : 2px !default;
-$pagination-item-size            : $global-size-md !default;
-$pagination-font-size            : $font-body-md !default;
-$pagination-icon-size            : $font-body-xs !default;
-$pagination-item-border-radius   : $global-default-radius !default;
-$pagination-item-color           : $color-gray-9 !default;
-$pagination-item-current-bg      : $color-primary-0 !default;
-$pagination-item-current-color   : $color-primary-9 !default;
-$pagination-next-color           : $color-primary-9 !default;
-$pagination-previous-color       : $color-gray-6 !default;
-$pagination-bg-disabled          : $color-gray-1 !default;
+$pagination-config: () !default;
+$pagination-config: map-merge(
+  (
+    'item-size'            : $global-size-md,
+    'item-border-radius'   : $global-radius,
+    'item-spacing'         : 2px,
+    'font-size'            : $font-size-2,
+    'icon-size'            : $font-size-0,
+    'item-color'           : $global-text-color-dark,
+    'item-current-bg'      : $color-primary-0,
+    'item-current-color'   : $color-primary-9,
+    'next-color'           : $color-primary-9,
+    'previous-color'       : $global-text-color-light,
+    'bg-disabled'          : $color-gray-1,
+  ),
+  $pagination-config
+);

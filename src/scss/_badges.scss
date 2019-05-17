@@ -78,7 +78,7 @@
 }
 
 // All default Badge color classes
-@each $name, $hex in $badge-palette {
+@each $name, $hex in $theme-colors {
   .c-badge-#{$name} {
     @include badge-style($hex);
   }

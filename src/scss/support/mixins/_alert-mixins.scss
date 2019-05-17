@@ -2,9 +2,9 @@
 // Alert Base Mixin ---------------------------
 // --------------------------------------------
 @mixin alert-base(
-  $bg: $alert-primary-bg,
-  $color: $alert-default-color,
-  $icon: $alert-primary-icon-color
+  $bg: $alert-background,
+  $color: $alert-color,
+  $icon: $alert-icon-color
 ) {
   color: $color;
   display: flex;
@@ -43,7 +43,7 @@
   &-icon {
     color: $icon;
     align-self: stretch;
-    font-size: $alert-icon-width;
+    font-size: $alert-icon-font-size;
     padding-right: $alert-padding;
     line-height: $alert-line-height;
   }
@@ -84,7 +84,7 @@
   margin: $alert-margin;
   box-shadow: $shadow-sm;
   background: $color-white;
-  color: $alert-default-color;
+  color: $alert-color;
   font-size: $alert-font-size;
   border-radius: $alert-radius;
   font-family: $alert-font-family;

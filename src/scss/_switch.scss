@@ -10,7 +10,7 @@
   }
 
   // Color loop
-  @each $name, $color in $switch-colors {
+  @each $name, $color in $theme-colors {
     &.c-switch-#{$name} {
       @include switch-color($color);
     }

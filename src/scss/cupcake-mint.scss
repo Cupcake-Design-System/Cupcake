@@ -1,46 +1,16 @@
-// Cupcake master file
-//
-// Imports all cupcake files in their intended order for easy mass-inclusion.
-// Should you need specific files, you can easily use separate `@import`s.
-@import 'support/functions/functions';
-@import 'support/colors-mint';
-@import 'support/tokens';
-@import 'support/config';
-@import 'support/mixins/mixins';
-@import 'support/helpers/helpers';
-@import 'reset';
+// Cupcake Mint
+$color-primary-0: #def5f5;
+$color-primary-1: #afe6e6;
+$color-primary-2: #7cd6d7;
+$color-primary-3: #49c5c9;
+$color-primary-4: #21bac0;
+$color-primary-5: #00aeb8;
+$color-primary-6: #009ea7;
+$color-primary-7: #008a8e;
+$color-primary-8: #007778;
+$color-primary-9: #055350;
 
-// Core
-@import 'action-panel';
-@import 'avatars';
-@import 'alert';
-@import 'badges';
-@import 'buttons';
-@import 'button-group';
-@import 'breadcrumbs';
-@import 'cards';
-@import 'checkboxes';
-@import 'dropdowns';
-@import 'file-upload';
-@import 'forms';
-@import 'footer';
-@import 'grid-containers';
-@import 'grid-rows';
-@import 'grid-columns';
-@import 'header';
-@import 'loaders';
-@import 'modal';
-@import 'media-object';
-@import 'nav';
-@import 'pagination';
-@import 'select';
-@import 'sidenav';
-@import 'sidenav-dark';
-@import 'switch';
-@import 'tabs';
-@import 'table';
-@import 'typography';
-@import 'tooltips';
+$color-primary: #007778;
 
-// Helpers
-@import 'helpers';
+// Cupcake Core
+@import 'cupcake';

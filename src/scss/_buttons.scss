@@ -18,10 +18,6 @@
     @include btn-disabled;
   }
 
-  @if $btn-active-selected {
-    @include btn-active-selected;
-  }
-
   // Button color loop
   @each $type in map-keys($button-colors) {
     &-#{$type} {
@@ -119,19 +115,19 @@
 
 @if $enable-circle-buttons == true {
   .c-btn-circle {
-    border-radius: radius(round);
+    border-radius: $radius-round;
   }
 }
 
 @if $enable-square-buttons == true {
   .c-btn-square {
-    border-radius: radius(none);
+    border-radius: $radius-0;
   }
 }
 
 @if $enable-pill-buttons == true {
   .c-btn-pill {
-    border-radius: radius(pill);
+    border-radius: $radius-pill;
   }
 }
 
@@ -141,8 +137,8 @@
 .c-btn-circle,
 .c-btn-box {
   width: $btn-box-width;
-  padding-left: space(0);
-  padding-right: space(0);
+  padding-left: $space-0;
+  padding-right: $space-0;
   text-align: center;
 
   @each $name, $size in $btn-box-sizes {
@@ -155,13 +151,13 @@
 .c-btn-icon {
   background: transparent;
   border: 1px solid transparent;
-  color: color(gray, 5);
+  color: $color-gray-5;
   transition: all 0.3s ease 0s;
 
   &:hover {
-    color: color(primary, 7);
-    background-color: color(gray, 1);
-    border: 1px solid color(gray, 4);
+    color: $color-primary-7;
+    background-color: $color-gray-1;
+    border: 1px solid $color-gray-4;
   }
 
   // All default color classes

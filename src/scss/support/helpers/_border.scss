@@ -9,7 +9,7 @@ $border-sides : (
 
 @mixin border-class-export($name: 'c-bd') {
   .#{$name} {
-    border: $global-default-border;
+    border: $global-border-size $global-border-color;
 
     // Border color helpers .c-bd-{{color}}
     @include modifiers($color, 'border-color');
@@ -25,7 +25,7 @@ $border-sides : (
     // Border sides
     @each $side, $prop in $border-sides {
       &-#{$side} {
-        #{$prop}: $global-default-border;
+        #{$prop}: $global-border-size $global-border-color;
 
         &-0 {
           #{$prop}: none;

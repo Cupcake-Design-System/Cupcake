@@ -35,7 +35,11 @@
 
 
 // Form Input Left Icon
-@each $name, $height, $padding, $font-size in config($control-sizes) {
+@each $name, $data in $control-sizes {
+  $height: map-get($data, height);
+  $padding: map-get($data, padding);
+  $font-size: map-get($data, font-size);
+
   .c-input-icon-#{$name} {
     font-size: $font-size;
     left: $font-size - 4;
@@ -56,24 +60,15 @@ textarea.c-input {
 
 
 // Form Input Colors
-@each $name, $color, $bg in $control-colors {
+@each $name, $color in $theme-colors {
   .c-input-#{$name} {
     &,
     &:hover {
       border-color: $color;
-
-      @if $bg {
-        background-color: $bg;
-      }
     }
 
     &:focus {
-      @if $bg {
-        border-color: $color;
-        background-color: $control-background;
-      } @else {
-        border-color: $control-active-border;
-      }
+      border-color: $control-active-border;
     }
 
     & ~ .c-input-icon {
@@ -82,8 +77,17 @@ textarea.c-input {
   }
 }
 
+// map to danger class for backwards compatibility
+.c-input-error {
+  @extend .c-input-danger;
+}
+
 // Form Input Sizes
-@each $name, $height, $padding, $font-size in config($control-sizes) {
+@each $name, $data in $control-sizes {
+  $height: map-get($data, height);
+  $padding: map-get($data, padding);
+  $font-size: map-get($data, font-size);
+
   .c-input-#{$name} {
     font-size: $font-size;
     height: $height;
@@ -162,7 +166,7 @@ textarea.c-input {
     opacity: 1;
   }
 
-  @each $name, $color in $control-colors {
+  @each $name, $color in $theme-colors {
     &-#{$name} {
       color: $color;
     }

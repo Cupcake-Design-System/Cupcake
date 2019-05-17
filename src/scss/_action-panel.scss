@@ -75,7 +75,7 @@
       }
 
       &-icon {
-        font-size: $font-body-xl;
+        font-size: $font-size-4;
         color: $action-panel-header-icon-color;
 
         &:hover {
@@ -179,6 +179,12 @@
   }
 }
 
+
+$notification-margin      : map-get($notification-config, 'margin') !default;
+$notification-shadow      : map-get($notification-config, 'shadow') !default;
+$notification-shadow-hover: map-get($notification-config, 'shadow-hover') !default;
+$notification-read-bg     : map-get($notification-config, 'read-bg') !default;
+$notification-read-border : map-get($notification-config, 'read-border') !default;
 
 // Styles to support read/unread/hover for notifications
 .c-notifications .c-media-list .c-media {

@@ -12,8 +12,6 @@ $color-primary-7: #1c7cd6 !default;
 $color-primary-8: #1b6ec2 !default;
 $color-primary-9: #1862ab !default;
 
-$color-primary: $color-primary-8 !default;
-
 
 $color-success-0: #ebfbee !default;
 $color-success-1: #d3f9d8 !default;
@@ -25,8 +23,6 @@ $color-success-6: #40c057 !default;
 $color-success-7: #37b24d !default;
 $color-success-8: #2f9e44 !default;
 $color-success-9: #2b8a3e !default;
-
-$color-success:  $color-success-8 !default;
 
 
 $color-warning-0: #fff9db !default;
@@ -40,8 +36,6 @@ $color-warning-7: #f59f00 !default;
 $color-warning-8: #f08c00 !default;
 $color-warning-9: #e67700 !default;
 
-$color-warning:  $color-warning-8 !default;
-
 
 $color-danger-0: #fff5f5 !default;
 $color-danger-1: #ffe3e3 !default;
@@ -53,8 +47,6 @@ $color-danger-6: #fa5252 !default;
 $color-danger-7: #f03e3e !default;
 $color-danger-8: #e03131 !default;
 $color-danger-9: #c92a2a !default;
-
-$color-danger: $color-danger-8 !default;
 
 
 $color-gray-0: #f8f9fa !default;
@@ -167,235 +159,189 @@ $color-violet-7: #7048e8 !default;
 $color-violet-8: #6741d9 !default;
 $color-violet-9: #5f3dc4 !default;
 
-
-$color: (
-  'danger': (
-    0: $color-danger-0,
-    1: $color-danger-1,
-    2: $color-danger-2,
-    3: $color-danger-3,
-    4: $color-danger-4,
-    5: $color-danger-5,
-    6: $color-danger-6,
-    7: $color-danger-7,
-    8: $color-danger-8,
-    9: $color-danger-9
+$color: () !default;
+$color: map-merge(
+  (
+    'danger': (
+      0: $color-danger-0,
+      1: $color-danger-1,
+      2: $color-danger-2,
+      3: $color-danger-3,
+      4: $color-danger-4,
+      5: $color-danger-5,
+      6: $color-danger-6,
+      7: $color-danger-7,
+      8: $color-danger-8,
+      9: $color-danger-9
+    ),
+    'gray': (
+      0: $color-gray-0,
+      1: $color-gray-1,
+      2: $color-gray-2,
+      3: $color-gray-3,
+      4: $color-gray-4,
+      5: $color-gray-5,
+      6: $color-gray-6,
+      7: $color-gray-7,
+      8: $color-gray-8,
+      9: $color-gray-9
+    ),
+    'primary': (
+      0: $color-primary-0,
+      1: $color-primary-1,
+      2: $color-primary-2,
+      3: $color-primary-3,
+      4: $color-primary-4,
+      5: $color-primary-5,
+      6: $color-primary-6,
+      7: $color-primary-7,
+      8: $color-primary-8,
+      9: $color-primary-9
+    ),
+    'success': (
+      0: $color-success-0,
+      1: $color-success-1,
+      2: $color-success-2,
+      3: $color-success-3,
+      4: $color-success-4,
+      5: $color-success-5,
+      6: $color-success-6,
+      7: $color-success-7,
+      8: $color-success-8,
+      9: $color-success-9
+    ),
+    'warning': (
+      0: $color-warning-0,
+      1: $color-warning-1,
+      2: $color-warning-2,
+      3: $color-warning-3,
+      4: $color-warning-4,
+      5: $color-warning-5,
+      6: $color-warning-6,
+      7: $color-warning-7,
+      8: $color-warning-8,
+      9: $color-warning-9
+    ),
   ),
-
-  'gray': (
-    0: $color-gray-0,
-    1: $color-gray-1,
-    2: $color-gray-2,
-    3: $color-gray-3,
-    4: $color-gray-4,
-    5: $color-gray-5,
-    6: $color-gray-6,
-    7: $color-gray-7,
-    8: $color-gray-8,
-    9: $color-gray-9
-  ),
-
-  'primary': (
-    0: $color-primary-0,
-    1: $color-primary-1,
-    2: $color-primary-2,
-    3: $color-primary-3,
-    4: $color-primary-4,
-    5: $color-primary-5,
-    6: $color-primary-6,
-    7: $color-primary-7,
-    8: $color-primary-8,
-    9: $color-primary-9
-  ),
-
-  'success': (
-    0: $color-success-0,
-    1: $color-success-1,
-    2: $color-success-2,
-    3: $color-success-3,
-    4: $color-success-4,
-    5: $color-success-5,
-    6: $color-success-6,
-    7: $color-success-7,
-    8: $color-success-8,
-    9: $color-success-9
-  ),
-
-  'warning': (
-    0: $color-warning-0,
-    1: $color-warning-1,
-    2: $color-warning-2,
-    3: $color-warning-3,
-    4: $color-warning-4,
-    5: $color-warning-5,
-    6: $color-warning-6,
-    7: $color-warning-7,
-    8: $color-warning-8,
-    9: $color-warning-9
-  ),
+  $color
 );
 
-$color-extended: (
-  'cyan': (
-    0: $color-cyan-0,
-    1: $color-cyan-1,
-    2: $color-cyan-2,
-    3: $color-cyan-3,
-    4: $color-cyan-4,
-    5: $color-cyan-5,
-    6: $color-cyan-6,
-    7: $color-cyan-7,
-    8: $color-cyan-8,
-    9: $color-cyan-9
-  ),
+$color-danger: color(danger, 8) !default;
+$color-warning:  color(warning, 8) !default;
+$color-success:  color(success, 8) !default;
+$color-primary: color(primary, 8) !default;
 
-  'blue': (
-    0: $color-blue-0,
-    1: $color-blue-1,
-    2: $color-blue-2,
-    3: $color-blue-3,
-    4: $color-blue-4,
-    5: $color-blue-5,
-    6: $color-blue-6,
-    7: $color-blue-7,
-    8: $color-blue-8,
-    9: $color-blue-9
+$color-extended: () !default;
+$color-extended: map-merge(
+  (
+    'cyan': (
+      0: $color-cyan-0,
+      1: $color-cyan-1,
+      2: $color-cyan-2,
+      3: $color-cyan-3,
+      4: $color-cyan-4,
+      5: $color-cyan-5,
+      6: $color-cyan-6,
+      7: $color-cyan-7,
+      8: $color-cyan-8,
+      9: $color-cyan-9
+    ),
+    'blue': (
+      0: $color-blue-0,
+      1: $color-blue-1,
+      2: $color-blue-2,
+      3: $color-blue-3,
+      4: $color-blue-4,
+      5: $color-blue-5,
+      6: $color-blue-6,
+      7: $color-blue-7,
+      8: $color-blue-8,
+      9: $color-blue-9
+    ),
+    'grape': (
+      0: $color-grape-0,
+      1: $color-grape-1,
+      2: $color-grape-2,
+      3: $color-grape-3,
+      4: $color-grape-4,
+      5: $color-grape-5,
+      6: $color-grape-6,
+      7: $color-grape-7,
+      8: $color-grape-8,
+      9: $color-grape-9
+    ),
+    'indigo': (
+      0: $color-indigo-0,
+      1: $color-indigo-1,
+      2: $color-indigo-2,
+      3: $color-indigo-3,
+      4: $color-indigo-4,
+      5: $color-indigo-5,
+      6: $color-indigo-6,
+      7: $color-indigo-7,
+      8: $color-indigo-8,
+      9: $color-indigo-9
+    ),
+    'lime': (
+      0: $color-lime-0,
+      1: $color-lime-1,
+      2: $color-lime-2,
+      3: $color-lime-3,
+      4: $color-lime-4,
+      5: $color-lime-5,
+      6: $color-lime-6,
+      7: $color-lime-7,
+      8: $color-lime-8,
+      9: $color-lime-9
+    ),
+    'orange': (
+      0: $color-orange-0,
+      1: $color-orange-1,
+      2: $color-orange-2,
+      3: $color-orange-3,
+      4: $color-orange-4,
+      5: $color-orange-5,
+      6: $color-orange-6,
+      7: $color-orange-7,
+      8: $color-orange-8,
+      9: $color-orange-9
+    ),
+    'pink': (
+      0: $color-pink-0,
+      1: $color-pink-1,
+      2: $color-pink-2,
+      3: $color-pink-3,
+      4: $color-pink-4,
+      5: $color-pink-5,
+      6: $color-pink-6,
+      7: $color-pink-7,
+      8: $color-pink-8,
+      9: $color-pink-9
+    ),
+    'teal': (
+      0: $color-teal-0,
+      1: $color-teal-1,
+      2: $color-teal-2,
+      3: $color-teal-3,
+      4: $color-teal-4,
+      5: $color-teal-5,
+      6: $color-teal-6,
+      7: $color-teal-7,
+      8: $color-teal-8,
+      9: $color-teal-9
+    ),
+    'violet': (
+      0: $color-violet-0,
+      1: $color-violet-1,
+      2: $color-violet-2,
+      3: $color-violet-3,
+      4: $color-violet-4,
+      5: $color-violet-5,
+      6: $color-violet-6,
+      7: $color-violet-7,
+      8: $color-violet-8,
+      9: $color-violet-9
+    ),
   ),
-
-  'grape': (
-    0: $color-grape-0,
-    1: $color-grape-1,
-    2: $color-grape-2,
-    3: $color-grape-3,
-    4: $color-grape-4,
-    5: $color-grape-5,
-    6: $color-grape-6,
-    7: $color-grape-7,
-    8: $color-grape-8,
-    9: $color-grape-9
-  ),
-
-  'indigo': (
-    0: $color-indigo-0,
-    1: $color-indigo-1,
-    2: $color-indigo-2,
-    3: $color-indigo-3,
-    4: $color-indigo-4,
-    5: $color-indigo-5,
-    6: $color-indigo-6,
-    7: $color-indigo-7,
-    8: $color-indigo-8,
-    9: $color-indigo-9
-  ),
-
-  'lime': (
-    0: $color-lime-0,
-    1: $color-lime-1,
-    2: $color-lime-2,
-    3: $color-lime-3,
-    4: $color-lime-4,
-    5: $color-lime-5,
-    6: $color-lime-6,
-    7: $color-lime-7,
-    8: $color-lime-8,
-    9: $color-lime-9
-  ),
-
-  'orange': (
-    0: $color-orange-0,
-    1: $color-orange-1,
-    2: $color-orange-2,
-    3: $color-orange-3,
-    4: $color-orange-4,
-    5: $color-orange-5,
-    6: $color-orange-6,
-    7: $color-orange-7,
-    8: $color-orange-8,
-    9: $color-orange-9
-  ),
-
-  'pink': (
-    0: $color-pink-0,
-    1: $color-pink-1,
-    2: $color-pink-2,
-    3: $color-pink-3,
-    4: $color-pink-4,
-    5: $color-pink-5,
-    6: $color-pink-6,
-    7: $color-pink-7,
-    8: $color-pink-8,
-    9: $color-pink-9
-  ),
-
-  'teal': (
-    0: $color-teal-0,
-    1: $color-teal-1,
-    2: $color-teal-2,
-    3: $color-teal-3,
-    4: $color-teal-4,
-    5: $color-teal-5,
-    6: $color-teal-6,
-    7: $color-teal-7,
-    8: $color-teal-8,
-    9: $color-teal-9
-  ),
-
-  'violet': (
-    0: $color-violet-0,
-    1: $color-violet-1,
-    2: $color-violet-2,
-    3: $color-violet-3,
-    4: $color-violet-4,
-    5: $color-violet-5,
-    6: $color-violet-6,
-    7: $color-violet-7,
-    8: $color-violet-8,
-    9: $color-violet-9
-  ),
+  $color-extended
 );
-
-$theme-colors_BW: (
-  primary: $color-primary,
-  success: $color-success,
-  warning: $color-warning,
-  danger: $color-danger,
-  black: $color-black,
-  white: $color-white,
-);
-
-$theme-colors: (
-  primary: $color-primary,
-  success: $color-success,
-  warning: $color-warning,
-  danger: $color-danger,
-);
-
-$extended-palette: (
-  dark: $color-gray-9,
-  cyan: $color-cyan-9,
-  blue: $color-blue-9,
-  grape: $color-grape-9,
-  indigo: $color-indigo-9,
-  lime: $color-lime-9,
-  orange: $color-orange-9,
-  pink: $color-pink-9,
-  teal: $color-teal-9,
-  violet: $color-violet-9,
-) !default;
-
-$extended-palette-light: (
-  secondary: $color-gray-1,
-  primary-light: $color-primary-1,
-  success-light: $color-success-1,
-  warning-light: $color-warning-1,
-  danger-light: $color-danger-1,
-  cyan-light: $color-cyan-1,
-  blue-light: $color-blue-1,
-  grape-light: $color-grape-1,
-  indigo-light: $color-indigo-1,
-  lime-light: $color-lime-1,
-  orange-light: $color-orange-1,
-  pink-light: $color-pink-1,
-  teal-light: $color-teal-1,
-  violet-light: $color-violet-1,
-) !default;

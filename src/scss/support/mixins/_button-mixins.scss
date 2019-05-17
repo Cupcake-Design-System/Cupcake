@@ -112,10 +112,7 @@
     appearance: none;
     box-shadow: none;
     cursor: not-allowed;
-
-    @if $btn-disabled-bd-colored == false {
-      border: $bd;
-    }
+    border: $bd;
   }
 }
 

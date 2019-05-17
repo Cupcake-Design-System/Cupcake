@@ -14,14 +14,11 @@
   z-index: $modal-z-index;
   max-width: $modal-width;
 
-  // Large Modal
-  &-lg {
-    max-width: $modal-lg-width;
-  }
-
-  // Small Modal
-  &-sm {
-    max-width: $modal-sm-width;
+  // Modal sizes
+  @each $name, $size in $modal-widths {
+    &-#{$name} {
+      max-width: $size;
+    }
   }
 
   // Modal Content Area

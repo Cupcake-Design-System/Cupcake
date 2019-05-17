@@ -23,7 +23,7 @@
 //  {{any-attribute}}: theme-size(sm);
 //
 @function theme-size($value: sm) {
-  $fetched-value: map-get($global-theme-sizes, $value);
+  $fetched-value: map-get($global-sizes, $value);
 
   @if type-of($fetched-value) == number {
     @return $fetched-value;
@@ -64,28 +64,43 @@
 // Returns the line height for a given range.
 // @example
 //  line-height: line-height(header, sm);
-@function line-height($name, $level, $font-scale: $font-scale) {
-  $fetched-line-height: map-get(font-scale-level($name, $level, $font-scale), line-height);
+@function line-height($map: body, $value: sm) {
 
-  @if type-of($fetched-line-height) != null {
-    @return $fetched-line-height;
+  @if $map == body {
+    @return config($font-body, $value, 'line-height');
+  } @else if $map == header {
+    @return config($font-header, $value, 'line-height');
   } @else {
-    @error 'Line height `#{$value}` not found.';
+    @error 'Line Height `#{value}` not found.';
   }
 }
-
 
 // Returns the font size for a given size definition.
 // @example
 //  font-size: font-size(header, xl);
-@function font-size($name, $level, $font-scale: $font-scale) {
-  $fetched-font-size: map-get(font-scale-level($name, $level, $font-scale), font-size);
+@function font-size($map: body, $value: sm) {
 
-  @if type-of($fetched-font-size) != null {
-    @return $fetched-font-size;
+  @if $map == body {
+    @return config($font-body, $value, 'font-size');
+  } @else if $map == header {
+    @return config($font-header, $value, 'font-size');
   } @else {
-    @error 'Font size `#{$variant}` not found.';
+    @error 'Font Size `#{value}` not found.';
   }
+}
+
+// Returns the theme value.
+@function global($value: null) {
+  $fetched-value: map-get($global-config, $value);
+
+  @return $fetched-value;
+}
+
+// Returns the app-config value.
+@function app-config($value: null) {
+  $fetched-value: map-get($app-config, $value);
+
+  @return $fetched-value;
 }
 
 
@@ -93,7 +108,7 @@
 // @example
 //  font-family:  font(sans);
 @function font($value: sans) {
-  $fetched-font: map-get($font-family, $value);
+  $fetched-font: theme($value);
 
   @if type-of($fetched-font) != null {
     @return $fetched-font;
@@ -109,10 +124,10 @@
 @function shadow($value: sm) {
   $fetched-value: map-get($shadow, $value);
 
-  @if type-of($fetched-value) == list {
+  @if type-of($fetched-value) != null {
     @return $fetched-value;
   } @else {
-    @error 'Shadow variant `#{$depth}` not found.';
+    @error 'Shadow variant not found.';
   }
 }
 
@@ -130,11 +145,10 @@
   }
 }
 
-
 // Returns the color value for a given color name and group.
 // @example
 //  background: color(primary, 3);
-@function color($value: primary, $range: 7) {
+@function color($value: primary, $range: 8) {
 
   @if $value == black {
     @return $color-black;
@@ -159,6 +173,8 @@
     @return config($color-extended, 'cyan', $range);
   } @else if $value == grape {
     @return config($color-extended, 'grape', $range);
+  } @else if $value == blue {
+    @return config($color-extended, 'blue', $range);
   } @else if $value == indigo {
     @return config($color-extended, 'indigo', $range);
   } @else if $value == teal {
@@ -184,22 +200,6 @@
   } @else {
     @error 'Breakpoint `#{$value}` not found.';
   }
-}
-
-
-// Grab all levels of a font the font-scale
-// @example
-//  font-size: font-scale(header);
-@function font-scale($name, $font-scale: $font-scale) {
-  @return map-get($font-scale, $name);
-}
-
-
-// Grab info for a particular level of a font-scale
-// @example
-//  font-size: font-scale-level(header, lg);
-@function font-scale-level($name, $level, $font-scale: $font-scale) {
-  @return map-get(font-scale($name, $font-scale), $level);
 }
 
 

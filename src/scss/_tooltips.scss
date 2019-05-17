@@ -220,7 +220,7 @@
   }
 
   // Color loop
-  @each $name, $color in $tooltip-palette {
+  @each $name, $color in $theme-colors {
     &[data-tooltip-conf*='#{$name}'] {
       @include tooltip-color($color, $color-white);
     }

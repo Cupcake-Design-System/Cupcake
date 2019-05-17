@@ -3,7 +3,7 @@
   @include check(check);
 
   // Color loop
-  @each $name, $color in $checkbox-palette {
+  @each $name, $color in $theme-colors {
     &.c-checkbox-#{$name} {
       @include check-color($color, check);
     }
@@ -22,7 +22,7 @@
   @include check(radio);
 
   // Color loop
-  @each $name, $color in $checkbox-palette {
+  @each $name, $color in $theme-colors {
     &.c-radio-#{$name} {
       @include check-color($color, radio);
     }

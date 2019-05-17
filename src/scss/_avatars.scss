@@ -60,7 +60,7 @@
 }
 
 // All default Avatar color classes
-@each $name, $hex in $avatar-palette {
+@each $name, $hex in $theme-colors {
   .c-avatar-#{$name} {
     background-color: $hex;
   }
@@ -71,7 +71,10 @@
 }
 
 // All default Avatar size classes
-@each $name, $size, $font-size in config($avatar-sizes) {
+@each $name, $data in $avatar-sizes {
+  $size: map-get($data, size);
+  $font-size: map-get($data, font-size);
+
   .c-avatar-#{$name} {
     @include avatar-size($size, $font-size);
 
@@ -83,7 +86,7 @@
 }
 
 // Extended Avatar color classes
-@if $enable-extend-avatar-colors == true {
+@if $enable-extended-avatar-colors == true {
   @each $name, $hex in $extended-palette-light {
     .c-avatar-#{$name} {
       background-color: $hex;
@@ -142,10 +145,10 @@
 
 
 .c-avatar-xl[data-badge]::after {
-  font-size: $font-body-lg;
+  font-size: $font-size-3;
   min-width: $space-md + $space-xs;
   padding: $space-xxs $space-xs;
   height: $space-md + $space-xs;
-  line-height: $line-height-body-md;
+  line-height: $line-height-xs;
 }
 

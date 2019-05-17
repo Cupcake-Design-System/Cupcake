@@ -1,18 +1,21 @@
-$dark-bg: #0b3a56 !default;
-$dark-foreground: $color-white !default;
+$dark-bg                      : #002b49 !default;
+$dark-foreground              : $color-white !default;
+
 // Dark sidebar
-$sidebar-dark-bg:                        $dark-bg !default;
-$sidebar-dark-color:                     $dark-foreground !default;
-$sidebar-dark-border-color:              rgba($color-white, 0.1) !default;
+$sidebar-dark-bg              : $dark-bg !default;
+$sidebar-dark-color           : $dark-foreground !default;
+$sidebar-dark-border-color    : rgba($color-white, 0.1) !default;
+
 // Dark sidebar navigation styles
-$navigation-dark-color:                     rgba($dark-foreground, 0.9) !default;
-$navigation-dark-hover-bg:                  rgba($color-black, 0.15) !default;
-$navigation-dark-hover-color:               $dark-foreground !default;
-$navigation-dark-active-bg:                 #1c7cd6 !default;
-$navigation-dark-active-color:              $color-white !default;
-$navigation-dark-sub-bg:                    rgba($color-black, 0.15) !default;
-$navigation-dark-sub-active-bg:             rgba($color-black, 0.15) !default;
-$navigation-dark-sub-active-color:          $color-white !default;
+$navigation-dark-color            : rgba($dark-foreground, 0.9) !default;
+$navigation-dark-hover-bg         : rgba($color-black, 0.15) !default;
+$navigation-dark-hover-color      : $dark-foreground !default;
+$navigation-dark-active-bg        : $color-primary-5 !default;
+$navigation-dark-active-icon-color: $color-primary-5 !default;
+$navigation-dark-active-color     : $dark-foreground !default;
+$navigation-dark-sub-bg           : rgba($color-black, 0.15) !default;
+$navigation-dark-sub-active-bg    : rgba($color-black, 0.15) !default;
+$navigation-dark-sub-active-color : $color-white !default;
 
 
 @if $enable-sideNav == true {
@@ -32,6 +35,12 @@ $navigation-dark-sub-active-color:          $color-white !default;
         &:hover {
           color: $navigation-dark-hover-color;
           background-color: $navigation-dark-hover-bg;
+        }
+
+        &-active {
+          .c-sidenav-menu-icon {
+            color: $navigation-dark-active-icon-color;
+          }
         }
       }
 
