@@ -1,106 +1,112 @@
+@mixin checkStyle($size:$checkSize, $color:$checkColor) {
+  $bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath stroke='%23#{$color}' stroke-width='#{$size}' d='M4 8.5L6.5 11l6-6' fill='none' stroke-linecap='square' stroke-linejoin='square'/%3e%3c/svg%3e");
+  
+  background-image: $bg-image;
+}
+
+@mixin radioStyle($size:$checkSize, $color:$checkColor) {
+  $bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23#{$color}'/%3e%3c/svg%3e");
+  
+  background-image: $bg-image;
+}
+
+
 // --------------------------------------------
 // Check Base Mixin ---------------------------
 // --------------------------------------------
 @mixin check($type: check) {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   vertical-align: middle;
-  height: $checkbox-default-size;
+  min-height: $checkbox-default-size;
   transition: $checkbox-transition;
   min-width: $checkbox-default-size;
-  line-height: $checkbox-default-size - 1;
+  line-height: $checkbox-default-size + 1;
 
-  &[disabled] label {
+  &[disabled] {
+    filter: none;
     cursor: not-allowed;
-    color: $checkbox-label-disabled-color;
+
+    input {
+      border-color: $checkbox-bg-disabled;
+      background-color: $checkbox-bg-disabled;
+    }
+
+    label {
+      filter: none;
+      cursor: not-allowed;
+      color: $checkbox-label-disabled-color;
+    }
   }
 
   input {
-    left: 0;
-    opacity: 0;
+    appearance: none;
     z-index: 1;
-    bottom: -1px;
     cursor: pointer;
-    position: absolute;
+    border: $checkbox-bd;
     width: $checkbox-default-size;
     height: $checkbox-default-size;
 
-    @if ($type == radio) {
+    &[type="checkbox"] {
+      border-radius: $checkbox-radius;
+    }
+  
+    &[type="radio"] {
       border-radius: $radius-round;
     }
-
-    @if ($type == check) {
-      &:indeterminate + label {
-        &::before {
-          background: $checkbox-bg-checked;
-          border: 1px solid $checkbox-bg-checked;
-        }
-
-        &::after {
-          top: 48%;
-          left: 3px;
-          width: 10px;
-          content: "";
-          height: 2px;
-          position: absolute;
-          background: $checkbox-bg-empty;
-          border-radius: $checkbox-radius;
-        }
-      }
+  
+    &:active {
+      filter: $form-check-input-active-filter;
+    }
+  
+    &:focus {
+      outline: 0;
+      border-color: $form-check-input-focus-border;
+      box-shadow: $form-check-input-focus-box-shadow;
     }
 
-    &:checked + label::after,
-    &:checked[disabled] + label::after {
-      content: ' ';
-      position: absolute;
-      color: $color-white;
-
-      @if ($type == radio) {
-        top: 4px;
-        left: 4px;
-        width: 8px;
-        height: 8px;
-        display: table;
-        border-radius: $radius-round;
-        background-color: $checkbox-bg-empty;
-      } @else {
-        top: 2px;
-        left: 5px;
-        width: 6px;
-        height: 10px;
-        border-top: 0;
-        border-left: 0;
-        display: table-cell;
-        border-right: 2px solid;
-        transform: rotate(45deg);
-        border-bottom: 2px solid;
-      }
-    }
-
-    &:checked + label::before {
-      border-color: $checkbox-bg-checked;
-      background-color: $checkbox-bg-checked;
-    }
-
-    &[disabled] + label::before {
-      cursor: not-allowed;
-      background: $checkbox-bg-disabled;
+    &[disabled] {
       border-color: $checkbox-bg-disabled;
+      background-color: $checkbox-bg-disabled;
     }
-
-    &:checked[disabled] {
-      + label::before {
-        cursor: not-allowed;
-        background: $checkbox-bg-checked-disabled;
-        border-color: $checkbox-bg-checked-disabled;
+  
+    &:checked {
+      background-color: $checkbox-bg-checked;
+      background-repeat: $form-check-input-checked-bg-repeat;
+      background-position: $form-check-input-checked-bg-position;
+      border-color: $checkbox-bg-checked;
+  
+      &[type="checkbox"] {
+        background-image: $form-check-input-checked-bg-image;
+      }
+  
+      &[type="radio"] {
+        background-image: $form-check-radio-checked-bg-image;
       }
 
-      + label::after {
-        color: $checkbox-checked-color-disabled;
-        @if ($type == radio) {
-          background: $checkbox-checked-color-disabled;
+      &[disabled] {
+        @include checkStyle($color:'333' );
+        
+        border-color: $checkbox-bg-disabled;
+        background-color: $checkbox-bg-disabled;
+
+        &[type="radio"] {
+          @include radioStyle($color:'333' );
         }
       }
+    }
+  
+    &[type="checkbox"]:indeterminate {
+      background-color: $checkbox-bg-checked;
+      background-image: $form-check-input-indeterminate-bg-image;
+      background-repeat: $form-check-input-indeterminate-bg-repeat;
+      background-position: $form-check-input-indeterminate-bg-position;
+      background-size: $form-check-input-indeterminate-bg-size;
+      border-color: $form-check-input-indeterminate-border-color;
+    }
+
+    @if ($type == radio) {
+      border-radius: $radius-round;
     }
   }
 
@@ -110,28 +116,10 @@
     position: relative;
     font-size: $checkbox-label-font-size;
     font-weight: $checkbox-label-font-weight;
+    margin-left: $checkbox-default-size / 2;
 
-    &::before {
-      left: 0;
-      content: "\a0";
-      position: relative;
-      border: $checkbox-bd;
-      display: inline-block;
-      margin-right: $space-sm;
-      width: $checkbox-default-size;
-      height: $checkbox-default-size;
-      background: $checkbox-bg-empty;
-      transition: $checkbox-transition;
-
-      @if ($type == radio) {
-        border-radius: $radius-pill;
-      } @else {
-        border-radius: $checkbox-radius;
-      }
-    }
-
-    &:empty::before {
-      margin-right: $space-0;
+    &:empty {
+      margin-left: $space-0;
     }
   }
 }
@@ -167,7 +155,19 @@
         }
       }
     }
+
+    &:checked {
+      &[type="checkbox"] {
+        @include checkStyle(round($size / 10));
+      }
+  
+      &[type="radio"] {
+        background-image: $form-check-radio-checked-bg-image;
+      }
+    }
   }
+
+  
 
   label {
     font-size: $size - 4;
@@ -190,25 +190,9 @@
 // --------------------------------------------
 @mixin check-color($bg: $checkbox-bg-checked, $type: check) {
   input {
-    @if ($type == check) {
-      &:checked + label::before {
-        border-color: $bg;
-        background-color: $bg;
-      }
-
-      &:indeterminate + label::before {
-        background: $bg;
-        border: 1px solid $bg;
-      }
-    } @else if ($type == radio) {
-      &:checked + label::before {
-        border-color: $bg;
-        background-color: $bg;
-      }
-
-      &:checked + label::after {
-        background-color: $color-white;
-      }
+    &:checked {
+      background-color: $bg;
+      border-color: $bg;
     }
   }
 }

@@ -1,3 +1,35 @@
+
+
+$form-check-input-active-filter:          brightness(90%) !default;
+
+$form-check-input-bg:                     white !default;
+$form-check-input-border:                 1px solid rgba(0, 0, 0, .25) !default;
+$form-check-input-border-radius:          .25em !default;
+$form-check-radio-border-radius:          50% !default;
+$form-check-input-focus-border:           $color-primary !default;
+$form-check-input-focus-box-shadow:       none !default;
+
+$form-check-input-checked-color:          white !default;
+$form-check-input-checked-bg-color:       $color-primary !default;
+$form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
+$form-check-input-checked-bg-repeat:      no-repeat !default;
+$form-check-input-checked-bg-position:    center center !default;
+
+
+$checkSize: '3';
+$checkColor: 'fff';
+$form-check-input-checked-bg-image:       url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath stroke='%23#{$checkColor}' stroke-width='#{$checkSize}' d='M4 8.5L6.5 11l6-6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") !default;
+$form-check-radio-checked-bg-image:       url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e") !default;
+
+$form-check-input-indeterminate-color:          $color-primary-2 !default;
+$form-check-input-indeterminate-bg-color:       $color-primary !default;
+$form-check-input-indeterminate-border-color:   $form-check-input-indeterminate-bg-color !default;
+$form-check-input-indeterminate-bg-repeat:      no-repeat !default;
+$form-check-input-indeterminate-bg-position:    center center !default;
+$form-check-input-indeterminate-bg-size:        14px !default;
+$form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath d='M5 8h6' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") !default;
+
+
 // Checkbox
 .c-checkbox {
   @include check(check);
