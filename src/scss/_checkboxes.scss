@@ -32,7 +32,7 @@ $form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,%3csvg x
 
 // Checkbox
 .c-checkbox {
-  @include check(check);
+  @include check();
 
   // Color loop
   @each $name, $color in $theme-colors {
@@ -51,7 +51,7 @@ $form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,%3csvg x
 
 // Radios
 .c-radio {
-  @include check(radio);
+  @include check();
 
   // Color loop
   @each $name, $color in $theme-colors {

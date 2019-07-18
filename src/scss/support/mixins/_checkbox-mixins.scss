@@ -14,7 +14,7 @@
 // --------------------------------------------
 // Check Base Mixin ---------------------------
 // --------------------------------------------
-@mixin check($type: check) {
+@mixin check() {
   position: relative;
   display: inline-flex;
   vertical-align: middle;
@@ -104,10 +104,6 @@
       background-size: $form-check-input-indeterminate-bg-size;
       border-color: $form-check-input-indeterminate-border-color;
     }
-
-    @if ($type == radio) {
-      border-radius: $radius-round;
-    }
   }
 
   label {
@@ -137,25 +133,6 @@
     width: $size;
     height: $size;
 
-    &:checked + label::after,
-    &:checked[disabled] + label::after {
-      @if ($type == radio) {
-        top: round($size / 4);
-        left: round($size / 4);
-        width: round($size / 2);
-        height: round($size / 2);
-      } @else {
-        top: round($size / 6);
-        left: round($size / 3);
-        width: round($size / 3);
-        height: round($size / 2) + 2;
-        @if $type == check and $size >= 26px {
-          border-right: 3px solid;
-          border-bottom: 3px solid;
-        }
-      }
-    }
-
     &:checked {
       &[type="checkbox"] {
         @include checkStyle(round($size / 10));
@@ -166,8 +143,6 @@
       }
     }
   }
-
-  
 
   label {
     font-size: $size - 4;
