@@ -418,10 +418,15 @@ $checkbox-bg-disabled           : $global-bg-disabled !default;
 $checkbox-label-disabled-color  : $global-text-color-lighter !default;
 $checkbox-label-font-size       : $font-size-2 !default;
 $checkbox-label-font-weight     : $font-weight-normal !default;
+$checkbox-focus-border          : $color-primary !default;
+$checkbox-focus-box-shadow      : none !default;
 $checkbox-bg-checked            : $color-primary !default;
 $checkbox-bg-checked-disabled   : $global-text-color-light !default;
 $checkbox-transition            : background 0.2s !default;
 $checkbox-checked-color-disabled: $color-gray-2 !default;
+$radio-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e") !default;
+$checkbox-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath stroke='%23fff' stroke-width='3' d='M4 8.5L6.5 11l6-6' fill='none' stroke-linecap='square' stroke-linejoin='square'/%3e%3c/svg%3e") !default;
+$checkbox-indeterminate-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath d='M5 8h6' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='square' stroke-linejoin='square'/%3e%3c/svg%3e") !default;
 
 // Set the checkbox sizes for checkboxes - .c-checkbox-{{size}}.
 // This map is looped - adding key/value pairs will generate more classes

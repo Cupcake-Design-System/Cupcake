@@ -1,25 +1,25 @@
 // Checkbox
 .c-checkbox {
-  @include check(check);
+  @include check();
 
   // Color loop
   @each $name, $color in $theme-colors {
     &.c-checkbox-#{$name} {
-      @include check-color($color, check);
+      @include check-color($color);
     }
   }
 
   // Sizing loop
   @each $name, $size in $checkbox-sizes {
     &.c-checkbox-#{$name} {
-      @include check-size($size, $type: check);
+      @include check-size($size);
     }
   }
 }
 
 // Radios
 .c-radio {
-  @include check(radio);
+  @include check();
 
   // Color loop
   @each $name, $color in $theme-colors {
@@ -31,7 +31,7 @@
   // Sizing loop
   @each $name, $size in $checkbox-sizes {
     &.c-radio-#{$name} {
-      @include check-size($size, $type: radio);
+      @include check-size($size);
     }
   }
 }
