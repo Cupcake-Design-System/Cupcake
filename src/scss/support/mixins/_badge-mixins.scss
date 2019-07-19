@@ -8,21 +8,21 @@
   text-decoration: none;
   vertical-align: middle;
   background: $color-black;
-  height: $badge-default-size;
-  font-family: $badge-font-family;
-  padding: $badge-default-padding;
-  font-size: $badge-default-font-size;
-  font-weight: $badge-default-font-weight;
-  line-height: $badge-default-line-height;
-  border-radius: $badge-default-border-radius;
+  height: $badge-size;
+  font-family: $badge-font;
+  padding: $badge-padding;
+  font-size: $badge-font-size;
+  font-weight: $badge-font-weight;
+  line-height: $badge-line-height;
+  border-radius: $badge-border-radius;
 
   &:empty {
     padding: $space-0;
     display: inline-block;
     vertical-align: inherit;
     border-radius: $radius-round;
-    width: ($badge-default-size / 2);
-    height: ($badge-default-size / 2);
+    width: ($badge-size / 2);
+    height: ($badge-size / 2);
   }
 
 
@@ -32,7 +32,7 @@
 
     margin-left: $space-xs;
     margin-right: -$space-xs;
-    border-radius: $badge-default-border-radius;
+    border-radius: $badge-border-radius;
   }
 
   i {
@@ -45,8 +45,8 @@
 // Badge Size Mixin ---------------------------
 // --------------------------------------------
 @mixin badge-size(
-  $size: $badge-default-size,
-  $font-size: $badge-default-font-size) {
+  $size: $badge-size,
+  $font-size: $badge-font-size) {
   height: $size;
   min-width: $size;
   font-size: $font-size;
