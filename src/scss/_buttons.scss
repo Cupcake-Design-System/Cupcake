@@ -100,7 +100,7 @@
 }
 
 // Button shapes
-@if $enable-outline-buttons == true {
+@if $enable-btn-outline == true {
   @each $name, $hex in $theme-colors {
     .c-btn-#{$name}-outline {
       @include btn-outline($hex);
@@ -113,19 +113,19 @@
   }
 }
 
-@if $enable-circle-buttons == true {
+@if $enable-btn-circle == true {
   .c-btn-circle {
     border-radius: $radius-round;
   }
 }
 
-@if $enable-square-buttons == true {
+@if $enable-btn-square == true {
   .c-btn-square {
     border-radius: $radius-0;
   }
 }
 
-@if $enable-pill-buttons == true {
+@if $enable-btn-pill == true {
   .c-btn-pill {
     border-radius: $radius-pill;
   }

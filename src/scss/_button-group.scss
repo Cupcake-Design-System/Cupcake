@@ -45,7 +45,7 @@
 }
 
 // Button groups pill shape
-@if $enable-pill-buttons == true {
+@if $enable-btn-pill == true {
   .c-btn-group {
     .c-btn-pill {
       &:first-child {
