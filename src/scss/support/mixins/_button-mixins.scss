@@ -128,6 +128,7 @@
 
   @if $enable-btn-gradients == true {
     background: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
+    transition: none;
   } @else {
     background: $bg;
   }
@@ -154,12 +155,12 @@
   @if $enable-btn-white-label == true {
     &:hover {
       background-color: lighten($bg, 5%);
-      background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
+      background-image: radial-gradient(farthest-corner, rgba(255, 255, 255, .15), rgba(255, 255, 255, .1));
     }
   } @else {
     &:hover {
       background-color: $bg-hover;
-      background-image: none;
+      background-image: radial-gradient(farthest-corner, rgba(255, 255, 255, .15), rgba(255, 255, 255, .1));
     }
   }
 
