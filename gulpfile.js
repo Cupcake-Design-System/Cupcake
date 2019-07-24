@@ -31,6 +31,7 @@ const files = {
   scssPath: 'src/scss/',
   cssPath: 'dist/*.css',
   distPath: 'dist/',
+  fontPath: 'dist/fonts/',
   scssDocsPath: 'src/docs/demo.scss',
   htmlPath: 'src/docs/**/*.html',
   jsPath: 'src/docs/assets/js/*.js'
@@ -41,6 +42,17 @@ function cleanTask() {
   return del([files.distPath]);
 }
 
+function fontTask() {
+  return gulp.src(['./node_modules/source-sans-pro/**/SourceSansPro-It.*',
+  './node_modules/source-sans-pro/**/SourceSansPro-Light.*',
+  './node_modules/source-sans-pro/**/SourceSansPro-LightIt.*',
+  './node_modules/source-sans-pro/**/SourceSansPro-Regular.*',
+  './node_modules/source-sans-pro/**/SourceSansPro-Semibold.*',
+  './node_modules/source-sans-pro/**/SourceSansPro-SemiboldIt.*',
+  '!./node_modules/source-sans-pro/package.json'])
+  .pipe(gulp.dest(files.fontPath))
+  .pipe(browserSync.reload({ stream: true }));
+}
 
 // HTML
 // ------------------
@@ -139,11 +151,12 @@ exports.prod = gulp.series(
   htmlTask,
   jsTask,
   scssTask,
+  fontTask,
   prodCSS
 );
 
 exports.default = gulp.series(cleanTask,
-  gulp.parallel(scssTask, scssDocsTask, htmlTask, jsTask),
+  gulp.parallel(fontTask, scssTask, scssDocsTask, htmlTask, jsTask),
   serveTask,
   watchTask
 );
