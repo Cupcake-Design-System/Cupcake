@@ -12,5 +12,24 @@ $color-primary-9: #055350;
 
 $color-primary: #007778;
 
+
+$alert-config: (
+  'font'             : Arial,
+  'radius'           : 40px,
+  'border'           : 4px solid
+);
+
+$button-config: (
+  'gradients'    : true,
+  'border'       : true,
+  'white-label'  : true,
+  'radius'       : 5px,
+  'default-c'    : white,
+  'font-weight'  : 300,
+  'shadow'       : false,
+  'active-shadow': none
+);
+
+
 // Cupcake Core
 @import 'cupcake';
