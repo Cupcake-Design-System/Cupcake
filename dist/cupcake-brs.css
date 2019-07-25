@@ -64,7 +64,7 @@
 }
 
 html {
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   /* Make type rendering look crisper */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -78,7 +78,7 @@ html {
 }
 
 body {
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 17px;
   color: #727679;
   padding: 0;
@@ -626,7 +626,7 @@ th {
   background: #2c2e32;
   font-size: 12px;
   font-weight: 600;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   border-radius: 200px;
 }
 
@@ -961,7 +961,7 @@ th {
           align-items: flex-start;
   font-size: 12px;
   border-radius: 2px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 16px;
 }
@@ -1131,7 +1131,7 @@ th {
   vertical-align: middle;
   background: #000000;
   height: 24px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   padding: 0 8px;
   font-size: 11px;
   font-weight: 600;
@@ -1744,7 +1744,7 @@ th {
   vertical-align: baseline;
   border-radius: 2px;
   font-weight: 700;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   -webkit-transition: background-color 0.1s ease-in;
   transition: background-color 0.1s ease-in;
   height: 44px;
@@ -1908,7 +1908,7 @@ th {
   vertical-align: baseline;
   border-radius: 2px;
   font-weight: 700;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   -webkit-transition: background-color 0.1s ease-in;
   transition: background-color 0.1s ease-in;
   -webkit-box-shadow: none;
@@ -2358,7 +2358,7 @@ th {
   background-color: transparent;
   font-size: 12px;
   font-weight: 700;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .c-breadcrumb-item {
@@ -2437,7 +2437,7 @@ th {
   background-color: #ffffff;
   min-width: 0;
   background-clip: border-box;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 12px;
   border-radius: 2px;
   -webkit-transition: all .1s ease-in-out 0s;
@@ -2523,7 +2523,7 @@ th {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   font-weight: normal;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 12px;
   padding: 12px 16px;
 }
@@ -3099,7 +3099,7 @@ th {
   border: 1px solid #e9ecef;
   background: #ffffff;
   z-index: 1700;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   -webkit-box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1);
           box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1);
   margin: 0;
@@ -3249,7 +3249,7 @@ th {
   transition: border-color 0.1s ease-in;
   font-weight: 300;
   line-height: 1.47;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   padding: 0 10px;
   border-radius: 0;
   background-color: white;
@@ -3380,7 +3380,7 @@ th {
   font-size: 17px;
   font-weight: 700;
   padding: 5px 0;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .c-input-icon {
@@ -3530,7 +3530,7 @@ textarea.c-input {
   font-size: 17px;
   font-weight: 700;
   padding: 5px 0;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   /* stylelint-disable */
   padding: 0.3em 0;
   /* stylelint-enable */
@@ -3804,7 +3804,7 @@ textarea.c-input {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-top: 1px solid #e9ecef;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   background-color: #f0f1f1;
 }
 
@@ -7281,7 +7281,7 @@ select.c-input:not([multiple]) {
   height: 44px;
   border: 1px solid #dbdddd;
   font-size: 17px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   padding: 0 10px;
   padding-right: 24px;
   font-weight: 300;
@@ -8199,7 +8199,7 @@ select.c-input-error:not([multiple]) option {
   font-size: 12px;
   -webkit-box-shadow: inset 0 -1px 0 0 #e9ecef;
           box-shadow: inset 0 -1px 0 0 #e9ecef;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -8392,7 +8392,7 @@ table.c-table-layout-fixed {
 
 .c-table tbody {
   font-size: 12px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .c-table thead {
@@ -8400,7 +8400,7 @@ table.c-table-layout-fixed {
   vertical-align: bottom;
   color: #212529;
   background: #f8f9fa;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   border-color: #dbdddd;
   border-width: 1px 0;
 }
@@ -8612,7 +8612,7 @@ table.c-table .c-table-row-cell-draggable:hover {
 .c-body-text {
   font-size: md;
   line-height: md;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #57595b;
 }
@@ -8620,42 +8620,42 @@ table.c-table .c-table-row-cell-draggable:hover {
 .c-text-xs {
   font-size: 10px;
   line-height: 16px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .c-text-sm {
   font-size: 11px;
   line-height: 16px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .c-text-md {
   font-size: 12px;
   line-height: 16px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .c-text-lg {
   font-size: 14px;
   line-height: 24px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .c-text-xl {
   font-size: 16px;
   line-height: 24px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .c-text-xxl {
   font-size: 18px;
   line-height: 24px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -8806,42 +8806,42 @@ table.c-table .c-table-row-cell-draggable:hover {
 .c-header-xs {
   font-size: 12px;
   line-height: 16px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .c-header-sm {
   font-size: 14px;
   line-height: 24px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .c-header-md {
   font-size: 16px;
   line-height: 24px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .c-header-lg {
   font-size: 20px;
   line-height: 24px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .c-header-xl {
   font-size: 24px;
   line-height: 31px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .c-header-xxl {
   font-size: 37px;
   line-height: 48px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -8907,7 +8907,7 @@ table.c-table .c-table-row-cell-draggable:hover {
 ol.c-ol {
   font-size: lg;
   line-height: md;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -8928,7 +8928,7 @@ ol.c-ol li ol {
 ul.c-ul {
   font-size: lg;
   line-height: md;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -8955,7 +8955,7 @@ ol.c-ol-unstyled,
 ol.c-ol-unstyled li {
   font-size: lg;
   line-height: md;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -9410,7 +9410,7 @@ ol.c-ol-unstyled ol {
   word-wrap: break-word;
   border: 1px solid #e9ecef;
   padding: 16px 16px 16px 20px;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   -webkit-box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1);
           box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1);
   font-size: 12px;
@@ -13583,10 +13583,6 @@ ol.c-ol-unstyled ol {
   clear: both;
 }
 
-.c-btn {
-  border-radius: 5px;
-}
-
 .c-btn-primary {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#00ab4e), to(#009697));
   background-image: linear-gradient(to top, #00ab4e, #009697);
@@ -13607,15 +13603,7 @@ ol.c-ol-unstyled ol {
 
 .c-modal-header {
   background-color: #2c2e32;
-  color: white;
   height: 60px;
-}
-
-.c-modal-close::before,
-.c-modal-close::after,
-.c-modal-close:hover::before,
-.c-modal-close:hover::after {
-  background-color: white;
 }
 
 /*# sourceMappingURL=maps/cupcake-brs.css.map */
