@@ -48,7 +48,7 @@ $docs-spacer-xxl: space(xl) + space(md);
     padding: 0 $docs-spacer-sm;
     margin: $docs-spacer-sm 0;
     font-weight: $font-weight-bold;
-    font-family: $font-family-sans;
+    font-family: $font-family;
     border: 1px solid $color-gray-1;
     line-height: $line-height-sm;
   }
@@ -131,7 +131,7 @@ $docs-spacer-xxl: space(xl) + space(md);
     text-transform: uppercase;
     padding: 0 $docs-spacer-sm;
     margin-top: $docs-spacer-lg;
-    font-family: $font-family-sans;
+    font-family: $font-family;
     margin-bottom: $docs-spacer-md;
     line-height: $line-height-xs;
 
@@ -152,7 +152,7 @@ $docs-spacer-xxl: space(xl) + space(md);
   &-item {
     color: $text;
     font-size: $font-size-3;
-    font-family: $font-family-sans;
+    font-family: $font-family;
 
     a {
       color: $text;
