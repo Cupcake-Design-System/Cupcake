@@ -64,7 +64,7 @@
 }
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   /* Make type rendering look crisper */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -78,7 +78,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-size: 17px;
   color: #727679;
   padding: 0;
@@ -626,7 +626,7 @@ th {
   background: #2c2e32;
   font-size: 12px;
   font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   border-radius: 200px;
 }
 
@@ -754,32 +754,32 @@ th {
 
 .c-avatar-lg {
   font-size: 14px;
-  height: 40px;
-  width: 40px;
+  height: 44px;
+  width: 44px;
 }
 
 .c-avatar-lg i {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .c-avatar-lg[data-status]::after {
-  height: 10px;
-  min-width: 10px;
+  height: 11px;
+  min-width: 11px;
 }
 
 .c-avatar-xl {
   font-size: 24px;
-  height: 80px;
-  width: 80px;
+  height: 88px;
+  width: 88px;
 }
 
 .c-avatar-xl i {
-  font-size: 40px;
+  font-size: 44px;
 }
 
 .c-avatar-xl[data-status]::after {
-  height: 20px;
-  min-width: 20px;
+  height: 22px;
+  min-width: 22px;
 }
 
 .c-avatar-secondary {
@@ -946,11 +946,10 @@ th {
 }
 
 .c-alert {
-  color: #212529;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: left;
   position: relative;
   background-color: rgba(0, 160, 111, 0.07);
   border: 1px solid;
@@ -960,8 +959,9 @@ th {
       -ms-flex-align: start;
           align-items: flex-start;
   font-size: 12px;
+  text-align: center;
   border-radius: 2px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 16px;
 }
@@ -989,7 +989,7 @@ th {
 }
 
 .c-alert-close:hover::before, .c-alert-close:hover::after {
-  background: #383f45;
+  background: white;
 }
 
 .c-alert-close::before, .c-alert-close::after {
@@ -998,7 +998,7 @@ th {
   height: 2px;
   width: 100%;
   top: 50%;
-  background: #212529;
+  background: white;
 }
 
 .c-alert-close::before {
@@ -1012,9 +1012,9 @@ th {
 }
 
 .c-alert-title {
-  font-size: 12px;
+  font-size: 17px;
   line-height: 19px;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 .c-alert-content {
@@ -1048,9 +1048,8 @@ th {
 }
 
 .c-alert-primary {
-  background-color: rgba(0, 160, 111, 0.08);
+  background-color: #edfff9;
   border-color: #00a06f;
-  color: #00a06f;
 }
 
 .c-alert-primary .c-alert-close:hover::before, .c-alert-primary .c-alert-close:hover::after {
@@ -1066,9 +1065,8 @@ th {
 }
 
 .c-alert-success {
-  background-color: rgba(47, 158, 68, 0.08);
+  background-color: #ebfbee;
   border-color: #2f9e44;
-  color: #2f9e44;
 }
 
 .c-alert-success .c-alert-close:hover::before, .c-alert-success .c-alert-close:hover::after {
@@ -1084,9 +1082,8 @@ th {
 }
 
 .c-alert-warning {
-  background-color: rgba(247, 133, 21, 0.08);
+  background-color: #fff9db;
   border-color: #f78515;
-  color: #f78515;
 }
 
 .c-alert-warning .c-alert-close:hover::before, .c-alert-warning .c-alert-close:hover::after {
@@ -1102,21 +1099,20 @@ th {
 }
 
 .c-alert-danger {
-  background-color: rgba(238, 47, 83, 0.08);
-  border-color: #ee2f53;
-  color: #ee2f53;
+  background-color: #ee2f53;
+  border-color: white;
 }
 
 .c-alert-danger .c-alert-close:hover::before, .c-alert-danger .c-alert-close:hover::after {
-  background: #f25e7a;
+  background: white;
 }
 
 .c-alert-danger .c-alert-close::before, .c-alert-danger .c-alert-close::after {
-  background: #ee2f53;
+  background: white;
 }
 
 .c-alert-danger .c-alert-icon {
-  color: #ee2f53;
+  color: white;
 }
 
 .c-badge {
@@ -1131,7 +1127,7 @@ th {
   vertical-align: middle;
   background: #000000;
   height: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   padding: 0 8px;
   font-size: 11px;
   font-weight: 600;
@@ -1742,15 +1738,15 @@ th {
   text-decoration: none;
   display: inline-block;
   vertical-align: baseline;
-  border-radius: 2px;
-  font-weight: 700;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  border-radius: 5px;
+  font-weight: normal;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   -webkit-transition: background-color 0.1s ease-in;
   transition: background-color 0.1s ease-in;
-  height: 44px;
-  padding: 0 24px;
-  font-size: 17px;
-  line-height: 42px;
+  height: 32px;
+  padding: 0 16px;
+  font-size: 12px;
+  line-height: 30px;
 }
 
 .c-btn:active, .c-btn-active {
@@ -1889,10 +1885,10 @@ th {
 }
 
 .c-btn-lg {
-  height: 40px;
-  padding: 0 32px;
-  font-size: 14px;
-  line-height: 38px;
+  height: 44px;
+  padding: 0 24px;
+  font-size: 17px;
+  line-height: 42px;
 }
 
 .c-btn-link {
@@ -1906,9 +1902,9 @@ th {
   text-decoration: none;
   display: inline-block;
   vertical-align: baseline;
-  border-radius: 2px;
-  font-weight: 700;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  border-radius: 5px;
+  font-weight: normal;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   -webkit-transition: background-color 0.1s ease-in;
   transition: background-color 0.1s ease-in;
   -webkit-box-shadow: none;
@@ -1918,11 +1914,11 @@ th {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   border: 1px solid transparent;
-  font-weight: 700;
-  height: 44px;
-  padding: 0 24px;
-  font-size: 17px;
-  line-height: 42px;
+  font-weight: normal;
+  height: 32px;
+  padding: 0 16px;
+  font-size: 12px;
+  line-height: 30px;
 }
 
 .c-btn-link:hover {
@@ -1967,10 +1963,10 @@ th {
 }
 
 .c-btn-link-lg {
-  height: 40px;
-  padding: 0 32px;
-  font-size: 14px;
-  line-height: 38px;
+  height: 44px;
+  padding: 0 24px;
+  font-size: 17px;
+  line-height: 42px;
 }
 
 .c-btn-link-primary {
@@ -2191,7 +2187,7 @@ th {
 .c-btn-icon.c-btn-lg,
 .c-btn-circle.c-btn-lg,
 .c-btn-box.c-btn-lg {
-  width: 40px;
+  width: 44px;
 }
 
 .c-btn-icon {
@@ -2329,8 +2325,8 @@ th {
 }
 
 .c-btn-group-lg .c-btn-box {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   text-align: center;
 }
 
@@ -2358,7 +2354,7 @@ th {
   background-color: transparent;
   font-size: 12px;
   font-weight: 700;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
 }
 
 .c-breadcrumb-item {
@@ -2437,7 +2433,7 @@ th {
   background-color: #ffffff;
   min-width: 0;
   background-clip: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-size: 12px;
   border-radius: 2px;
   -webkit-transition: all .1s ease-in-out 0s;
@@ -2523,7 +2519,7 @@ th {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   font-weight: normal;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-size: 12px;
   padding: 12px 16px;
 }
@@ -2690,8 +2686,8 @@ th {
 }
 
 .c-checkbox input:indeterminate + label::before {
-  background: #00a06f;
-  border: 1px solid #00a06f;
+  background: #2c2e32;
+  border: 1px solid #2c2e32;
 }
 
 .c-checkbox input:indeterminate + label::after {
@@ -2724,8 +2720,8 @@ th {
 }
 
 .c-checkbox input:checked + label::before {
-  border-color: #00a06f;
-  background-color: #00a06f;
+  border-color: #2c2e32;
+  background-color: #2c2e32;
 }
 
 .c-checkbox input[disabled] + label::before {
@@ -2756,7 +2752,7 @@ th {
   left: 0;
   content: "\a0";
   position: relative;
-  border: 1px solid #727679;
+  border: 1px solid #a1a2a3;
   display: inline-block;
   margin-right: 8px;
   width: 16px;
@@ -2812,26 +2808,26 @@ th {
 }
 
 .c-checkbox.c-checkbox-lg {
-  height: 24px;
-  min-width: 24px;
-  line-height: 23px;
+  height: 20px;
+  min-width: 20px;
+  line-height: 19px;
 }
 
 .c-checkbox.c-checkbox-lg input {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .c-checkbox.c-checkbox-lg input:checked + label::after,
 .c-checkbox.c-checkbox-lg input:checked[disabled] + label::after {
-  top: 4px;
-  left: 8px;
-  width: 8px;
-  height: 14px;
+  top: 3px;
+  left: 7px;
+  width: 7px;
+  height: 12px;
 }
 
 .c-checkbox.c-checkbox-lg label {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .c-checkbox.c-checkbox-lg label:empty::before {
@@ -2839,9 +2835,9 @@ th {
 }
 
 .c-checkbox.c-checkbox-lg label::before {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
 }
 
 .c-checkbox.c-checkbox-xl {
@@ -2922,8 +2918,8 @@ th {
 }
 
 .c-radio input:checked + label::before {
-  border-color: #00a06f;
-  background-color: #00a06f;
+  border-color: #2c2e32;
+  background-color: #2c2e32;
 }
 
 .c-radio input[disabled] + label::before {
@@ -2955,7 +2951,7 @@ th {
   left: 0;
   content: "\a0";
   position: relative;
-  border: 1px solid #727679;
+  border: 1px solid #a1a2a3;
   display: inline-block;
   margin-right: 8px;
   width: 16px;
@@ -3007,26 +3003,26 @@ th {
 }
 
 .c-radio.c-radio-lg {
-  height: 24px;
-  min-width: 24px;
-  line-height: 23px;
+  height: 20px;
+  min-width: 20px;
+  line-height: 19px;
 }
 
 .c-radio.c-radio-lg input {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .c-radio.c-radio-lg input:checked + label::after,
 .c-radio.c-radio-lg input:checked[disabled] + label::after {
-  top: 6px;
-  left: 6px;
-  width: 12px;
-  height: 12px;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
 }
 
 .c-radio.c-radio-lg label {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .c-radio.c-radio-lg label:empty::before {
@@ -3034,9 +3030,9 @@ th {
 }
 
 .c-radio.c-radio-lg label::before {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
 }
 
 .c-radio.c-radio-xl {
@@ -3099,7 +3095,7 @@ th {
   border: 1px solid #e9ecef;
   background: #ffffff;
   z-index: 1700;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   -webkit-box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1);
           box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1);
   margin: 0;
@@ -3241,7 +3237,7 @@ th {
           appearance: none;
   color: #57595b;
   border: 1px solid #dbdddd;
-  height: 44px;
+  height: 32px;
   -webkit-box-shadow: none;
           box-shadow: none;
   font-size: 17px;
@@ -3249,7 +3245,7 @@ th {
   transition: border-color 0.1s ease-in;
   font-weight: 300;
   line-height: 1.47;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   padding: 0 10px;
   border-radius: 0;
   background-color: white;
@@ -3316,11 +3312,11 @@ th {
 .c-input:focus, .c-input.c-input-focus {
   -webkit-box-shadow: inset 0 1px 2px 0 rgba(33, 37, 41, 0.08);
           box-shadow: inset 0 1px 2px 0 rgba(33, 37, 41, 0.08);
-  border-color: #00a06f;
+  border-color: #57595b;
 }
 
 .c-input:focus-within {
-  border-color: #00a06f;
+  border-color: #57595b;
 }
 
 .c-input[disabled], .c-input[disabled]:hover, .c-input-disabled, .c-input-disabled:hover {
@@ -3329,7 +3325,7 @@ th {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-color: transparent;
-  background-color: #dbdddd;
+  background-color: #f0f1f1;
 }
 
 .c-input[disabled]::-webkit-input-placeholder, .c-input[disabled]:hover::-webkit-input-placeholder, .c-input-disabled::-webkit-input-placeholder, .c-input-disabled:hover::-webkit-input-placeholder {
@@ -3380,7 +3376,7 @@ th {
   font-size: 17px;
   font-weight: 700;
   padding: 5px 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
 }
 
 .c-input-icon {
@@ -3410,13 +3406,13 @@ th {
 }
 
 .c-input-icon-lg {
-  font-size: 16px;
-  left: 12px;
-  top: 12px;
+  font-size: 17px;
+  left: 13px;
+  top: 13px;
 }
 
 .c-input-icon-lg + .c-input:not([multiple]) {
-  padding-left: 40px;
+  padding-left: 44px;
 }
 
 textarea.c-input {
@@ -3429,7 +3425,7 @@ textarea.c-input {
 }
 
 .c-input-primary:focus {
-  border-color: #00a06f;
+  border-color: #57595b;
 }
 
 .c-input-primary ~ .c-input-icon {
@@ -3441,7 +3437,7 @@ textarea.c-input {
 }
 
 .c-input-success:focus {
-  border-color: #00a06f;
+  border-color: #57595b;
 }
 
 .c-input-success ~ .c-input-icon {
@@ -3453,7 +3449,7 @@ textarea.c-input {
 }
 
 .c-input-warning:focus {
-  border-color: #00a06f;
+  border-color: #57595b;
 }
 
 .c-input-warning ~ .c-input-icon {
@@ -3465,7 +3461,7 @@ textarea.c-input {
 }
 
 .c-input-danger:focus, .c-input-error:focus {
-  border-color: #00a06f;
+  border-color: #57595b;
 }
 
 .c-input-danger ~ .c-input-icon, .c-input-error ~ .c-input-icon {
@@ -3483,13 +3479,13 @@ textarea.c-input {
 }
 
 .c-input-lg {
-  font-size: 16px;
-  height: 40px;
-  padding: 0 8px;
+  font-size: 17px;
+  height: 44px;
+  padding: 0 10px;
 }
 
 .c-input-label-lg {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .c-input-addon {
@@ -3530,7 +3526,7 @@ textarea.c-input {
   font-size: 17px;
   font-weight: 700;
   padding: 5px 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   /* stylelint-disable */
   padding: 0.3em 0;
   /* stylelint-enable */
@@ -3542,7 +3538,7 @@ textarea.c-input {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-color: transparent;
-  background-color: #dbdddd;
+  background-color: #f0f1f1;
 }
 
 .c-fieldset:disabled .c-input::-webkit-input-placeholder, .c-fieldset-disabled .c-input::-webkit-input-placeholder {
@@ -3804,7 +3800,7 @@ textarea.c-input {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-top: 1px solid #e9ecef;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   background-color: #f0f1f1;
 }
 
@@ -6492,7 +6488,7 @@ textarea.c-input {
   min-height: 1px;
   position: relative;
   color: #57595b;
-  padding: 20px;
+  padding: 30px 20px;
   font-size: 12px;
   line-height: 16px;
 }
@@ -7106,11 +7102,11 @@ textarea.c-input {
 }
 
 .c-nav-lg .c-nav-item {
-  height: 40px;
+  height: 44px;
 }
 
 .c-nav-lg .c-nav-link {
-  line-height: 40px;
+  line-height: 44px;
   font-size: 14px;
   padding: 0 24px;
 }
@@ -7278,10 +7274,10 @@ select.c-input:not([multiple]) {
      -moz-appearance: none;
           appearance: none;
   color: #57595b;
-  height: 44px;
+  height: 32px;
   border: 1px solid #dbdddd;
   font-size: 17px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   padding: 0 10px;
   padding-right: 24px;
   font-weight: 300;
@@ -7319,7 +7315,7 @@ select.c-input:not([multiple]):hover {
 }
 
 select.c-input:not([multiple]):active:focus, select.c-input:not([multiple]).c-input-active:focus, select.c-input:not([multiple]).c-select-active:focus {
-  border-color: #00a06f;
+  border-color: #57595b;
   outline: none;
 }
 
@@ -7329,8 +7325,8 @@ select.c-input:not([multiple]):disabled, select.c-input:not([multiple]):disabled
   -webkit-box-shadow: none;
           box-shadow: none;
   border-color: transparent;
-  background-color: #dbdddd;
-  background: #dbdddd url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAABGdBTUEAALGPC/xhBQAAAK9JREFUOBHlkj0OgzAMRmNxMcTQoVdhZGRoGDp27FU6MCA4WeovUhA/tkNmIlkkwe8Nzuecsd6f7wtltLhK+wmQiDxX3Tyebhp/i9QrChKcAEtyEhzhnGQn0GBLsgpysCaJgquwJKFSOEnwDSH47fmuewwRcTXzrg2HhzhUnPGZs84OqrVG6R5w37U+5qBUkmCI1yRelWzhnQCHnOQInwSWRIJFgSTRYPSaC0+Mspr+0vx1PtB1wpUAAAAASUVORK5CYII = ") no-repeat right 8px center;
+  background-color: #f0f1f1;
+  background: #f0f1f1 url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAABGdBTUEAALGPC/xhBQAAAK9JREFUOBHlkj0OgzAMRmNxMcTQoVdhZGRoGDp27FU6MCA4WeovUhA/tkNmIlkkwe8Nzuecsd6f7wtltLhK+wmQiDxX3Tyebhp/i9QrChKcAEtyEhzhnGQn0GBLsgpysCaJgquwJKFSOEnwDSH47fmuewwRcTXzrg2HhzhUnPGZs84OqrVG6R5w37U+5qBUkmCI1yRelWzhnQCHnOQInwSWRIJFgSTRYPSaC0+Mspr+0vx1PtB1wpUAAAAASUVORK5CYII = ") no-repeat right 8px center;
   box-shadow: none;
   cursor: not-allowed;
   background-size: 8px 10px;
@@ -7367,13 +7363,13 @@ select.c-input:not([multiple]).c-input-sm {
 }
 
 select.c-input:not([multiple]).c-input-lg {
-  height: 40px;
+  height: 44px;
   padding-right: 24px;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .c-input-icon-lg + select.c-input:not([multiple]) {
-  padding-left: 40px;
+  padding-left: 44px;
 }
 
 select.c-input-error:not([multiple]) {
@@ -8199,7 +8195,7 @@ select.c-input-error:not([multiple]) option {
   font-size: 12px;
   -webkit-box-shadow: inset 0 -1px 0 0 #e9ecef;
           box-shadow: inset 0 -1px 0 0 #e9ecef;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -8360,17 +8356,17 @@ select.c-input-error:not([multiple]) option {
 }
 
 .c-tabs-lg {
-  height: 40px;
+  height: 44px;
 }
 
 .c-tabs-lg .c-tab-item-link {
-  height: 40px;
+  height: 44px;
   font-size: 14px;
   padding: 8px 16px;
 }
 
 .c-tabs-lg.c-tabs-bordered .c-tab-item {
-  height: 40px;
+  height: 44px;
 }
 
 table.c-table {
@@ -8392,7 +8388,7 @@ table.c-table-layout-fixed {
 
 .c-table tbody {
   font-size: 12px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
 }
 
 .c-table thead {
@@ -8400,7 +8396,7 @@ table.c-table-layout-fixed {
   vertical-align: bottom;
   color: #212529;
   background: #f8f9fa;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   border-color: #dbdddd;
   border-width: 1px 0;
 }
@@ -8612,7 +8608,7 @@ table.c-table .c-table-row-cell-draggable:hover {
 .c-body-text {
   font-size: md;
   line-height: md;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #57595b;
 }
@@ -8620,42 +8616,42 @@ table.c-table .c-table-row-cell-draggable:hover {
 .c-text-xs {
   font-size: 10px;
   line-height: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .c-text-sm {
   font-size: 11px;
   line-height: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .c-text-md {
   font-size: 12px;
   line-height: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .c-text-lg {
   font-size: 14px;
   line-height: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .c-text-xl {
   font-size: 16px;
   line-height: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .c-text-xxl {
   font-size: 18px;
   line-height: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -8806,42 +8802,42 @@ table.c-table .c-table-row-cell-draggable:hover {
 .c-header-xs {
   font-size: 12px;
   line-height: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .c-header-sm {
   font-size: 14px;
   line-height: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .c-header-md {
   font-size: 16px;
   line-height: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .c-header-lg {
   font-size: 20px;
   line-height: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .c-header-xl {
   font-size: 24px;
   line-height: 31px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .c-header-xxl {
   font-size: 37px;
   line-height: 48px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -8907,7 +8903,7 @@ table.c-table .c-table-row-cell-draggable:hover {
 ol.c-ol {
   font-size: lg;
   line-height: md;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -8928,7 +8924,7 @@ ol.c-ol li ol {
 ul.c-ul {
   font-size: lg;
   line-height: md;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -8955,7 +8951,7 @@ ol.c-ol-unstyled,
 ol.c-ol-unstyled li {
   font-size: lg;
   line-height: md;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -9410,7 +9406,7 @@ ol.c-ol-unstyled ol {
   word-wrap: break-word;
   border: 1px solid #e9ecef;
   padding: 16px 16px 16px 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   -webkit-box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1);
           box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1);
   font-size: 12px;
@@ -13584,11 +13580,28 @@ ol.c-ol-unstyled ol {
 }
 
 .c-btn-primary {
+  border: solid 1px #00a06f;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#00ab4e), to(#009697));
   background-image: linear-gradient(to top, #00ab4e, #009697);
 }
 
-.c-input {
+.c-input::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+.c-input::-moz-placeholder {
+  font-style: italic;
+}
+
+.c-input:-ms-input-placeholder {
+  font-style: italic;
+}
+
+.c-input::-ms-input-placeholder {
+  font-style: italic;
+}
+
+.c-input::placeholder {
   font-style: italic;
 }
 
@@ -13603,7 +13616,25 @@ ol.c-ol-unstyled ol {
 
 .c-modal-header {
   background-color: #2c2e32;
+  color: #ffffff;
   height: 60px;
+}
+
+.c-modal-close::before, .c-modal-close::after, .c-modal-close:hover::before, .c-modal-close:hover::after {
+  background-color: #ffffff;
+}
+
+.c-alert-top .c-alert-icon {
+  padding-right: 4px;
+}
+
+.c-alert-close {
+  padding-right: 8px;
+  margin-left: 8px;
+}
+
+.c-checkbox.c-checkbox-lg input:indeterminate + label::after {
+  width: 14px;
 }
 
 /*# sourceMappingURL=maps/cupcake-brs.css.map */

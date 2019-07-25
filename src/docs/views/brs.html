@@ -1,0 +1,94 @@
+---
+title: Brs
+---
+
+<h1 class="c-header-lg">Brs Examples</h1>
+
+
+<br><br>
+
+<button class="c-btn c-btn-primary c-btn-lg">Button</button>
+
+<br><br>
+
+<input type="text" placeholder="placeholder text" class="c-input c-input-lg">
+
+<br><br>
+
+<input type="text" placeholder="placeholder text" class="c-input c-input-lg" disabled>
+
+<br><br>
+
+<div class="c-modal" style="visibility: visible; opacity: 1; transform: scale(1);">
+	<div class="c-modal-content">
+		<div class="c-modal-header">
+			<h4 class="c-modal-title">Modal header</h4>
+			<span id="close" class="c-modal-close"></span>
+		</div>
+		<div class="c-modal-body">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus fugit perferendis voluptates cumque unde fuga
+			reprehenderit illum doloribus, error, officia earum odit quasi minus odio eveniet explicabo accusantium, tempore
+			quisquam.
+		</div>
+
+		<div class="c-modal-footer">
+			<button id="cancel" class="c-btn c-btn-secondary c-m-right-sm">Cancel</button>
+			<button class="c-btn c-btn-primary">Submit</button>
+		</div>
+	</div>
+</div>
+
+<br><br>
+
+<div class="c-alert c-alert-top c-alert-danger">
+	<div class="c-alert-content">
+		<div class="c-alert-title">
+        <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i>
+      Error: Nulla neque elit, vehicula sit amet volutpat volutpat, fermentum vitae odio.</div>
+  </div>
+  <span class="c-text-white">Dismiss</span>
+	<a href="#" class="c-alert-close" aria-hidden="true"></a>
+</div>
+
+<br><br>
+
+<div class="c-checkbox c-checkbox-lg">
+    <input type="checkbox" name="radio" checked="">
+    <label>Label Checked</label>
+  </div>
+  
+  <br><br>
+  
+  <div class="c-checkbox c-checkbox-lg">
+    <input type="checkbox" id="demo" name="radio" onclick="toggle(this)">
+    <label>Indeterminate - Rotate my State!</label>
+  </div>
+  
+  <br><br>
+  
+  
+  <div class="c-radio c-radio-lg">
+    <input type="radio" name="radio5">
+    <label>Label Unchecked</label>
+  </div>
+  
+  <br><br>
+  
+  <div class="c-radio c-radio-lg">
+    <input type="radio" name="radio4" checked="">
+    <label>Label Checked</label>
+  </div>
+  
+
+
+  <script>
+    var checkbox = document.getElementById("demo");
+    checkbox.indeterminate = true;
+  
+    function toggle(demo) {
+      if (demo.readOnly) demo.checked = demo.readOnly = false;
+      else if (!demo.checked) demo.readOnly = demo.indeterminate = true;
+    }
+  </script>
+
+<br><br><br>

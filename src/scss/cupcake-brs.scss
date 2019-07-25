@@ -1,5 +1,3 @@
-$white-label          : true;
-
 $color-gray-1: #f0f1f1;
 $color-gray-3: #dbdddd;
 $color-gray-4: #bbbdbf;
@@ -25,6 +23,7 @@ $color-warning: $color-warning-8;
 $color-danger-8: #ee2f53;
 $color-danger: $color-danger-8;
 
+$BRS-font-size           : 17px;
 // --------------------------------------------
 // TYPOGRAPHY ---------------------------------
 // --------------------------------------------
@@ -95,17 +94,14 @@ $color-danger: $color-danger-8;
     url('fonts/TTF/SourceSansPro-SemiboldIt.ttf') format('truetype');
 }
 
-$font-family-sans: Source Sans Pro, Helvetica, Arial, sans-serif !default;
+$font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
 
-$global-font                : $font-family-sans !default;
-$global-text-color          : $color-gray-6 !default;
+$global-text-color          : $color-gray-6;
+$global-size-lg: 44px;
 
-// Only applies if $enable-reset is true
-$body-font-size           : 17px !default;
-$body-font-color          : $color-gray-5 !default;
+$body-font-size           : $BRS-font-size;
+$body-font-color          : $color-gray-5;
 
-// Set the defaults for .c-header-{{size}}.
-// This map is looped - adding key/value pairs will generate more classes
 $font-header: (
   "xl": (
     "font-size": 24px,
@@ -115,48 +111,100 @@ $font-header: (
     "font-size": 37px,
     "line-height": 48px
   ),
-) !default;
+);
+
+
+// --------------------------------------------
+// BUTTON -------------------------------------
+// --------------------------------------------
+$btn-radius: 5px;
+$btn-font-weight: normal;
 
 $button-sizes:(
-  default: (
-    font-size: 17px,
+  lg: (
+    font-size: $BRS-font-size,
     padding: 0 24px,
-    height: 44px
+    height: $global-size-lg
   )
 );
 
 
+// --------------------------------------------
+// FORMS --------------------------------------
+// --------------------------------------------
 $control-background     : white;
-$control-height         : 44px;
 $control-border         : 1px solid $color-gray-3;
 $control-border-radius  : 0;
-$control-font-size      : 17px;
+$control-font-size      : $BRS-font-size;
 $control-color          : $color-gray-6;
+$control-disabled-background  : $color-gray-1;
 $control-font-weight    : 300;
 $control-line-height    : 1.47;
 $control-shadow         : none;
 $control-padding        : 10px;
 
+$control-hover                : $color-gray-6;
+$control-hover-border         : $color-gray-6;
+$control-active               : $color-gray-6;
+$control-active-border        : $color-gray-6;
+
+$control-sizes:(
+  "lg": (
+    "height": $global-size-lg,
+    "font-size": $BRS-font-size,
+    "padding": 0 10px
+  )
+);
+
+
+// --------------------------------------------
+// MODAL --------------------------------------
+// --------------------------------------------
 $modal-title-color      : white;
 $modal-title-font-size  : 37px;
 $modal-title-font-weight: 300;
 $modal-close-color      : white;
 $modal-border-radius    : 0;
-$modal-body-padding     : 20px;
+$modal-body-padding     : 30px 20px;
+
+
+// --------------------------------------------
+// ALERT --------------------------------------
+// --------------------------------------------
+$alert-title-font-size  : $BRS-font-size;
+$alert-title-font-weight: normal;
+$alert-text-align       : center;
+$alert-color            : white;
+$alert-colors: (
+  "danger": (
+    "color": white,
+    "bg": $color-danger-8
+  ),
+);
+
+
+// --------------------------------------------
+// CHECKBOX -----------------------------------
+// --------------------------------------------
+$checkbox-bd: 1px solid #a1a2a3;
+$checkbox-bg-checked: $color-gray-7;
+$checkbox-sizes: (
+  lg: 20px
+);
+
 
 // Cupcake Core
 @import 'cupcake';
 
-.c-btn {
-  // border-radius: 5px;
-
-  &-primary {
-    background-image: linear-gradient(to top, #00ab4e, #009697);
-  }
+.c-btn-primary {
+  border: solid 1px $color-primary;
+  background-image: linear-gradient(to top, #00ab4e, #009697);
 }
 
 .c-input {
-  font-style: italic;
+  &::placeholder {
+    font-style: italic;
+  }
 
   &:focus-within {
     font-style: normal;
@@ -169,14 +217,30 @@ $modal-body-padding     : 20px;
 
   &-header {
     background-color: $color-gray-7;
-    // color: white;
+    color: $color-white;
     height: 60px;
+  }
+
+  &-close::before,
+  &-close::after,
+  &-close:hover::before,
+  &-close:hover::after {
+    background-color: $color-white;
   }
 }
 
-.c-modal-close::before,
-.c-modal-close::after,
-.c-modal-close:hover::before,
-.c-modal-close:hover::after {
-  // background-color: white;
+
+.c-alert {
+  &-top .c-alert-icon {
+    padding-right: $space-xs;
+  }
+
+  &-close {
+    padding-right: $space-sm;
+    margin-left: $space-sm;
+  }
+}
+
+.c-checkbox.c-checkbox-lg input:indeterminate + label::after {
+  width: 14px;
 }

@@ -8,7 +8,6 @@
 ) {
   color: $color;
   display: flex;
-  text-align: left;
   position: relative;
   background-color: $bg;
   border: $alert-border;
@@ -16,6 +15,7 @@
   padding: $alert-padding;
   align-items: flex-start;
   font-size: $alert-font-size;
+  text-align: $alert-text-align;
   border-radius: $alert-radius;
   font-family: $alert-font;
   font-weight: $alert-font-weight;

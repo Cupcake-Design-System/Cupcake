@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Brs</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="../demo.css">
+
+
+  <script>
+    var themeSettings =  (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+    var themeName = themeSettings.themeName || '';
+    if (themeName) {
+      document.write('<link rel="stylesheet" id="theme-style" href="../' + themeName + '.css">');
+    }
+    else {
+      document.write('<link rel="stylesheet" id="theme-style" href="../cupcake.css">');
+    }
+  </script>
+
+<link rel="stylesheet" href="../cupcake-shim.css">
+<link rel="stylesheet" href="../experimental.css">
+</head>
+
+<body id="docs-app" class="docs-container">
+  <div class="docs-body">
+    <main class="docs-content">
+        <div class="docs-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+      
+<h1 class="c-header-lg">Brs Examples</h1>
+
+
+<br><br>
+
+<button class="c-btn c-btn-primary c-btn-lg">Button</button>
+
+<br><br>
+
+<input type="text" placeholder="placeholder text" class="c-input c-input-lg">
+
+<br><br>
+
+<input type="text" placeholder="placeholder text" class="c-input c-input-lg" disabled>
+
+<br><br>
+
+<div class="c-modal" style="visibility: visible; opacity: 1; transform: scale(1);">
+	<div class="c-modal-content">
+		<div class="c-modal-header">
+			<h4 class="c-modal-title">Modal header</h4>
+			<span id="close" class="c-modal-close"></span>
+		</div>
+		<div class="c-modal-body">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus fugit perferendis voluptates cumque unde fuga
+			reprehenderit illum doloribus, error, officia earum odit quasi minus odio eveniet explicabo accusantium, tempore
+			quisquam.
+		</div>
+
+		<div class="c-modal-footer">
+			<button id="cancel" class="c-btn c-btn-secondary c-m-right-sm">Cancel</button>
+			<button class="c-btn c-btn-primary">Submit</button>
+		</div>
+	</div>
+</div>
+
+<br><br>
+
+<div class="c-alert c-alert-top c-alert-danger">
+	<div class="c-alert-content">
+		<div class="c-alert-title">
+        <i class="fa fa-exclamation-circle c-alert-icon" aria-hidden="true"></i>
+      Error: Nulla neque elit, vehicula sit amet volutpat volutpat, fermentum vitae odio.</div>
+  </div>
+  <span class="c-text-white">Dismiss</span>
+	<a href="#" class="c-alert-close" aria-hidden="true"></a>
+</div>
+
+<br><br>
+
+<div class="c-checkbox c-checkbox-lg">
+    <input type="checkbox" name="radio" checked="">
+    <label>Label Checked</label>
+  </div>
+  
+  <br><br>
+  
+  <div class="c-checkbox c-checkbox-lg">
+    <input type="checkbox" id="demo" name="radio" onclick="toggle(this)">
+    <label>Indeterminate - Rotate my State!</label>
+  </div>
+  
+  <br><br>
+  
+  
+  <div class="c-radio c-radio-lg">
+    <input type="radio" name="radio5">
+    <label>Label Unchecked</label>
+  </div>
+  
+  <br><br>
+  
+  <div class="c-radio c-radio-lg">
+    <input type="radio" name="radio4" checked="">
+    <label>Label Checked</label>
+  </div>
+  
+
+
+  <script>
+    var checkbox = document.getElementById("demo");
+    checkbox.indeterminate = true;
+  
+    function toggle(demo) {
+      if (demo.readOnly) demo.checked = demo.readOnly = false;
+      else if (!demo.checked) demo.readOnly = demo.indeterminate = true;
+    }
+  </script>
+
+<br><br><br>
+
+    </main>
+    <nav class="docs-nav">
+      <div class="docs-nav-header">
+        <a href="index.html">
+          <div class="c-header-xl c-text-primary">Cupcake</div>
+        </a>
+          <div class="c-header-xl">Design System</div>
+    
+        <div class="docs-version">Version 2.0</div>
+    
+        <div id="customize-menu" class="docs-flavor-switch c-dropdown c-d-none c-sm-d-block c-m-top-lg">
+            <input type="hidden" class="docs-flavor-switch-input">
+            <span class="docs-flavor-button docs-flavor-switch-current">Select A Flavor</span>
+            <ul id="styleOptions" class="c-dropdown-list c-dropdown-list-below" style="min-width: 160px;">
+              <li class="docs-flavor-list-item" data-dropdown-value="default">
+                <a href="#" class="c-dropdown-item flavor" data-theme="cupcake">Default</a>
+              </li>
+              <li class="docs-flavor-list-item" data-dropdown-value="mint">
+                <a href="#" class="c-dropdown-item flavor" data-theme="cupcake-mint">Mint</a>
+              </li>
+              <li class="docs-flavor-list-item" data-dropdown-value="brs">
+                <a href="#" class="c-dropdown-item flavor" data-theme="cupcake-brs">BRS</a>
+              </li>
+            </ul>
+          </div>
+    
+      </div>
+    
+      <ul class="docs-nav-items">
+    
+        <ul class="docs-nav-items">
+          <li class="docs-nav-title"><a href="design-tokens.html">Design Tokens</a></li>
+          <li class="docs-nav-item"><a href="design-tokens.html#colors">Colors</a></li>
+          <li class="docs-nav-item"><a href="design-tokens.html#icons">Icons</a></li>
+          <li class="docs-nav-item"><a href="design-tokens.html#shadows">Shadows</a></li>
+          <li class="docs-nav-item"><a href="design-tokens.html#spacing">Spacing</a></li>
+          <li class="docs-nav-item"><a href="design-tokens.html#typography">Typography</a></li>
+        </ul>
+    
+        <ul class="docs-nav-items">
+          <li class="docs-nav-title"><a href="elements.html">Elements</a></li>
+          <li class="docs-nav-item"><a href="elements.html#action-panel">Action Panel</a></li>
+          <li class="docs-nav-item"><a href="elements.html#alerts">Alerts</a></li>
+          <li class="docs-nav-item"><a href="elements.html#avatars">Avatars</a></li>
+          <li class="docs-nav-item"><a href="elements.html#badges">Badges</a></li>
+          <li class="docs-nav-item"><a href="elements.html#breadcrumbs">Breadcrumbs</a></li>
+          <li class="docs-nav-item"><a href="elements.html#buttons">Buttons</a></li>
+          <li class="docs-nav-item"><a href="elements.html#cards">Cards</a></li>
+          <li class="docs-nav-item"><a href="elements.html#checkboxes">Checkboxes</a></li>
+          <li class="docs-nav-item"><a href="elements.html#dropdowns">Dropdowns</a></li>
+          <li class="docs-nav-item"><a href="elements.html#file-upload">File Upload</a></li>
+          <li class="docs-nav-item"><a href="elements.html#footer">Footer</a></li>
+          <li class="docs-nav-item"><a href="elements.html#forms">Forms</a></li>
+          <li class="docs-nav-item"><a href="elements.html#grid">Grid</a></li>
+          <li class="docs-nav-item"><a href="elements.html#header">Header</a></li>
+          <li class="docs-nav-item"><a href="elements.html#loader">Loader</a></li>
+          <li class="docs-nav-item"><a href="elements.html#media-objects">Media Objects</a></li>
+          <li class="docs-nav-item"><a href="elements.html#modal">Modal</a></li>
+          <li class="docs-nav-item"><a href="elements.html#nav">Nav</a></li>
+          <li class="docs-nav-item"><a href="elements.html#pagination">Pagination</a></li>
+          <li class="docs-nav-item"><a href="elements.html#side-nav">Side Nav</a></li>
+          <li class="docs-nav-item"><a href="elements.html#switch">Switch</a></li>
+          <li class="docs-nav-item"><a href="elements.html#table">Table</a></li>
+          <li class="docs-nav-item"><a href="elements.html#tabs">Tabs</a></li>
+          <li class="docs-nav-item"><a href="elements.html#tooltips">Tooltips</a></li>
+        </ul>
+    
+        <ul class="docs-nav-items">
+            <li class="docs-nav-title"><a href="experimental.html">Experimental</a></li>
+            <li class="docs-nav-item"><a href="experimental.html#animated-search">Animated Search</a></li>
+            <li class="docs-nav-item"><a href="experimental.html#dropdown-grid">Dropdown Grid</a></li>
+            <li class="docs-nav-item"><a href="experimental.html#in-page-header">In Page Header</a></li>
+            <li class="docs-nav-item"><a href="experimental.html#responsive-nav">Responsive Nav</a></li>
+          </ul>
+      </ul>
+    
+    </nav>
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../script.min.js"></script>
+<script>
+	// Some simple js heavily modified from fabricators core for the sidebar
+	'use strict';
+	var cupcake = window.cupcake = {};
+
+	cupcake.options = {
+		menu: false,
+		mq: '(min-width: 60em)'
+	};
+
+	// open menu by default if large screen
+	cupcake.options.menu = window.matchMedia(cupcake.options.mq).matches;
+
+	cupcake.dom = {
+		root: document.querySelector('html'),
+		primaryMenu: document.querySelector('.docs-nav'),
+		menuItems: document.querySelectorAll('.docs-nav-items li a'),
+		menuToggle: document.querySelector('.docs-menu-toggle')
+	};
+
+
+	/**
+	 * Add `current` class to active menu item
+	 */
+	cupcake.setActiveItem = function () {
+
+		/**
+		 * Match the window location with the menu item, set menu item as active
+		 */
+		var setActive = function setActive() {
+
+			// get current file and hash without first slash
+			var loc = window.location.pathname + window.location.hash;
+			var current = loc.replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
+				return (file || '') + (hash || '').split('.')[0];
+			}) || 'index.html';
+
+			// find the current section in the items array
+			for (var i = cupcake.dom.menuItems.length - 1; i >= 0; i--) {
+
+				var item = cupcake.dom.menuItems[i];
+
+				// get item href without first slash
+				var href = item.getAttribute('href').replace(/^\//g, '');
+
+				if (href === current) {
+					item.classList.add('current');
+				} else {
+					item.classList.remove('current');
+				}
+			}
+		};
+
+		window.addEventListener('hashchange', setActive);
+
+		setActive();
+
+		return cupcake;
+	};
+
+
+	cupcake.menuToggle = function () {
+
+		// shortcut menu DOM
+		var toggle = cupcake.dom.menuToggle;
+
+		// toggle classes on certain elements
+		var toggleClasses = function toggleClasses() {
+			cupcake.dom.root.classList.toggle('docs-nav-open');
+		};
+
+		// toggle classes on click
+		toggle.addEventListener('click', function () {
+			toggleClasses();
+		});
+
+		// close menu when clicking on item (for collapsed menu view)
+		var closeMenu = function closeMenu() {
+			if (!window.matchMedia(cupcake.options.mq).matches) {
+				toggleClasses();
+			}
+		};
+
+		for (var i = 0; i < cupcake.dom.menuItems.length; i++) {
+			cupcake.dom.menuItems[i].addEventListener('click', closeMenu);
+		}
+
+		return cupcake;
+	};
+
+	/**
+	 * Initialization
+	 */
+	cupcake.menuToggle().setActiveItem();
+
+</script>
+
+
+</html>
