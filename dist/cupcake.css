@@ -3213,6 +3213,12 @@ th {
   transition: border-color 0.1s ease-in;
 }
 
+.c-input::-moz-placeholder {
+  color: #adb5bd;
+  -webkit-transition: border-color 0.1s ease-in;
+  transition: border-color 0.1s ease-in;
+}
+
 .c-input:-ms-input-placeholder {
   color: #adb5bd;
   -webkit-transition: border-color 0.1s ease-in;
@@ -3236,6 +3242,10 @@ th {
 }
 
 .c-input:hover::-webkit-input-placeholder, .c-input.c-input-hover::-webkit-input-placeholder {
+  color: #adb5bd;
+}
+
+.c-input:hover::-moz-placeholder, .c-input.c-input-hover::-moz-placeholder {
   color: #adb5bd;
 }
 
@@ -3271,6 +3281,10 @@ th {
 }
 
 .c-input[disabled]::-webkit-input-placeholder, .c-input[disabled]:hover::-webkit-input-placeholder, .c-input-disabled::-webkit-input-placeholder, .c-input-disabled:hover::-webkit-input-placeholder {
+  color: #212529;
+}
+
+.c-input[disabled]::-moz-placeholder, .c-input[disabled]:hover::-moz-placeholder, .c-input-disabled::-moz-placeholder, .c-input-disabled:hover::-moz-placeholder {
   color: #212529;
 }
 
@@ -3480,6 +3494,10 @@ textarea.c-input {
 }
 
 .c-fieldset:disabled .c-input::-webkit-input-placeholder, .c-fieldset-disabled .c-input::-webkit-input-placeholder {
+  color: #212529;
+}
+
+.c-fieldset:disabled .c-input::-moz-placeholder, .c-fieldset-disabled .c-input::-moz-placeholder {
   color: #212529;
 }
 
@@ -7267,6 +7285,10 @@ select.c-input:not([multiple]):disabled, select.c-input:not([multiple]):disabled
 }
 
 select.c-input:not([multiple]):disabled::-webkit-input-placeholder, select.c-input:not([multiple]):disabled:hover::-webkit-input-placeholder, select.c-input:not([multiple]):disabled:active::-webkit-input-placeholder, select.c-input:not([multiple])[disabled]::-webkit-input-placeholder, select.c-input:not([multiple])[disabled]:hover::-webkit-input-placeholder, select.c-input:not([multiple])[disabled]:active::-webkit-input-placeholder, select.c-input:not([multiple]).c-input-disabled::-webkit-input-placeholder, select.c-input:not([multiple]).c-input-disabled:hover::-webkit-input-placeholder, select.c-input:not([multiple]).c-input-disabled:active::-webkit-input-placeholder {
+  color: #212529;
+}
+
+select.c-input:not([multiple]):disabled::-moz-placeholder, select.c-input:not([multiple]):disabled:hover::-moz-placeholder, select.c-input:not([multiple]):disabled:active::-moz-placeholder, select.c-input:not([multiple])[disabled]::-moz-placeholder, select.c-input:not([multiple])[disabled]:hover::-moz-placeholder, select.c-input:not([multiple])[disabled]:active::-moz-placeholder, select.c-input:not([multiple]).c-input-disabled::-moz-placeholder, select.c-input:not([multiple]).c-input-disabled:hover::-moz-placeholder, select.c-input:not([multiple]).c-input-disabled:active::-moz-placeholder {
   color: #212529;
 }
 

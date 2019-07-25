@@ -7,7 +7,7 @@
   }
 
   html {
-    font-family: $global-font;
+    font-family: $font-family;
 
     /* Make type rendering look crisper */
     -webkit-font-smoothing: antialiased;
@@ -21,7 +21,7 @@
   }
 
   body {
-    font-family: $global-font;
+    font-family: $font-family;
     font-size: $body-font-size;
     color: $body-font-color;
     padding: 0;

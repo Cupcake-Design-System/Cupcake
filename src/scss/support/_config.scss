@@ -15,8 +15,7 @@ $enable-center-classes: true !default;
 $enable-sideNav       : true !default;
 $white-label          : false !default;
 
-// Defining the high-level stuff used throughout
-$global-font                : $font-family-sans !default;
+// Defining the high-level stuff used throughout (we try to use these as much as possible below)
 $global-text-color          : $color-gray-7 !default;
 $global-text-color-light    : $color-gray-6 !default;
 $global-text-color-dark     : $color-gray-9 !default;
@@ -34,13 +33,44 @@ $global-sidebar-width-folded: 48px !default;
 $global-footer-height       : 48px !default;
 $global-header-height       : 48px !default;
 
-// Only applies if $enable-reset is true
-$body-font-size           : $font-size-4 !default;
-$body-font-color          : $global-text-color-dark !default;
+// Global sizes are sizes based on our 8px grid established in util
+// Used by avatars, badges, buttons, checkboxes, forms,
+// switches, tabs, nav, media, pagination
+// !CHANGE CAREFULLY!
+$global-size-xs: $global-px-grid * 2 !default; // 16px
+$global-size-sm: $global-px-grid * 3 !default; // 24px
+$global-size-md: $global-px-grid * 4 !default; // 32px
+$global-size-lg: $global-px-grid * 5 !default; // 40px
+$global-size-xl: $global-px-grid * 6 !default; // 48px
+// !CHANGE CAREFULLY!
+
 
 // --------------------------------------------
 // TYPOGRAPHY ---------------------------------
 // --------------------------------------------
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !default;
+$font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
+
+// These sizes are available as vars but looped for classes below
+$font-size-0    : 10px !default;
+$font-size-1    : 11px !default;
+$font-size-2    : 12px !default;
+$font-size-3    : 14px !default;
+$font-size-4    : 16px !default;
+$font-size-5    : 18px !default;
+$font-size-6    : 20px !default;
+$font-size-7    : 24px !default;
+$font-size-8    : 36px !default;
+
+$line-height-xs : 16px !default;
+$line-height-sm : 24px !default;
+$line-height-md : 32px !default;
+$line-height-lg : 40px !default;
+
+// Only applies if $enable-reset is true
+$body-font-size : $font-size-4 !default;
+$body-font-color: $global-text-color-dark !default;
+
 // Set the defaults for .c-text-{{size}}.
 // This map is looped - adding key/value pairs will generate more classes
 $font-body: () !default;
@@ -112,7 +142,7 @@ $font-header: map-merge(
 // --------------------------------------------
 // ALERTS & TOASTS ----------------------------
 // --------------------------------------------
-$alert-font             : $global-font !default;
+$alert-font             : $font-family !default;
 $alert-radius           : $global-radius !default;
 $alert-border           : $global-border-size !default;
 $alert-color            : $global-text-color-dark !default;
@@ -205,7 +235,7 @@ $action-panel-sizes: map-merge(
 // Avatars ------------------------------------
 // --------------------------------------------
 $enable-extended-avatar-colors: true !default;
-$avatar-font-family           : $global-font !default;
+$avatar-font-family           : $font-family !default;
 $avatar-default-size          : $global-size-md !default;
 $avatar-img-border            : none !default;
 $avatar-line-height           : normal !default;
@@ -247,7 +277,7 @@ $avatar-sizes: map-merge(
 // Badge --------------------------------------
 // --------------------------------------------
 $enable-extended-badge-colors: true !default;
-$badge-font                  : $global-font !default;
+$badge-font                  : $font-family !default;
 $badge-size                  : $global-size-sm !default;
 $badge-lg-size               : $global-size-md !default;
 $badge-sm-size               : $global-size-xs !default;
@@ -271,7 +301,7 @@ $enable-btn-circle     : true !default;
 $enable-btn-outline    : true !default;
 $enable-btn-pill       : false !default;
 $enable-btn-square     : false !default;
-$btn-font              : $global-font !default;
+$btn-font              : $font-family !default;
 $btn-radius            : $global-radius !default;
 $btn-disabled-bg       : $global-bg-disabled !default;
 $btn-default-c         : $global-text-color !default;
@@ -365,7 +395,7 @@ $button-sizes:  map-merge(
 // --------------------------------------------
 // BREADCRUMBS --------------------------------
 // --------------------------------------------
-$breadcrumb-font-family         : $global-font !default;
+$breadcrumb-font-family         : $font-family !default;
 $breadcrumb-margin              : $space-xl !default;
 $breadcrumb-color               : $color-primary-9 !default;
 $breadcrumb-color-active        : $global-text-color-dark !default;
@@ -383,7 +413,7 @@ $card-bg                     : $color-white !default;
 $card-text-color             : $global-text-color !default;
 $card-border                 : $global-border-size $global-border-color-light !default;
 $card-border-hover           : $global-border-size $global-border-color !default;
-$card-font-family            : $global-font !default;
+$card-font-family            : $font-family !default;
 $card-border-radius          : $global-radius !default;
 $card-min-width              : 0 !default;
 $card-padding-v              : $space-md - $space-xs !default;
@@ -439,7 +469,7 @@ $checkbox-sizes: map-merge(
 // DROPDOWN -----------------------------------
 // --------------------------------------------
 $dropdown-radius             : $global-radius !default;
-$dropdown-font               : $global-font !default;
+$dropdown-font               : $font-family !default;
 $dropdown-bg                 : $color-white !default;
 $dropdown-border             : $global-border-size $global-border-color-light !default;
 $dropdown-min-width          : 200px !default;
@@ -470,7 +500,7 @@ $link-colors:
 // --------------------------------------------
 // FORMS --------------------------------------
 // --------------------------------------------
-$control-font-family          : $global-font !default;
+$control-font-family          : $font-family !default;
 $control-background           : $color-white !default;
 $control-height               : $global-size-md !default;
 $control-border               : $global-border-size $global-border-color-dark !default;
@@ -537,7 +567,7 @@ $control-ng-validation:
 // --------------------------------------------
 // FOOTER -------------------------------------
 // --------------------------------------------
-$footer-font-family     : $global-font !default;
+$footer-font-family     : $font-family !default;
 $footer-height          : $global-footer-height !default;
 $footer-border-top      : $global-border-size $global-border-color-light !default;
 $footer-font-size       : $font-size-2 !default;
@@ -799,7 +829,7 @@ $toast-background         : $color-white !default;
 $toast-color              : $global-text-color-dark !default;
 $toast-font-size          : $font-size-2 !default;
 $toast-radius             : $global-radius !default;
-$toast-font               : $global-font !default;
+$toast-font               : $font-family !default;
 $toast-font-weight        : $font-weight-bold !default;
 $toast-padding            : $space-md $space-md $space-md ($space-md + 4px) !default;
 $toast-icon-color         : $color-primary !default;
@@ -837,7 +867,7 @@ $tooltip-arrow-position  : 6px !default;
 $tabs-color             : $global-text-color !default;
 $tabs-bordered-radius   : $global-radius !default;
 $tabs-height            : $global-size-md !default;
-$tabs-font-family       : $global-font !default;
+$tabs-font-family       : $font-family !default;
 $tabs-border            : $global-border-size $global-border-color-light !default;
 $tabs-bordered-bg-hover : $color-white !default;
 $tabs-bordered-bg-active: $color-white !default;
@@ -878,7 +908,7 @@ $tabs-sizes: map-merge(
 // TABLES -------------------------------------
 // --------------------------------------------
 $table-background           : $color-white !default;
-$table-font-family          : $global-font !default;
+$table-font-family          : $font-family !default;
 $table-font-size            : $font-size-2 !default;
 $table-font-size-lg         : $font-size-3 !default;
 $table-line-height          : $line-height-xs !default;

@@ -24,7 +24,7 @@
 
 // Header family and weight properties.
 @mixin f-header {
-  font-family: $global-font;
+  font-family: $font-family;
   font-weight: $font-weight-bold;
 }
 
@@ -57,7 +57,7 @@
 
 // Body family property.
 @mixin f-body {
-  font-family: $global-font;
+  font-family: $font-family;
   font-weight: $font-weight-normal;
 }
 

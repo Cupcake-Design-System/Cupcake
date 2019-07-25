@@ -1,0 +1,120 @@
+// Font Weights and map for generating helpers
+$font-weight-heavy: 900 !default;
+$font-weight-bold: 700 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-normal: 400 !default;
+$font-weight-light: 300 !default;
+
+
+// This is a looped map & classes will be generated based on key/value pairs i.e. "c-text-heavy"
+$font-weight: () !default;
+$font-weight: map-merge(
+  (
+    'heavy': $font-weight-heavy,
+    'bold': $font-weight-bold,
+    'semibold': $font-weight-semibold,
+    'normal': $font-weight-normal,
+    'light': $font-weight-light,
+  ),
+  $font-weight
+);
+
+// Changing $global-px-grid will adapt all space values and $global-sizes.
+$global-px-grid: 8px !default;
+
+// --------------------------------------------
+// Spacing and map for generating helpers
+$space-0: 0 !default;
+$space-xxs: $global-px-grid / 4 !default;
+$space-xs: $global-px-grid / 2 !default;
+$space-sm: $global-px-grid !default;
+$space-md: $global-px-grid * 2 !default;
+$space-lg: $global-px-grid * 3 !default;
+$space-xl: $global-px-grid * 4 !default;
+
+// This is a looped map & classes will be generated based on key/value pairs i.e. "c-p-xxs"
+$space: () !default;
+$space: map-merge(
+  (
+    0: $space-0,
+    'xxs': $space-xxs,
+    'xs': $space-xs,
+    'sm': $space-sm,
+    'md': $space-md,
+    'lg': $space-lg,
+    'xl': $space-xl,
+  ),
+  $space
+);
+
+
+// Radius and map for generating helpers
+$radius-0     : 0 !default;
+$radius-sm    : 2px !default;
+$radius-md    : 4px !default;
+$radius-lg    : 8px !default;
+$radius-square: 0 !default;
+$radius-pill  : 200px !default;
+$radius-round : 50px !default;
+
+// This is a looped map & classes will be generated based on key/value pairs i.e. "c-radius-sm"
+$radius: () !default;
+$radius: map-merge(
+  (
+    0: $radius-0,
+    'sm': $radius-sm,
+    'md': $radius-md,
+    'lg': $radius-lg,
+    'pill': $radius-pill,
+    'round': $radius-round,
+    'square': $radius-square,
+  ),
+  $radius
+);
+
+// Shadows and map for generating helpers
+$shadow-0: none !default;
+$shadow-xs: 0 2px 4px -2px rgba(33, 37, 41, .1) !default;
+$shadow-sm: 0 4px 4px -2px rgba(33, 37, 41, .1) !default;
+$shadow-md: 0 6px 8px -2px rgba(33, 37, 41, .1) !default;
+$shadow-lg: 0 8px 8px -2px rgba(33, 37, 41, .1) !default;
+
+// This is a looped map & classes will be generated based on key/value pairs i.e. "c-shadow-sm"
+$shadow: () !default;
+$shadow: map-merge(
+  (
+    0: $shadow-0,
+    'xs': $shadow-xs,
+    'sm': $shadow-sm,
+    'md': $shadow-md,
+    'lg': $shadow-lg
+  ),
+  $shadow
+);
+
+$z-modal       : 2000 !default;
+$z-action-panel: 1900 !default;
+$z-overlay     : 1800 !default;
+$z-alert       : 1750 !default;
+$z-dropdown    : 1700 !default;
+$z-tooltip     : 1650 !default;
+$z-header      : 1600 !default;
+$z-sidenav     : 1600 !default;
+$z-footer      : 1500 !default;
+
+$z-index: () !default;
+$z-index: map-merge(
+  (
+    'modal'       : $z-modal,
+    'action-panel': $z-action-panel,
+    'overlay'     : $z-overlay,
+    'alert'       : $z-alert,
+    'dropdown'    : $z-dropdown,
+    'tooltip'     : $z-tooltip,
+    'header'      : $z-header,
+    'sidenav'     : $z-sidenav,
+    'footer'      :$z-footer,
+  ),
+  $z-index
+);
+
