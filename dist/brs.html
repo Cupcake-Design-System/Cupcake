@@ -39,6 +39,7 @@
 
 <button class="c-btn c-btn-primary c-btn-lg">Button</button>
 
+
 <br><br>
 
 <input type="text" placeholder="placeholder text" class="c-input c-input-lg">
@@ -46,6 +47,34 @@
 <br><br>
 
 <input type="text" placeholder="placeholder text" class="c-input c-input-lg" disabled>
+
+<br><br>
+
+<select class="c-input c-input-lg">
+  <option>Default Select</option>
+  <option>Option</option>
+  <option>Option</option>
+</select>
+
+<br><br>
+
+<div class="c-dropdown">
+  <button class="c-btn c-btn-lg c-btn-dropdown">
+    Dropdown
+    <i class="fas fa-angle-down" aria-hidden="true"></i>
+  </button>
+  <ul class="c-dropdown-list c-dropdown-list-below" style="display: none;">
+    <li>
+      <a class="c-dropdown-item" href="#">Action</a>
+    </li>
+    <li>
+      <a class="c-dropdown-item" href="#">Action</a>
+    </li>
+    <li>
+      <a class="c-dropdown-item" href="#">Action</a>
+    </li>
+  </ul>
+</div>
 
 <br><br>
 
@@ -70,6 +99,7 @@
 
 <br><br>
 
+
 <div class="c-alert c-alert-top c-alert-danger">
 	<div class="c-alert-content">
 		<div class="c-alert-title">
@@ -86,42 +116,78 @@
     <input type="checkbox" name="radio" checked="">
     <label>Label Checked</label>
   </div>
-  
+
   <br><br>
-  
+
   <div class="c-checkbox c-checkbox-lg">
     <input type="checkbox" id="demo" name="radio" onclick="toggle(this)">
     <label>Indeterminate - Rotate my State!</label>
   </div>
-  
+
   <br><br>
-  
-  
+
+
   <div class="c-radio c-radio-lg">
     <input type="radio" name="radio5">
     <label>Label Unchecked</label>
   </div>
-  
+
   <br><br>
-  
+
   <div class="c-radio c-radio-lg">
     <input type="radio" name="radio4" checked="">
     <label>Label Checked</label>
   </div>
-  
+
+  <br><br>
 
 
+  <div class="c-badge c-badge-lg c-badge-dark">Value
+    <a href="#" class="c-badge-close"></a>
+  </div>
+
+  <div class="c-badge c-badge-lg c-badge-dark c-text-uppercase">
+    Value <i class="fas fa-times-circle c-p-left-sm c-p-right-0" aria-hidden="true"></i>
+  </div>
+
+  <br><br>
+
+  <label class="c-switch c-switch-lg">
+      <input type="checkbox">
+      <span class="c-switch-handle"></span>
+    </label>
+
+    <br><br>
+
+    <ul class="c-tabs">
+      <li class="c-tab-item">
+        <a class="c-tab-item-link" href="#">Menu Item 1</a>
+      </li>
+      <li class="c-tab-item">
+        <a class="c-tab-item-link c-tab-item-link-active" href="#">Menu Item 2</a>
+      </li>
+      <li class="c-tab-item">
+        <a class="c-tab-item-link" href="#">Menu Item 3</a>
+      </li>
+      <li class="c-tab-item">
+        <a class="c-tab-item-link c-tab-item-link-disabled" href="#">Menu Item 4</a>
+      </li>
+    </ul>
+
+  <br><br><br>
+  <br><br><br>
   <script>
     var checkbox = document.getElementById("demo");
     checkbox.indeterminate = true;
-  
+
     function toggle(demo) {
       if (demo.readOnly) demo.checked = demo.readOnly = false;
       else if (!demo.checked) demo.readOnly = demo.indeterminate = true;
     }
   </script>
 
-<br><br><br>
+
+
 
     </main>
     <nav class="docs-nav">

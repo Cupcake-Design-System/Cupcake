@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  src:
+    url('fonts/WOFF/OTF/SourceSansPro-Light.otf.woff') format('woff'),
+    url('fonts/OTF/SourceSansPro-Light.otf') format('opentype'),
+    url('fonts/TTF/SourceSansPro-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+  src:
+    url('fonts/WOFF/OTF/SourceSansPro-LightIt.otf.woff') format('woff'),
+    url('fonts/OTF/SourceSansPro-LightIt.otf') format('opentype'),
+    url('fonts/TTF/SourceSansPro-LightIt.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src:
+    url('fonts/WOFF/OTF/SourceSansPro-Regular.otf.woff') format('woff'),
+    url('fonts/OTF/SourceSansPro-Regular.otf') format('opentype'),
+    url('fonts/TTF/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  src:
+    url('fonts/WOFF/OTF/SourceSansPro-It.otf.woff') format('woff'),
+    url('fonts/OTF/SourceSansPro-It.otf') format('opentype'),
+    url('fonts/TTF/SourceSansPro-It.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  src:
+    url('fonts/WOFF/OTF/SourceSansPro-Semibold.otf.woff') format('woff'),
+    url('fonts/OTF/SourceSansPro-Semibold.otf') format('opentype'),
+    url('fonts/TTF/SourceSansPro-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-style: italic;
+  font-stretch: normal;
+  src:
+    url('fonts/WOFF/OTF/SourceSansPro-SemiboldIt.otf.woff') format('woff'),
+    url('fonts/OTF/SourceSansPro-SemiboldIt.otf') format('opentype'),
+    url('fonts/TTF/SourceSansPro-SemiboldIt.ttf') format('truetype');
+}
+
+
+.c-switch-lg {
+  .c-switch-handle {
+    height: 18px;
+    width: 38px;
+
+    &::before {
+      background: #ee2f53;
+      box-shadow: none;
+      border: 1px solid #ffffff;
+      top: -4px;
+      left: -1px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  input:checked + .c-switch-handle {
+    border: 1px solid #bbbdbf;
+
+    &::before {
+      background: $color-primary;
+      left: 14px;
+    }
+  }
+}
+
+.c-btn-primary {
+  border: solid 1px $color-primary;
+  background-image: linear-gradient(to top, #00ab4e, #009697);
+}
+
+.c-input {
+  &::placeholder {
+    font-style: italic;
+  }
+
+  &:focus-within {
+    font-style: normal;
+  }
+}
+
+.c-modal {
+  box-shadow: $BRS-modal-shadow;
+
+  &-header {
+    background-color: $BRS-modal-header-bg-color;
+    color: $BRS-modal-header-color;
+    height: $BRS-modal-header-height;
+  }
+
+  &-close::before,
+  &-close::after,
+  &-close:hover::before,
+  &-close:hover::after {
+    background-color: $BRS-modal-header-color;
+  }
+}
+
+.c-alert {
+  &-top .c-alert-icon {
+    padding-right: $space-xs;
+  }
+
+  &-close {
+    padding-right: $space-sm;
+    margin-left: $space-sm;
+  }
+}
+
+.c-checkbox.c-checkbox-lg input:indeterminate + label::after {
+  width: 14px;
+}
+
+.c-dropdown {
+  .c-btn-dropdown {
+    width: 200px;
+    text-align: left;
+    font-style: italic;
+    background: white;
+    border-radius: $radius-0;
+    border: 1px solid $color-gray-6;
+    padding-left: $dropdown-item-padding;
+    padding-right: $dropdown-item-padding;
+
+    i {
+      position: absolute;
+      top: $dropdown-item-padding;
+      right: $dropdown-item-padding;
+    }
+  }
+}
+
+.c-tab-item {
+  margin-right: $BRS-tab-item-margin-right;
+}

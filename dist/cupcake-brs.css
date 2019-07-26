@@ -7,54 +7,6 @@
 /* ----------------------- */
 
 @charset "UTF-8";
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-  src: url("fonts/WOFF/OTF/SourceSansPro-Light.otf.woff") format("woff"), url("fonts/OTF/SourceSansPro-Light.otf") format("opentype"), url("fonts/TTF/SourceSansPro-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-weight: 300;
-  font-style: italic;
-  font-stretch: normal;
-  src: url("fonts/WOFF/OTF/SourceSansPro-LightIt.otf.woff") format("woff"), url("fonts/OTF/SourceSansPro-LightIt.otf") format("opentype"), url("fonts/TTF/SourceSansPro-LightIt.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
-  src: url("fonts/WOFF/OTF/SourceSansPro-Regular.otf.woff") format("woff"), url("fonts/OTF/SourceSansPro-Regular.otf") format("opentype"), url("fonts/TTF/SourceSansPro-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-weight: 400;
-  font-style: italic;
-  font-stretch: normal;
-  src: url("fonts/WOFF/OTF/SourceSansPro-It.otf.woff") format("woff"), url("fonts/OTF/SourceSansPro-It.otf") format("opentype"), url("fonts/TTF/SourceSansPro-It.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  src: url("fonts/WOFF/OTF/SourceSansPro-Semibold.otf.woff") format("woff"), url("fonts/OTF/SourceSansPro-Semibold.otf") format("opentype"), url("fonts/TTF/SourceSansPro-Semibold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-weight: 600;
-  font-style: italic;
-  font-stretch: normal;
-  src: url("fonts/WOFF/OTF/SourceSansPro-SemiboldIt.otf.woff") format("woff"), url("fonts/OTF/SourceSansPro-SemiboldIt.otf") format("opentype"), url("fonts/TTF/SourceSansPro-SemiboldIt.ttf") format("truetype");
-}
-
 /* stylelint-disable */
 *,
 *::before,
@@ -1132,7 +1084,7 @@ th {
   font-size: 11px;
   font-weight: 600;
   line-height: 2;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 
 .c-badge:empty {
@@ -1165,7 +1117,7 @@ th {
   transition: background-color 0.2s ease;
   margin-left: 4px;
   margin-right: -4px;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 
 .c-badge-close::before {
@@ -3079,7 +3031,7 @@ th {
 }
 
 .c-dropdown-divider {
-  border-top: 1px solid #e9ecef;
+  border-top: none;
   margin: 4px -4px;
 }
 
@@ -3091,17 +3043,17 @@ th {
   list-style-type: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #212529;
-  border: 1px solid #e9ecef;
+  color: #57595b;
+  border: none;
   background: #ffffff;
   z-index: 1700;
   font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
-  -webkit-box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1);
-          box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1);
+  -webkit-box-shadow: 1px 1px 5px 1px #bfbbbb99;
+          box-shadow: 1px 1px 5px 1px #bfbbbb99;
   margin: 0;
   min-width: 200px;
-  padding: 4px;
-  border-radius: 2px;
+  padding: 0;
+  border-radius: 0;
 }
 
 .c-dropdown-list-right {
@@ -3111,28 +3063,28 @@ th {
 
 .c-dropdown-list-below {
   top: 110%;
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 .c-dropdown-list-above {
   top: auto;
   bottom: 110%;
   margin-bottom: 0;
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 .c-dropdown-list .c-dropdown-heading {
   display: block;
   text-decoration: none;
-  color: #212529;
+  color: #57595b;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 12px;
-  padding: 8px 12px;
+  font-size: 17px;
+  padding: 12px;
 }
 
 .c-dropdown-list .c-dropdown-icon {
-  color: #bbbdbf;
+  color: #57595b;
   font-size: 14px;
   padding-right: 8px;
 }
@@ -3143,9 +3095,9 @@ th {
   line-height: 1.4;
   position: relative;
   text-decoration: none;
-  font-size: 12px;
-  padding: 8px 12px;
-  font-weight: 400;
+  font-size: 17px;
+  padding: 12px;
+  font-weight: normal;
 }
 
 .c-dropdown-list li a .c-checkbox,
@@ -3159,14 +3111,14 @@ th {
 .c-dropdown-list li a:hover,
 .c-dropdown-list .c-dropdown-item:hover {
   text-decoration: none;
-  background: #f8f9fa;
+  background: #00a06f;
 }
 
 .c-dropdown-list li a-selected,
 .c-dropdown-list .c-dropdown-item-selected {
   font-weight: bold;
   color: #00a06f;
-  background: #edfff9;
+  background: white;
 }
 
 .c-dropdown-list li a-selected::after,
@@ -3191,12 +3143,12 @@ th {
 
 .c-dropdown-list li a:not([class*="primary"]):not([class*="success"]):not([class*="warning"]):not([class*="danger"]):not(.c-text-muted),
 .c-dropdown-list .c-dropdown-item:not([class*="primary"]):not([class*="success"]):not([class*="warning"]):not([class*="danger"]):not(.c-text-muted) {
-  color: #212529;
+  color: #57595b;
 }
 
 .c-dropdown-list li a:not([class*="primary"]):not([class*="success"]):not([class*="warning"]):not([class*="danger"]):not(.c-text-muted):hover,
 .c-dropdown-list .c-dropdown-item:not([class*="primary"]):not([class*="success"]):not([class*="warning"]):not([class*="danger"]):not(.c-text-muted):hover {
-  color: #212529;
+  color: white;
 }
 
 .c-file-upload {
@@ -6402,7 +6354,7 @@ textarea.c-input {
   outline: 0 none;
   position: relative;
   word-wrap: break-word;
-  border: 1px solid #e9ecef;
+  border: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -6430,7 +6382,7 @@ textarea.c-input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -7957,14 +7909,14 @@ select.c-input-error:not([multiple]) option {
 }
 
 .c-switch input:focus + .c-switch-handle {
-  border-color: #00a06f;
-  -webkit-box-shadow: 0 0 0 0.1rem rgba(0, 160, 111, 0.2);
-          box-shadow: 0 0 0 0.1rem rgba(0, 160, 111, 0.2);
+  border-color: #e5e8e8;
+  -webkit-box-shadow: 0 0 0 0.1rem rgba(229, 232, 232, 0.2);
+          box-shadow: 0 0 0 0.1rem rgba(229, 232, 232, 0.2);
 }
 
 .c-switch input:checked + .c-switch-handle {
-  background: #00a06f;
-  border-color: #00a06f;
+  background: #e5e8e8;
+  border-color: #e5e8e8;
 }
 
 .c-switch input:checked + .c-switch-handle::before {
@@ -8009,9 +7961,9 @@ select.c-input-error:not([multiple]) option {
   width: 32px;
   position: absolute;
   display: inline-block;
-  -webkit-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-  background: #f8f9fa;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #e5e8e8;
   background-clip: padding-box;
   border-radius: 50px;
   border: 1px solid #bbbdbf;
@@ -8078,28 +8030,28 @@ select.c-input-error:not([multiple]) option {
 }
 
 .c-switch-lg {
-  min-height: 32px;
-  min-width: 64px;
+  min-height: 26px;
+  min-width: 52px;
 }
 
 .c-switch-lg input:checked + .c-switch-handle::before {
-  left: 32px;
+  left: 26px;
 }
 
 .c-switch-lg .c-switch-handle {
-  height: 32px;
-  width: 64px;
+  height: 26px;
+  width: 52px;
 }
 
 .c-switch-lg .c-switch-handle::before {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 }
 
 .c-switch-lg .c-switch-label {
-  padding-left: 72px;
-  line-height: 32px;
-  font-size: 28px;
+  padding-left: 60px;
+  line-height: 26px;
+  font-size: 22px;
 }
 
 .c-switch-lg .c-switch-label:empty {
@@ -8192,18 +8144,18 @@ select.c-input-error:not([multiple]) option {
       -ms-flex-align: stretch;
           align-items: stretch;
   height: 32px;
-  font-size: 12px;
-  -webkit-box-shadow: inset 0 -1px 0 0 #e9ecef;
-          box-shadow: inset 0 -1px 0 0 #e9ecef;
+  font-size: 24px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .c-tabs .c-tab-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #57595b;
+  color: #2c2e32;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -8218,10 +8170,10 @@ select.c-input-error:not([multiple]) option {
           flex: auto;
   cursor: pointer;
   margin: 0;
-  color: #57595b;
+  color: #2c2e32;
   text-align: center;
   text-decoration: none;
-  padding: 8px 16px;
+  padding: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -8253,7 +8205,7 @@ select.c-input-error:not([multiple]) option {
 .c-tabs .c-tab-item-link-disabled,
 .c-tabs .c-tab-item-link-disabled a, .c-tabs .c-tab-item-link-disabled:hover, .c-tabs .c-tab-item-link-disabled:focus, .c-tabs .c-tab-item-link-disabled:active {
   cursor: not-allowed;
-  color: #57595b;
+  color: #bbbdbf;
 }
 
 .c-tabs .c-tab-item-link-disabled, .c-tabs .c-tab-item-link-disabled:hover, .c-tabs .c-tab-item-link-disabled:focus, .c-tabs .c-tab-item-link-disabled:active {
@@ -13579,6 +13531,79 @@ ol.c-ol-unstyled ol {
   clear: both;
 }
 
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("fonts/WOFF/OTF/SourceSansPro-Light.otf.woff") format("woff"), url("fonts/OTF/SourceSansPro-Light.otf") format("opentype"), url("fonts/TTF/SourceSansPro-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("fonts/WOFF/OTF/SourceSansPro-LightIt.otf.woff") format("woff"), url("fonts/OTF/SourceSansPro-LightIt.otf") format("opentype"), url("fonts/TTF/SourceSansPro-LightIt.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("fonts/WOFF/OTF/SourceSansPro-Regular.otf.woff") format("woff"), url("fonts/OTF/SourceSansPro-Regular.otf") format("opentype"), url("fonts/TTF/SourceSansPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("fonts/WOFF/OTF/SourceSansPro-It.otf.woff") format("woff"), url("fonts/OTF/SourceSansPro-It.otf") format("opentype"), url("fonts/TTF/SourceSansPro-It.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("fonts/WOFF/OTF/SourceSansPro-Semibold.otf.woff") format("woff"), url("fonts/OTF/SourceSansPro-Semibold.otf") format("opentype"), url("fonts/TTF/SourceSansPro-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("fonts/WOFF/OTF/SourceSansPro-SemiboldIt.otf.woff") format("woff"), url("fonts/OTF/SourceSansPro-SemiboldIt.otf") format("opentype"), url("fonts/TTF/SourceSansPro-SemiboldIt.ttf") format("truetype");
+}
+
+.c-switch-lg .c-switch-handle {
+  height: 18px;
+  width: 38px;
+}
+
+.c-switch-lg .c-switch-handle::before {
+  background: #ee2f53;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #fff;
+  top: -4px;
+  left: -1px;
+  width: 24px;
+  height: 24px;
+}
+
+.c-switch-lg input:checked + .c-switch-handle {
+  border: 1px solid #bbbdbf;
+}
+
+.c-switch-lg input:checked + .c-switch-handle::before {
+  background: #00a06f;
+  left: 14px;
+}
+
 .c-btn-primary {
   border: solid 1px #00a06f;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#00ab4e), to(#009697));
@@ -13616,12 +13641,12 @@ ol.c-ol-unstyled ol {
 
 .c-modal-header {
   background-color: #2c2e32;
-  color: #ffffff;
+  color: white;
   height: 60px;
 }
 
 .c-modal-close::before, .c-modal-close::after, .c-modal-close:hover::before, .c-modal-close:hover::after {
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .c-alert-top .c-alert-icon {
@@ -13635,6 +13660,27 @@ ol.c-ol-unstyled ol {
 
 .c-checkbox.c-checkbox-lg input:indeterminate + label::after {
   width: 14px;
+}
+
+.c-dropdown .c-btn-dropdown {
+  width: 200px;
+  text-align: left;
+  font-style: italic;
+  background: white;
+  border-radius: 0;
+  border: 1px solid #57595b;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.c-dropdown .c-btn-dropdown i {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.c-tab-item {
+  margin-right: 24px;
 }
 
 /*# sourceMappingURL=maps/cupcake-brs.css.map */
