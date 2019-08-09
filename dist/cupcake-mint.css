@@ -3733,6 +3733,10 @@ textarea.c-input {
   position: relative;
 }
 
+.c-form-group {
+  margin-bottom: 8px;
+}
+
 .c-footer {
   width: 100%;
   display: -webkit-box;
@@ -7214,6 +7218,7 @@ textarea.c-input {
   color: #212529;
 }
 
+.c-select,
 select.c-input:not([multiple]) {
   outline: 0;
   width: 100%;
@@ -7239,39 +7244,57 @@ select.c-input:not([multiple]) {
   background-size: 8px;
 }
 
+.c-select::-ms-expand,
 select.c-input:not([multiple])::-ms-expand {
   display: none;
 }
 
+.c-select:focus::-ms-value,
 select.c-input:not([multiple]):focus::-ms-value {
   color: #212529;
   background-color: transparent;
 }
 
+.c-select-inline,
 select.c-input:not([multiple])-inline {
   display: inline;
   width: auto;
 }
 
-.c-input-icon + select.c-input:not([multiple]) {
+.c-input-icon + .c-select, .c-input-icon +
+select.c-input:not([multiple]) {
   padding-left: 32px;
 }
 
+.c-select:focus,
 select.c-input:not([multiple]):focus {
   -webkit-box-shadow: none, 0 0 1px 2px rgba(33, 186, 192, 0.5);
           box-shadow: none, 0 0 1px 2px rgba(33, 186, 192, 0.5);
 }
 
+.c-select:hover,
 select.c-input:not([multiple]):hover {
   border-color: #868e96;
 }
 
-select.c-input:not([multiple]):active:focus, select.c-input:not([multiple]).c-input-active:focus, select.c-input:not([multiple]).c-select-active:focus {
+.c-select:active:focus, .c-select.c-input-active:focus, .c-select.c-select-active:focus,
+select.c-input:not([multiple]):active:focus,
+select.c-input:not([multiple]).c-input-active:focus,
+select.c-input:not([multiple]).c-select-active:focus {
   border-color: #007778;
   outline: none;
 }
 
-select.c-input:not([multiple]):disabled, select.c-input:not([multiple]):disabled:hover, select.c-input:not([multiple]):disabled:active, select.c-input:not([multiple])[disabled], select.c-input:not([multiple])[disabled]:hover, select.c-input:not([multiple])[disabled]:active, select.c-input:not([multiple]).c-input-disabled, select.c-input:not([multiple]).c-input-disabled:hover, select.c-input:not([multiple]).c-input-disabled:active {
+.c-select:disabled, .c-select:disabled:hover, .c-select:disabled:active, .c-select[disabled], .c-select[disabled]:hover, .c-select[disabled]:active, .c-select.c-input-disabled, .c-select.c-input-disabled:hover, .c-select.c-input-disabled:active,
+select.c-input:not([multiple]):disabled,
+select.c-input:not([multiple]):disabled:hover,
+select.c-input:not([multiple]):disabled:active,
+select.c-input:not([multiple])[disabled],
+select.c-input:not([multiple])[disabled]:hover,
+select.c-input:not([multiple])[disabled]:active,
+select.c-input:not([multiple]).c-input-disabled,
+select.c-input:not([multiple]).c-input-disabled:hover,
+select.c-input:not([multiple]).c-input-disabled:active {
   cursor: not-allowed;
   color: #212529;
   -webkit-box-shadow: none;
@@ -7284,52 +7307,103 @@ select.c-input:not([multiple]):disabled, select.c-input:not([multiple]):disabled
   background-size: 8px 10px;
 }
 
-select.c-input:not([multiple]):disabled::-webkit-input-placeholder, select.c-input:not([multiple]):disabled:hover::-webkit-input-placeholder, select.c-input:not([multiple]):disabled:active::-webkit-input-placeholder, select.c-input:not([multiple])[disabled]::-webkit-input-placeholder, select.c-input:not([multiple])[disabled]:hover::-webkit-input-placeholder, select.c-input:not([multiple])[disabled]:active::-webkit-input-placeholder, select.c-input:not([multiple]).c-input-disabled::-webkit-input-placeholder, select.c-input:not([multiple]).c-input-disabled:hover::-webkit-input-placeholder, select.c-input:not([multiple]).c-input-disabled:active::-webkit-input-placeholder {
+.c-select:disabled::-webkit-input-placeholder, .c-select:disabled:hover::-webkit-input-placeholder, .c-select:disabled:active::-webkit-input-placeholder, .c-select[disabled]::-webkit-input-placeholder, .c-select[disabled]:hover::-webkit-input-placeholder, .c-select[disabled]:active::-webkit-input-placeholder, .c-select.c-input-disabled::-webkit-input-placeholder, .c-select.c-input-disabled:hover::-webkit-input-placeholder, .c-select.c-input-disabled:active::-webkit-input-placeholder,
+select.c-input:not([multiple]):disabled::-webkit-input-placeholder,
+select.c-input:not([multiple]):disabled:hover::-webkit-input-placeholder,
+select.c-input:not([multiple]):disabled:active::-webkit-input-placeholder,
+select.c-input:not([multiple])[disabled]::-webkit-input-placeholder,
+select.c-input:not([multiple])[disabled]:hover::-webkit-input-placeholder,
+select.c-input:not([multiple])[disabled]:active::-webkit-input-placeholder,
+select.c-input:not([multiple]).c-input-disabled::-webkit-input-placeholder,
+select.c-input:not([multiple]).c-input-disabled:hover::-webkit-input-placeholder,
+select.c-input:not([multiple]).c-input-disabled:active::-webkit-input-placeholder {
   color: #212529;
 }
 
-select.c-input:not([multiple]):disabled::-moz-placeholder, select.c-input:not([multiple]):disabled:hover::-moz-placeholder, select.c-input:not([multiple]):disabled:active::-moz-placeholder, select.c-input:not([multiple])[disabled]::-moz-placeholder, select.c-input:not([multiple])[disabled]:hover::-moz-placeholder, select.c-input:not([multiple])[disabled]:active::-moz-placeholder, select.c-input:not([multiple]).c-input-disabled::-moz-placeholder, select.c-input:not([multiple]).c-input-disabled:hover::-moz-placeholder, select.c-input:not([multiple]).c-input-disabled:active::-moz-placeholder {
+.c-select:disabled::-moz-placeholder, .c-select:disabled:hover::-moz-placeholder, .c-select:disabled:active::-moz-placeholder, .c-select[disabled]::-moz-placeholder, .c-select[disabled]:hover::-moz-placeholder, .c-select[disabled]:active::-moz-placeholder, .c-select.c-input-disabled::-moz-placeholder, .c-select.c-input-disabled:hover::-moz-placeholder, .c-select.c-input-disabled:active::-moz-placeholder,
+select.c-input:not([multiple]):disabled::-moz-placeholder,
+select.c-input:not([multiple]):disabled:hover::-moz-placeholder,
+select.c-input:not([multiple]):disabled:active::-moz-placeholder,
+select.c-input:not([multiple])[disabled]::-moz-placeholder,
+select.c-input:not([multiple])[disabled]:hover::-moz-placeholder,
+select.c-input:not([multiple])[disabled]:active::-moz-placeholder,
+select.c-input:not([multiple]).c-input-disabled::-moz-placeholder,
+select.c-input:not([multiple]).c-input-disabled:hover::-moz-placeholder,
+select.c-input:not([multiple]).c-input-disabled:active::-moz-placeholder {
   color: #212529;
 }
 
-select.c-input:not([multiple]):disabled:-ms-input-placeholder, select.c-input:not([multiple]):disabled:hover:-ms-input-placeholder, select.c-input:not([multiple]):disabled:active:-ms-input-placeholder, select.c-input:not([multiple])[disabled]:-ms-input-placeholder, select.c-input:not([multiple])[disabled]:hover:-ms-input-placeholder, select.c-input:not([multiple])[disabled]:active:-ms-input-placeholder, select.c-input:not([multiple]).c-input-disabled:-ms-input-placeholder, select.c-input:not([multiple]).c-input-disabled:hover:-ms-input-placeholder, select.c-input:not([multiple]).c-input-disabled:active:-ms-input-placeholder {
+.c-select:disabled:-ms-input-placeholder, .c-select:disabled:hover:-ms-input-placeholder, .c-select:disabled:active:-ms-input-placeholder, .c-select[disabled]:-ms-input-placeholder, .c-select[disabled]:hover:-ms-input-placeholder, .c-select[disabled]:active:-ms-input-placeholder, .c-select.c-input-disabled:-ms-input-placeholder, .c-select.c-input-disabled:hover:-ms-input-placeholder, .c-select.c-input-disabled:active:-ms-input-placeholder,
+select.c-input:not([multiple]):disabled:-ms-input-placeholder,
+select.c-input:not([multiple]):disabled:hover:-ms-input-placeholder,
+select.c-input:not([multiple]):disabled:active:-ms-input-placeholder,
+select.c-input:not([multiple])[disabled]:-ms-input-placeholder,
+select.c-input:not([multiple])[disabled]:hover:-ms-input-placeholder,
+select.c-input:not([multiple])[disabled]:active:-ms-input-placeholder,
+select.c-input:not([multiple]).c-input-disabled:-ms-input-placeholder,
+select.c-input:not([multiple]).c-input-disabled:hover:-ms-input-placeholder,
+select.c-input:not([multiple]).c-input-disabled:active:-ms-input-placeholder {
   color: #212529;
 }
 
-select.c-input:not([multiple]):disabled::-ms-input-placeholder, select.c-input:not([multiple]):disabled:hover::-ms-input-placeholder, select.c-input:not([multiple]):disabled:active::-ms-input-placeholder, select.c-input:not([multiple])[disabled]::-ms-input-placeholder, select.c-input:not([multiple])[disabled]:hover::-ms-input-placeholder, select.c-input:not([multiple])[disabled]:active::-ms-input-placeholder, select.c-input:not([multiple]).c-input-disabled::-ms-input-placeholder, select.c-input:not([multiple]).c-input-disabled:hover::-ms-input-placeholder, select.c-input:not([multiple]).c-input-disabled:active::-ms-input-placeholder {
+.c-select:disabled::-ms-input-placeholder, .c-select:disabled:hover::-ms-input-placeholder, .c-select:disabled:active::-ms-input-placeholder, .c-select[disabled]::-ms-input-placeholder, .c-select[disabled]:hover::-ms-input-placeholder, .c-select[disabled]:active::-ms-input-placeholder, .c-select.c-input-disabled::-ms-input-placeholder, .c-select.c-input-disabled:hover::-ms-input-placeholder, .c-select.c-input-disabled:active::-ms-input-placeholder,
+select.c-input:not([multiple]):disabled::-ms-input-placeholder,
+select.c-input:not([multiple]):disabled:hover::-ms-input-placeholder,
+select.c-input:not([multiple]):disabled:active::-ms-input-placeholder,
+select.c-input:not([multiple])[disabled]::-ms-input-placeholder,
+select.c-input:not([multiple])[disabled]:hover::-ms-input-placeholder,
+select.c-input:not([multiple])[disabled]:active::-ms-input-placeholder,
+select.c-input:not([multiple]).c-input-disabled::-ms-input-placeholder,
+select.c-input:not([multiple]).c-input-disabled:hover::-ms-input-placeholder,
+select.c-input:not([multiple]).c-input-disabled:active::-ms-input-placeholder {
   color: #212529;
 }
 
-select.c-input:not([multiple]):disabled::placeholder, select.c-input:not([multiple]):disabled:hover::placeholder, select.c-input:not([multiple]):disabled:active::placeholder, select.c-input:not([multiple])[disabled]::placeholder, select.c-input:not([multiple])[disabled]:hover::placeholder, select.c-input:not([multiple])[disabled]:active::placeholder, select.c-input:not([multiple]).c-input-disabled::placeholder, select.c-input:not([multiple]).c-input-disabled:hover::placeholder, select.c-input:not([multiple]).c-input-disabled:active::placeholder {
+.c-select:disabled::placeholder, .c-select:disabled:hover::placeholder, .c-select:disabled:active::placeholder, .c-select[disabled]::placeholder, .c-select[disabled]:hover::placeholder, .c-select[disabled]:active::placeholder, .c-select.c-input-disabled::placeholder, .c-select.c-input-disabled:hover::placeholder, .c-select.c-input-disabled:active::placeholder,
+select.c-input:not([multiple]):disabled::placeholder,
+select.c-input:not([multiple]):disabled:hover::placeholder,
+select.c-input:not([multiple]):disabled:active::placeholder,
+select.c-input:not([multiple])[disabled]::placeholder,
+select.c-input:not([multiple])[disabled]:hover::placeholder,
+select.c-input:not([multiple])[disabled]:active::placeholder,
+select.c-input:not([multiple]).c-input-disabled::placeholder,
+select.c-input:not([multiple]).c-input-disabled:hover::placeholder,
+select.c-input:not([multiple]).c-input-disabled:active::placeholder {
   color: #212529;
 }
 
+.c-select-sm,
 select.c-input:not([multiple]).c-input-sm {
   height: 24px;
   padding-right: 24px;
   font-size: 11px;
 }
 
+.c-select-icon-sm + select.c-input:not([multiple]),
 .c-input-icon-sm + select.c-input:not([multiple]) {
   padding-left: 24px;
 }
 
+.c-select-lg,
 select.c-input:not([multiple]).c-input-lg {
   height: 40px;
   padding-right: 24px;
   font-size: 16px;
 }
 
+.c-select-icon-lg + select.c-input:not([multiple]),
 .c-input-icon-lg + select.c-input:not([multiple]) {
   padding-left: 40px;
 }
 
+.c-select-error,
 select.c-input-error:not([multiple]) {
   color: #e03131;
   font-weight: normal;
   border-color: #e03131;
 }
 
+.c-select-error option,
 select.c-input-error:not([multiple]) option {
   color: #212529;
 }
