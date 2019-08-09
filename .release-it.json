@@ -1,5 +1,4 @@
 {
-  "buildCommand": "npm run build",
   "hooks": {
     "before:init": ["npm run lint", "npm test"],
     "after:bump": "npm run build",
