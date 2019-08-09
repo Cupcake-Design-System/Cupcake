@@ -1,5 +1,16 @@
+## Release [2.0.1](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0...2.0.1) :rocket:
+**9 August 2019**
+
+### Merged
+- add back c-select **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/110)**
+- Chore(update for theming) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/109)**
+- Theme fix **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/108)**
+
 ## Release [2.0.0](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.13...2.0.0) :rocket:
 **17 May 2019**
+
+### Commits
+- Release 2.0.0 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/4854a97a9ff7c56bdbb59ff289b7971b8c4c1063)**
 
 ## Release [2.0.0-beta.13](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.12...2.0.0-beta.13) :rocket:
 **17 May 2019**
