@@ -1,7 +1,7 @@
 {
   "hooks": {
     "before:init": "npm run build",
-    "after:bump": "npx auto-changelog -p"
+    "after:bump": ["npm run build", "npx auto-changelog -p"]
   },
   "git": {
     "changelog": "npx auto-changelog --stdout --commit-limit false -u --template ./changelog-template.hbs",
