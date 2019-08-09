@@ -4,7 +4,6 @@
     "after:bump": ["npm run build", "npx auto-changelog -p"]
   },
   "git": {
-    "changelog": "npx auto-changelog --stdout --commit-limit false -u --template ./changelog-template.hbs",
     "requireCleanWorkingDir": false,
     "requireUpstream": true,
     "commitMessage": "Release %s 🚀",
@@ -17,7 +16,6 @@
   "github": {
     "release": true,
     "releaseName": "Release %s 🚀",
-    "releaseNotes": "npx auto-changelog --stdout --commit-limit false -u --template ./changelog-template.hbs",
     "preRelease": true,
     "draft": false,
     "tokenRef": "GITHUB_TOKEN"
