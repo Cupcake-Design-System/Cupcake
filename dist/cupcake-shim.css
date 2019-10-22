@@ -7,6 +7,23 @@
 /* ----------------------- */
 
 @charset "UTF-8";
+@-webkit-keyframes stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
 /* stylelint-disable */
 .c-card-primary {
   color: #fff;

@@ -1,0 +1,41 @@
+.c-progress {
+  @include progress-container;
+
+  @each $name, $color in $progress-colors {
+    &-#{$name} {
+      .c-progress-meter {
+        @include progress-meter;
+        // background color fallback
+        background-color: $color;
+
+        @include linear-gradient(to bottom, lighten($color, 6%), $color 66%, darken($color, 4%));
+
+        border: 1px solid darken($color, 5%);
+
+        &-animated {
+          @include loader-stripe($color);
+        }
+      }
+    }
+  }
+}
+
+.c-progress-meter-text {
+  @include progress-meter-text;
+}
+
+.c-progress-sm {
+  @include progress-size($progress-height-sm);
+
+  .c-progress-meter-text {
+    font-size: $progress-font-size-sm;
+  }
+}
+
+.c-progress-lg {
+  @include progress-size($progress-height-lg);
+
+  .c-progress-meter-text {
+    font-size: $progress-font-size-lg;
+  }
+}

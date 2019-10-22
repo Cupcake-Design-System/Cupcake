@@ -1,0 +1,70 @@
+@mixin linear-gradient($gradientLine, $colorStops...) {
+  background-image: linear-gradient(convert-gradient-direction($gradientLine), $colorStops);
+}
+
+
+@mixin loader-stripe($color) {
+  background: linear-gradient(135deg, $color 25%, darken($color, 10%) 25%, darken($color, 10%) 50%, $color 50%, $color 75%, darken($color, 10%) 75%);
+  height: $progress-height;
+  background-size: $progress-height+1 $progress-height+1;
+  animation: stripes 3s linear infinite;
+  border-radius: inherit;
+}
+
+
+@keyframes stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+
+@mixin progress-container {
+  height: $progress-height;
+  border-radius: $progress-radius;
+  background-color: $progress-background;
+  margin-bottom: $progress-margin-bottom;
+}
+
+
+/// Adds styles for the inner meter of a progress bar.
+@mixin progress-meter {
+  width: 0%;
+  height: 100%;
+  display: block;
+  position: relative;
+  border-radius: $progress-radius;
+}
+
+
+/// Adds styles for text in the progress meter.
+@mixin progress-meter-text {
+  @include absolute-center;
+
+  margin: $space-0;
+  font-weight: bold;
+  color: $color-white;
+  white-space: nowrap;
+  font-size: $progress-font-size;
+  border-radius: $progress-radius;
+}
+
+
+@mixin progress-size(
+  $height: $progress-height
+) {
+  height: $height;
+
+  .c-progress-meter {
+    height: $height;
+
+    &-animated {
+      height: $height;
+      background-size: $height $height;
+    }
+  }
+}
