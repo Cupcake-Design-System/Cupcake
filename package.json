@@ -32,14 +32,14 @@
     "package": true
   },
   "devDependencies": {
-    "auto-changelog": "^1.14.1",
-    "autoprefixer": "^9.6.1",
+    "auto-changelog": "^1.16.1",
+    "autoprefixer": "^9.6.5",
     "browser-sync": "^2.26.7",
-    "del": "^5.0.0",
+    "del": "^5.1.0",
     "fabricator-assemble": "^1.4.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-changed": "^4.0.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-changed": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-group-css-media-queries": "^1.2.2",
@@ -48,15 +48,15 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "lint-staged": "^9.2.1",
-    "mocha": "^6.2.0",
+    "lint-staged": "^9.4.2",
+    "mocha": "^6.2.1",
     "npm-run-all": "^4.1.5",
-    "onchange": "^6.0.0",
-    "release-it": "^12.3.4",
+    "onchange": "^6.1.0",
+    "release-it": "^12.4.3",
     "sass-true": "^4.0.0",
-    "stylelint": "^10.1.0",
-    "stylelint-config-standard": "^18.3.0",
-    "stylelint-declaration-strict-value": "^1.1.3",
-    "stylelint-scss": "^3.9.2"
+    "stylelint": "^11.1.1",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-declaration-strict-value": "^1.1.6",
+    "stylelint-scss": "^3.11.1"
   }
 }

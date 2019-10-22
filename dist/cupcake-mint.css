@@ -7421,55 +7421,19 @@ select.c-input:not([multiple]).c-input-disabled:active {
   background-size: 8px 10px;
 }
 
-.c-select:disabled::-webkit-input-placeholder, .c-select:disabled:hover::-webkit-input-placeholder, .c-select:disabled:active::-webkit-input-placeholder, .c-select[disabled]::-webkit-input-placeholder, .c-select[disabled]:hover::-webkit-input-placeholder, .c-select[disabled]:active::-webkit-input-placeholder, .c-select.c-input-disabled::-webkit-input-placeholder, .c-select.c-input-disabled:hover::-webkit-input-placeholder, .c-select.c-input-disabled:active::-webkit-input-placeholder,
-select.c-input:not([multiple]):disabled::-webkit-input-placeholder,
-select.c-input:not([multiple]):disabled:hover::-webkit-input-placeholder,
-select.c-input:not([multiple]):disabled:active::-webkit-input-placeholder,
-select.c-input:not([multiple])[disabled]::-webkit-input-placeholder,
-select.c-input:not([multiple])[disabled]:hover::-webkit-input-placeholder,
-select.c-input:not([multiple])[disabled]:active::-webkit-input-placeholder,
-select.c-input:not([multiple]).c-input-disabled::-webkit-input-placeholder,
-select.c-input:not([multiple]).c-input-disabled:hover::-webkit-input-placeholder,
-select.c-input:not([multiple]).c-input-disabled:active::-webkit-input-placeholder {
+.c-select:disabled::-webkit-input-placeholder, .c-select:disabled:hover::-webkit-input-placeholder, .c-select:disabled:active::-webkit-input-placeholder, .c-select[disabled]::-webkit-input-placeholder, .c-select[disabled]:hover::-webkit-input-placeholder, .c-select[disabled]:active::-webkit-input-placeholder, .c-select.c-input-disabled::-webkit-input-placeholder, .c-select.c-input-disabled:hover::-webkit-input-placeholder, .c-select.c-input-disabled:active::-webkit-input-placeholder, select.c-input:not([multiple]):disabled::-webkit-input-placeholder, select.c-input:not([multiple]):disabled:hover::-webkit-input-placeholder, select.c-input:not([multiple]):disabled:active::-webkit-input-placeholder, select.c-input:not([multiple])[disabled]::-webkit-input-placeholder, select.c-input:not([multiple])[disabled]:hover::-webkit-input-placeholder, select.c-input:not([multiple])[disabled]:active::-webkit-input-placeholder, select.c-input:not([multiple]).c-input-disabled::-webkit-input-placeholder, select.c-input:not([multiple]).c-input-disabled:hover::-webkit-input-placeholder, select.c-input:not([multiple]).c-input-disabled:active::-webkit-input-placeholder {
   color: #212529;
 }
 
-.c-select:disabled::-moz-placeholder, .c-select:disabled:hover::-moz-placeholder, .c-select:disabled:active::-moz-placeholder, .c-select[disabled]::-moz-placeholder, .c-select[disabled]:hover::-moz-placeholder, .c-select[disabled]:active::-moz-placeholder, .c-select.c-input-disabled::-moz-placeholder, .c-select.c-input-disabled:hover::-moz-placeholder, .c-select.c-input-disabled:active::-moz-placeholder,
-select.c-input:not([multiple]):disabled::-moz-placeholder,
-select.c-input:not([multiple]):disabled:hover::-moz-placeholder,
-select.c-input:not([multiple]):disabled:active::-moz-placeholder,
-select.c-input:not([multiple])[disabled]::-moz-placeholder,
-select.c-input:not([multiple])[disabled]:hover::-moz-placeholder,
-select.c-input:not([multiple])[disabled]:active::-moz-placeholder,
-select.c-input:not([multiple]).c-input-disabled::-moz-placeholder,
-select.c-input:not([multiple]).c-input-disabled:hover::-moz-placeholder,
-select.c-input:not([multiple]).c-input-disabled:active::-moz-placeholder {
+.c-select:disabled::-moz-placeholder, .c-select:disabled:hover::-moz-placeholder, .c-select:disabled:active::-moz-placeholder, .c-select[disabled]::-moz-placeholder, .c-select[disabled]:hover::-moz-placeholder, .c-select[disabled]:active::-moz-placeholder, .c-select.c-input-disabled::-moz-placeholder, .c-select.c-input-disabled:hover::-moz-placeholder, .c-select.c-input-disabled:active::-moz-placeholder, select.c-input:not([multiple]):disabled::-moz-placeholder, select.c-input:not([multiple]):disabled:hover::-moz-placeholder, select.c-input:not([multiple]):disabled:active::-moz-placeholder, select.c-input:not([multiple])[disabled]::-moz-placeholder, select.c-input:not([multiple])[disabled]:hover::-moz-placeholder, select.c-input:not([multiple])[disabled]:active::-moz-placeholder, select.c-input:not([multiple]).c-input-disabled::-moz-placeholder, select.c-input:not([multiple]).c-input-disabled:hover::-moz-placeholder, select.c-input:not([multiple]).c-input-disabled:active::-moz-placeholder {
   color: #212529;
 }
 
-.c-select:disabled:-ms-input-placeholder, .c-select:disabled:hover:-ms-input-placeholder, .c-select:disabled:active:-ms-input-placeholder, .c-select[disabled]:-ms-input-placeholder, .c-select[disabled]:hover:-ms-input-placeholder, .c-select[disabled]:active:-ms-input-placeholder, .c-select.c-input-disabled:-ms-input-placeholder, .c-select.c-input-disabled:hover:-ms-input-placeholder, .c-select.c-input-disabled:active:-ms-input-placeholder,
-select.c-input:not([multiple]):disabled:-ms-input-placeholder,
-select.c-input:not([multiple]):disabled:hover:-ms-input-placeholder,
-select.c-input:not([multiple]):disabled:active:-ms-input-placeholder,
-select.c-input:not([multiple])[disabled]:-ms-input-placeholder,
-select.c-input:not([multiple])[disabled]:hover:-ms-input-placeholder,
-select.c-input:not([multiple])[disabled]:active:-ms-input-placeholder,
-select.c-input:not([multiple]).c-input-disabled:-ms-input-placeholder,
-select.c-input:not([multiple]).c-input-disabled:hover:-ms-input-placeholder,
-select.c-input:not([multiple]).c-input-disabled:active:-ms-input-placeholder {
+.c-select:disabled:-ms-input-placeholder, .c-select:disabled:hover:-ms-input-placeholder, .c-select:disabled:active:-ms-input-placeholder, .c-select[disabled]:-ms-input-placeholder, .c-select[disabled]:hover:-ms-input-placeholder, .c-select[disabled]:active:-ms-input-placeholder, .c-select.c-input-disabled:-ms-input-placeholder, .c-select.c-input-disabled:hover:-ms-input-placeholder, .c-select.c-input-disabled:active:-ms-input-placeholder, select.c-input:not([multiple]):disabled:-ms-input-placeholder, select.c-input:not([multiple]):disabled:hover:-ms-input-placeholder, select.c-input:not([multiple]):disabled:active:-ms-input-placeholder, select.c-input:not([multiple])[disabled]:-ms-input-placeholder, select.c-input:not([multiple])[disabled]:hover:-ms-input-placeholder, select.c-input:not([multiple])[disabled]:active:-ms-input-placeholder, select.c-input:not([multiple]).c-input-disabled:-ms-input-placeholder, select.c-input:not([multiple]).c-input-disabled:hover:-ms-input-placeholder, select.c-input:not([multiple]).c-input-disabled:active:-ms-input-placeholder {
   color: #212529;
 }
 
-.c-select:disabled::-ms-input-placeholder, .c-select:disabled:hover::-ms-input-placeholder, .c-select:disabled:active::-ms-input-placeholder, .c-select[disabled]::-ms-input-placeholder, .c-select[disabled]:hover::-ms-input-placeholder, .c-select[disabled]:active::-ms-input-placeholder, .c-select.c-input-disabled::-ms-input-placeholder, .c-select.c-input-disabled:hover::-ms-input-placeholder, .c-select.c-input-disabled:active::-ms-input-placeholder,
-select.c-input:not([multiple]):disabled::-ms-input-placeholder,
-select.c-input:not([multiple]):disabled:hover::-ms-input-placeholder,
-select.c-input:not([multiple]):disabled:active::-ms-input-placeholder,
-select.c-input:not([multiple])[disabled]::-ms-input-placeholder,
-select.c-input:not([multiple])[disabled]:hover::-ms-input-placeholder,
-select.c-input:not([multiple])[disabled]:active::-ms-input-placeholder,
-select.c-input:not([multiple]).c-input-disabled::-ms-input-placeholder,
-select.c-input:not([multiple]).c-input-disabled:hover::-ms-input-placeholder,
-select.c-input:not([multiple]).c-input-disabled:active::-ms-input-placeholder {
+.c-select:disabled::-ms-input-placeholder, .c-select:disabled:hover::-ms-input-placeholder, .c-select:disabled:active::-ms-input-placeholder, .c-select[disabled]::-ms-input-placeholder, .c-select[disabled]:hover::-ms-input-placeholder, .c-select[disabled]:active::-ms-input-placeholder, .c-select.c-input-disabled::-ms-input-placeholder, .c-select.c-input-disabled:hover::-ms-input-placeholder, .c-select.c-input-disabled:active::-ms-input-placeholder, select.c-input:not([multiple]):disabled::-ms-input-placeholder, select.c-input:not([multiple]):disabled:hover::-ms-input-placeholder, select.c-input:not([multiple]):disabled:active::-ms-input-placeholder, select.c-input:not([multiple])[disabled]::-ms-input-placeholder, select.c-input:not([multiple])[disabled]:hover::-ms-input-placeholder, select.c-input:not([multiple])[disabled]:active::-ms-input-placeholder, select.c-input:not([multiple]).c-input-disabled::-ms-input-placeholder, select.c-input:not([multiple]).c-input-disabled:hover::-ms-input-placeholder, select.c-input:not([multiple]).c-input-disabled:active::-ms-input-placeholder {
   color: #212529;
 }
 
