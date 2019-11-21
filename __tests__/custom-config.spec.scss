@@ -2,14 +2,13 @@
 @import '../node_modules/sass-true/sass/true';
 
 $color-primary-9: #5018ab;
-$base-font-family: 'Arial' sans-serif;
 
 
 $font-weight: (
   bold: 100
 );
 
-$colors: (
+$color: (
   success: (
       3: #5eff6b
   )
@@ -29,11 +28,7 @@ $colors: (
   }
 
   @include it('Checks not overridden color remains') {
-    @include assert-equal(color(primary), #1c7cd6);
-  }
-
-  @include it('Should override font to match updated variable') {
-    @include assert-equal(font(primary), 'Arial' sans-serif);
+    @include assert-equal(color(primary), #1b6ec2);
   }
 
   @include it('Should override font-weight to match change in map') {

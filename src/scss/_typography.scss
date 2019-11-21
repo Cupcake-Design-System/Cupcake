@@ -2,8 +2,9 @@
 // TYPOGRAPHY ---------------------------------
 // --------------------------------------------
 .c-body-text {
-  @include font-body(md);
+  @include f-body;
 
+  font-size: $font-size-2;
   color: $global-text-color;
 }
 

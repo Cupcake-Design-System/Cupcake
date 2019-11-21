@@ -3,13 +3,12 @@
 @import '../src/scss/support/support';
 
 @mixin test-mixin {
-  box-shadow: shadow(xl);
+  box-shadow: shadow(lg);
   margin-top: space(xl);
   background: color(danger);
   color: color(gray, 9);
   font-weight: font-weight(bold);
   line-height: line-height();
-  font-family: font(sans);
 }
 
 @include describe('Test functions for retrieving map data') {
@@ -18,7 +17,7 @@
   @include describe("Testing color [functions]") {
     @include it('Checks color functions return the right data') {
       @include assert-equal(color(success, 4), #69db7c);
-      @include assert-equal(color(primary), #1c7cd6);
+      @include assert-equal(color(primary), #1b6ec2);
     }
   }
 
@@ -31,7 +30,7 @@
 
   @include describe("Testing shadow [function]") {
     @include it('Checks shadow functions return the right data') {
-      @include assert-equal(shadow(sm), 0 4px 8px 0 rgba(0, 0, 0, 0.1));
+      @include assert-equal(shadow(sm), 0 4px 4px -2px rgba(33, 37, 41, .1));
     }
   }
 
@@ -39,19 +38,15 @@
   @include describe("Testing typography [functions]") {
 
     @include it('Checks font-size function return the right data') {
-      @include assert-equal(font-size(sm), 11px);
+      @include assert-equal(font-size($value: sm), 11px);
     }
 
     @include it('Checks font-weight function return the right data') {
       @include assert-equal(font-weight(bold), 700);
     }
 
-    // @include it('Checks line-height function return the right data') {
-    //   @include assert-equal(line-height(subtitle2), 1.6);
-    // }
-
-    @include it('Checks font function return the right data') {
-      @include assert-equal(font(sans), (-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif));
+    @include it('Checks line-height function return the right data') {
+      @include assert-equal(line-height(body, md), 16px);
     }
   }
 
@@ -63,13 +58,12 @@
           @include test-mixin;
         }
       @include expect {
-        box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 8px -2px rgba(33, 37, 41, .1);
         margin-top: 32px;
-        background: #f03e3e;
+        background: #e03131;
         color: #212529;
         font-weight: 700;
-        line-height: normal;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        line-height: 16px;
       }
     }
   }
