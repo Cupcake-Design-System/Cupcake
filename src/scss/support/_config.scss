@@ -531,8 +531,8 @@ $control-addon-background     : $color-gray-0 !default;
 $control-element-padding      : $space-sm * 2 0 !default;
 $control-element-label-padding: 0 0 $space-sm 0 !default;
 $select-padding-r             : $space-lg !default;
-$select-bg-img                : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC") !default;
-$select-bg-img-disabled       : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAABGdBTUEAALGPC/xhBQAAAK9JREFUOBHlkj0OgzAMRmNxMcTQoVdhZGRoGDp27FU6MCA4WeovUhA/tkNmIlkkwe8Nzuecsd6f7wtltLhK+wmQiDxX3Tyebhp/i9QrChKcAEtyEhzhnGQn0GBLsgpysCaJgquwJKFSOEnwDSH47fmuewwRcTXzrg2HhzhUnPGZs84OqrVG6R5w37U+5qBUkmCI1yRelWzhnQCHnOQInwSWRIJFgSTRYPSaC0+Mspr+0vx1PtB1wpUAAAAASUVORK5CYII = ") !default;
+$select-bg-img                : url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") !default;
+$select-bg-img-disabled       : url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23868e95'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") !default;
 $select-bg-pos                : no-repeat right 8px center !default;
 $select-box-shadow-focus      : 0 0 0 1px $color-primary-4 !default;
 
