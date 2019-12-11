@@ -534,8 +534,7 @@ $select-padding-r             : $space-lg !default;
 $select-bg-img                : url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") !default;
 $select-bg-img-disabled       : url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23868e95'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") !default;
 $select-bg-pos                : no-repeat right 8px center !default;
-$select-box-shadow            : none !default;
-$select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
+$select-box-shadow-focus      : 0 0 0 1px $color-primary-4 !default;
 
 // Set the default sizes for forms - .c-input-{{size}}.
 // This map is looped - adding key/value pairs will generate more classes

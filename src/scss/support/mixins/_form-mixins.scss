@@ -148,7 +148,7 @@
   }
 
   &:focus {
-    box-shadow: $select-box-shadow, $select-box-shadow-focus;
+    box-shadow: $select-box-shadow-focus;
   }
 
   &:hover {
