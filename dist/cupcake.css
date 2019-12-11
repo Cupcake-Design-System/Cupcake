@@ -7268,8 +7268,8 @@ select.c-input:not([multiple]) {
 
 .c-select:focus,
 select.c-input:not([multiple]):focus {
-  -webkit-box-shadow: none, 0 0 1px 2px rgba(77, 173, 247, 0.5);
-          box-shadow: none, 0 0 1px 2px rgba(77, 173, 247, 0.5);
+  -webkit-box-shadow: 0 0 0 1px #4dadf7;
+          box-shadow: 0 0 0 1px #4dadf7;
 }
 
 .c-select:hover,
