@@ -3196,7 +3196,7 @@ th {
   -webkit-transition: border-color 0.1s ease-in;
   transition: border-color 0.1s ease-in;
   font-weight: 400;
-  line-height: 1.16667;
+  line-height: normal;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   padding: 0 8px;
   border-radius: 2px;
@@ -3514,24 +3514,24 @@ textarea.c-input {
 }
 
 .c-hint {
+  opacity: 0;
   display: block;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
+  pointer-events: none;
   -webkit-transform-origin: top left;
           transform-origin: top left;
-  padding-top: 8px;
   color: #868e96;
+  padding-top: 8px;
   font-size: 85%;
-  opacity: 0;
-  pointer-events: none;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .c-hint-static,
 .c-input:focus ~ .c-hint {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   opacity: 1;
 }
 
@@ -3733,8 +3733,41 @@ textarea.c-input {
   position: relative;
 }
 
+.c-input.ng-dirty.ng-valid {
+  border: 1px solid success;
+}
+
+.c-input.ng-dirty.ng-valid .c-input-icon {
+  color: success;
+}
+
+.ng-dirty.ng-valid .c-input {
+  border: 1px solid success;
+}
+
+.ng-dirty.ng-valid .c-input .c-input-icon {
+  color: success;
+}
+
+.c-input.ng-dirty.ng-invalid {
+  border: 1px solid error;
+}
+
+.c-input.ng-dirty.ng-invalid .c-input-icon {
+  color: error;
+}
+
+.ng-dirty.ng-invalid .c-input {
+  border: 1px solid error;
+}
+
+.ng-dirty.ng-invalid .c-input .c-input-icon {
+  color: error;
+}
+
 .c-form-group {
-  margin-bottom: 8px;
+  display: block;
+  margin-bottom: 16px;
 }
 
 .c-footer {
@@ -7258,7 +7291,7 @@ select.c-input:not([multiple]) {
   padding: 0 8px;
   padding-right: 24px;
   font-weight: 400;
-  line-height: 1.16667;
+  line-height: normal;
   border-radius: 2px;
   background: #ffffff url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right 8px center;
   background-size: 8px;
