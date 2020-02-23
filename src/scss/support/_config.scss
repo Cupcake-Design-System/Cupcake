@@ -510,7 +510,7 @@ $control-disabled-background  : $global-bg-disabled !default;
 $control-font-size            : $font-size-2 !default;
 $control-color                : $global-text-color-dark !default;
 $control-font-weight          : $font-weight-normal !default;
-$control-line-height          : 1.166667 !default; //line height optimized for IE compatibilit
+$control-line-height          : normal !default; //line height optimized for IE compatibilit
 $control-placeholder-c        : $global-text-color-lighter !default;
 $control-placeholder-hover-c  : $global-text-color-lighter !default;
 $control-padding              : $space-sm !default;
@@ -557,7 +557,7 @@ $control-sizes: map-merge(
 
 
 // Form Input Colors (NG specific) DISABLED CURRENTLY
-$enable-NGform-colors: false !default;
+$enable-NGform-colors: true !default;
 $control-ng-validation:
   ("ng-valid", "success")
   ("ng-invalid", "error") !default;
