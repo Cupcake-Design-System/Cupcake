@@ -6331,23 +6331,22 @@ textarea.c-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  max-width: 100%;
   outline: 0 none;
   overflow: hidden;
   visibility: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 2000;
-  max-width: 640px;
-}
-
-.c-modal-sm {
-  max-width: 480px;
-}
-
-.c-modal-lg {
-  max-width: 800px;
 }
 
 .c-modal-content {
@@ -6363,11 +6362,11 @@ textarea.c-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 640px;
   overflow-wrap: break-word;
   -webkit-box-shadow: 0 8px 8px -2px rgba(33, 37, 41, 0.1);
           box-shadow: 0 8px 8px -2px rgba(33, 37, 41, 0.1);
   background-clip: padding-box;
-  max-height: calc(100vh - 96px);
   background-color: #ffffff;
   border-radius: 2px;
 }
@@ -6441,10 +6440,12 @@ textarea.c-input {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   min-height: 1px;
   position: relative;
   color: #495057;
-  padding: 24px 24px 12px;
+  padding: 24px;
   font-size: 12px;
   line-height: 16px;
 }
@@ -6544,9 +6545,28 @@ textarea.c-input {
   border-radius: 0;
 }
 
-.c-modal-fullscreen .c-modal-content {
+.c-modal-fullscreen.c-modal-content {
   width: 100%;
+  max-width: 100%;
   min-height: 100%;
+}
+
+.c-modal-sm .c-modal-content {
+  max-width: 480px;
+}
+
+.c-modal-lg .c-modal-content {
+  max-width: 800px;
+}
+
+.c-modal.c-modal-visible {
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
 }
 
 .c-media {
