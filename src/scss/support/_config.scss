@@ -610,12 +610,13 @@ $breakpoints: (
 $header-bg                       : $color-white !default;
 $header-height                   : $global-header-height !default;
 $header-inverse-text-color-active: $color-white !default;
-$header-bg-hover                 : rgba(0, 0, 0, 0.03) !default;
+$header-inverse-icon-color-active: #009697 !default;
+$header-bg-hover                 : rgba(255, 255, 255, 0.1) !default;
 $header-borders                  : rgba(0, 0, 0, 0.06) !default;
 $header-z-index                  : $z-header !default;
 $header-bottom-border            : $color-gray-1 !default;
 $header-item-padding             : $space-0 $space-md !default;
-$header-inverse-bg               : #002b49 !default;
+$header-inverse-bg               : #32363b !default;
 $header-inverse-bg-hover         : rgba(255, 255, 255, 0.07) !default;
 $header-text-color               : $global-text-color-light !default;
 $header-inverse-text-color       : rgba(white, .9) !default;

@@ -108,7 +108,7 @@
 }
 
 .c-header.c-header-inverse .c-nav-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .c-header-item .c-header-search-container {
@@ -168,7 +168,7 @@
 }
 
 .c-header-item .c-header-search-box:hover {
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .c-header-item .c-header-search-icon {

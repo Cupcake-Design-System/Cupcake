@@ -6036,7 +6036,7 @@ textarea.c-input {
 }
 
 .c-header-item-link:hover {
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .c-header-left {
@@ -6091,7 +6091,7 @@ textarea.c-input {
 }
 
 .c-header-inverse {
-  background-color: #002b49;
+  background-color: #32363b;
   border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -6129,6 +6129,8 @@ textarea.c-input {
 .c-header-inverse .c-nav.c-nav-pills .c-nav-link .c-nav-icon {
   opacity: 1;
   color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: color .25s;
+  transition: color .25s;
 }
 
 .c-header-inverse .c-nav.c-nav-pills .c-nav-link:hover:not(.c-nav-link-disabled), .c-header-inverse .c-nav.c-nav-pills .c-nav-link:focus, .c-header-inverse .c-nav.c-nav-pills .c-nav-link-active {
@@ -6138,7 +6140,7 @@ textarea.c-input {
 
 .c-header-inverse .c-nav.c-nav-pills .c-nav-link:hover:not(.c-nav-link-disabled) .c-nav-icon, .c-header-inverse .c-nav.c-nav-pills .c-nav-link:focus .c-nav-icon, .c-header-inverse .c-nav.c-nav-pills .c-nav-link-active .c-nav-icon {
   opacity: 1;
-  color: #ffffff;
+  color: #009697;
 }
 
 .c-header-tabs.c-tabs {
