@@ -6166,6 +6166,18 @@ textarea.c-input {
   margin: 24px 0;
 }
 
+@-webkit-keyframes skeletonIteration {
+  to {
+    background-position: 300% 0;
+  }
+}
+
+@keyframes skeletonIteration {
+  to {
+    background-position: 300% 0;
+  }
+}
+
 .c-skeleton-loading::after {
   position: absolute;
   top: -16px;
@@ -6180,7 +6192,13 @@ textarea.c-input {
   background-repeat: no-repeat;
   -webkit-animation: skeletonIteration 2s infinite;
           animation: skeletonIteration 2s infinite;
-  content: '';
+  content: "";
+}
+
+@keyframes skeletonIteration {
+  to {
+    background-position: 300% 0;
+  }
 }
 
 .c-skeleton-loading::before {
@@ -6197,7 +6215,13 @@ textarea.c-input {
   background-repeat: no-repeat;
   -webkit-animation: skeletonIteration 2s infinite;
           animation: skeletonIteration 2s infinite;
-  content: '';
+  content: "";
+}
+
+@keyframes skeletonIteration {
+  to {
+    background-position: 300% 0;
+  }
 }
 
 .c-skeleton-bar {
@@ -6215,6 +6239,12 @@ textarea.c-input {
   -webkit-animation: skeletonIteration 2s infinite;
           animation: skeletonIteration 2s infinite;
   margin: 8px 0;
+}
+
+@keyframes skeletonIteration {
+  to {
+    background-position: 300% 0;
+  }
 }
 
 .c-loader {
