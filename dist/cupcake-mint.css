@@ -3808,12 +3808,12 @@ textarea.c-input {
 }
 
 .c-footer-link::after {
-  content: '•';
   cursor: default;
-  color: #868e96;
   padding-left: inherit;
   vertical-align: middle;
   margin: 0 8px;
+  content: "•";
+  color: #868e96;
 }
 
 .c-footer-link:last-child::after {
@@ -3830,6 +3830,26 @@ textarea.c-input {
 
 .c-footer.c-footer-transparent {
   background-color: transparent;
+}
+
+.c-footer.c-footer-inverse {
+  color: #ffffff;
+  height: 24px;
+  background-color: #4c4b4c;
+}
+
+.c-footer.c-footer-inverse .c-footer-link {
+  color: #ffffff;
+}
+
+.c-footer.c-footer-inverse .c-footer-link::after {
+  content: "|";
+  color: #f1f3f5;
+}
+
+.c-footer.c-footer-inverse .c-footer-link .c-a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .c-container {
