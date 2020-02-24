@@ -53,6 +53,7 @@
   &.c-footer-inverse {
     color: $footer-color-inverse;
     height: $footer-height-inverse;
+    line-height: $footer-height-inverse;
     background-color: $footer-bg-inverse;
 
     .c-footer-link {
