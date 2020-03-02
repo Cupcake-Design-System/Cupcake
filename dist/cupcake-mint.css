@@ -6719,7 +6719,7 @@ textarea.c-input {
   border-radius: 0;
 }
 
-.c-modal-fullscreen.c-modal-content {
+.c-modal-fullscreen.c-modal .c-modal-content {
   width: 100%;
   max-width: 100%;
   min-height: 100%;
