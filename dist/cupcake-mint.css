@@ -7592,18 +7592,14 @@ select.c-input-error:not([multiple]) option {
 }
 
 .c-sidenav-body {
-  bottom: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%;
-  width: inherit;
-  overflow-y: auto;
-  overflow-x: hidden;
-  top: 48px;
-  margin-bottom: 72px;
-  padding-bottom: 72px;
-  -webkit-transition: left ease-in-out 0.15s, right ease-in-out 0.15s;
-  transition: left ease-in-out 0.15s, right ease-in-out 0.15s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
 }
 
 .c-sidenav-fullscreen {
@@ -7626,11 +7622,9 @@ select.c-input-error:not([multiple]) option {
 }
 
 .c-sidenav-collapse {
-  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
   font-size: 18px;
   cursor: pointer;
   -webkit-box-align: center;
@@ -7641,6 +7635,7 @@ select.c-input-error:not([multiple]) option {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin-top: auto;
   color: #adb5bd;
   background: #f8f9fa;
   border-top: 1px solid #e9ecef;
@@ -7699,11 +7694,6 @@ select.c-input-error:not([multiple]) option {
 }
 
 .c-sidenav-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding-left: 0;

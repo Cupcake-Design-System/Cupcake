@@ -1,148 +1,162 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Test</title>
+  <head>
+  	<meta charset="utf-8">
+  	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<title>Test</title>
+  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../demo.css">
+  
+  
+    <script>
+      var themeSettings =  (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+      var themeName = themeSettings.themeName || '';
+      if (themeName) {
+        document.write('<link rel="stylesheet" id="theme-style" href="../' + themeName + '.css">');
+      }
+      else {
+        document.write('<link rel="stylesheet" id="theme-style" href="../cupcake.css">');
+      }
+    </script>
+  
+  <link rel="stylesheet" href="../cupcake-shim.css">
+  <link rel="stylesheet" href="../experimental.css">
+  </head>
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="../demo.css">
-
-
-  <script>
-    var themeSettings =  (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
-    var themeName = themeSettings.themeName || '';
-    if (themeName) {
-      document.write('<link rel="stylesheet" id="theme-style" href="../' + themeName + '.css">');
-    }
-    else {
-      document.write('<link rel="stylesheet" id="theme-style" href="../cupcake.css">');
-    }
-  </script>
-
-<link rel="stylesheet" href="../cupcake-shim.css">
-<link rel="stylesheet" href="../experimental.css">
-</head>
-
-<body class="">
-
-  <header class="c-header c-header-inverse">
-    <div class="c-header-left">
-      <div class="c-header-item">
-        <a href="#" class="c-header-item-link">
-          <svg width="108" height="30" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient
-                cx="59.87%"
-                cy="35.485%"
-                fx="59.87%"
-                fy="35.485%"
-                r="66.15%"
-                id="a"
+  <body class="">
+    <header class="c-header c-header-inverse">
+      <div class="c-header-left">
+        <div class="c-header-item">
+          <a href="#" class="c-header-item-link">
+            <svg width="108" height="30" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient
+                  cx="59.87%"
+                  cy="35.485%"
+                  fx="59.87%"
+                  fy="35.485%"
+                  r="66.15%"
+                  id="a"
+                >
+                  <stop stop-color="#328F8A" offset="0%" />
+                  <stop stop-color="#08AC4B" offset="100%" />
+                </radialGradient>
+              </defs>
+              <g fill-rule="nonzero" fill="none">
+                <path
+                  d="M16.537 7.403L2.267 22.939c-.217-.342-.42-.7-.59-1.057L16.63 6.952c.094-.078.358-.311.28-.202-.047.046-.295.497-.373.653zm-.388 1.882L6.894 27.636c.311.202.637.404.963.576L16.18 9.813c-.015-.17-.03-.342-.03-.528zm.186-1.338c-.015-.015-.046.062-.108.14L3.897 25.086c.28.31.56.59.87.87L16.211 8.585a4.62 4.62 0 01.124-.638zm8.013 4.215l5.326-.031c-.062-.28-.124-.7-.186-.98l-4.938.746a2.99 2.99 0 01-.202.265zm-4.41 1.648l5.217 12.193c.264-.249.528-.513.777-.777l-5.715-11.37c-.077-.015-.186-.03-.28-.046zm5.015-2.644a.118.118 0 00.063-.03l3.571-2.442c-.14-.28-.357-.685-.512-.965l-2.92 2.893a2.82 2.82 0 01-.202.544zm-1.288 1.696c-.063.046-.14.108-.202.155l6.475 2.893c.015-.28.062-.684.062-.964l-6.335-2.084zm-7.33-2.271l-5.9 18.71c.372.124.745.217 1.118.31l4.922-18.6-.14-.42zm4.83 3.281l6.35 9.332c.171-.28.435-.685.59-.964l-6.707-8.399c-.063.016-.14.016-.233.031zm1.21-.28l6.833 6.113c.093-.28.233-.716.31-1.011l-6.925-5.195c-.077.031-.155.062-.217.094zm-3.602-.155l3.121 14.883c.326-.17.715-.388 1.01-.575L19.022 13.56a1.853 1.853 0 00-.249-.124zm-1.056-.7l.497 16.92c.388-.092.777-.186 1.165-.295L17.98 12.955c-.108-.078-.186-.156-.264-.218zm-3.416 17.247c.218.016.45.016.683.016.156 0 .311 0 .482-.016l1.63-17.916c-.077-.093-.14-.202-.217-.31L14.3 29.983zm6.087-25.318h.062c.093 0 .202-.016.295-.016a4.616 4.616 0 014.612 4.62c0 .263-.03.528-.062.792a.13.13 0 00.109-.062l1.149-4.448c-.233-.28-.528-.669-.792-.933l-.357 3.188c-.062-.202-.156-.404-.342-.793a2.573 2.573 0 00-.233-.389l-1.133-3.81c-.389-.28-.792-.544-1.212-.793l1.476 3.592c-.264-.249-.528-.466-.668-.59L20.186.933A16.088 16.088 0 0018.65.45l3.789 4.261-.093-.015L16.227.062A16.2 16.2 0 0014.984 0c-.108 0-.232 0-.341.016l6.04 4.043-8.4-3.81c-.482.093-.948.202-1.413.326l9.099 3.577L8.463 1.493c-.435.218-.854.435-1.274.7l11.662 2.13-13.727-.606c-.31.28-.776.715-1.056 1.026l14.24-.077L2.53 6.687c-.264.39-.497.794-.73 1.198l16.04-2.8-17.127 5.35c-.124.39-.233.778-.326 1.182l17.096-6.096L.031 14.215c-.015.264-.015.528-.015.793 0 .109-.016.357-.016.466l17.252-9.486L.326 18.103c.078.388.186.762.295 1.15L17.205 6.345c.078-.093.17-.186.248-.28.187-.17.45-.404.746-.622.605-.435 1.521-.715 2.19-.777z"
+                  fill="url(#a)"
+                />
+                <path
+                  d="M55.335 9c-1.935 0-3.292 1.215-3.292 2.727 0 1.76 1.17 2.368 3.448 3.085 2.247.716 2.778 1.277 2.778 2.383 0 1.184-1.03 1.917-2.622 1.917-1.498 0-2.574-.748-3.042-2.228l-.905.327c.499 1.73 1.903 2.804 3.885 2.789 2.122 0 3.682-1.138 3.682-2.898 0-1.714-1.077-2.446-3.292-3.147-2.231-.717-2.934-1.122-2.934-2.306 0-.966.859-1.73 2.279-1.73 1.326 0 2.262.546 2.792 1.917l.859-.405C58.47 10.013 57.332 9 55.335 9zM38 9.234v10.594h1.014V9.234H38zm3.807 0v10.594h1.014v-5.126h5.742v5.126h1.015V9.234h-1.015v4.534h-5.742V9.234h-1.014zm22.687 0v10.594h.952v-8.912h.031c.219.748.39 1.2.656 1.886l2.746 7.01h.936l2.746-7.01c.25-.686.515-1.387.655-1.854h.032v8.88h1.03V9.234h-1.343l-3.526 9.27h-.031l-3.558-9.27h-1.326zm25.933 0v10.594h.983v-2.383l1.638-1.745 2.356 4.128h1.061l-2.762-4.876 2.466-2.665h-1.155l-3.604 3.974V9.234h-.983zm7.645.233v1.06h1.046v-1.06h-1.046zm3.963.11v2.71h-1.326v.842h1.326v4.939c0 1.293.547 1.854 1.998 1.87.343 0 .733-.047.967-.094v-.841a3.098 3.098 0 01-.796.093c-.92 0-1.186-.436-1.186-1.23v-4.737h1.966v-.842h-1.966v-2.71h-.983zm-21.984 2.555c-1.498 0-2.544.576-3.449 1.402l.53.623c.797-.685 1.64-1.184 2.825-1.184.983 0 1.529.499 1.529 1.542v.39c-3.838.592-5.118 1.667-5.118 3.163 0 1.168.796 1.885 2.153 1.87 1.124 0 2.107-.406 2.98-1.2 0 .436.079.763.172 1.075h1.014c-.156-.374-.218-.935-.218-1.854V14.53c0-1.496-.733-2.4-2.418-2.4zm8.722 0c-1.498 0-2.403.7-2.996 1.636h-.031v-1.496h-.968v7.54h.983v-4.907c.578-1.184 1.56-1.87 2.793-1.87.031 0 .297.016.297.016l.093-.92h-.171zm9.33.14v7.54h.983v-7.54h-.983zM81.486 15.59v2.352c-.765.748-1.7 1.184-2.777 1.184-.843 0-1.373-.405-1.373-1.2 0-.997.905-1.791 4.15-2.336zM106 11.964c0-.164.037-.31.091-.419a.784.784 0 01.238-.309.843.843 0 01.33-.181 1.4 1.4 0 01.383-.055c.147 0 .275.036.384.073.128.054.22.109.311.2.092.09.146.2.201.327.055.127.073.273.055.436 0 .164-.036.31-.091.419a.784.784 0 01-.238.309.96.96 0 01-.33.181 1.4 1.4 0 01-.383.055c-.146 0-.274-.036-.384-.073a.913.913 0 01-.311-.2.989.989 0 01-.201-.327 1.583 1.583 0 01-.055-.436zm.238.018c0 .127.018.254.055.345a.762.762 0 00.402.418.762.762 0 00.292.055c.11 0 .22 0 .311-.036.092-.037.183-.073.256-.128a.554.554 0 00.165-.236.964.964 0 00.018-.69.762.762 0 00-.402-.42.762.762 0 00-.293-.054c-.11 0-.22 0-.31.037a1.12 1.12 0 00-.257.127.554.554 0 00-.164.236c-.037.091-.055.219-.073.346zm.402-.473c.037-.018.091-.018.165-.018h.2c.11 0 .202.036.275.073.073.054.11.127.11.236a.223.223 0 01-.092.182.517.517 0 01-.2.073l.109.054.256.418h-.238l-.256-.4-.183-.072-.018.454h-.201l.073-1zm.33.146h-.074c-.018 0-.055 0-.055.018l-.018.272h.128c.073 0 .128 0 .164-.036.037-.018.055-.054.074-.109 0-.11-.074-.145-.22-.145z"
+                  fill="#FFF"
+                />
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="c-header-item">
+          <span class="c-dropdown">
+            <a class="c-header-item-link">
+              <span class="c-text-sm c-text-bold c-text-white"
+                >Fixed Income</span
               >
-                <stop stop-color="#328F8A" offset="0%" />
-                <stop stop-color="#08AC4B" offset="100%" />
-              </radialGradient>
-            </defs>
-            <g fill-rule="nonzero" fill="none">
-              <path
-                d="M16.537 7.403L2.267 22.939c-.217-.342-.42-.7-.59-1.057L16.63 6.952c.094-.078.358-.311.28-.202-.047.046-.295.497-.373.653zm-.388 1.882L6.894 27.636c.311.202.637.404.963.576L16.18 9.813c-.015-.17-.03-.342-.03-.528zm.186-1.338c-.015-.015-.046.062-.108.14L3.897 25.086c.28.31.56.59.87.87L16.211 8.585a4.62 4.62 0 01.124-.638zm8.013 4.215l5.326-.031c-.062-.28-.124-.7-.186-.98l-4.938.746a2.99 2.99 0 01-.202.265zm-4.41 1.648l5.217 12.193c.264-.249.528-.513.777-.777l-5.715-11.37c-.077-.015-.186-.03-.28-.046zm5.015-2.644a.118.118 0 00.063-.03l3.571-2.442c-.14-.28-.357-.685-.512-.965l-2.92 2.893a2.82 2.82 0 01-.202.544zm-1.288 1.696c-.063.046-.14.108-.202.155l6.475 2.893c.015-.28.062-.684.062-.964l-6.335-2.084zm-7.33-2.271l-5.9 18.71c.372.124.745.217 1.118.31l4.922-18.6-.14-.42zm4.83 3.281l6.35 9.332c.171-.28.435-.685.59-.964l-6.707-8.399c-.063.016-.14.016-.233.031zm1.21-.28l6.833 6.113c.093-.28.233-.716.31-1.011l-6.925-5.195c-.077.031-.155.062-.217.094zm-3.602-.155l3.121 14.883c.326-.17.715-.388 1.01-.575L19.022 13.56a1.853 1.853 0 00-.249-.124zm-1.056-.7l.497 16.92c.388-.092.777-.186 1.165-.295L17.98 12.955c-.108-.078-.186-.156-.264-.218zm-3.416 17.247c.218.016.45.016.683.016.156 0 .311 0 .482-.016l1.63-17.916c-.077-.093-.14-.202-.217-.31L14.3 29.983zm6.087-25.318h.062c.093 0 .202-.016.295-.016a4.616 4.616 0 014.612 4.62c0 .263-.03.528-.062.792a.13.13 0 00.109-.062l1.149-4.448c-.233-.28-.528-.669-.792-.933l-.357 3.188c-.062-.202-.156-.404-.342-.793a2.573 2.573 0 00-.233-.389l-1.133-3.81c-.389-.28-.792-.544-1.212-.793l1.476 3.592c-.264-.249-.528-.466-.668-.59L20.186.933A16.088 16.088 0 0018.65.45l3.789 4.261-.093-.015L16.227.062A16.2 16.2 0 0014.984 0c-.108 0-.232 0-.341.016l6.04 4.043-8.4-3.81c-.482.093-.948.202-1.413.326l9.099 3.577L8.463 1.493c-.435.218-.854.435-1.274.7l11.662 2.13-13.727-.606c-.31.28-.776.715-1.056 1.026l14.24-.077L2.53 6.687c-.264.39-.497.794-.73 1.198l16.04-2.8-17.127 5.35c-.124.39-.233.778-.326 1.182l17.096-6.096L.031 14.215c-.015.264-.015.528-.015.793 0 .109-.016.357-.016.466l17.252-9.486L.326 18.103c.078.388.186.762.295 1.15L17.205 6.345c.078-.093.17-.186.248-.28.187-.17.45-.404.746-.622.605-.435 1.521-.715 2.19-.777z"
-                fill="url(#a)"
-              />
-              <path
-                d="M55.335 9c-1.935 0-3.292 1.215-3.292 2.727 0 1.76 1.17 2.368 3.448 3.085 2.247.716 2.778 1.277 2.778 2.383 0 1.184-1.03 1.917-2.622 1.917-1.498 0-2.574-.748-3.042-2.228l-.905.327c.499 1.73 1.903 2.804 3.885 2.789 2.122 0 3.682-1.138 3.682-2.898 0-1.714-1.077-2.446-3.292-3.147-2.231-.717-2.934-1.122-2.934-2.306 0-.966.859-1.73 2.279-1.73 1.326 0 2.262.546 2.792 1.917l.859-.405C58.47 10.013 57.332 9 55.335 9zM38 9.234v10.594h1.014V9.234H38zm3.807 0v10.594h1.014v-5.126h5.742v5.126h1.015V9.234h-1.015v4.534h-5.742V9.234h-1.014zm22.687 0v10.594h.952v-8.912h.031c.219.748.39 1.2.656 1.886l2.746 7.01h.936l2.746-7.01c.25-.686.515-1.387.655-1.854h.032v8.88h1.03V9.234h-1.343l-3.526 9.27h-.031l-3.558-9.27h-1.326zm25.933 0v10.594h.983v-2.383l1.638-1.745 2.356 4.128h1.061l-2.762-4.876 2.466-2.665h-1.155l-3.604 3.974V9.234h-.983zm7.645.233v1.06h1.046v-1.06h-1.046zm3.963.11v2.71h-1.326v.842h1.326v4.939c0 1.293.547 1.854 1.998 1.87.343 0 .733-.047.967-.094v-.841a3.098 3.098 0 01-.796.093c-.92 0-1.186-.436-1.186-1.23v-4.737h1.966v-.842h-1.966v-2.71h-.983zm-21.984 2.555c-1.498 0-2.544.576-3.449 1.402l.53.623c.797-.685 1.64-1.184 2.825-1.184.983 0 1.529.499 1.529 1.542v.39c-3.838.592-5.118 1.667-5.118 3.163 0 1.168.796 1.885 2.153 1.87 1.124 0 2.107-.406 2.98-1.2 0 .436.079.763.172 1.075h1.014c-.156-.374-.218-.935-.218-1.854V14.53c0-1.496-.733-2.4-2.418-2.4zm8.722 0c-1.498 0-2.403.7-2.996 1.636h-.031v-1.496h-.968v7.54h.983v-4.907c.578-1.184 1.56-1.87 2.793-1.87.031 0 .297.016.297.016l.093-.92h-.171zm9.33.14v7.54h.983v-7.54h-.983zM81.486 15.59v2.352c-.765.748-1.7 1.184-2.777 1.184-.843 0-1.373-.405-1.373-1.2 0-.997.905-1.791 4.15-2.336zM106 11.964c0-.164.037-.31.091-.419a.784.784 0 01.238-.309.843.843 0 01.33-.181 1.4 1.4 0 01.383-.055c.147 0 .275.036.384.073.128.054.22.109.311.2.092.09.146.2.201.327.055.127.073.273.055.436 0 .164-.036.31-.091.419a.784.784 0 01-.238.309.96.96 0 01-.33.181 1.4 1.4 0 01-.383.055c-.146 0-.274-.036-.384-.073a.913.913 0 01-.311-.2.989.989 0 01-.201-.327 1.583 1.583 0 01-.055-.436zm.238.018c0 .127.018.254.055.345a.762.762 0 00.402.418.762.762 0 00.292.055c.11 0 .22 0 .311-.036.092-.037.183-.073.256-.128a.554.554 0 00.165-.236.964.964 0 00.018-.69.762.762 0 00-.402-.42.762.762 0 00-.293-.054c-.11 0-.22 0-.31.037a1.12 1.12 0 00-.257.127.554.554 0 00-.164.236c-.037.091-.055.219-.073.346zm.402-.473c.037-.018.091-.018.165-.018h.2c.11 0 .202.036.275.073.073.054.11.127.11.236a.223.223 0 01-.092.182.517.517 0 01-.2.073l.109.054.256.418h-.238l-.256-.4-.183-.072-.018.454h-.201l.073-1zm.33.146h-.074c-.018 0-.055 0-.055.018l-.018.272h.128c.073 0 .128 0 .164-.036.037-.018.055-.054.074-.109 0-.11-.074-.145-.22-.145z"
-                fill="#FFF"
-              />
-            </g>
-          </svg>
-        </a>
-      </div>
-      <div class="c-header-item">
-        <span class="c-dropdown">
-          <a class="c-header-item-link">
-            <span class="c-text-sm c-text-bold c-text-white">Fixed Income</span>
-            <span class="c-text-sm c-text-white">
-              <i class="fas fa-caret-down c-m-left-sm" aria-hidden="true"></i>
-            </span>
-          </a>
-          <ul class="c-dropdown-list c-dropdown-list-below">
-            <a class="c-dropdown-item" href="#">
-              <span class="c-dropdown-icon fas fa-university"></span>
-              Municipals
+              <span class="c-text-sm c-text-white">
+                <i class="fas fa-caret-down c-m-left-sm" aria-hidden="true"></i>
+              </span>
             </a>
-            <a class="c-dropdown-item" href="#">
-              <span class="c-dropdown-icon fas fa-chart-line"></span>
-              Equities
-            </a>
-          </ul>
-        </span>
+            <ul class="c-dropdown-list c-dropdown-list-below">
+              <a class="c-dropdown-item" href="#">
+                <span class="c-dropdown-icon fas fa-university"></span>
+                Municipals
+              </a>
+              <a class="c-dropdown-item" href="#">
+                <span class="c-dropdown-icon fas fa-chart-line"></span>
+                Equities
+              </a>
+            </ul>
+          </span>
+        </div>
       </div>
-    </div>
 
-    <div class="c-header-right">
-      <div class="c-header-item">
-        <a class="c-header-item-link" href="#">
-          <span class="fa fa-comments" aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="c-header-item">
-        <a class="c-header-item-link" href="#">
-          <span class="fa fa-bell" aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="c-header-item">
-        <a class="c-header-item-link" href="#">
-          <span class="fa fa-th" aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="c-header-item">
-        <span class="c-dropdown">
-          <a class="c-header-item-link">
-            <span class="c-avatar c-avatar-primary" data-text="AB" data-status="success">
-            </span>
-            <span class="c-text-sm c-text-bold c-p-left-sm">Belinda Preno</span>
-
-            <i class="fa fa-caret-down c-p-left-sm" aria-hidden="true"></i>
+      <div class="c-header-right">
+        <div class="c-header-item">
+          <a class="c-header-item-link" href="#">
+            <span class="fa fa-comments" aria-hidden="true"></span>
           </a>
-          <div class="c-dropdown-list c-dropdown-list-below c-dropdown-list-right">
-            <div class="c-media c-media-middle">
-              <span class="c-avatar c-avatar-primary" data-text="AA"></span>
-              <div class="c-media-body">
-                <div class="c-text-md c-text-bold">Belinda Preno</div>
-                <div class="c-text-sm c-text-muted">belinda@sequoiacap.com</div>
+        </div>
+        <div class="c-header-item">
+          <a class="c-header-item-link" href="#">
+            <span class="fa fa-bell" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="c-header-item">
+          <a class="c-header-item-link" href="#">
+            <span class="fa fa-th" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="c-header-item">
+          <span class="c-dropdown">
+            <a class="c-header-item-link">
+              <span
+                class="c-avatar c-avatar-primary"
+                data-text="AB"
+                data-status="success"
+              >
+              </span>
+              <span class="c-text-sm c-text-bold c-p-left-sm"
+                >Belinda Preno</span
+              >
+
+              <i class="fa fa-caret-down c-p-left-sm" aria-hidden="true"></i>
+            </a>
+            <div
+              class="c-dropdown-list c-dropdown-list-below c-dropdown-list-right"
+            >
+              <div class="c-media c-media-middle">
+                <span class="c-avatar c-avatar-primary" data-text="AA"></span>
+                <div class="c-media-body">
+                  <div class="c-text-md c-text-bold">Belinda Preno</div>
+                  <div class="c-text-sm c-text-muted">
+                    belinda@sequoiacap.com
+                  </div>
+                </div>
               </div>
+              <div class="c-dropdown-divider"></div>
+              <a class="c-dropdown-item" href="#">
+                <i class="c-dropdown-icon fas fa-id-badge"></i> My Profile
+              </a>
+              <a class="c-dropdown-item" href="#">
+                <i class="c-dropdown-icon fas fa-cog"></i>Account Settings
+              </a>
+              <div class="c-dropdown-divider"></div>
+              <a class="c-dropdown-item" href="#">
+                <i class="c-dropdown-icon fas fa-question-circle"></i>Help & FAQ
+              </a>
+              <div class="c-dropdown-divider"></div>
+              <a class="c-dropdown-item" href="#">
+                <i class="c-dropdown-icon fas fa-power-off"></i>Log Out
+              </a>
             </div>
-            <div class="c-dropdown-divider"></div>
-            <a class="c-dropdown-item" href="#">
-              <i class="c-dropdown-icon fas fa-id-badge"></i> My Profile
-            </a>
-            <a class="c-dropdown-item" href="#">
-              <i class="c-dropdown-icon fas fa-cog"></i>Account Settings
-            </a>
-            <div class="c-dropdown-divider"></div>
-            <a class="c-dropdown-item" href="#">
-              <i class="c-dropdown-icon fas fa-question-circle"></i>Help & FAQ
-            </a>
-            <div class="c-dropdown-divider"></div>
-            <a class="c-dropdown-item" href="#">
-              <i class="c-dropdown-icon fas fa-power-off"></i>Log Out
-            </a>
-          </div>
-        </span>
+          </span>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
     <main class="c-wrapper">
-
       
 <div id="sidenavMain" class="c-sidenav">
-
   <div id="sidenavUser" class="c-sidenav-user c-sidenav-user-hidden">
-
     <div class="c-sidenav-user-body">
-      <img class="c-radius-round" src="https://unsplash.it/200?image=433" width="80" height="80" alt="">
+      <img
+        class="c-radius-round"
+        src="https://unsplash.it/200?image=433"
+        width="80"
+        height="80"
+        alt=""
+      />
       <p class="c-text-md c-p-vertical-xs">Victoria Baker</p>
       <em class="c-text-sm c-text-muted c-p-bottom-sm">Santa Ana, CA</em>
     </div>
@@ -177,13 +191,10 @@
       </li>
       <li class="c-sidenav-divider"></li>
     </ul>
-
   </div>
 
   <div class="c-sidenav-body">
-
     <ul class="c-sidenav-menu" data-nav-type="accordion">
-
       <li class="c-sidenav-menu-category">
         <div>Main</div>
         <i class="c-sidenav-menu-icon" title="Main"></i>
@@ -198,8 +209,8 @@
 
       <li class="c-sidenav-menu-item ">
         <a class="c-sidenav-menu-link ">
-            <i class="c-sidenav-menu-icon fas fa-window-maximize"></i>
-            <span>Page 2</span>
+          <i class="c-sidenav-menu-icon fas fa-window-maximize"></i>
+          <span>Page 2</span>
         </a>
       </li>
 
@@ -212,7 +223,8 @@
 
       <li class="c-sidenav-menu-item c-sidenav-submenu">
         <a href="#" class="c-sidenav-menu-link">
-          <i class="c-sidenav-menu-icon fas fa-layer-group"></i> <span>Menu Levels</span>
+          <i class="c-sidenav-menu-icon fas fa-layer-group"></i>
+          <span>Menu Levels</span>
         </a>
 
         <ul class="c-sidenav-submenu-group" data-submenu-title="Menu Levels">
@@ -230,20 +242,18 @@
                 </ul>
               </li>
             </ul>
-
           </li>
         </ul>
-
       </li>
 
-    <li class="c-sidenav-divider">
+      <li class="c-sidenav-divider"></li>
 
-    <li class="c-sidenav-menu-category">
-      <div>Example Category</div>
-      <i class="c-sidenav-menu-icon" title="Menu Category"></i>
-    </li>
+      <li class="c-sidenav-menu-category">
+        <div>Example Category</div>
+        <i class="c-sidenav-menu-icon" title="Menu Category"></i>
+      </li>
 
-    <li class="c-sidenav-menu-item ">
+      <li class="c-sidenav-menu-item ">
         <a class="c-sidenav-menu-link">
           <i class="c-sidenav-menu-icon fas fa-home"></i>
           <span>Home 2</span>
@@ -252,7 +262,8 @@
 
       <li class="c-sidenav-menu-item c-sidenav-submenu">
         <a href="#" class="c-sidenav-menu-link">
-          <i class="c-sidenav-menu-icon fas fa-layer-group"></i> <span>Menu Levels</span>
+          <i class="c-sidenav-menu-icon fas fa-layer-group"></i>
+          <span>Menu Levels</span>
         </a>
 
         <ul class="c-sidenav-submenu-group" data-submenu-title="Menu Levels">
@@ -270,384 +281,416 @@
                 </ul>
               </li>
             </ul>
-
           </li>
         </ul>
-
       </li>
-
     </ul>
-  </div>
-
-  <div id="sidenavMainFoldToggle" class="c-sidenav-collapse">
-    <i class="c-sidenav-menu-icon"></i>
-    <!-- <i class="icon icon-arrow-right"></i> -->
+    <div id="sidenavMainFoldToggle" class="c-sidenav-collapse">
+      <i class="c-sidenav-menu-icon"></i>
+    </div>
   </div>
 </div>
-
-
-      <div id="actionPanelLeft" class="c-action-panel c-action-panel-push c-action-panel-left">
-      
-        <header class="c-action-panel-header">
-          <div class="c-action-panel-header-title">
-            Simple Header
-          </div>
-          <div class="c-action-panel-header-menu">
-            <a class="c-action-panel-close"></a>
-          </div>
-        </header>
-      
-        <div class="c-action-panel-body">
-      
-        </div>
-      
-      </div>
+ <div id="actionPanelLeft" class="c-action-panel c-action-panel-push c-action-panel-left">
+ 
+   <header class="c-action-panel-header">
+     <div class="c-action-panel-header-title">
+       Simple Header
+     </div>
+     <div class="c-action-panel-header-menu">
+       <a class="c-action-panel-close"></a>
+     </div>
+   </header>
+ 
+   <div class="c-action-panel-body">
+ 
+   </div>
+ 
+ </div>
 
       <div class="c-main-content">
-
         <header class="c-page-header">
           <div class="c-page-header-info">
             <div class="c-page-header-left">
-              <h2 class="c-page-header-title"><strong>Page</strong> header <small class="subtitle">You'll see different
-                  examples of page header</small></h2>
+              <h2 class="c-page-header-title">
+                <strong>Page</strong> header
+                <small class="subtitle"
+                  >You'll see different examples of page header</small
+                >
+              </h2>
             </div>
 
             <div class="c-page-header-right">
-              <h2 class="c-page-header-title c-text-right"><strong>Right</strong> header <small class="subtitle">You'll
-                  see different examples of page header</small></h2>
+              <h2 class="c-page-header-title c-text-right">
+                <strong>Right</strong> header
+                <small class="subtitle"
+                  >You'll see different examples of page header</small
+                >
+              </h2>
             </div>
           </div>
 
           <div class="c-page-header-action">
             <ul class="c-tabs c-tabs-lg">
-              <li class="c-tab-item"><a class="c-tab-item-link" href="#">Tab A</a></li>
-              <li class="c-tab-item"><a class="c-tab-item-link c-tab-item-link-active" href="#">Tab B</a></li>
-              <li class="c-tab-item"><a class="c-tab-item-link" href="#">Tab C</a></li>
-              <li class="c-tab-item"><a class="c-tab-item-link" href="#">Tab D</a></li>
+              <li class="c-tab-item">
+                <a class="c-tab-item-link" href="#">Tab A</a>
+              </li>
+              <li class="c-tab-item">
+                <a class="c-tab-item-link c-tab-item-link-active" href="#"
+                  >Tab B</a
+                >
+              </li>
+              <li class="c-tab-item">
+                <a class="c-tab-item-link" href="#">Tab C</a>
+              </li>
+              <li class="c-tab-item">
+                <a class="c-tab-item-link" href="#">Tab D</a>
+              </li>
             </ul>
           </div>
         </header>
 
         <div class="c-p-lg c-bg-gray-1">
-
           <div class="c-card">
             <div class="c-card-content">
               <div class="c-header-md">Below this is just dummy text.</div>
-              <span class="c-text-md">I love Halloween. The one time of year when everyone wears a mask … not just me.
-                Rorschach would say you have
-                a hard time relating to others. I think he's got a crush on you, Dex! Pretend. You pretend the feelings
-                are
-                there, for the world, for the people around you. Who knows? Maybe one day they will be.</span>
+              <span class="c-text-md"
+                >I love Halloween. The one time of year when everyone wears a
+                mask … not just me. Rorschach would say you have a hard time
+                relating to others. I think he's got a crush on you, Dex!
+                Pretend. You pretend the feelings are there, for the world, for
+                the people around you. Who knows? Maybe one day they will
+                be.</span
+              >
               <ol class="c-ol">
-                <li>I'm not the monster he wants me to be. So I'm neither man nor beast. I'm something new entirely.
-                  With my
-                  own set of rules. I'm Dexter. Boo.</li>
-                <li>I feel like a jigsaw puzzle missing a piece. And I'm not even sure what the picture should be.</li>
+                <li>
+                  I'm not the monster he wants me to be. So I'm neither man nor
+                  beast. I'm something new entirely. With my own set of rules.
+                  I'm Dexter. Boo.
+                </li>
+                <li>
+                  I feel like a jigsaw puzzle missing a piece. And I'm not even
+                  sure what the picture should be.
+                </li>
                 <li>I'm Dexter, and I'm not sure what I am.</li>
               </ol>
 
-              <div class="c-header-md">This man is a knight in shining armor.</div>
-              <div class="c-text-md">You look…perfect. I like seafood. I think he's got a crush on you, Dex! I am not a
-                killer.</div>
+              <div class="c-header-md">
+                This man is a knight in shining armor.
+              </div>
+              <div class="c-text-md">
+                You look…perfect. I like seafood. I think he's got a crush on
+                you, Dex! I am not a killer.
+              </div>
               <ul class="c-ul">
                 <li>You're a killer. I catch killers.</li>
                 <li>I'm really more an apartment person.</li>
                 <li>Tell him time is of the essence.</li>
               </ul>
-
             </div>
           </div>
 
           <div class="c-card c-m-vertical-lg">
             <div class="c-card-content">
               <div class="c-header-md">Below this is just dummy text.</div>
-              <span class="c-text-md">I love Halloween. The one time of year when everyone wears a mask … not just me.
-                Rorschach would say you have
-                a hard time relating to others. I think he's got a crush on you, Dex! Pretend. You pretend the feelings
-                are
-                there, for the world, for the people around you. Who knows? Maybe one day they will be.</span>
+              <span class="c-text-md"
+                >I love Halloween. The one time of year when everyone wears a
+                mask … not just me. Rorschach would say you have a hard time
+                relating to others. I think he's got a crush on you, Dex!
+                Pretend. You pretend the feelings are there, for the world, for
+                the people around you. Who knows? Maybe one day they will
+                be.</span
+              >
               <ol class="c-ol">
-                <li>I'm not the monster he wants me to be. So I'm neither man nor beast. I'm something new entirely.
-                  With my
-                  own set of rules. I'm Dexter. Boo.</li>
-                <li>I feel like a jigsaw puzzle missing a piece. And I'm not even sure what the picture should be.</li>
+                <li>
+                  I'm not the monster he wants me to be. So I'm neither man nor
+                  beast. I'm something new entirely. With my own set of rules.
+                  I'm Dexter. Boo.
+                </li>
+                <li>
+                  I feel like a jigsaw puzzle missing a piece. And I'm not even
+                  sure what the picture should be.
+                </li>
                 <li>I'm Dexter, and I'm not sure what I am.</li>
               </ol>
 
-              <div class="c-header-md">This man is a knight in shining armor.</div>
-              <div class="c-text-md">You look…perfect. I like seafood. I think he's got a crush on you, Dex! I am not a
-                killer.</div>
+              <div class="c-header-md">
+                This man is a knight in shining armor.
+              </div>
+              <div class="c-text-md">
+                You look…perfect. I like seafood. I think he's got a crush on
+                you, Dex! I am not a killer.
+              </div>
               <ul class="c-ul">
                 <li>You're a killer. I catch killers.</li>
                 <li>I'm really more an apartment person.</li>
                 <li>Tell him time is of the essence.</li>
               </ul>
-
             </div>
           </div>
 
           <div class="c-card">
             <div class="c-card-content">
               <div class="c-header-md">Below this is just dummy text.</div>
-              <span class="c-text-md">I love Halloween. The one time of year when everyone wears a mask … not just me.
-                Rorschach would say you have
-                a hard time relating to others. I think he's got a crush on you, Dex! Pretend. You pretend the feelings
-                are
-                there, for the world, for the people around you. Who knows? Maybe one day they will be.</span>
+              <span class="c-text-md"
+                >I love Halloween. The one time of year when everyone wears a
+                mask … not just me. Rorschach would say you have a hard time
+                relating to others. I think he's got a crush on you, Dex!
+                Pretend. You pretend the feelings are there, for the world, for
+                the people around you. Who knows? Maybe one day they will
+                be.</span
+              >
               <ol class="c-ol">
-                <li>I'm not the monster he wants me to be. So I'm neither man nor beast. I'm something new entirely.
-                  With my
-                  own set of rules. I'm Dexter. Boo.</li>
-                <li>I feel like a jigsaw puzzle missing a piece. And I'm not even sure what the picture should be.</li>
+                <li>
+                  I'm not the monster he wants me to be. So I'm neither man nor
+                  beast. I'm something new entirely. With my own set of rules.
+                  I'm Dexter. Boo.
+                </li>
+                <li>
+                  I feel like a jigsaw puzzle missing a piece. And I'm not even
+                  sure what the picture should be.
+                </li>
                 <li>I'm Dexter, and I'm not sure what I am.</li>
               </ol>
 
-              <div class="c-header-md">This man is a knight in shining armor.</div>
-              <div class="c-text-md">You look…perfect. I like seafood. I think he's got a crush on you, Dex! I am not a
-                killer.</div>
+              <div class="c-header-md">
+                This man is a knight in shining armor.
+              </div>
+              <div class="c-text-md">
+                You look…perfect. I like seafood. I think he's got a crush on
+                you, Dex! I am not a killer.
+              </div>
               <ul class="c-ul">
                 <li>You're a killer. I catch killers.</li>
                 <li>I'm really more an apartment person.</li>
                 <li>Tell him time is of the essence.</li>
               </ul>
-
-            </div>
-          </div>
-
-        </div>
-
-        <div class="c-footer c-footer-inverse">
-          <div class="c-footer-left">
-            © 2016 Ipreo. All Rights Reserved.
-          </div>
-          <div class="c-footer-right">
-            <div class="c-footer-link">
-              <a href="javascript:void(0)" class="c-a">Third Party Data</a>
-            </div>
-            <div class="c-footer-link">
-              <a href="javascript:void(0)" class="c-a">Privacy Policy</a>
-            </div>
-            <div class="c-footer-link">
-              <a href="javascript:void(0)" class="c-a">Terms of Use</a>
             </div>
           </div>
         </div>
       </div>
 
       <div id="actionPanelRight" class="c-action-panel c-notifications c-action-panel-push">
-      
-        <header class="c-action-panel-header">
-          <div class="c-action-panel-header-title">
-            Notifications
-          </div>
-          <div class="c-action-panel-header-menu">
-            <button class="c-btn c-btn-icon c-btn-secondary">
-              <i class="c-action-panel-close"></i>
-            </button>
-          </div>
-        </header>
-      
-        <div class="c-action-panel-body">
-          <div class="c-media-list c-media-list-hover">
-      
-            <div class="c-media c-media-middle">
-              <div class="c-avatar c-avatar-lg c-avatar-cyan">
-                <i class="fab fa-dropbox"></i>
-              </div>
-              <div class="c-media-body">
-                <div class="c-text-md">Notification Content</div>
-                <div class="c-text-sm c-text-bold">Name/App</div>
-              </div>
-            </div>
-      
-            <div class="c-media c-media-middle">
-              <div class="c-avatar c-avatar-lg c-avatar-grape">
-                <i class="fab fa-apple"></i>
-              </div>
-              <div class="c-media-body">
-                <div class="c-text-md">Notification Content</div>
-                <div class="c-text-sm c-text-bold">Name/App</div>
-              </div>
-            </div>
-      
-            <div class="c-media c-media-middle c-media-read">
-              <div class="c-avatar c-avatar-lg c-avatar-orange">
-                <i class="fab fa-amazon"></i>
-              </div>
-              <div class="c-media-body">
-                <div class="c-text-md">This Notification is read</div>
-                <div class="c-text-sm c-text-bold">Name/App</div>
-              </div>
-            </div>
-      
-            <div class="c-media c-media-middle">
-              <div class="c-avatar c-avatar-lg c-avatar-success">
-                <i class="fab fa-xbox"></i>
-              </div>
-              <div class="c-media-body">
-                <div class="c-text-md">Notification Content</div>
-                <div class="c-text-sm c-text-bold">Name/App</div>
-              </div>
-            </div>
-      
-          </div>
+
+  <header class="c-action-panel-header">
+    <div class="c-action-panel-header-title">
+      Notifications
+    </div>
+    <div class="c-action-panel-header-menu">
+      <button class="c-btn c-btn-icon c-btn-secondary">
+        <i class="c-action-panel-close"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="c-action-panel-body">
+    <div class="c-media-list c-media-list-hover">
+
+      <div class="c-media c-media-middle">
+        <div class="c-avatar c-avatar-lg c-avatar-cyan">
+          <i class="fab fa-dropbox"></i>
         </div>
-      
-        <footer class="c-action-panel-footer">
-          <button class="c-btn c-btn-primary c-m-right-sm">Submit</button>
-          <button class="c-btn c-btn-secondary">Cancel</button>
-        </footer>
+        <div class="c-media-body">
+          <div class="c-text-md">Notification Content</div>
+          <div class="c-text-sm c-text-bold">Name/App</div>
+        </div>
       </div>
-      <div id="actionPanelOverlay" class="c-action-panel">
-      
-        <header class="c-action-panel-header">
-          <div class="c-action-panel-header-title">
-            Simple Header
-          </div>
-          <div class="c-action-panel-header-menu">
-            <a class="c-action-panel-close"></a>
-          </div>
-        </header>
-      
-        <div class="c-action-panel-body">
-      
+
+      <div class="c-media c-media-middle">
+        <div class="c-avatar c-avatar-lg c-avatar-grape">
+          <i class="fab fa-apple"></i>
         </div>
-      
+        <div class="c-media-body">
+          <div class="c-text-md">Notification Content</div>
+          <div class="c-text-sm c-text-bold">Name/App</div>
+        </div>
       </div>
-      <div id="themes" class="c-action-panel">
-      
-        <div class="settings-ctrl" id="themes-trigger">
-          <i class="fa fa-cog"></i>
+
+      <div class="c-media c-media-middle c-media-read">
+        <div class="c-avatar c-avatar-lg c-avatar-orange">
+          <i class="fab fa-amazon"></i>
         </div>
-      
-        <header class="c-action-panel-header">
-          <div class="c-text-lg c-text-bold">Main Sidebar Options</div>
-        </header>
-      
-        <div class="c-action-panel-body">
-      
-          <div class="c-media-list">
-            <div class="c-media c-media-middle">
-              <div class="c-media-body">
-                <div class="c-text-md c-text-bold">Hide the sidebar completely</div>
-                <div class="c-text-xs c-text-muted">Make it go bye bye!</div>
-              </div>
-              <button id="sidenavHideToggle" class="c-btn c-btn-sm c-btn-secondary">
-                Hide Sidebar
-              </button>
-            </div>
-      
-            <div class="c-media c-media-middle">
-              <div class="c-media-body">
-                <div class="c-text-md c-text-bold">Fold the sidebar</div>
-                <div class="c-text-xs c-text-muted">Collapse the sidebar to icons</div>
-              </div>
-              <button id="sidenavFoldToggle" class="c-btn c-btn-sm c-btn-secondary">
-                Fold Sidebar
-              </button>
-            </div>
-      
-            <div class="c-media c-media-middle">
-              <div class="c-media-body">
-                <div class="c-text-md c-text-bold">Folded sidebar with fixed layout</div>
-                <div class="c-text-xs c-text-muted">Header and sidebar fixed</div>
-              </div>
-              <button id="fixedFoldToggle" class="c-btn c-btn-sm c-btn-secondary">
-                Fix & Fold
-              </button>
-            </div>
-      
-            <div class="c-media c-media-middle">
-              <div class="c-media-body">
-                <div class="c-text-md c-text-bold">WIP: Dark Side-Nav</div>
-                <div class="c-text-xs c-text-muted">Toggle a dark sidebar</div>
-              </div>
-              <button id="sidenavDarkToggle" class="c-btn c-btn-sm c-btn-secondary">
-                Dark SideNav
-              </button>
-            </div>
-      
-            <div class="c-media c-media-middle">
-              <div class="c-media-body">
-                <div class="c-text-md c-text-bold">Internal Right</div>
-                <div class="c-text-xs c-text-muted">Action Panel on right pushing content</div>
-              </div>
-              <button id="actionPanelRightToggle" class="c-btn c-btn-sm c-btn-secondary">
-                Right Panel
-              </button>
-            </div>
-      
-      
-            <div class="c-media c-media-middle">
-              <div class="c-media-body">
-                <div class="c-text-md c-text-bold">Internal Left</div>
-                <div class="c-text-xs c-text-muted">Action Panel on left pushing content</div>
-              </div>
-              <button id="actionPanelLeftToggle" class="c-btn c-btn-sm c-btn-secondary">
-                Left Panel
-              </button>
-            </div>
-      
-      
-            <div class="c-media c-media-middle">
-              <div class="c-media-body">
-                <div class="c-text-md c-text-bold">Right Actions Overlay</div>
-                <div class="c-text-xs c-text-muted">Close this window to see!</div>
-              </div>
-              <button id="actionPanelOverlayToggle" class="c-btn c-btn-sm c-btn-secondary">
-                Right Panel Over
-              </button>
-            </div>
-      
-      
-            <div class="c-media c-media-middle">
-              <div class="c-media-body">
-                <div class="c-text-md c-text-bold">Make header and nav fixed</div>
-                <div class="c-text-xs c-text-muted">Header and sidebar but not collapsed</div>
-              </div>
-              <button id="layoutFixedToggle" class="c-btn c-btn-sm c-btn-secondary">
-                Toggle Fixed
-              </button>
-            </div>
-      
-      
-            <div class="c-media c-media-middle">
-              <div class="c-media-body">
-                <div class="c-text-md c-text-bold">Experimental user section</div>
-                <div class="c-text-xs c-text-muted">Show and hide a user </div>
-              </div>
-              <button id="sidenavUserToggle" class="c-btn c-btn-sm c-btn-secondary">
-                Toggle User
-              </button>
-            </div>
-      
-          </div>
-      
+        <div class="c-media-body">
+          <div class="c-text-md">This Notification is read</div>
+          <div class="c-text-sm c-text-bold">Name/App</div>
         </div>
-      
       </div>
+
+      <div class="c-media c-media-middle">
+        <div class="c-avatar c-avatar-lg c-avatar-success">
+          <i class="fab fa-xbox"></i>
+        </div>
+        <div class="c-media-body">
+          <div class="c-text-md">Notification Content</div>
+          <div class="c-text-sm c-text-bold">Name/App</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="c-action-panel-footer">
+    <button class="c-btn c-btn-primary c-m-right-sm">Submit</button>
+    <button class="c-btn c-btn-secondary">Cancel</button>
+  </footer>
+</div>
+ <div id="actionPanelOverlay" class="c-action-panel">
+
+  <header class="c-action-panel-header">
+    <div class="c-action-panel-header-title">
+      Simple Header
+    </div>
+    <div class="c-action-panel-header-menu">
+      <a class="c-action-panel-close"></a>
+    </div>
+  </header>
+
+  <div class="c-action-panel-body">
+
+  </div>
+
+</div>
+ <div id="themes" class="c-action-panel">
+
+  <div class="settings-ctrl" id="themes-trigger">
+    <i class="fa fa-cog"></i>
+  </div>
+
+  <header class="c-action-panel-header">
+    <div class="c-text-lg c-text-bold">Main Sidebar Options</div>
+  </header>
+
+  <div class="c-action-panel-body">
+
+    <div class="c-media-list">
+      <div class="c-media c-media-middle">
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Hide the sidebar completely</div>
+          <div class="c-text-xs c-text-muted">Make it go bye bye!</div>
+        </div>
+        <button id="sidenavHideToggle" class="c-btn c-btn-sm c-btn-secondary">
+          Hide Sidebar
+        </button>
+      </div>
+
+      <div class="c-media c-media-middle">
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Fold the sidebar</div>
+          <div class="c-text-xs c-text-muted">Collapse the sidebar to icons</div>
+        </div>
+        <button id="sidenavFoldToggle" class="c-btn c-btn-sm c-btn-secondary">
+          Fold Sidebar
+        </button>
+      </div>
+
+      <div class="c-media c-media-middle">
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Folded sidebar with fixed layout</div>
+          <div class="c-text-xs c-text-muted">Header and sidebar fixed</div>
+        </div>
+        <button id="fixedFoldToggle" class="c-btn c-btn-sm c-btn-secondary">
+          Fix & Fold
+        </button>
+      </div>
+
+      <div class="c-media c-media-middle">
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">WIP: Dark Side-Nav</div>
+          <div class="c-text-xs c-text-muted">Toggle a dark sidebar</div>
+        </div>
+        <button id="sidenavDarkToggle" class="c-btn c-btn-sm c-btn-secondary">
+          Dark SideNav
+        </button>
+      </div>
+
+      <div class="c-media c-media-middle">
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Internal Right</div>
+          <div class="c-text-xs c-text-muted">Action Panel on right pushing content</div>
+        </div>
+        <button id="actionPanelRightToggle" class="c-btn c-btn-sm c-btn-secondary">
+          Right Panel
+        </button>
+      </div>
+
+
+      <div class="c-media c-media-middle">
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Internal Left</div>
+          <div class="c-text-xs c-text-muted">Action Panel on left pushing content</div>
+        </div>
+        <button id="actionPanelLeftToggle" class="c-btn c-btn-sm c-btn-secondary">
+          Left Panel
+        </button>
+      </div>
+
+
+      <div class="c-media c-media-middle">
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Right Actions Overlay</div>
+          <div class="c-text-xs c-text-muted">Close this window to see!</div>
+        </div>
+        <button id="actionPanelOverlayToggle" class="c-btn c-btn-sm c-btn-secondary">
+          Right Panel Over
+        </button>
+      </div>
+
+
+      <div class="c-media c-media-middle">
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Make header and nav fixed</div>
+          <div class="c-text-xs c-text-muted">Header and sidebar but not collapsed</div>
+        </div>
+        <button id="layoutFixedToggle" class="c-btn c-btn-sm c-btn-secondary">
+          Toggle Fixed
+        </button>
+      </div>
+
+
+      <div class="c-media c-media-middle">
+        <div class="c-media-body">
+          <div class="c-text-md c-text-bold">Experimental user section</div>
+          <div class="c-text-xs c-text-muted">Show and hide a user </div>
+        </div>
+        <button id="sidenavUserToggle" class="c-btn c-btn-sm c-btn-secondary">
+          Toggle User
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
     </main>
-
+    <div class="c-footer c-footer-inverse">
+      <div class="c-footer-left">
+        © 2016 Ipreo. All Rights Reserved.
+      </div>
+      <div class="c-footer-right">
+        <div class="c-footer-link">
+          <a href="javascript:void(0)" class="c-a">Third Party Data</a>
+        </div>
+        <div class="c-footer-link">
+          <a href="javascript:void(0)" class="c-a">Privacy Policy</a>
+        </div>
+        <div class="c-footer-link">
+          <a href="javascript:void(0)" class="c-a">Terms of Use</a>
+        </div>
+      </div>
+    </div>
   </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="../script.min.js"></script>
 
-<script>
+  <script>
+    // --------------------------------------------
+    // Misc ---------------------------------------
+    // --------------------------------------------
 
-
-
-
-// --------------------------------------------
-// Misc ---------------------------------------
-// --------------------------------------------
-
-
-$("#themes-trigger").on("click", function () {
-  $("#themes").toggleClass("c-action-panel-visible");
-});
-
+    $("#themes-trigger").on("click", function() {
+      $("#themes").toggleClass("c-action-panel-visible");
+    });
   </script>
-
 </html>

@@ -16,27 +16,31 @@
 }
 
 @mixin sidenav-body {
-  bottom: 0;
-  flex: 1 1 0%;
-  width: inherit;
-  overflow-y: auto;
-  overflow-x: hidden;
-  top: $header-height;
-  margin-bottom: $footer-height + $space-lg;
-  padding-bottom: $footer-height + $space-lg;
-  transition: left ease-in-out 0.15s, right ease-in-out 0.15s;
+  // bottom: 0;
+  // flex: 1 1 0%;
+  // width: inherit;
+  // overflow-y: auto;
+  // overflow-x: hidden;
+  // top: $header-height;
+  // margin-bottom: $footer-height + $space-lg;
+  // padding-bottom: $footer-height + $space-lg;
+  // transition: left ease-in-out 0.15s, right ease-in-out 0.15s;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 @mixin sidenav-collapse {
-  bottom: 0;
+  // bottom: 0;
   display: flex;
-  position: fixed;
+  // position: fixed;
   font-size: 18px;
   cursor: pointer;
   align-items: center;
   width: $sidebar-width;
   height: $footer-height;
   justify-content: flex-end;
+  margin-top: auto;
   color: $sidebar-icon-color;
   background: $sidebar-collapse-bg;
   border-top: 1px solid $sidebar-collapse-bd;
@@ -54,8 +58,8 @@
 
 
 @mixin sidenav-menu {
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
   list-style: none;
   margin: $space-0;
   padding-left: $space-0;
