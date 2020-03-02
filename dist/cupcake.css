@@ -3808,12 +3808,12 @@ textarea.c-input {
 }
 
 .c-footer-link::after {
-  content: '•';
   cursor: default;
-  color: #868e96;
   padding-left: inherit;
   vertical-align: middle;
   margin: 0 8px;
+  content: "•";
+  color: #868e96;
 }
 
 .c-footer-link:last-child::after {
@@ -3830,6 +3830,27 @@ textarea.c-input {
 
 .c-footer.c-footer-transparent {
   background-color: transparent;
+}
+
+.c-footer.c-footer-inverse {
+  color: #ffffff;
+  height: 24px;
+  line-height: 24px;
+  background-color: #4c4b4c;
+}
+
+.c-footer.c-footer-inverse .c-footer-link {
+  color: #ffffff;
+}
+
+.c-footer.c-footer-inverse .c-footer-link::after {
+  content: "|";
+  color: #f1f3f5;
+}
+
+.c-footer.c-footer-inverse .c-footer-link .c-a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .c-container {
@@ -6036,7 +6057,7 @@ textarea.c-input {
 }
 
 .c-header-item-link:hover {
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .c-header-left {
@@ -6091,7 +6112,7 @@ textarea.c-input {
 }
 
 .c-header-inverse {
-  background-color: #002b49;
+  background-color: #32363b;
   border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -6129,6 +6150,8 @@ textarea.c-input {
 .c-header-inverse .c-nav.c-nav-pills .c-nav-link .c-nav-icon {
   opacity: 1;
   color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: color .25s;
+  transition: color .25s;
 }
 
 .c-header-inverse .c-nav.c-nav-pills .c-nav-link:hover:not(.c-nav-link-disabled), .c-header-inverse .c-nav.c-nav-pills .c-nav-link:focus, .c-header-inverse .c-nav.c-nav-pills .c-nav-link-active {
@@ -6138,7 +6161,7 @@ textarea.c-input {
 
 .c-header-inverse .c-nav.c-nav-pills .c-nav-link:hover:not(.c-nav-link-disabled) .c-nav-icon, .c-header-inverse .c-nav.c-nav-pills .c-nav-link:focus .c-nav-icon, .c-header-inverse .c-nav.c-nav-pills .c-nav-link-active .c-nav-icon {
   opacity: 1;
-  color: #ffffff;
+  color: #009697;
 }
 
 .c-header-tabs.c-tabs {
@@ -7944,31 +7967,35 @@ select.c-input-error:not([multiple]) option {
 .c-sidenav-dark {
   border-right: transparent;
   color: #ffffff;
-  background-color: #002b49;
+  background-color: #32363b;
 }
 
 .c-sidenav-dark .c-sidenav-menu-link {
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
 }
 
 .c-sidenav-dark .c-sidenav-menu-link:hover {
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.c-sidenav-dark .c-sidenav-menu-link:hover .c-sidenav-menu-icon {
+  color: #009697;
 }
 
 .c-sidenav-dark .c-sidenav-menu-link-active .c-sidenav-menu-icon {
-  color: #329af0;
+  color: #009697;
 }
 
 .c-sidenav-dark .c-sidenav-menu-item > .c-sidenav-menu-link-active {
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.07);
 }
 
 .c-sidenav-dark .c-sidenav-menu-item-open > .c-sidenav-menu-link:not(.disabled),
 .c-sidenav-dark .c-sidenav-menu > .c-sidenav-menu-item-expanded:not(.c-sidenav-menu-item-open) > .c-sidenav-menu-link {
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.07);
 }
 
 .c-sidenav-dark .c-sidenav-menu-item-open > .c-sidenav-menu-link:not(.disabled) .c-sidenav-menu-icon,
@@ -7978,7 +8005,7 @@ select.c-input-error:not([multiple]) option {
 
 .c-sidenav-dark .c-sidenav-menu > .c-sidenav-menu-item-open > .c-sidenav-menu-link:not(.disabled),
 .c-sidenav-dark .c-sidenav-menu > .c-sidenav-menu-item > .c-sidenav-menu-link.active {
-  background-color: #329af0;
+  background-color: #009697;
   color: #ffffff;
 }
 
@@ -7991,7 +8018,7 @@ select.c-input-error:not([multiple]) option {
 }
 
 .c-sidenav-dark .c-sidenav-menu .c-sidenav-submenu-group {
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.07);
 }
 
 .c-sidenav-dark .c-sidenav-menu .c-sidenav-submenu > .c-sidenav-menu-link::after {
@@ -8000,16 +8027,16 @@ select.c-input-error:not([multiple]) option {
 
 .c-sidenav-dark .c-sidenav-collapse {
   color: #ffffff;
-  background-color: #002b49;
-  border-color: #00253f;
+  background-color: #32363b;
+  border-color: #2d3135;
 }
 
 .c-sidenav-dark .c-sidenav-collapse:hover {
-  background-color: #002844;
+  background-color: #303338;
 }
 
 .c-sidenav-dark.c-sidenav-folded .c-sidenav-menu > .c-sidenav-submenu > .c-sidenav-submenu-group {
-  background-color: #002b49;
+  background-color: #32363b;
 }
 
 .c-switch {

@@ -110,6 +110,7 @@
       .c-nav-icon {
         opacity: 1;
         color: $header-inverse-text-color;
+        transition: color .25s;
       }
 
       // Hover styles
@@ -121,7 +122,7 @@
 
         .c-nav-icon {
           opacity: 1;
-          color: $header-inverse-text-color-active;
+          color: $header-inverse-icon-color-active;
         }
       }
     }

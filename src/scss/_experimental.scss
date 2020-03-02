@@ -92,6 +92,21 @@ $nav-spacing               : map-get($nav-config, 'spacing') !default;
         flex-direction: column;
         background: $header-bg;
       }
+
+      &.c-header-inverse {
+        .c-nav-toggle {
+          color: $header-text-color;
+          border-left: 1px solid $header-borders;
+
+          &:hover {
+            background-color: $header-bg-hover;
+          }
+        }
+
+        .c-nav {
+          background: $header-inverse-bg;
+        }
+      }
     }
   }
 
@@ -109,18 +124,6 @@ $nav-spacing               : map-get($nav-config, 'spacing') !default;
         width: 100%;
         position: absolute;
         margin: $space-0 + 1px $space-0 $space-0 $space-0;
-      }
-    }
-  }
-
-
-  .c-header.c-header-inverse {
-    .c-nav-toggle {
-      color: $header-text-color;
-      border-left: 1px solid $header-borders;
-
-      &:hover {
-        background-color: $header-bg-hover;
       }
     }
   }
