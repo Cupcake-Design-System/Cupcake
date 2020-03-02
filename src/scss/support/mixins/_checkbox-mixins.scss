@@ -210,5 +210,16 @@
         background-color: $color-white;
       }
     }
+
+    &:checked[disabled] + label {
+      cursor: not-allowed;
+      color: $checkbox-label-disabled-color;
+
+      &::before {
+        cursor: not-allowed;
+        border-color: $checkbox-bg-checked-disabled;
+        background-color: $checkbox-bg-checked-disabled;
+      }
+    }
   }
 }
