@@ -6623,6 +6623,10 @@ textarea.c-input {
   background-color: #6c757d;
 }
 
+.c-modal-close::before, .c-modal-close::after {
+  right: 0;
+}
+
 .c-modal-fullscreen.c-modal {
   border: 0;
   width: 100%;

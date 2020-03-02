@@ -129,6 +129,11 @@
   // Modal close X styles
   &-close {
     @include close($modal-close-size);
+
+    &::before,
+    &::after {
+      right: 0;
+    }
   }
 
   // Modal Fullscreen
