@@ -2729,6 +2729,17 @@ th {
   border: 1px solid #007778;
 }
 
+.c-checkbox.c-checkbox-primary input:checked[disabled] + label {
+  cursor: not-allowed;
+  color: #adb5bd;
+}
+
+.c-checkbox.c-checkbox-primary input:checked[disabled] + label::before {
+  cursor: not-allowed;
+  border-color: #868e96;
+  background-color: #868e96;
+}
+
 .c-checkbox.c-checkbox-success input:checked + label::before {
   border-color: #2f9e44;
   background-color: #2f9e44;
@@ -2737,6 +2748,17 @@ th {
 .c-checkbox.c-checkbox-success input:indeterminate + label::before {
   background: #2f9e44;
   border: 1px solid #2f9e44;
+}
+
+.c-checkbox.c-checkbox-success input:checked[disabled] + label {
+  cursor: not-allowed;
+  color: #adb5bd;
+}
+
+.c-checkbox.c-checkbox-success input:checked[disabled] + label::before {
+  cursor: not-allowed;
+  border-color: #868e96;
+  background-color: #868e96;
 }
 
 .c-checkbox.c-checkbox-warning input:checked + label::before {
@@ -2749,6 +2771,17 @@ th {
   border: 1px solid #f08c00;
 }
 
+.c-checkbox.c-checkbox-warning input:checked[disabled] + label {
+  cursor: not-allowed;
+  color: #adb5bd;
+}
+
+.c-checkbox.c-checkbox-warning input:checked[disabled] + label::before {
+  cursor: not-allowed;
+  border-color: #868e96;
+  background-color: #868e96;
+}
+
 .c-checkbox.c-checkbox-danger input:checked + label::before {
   border-color: #e03131;
   background-color: #e03131;
@@ -2757,6 +2790,17 @@ th {
 .c-checkbox.c-checkbox-danger input:indeterminate + label::before {
   background: #e03131;
   border: 1px solid #e03131;
+}
+
+.c-checkbox.c-checkbox-danger input:checked[disabled] + label {
+  cursor: not-allowed;
+  color: #adb5bd;
+}
+
+.c-checkbox.c-checkbox-danger input:checked[disabled] + label::before {
+  cursor: not-allowed;
+  border-color: #868e96;
+  background-color: #868e96;
 }
 
 .c-checkbox.c-checkbox-lg {
@@ -2927,6 +2971,17 @@ th {
   background-color: #ffffff;
 }
 
+.c-radio.c-radio-primary input:checked[disabled] + label {
+  cursor: not-allowed;
+  color: #adb5bd;
+}
+
+.c-radio.c-radio-primary input:checked[disabled] + label::before {
+  cursor: not-allowed;
+  border-color: #868e96;
+  background-color: #868e96;
+}
+
 .c-radio.c-radio-success input:checked + label::before {
   border-color: #2f9e44;
   background-color: #2f9e44;
@@ -2934,6 +2989,17 @@ th {
 
 .c-radio.c-radio-success input:checked + label::after {
   background-color: #ffffff;
+}
+
+.c-radio.c-radio-success input:checked[disabled] + label {
+  cursor: not-allowed;
+  color: #adb5bd;
+}
+
+.c-radio.c-radio-success input:checked[disabled] + label::before {
+  cursor: not-allowed;
+  border-color: #868e96;
+  background-color: #868e96;
 }
 
 .c-radio.c-radio-warning input:checked + label::before {
@@ -2945,6 +3011,17 @@ th {
   background-color: #ffffff;
 }
 
+.c-radio.c-radio-warning input:checked[disabled] + label {
+  cursor: not-allowed;
+  color: #adb5bd;
+}
+
+.c-radio.c-radio-warning input:checked[disabled] + label::before {
+  cursor: not-allowed;
+  border-color: #868e96;
+  background-color: #868e96;
+}
+
 .c-radio.c-radio-danger input:checked + label::before {
   border-color: #e03131;
   background-color: #e03131;
@@ -2952,6 +3029,17 @@ th {
 
 .c-radio.c-radio-danger input:checked + label::after {
   background-color: #ffffff;
+}
+
+.c-radio.c-radio-danger input:checked[disabled] + label {
+  cursor: not-allowed;
+  color: #adb5bd;
+}
+
+.c-radio.c-radio-danger input:checked[disabled] + label::before {
+  cursor: not-allowed;
+  border-color: #868e96;
+  background-color: #868e96;
 }
 
 .c-radio.c-radio-lg {
