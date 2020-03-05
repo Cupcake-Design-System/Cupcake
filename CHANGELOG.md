@@ -32,6 +32,7 @@
 - dependency updates **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/111)**
 
 ### Commits
+- Release 2.0.2-0 🚀 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/3e91cdb558b2945248d313d31694465b87073a08)**
 - Release 2.0.2-alpha.1 🚀 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/d3a4ade04d2c4eb624dc1f73da61d3a2107aba45)**
 - revert version for broken build **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/1f45d95bc6d4ade2da1c2c2aa1073180d0efb40e)**
 
