@@ -156,10 +156,8 @@
     @return $color-white;
   } @else if $value == gray {
     @return config($color, 'gray', $range);
-  } @else if {
-    @return config($color, $value, $range);
   } @else {
-    @error 'Color `#{value} - #{$range}` not found.';
+    @return config($color, $value, $range);
   }
 }
 
