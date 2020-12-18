@@ -1,8 +1,20 @@
+## Release [2.0.5-0](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.4...2.0.5-0) :rocket:
+**18 December 2020**
+
+### Merged
+- fix commitMessage **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/137)**
+
+### Commits
+- Make header exports available for angular **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/5623819495bc586650d65de2cd8cff943e9feba2)**
+
 ## Release [2.0.4](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.3...2.0.4) :rocket:
-**6 May 2020**
+**5 May 2020**
 
 ### Merged
 - fix import order **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/136)**
+
+### Commits
+- Release %s 🚀 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/5d610f153333ca5306636da0ab133bb4d7c5f7c8)**
 
 ## Release [2.0.3](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.2...2.0.3) :rocket:
 **12 March 2020**
@@ -15,7 +27,7 @@
 - Release 2.0.3 🚀 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/0d27973d327209bae4eee23eb9b50e037de8ece7)**
 
 ## Release [2.0.2](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.2-alpha.0...2.0.2) :rocket:
-**5 March 2020**
+**4 March 2020**
 
 ### Merged
 - adds final ihs palette **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/131)**
@@ -38,10 +50,10 @@
 - revert version for broken build **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/1f45d95bc6d4ade2da1c2c2aa1073180d0efb40e)**
 
 ## Release [2.0.2-alpha.0](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.2-0...2.0.2-alpha.0) :rocket:
-**6 May 2020**
+**8 August 2019**
 
 ## Release [2.0.2-0](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.1...2.0.2-0) :rocket:
-**5 March 2020**
+**4 March 2020**
 
 ### Merged
 - adds final ihs palette **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/131)**
@@ -74,7 +86,7 @@
 - Release 2.0.2-alpha 🚀 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/ff33894f0a11688cffe13f4e764c6b3f3db47776)**
 
 ## Release [2.0.1](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0...2.0.1) :rocket:
-**9 August 2019**
+**8 August 2019**
 
 ### Merged
 - add back c-select **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/110)**
@@ -85,13 +97,13 @@
 - Release 2.0.1 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/fc0903c26faf00910b62265ad9075195be4ee29f)**
 
 ## Release [2.0.0](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.13...2.0.0) :rocket:
-**17 May 2019**
+**16 May 2019**
 
 ### Commits
 - Release 2.0.0 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/4854a97a9ff7c56bdbb59ff289b7971b8c4c1063)**
 
 ## Release [2.0.0-beta.13](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.12...2.0.0-beta.13) :rocket:
-**17 May 2019**
+**16 May 2019**
 
 ### Merged
 - Feature(theme enable) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/106)**
@@ -126,13 +138,13 @@
 - Release 2.0.0-beta.9 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/086225fd70bb708a8ff0f35d3b8be307773d7197)**
 
 ## Release [2.0.0-beta.8](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.7...2.0.0-beta.8) :rocket:
-**13 May 2019**
+**12 May 2019**
 
 ### Commits
 - Release 2.0.0-beta.8 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/238e094fe8102f5ce503517427b90cdc34ff873e)**
 
 ## Release [2.0.0-beta.7](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.6...2.0.0-beta.7) :rocket:
-**13 May 2019**
+**12 May 2019**
 
 ### Merged
 - FInal cleanup **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/105)**
@@ -152,7 +164,7 @@
 - Update CHANGELOG.md **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/7cb528b219bc828e4dc21500dc65fcd45e0ef6d3)**
 
 ## Release [2.0.0-beta.5](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.0-beta.4...2.0.0-beta.5) :rocket:
-**27 April 2019**
+**26 April 2019**
 
 ### Merged
 - Chore(splitting experimental) **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/103)**
