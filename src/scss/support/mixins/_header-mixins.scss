@@ -1,0 +1,141 @@
+// --------------------------------------------
+// Header Base Mixin --------------------------
+// --------------------------------------------
+@mixin header-base(
+  $background: $header-bg,
+  $background-hover: $header-bg,
+  $border-color: $header-borders,
+  $color: $header-text-color,
+  $height: $header-height,
+  $padding: $header-item-padding
+  ) {
+  width: 100%;
+  display: flex;
+  height: $height;
+  align-items: center;
+  z-index: $header-z-index;
+  background-color: $background;
+  justify-content: space-between;
+  border-bottom: 1px solid $border-color;
+
+  &-fixed {
+    position: fixed;
+    top: 0;
+  }
+
+  &-item {
+    &-link {
+      display: flex;
+      color: $color;
+      height: $height;
+      padding: $padding;
+      white-space: nowrap;
+      align-items: center;
+
+      &:hover {
+        background: $background-hover;
+      }
+    }
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+
+    .c-header-item {
+      border-right: 1px solid $border-color;
+    }
+  }
+
+  &-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+
+    .c-input-container {
+      width: 100%;
+      margin: $padding;
+    }
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+
+    .c-header-item {
+      border-left: 1px solid $border-color;
+    }
+  }
+
+}
+
+
+// --------------------------------------------
+// Header Style Mixin -------------------------
+// --------------------------------------------
+@mixin header-style(
+  $background: $header-inverse-bg,
+  $background-hover: $header-inverse-bg-hover,
+  $border-color: $header-inverse-borders,
+  $color: $header-inverse-text-color
+) {
+
+  background-color: $background;
+  border-color: $border-color;
+
+  .c-input {
+    color: $color;
+    background: $background-hover;
+    border-color: $border-color;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      border-color: $color-primary;
+      color: $header-inverse-text-color-active;
+    }
+
+    &-icon {
+      color: $color;
+    }
+  }
+
+  .c-header-item {
+    border-color: $border-color;
+
+    &-link {
+      color: $color;
+
+      &:hover {
+        background: $background-hover;
+      }
+    }
+  }
+
+  .c-nav.c-nav-pills {
+    .c-nav-link {
+      color: $color;
+
+      .c-nav-icon {
+        opacity: 1;
+        color: $color;
+        transition: color .25s;
+      }
+
+      // Hover styles
+      &:hover:not(.c-nav-link-disabled),
+      &:focus,
+      &-active {
+        color: $color;
+        background-color: $background-hover;
+
+        .c-nav-icon {
+          opacity: 1;
+          color: $header-inverse-icon-color-active;
+        }
+      }
+    }
+  }
+}
+
+
