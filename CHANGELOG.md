@@ -1,11 +1,19 @@
+## Release [2.0.5](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.5-0...2.0.5) :rocket:
+**17 May 2021**
+
+### Merged
+- update to dart sass fix errors **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/144)**
+- Feature/header export **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/143)**
+
 ## Release [2.0.5-0](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.4...2.0.5-0) :rocket:
-**18 December 2020**
+**17 December 2020**
 
 ### Merged
 - fix commitMessage **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/137)**
 
 ### Commits
 - Make header exports available for angular **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/5623819495bc586650d65de2cd8cff943e9feba2)**
+- Release 2.0.5-0 🚀 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/82363ea17b29b975541ae3450a240d8d928e1442)**
 
 ## Release [2.0.4](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.3...2.0.4) :rocket:
 **5 May 2020**
