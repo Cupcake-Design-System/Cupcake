@@ -137,8 +137,8 @@ exports.prod = gulp.series(
   cleanTask,
   scssDocsTask,
   htmlTask,
-  jsTask,
   scssTask,
+  jsTask,
   prodCSS
 );
 
