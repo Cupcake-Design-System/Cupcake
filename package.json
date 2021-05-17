@@ -15,7 +15,7 @@
   "scripts": {
     "test": "jest",
     "lint": "stylelint src/scss/ --syntax scss || true",
-    "build": "run-s lint && gulp prod",
+    "build": "gulp prod",
     "release": "release-it",
     "changelog": "auto-changelog -p && git add CHANGELOG.md",
     "start": "gulp",
