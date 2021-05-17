@@ -258,7 +258,7 @@
   }
 }
 
-@if $enable-reset = true {
+@if $enable-reset == true {
   @include reset-export();
 }
 /* stylelint-enable */

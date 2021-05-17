@@ -177,8 +177,8 @@
   }
 
   &-both {
-    @extend table.c-table-border-horizontal;
-    @extend table.c-table-border-vertical;
+    @extend table, .c-table-border-horizontal;
+    @extend table, .c-table-border-vertical;
   }
 
   &-full {

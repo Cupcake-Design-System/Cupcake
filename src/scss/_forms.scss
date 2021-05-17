@@ -45,7 +45,7 @@
     left: $font-size - 4;
     top: $font-size - 4;
 
-    + .c-input:not([multiple]) {
+    + .c-input {
       padding-left: $height;
     }
   }
@@ -170,6 +170,10 @@ textarea.c-input {
     &-#{$name} {
       color: $color;
     }
+  }
+
+  &-error {
+    color: $color-danger;
   }
 }
 
@@ -357,19 +361,19 @@ textarea.c-input {
 @if $enable-NGform-colors == true {
   @each $ng-state, $color in $control-ng-validation {
     .c-input.ng-dirty.#{$ng-state} {
-      border: 1px solid #{$color};
+      border: 1px solid $color;
 
       .c-input-icon {
-        color: #{$color};
+        color: $color;
       }
     }
 
     .ng-dirty.#{$ng-state} {
       .c-input {
-        border: 1px solid #{$color};
+        border: 1px solid $color;
 
         .c-input-icon {
-          color: #{$color};
+          color: $color;
         }
       }
     }

@@ -191,19 +191,19 @@
 
     @if map-has-key($type, bg-hover) {
       $bg-hover: map-get($type, bg-hover);
-    } @elseif map-has-key($type, bg) {
+    } @else if map-has-key($type, bg) {
       $bg-hover: lighten($bg, 7);
     }
 
     @if map-has-key($type, bg-active) {
       $bg-active: map-get($type, bg-active);
-    } @elseif map-has-key($type, bg) {
+    } @else if map-has-key($type, bg) {
       $bg-active: desaturate($bg, 15%);
     }
 
     @if map-has-key($type, border) {
       $border: map-get($type, border);
-    } @elseif map-has-key($type, border) {
+    } @else if map-has-key($type, border) {
       $border: transparent;
     }
 

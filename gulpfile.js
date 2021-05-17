@@ -1,6 +1,6 @@
 var gulp         = require( 'gulp' ),
     del          = require("del"),
-    sass         = require('gulp-sass'),
+    sass         = require('gulp-dart-sass'),
     rename       = require('gulp-rename'),
     concat       = require('gulp-concat'),
     uglify       = require('gulp-uglify'),
