@@ -3,7 +3,7 @@
 @import '../src/scss/cupcake';
 
 $button-test-map: (
-  purple: (
+  purpleISH: (
     bg: purple,
     bg-hover: orange,
     bg-active: red,
@@ -69,34 +69,32 @@ $button-test-map: (
         }
       }
       @include expect {
-        .c-btn-purple {
+        .c-btn-purpleISH {
           background: purple;
           border-color: green;
           color: #ffffff;
         }
 
-        .c-btn-purple:focus,
-        .c-btn-purple.c-btn-focus {
+        .c-btn-purpleISH:focus,
+        .c-btn-purpleISH.c-btn-focus {
           box-shadow: 0 0 0 0.15rem rgba(128, 0, 128, 0.5);
         }
 
-        .c-btn-purple:hover {
+        .c-btn-purpleISH:hover {
           background-color: orange;
           background-image: none;
         }
 
-        .c-btn-purple:active,
-        .c-btn-purple.c-btn-active {
+        .c-btn-purpleISH:active,
+        .c-btn-purpleISH.c-btn-active {
           background: red;
           background-image: none;
           box-shadow: none;
           border-color: green;
         }
-
       }
     }
   }
-
 }
 
 
