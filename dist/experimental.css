@@ -6,6 +6,8 @@
 /* file name: experimental.css */
 /* ----------------------- */
 
+/* stylelint-disable */
+/* stylelint-enable */
 .c-nav-toggle {
   display: none;
   cursor: pointer;
