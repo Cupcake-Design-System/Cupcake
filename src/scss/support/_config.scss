@@ -48,6 +48,7 @@ $global-size-xl: $global-px-grid * 6 !default; // 48px
 // --------------------------------------------
 // TYPOGRAPHY ---------------------------------
 // --------------------------------------------
+/* stylelint-disable */
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !default;
 $font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
 
@@ -643,7 +644,7 @@ $loader-full-page-size       : 48px !default;
 $loader-border-size          : 4px !default;
 $loader-full-page-border-size: 6px !default;
 $loader-animation-duration   : .71s !default;
-
+/* stylelint-enable */
 
 // --------------------------------------------
 // Media Object -------------------------------
