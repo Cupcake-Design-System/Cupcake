@@ -8,7 +8,7 @@
   $color: $header-text-color,
   $height: $header-height,
   $padding: $header-item-padding
-  ) {
+) {
   width: 100%;
   display: flex;
   height: $height;
@@ -66,7 +66,6 @@
       border-left: 1px solid $border-color;
     }
   }
-
 }
 
 
@@ -79,7 +78,6 @@
   $border-color: $header-inverse-borders,
   $color: $header-inverse-text-color
 ) {
-
   background-color: $background;
   border-color: $border-color;
 
@@ -137,5 +135,4 @@
     }
   }
 }
-
 
