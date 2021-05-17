@@ -2,7 +2,7 @@
 /* ----------------------- */
 /* 🎂 CUPCAKE 🎂 */
 /* pkg name: @cupcake-ds/cupcake */
-/* version: 2.0.4 */
+/* version: 2.0.5-0 */
 /* file name: cupcake.css */
 /* ----------------------- */
 
@@ -7115,10 +7115,10 @@ textarea.c-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 48px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 48px;
   z-index: 1600;
   background-color: #ffffff;
   -webkit-box-pack: justify;
@@ -7136,17 +7136,17 @@ textarea.c-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #868e96;
+  height: 48px;
+  padding: 0 16px;
   white-space: nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 48px;
-  color: #868e96;
-  padding: 0 16px;
 }
 
 .c-header-item-link:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: #ffffff;
 }
 
 .c-header-left {
@@ -7244,7 +7244,7 @@ textarea.c-input {
 }
 
 .c-header-inverse .c-nav.c-nav-pills .c-nav-link:hover:not(.c-nav-link-disabled), .c-header-inverse .c-nav.c-nav-pills .c-nav-link:focus, .c-header-inverse .c-nav.c-nav-pills .c-nav-link-active {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.9);
   background-color: rgba(255, 255, 255, 0.07);
 }
 
