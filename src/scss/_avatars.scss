@@ -25,7 +25,7 @@
   }
 
   &[data-status]::after {
-    $status-shadow: 0 0 0 1px $color-white;
+    $status-shadow: 0 0 0 1px $global-bg;
 
     content: '';
     top: 0;

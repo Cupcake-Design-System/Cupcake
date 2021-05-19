@@ -144,9 +144,10 @@
 .docs-nav-item a {
   color: #212529;
   display: block;
+  line-height: 32px;
+  margin-bottom: 4px;
   text-decoration: none;
   padding: 0 8px;
-  line-height: 40px;
 }
 .docs-nav-item a:hover {
   border-radius: 4px;

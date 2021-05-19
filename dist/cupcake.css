@@ -32,11 +32,12 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  color: #212529;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #212529;
-  padding: 0;
-  margin: 0;
+  background-color: white;
 }
 
 img {
@@ -311,7 +312,7 @@ th {
 }
 .c-action-panel-header {
   border-bottom: 1px solid #e9ecef;
-  background-color: #ffffff;
+  background-color: white;
   padding: 12px 16px;
 }
 .c-action-panel-header-title {
@@ -375,7 +376,7 @@ th {
       -ms-flex-pack: end;
           justify-content: flex-end;
   border-top: 1px solid #e9ecef;
-  background-color: #ffffff;
+  background-color: white;
   padding: 12px 16px;
 }
 .c-action-panel-footer-link {
@@ -506,7 +507,7 @@ th {
           box-shadow: 0 2px 4px -2px rgba(33, 37, 41, 0.1);
 }
 .c-notifications .c-media-list .c-media:hover {
-  background: #ffffff !important;
+  background: #f8f9fa !important;
   -webkit-box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1);
           box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1);
 }
@@ -578,8 +579,8 @@ th {
   min-width: 8px;
   position: absolute;
   color: #ffffff;
-  -webkit-box-shadow: 0 0 0 1px #ffffff;
-          box-shadow: 0 0 0 1px #ffffff;
+  -webkit-box-shadow: 0 0 0 1px white;
+          box-shadow: 0 0 0 1px white;
   background-clip: padding-box;
   border-radius: 50px;
   font-weight: 600;
@@ -2128,7 +2129,7 @@ th {
   color: #495057;
   -webkit-box-shadow: 0 2px 4px -2px rgba(33, 37, 41, 0.1);
           box-shadow: 0 2px 4px -2px rgba(33, 37, 41, 0.1);
-  background-color: #ffffff;
+  background-color: white;
   min-width: 0;
   background-clip: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -2364,7 +2365,7 @@ th {
   content: "";
   height: 2px;
   position: absolute;
-  background: #ffffff;
+  background: white;
   border-radius: 2px;
 }
 .c-checkbox input:checked + label::after, .c-checkbox input:checked[disabled] + label::after {
@@ -2416,7 +2417,7 @@ th {
   margin-right: 8px;
   width: 16px;
   height: 16px;
-  background: #ffffff;
+  background: white;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
   border-radius: 2px;
@@ -2582,7 +2583,7 @@ th {
   height: 8px;
   display: table;
   border-radius: 50px;
-  background-color: #ffffff;
+  background-color: white;
 }
 .c-radio input:checked + label::before {
   border-color: #1b6ec2;
@@ -2618,7 +2619,7 @@ th {
   margin-right: 8px;
   width: 16px;
   height: 16px;
-  background: #ffffff;
+  background: white;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
   border-radius: 200px;
@@ -2765,7 +2766,7 @@ th {
           box-sizing: border-box;
   color: #212529;
   border: 1px solid #e9ecef;
-  background: #ffffff;
+  background: white;
   z-index: 1700;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   -webkit-box-shadow: 0 6px 8px -2px rgba(33, 37, 41, 0.1);
@@ -2849,12 +2850,12 @@ th {
 .c-dropdown-list .c-dropdown-item-selected .c-dropdown-icon {
   color: #1b6ec2;
 }
-.c-dropdown-list li a:not([class*=primary]):not([class*=success]):not([class*=warning]):not([class*=danger]):not(.c-text-muted),
-.c-dropdown-list .c-dropdown-item:not([class*=primary]):not([class*=success]):not([class*=warning]):not([class*=danger]):not(.c-text-muted) {
+.c-dropdown-list li a:not([class*=primary]):not([class*=success]):not([class*=warning]):not([class*=danger]):not(.c-text-muted):not(.c-dropdown-item-selected),
+.c-dropdown-list .c-dropdown-item:not([class*=primary]):not([class*=success]):not([class*=warning]):not([class*=danger]):not(.c-text-muted):not(.c-dropdown-item-selected) {
   color: #212529;
 }
-.c-dropdown-list li a:not([class*=primary]):not([class*=success]):not([class*=warning]):not([class*=danger]):not(.c-text-muted):hover,
-.c-dropdown-list .c-dropdown-item:not([class*=primary]):not([class*=success]):not([class*=warning]):not([class*=danger]):not(.c-text-muted):hover {
+.c-dropdown-list li a:not([class*=primary]):not([class*=success]):not([class*=warning]):not([class*=danger]):not(.c-text-muted):not(.c-dropdown-item-selected):hover,
+.c-dropdown-list .c-dropdown-item:not([class*=primary]):not([class*=success]):not([class*=warning]):not([class*=danger]):not(.c-text-muted):not(.c-dropdown-item-selected):hover {
   color: #212529;
 }
 
@@ -2906,7 +2907,7 @@ th {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   padding: 0 8px;
   border-radius: 2px;
-  background-color: #ffffff;
+  background-color: white;
 }
 .c-input::-ms-clear {
   display: none;
@@ -6216,7 +6217,7 @@ textarea.c-input {
   -webkit-box-shadow: 0 8px 8px -2px rgba(33, 37, 41, 0.1);
           box-shadow: 0 8px 8px -2px rgba(33, 37, 41, 0.1);
   background-clip: padding-box;
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 2px;
 }
 .c-modal-dialog .c-modal-content {
@@ -6405,7 +6406,7 @@ textarea.c-input {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background-color: #ffffff;
+  background-color: white;
   min-height: 48px;
   font-size: 12px;
   border-radius: 2px;
@@ -6507,7 +6508,7 @@ textarea.c-input {
   border-radius: 2px;
 }
 .c-media-list > .c-media-body {
-  background-color: #ffffff;
+  background-color: white;
   padding: 16px;
   border-bottom: 1px solid #e9ecef;
 }
@@ -6843,7 +6844,7 @@ textarea.c-input {
       -ms-flex-align: center;
           align-items: center;
   z-index: 1600;
-  background-color: #ffffff;
+  background-color: white;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -6866,7 +6867,7 @@ textarea.c-input {
           align-items: center;
 }
 .c-header-item-link:hover {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
 }
 .c-header-left {
   display: -webkit-box;
@@ -7119,7 +7120,7 @@ select.c-input {
   font-weight: 400;
   line-height: normal;
   border-radius: 2px;
-  background: #ffffff url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right 8px center;
+  background: white url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right 8px center;
   background-size: 8px;
 }
 .c-select::-ms-expand,
@@ -7255,7 +7256,7 @@ select.c-input-error option {
   background-clip: content-box;
   border-right: 1px solid #e9ecef;
   font-size: 14px;
-  background-color: #ffffff;
+  background-color: white;
 }
 .c-sidenav-body {
   bottom: 0;
@@ -7455,7 +7456,7 @@ select.c-input-error option {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
-  background-color: #ffffff;
+  background-color: white;
 }
 .c-sidenav-menu .c-sidenav-submenu-group .c-sidenav-menu-link {
   padding-left: 48px;
@@ -7513,7 +7514,7 @@ select.c-input-error option {
   top: 0;
   display: none;
   position: absolute;
-  background: #ffffff;
+  background: white;
   border: 1px solid #e9ecef;
   z-index: 1600;
   width: 246px;
@@ -7780,12 +7781,12 @@ select.c-input-error option {
   width: 32px;
   position: absolute;
   display: inline-block;
+  border: 1px solid #ced4da;
   -webkit-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
           box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   background: #f8f9fa;
   background-clip: padding-box;
   border-radius: 50px;
-  border: 1px solid #ced4da;
   -webkit-transition: background 0.2s, border 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
   transition: background 0.2s, border 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
   transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
@@ -8016,8 +8017,8 @@ select.c-input-error option {
 }
 
 .c-tabs-bordered {
-  background-color: #f8f9fa;
   border: 1px solid #e9ecef;
+  background-color: #f8f9fa;
   border-radius: 2px;
   border-bottom: 0;
 }
@@ -8101,7 +8102,7 @@ table.c-table-layout-fixed {
 .c-table tbody,
 .c-table tfoot {
   border: 0;
-  background-color: #ffffff;
+  background-color: white;
 }
 .c-table tbody {
   font-size: 12px;
@@ -8123,7 +8124,7 @@ table.c-table-layout-fixed {
 }
 .c-table tfoot {
   color: #212529;
-  background: #ffffff;
+  background: white;
 }
 .c-table thead tr,
 .c-table tfoot tr {
@@ -8560,7 +8561,7 @@ table.c-table .c-table-row-cell-draggable:hover {
   border-right: 0;
   max-width: 100%;
   margin: 16px auto;
-  border-bottom: 1px solid #f1f3f5;
+  border-bottom: 1px solid #ced4da;
 }
 
 ol.c-ol {
@@ -9010,7 +9011,7 @@ ol.c-ol-unstyled ol {
   -webkit-box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1);
           box-shadow: 0 4px 4px -2px rgba(33, 37, 41, 0.1);
   font-size: 12px;
-  border-radius: 2px;
+  border-radius: 2px 0 0 2px;
   background: #ffffff;
   font-weight: 700;
 }
@@ -9038,7 +9039,7 @@ ol.c-ol-unstyled ol {
   background: #1b6ec2;
   width: 4px;
   border: #0f3b68;
-  border-radius: 2px;
+  border-radius: 2px 0 0 2px;
 }
 .c-toast-alert-close {
   position: relative;
