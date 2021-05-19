@@ -361,7 +361,7 @@ $dropdown-selected-bg        : map-get($dropdown-config, 'selected-bg') !default
 // In page header
 @mixin experimental-pageHeader-export() {
 
-  $page-header-bg: $color-white !default;
+  $page-header-bg: $global-bg !default;
   $page-header-border: 1px solid $color-gray-1 !default;
   $page-header-padding: $space-md !default;
 
@@ -372,7 +372,7 @@ $dropdown-selected-bg        : map-get($dropdown-config, 'selected-bg') !default
     align-items: center;
     background-size: cover;
     flex-direction: column;
-    background-color: $page-header-bg;
+    background-color: $global-bg;
     background-position: center center;
     border-bottom: $page-header-border;
 

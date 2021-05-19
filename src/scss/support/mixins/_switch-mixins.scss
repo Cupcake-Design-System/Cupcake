@@ -66,11 +66,11 @@
     width: $height * 2;
     position: absolute;
     display: inline-block;
+    border: $switch-border;
     box-shadow: $switch-shadow;
     background: $switch-off-bg;
     background-clip: padding-box;
     border-radius: $switch-radius;
-    border: $global-border-size $global-border-color;
     transition: background .2s, border .2s, box-shadow .2s, color .2s;
 
     &::before {
@@ -81,7 +81,7 @@
       position: absolute;
       width: $height - 2;
       height: $height - 2;
-      background: $color-white;
+      background: $switch-handle;
       border-radius: $switch-radius;
       box-shadow: 1px 1px 4px 0 rgba(33, 37, 41, .4);
       transition: background .2s, border .2s, box-shadow .2s, color .2s, left .2s;

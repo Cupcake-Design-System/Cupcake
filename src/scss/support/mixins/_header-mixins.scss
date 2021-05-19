@@ -3,7 +3,7 @@
 // --------------------------------------------
 @mixin header-base(
   $background: $header-bg,
-  $background-hover: $header-bg,
+  $background-hover: $header-bg-hover,
   $border-color: $header-borders,
   $color: $header-text-color,
   $height: $header-height,

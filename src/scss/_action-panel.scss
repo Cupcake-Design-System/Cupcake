@@ -192,7 +192,7 @@ $notification-read-border : map-get($notification-config, 'read-border') !defaul
   box-shadow: $notification-shadow;
 
   &:hover {
-    background: $color-white !important;
+    background: $notification-read-bg !important;
     box-shadow: $notification-shadow-hover;
   }
 

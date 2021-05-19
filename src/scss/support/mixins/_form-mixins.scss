@@ -126,7 +126,7 @@
   font-weight: $control-font-weight;
   line-height: $control-line-height;
   border-radius: $control-border-radius;
-  background: $color-white $select-bg-img $select-bg-pos;
+  background: $control-background $select-bg-img $select-bg-pos;
   background-size: 8px;
 
   &::-ms-expand {

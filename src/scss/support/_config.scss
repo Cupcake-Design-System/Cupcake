@@ -20,6 +20,8 @@ $global-text-color          : $color-gray-7 !default;
 $global-text-color-light    : $color-gray-6 !default;
 $global-text-color-dark     : $color-gray-9 !default;
 $global-text-color-lighter  : $color-gray-5 !default;
+$body-bg: white !default;
+$global-bg                  : white !default;
 $global-bg-disabled         : $color-gray-3 !default;
 $global-backdrop-dark       : rgba(0, 0, 0, 0.75) !default;
 $global-radius              : $radius-sm !default;
@@ -71,6 +73,7 @@ $line-height-lg : 40px !default;
 // Only applies if $enable-reset is true
 $body-font-size : $font-size-4 !default;
 $body-font-color: $global-text-color-dark !default;
+$hr-border-bottom: $global-border-size $global-border-color;
 
 // Set the defaults for .c-text-{{size}}.
 // This map is looped - adding key/value pairs will generate more classes
@@ -193,8 +196,8 @@ $alert-colors: map-merge(
 // --------------------------------------------
 // Action Panel -------------------------------
 // --------------------------------------------
-$action-panel-header-bg              : $color-white !default;
-$action-panel-footer-bg              : $color-white !default;
+$action-panel-header-bg              : $global-bg !default;
+$action-panel-footer-bg              : $global-bg !default;
 $action-panel-backdrop               : $global-backdrop-dark !default;
 $action-panel-border                 : $global-border-size $global-border-color-light !default;
 $action-panel-padding-v              : $space-md - $space-xs !default;
@@ -410,7 +413,7 @@ $breadcrumb-divider-border-width: 2px !default;
 // --------------------------------------------
 // CARDS --------------------------------------
 // --------------------------------------------
-$card-bg                     : $color-white !default;
+$card-bg                     : $global-bg !default;
 $card-text-color             : $global-text-color !default;
 $card-border                 : $global-border-size $global-border-color-light !default;
 $card-border-hover           : $global-border-size $global-border-color !default;
@@ -443,7 +446,7 @@ $card-footer-line-weight     : $font-size-4 !default;
 // --------------------------------------------
 $checkbox-radius                : $global-radius !default;
 $checkbox-bd                    : $global-border-size $global-border-color-dark !default;
-$checkbox-bg-empty              : $color-white !default;
+$checkbox-bg-empty              : $global-bg !default;
 $checkbox-default-size          : $global-size-xs !default;
 $checkbox-bg-disabled           : $global-bg-disabled !default;
 $checkbox-label-disabled-color  : $global-text-color-lighter !default;
@@ -471,7 +474,7 @@ $checkbox-sizes: map-merge(
 // --------------------------------------------
 $dropdown-radius             : $global-radius !default;
 $dropdown-font               : $font-family !default;
-$dropdown-bg                 : $color-white !default;
+$dropdown-bg                 : $global-bg !default;
 $dropdown-border             : $global-border-size $global-border-color-light !default;
 $dropdown-min-width          : 200px !default;
 $dropdown-font-size          : $font-size-2 !default;
@@ -495,14 +498,15 @@ $link-colors:
   '[class*="success"]',
   '[class*="warning"]',
   '[class*="danger"]',
-  '.c-text-muted' !default;
+  '.c-text-muted',
+  '.c-dropdown-item-selected' !default;
 
 
 // --------------------------------------------
 // FORMS --------------------------------------
 // --------------------------------------------
 $control-font-family          : $font-family !default;
-$control-background           : $color-white !default;
+$control-background           : $global-bg !default;
 $control-height               : $global-size-md !default;
 $control-border               : $global-border-size $global-border-color-dark !default;
 $control-border-radius        : $global-radius !default;
@@ -614,7 +618,7 @@ $breakpoints: (
 // --------------------------------------------
 // HEADER -------------------------------------
 // --------------------------------------------
-$header-bg                       : $color-white !default;
+$header-bg                       : $global-bg !default;
 $header-height                   : $global-header-height !default;
 $header-inverse-text-color-active: $color-white !default;
 $header-inverse-icon-color-active: #009697 !default;
@@ -649,7 +653,7 @@ $loader-animation-duration   : .71s !default;
 // --------------------------------------------
 // Media Object -------------------------------
 // --------------------------------------------
-$media-bg                : $color-white !default;
+$media-bg                : $global-bg !default;
 $media-color             : $global-text-color !default;
 $media-border            : $global-border-size $global-border-color-light !default;
 $media-border-radius     : $global-radius !default;
@@ -672,7 +676,7 @@ $modal-border-radius          : $global-radius !default;
 $modal-border                 : $global-border-size $global-border-color-light !default;
 $modal-close-size             : $global-size-md !default;
 $modal-body-color             : $global-text-color !default;
-$modal-bg-color               : $color-white !default;
+$modal-bg-color               : $global-bg !default;
 $modal-backdrop-bg-color      : $global-backdrop-dark !default;
 $modal-z-index                : $z-modal !default;
 $modal-shadow                 : $shadow-lg !default;
@@ -760,7 +764,7 @@ $notification-read-border : $global-border-size $global-border-color-light !defa
 // --------------------------------------------
 // Sidebar ------------------------------------
 // --------------------------------------------
-$sidebar-bg                         : $color-white !default;
+$sidebar-bg                         : $global-bg !default;
 $sidebar-bg-hover                   : $color-primary-0 !default;
 $sidebar-color                      : $color-gray-8 !default;
 $sidebar-border                     : $global-border-size $global-border-color-light !default;
@@ -835,7 +839,7 @@ $toast-shadow             : $shadow-sm !default;
 $toast-background         : $color-white !default;
 $toast-color              : $global-text-color-dark !default;
 $toast-font-size          : $font-size-2 !default;
-$toast-radius             : $global-radius !default;
+$toast-radius             : $global-radius 0 0 $global-radius !default;
 $toast-font               : $font-family !default;
 $toast-font-weight        : $font-weight-bold !default;
 $toast-padding            : $space-md $space-md $space-md ($space-md + 4px) !default;
@@ -876,6 +880,7 @@ $tabs-bordered-radius   : $global-radius !default;
 $tabs-height            : $global-size-md !default;
 $tabs-font-family       : $font-family !default;
 $tabs-border            : $global-border-size $global-border-color-light !default;
+$tabs-bordered-bg       : $color-gray-0 !default;
 $tabs-bordered-bg-hover : $color-white !default;
 $tabs-bordered-bg-active: $color-white !default;
 $tabs-color-hover       : $color-primary !default;
@@ -884,7 +889,6 @@ $tabs-color-disabled    : $global-text-color-light !default;
 $tabs-font-size         : $font-size-2 !default;
 $tabs-font-weight       : $font-weight-bold !default;
 $tabs-padding           : $space-sm $space-md !default;
-$tabs-bordered-bg       : $color-gray-0 !default;
 $tabs-hover-transition  : border-color 0.2s ease 0s !default;
 $tabs-box-shadow        : inset 0 -1px 0 0 $global-border-color-light !default;
 $tabs-border-bottom     : 2px !default;
@@ -914,7 +918,7 @@ $tabs-sizes: map-merge(
 // --------------------------------------------
 // TABLES -------------------------------------
 // --------------------------------------------
-$table-background           : $color-white !default;
+$table-background           : $global-bg !default;
 $table-font-family          : $font-family !default;
 $table-font-size            : $font-size-2 !default;
 $table-font-size-lg         : $font-size-3 !default;
@@ -933,7 +937,7 @@ $table-head-font-weight     : $font-weight-bold !default;
 $table-head-border-color    : $color-gray-3 !default;
 $table-head-border-width    : 1px 0 !default;
 $table-head-border-vertical : 1px solid $color-gray-3 !default;
-$table-foot-bg              : $color-white !default;
+$table-foot-bg              : $global-bg !default;
 $table-foot-color           : $global-text-color-dark !default;
 $table-padding-sm           : ($space-xs - 1) $space-sm $space-xs !default;
 $table-padding-lg           : ($space-sm + $space-xs) ($space-sm + 2) ($space-sm + ($space-xs - 1)) !default;
