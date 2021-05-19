@@ -45,7 +45,7 @@
     left: $font-size - 4;
     top: $font-size - 4;
 
-    + .c-input:not([multiple]) {
+    + .c-input {
       padding-left: $height;
     }
   }
@@ -150,19 +150,19 @@ textarea.c-input {
 
 // Form Hint & Hint Colors
 .c-hint {
+  opacity: 0;
   display: block;
   transform: scale(.8);
-  transform-origin: top left;
-  padding-top: $control-padding;
-  color: $control-hint-color;
-  font-size: $control-hint-font-size;
-  opacity: 0;
   pointer-events: none;
+  transform-origin: top left;
+  color: $control-hint-color;
+  padding-top: $control-padding;
+  font-size: $control-hint-font-size;
   transition: $control-hint-transition;
 
   &-static,
   .c-input:focus ~ & {
-    transform: scale(.9);
+    transform: scale(1);
     opacity: 1;
   }
 
@@ -170,6 +170,10 @@ textarea.c-input {
     &-#{$name} {
       color: $color;
     }
+  }
+
+  &-error {
+    color: $color-danger;
   }
 }
 
@@ -356,14 +360,28 @@ textarea.c-input {
 // Form Input Colors (NG specific)
 @if $enable-NGform-colors == true {
   @each $ng-state, $color in $control-ng-validation {
-    .c-ng-validate.ng-dirty.#{$ng-state},
-    .c-ng-validate-form .ng-dirty.#{$ng-state} {
-      @extend .c-input-#{$color};
+    .c-input.ng-dirty.#{$ng-state} {
+      border: 1px solid $color;
+
+      .c-input-icon {
+        color: $color;
+      }
+    }
+
+    .ng-dirty.#{$ng-state} {
+      .c-input {
+        border: 1px solid $color;
+
+        .c-input-icon {
+          color: $color;
+        }
+      }
     }
   }
 }
 
 
 .c-form-group {
-  margin-bottom: $control-padding;
+  display: block;
+  margin-bottom: $control-padding * 2;
 }

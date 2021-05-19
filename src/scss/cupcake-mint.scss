@@ -1,16 +1,16 @@
 // Cupcake Mint
-$color-primary-0: #def5f5;
-$color-primary-1: #afe6e6;
-$color-primary-2: #7cd6d7;
-$color-primary-3: #49c5c9;
-$color-primary-4: #21bac0;
-$color-primary-5: #00aeb8;
-$color-primary-6: #009ea7;
-$color-primary-7: #008a8e;
-$color-primary-8: #007778;
-$color-primary-9: #055350;
+$color-primary-0: #dff7f6;
+$color-primary-1: #b1eae8;
+$color-primary-2: #80dddb;
+$color-primary-3: #4dcecf;
+$color-primary-4: #26c3c7;
+$color-primary-5: #00b9c1;
+$color-primary-6: #00a9af;
+$color-primary-7: #009697;
+$color-primary-8: #008080;
+$color-primary-9: #055d57;
 
-$color-primary: #007778;
+$color-primary: $color-primary-8;
 
 // Cupcake Core
 @import 'cupcake';

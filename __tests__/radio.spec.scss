@@ -121,6 +121,17 @@
         .c-radio-primary input:checked + label::after {
           background-color: #ffffff;
         }
+
+        .c-radio-primary input:checked[disabled] + label {
+          cursor: not-allowed;
+          color: #adb5bd;
+        }
+
+        .c-radio-primary input:checked[disabled] + label::before {
+          cursor: not-allowed;
+          border-color: #868e96;
+          background-color: #868e96;
+        }
       }
     }
   }

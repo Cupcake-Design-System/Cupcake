@@ -1,7 +1,10 @@
 {
   "name": "@cupcake-ds/cupcake",
-  "version": "2.0.1",
+  "version": "2.0.5",
   "description": "Design System framework.",
+  "engines": {
+    "node": ">14"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Cupcake-Design-System/Cupcake/"
@@ -10,9 +13,9 @@
     "access": "public"
   },
   "scripts": {
-    "test": "mocha test",
+    "test": "jest",
     "lint": "stylelint src/scss/ --syntax scss || true",
-    "build": "run-s lint && gulp prod",
+    "build": "gulp prod",
     "release": "release-it",
     "changelog": "auto-changelog -p && git add CHANGELOG.md",
     "start": "gulp",
@@ -32,31 +35,33 @@
     "package": true
   },
   "devDependencies": {
-    "auto-changelog": "^1.16.1",
-    "autoprefixer": "^9.6.5",
-    "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
+    "auto-changelog": "^2.2.1",
+    "autoprefixer": "^10.2.5",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
     "fabricator-assemble": "^1.4.0",
+    "glob": "^7.1.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-changed": "^4.0.2",
-    "gulp-clean-css": "^4.2.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-dart-sass": "^1.0.2",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-header": "^2.0.9",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "lint-staged": "^9.4.2",
-    "mocha": "^6.2.1",
+    "jest": "^26.6.3",
+    "lint-staged": "^11.0.0",
     "npm-run-all": "^4.1.5",
-    "onchange": "^6.1.0",
-    "release-it": "^12.4.3",
-    "sass-true": "^4.0.0",
-    "stylelint": "^11.1.1",
-    "stylelint-config-standard": "^19.0.0",
-    "stylelint-declaration-strict-value": "^1.1.6",
-    "stylelint-scss": "^3.11.1"
+    "onchange": "^7.1.0",
+    "release-it": "^14.6.2",
+    "sass": "^1.32.13",
+    "sass-true": "^6.0.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-declaration-strict-value": "^1.7.12",
+    "stylelint-scss": "^3.19.0"
   }
 }

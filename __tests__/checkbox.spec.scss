@@ -139,6 +139,17 @@
           background: purple;
           border: 1px solid purple;
         }
+
+        .c-checkbox-primary input:checked[disabled] + label {
+          cursor: not-allowed;
+          color: #adb5bd;
+        }
+
+        .c-checkbox-primary input:checked[disabled] + label::before {
+          cursor: not-allowed;
+          border-color: #868e96;
+          background-color: #868e96;
+        }
       }
     }
   }

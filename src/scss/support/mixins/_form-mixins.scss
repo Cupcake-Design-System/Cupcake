@@ -94,13 +94,13 @@
 
 @mixin input-disabled {
   cursor: not-allowed;
-  color: $color-gray-9;
+  color: $color-gray-6;
   box-shadow: $control-shadow-disabled;
   border-color: $control-disabled-border;
   background-color: $control-disabled-background;
 
   &::placeholder {
-    color: $color-gray-9;
+    color: $color-gray-6;
   }
 }
 
@@ -148,7 +148,7 @@
   }
 
   &:focus {
-    box-shadow: $select-box-shadow, $select-box-shadow-focus;
+    box-shadow: $select-box-shadow-focus;
   }
 
   &:hover {

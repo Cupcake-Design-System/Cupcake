@@ -7,8 +7,8 @@
     "changelog": "npx auto-changelog --stdout --commit-limit false -u --template ./changelog-template.hbs",
     "requireCleanWorkingDir": false,
     "requireUpstream": true,
-    "commitMessage": "Release %s 🚀",
-    "tagAnnotation": "Release %s 🚀",
+    "commitMessage": "Release ${version} 🚀",
+    "tagAnnotation": "Release ${version} 🚀",
     "push": true
   },
   "npm": {
@@ -16,8 +16,7 @@
   },
   "github": {
     "release": true,
-    "releaseName": "Release %s 🚀",
-    "releaseNotes": "npx auto-changelog --stdout --commit-limit false -u --template ./changelog-template.hbs",
+    "releaseName": "Release ${version} 🚀",
     "preRelease": true,
     "draft": false,
     "tokenRef": "GITHUB_TOKEN"

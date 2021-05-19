@@ -6,20 +6,16 @@
   bottom: 0;
   opacity: 0;
   display: flex;
+  position: fixed;
+  max-width: 100%;
   outline: 0 none;
   overflow: hidden;
   visibility: hidden;
+  align-items: center;
   transform: scale(0.7);
   transition: all 0.15s;
+  justify-content: center;
   z-index: $modal-z-index;
-  max-width: $modal-width;
-
-  // Modal sizes
-  @each $name, $size in $modal-widths {
-    &-#{$name} {
-      max-width: $size;
-    }
-  }
 
   // Modal Content Area
   &-content {
@@ -30,10 +26,10 @@
     word-wrap: break-word;
     border: $modal-border;
     flex-direction: column;
+    max-width: $modal-width;
     overflow-wrap: break-word;
     box-shadow: $modal-shadow;
     background-clip: padding-box;
-    max-height: calc(100vh - 96px);
     background-color: $modal-bg-color;
     border-radius: $modal-border-radius;
 
@@ -96,6 +92,7 @@
     height: 100%;
     overflow: auto;
     flex: 1 1 auto;
+    flex-shrink: 0;
     min-height: 1px;
     position: relative;// IE11 fix.
     color: $modal-body-color;
@@ -142,11 +139,29 @@
       height: 100%;
       max-width: 100%;
       border-radius: $radius-0;
-    }
 
-    .c-modal-content {
-      width: 100%;
-      min-height: 100%;
+      .c-modal-content {
+        width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+      }
     }
+  }
+
+  // Modal sizes
+  @each $name, $size in $modal-widths {
+    &-#{$name} {
+      .c-modal-content {
+        max-width: $size;
+      }
+    }
+  }
+
+  // Modal visible if not within backdrop (used in angular)
+  &.c-modal-visible {
+    opacity: 1;
+    display: flex;
+    transform: scale(1);
+    visibility: visible;
   }
 }

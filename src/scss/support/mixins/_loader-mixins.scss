@@ -1,3 +1,29 @@
+@mixin skeleton-loader-mixin {
+  @include skeleton-bar(0, 0, $position: relative);
+
+  margin: $space-lg 0;
+
+  &::after {
+    @include skeleton-bar(-$space-md, 5%);
+
+    content: "";
+  }
+
+  &::before {
+    @include skeleton-bar($space-md, 10%);
+
+    content: "";
+  }
+}
+
+@mixin loader-skeletonIteration {
+  @keyframes skeletonIteration {
+    to {
+      background-position: 300% 0;
+    }
+  }
+}
+
 @mixin skeleton-bar($top, $right, $left: 0, $position: absolute) {
   position: $position;
   top: $top;
@@ -11,24 +37,8 @@
   background-position: -200% 0;
   background-repeat: no-repeat;
   animation: $skeleton-bar-animation;
-}
 
-@mixin skeleton-loader-mixin {
-  @include skeleton-bar(0, 0, $position: relative);
-
-  margin: $space-lg 0;
-
-  &::after {
-    @include skeleton-bar(-$space-md, 5%);
-
-    content: '';
-  }
-
-  &::before {
-    @include skeleton-bar($space-md, 10%);
-
-    content: '';
-  }
+  @include loader-skeletonIteration;
 }
 
 @mixin loader-rotate-keyframes {
@@ -39,14 +49,6 @@
 
     100% {
       transform: rotate(360deg);
-    }
-  }
-}
-
-@mixin loader-skeletonIteration {
-  @keyframes skeletonIteration {
-    to {
-      background-position: 300% 0;
     }
   }
 }

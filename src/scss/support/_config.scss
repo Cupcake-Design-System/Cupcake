@@ -48,6 +48,7 @@ $global-size-xl: $global-px-grid * 6 !default; // 48px
 // --------------------------------------------
 // TYPOGRAPHY ---------------------------------
 // --------------------------------------------
+/* stylelint-disable */
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !default;
 $font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
 
@@ -510,7 +511,7 @@ $control-disabled-background  : $global-bg-disabled !default;
 $control-font-size            : $font-size-2 !default;
 $control-color                : $global-text-color-dark !default;
 $control-font-weight          : $font-weight-normal !default;
-$control-line-height          : 1.166667 !default; //line height optimized for IE compatibilit
+$control-line-height          : normal !default; //line height optimized for IE compatibilit
 $control-placeholder-c        : $global-text-color-lighter !default;
 $control-placeholder-hover-c  : $global-text-color-lighter !default;
 $control-padding              : $space-sm !default;
@@ -531,11 +532,10 @@ $control-addon-background     : $color-gray-0 !default;
 $control-element-padding      : $space-sm * 2 0 !default;
 $control-element-label-padding: 0 0 $space-sm 0 !default;
 $select-padding-r             : $space-lg !default;
-$select-bg-img                : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC") !default;
-$select-bg-img-disabled       : url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAABGdBTUEAALGPC/xhBQAAAK9JREFUOBHlkj0OgzAMRmNxMcTQoVdhZGRoGDp27FU6MCA4WeovUhA/tkNmIlkkwe8Nzuecsd6f7wtltLhK+wmQiDxX3Tyebhp/i9QrChKcAEtyEhzhnGQn0GBLsgpysCaJgquwJKFSOEnwDSH47fmuewwRcTXzrg2HhzhUnPGZs84OqrVG6R5w37U+5qBUkmCI1yRelWzhnQCHnOQInwSWRIJFgSTRYPSaC0+Mspr+0vx1PtB1wpUAAAAASUVORK5CYII = ") !default;
+$select-bg-img                : url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") !default;
+$select-bg-img-disabled       : url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23868e95'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") !default;
 $select-bg-pos                : no-repeat right 8px center !default;
-$select-box-shadow            : none !default;
-$select-box-shadow-focus      : 0 0 1px 2px rgba($color-primary-4, .5) !default;
+$select-box-shadow-focus      : 0 0 0 1px $color-primary-4 !default;
 
 // Set the default sizes for forms - .c-input-{{size}}.
 // This map is looped - adding key/value pairs will generate more classes
@@ -558,7 +558,7 @@ $control-sizes: map-merge(
 
 
 // Form Input Colors (NG specific) DISABLED CURRENTLY
-$enable-NGform-colors: false !default;
+$enable-NGform-colors: true !default;
 $control-ng-validation:
   ("ng-valid", "success")
   ("ng-invalid", "error") !default;
@@ -567,17 +567,23 @@ $control-ng-validation:
 // --------------------------------------------
 // FOOTER -------------------------------------
 // --------------------------------------------
-$footer-font-family     : $font-family !default;
-$footer-height          : $global-footer-height !default;
-$footer-border-top      : $global-border-size $global-border-color-light !default;
-$footer-font-size       : $font-size-2 !default;
-$footer-color           : $global-text-color-dark !default;
-$footer-color-link      : $color-primary !default;
-$footer-background-color: $color-gray-1 !default;
-$footer-padding         : $space-0 ($space-md + $space-sm) !default;
-$footer-links-margin    : $space-0 $space-sm !default;
-$footer-z-index         : $z-footer !default;
-
+$footer-font-family                  : $font-family !default;
+$footer-height                       : $global-footer-height !default;
+$footer-border-top                   : $global-border-size $global-border-color-light !default;
+$footer-font-size                    : $font-size-2 !default;
+$footer-color                        : $global-text-color-dark !default;
+$footer-color-link                   : $color-primary !default;
+$footer-bg-color                     : $color-gray-1 !default;
+$footer-padding                      : $space-0 ($space-md + $space-sm) !default;
+$footer-links-margin                 : $space-0 $space-sm !default;
+$footer-links-divider                : '•' !default;
+$footer-z-index                      : $z-footer !default;
+$footer-bg-inverse                   : #4c4b4c !default;
+$footer-color-inverse                : $color-white !default;
+$footer-height-inverse               : 24px !default;
+$footer-links-inverse-divider        : '|' !default;
+$footer-links-divider-color          : $color-gray-6 !default;
+$footer-links-inverse-divider-color  : $color-gray-1 !default;
 
 // --------------------------------------------
 // Grid ---------------------------------------
@@ -611,12 +617,13 @@ $breakpoints: (
 $header-bg                       : $color-white !default;
 $header-height                   : $global-header-height !default;
 $header-inverse-text-color-active: $color-white !default;
-$header-bg-hover                 : rgba(0, 0, 0, 0.03) !default;
+$header-inverse-icon-color-active: #009697 !default;
+$header-bg-hover                 : rgba(255, 255, 255, 0.1) !default;
 $header-borders                  : rgba(0, 0, 0, 0.06) !default;
 $header-z-index                  : $z-header !default;
 $header-bottom-border            : $color-gray-1 !default;
 $header-item-padding             : $space-0 $space-md !default;
-$header-inverse-bg               : #002b49 !default;
+$header-inverse-bg               : #32363b !default;
 $header-inverse-bg-hover         : rgba(255, 255, 255, 0.07) !default;
 $header-text-color               : $global-text-color-light !default;
 $header-inverse-text-color       : rgba(white, .9) !default;
@@ -637,7 +644,7 @@ $loader-full-page-size       : 48px !default;
 $loader-border-size          : 4px !default;
 $loader-full-page-border-size: 6px !default;
 $loader-animation-duration   : .71s !default;
-
+/* stylelint-enable */
 
 // --------------------------------------------
 // Media Object -------------------------------
@@ -672,11 +679,11 @@ $modal-shadow                 : $shadow-lg !default;
 $modal-close-color            : $global-text-color-light !default;
 $modal-body-font-size         : $font-size-2 !default;
 $modal-title-font-size        : $font-size-4 !default;
-$modal-title-color            : $global-text-color !default;
+$modal-title-color            : $global-text-color-dark !default;
 $modal-title-font-weight      : $font-weight-bold !default;
 $modal-title-line-height      : $line-height-sm !default;
 $modal-padding                : $space-lg !default;
-$modal-body-padding           : $space-lg $space-lg ($space-lg / 2) !default;
+$modal-body-padding           : $space-lg !default;
 $modal-header-padding         : ($space-lg / 3) ($space-lg / 2) ($space-lg / 3) $space-lg !default;
 $modal-footer-padding         : $space-lg !default;
 $modal-dialog-padding         : 40px !default;

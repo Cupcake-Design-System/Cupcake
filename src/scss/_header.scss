@@ -1,62 +1,6 @@
 // Header
 .c-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  height: $header-height;
-  z-index: $header-z-index;
-  background-color: $header-bg;
-  justify-content: space-between;
-  border-bottom: 1px solid $header-borders;
-
-  &-fixed {
-    position: fixed;
-    top: 0;
-  }
-
-  &-item {
-    &-link {
-      display: flex;
-      white-space: nowrap;
-      align-items: center;
-      height: $header-height;
-      color: $header-text-color;
-      padding: $header-item-padding;
-
-      &:hover {
-        background: $header-bg-hover;
-      }
-    }
-  }
-
-  &-left {
-    display: flex;
-    align-items: center;
-
-    .c-header-item {
-      border-right: 1px solid $header-borders;
-    }
-  }
-
-  &-center {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-
-    .c-input-container {
-      width: 100%;
-      margin: $header-item-padding;
-    }
-  }
-
-  &-right {
-    display: flex;
-    align-items: center;
-
-    .c-header-item {
-      border-left: 1px solid $header-borders;
-    }
-  }
+  @include header-base;
 
   .c-dropdown-list {
     .c-dropdown-item {
@@ -71,61 +15,7 @@
 
 // Header Inverse
 .c-header-inverse {
-  background-color: $header-inverse-bg;
-  border-color: $header-inverse-borders;
-
-  .c-input {
-    color: $header-inverse-text-color;
-    background: $header-inverse-bg-hover;
-    border-color: $header-inverse-borders;
-
-    &:hover,
-    &:focus,
-    &:focus-within {
-      border-color: $color-primary;
-      color: $header-inverse-text-color-active;
-    }
-
-    &-icon {
-      color: $header-inverse-text-color;
-    }
-  }
-
-  .c-header-item {
-    border-color: $header-inverse-borders;
-
-    &-link {
-      color: $header-inverse-text-color;
-
-      &:hover {
-        background: $header-inverse-bg-hover;
-      }
-    }
-  }
-
-  .c-nav.c-nav-pills {
-    .c-nav-link {
-      color: $header-inverse-text-color;
-
-      .c-nav-icon {
-        opacity: 1;
-        color: $header-inverse-text-color;
-      }
-
-      // Hover styles
-      &:hover:not(.c-nav-link-disabled),
-      &:focus,
-      &-active {
-        color: $header-inverse-text-color-active;
-        background-color: $header-inverse-bg-hover;
-
-        .c-nav-icon {
-          opacity: 1;
-          color: $header-inverse-text-color-active;
-        }
-      }
-    }
-  }
+  @include header-style;
 }
 
 .c-header-tabs {

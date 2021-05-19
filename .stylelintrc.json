@@ -1,11 +1,10 @@
 {
   "extends": "stylelint-config-standard",
   "plugins": [
-    "stylelint-scss",
-    "stylelint-declaration-strict-value"
+    "stylelint-scss"
   ],
   "rules": {
-      "at-rule-blacklist": ["debug"],
+      "at-rule-disallowed-list": ["debug"],
       "at-rule-empty-line-before": ["always", {
           "except": [
               "blockless-after-same-name-blockless",
@@ -21,7 +20,7 @@
       "comment-empty-line-before": null,
       "color-hex-length": "long",
       "declaration-block-semicolon-newline-after": "always",
-      "declaration-property-value-blacklist": {
+      "declaration-property-value-disallowed-list": {
           "/^border/": [
               "none"
           ]
@@ -62,10 +61,7 @@
       }],
       "max-empty-lines": 2,
       "value-list-max-empty-lines": 2,
-      "unit-whitelist": ["em", "rem", "s", "ms", "%", "vh", "vw", "px", "deg"],
-      "scale-unlimited/declaration-strict-value": [["/color/", "/padding/", "/margin/", "box-shadow", "border-radius"], {
-        "ignoreKeywords": ["currentColor", "transparent", "inherit", "auto", "none"]
-      }],
+      "unit-allowed-list": ["em", "rem", "s", "ms", "%", "vh", "vw", "px", "deg"],
       "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
       "scss/at-else-closing-brace-space-after": "always-intermediate",
       "scss/at-else-empty-line-before": "never",
