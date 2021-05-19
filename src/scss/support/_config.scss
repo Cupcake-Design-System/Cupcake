@@ -760,15 +760,17 @@ $notification-read-border : $global-border-size $global-border-color-light !defa
 // --------------------------------------------
 // PROGRESS -----------------------------------
 // --------------------------------------------
-$progress-height       : $global-size-sm !default;
-$progress-height-sm    : $global-size-xs !default;
-$progress-height-lg    : $global-size-lg !default;
-$progress-font-size    : $font-size-2 !default;
-$progress-font-size-sm : $font-size-1 !default;
-$progress-font-size-lg : $font-size-5 !default;
-$progress-background   : $color-gray-1 !default;
-$progress-margin-bottom: $global-size-md !default;
-$progress-radius       : $global-radius !default;
+$progress-height              : $global-size-sm !default;
+$progress-height-sm           : $global-size-xs !default;
+$progress-height-lg           : $global-size-lg !default;
+$progress-font-size           : $font-size-2 !default;
+$progress-font-size-sm        : $font-size-1 !default;
+$progress-font-size-lg        : $font-size-5 !default;
+$progress-background          : $color-gray-1 !default;
+$progress-margin-bottom       : $global-size-md !default;
+$progress-radius              : $global-radius !default;
+$progress-btn-color           : $color-white !default;
+$progress-btn-animate-size    : $global-size-lg !default;
 
 // Set the checkbox sizes for checkboxes - .c-checkbox-{{size}}.
 // This map is looped - adding key/value pairs will generate more classes
@@ -779,6 +781,24 @@ $progress-colors: map-merge(
     success: $color-success
   ),
   $progress-colors
+);
+
+
+// Set the defaults for .c-header-{{size}}.
+// This map is looped - adding key/value pairs will generate more classes
+$progress-sizes: () !default;
+$progress-sizes: map-merge(
+  (
+    "sm": (
+      "font-size": $progress-font-size-sm,
+      "height": $progress-height-sm
+    ),
+    "lg": (
+      "font-size": $progress-font-size-lg,
+      "height": $progress-height-lg
+    ),
+  ),
+  $progress-sizes
 );
 
 

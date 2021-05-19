@@ -1,6 +1,10 @@
 .c-progress {
   @include progress-container;
 
+  &-meter-text {
+    @include progress-meter-text;
+  }
+
   @each $name, $color in $progress-colors {
     &-#{$name} {
       .c-progress-meter {
@@ -18,24 +22,41 @@
       }
     }
   }
-}
 
-.c-progress-meter-text {
-  @include progress-meter-text;
-}
+  @each $name, $data in $progress-sizes {
+    $font-size: map-get($data, font-size);
+    $height: map-get($data, height);
 
-.c-progress-sm {
-  @include progress-size($progress-height-sm);
-
-  .c-progress-meter-text {
-    font-size: $progress-font-size-sm;
+    &-#{$name} {
+      @include progress-size($height, $font-size);
+    }
   }
 }
 
-.c-progress-lg {
-  @include progress-size($progress-height-lg);
 
-  .c-progress-meter-text {
-    font-size: $progress-font-size-lg;
+.c-btn-in-progress {
+  @include btn-in-progress;
+
+  @each $name, $data in $button-colors {
+    $bg: map-get($data, bg);
+
+    &.c-btn {
+      &-#{$name} {
+        &,
+        &:hover,
+        &:active,
+        &:focus,
+        &:visited,
+        &[disabled],
+        &.disabled,
+        fieldset[disabled] &,
+        fieldset.disabled & {
+          color: $color-white;
+          background: linear-gradient(-45deg, rgba(white, .6) 25%, transparent 25%, transparent 50%, rgba(white, .6) 50%, rgba(white, .6) 75%, transparent 75%, transparent), $bg;
+          background-size: $progress-btn-animate-size $progress-btn-animate-size, 100% 100%;
+        }
+      }
+    }
   }
 }
+
