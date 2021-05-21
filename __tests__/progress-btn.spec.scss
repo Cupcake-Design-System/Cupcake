@@ -1,0 +1,76 @@
+// stylelint-disable
+@import '../node_modules/sass-true/sass/true';
+@import '../src/scss/cupcake';
+
+$new-colors: (
+    NewBlue: (
+      bg: blue,
+    ),
+);
+
+@include describe('Test output for progress btn mixins') {
+
+  @include it('Generates base attributes for progress btn') {
+    @include assert {
+      @include output {
+        .btn-in-progress {
+          @include btn-in-progress;
+        }
+      }
+      @include expect {
+        .btn-in-progress,
+        .btn-in-progress:hover,
+        .btn-in-progress:active,
+        .btn-in-progress:focus,
+        .btn-in-progress:visited,
+        .btn-in-progress[disabled],
+        .btn-in-progress.disabled {
+          cursor: wait;
+          box-shadow: none;
+          text-shadow: none;
+          white-space: nowrap;
+          background: linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), #868e96;
+          background-repeat: repeat;
+          color: rgba(0, 0, 0, 0.3);
+          background-size: 40px 40px, 100% 100%;
+          animation: btn-progress-bar-stripes 2s linear infinite;
+        }
+      }
+    }
+  }
+
+  @include it('Given a map - outputs correct style attributes') {
+    @include assert {
+      @include output {
+        .btn {
+        @each $name, $data in $new-colors {
+          $bg: map-get($data, bg);
+
+          &.btn {
+            &-#{$name} {
+              @include btn-in-progress-style($bg);
+            }
+          }
+        }
+      }
+    }
+      @include expect {
+        .btn.btn-NewBlue,
+        .btn.btn-NewBlue:hover,
+        .btn.btn-NewBlue:active,
+        .btn.btn-NewBlue:focus,
+        .btn.btn-NewBlue:visited,
+        .btn.btn-NewBlue[disabled],
+        .btn.btn-NewBlue.disabled {
+          color: #ffffff;
+          background: linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), blue;
+          background-size: 40px 40px, 100% 100%;
+        }
+      }
+    }
+  }
+
+}
+
+
+@include report;

@@ -42,19 +42,7 @@
 
     &.c-btn {
       &-#{$name} {
-        &,
-        &:hover,
-        &:active,
-        &:focus,
-        &:visited,
-        &[disabled],
-        &.disabled,
-        fieldset[disabled] &,
-        fieldset.disabled & {
-          color: $color-white;
-          background: linear-gradient(-45deg, rgba(white, .6) 25%, transparent 25%, transparent 50%, rgba(white, .6) 50%, rgba(white, .6) 75%, transparent 75%, transparent), $bg;
-          background-size: $progress-btn-animate-size $progress-btn-animate-size, 100% 100%;
-        }
+        @include btn-in-progress-style($bg);
       }
     }
   }

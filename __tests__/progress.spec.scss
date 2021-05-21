@@ -1,0 +1,95 @@
+// stylelint-disable
+@import '../node_modules/sass-true/sass/true';
+@import '../src/scss/cupcake';
+
+
+$progress: (
+  NEWblue: blue
+);
+
+@include describe('Test output for progress mixins') {
+
+  @include it('Generates base attributes for progress bar') {
+    @include assert {
+      @include output {
+        .progress {
+          @include progress-container;
+
+          &-meter-text {
+            @include progress-meter-text;
+          }
+        }
+      }
+      @include expect {
+        .progress {
+          height: 24px;
+          border-radius: 2px;
+          background-color: #f1f3f5;
+          margin-bottom: 32px;
+        }
+        .progress-meter-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin: 0;
+          font-weight: bold;
+          color: #ffffff;
+          white-space: nowrap;
+          font-size: 12px;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+
+  @include it('Given a map - outputs correct style attributes') {
+    @include assert {
+      @include output {
+        .progress {
+          @each $name, $color in $progress {
+            &-#{$name} {
+              .progress-meter {
+                @include progress-meter;
+                // background color fallback
+                background-color: $color;
+
+                @include linear-gradient(to bottom, lighten($color, 6%), $color 66%, darken($color, 4%));
+
+                border: 1px solid darken($color, 5%);
+
+                &-animated {
+                  @include loader-stripe($color);
+                }
+
+              }
+            }
+          }
+        }
+      }
+      @include expect {
+        .progress-NEWblue .progress-meter {
+          width: 0%;
+          height: 100%;
+          display: block;
+          position: relative;
+          border-radius: 2px;
+          background-color: blue;
+          background-image: linear-gradient(convert-gradient-direction(to bottom), #1f1fff, blue 66%, #0000eb);
+          border: 1px solid #0000e6;
+        }
+
+        .progress-NEWblue .progress-meter-animated {
+          background: linear-gradient(135deg, blue 25%, #0000cc 25%, #0000cc 50%, blue 50%, blue 75%, #0000cc 75%);
+          height: 24px;
+          background-size: 25px 25px;
+          animation: stripes 3s linear infinite;
+          border-radius: inherit;
+        }
+      }
+    }
+  }
+}
+
+
+@include report;

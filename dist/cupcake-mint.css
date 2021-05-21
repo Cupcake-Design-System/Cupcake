@@ -7213,7 +7213,7 @@ textarea.c-input {
   font-size: 18px;
 }
 
-.c-btn-in-progress, .c-btn-in-progress:hover, .c-btn-in-progress:active, .c-btn-in-progress:focus, .c-btn-in-progress:visited, .c-btn-in-progress[disabled], .c-btn-in-progress.disabled, fieldset[disabled] .c-btn-in-progress, fieldset.disabled .c-btn-in-progress {
+.c-btn-in-progress, .c-btn-in-progress:hover, .c-btn-in-progress:active, .c-btn-in-progress:focus, .c-btn-in-progress:visited, .c-btn-in-progress[disabled], .c-btn-in-progress.disabled {
   cursor: wait;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -7226,22 +7226,22 @@ textarea.c-input {
   -webkit-animation: btn-progress-bar-stripes 2s linear infinite;
           animation: btn-progress-bar-stripes 2s linear infinite;
 }
-.c-btn-in-progress.c-btn-primary, .c-btn-in-progress.c-btn-primary:hover, .c-btn-in-progress.c-btn-primary:active, .c-btn-in-progress.c-btn-primary:focus, .c-btn-in-progress.c-btn-primary:visited, .c-btn-in-progress.c-btn-primary[disabled], .c-btn-in-progress.c-btn-primary.disabled, fieldset[disabled] .c-btn-in-progress.c-btn-primary, fieldset.disabled .c-btn-in-progress.c-btn-primary {
+.c-btn-in-progress.c-btn-primary, .c-btn-in-progress.c-btn-primary:hover, .c-btn-in-progress.c-btn-primary:active, .c-btn-in-progress.c-btn-primary:focus, .c-btn-in-progress.c-btn-primary:visited, .c-btn-in-progress.c-btn-primary[disabled], .c-btn-in-progress.c-btn-primary.disabled {
   color: #ffffff;
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), #008080;
   background-size: 40px 40px, 100% 100%;
 }
-.c-btn-in-progress.c-btn-success, .c-btn-in-progress.c-btn-success:hover, .c-btn-in-progress.c-btn-success:active, .c-btn-in-progress.c-btn-success:focus, .c-btn-in-progress.c-btn-success:visited, .c-btn-in-progress.c-btn-success[disabled], .c-btn-in-progress.c-btn-success.disabled, fieldset[disabled] .c-btn-in-progress.c-btn-success, fieldset.disabled .c-btn-in-progress.c-btn-success {
+.c-btn-in-progress.c-btn-success, .c-btn-in-progress.c-btn-success:hover, .c-btn-in-progress.c-btn-success:active, .c-btn-in-progress.c-btn-success:focus, .c-btn-in-progress.c-btn-success:visited, .c-btn-in-progress.c-btn-success[disabled], .c-btn-in-progress.c-btn-success.disabled {
   color: #ffffff;
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), #2f9e44;
   background-size: 40px 40px, 100% 100%;
 }
-.c-btn-in-progress.c-btn-danger, .c-btn-in-progress.c-btn-danger:hover, .c-btn-in-progress.c-btn-danger:active, .c-btn-in-progress.c-btn-danger:focus, .c-btn-in-progress.c-btn-danger:visited, .c-btn-in-progress.c-btn-danger[disabled], .c-btn-in-progress.c-btn-danger.disabled, fieldset[disabled] .c-btn-in-progress.c-btn-danger, fieldset.disabled .c-btn-in-progress.c-btn-danger {
+.c-btn-in-progress.c-btn-danger, .c-btn-in-progress.c-btn-danger:hover, .c-btn-in-progress.c-btn-danger:active, .c-btn-in-progress.c-btn-danger:focus, .c-btn-in-progress.c-btn-danger:visited, .c-btn-in-progress.c-btn-danger[disabled], .c-btn-in-progress.c-btn-danger.disabled {
   color: #ffffff;
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), #e03131;
   background-size: 40px 40px, 100% 100%;
 }
-.c-btn-in-progress.c-btn-secondary, .c-btn-in-progress.c-btn-default, .c-btn-in-progress.c-btn-secondary:hover, .c-btn-in-progress.c-btn-secondary:active, .c-btn-in-progress.c-btn-secondary:focus, .c-btn-in-progress.c-btn-secondary:visited, .c-btn-in-progress.c-btn-secondary[disabled], .c-btn-in-progress.c-btn-secondary.disabled, fieldset[disabled] .c-btn-in-progress.c-btn-secondary, fieldset.disabled .c-btn-in-progress.c-btn-secondary {
+.c-btn-in-progress.c-btn-secondary, .c-btn-in-progress.c-btn-default, .c-btn-in-progress.c-btn-secondary:hover, .c-btn-in-progress.c-btn-secondary:active, .c-btn-in-progress.c-btn-secondary:focus, .c-btn-in-progress.c-btn-secondary:visited, .c-btn-in-progress.c-btn-secondary[disabled], .c-btn-in-progress.c-btn-secondary.disabled {
   color: #ffffff;
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), #f1f3f5;
   background-size: 40px 40px, 100% 100%;

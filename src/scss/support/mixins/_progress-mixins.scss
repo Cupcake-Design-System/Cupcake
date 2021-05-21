@@ -70,17 +70,14 @@
 }
 
 
-@mixin btn-in-progress(
-) {
+@mixin btn-in-progress() {
   &,
   &:hover,
   &:active,
   &:focus,
   &:visited,
   &[disabled],
-  &.disabled,
-  fieldset[disabled] &,
-  fieldset.disabled & {
+  &.disabled {
     cursor: wait;
     box-shadow: none;
     text-shadow: none;
@@ -90,6 +87,20 @@
     color: rgba($color-black, .3);
     background-size: $progress-btn-animate-size $progress-btn-animate-size, 100% 100%;
     animation: btn-progress-bar-stripes 2s linear infinite;
+  }
+}
+
+@mixin btn-in-progress-style($bg) {
+  &,
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited,
+  &[disabled],
+  &.disabled {
+    color: $color-white;
+    background: linear-gradient(-45deg, rgba(white, .6) 25%, transparent 25%, transparent 50%, rgba(white, .6) 50%, rgba(white, .6) 75%, transparent 75%, transparent), $bg;
+    background-size: $progress-btn-animate-size $progress-btn-animate-size, 100% 100%;
   }
 }
 
@@ -103,3 +114,4 @@
     background-position: $progress-btn-animate-size 0;
   }
 }
+
