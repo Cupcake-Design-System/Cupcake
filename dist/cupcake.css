@@ -9,6 +9,38 @@
 @charset "UTF-8";
 /* stylelint-disable */
 /* stylelint-enable */
+@-webkit-keyframes stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes btn-progress-bar-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 0;
+  }
+}
+@keyframes btn-progress-bar-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 0;
+  }
+}
 /* stylelint-disable */
 *,
 *::before,
@@ -7095,6 +7127,124 @@ textarea.c-input {
   content: "…";
   padding: 0;
   color: #212529;
+}
+
+.c-progress {
+  height: 24px;
+  border-radius: 2px;
+  background-color: #f1f3f5;
+  margin-bottom: 32px;
+}
+.c-progress-meter-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 12px;
+  border-radius: 2px;
+}
+.c-progress-primary .c-progress-meter {
+  width: 0%;
+  height: 100%;
+  display: block;
+  position: relative;
+  border-radius: 2px;
+  background-color: #1b6ec2;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(convert-gradient-direction(to bottom)), color-stop(#1f7ddd), color-stop(66%, #1b6ec2), to(#1964b0));
+  background-image: linear-gradient(convert-gradient-direction(to bottom), #1f7ddd, #1b6ec2 66%, #1964b0);
+  border: 1px solid #1861ac;
+}
+.c-progress-primary .c-progress-meter-animated {
+  background: linear-gradient(135deg, #1b6ec2 25%, #155595 25%, #155595 50%, #1b6ec2 50%, #1b6ec2 75%, #155595 75%);
+  height: 24px;
+  background-size: 25px 25px;
+  -webkit-animation: stripes 3s linear infinite;
+          animation: stripes 3s linear infinite;
+  border-radius: inherit;
+}
+.c-progress-success .c-progress-meter {
+  width: 0%;
+  height: 100%;
+  display: block;
+  position: relative;
+  border-radius: 2px;
+  background-color: #2f9e44;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(convert-gradient-direction(to bottom)), color-stop(#36b64e), color-stop(66%, #2f9e44), to(#2a8e3d));
+  background-image: linear-gradient(convert-gradient-direction(to bottom), #36b64e, #2f9e44 66%, #2a8e3d);
+  border: 1px solid #298a3c;
+}
+.c-progress-success .c-progress-meter-animated {
+  background: linear-gradient(135deg, #2f9e44 25%, #237733 25%, #237733 50%, #2f9e44 50%, #2f9e44 75%, #237733 75%);
+  height: 24px;
+  background-size: 25px 25px;
+  -webkit-animation: stripes 3s linear infinite;
+          animation: stripes 3s linear infinite;
+  border-radius: inherit;
+}
+.c-progress-sm {
+  height: 16px;
+}
+.c-progress-sm .c-progress-meter {
+  height: 16px;
+}
+.c-progress-sm .c-progress-meter-animated {
+  height: 16px;
+  background-size: 16px 16px;
+}
+.c-progress-sm .c-progress-meter-text {
+  font-size: 11px;
+}
+.c-progress-lg {
+  height: 40px;
+}
+.c-progress-lg .c-progress-meter {
+  height: 40px;
+}
+.c-progress-lg .c-progress-meter-animated {
+  height: 40px;
+  background-size: 40px 40px;
+}
+.c-progress-lg .c-progress-meter-text {
+  font-size: 18px;
+}
+
+.c-btn-in-progress, .c-btn-in-progress:hover, .c-btn-in-progress:active, .c-btn-in-progress:focus, .c-btn-in-progress:visited, .c-btn-in-progress[disabled], .c-btn-in-progress.disabled {
+  cursor: wait;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  white-space: nowrap;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), #868e96;
+  background-repeat: repeat;
+  color: rgba(0, 0, 0, 0.3);
+  background-size: 40px 40px, 100% 100%;
+  -webkit-animation: btn-progress-bar-stripes 2s linear infinite;
+          animation: btn-progress-bar-stripes 2s linear infinite;
+}
+.c-btn-in-progress.c-btn-primary, .c-btn-in-progress.c-btn-primary:hover, .c-btn-in-progress.c-btn-primary:active, .c-btn-in-progress.c-btn-primary:focus, .c-btn-in-progress.c-btn-primary:visited, .c-btn-in-progress.c-btn-primary[disabled], .c-btn-in-progress.c-btn-primary.disabled {
+  color: #ffffff;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), #1b6ec2;
+  background-size: 40px 40px, 100% 100%;
+}
+.c-btn-in-progress.c-btn-success, .c-btn-in-progress.c-btn-success:hover, .c-btn-in-progress.c-btn-success:active, .c-btn-in-progress.c-btn-success:focus, .c-btn-in-progress.c-btn-success:visited, .c-btn-in-progress.c-btn-success[disabled], .c-btn-in-progress.c-btn-success.disabled {
+  color: #ffffff;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), #2f9e44;
+  background-size: 40px 40px, 100% 100%;
+}
+.c-btn-in-progress.c-btn-danger, .c-btn-in-progress.c-btn-danger:hover, .c-btn-in-progress.c-btn-danger:active, .c-btn-in-progress.c-btn-danger:focus, .c-btn-in-progress.c-btn-danger:visited, .c-btn-in-progress.c-btn-danger[disabled], .c-btn-in-progress.c-btn-danger.disabled {
+  color: #ffffff;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), #e03131;
+  background-size: 40px 40px, 100% 100%;
+}
+.c-btn-in-progress.c-btn-secondary, .c-btn-in-progress.c-btn-default, .c-btn-in-progress.c-btn-secondary:hover, .c-btn-in-progress.c-btn-secondary:active, .c-btn-in-progress.c-btn-secondary:focus, .c-btn-in-progress.c-btn-secondary:visited, .c-btn-in-progress.c-btn-secondary[disabled], .c-btn-in-progress.c-btn-secondary.disabled {
+  color: #ffffff;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), #f1f3f5;
+  background-size: 40px 40px, 100% 100%;
 }
 
 .c-select,

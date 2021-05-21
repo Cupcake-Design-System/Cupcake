@@ -1,0 +1,50 @@
+.c-progress {
+  @include progress-container;
+
+  &-meter-text {
+    @include progress-meter-text;
+  }
+
+  @each $name, $color in $progress-colors {
+    &-#{$name} {
+      .c-progress-meter {
+        @include progress-meter;
+        // background color fallback
+        background-color: $color;
+
+        @include linear-gradient(to bottom, lighten($color, 6%), $color 66%, darken($color, 4%));
+
+        border: 1px solid darken($color, 5%);
+
+        &-animated {
+          @include loader-stripe($color);
+        }
+      }
+    }
+  }
+
+  @each $name, $data in $progress-sizes {
+    $font-size: map-get($data, font-size);
+    $height: map-get($data, height);
+
+    &-#{$name} {
+      @include progress-size($height, $font-size);
+    }
+  }
+}
+
+
+.c-btn-in-progress {
+  @include btn-in-progress;
+
+  @each $name, $data in $button-colors {
+    $bg: map-get($data, bg);
+
+    &.c-btn {
+      &-#{$name} {
+        @include btn-in-progress-style($bg);
+      }
+    }
+  }
+}
+

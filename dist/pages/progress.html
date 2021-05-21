@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="../demo.css">
+
+
+  <script>
+    var themeSettings =  (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+    var themeName = themeSettings.themeName || '';
+    if (themeName) {
+      document.write('<link rel="stylesheet" id="theme-style" href="../' + themeName + '.css">');
+    }
+    else {
+      document.write('<link rel="stylesheet" id="theme-style" href="../cupcake.css">');
+    }
+  </script>
+
+<link rel="stylesheet" href="../cupcake-shim.css">
+<link rel="stylesheet" href="../experimental.css">
+</head>
+
+<body class="docs-container ">
+    <div class="docs-body">
+      <main class="docs-content docs-content-fullwidth">
+          <div id="customize-menu" class="docs-flavor-switch c-d-none c-sm-d-block c-m-top-lg" style="width: 250px;">
+              <input type="hidden" name="Framework" id="Framework" class="docs-flavor-switch-input">
+              <span class="docs-flavor-button docs-flavor-switch-current">Select A Flavor</span>
+              <ul id="styleOptions" title="switch styling" class="docs-flavor-list">
+                <li class="docs-flavor-list-item" data-dropdown-value="default">
+                  <a href="#" class="flavor" data-theme="cupcake">Default</a>
+                </li>
+                <li class="docs-flavor-list-item" data-dropdown-value="mint">
+                  <a href="#" class="flavor" data-theme="cupcake-mint">Mint</a>
+                </li>
+              </ul>
+            </div>
+
+          <br>
+          <hr class="c-hr">
+          <br>
+          <br>
+
+
+          
+<strong>Progress</strong>
+<br>
+<br>
+
+	<div class="c-row">
+		<div class="c-col">
+			<div class="c-progress c-progress-primary c-progress-sm">
+				<div class="c-progress-meter" style="width: 10%"></div>
+			</div>
+			<div class="c-progress c-progress-primary c-progress-sm">
+				<span class="c-progress-meter" style="width: 45%">
+    			<p class="c-progress-meter-text">45%</p>
+  			</span>
+			</div>
+			<div class="c-progress c-progress-primary c-progress-sm">
+				<div class="c-progress-meter-animated" style="width: 60%"></div>
+			</div>
+		</div>
+		<hr class="c-hr">
+		<div class="c-col">
+			<div class="c-progress c-progress-success c-progress-sm">
+				<div class="c-progress-meter" style="width: 10%"></div>
+			</div>
+			<div class="c-progress c-progress-success c-progress-sm">
+				<span class="c-progress-meter" style="width: 45%">
+    			<p class="c-progress-meter-text">45%</p>
+  			</span>
+			</div>
+			<div class="c-progress c-progress-success c-progress-sm">
+				<div class="c-progress-meter-animated" style="width: 60%"></div>
+			</div>
+		</div>
+	</div>
+	<hr class="c-hr">
+
+	<div class="c-row">
+		<div class="c-col">
+			<div class="c-progress c-progress-primary">
+				<div class="c-progress-meter" style="width: 10%"></div>
+			</div>
+			<div class="c-progress c-progress-primary">
+				<span class="c-progress-meter" style="width: 45%">
+    			<p class="c-progress-meter-text">45%</p>
+  			</span>
+			</div>
+			<div class="c-progress c-progress-primary">
+				<div class="c-progress-meter-animated" style="width: 60%"></div>
+			</div>
+		</div>
+
+		<div class="c-col">
+			<div class="c-progress c-progress-success">
+				<div class="c-progress-meter" style="width: 10%"></div>
+			</div>
+			<div class="c-progress c-progress-success">
+				<span class="c-progress-meter" style="width: 45%">
+    			<p class="c-progress-meter-text">45%</p>
+  			</span>
+			</div>
+			<div class="c-progress c-progress-success">
+				<div class="c-progress-meter-animated" style="width: 60%"></div>
+			</div>
+		</div>
+	</div>
+
+	<hr class="c-hr">
+
+	<div class="c-row">
+		<div class="c-col">
+			<div class="c-progress c-progress-primary c-progress-lg">
+				<div class="c-progress-meter" style="width: 10%"></div>
+			</div>
+			<div class="c-progress c-progress-primary c-progress-lg">
+				<span class="c-progress-meter" style="width: 45%">
+    			<p class="c-progress-meter-text">45%</p>
+  			</span>
+			</div>
+			<div class="c-progress c-progress-primary c-progress-lg">
+				<div class="c-progress-meter-animated" style="width: 60%"></div>
+			</div>
+		</div>
+		<div class="c-col">
+			<div class="c-progress c-progress-success c-progress-lg">
+				<div class="c-progress-meter" style="width: 10%"></div>
+			</div>
+			<div class="c-progress c-progress-success c-progress-lg">
+				<span class="c-progress-meter" style="width: 45%">
+    			<p class="c-progress-meter-text">45%</p>
+  			</span>
+			</div>
+			<div class="c-progress c-progress-success c-progress-lg">
+				<div class="c-progress-meter-animated" style="width: 60%"></div>
+			</div>
+		</div>
+	</div>
+
+  <strong>Progress Buttons</strong>
+  <br>
+  <br>
+
+
+<button class="c-btn c-btn-primary c-btn-in-progress">Button</button>
+<button class="c-btn c-btn-success c-btn-in-progress">Button</button>
+<button class="c-btn c-btn-danger c-btn-in-progress">Button</button>
+
+      </main>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../script.min.js"></script>
+
+</html>
