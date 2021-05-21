@@ -4,7 +4,7 @@
 [![Travis (.org)](https://img.shields.io/travis/Cupcake-Design-System/Cupcake.svg)](https://travis-ci.org/Cupcake-Design-System/Cupcake)
 ![David](https://img.shields.io/david/Cupcake-Design-System/Cupcake.svg)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/00ab3d48-03ee-40f5-b448-10efe6c7ff7d/deploy-status)](https://app.netlify.com/sites/cupcake/deploys)
-[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Cupcake/Cupcake-2)
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/23d443d7/Cupcake-)
 
 # Cupcake 2.0 
 
