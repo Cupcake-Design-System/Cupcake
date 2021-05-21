@@ -1,9 +1,18 @@
+## Release [2.0.6-0](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.5...2.0.6-0) :rocket:
+**21 May 2021**
+
+### Merged
+- Feature/progress bar and buttons **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/150)**
+
 ## Release [2.0.5](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.5-0...2.0.5) :rocket:
 **17 May 2021**
 
 ### Merged
 - update to dart sass fix errors **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/144)**
 - Feature/header export **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/143)**
+
+### Commits
+- Release 2.0.5 🚀 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/53bd0a5caca6abf5ffdb6493c66635a0cdc9ad3d)**
 
 ## Release [2.0.5-0](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.4...2.0.5-0) :rocket:
 **17 December 2020**

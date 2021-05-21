@@ -1,6 +1,6 @@
 {
   "name": "@cupcake-ds/cupcake",
-  "version": "2.0.5",
+  "version": "2.0.6-0",
   "description": "Design System framework.",
   "engines": {
     "node": ">14"
