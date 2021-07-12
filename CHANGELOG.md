@@ -1,8 +1,14 @@
+## Release [2.0.6](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.6-0...2.0.6) :rocket:
+**12 July 2021**
+
 ## Release [2.0.6-0](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.5...2.0.6-0) :rocket:
 **21 May 2021**
 
 ### Merged
 - Feature/progress bar and buttons **[View Merge](https://github.com/Cupcake-Design-System/Cupcake/pull/150)**
+
+### Commits
+- Release 2.0.6-0 🚀 **[View Commit](https://github.com/Cupcake-Design-System/Cupcake/commit/92da5416c624efa43260d41e85460b6793089fbc)**
 
 ## Release [2.0.5](https://github.com/Cupcake-Design-System/Cupcake/compare/2.0.5-0...2.0.5) :rocket:
 **17 May 2021**
