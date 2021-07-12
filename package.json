@@ -2,9 +2,6 @@
   "name": "@cupcake-ds/cupcake",
   "version": "2.0.6-0",
   "description": "Design System framework.",
-  "engines": {
-    "node": ">14"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Cupcake-Design-System/Cupcake/"
@@ -35,15 +32,15 @@
     "package": true
   },
   "devDependencies": {
-    "auto-changelog": "^2.2.1",
-    "autoprefixer": "^10.2.5",
-    "browser-sync": "^2.26.14",
+    "auto-changelog": "^2.3.0",
+    "autoprefixer": "^10.3.0",
+    "browser-sync": "^2.27.4",
     "del": "^6.0.0",
     "fabricator-assemble": "^1.4.0",
     "glob": "^7.1.7",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-changed": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-changed": "^4.0.3",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-dart-sass": "^1.0.2",
@@ -52,12 +49,12 @@
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "jest": "^26.6.3",
+    "jest": "^27.0.6",
     "lint-staged": "^11.0.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "release-it": "^14.6.2",
-    "sass": "^1.32.13",
+    "release-it": "^14.10.0",
+    "sass": "1.32.13",
     "sass-true": "^6.0.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
