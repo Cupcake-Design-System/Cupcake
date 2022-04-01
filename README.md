@@ -1,4 +1,4 @@
-<img alt="cupcake-logo" src="http://funkyimg.com/i/2KN2G.png" width="350">
+# NOTE: All active development has moved internally to S&P Global's private git
 
 [![CodeFactor](https://www.codefactor.io/repository/github/cupcake-design-system/cupcake/badge)](https://www.codefactor.io/repository/github/cupcake-design-system/cupcake)
 [![Travis (.org)](https://img.shields.io/travis/Cupcake-Design-System/Cupcake.svg)](https://travis-ci.org/Cupcake-Design-System/Cupcake)
