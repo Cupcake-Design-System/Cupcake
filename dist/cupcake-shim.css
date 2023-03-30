@@ -2,7 +2,7 @@
 /* ----------------------- */
 /* 🎂 CUPCAKE 🎂 */
 /* pkg name: @cupcake-ds/cupcake */
-/* version: 2.0.6-0 */
+/* version: 2.0.6 */
 /* file name: cupcake-shim.css */
 /* ----------------------- */
 
@@ -30,7 +30,7 @@
     background-position: 0 0;
   }
   100% {
-    background-position: 40px 0;
+    background-position: 20px 0;
   }
 }
 @keyframes btn-progress-bar-stripes {
@@ -38,7 +38,7 @@
     background-position: 0 0;
   }
   100% {
-    background-position: 40px 0;
+    background-position: 20px 0;
   }
 }
 /* stylelint-disable */
@@ -318,13 +318,13 @@
   pointer-events: auto;
 }
 .c-notify-logs.top {
-  top: 16px;
+  top: 8px;
 }
 .c-notify-logs.bottom {
-  bottom: 16px;
+  bottom: 8px;
 }
 .c-notify-logs.left {
-  left: 16px;
+  left: 8px;
 }
 .c-notify-logs.left .c-alert,
 .c-notify-logs.left .c-toast-alert {
@@ -337,7 +337,7 @@
           transform: translateX(0);
 }
 .c-notify-logs.right {
-  right: 16px;
+  right: 8px;
 }
 .c-notify-logs.right .c-alert,
 .c-notify-logs.right .c-toast-alert {
@@ -361,7 +361,7 @@
   position: absolute;
   color: #495057;
   border: 1px solid #ced4da;
-  padding: 8px 16px;
+  padding: 4px 8px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.2);
@@ -372,28 +372,28 @@
 .c-popover[x-placement^=top],
 .c-tooltip-top,
 .c-tooltip[x-placement^=top] {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .c-popover-left,
 .c-popover[x-placement^=left],
 .c-tooltip-left,
 .c-tooltip[x-placement^=left] {
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .c-popover-right,
 .c-popover[x-placement^=right],
 .c-tooltip-right,
 .c-tooltip[x-placement^=right] {
-  margin-left: 8px;
+  margin-left: 4px;
 }
 
 .c-popover-bottom,
 .c-popover[x-placement^=bottom],
 .c-tooltip-bottom,
 .c-tooltip[x-placement^=bottom] {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .c-popover-arrow,
