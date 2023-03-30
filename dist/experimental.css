@@ -2,7 +2,7 @@
 /* ----------------------- */
 /* 🎂 CUPCAKE 🎂 */
 /* pkg name: @cupcake-ds/cupcake */
-/* version: 2.0.6-0 */
+/* version: 2.0.6 */
 /* file name: experimental.css */
 /* ----------------------- */
 
@@ -29,7 +29,7 @@
     background-position: 0 0;
   }
   100% {
-    background-position: 40px 0;
+    background-position: 20px 0;
   }
 }
 @keyframes btn-progress-bar-stripes {
@@ -37,7 +37,7 @@
     background-position: 0 0;
   }
   100% {
-    background-position: 40px 0;
+    background-position: 20px 0;
   }
 }
 .c-nav-toggle {
@@ -101,7 +101,7 @@
   }
   .c-header .c-nav {
     display: none;
-    padding: 4px 0;
+    padding: 2px 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -125,7 +125,7 @@
   display: flex;
 }
 .c-header.c-nav-active .c-nav-link {
-  margin: 4px 8px;
+  margin: 2px 4px;
 }
 .c-header.c-nav-active .c-nav-pills {
   left: 0;
@@ -151,7 +151,7 @@
 }
 .c-header-item .c-header-search-box {
   cursor: pointer;
-  width: 16px;
+  width: 8px;
   -webkit-transition: width 0.6s, border-radius 0.6s, background 0.6s, -webkit-box-shadow 0.6s;
   transition: width 0.6s, border-radius 0.6s, background 0.6s, -webkit-box-shadow 0.6s;
   transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
@@ -160,20 +160,20 @@
 .c-header-item .c-header-search-box + label {
   max-width: 0;
   position: absolute;
-  top: 8px;
-  left: 9px;
+  top: 4px;
+  left: 5px;
 }
 .c-header-item .c-header-search-box:focus {
   cursor: text;
   position: relative;
-  height: 32px;
-  padding-left: 32px;
+  height: 16px;
+  padding-left: 16px;
   width: 200px;
   -webkit-transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
   transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
 }
 .c-header-item .c-header-search-box:focus + label {
-  left: 8px;
+  left: 4px;
 }
 .c-header-item .c-header-search-box:not(:focus) {
   overflow: hidden;
@@ -237,7 +237,7 @@
   background-color: #ffffff;
   font-size: 12px;
   border-radius: 2px;
-  padding: 8px;
+  padding: 4px;
   width: 300px;
 }
 .c-dropdown-grid .c-dropdown-item {
@@ -257,12 +257,12 @@
       -ms-flex-pack: center;
           justify-content: center;
   color: #212529;
-  padding: 16px 0;
+  padding: 8px 0;
 }
 .c-dropdown-grid .c-dropdown-item .c-dropdown-icon {
   color: #ced4da;
   font-size: 14px;
-  padding: 0 8px 8px;
+  padding: 0 4px 4px;
 }
 .c-dropdown-grid .c-dropdown-item:hover {
   background: #f8f9fa;
@@ -302,7 +302,7 @@
   color: #ffffff;
   background: url("https://cupcake-layouts.netlify.com/dist/images/bg9.png") center center no-repeat;
   background-size: cover;
-  padding: 16px;
+  padding: 8px;
 }
 .c-sidenav-user-dropdown {
   display: -webkit-box;
@@ -312,7 +312,7 @@
       -ms-flex-align: center;
           align-items: center;
   color: #ffffff;
-  padding: 8px 16px;
+  padding: 4px 8px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -332,7 +332,7 @@
   border-right: 0.3em solid transparent;
   border-bottom: 0;
   border-left: 0.3em solid transparent;
-  right: 16px;
+  right: 8px;
 }
 .c-sidenav-user-dropdown.c-d-flex::after {
   -webkit-transform: rotate(180deg);
@@ -376,7 +376,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 16px;
+  padding: 8px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -396,7 +396,7 @@
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.7;
-  padding-top: 8px;
+  padding-top: 4px;
 }
 .c-page-header-info {
   width: 100%;
@@ -408,7 +408,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 16px;
+  padding: 8px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -419,7 +419,7 @@
           flex: 1;
 }
 .c-page-header-info .c-breadcrumb {
-  margin: 8px 0 0;
+  margin: 4px 0 0;
 }
 .c-page-header-transparent {
   border-bottom: 0;
@@ -439,7 +439,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 16px;
+  padding: 0 8px;
 }
 .c-page-header-action-buttons {
   bottom: 0;
@@ -447,7 +447,7 @@
   position: absolute;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
-  right: 16px;
+  right: 8px;
 }
 .c-page-header-inverse {
   background-color: #212529;
@@ -483,7 +483,7 @@
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  right: 4px;
+  right: 2px;
   list-style: none;
   padding: 0;
   position: absolute;
@@ -497,7 +497,7 @@
   -webkit-transition: 0.4s;
   transition: 0.4s;
   text-align: right;
-  padding: 8px 0;
+  padding: 4px 0;
 }
 .fab-buttons li:nth-child(1) {
   -webkit-transform: translateY(103%);
@@ -624,7 +624,7 @@
           flex-direction: row-reverse;
 }
 .fab-left .fab-buttons li {
-  padding: 4px;
+  padding: 2px;
 }
 .fab-left .fab-buttons li:nth-child(1) {
   -webkit-transform: translateX(103%);
@@ -672,7 +672,7 @@
           flex-direction: row;
 }
 .fab-right .fab-buttons li {
-  padding: 4px;
+  padding: 2px;
 }
 .fab-right .fab-buttons li:nth-child(1) {
   -webkit-transform: translateX(-103%);
